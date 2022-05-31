@@ -1,0 +1,5 @@
+* What I need to be able to do
+- git clone my repositories to specified directories
+- deploy my shell config files
+- deploy the config files in .config
+- 

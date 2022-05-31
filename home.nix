@@ -1,21 +1,36 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = "troy";
   home.homeDirectory = "/home/troy";
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
+  home.packages = [
+    pkgs.hello
+  ];
+
   home.stateVersion = "22.05";
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  
+  programs.bash = {
+    enable = true;
+    profileExtra = ''
+      . ~/nix-files/profile
+    '';
+    bashrcExtra = ''
+      . ~/nix-files/bashrc
+    '';
+    logoutExtra = ''
+      . ~/nix-files/bash_logout
+    '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Troy Figiel";
+    userEmail = "troy.figiel@gmail.com";
+    extraConfig = { 
+      init = { defaultBranch = "main"; }; 
+    };
+  };
 }
