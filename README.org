@@ -1,5 +1,10 @@
-* What I need to be able to do
-- git clone my repositories to specified directories
-- deploy my shell config files
-- deploy the config files in .config
+* Git cloning repositories to specified directories
+Problem: Once they are cloned, they are read only and fixed to a certain commit.
+
+* Installing Python and Terraform versions with asdf
+Problem: Once again, after setting up, .asdf becomes read only.
+I will need to use home.nix to already download the python and terraform versions I need.
+I also need to set up the direnv plugin and download a version of direnv.
+
+* Deploying the config files in ~/.config
 - 

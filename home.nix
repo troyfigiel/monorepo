@@ -5,23 +5,25 @@
   home.homeDirectory = "/home/troy";
 
   home.packages = [
-    pkgs.hello
+    pkgs.vim
   ];
 
   home.stateVersion = "22.05";
 
+  targets.genericLinux.enable = true;
+
   programs.home-manager.enable = true;
-  
+
   programs.bash = {
     enable = true;
     profileExtra = ''
-      . ~/nix-files/profile
+      . ~/nixfiles/config/profile
     '';
     bashrcExtra = ''
-      . ~/nix-files/bashrc
+      . ~/nixfiles/config/bashrc
     '';
     logoutExtra = ''
-      . ~/nix-files/bash_logout
+      . ~/nixfiles/config/bash_logout
     '';
   };
 
@@ -29,8 +31,24 @@
     enable = true;
     userName = "Troy Figiel";
     userEmail = "troy.figiel@gmail.com";
-    extraConfig = { 
-      init = { defaultBranch = "main"; }; 
+    extraConfig = {
+      init = { defaultBranch = "main"; };
+    };
+  };
+
+  home.file = {
+    ".asdf".source = pkgs.fetchFromGitHub {
+      owner = "asdf-vm";
+      repo = "asdf";
+      rev = "v0.10.1";
+      sha256 = "sha256-WXFGOlj1uHEVvmH/Z87wa6wbChzQQ5Kh4Ra4RwBacdw=";
+    };
+
+    ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
+    ".config/user-dirs.locale".source = ./config/user-dirs.locale;
+    ".config/asdf-direnv" = {
+      source = ./config/asdf-direnv;
+      #recursive = true;
     };
   };
 }

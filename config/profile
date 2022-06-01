@@ -27,3 +27,6 @@ export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
 # Add Terraform to path
 export PATH="$HOME/bin:$PATH"
+
+# Add Poetry to path
+export PATH="$HOME/.local/bin:$PATH"
