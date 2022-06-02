@@ -6,6 +6,17 @@
 
   home.packages = [
     pkgs.vim
+    pkgs.tldr
+    pkgs.git
+    pkgs.nitrokey-app
+  ];
+
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
+  home.sessionPath = [
+    "$HOME/.local/bin"    
   ];
 
   home.stateVersion = "22.05";
@@ -46,9 +57,7 @@
 
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
-    ".config/asdf-direnv" = {
-      source = ./config/asdf-direnv;
-      #recursive = true;
-    };
+    ".config/asdf-direnv".source = ./config/asdf-direnv;
+    ".config/pypoetry".source = ./config/pypoetry;
   };
 }
