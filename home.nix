@@ -59,5 +59,7 @@
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
     ".config/asdf-direnv".source = ./config/asdf-direnv;
     ".config/pypoetry".source = ./config/pypoetry;
+    ".gnupg/gpg.conf".source = ./config/gnupg/gpg.conf;
+    ".gnupg/gpg-agent.conf".source = ./config/gnupg/gpg-agent.conf;
   };
 }

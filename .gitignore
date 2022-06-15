@@ -1,3 +1,6 @@
 # Contains some personal information.
 # The only non-private config is to build venvs inside the project under .venv/
 config/pypoetry/
+
+# Symlinks to the built result
+**/result
