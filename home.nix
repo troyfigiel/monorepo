@@ -55,6 +55,8 @@
       sha256 = "sha256-WXFGOlj1uHEVvmH/Z87wa6wbChzQQ5Kh4Ra4RwBacdw=";
     };
 
+    # How do I set up a git clone of my emacs git repo (and project repos)
+    # to the right locations?
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
     ".config/asdf-direnv".source = ./config/asdf-direnv;
