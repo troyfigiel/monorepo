@@ -9,6 +9,8 @@
     pkgs.tldr
     pkgs.git
     pkgs.nitrokey-app
+    #pkgs.sshfs
+    #pkgs.gpg2
   ];
 
   home.sessionVariables = {
@@ -47,26 +49,40 @@
     };
   };
 
-  systemd.user.services.emacs-config = {
-    #description = "Pulls emacs config";
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.git}/bin/git clone gitlab.com/troy.figiel/emacs /home/troy/testingmacs";
+  systemd.user.services = {
+    clone-emacs-config = {
+      Unit = {
+        Description = "Service that clones my Emacs config to .emacs.d";
+      };
+
+      Service = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.git}/bin/git clone git@gitlab.com:troy.figiel/emacs.git /home/troy/.emacs.d";
+      };
     };
-    #wantedBy = [ "default.target" ];
+
+    clone-notes = {
+      Unit = {
+        Description = "Service that clones my Zettelkasten notes";
+      };
+
+      Service = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.git}/bin/git clone git@gitlab.com:troy.figiel/zettelkasten.git /home/troy/zettelkasten";
+      };
+    };
   };
 
   home.file = {
+/* We should just use nix itself for this. It's pretty simple
     ".asdf".source = pkgs.fetchFromGitHub {
-      # This needs to be writable to set up Python and Terraform with asdf
+      # This needs to be writable somehow to set up Python and Terraform with asdf
       owner = "asdf-vm";
       repo = "asdf";
       rev = "v0.10.1";
       sha256 = "sha256-WXFGOlj1uHEVvmH/Z87wa6wbChzQQ5Kh4Ra4RwBacdw=";
     };
-
-    # How do I set up a git clone of my emacs git repo (and project repos)
-    # to the right locations?
+*/
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
     ".config/asdf-direnv".source = ./config/asdf-direnv;
