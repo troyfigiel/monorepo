@@ -56,10 +56,6 @@
       sha256 = "sha256-WXFGOlj1uHEVvmH/Z87wa6wbChzQQ5Kh4Ra4RwBacdw=";
     };
 
-    "testclone/emacs".source = builtins.fetchGit {
-      url = "https://gitlab.com/troy.figiel/emacs";
-    };
-
     # How do I set up a git clone of my emacs git repo (and project repos)
     # to the right locations?
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
