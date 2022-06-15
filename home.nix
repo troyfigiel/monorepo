@@ -47,6 +47,15 @@
     };
   };
 
+  systemd.user.services.emacs-config = {
+    #description = "Pulls emacs config";
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.git}/bin/git clone gitlab.com/troy.figiel/emacs /home/troy/testingmacs";
+    };
+    #wantedBy = [ "default.target" ];
+  };
+
   home.file = {
     ".asdf".source = pkgs.fetchFromGitHub {
       # This needs to be writable to set up Python and Terraform with asdf
