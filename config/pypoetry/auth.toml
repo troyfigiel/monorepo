@@ -1,0 +1,3 @@
+[http-basic]
+[http-basic.gitlab]
+username = "Default"

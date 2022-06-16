@@ -3,8 +3,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    # This would require emacs-config to have a flake.nix file
-    #emacs-config.url = "gitlab:troy.figiel/emacs";
   };
 
 
