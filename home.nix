@@ -9,6 +9,7 @@
     pkgs.tldr
     pkgs.git
     pkgs.nitrokey-app
+    pkgs.paperkey
     #pkgs.sshfs
     #pkgs.gpg2
   ];
