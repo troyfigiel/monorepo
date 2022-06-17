@@ -116,14 +116,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#############################################################################
-# I should use Nix itself instead of asdf to manage Python, Terraform, etc. #
-#############################################################################
 # Instead of sourcing $HOME/.asdf/asdf.sh, add $HOME/.asdf/bin to path
 # This only works in conjunction with asdf direnv
-#PATH="$PATH:$HOME/.asdf/bin"
-#. $HOME/.asdf/completions/asdf.bash
-#. "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
+PATH="$PATH:$HOME/.asdf/bin"
+. $HOME/.asdf/completions/asdf.bash
+. "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
+
+eval "$(direnv hook bash)"
 
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then

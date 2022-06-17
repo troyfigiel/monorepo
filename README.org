@@ -1,20 +1,5 @@
-* Git cloning repositories to specified directories
-Problem: Once they are cloned, they are read only and fixed to a certain commit.
-
-* Installing Python and Terraform versions with asdf
-Problem: Once again, after setting up, .asdf becomes read only.
-I will need to use home.nix to already download the python and terraform versions I need.
-I also need to set up the direnv plugin and download a version of direnv.
-
-* Deploying the config files in ~/.config
+Inputrc config?
 Create a Docker config?
-
-* Automatically setting up Syncthing
-I can check the syncthing.nix file for some options here.
-
-There is a system service that works well for the set-up.
-Not sure about the home-manager service.
-https://nixos.wiki/wiki/Syncthing    
 
 * Setting up Signal desktop
 Available as a home-manager service?
