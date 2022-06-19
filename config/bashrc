@@ -120,7 +120,7 @@ fi
 . $HOME/.asdf/completions/asdf.bash
 
 # Set up asdf-direnv integration
-export ASDF_DIRENV_BIN="$(asdf which direnv)"
+export ASDF_DIRENV_BIN="/home/troy/.asdf/installs/direnv/2.31.0/bin/direnv"
 eval "$($ASDF_DIRENV_BIN hook bash)"
 
 unset SSH_AGENT_PID
