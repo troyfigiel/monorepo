@@ -116,13 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Instead of sourcing $HOME/.asdf/asdf.sh, add $HOME/.asdf/bin to path
-# This only works in conjunction with asdf direnv
-PATH="$PATH:$HOME/.asdf/bin"
+# Set bash completions for asdf
 . $HOME/.asdf/completions/asdf.bash
-. "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
 
-eval "$(direnv hook bash)"
+# Set up asdf-direnv integration
+export ASDF_DIRENV_BIN="$(asdf which direnv)"
+eval "$($ASDF_DIRENV_BIN hook bash)"
 
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then

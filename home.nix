@@ -11,7 +11,7 @@
     pkgs.git
     pkgs.nitrokey-app
     pkgs.paperkey
-    pkgs.direnv
+    #pkgs.direnv
     #pkgs.sshfs
     #pkgs.gpg2
     #pkgs.pass
@@ -93,10 +93,11 @@
   home.file = {
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
-    ".config/asdf-direnv".source = ./config/asdf-direnv;
+    #".config/asdf-direnv".source = ./config/asdf-direnv;
     ".config/direnv".source = ./config/direnv;
     ".config/pypoetry".source = ./config/pypoetry;
     ".gnupg/gpg.conf".source = ./config/gnupg/gpg.conf;
     ".gnupg/gpg-agent.conf".source = ./config/gnupg/gpg-agent.conf;
+    ".tool-versions".source = ./config/tool-versions;
   };
 }
