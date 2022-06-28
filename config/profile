@@ -6,6 +6,7 @@ export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/
 
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
-# Instead of sourcing $HOME/.asdf/asdf.sh, add $HOME/.asdf/bin to path
-# This only works in conjunction with asdf direnv
-PATH="$PATH:$HOME/.asdf/bin"
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+	export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
