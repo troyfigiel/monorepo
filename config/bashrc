@@ -116,12 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Add shims to path
-. $HOME/.asdf/asdf.sh
-
 # Set bash completions for asdf
-. $HOME/.asdf/completions/asdf.bash
+[ -d "$HOME/.asdf" ] && . $HOME/.asdf/completions/asdf.bash
 
 # Set up asdf-direnv integration
-export ASDF_DIRENV_BIN="/home/troy/.asdf/installs/direnv/2.31.0/bin/direnv"
+export ASDF_DIRENV_BIN="$(which direnv)"
 eval "$($ASDF_DIRENV_BIN hook bash)"

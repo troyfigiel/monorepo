@@ -11,7 +11,7 @@
     pkgs.git
     pkgs.nitrokey-app
     pkgs.paperkey
-    #pkgs.direnv
+    pkgs.direnv
     #pkgs.sshfs
     #pkgs.gpg2
     #pkgs.pass
@@ -103,6 +103,6 @@
     ".config/pypoetry".source = ./config/pypoetry;
     ".gnupg/gpg.conf".source = ./config/gnupg/gpg.conf;
     ".gnupg/gpg-agent.conf".source = ./config/gnupg/gpg-agent.conf;
-    ".tool-versions".source = ./config/tool-versions;
+    #".tool-versions".source = ./config/tool-versions;
   };
 }
