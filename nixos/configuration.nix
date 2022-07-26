@@ -88,6 +88,12 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = pkgs.lib.optionalString (config.nix.package == pkgs.nixFlakes)
+      "experimental-features = nix-command flakes";
+  };
+
   nixpkgs.config = {
     allowUnfree = true;
   }; 
