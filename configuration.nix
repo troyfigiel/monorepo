@@ -63,9 +63,6 @@
     # Text editor
     vim
 
-    # Environment
-    syncthing
-
     # Essentials
     git
     wget
@@ -74,17 +71,6 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-
-  # Allows communication with smartcards.
-  services.pcscd.enable = true;  
-
-  services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
-
-  # Flatpak
-  services.flatpak.enable = true;
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   virtualisation.docker.enable = true;
 

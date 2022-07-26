@@ -14,11 +14,22 @@
 
   home.packages = with pkgs; [
     tldr
+    xclip
+
     nitrokey-app
     firefox
     logseq
     vscode
-    xclip
+    dbeaver
+
+    google-chrome
+    minecraft
+
+    signal-desktop
+    tdesktop
+    whatsapp-for-linux
+    skypeforlinux
+
     #sshfs
     #gpg2
     #pass
