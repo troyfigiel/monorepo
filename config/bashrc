@@ -116,9 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Set bash completions for asdf
-[ -d "$HOME/.asdf" ] && . $HOME/.asdf/completions/asdf.bash
-
-# Set up asdf-direnv integration
-export ASDF_DIRENV_BIN="$(which direnv)"
-eval "$($ASDF_DIRENV_BIN hook bash)"
+# Because flatpak does not export to PATH
+alias code="flatpak run com.visualstudio.code"

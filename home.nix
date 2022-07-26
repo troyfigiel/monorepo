@@ -4,19 +4,19 @@
   home.username = "troy";
   home.homeDirectory = "/home/troy";
 
-  home.packages = [
-    pkgs.vim
-    pkgs.emacs
-    pkgs.tldr
-    pkgs.git
-    pkgs.nitrokey-app
-    pkgs.paperkey
-    pkgs.direnv
-    #pkgs.sshfs
-    #pkgs.gpg2
-    #pkgs.pass
-    #pkgs.flameshot
-    pkgs.pandoc
+  home.packages = with pkgs; [
+    vim
+    emacs
+    tldr
+    git
+    nitrokey-app
+    paperkey
+    direnv
+    #sshfs
+    #gpg2
+    #pass
+    #flameshot
+    pandoc
   ];
 
   home.sessionVariables = {
@@ -82,27 +82,14 @@
         ExecStart = "${pkgs.git}/bin/git clone git@gitlab.com:troy.figiel/zettelkasten.git /home/troy/zettelkasten";
       };
     };
-
-    clone-asdf = {
-      Unit = {
-        Description = "Services that clones asdf";
-      };
-
-      Service = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.git}/bin/git clone https://github.com/asdf-vm/asdf.git /home/troy/.asdf --branch v0.10.0";
-      };
-    };
   };
 
   home.file = {
     ".config/user-dirs.dirs".source = ./config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./config/user-dirs.locale;
-    #".config/asdf-direnv".source = ./config/asdf-direnv;
     ".config/direnv".source = ./config/direnv;
     ".config/pypoetry".source = ./config/pypoetry;
     ".gnupg/gpg.conf".source = ./config/gnupg/gpg.conf;
     ".gnupg/gpg-agent.conf".source = ./config/gnupg/gpg-agent.conf;
-    #".tool-versions".source = ./config/tool-versions;
   };
 }

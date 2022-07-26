@@ -1,6 +1,0 @@
-Inputrc config?
-Create a Docker config?
-
-* Setting up Signal desktop
-Available as a home-manager service?
-
