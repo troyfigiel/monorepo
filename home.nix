@@ -30,6 +30,7 @@
     whatsapp-for-linux
     skypeforlinux
 
+    flameshot
     #sshfs
     #gpg2
     #pass

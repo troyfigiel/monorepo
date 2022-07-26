@@ -11,6 +11,8 @@
       ./system/gpg.nix
       ./system/graphics.nix
       ./system/networking.nix
+      # OpenVPN keeps asking for my username and
+      # password whenever I run nixos-rebuild switch
       ./system/openvpn.nix
       ./system/sound.nix
       ./system/syncthing.nix
