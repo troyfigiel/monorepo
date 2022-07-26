@@ -112,6 +112,7 @@
     # Essentials
     git
     wget
+    xclip
 
     # Security
     gnupg
