@@ -8,17 +8,21 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/bootloader.nix
-      ./modules/gpg.nix
-      ./modules/graphics.nix
-      ./modules/networking.nix
-      ./modules/openvpn.nix
-      ./modules/sound.nix
-      ./modules/syncthing.nix
-      ./modules/users.nix
-      ./modules/xserver.nix
+      ./system/gpg.nix
+      ./system/graphics.nix
+      ./system/networking.nix
+      ./system/openvpn.nix
+      ./system/sound.nix
+      ./system/syncthing.nix
+      ./system/users.nix
+      ./system/xserver.nix
     ];
 
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    efi.efiSysMountPoint = "/boot/efi";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -61,18 +65,10 @@
 
     # Environment
     syncthing
-    direnv
-    chezmoi
 
     # Essentials
     git
     wget
-    xclip
-
-    # Security
-    gnupg
-    pinentry
-    pass
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
