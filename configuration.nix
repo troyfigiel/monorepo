@@ -53,20 +53,13 @@
     allowUnfree = true;
   }; 
   
-
   environment.systemPackages = with pkgs; [
-    # Debugging
-    w3m
-    sqlite
-
-    # Python
-    python3
-
-    # Text editor
-    vim
-
-    # Essentials
     git
+    htop
+    python3
+    sqlite
+    vim
+    w3m
     wget
   ];
 
