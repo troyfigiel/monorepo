@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
@@ -11,8 +7,6 @@
       ./system/gpg.nix
       ./system/graphics.nix
       ./system/networking.nix
-      # OpenVPN keeps asking for my username and
-      # password whenever I run nixos-rebuild switch
       ./system/openvpn.nix
       ./system/sound.nix
       ./system/syncthing.nix
@@ -26,21 +20,23 @@
     efi.efiSysMountPoint = "/boot/efi";
   };
 
-  # Set your time zone.
   time.timeZone = "Europe/Berlin";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.utf8";
-
-  # Configure console keymap
   console.keyMap = "de";
 
-  # Enable CUPS to print documents.
+  environment.systemPackages = with pkgs; [
+    git
+    htop
+    python3
+    sqlite
+    sshfs
+    vim
+    w3m
+    wget
+    xclip
+  ];
+
   services.printing.enable = true;
-
-  # Enable sound with pipewire.
-
-  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   nix = {
@@ -52,20 +48,6 @@
   nixpkgs.config = {
     allowUnfree = true;
   }; 
-  
-  environment.systemPackages = with pkgs; [
-    git
-    htop
-    python3
-    sqlite
-    vim
-    w3m
-    wget
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
 
   virtualisation.docker.enable = true;
 
@@ -76,5 +58,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
 }

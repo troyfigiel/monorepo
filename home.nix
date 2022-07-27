@@ -14,14 +14,14 @@
 
   home.packages = with pkgs; [
     tldr
-    xclip
 
     nitrokey-app
-    firefox
     logseq
     dbeaver
 
+    firefox
     google-chrome
+
     minecraft
 
     signal-desktop
@@ -30,11 +30,6 @@
     skypeforlinux
 
     flameshot
-    #sshfs
-    #gpg2
-    #pass
-    #flameshot
-    #pandoc
   ];
 
   home.sessionVariables = {
@@ -42,12 +37,9 @@
     BROWSER = "firefox";
   };
 
-  home.sessionPath = [
-    "$HOME/.local/bin"    
-  ];
-
   home.stateVersion = "22.05";
 
+  # What does this do?
   targets.genericLinux.enable = true;
 
   programs.home-manager.enable = true;
