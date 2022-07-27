@@ -1,8 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ ./home/bash.nix ./home/git.nix ./home/systemd.nix ./home/vscode.nix ];
+  imports = [
+    ./home/bash.nix
+    ./home/git.nix
+    ./home/i3.nix
+    ./home/systemd.nix
+    ./home/vscode.nix
+  ];
 
   home.username = "troy";
   home.homeDirectory = "/home/troy";
@@ -27,6 +32,9 @@
     tdesktop
     whatsapp-for-linux
     skypeforlinux
+
+    flameshot
+    feh
   ];
 
   home.sessionVariables = {
@@ -65,9 +73,7 @@
   services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.
-  programs.firefox = {
-    enable = true;
-  };
+  programs.firefox = { enable = true; };
   programs.fzf.enable = true;
   # programs.powerline-go.enable = true;
 

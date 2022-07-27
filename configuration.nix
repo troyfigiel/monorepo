@@ -53,12 +53,15 @@
     xclip
     nixfmt
     qemu
+    mpc-cli
   ];
 
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
   services.openssh.enable = true;
+
+  #services.mpd.enable = true;
 
   nix = {
     package = pkgs.nixFlakes;

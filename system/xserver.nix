@@ -1,29 +1,27 @@
+{ pkgs, ... }:
+
 {
   services.xserver = {
     enable = true;
     layout = "de";
     xkbVariant = "";
-
     videoDrivers = [ "modesetting" ];
-
     displayManager = {
       lightdm.enable = true;
-      lightdm.greeters.pantheon.enable = true;
+      defaultSession = "none+i3";
     };
-
-    windowManager = {
-      xmonad = {
-        enable = false;
-        enableContribAndExtras = false;
-        extraPackages = hp: [
-          hp.xmobar
-          hp.xmonad-screenshot
-        ];
+    desktopManager = {
+      xterm.enable = false;
+      xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
       };
     };
-
-    desktopManager.pantheon.enable = true;
-
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [ rofi polybar i3lock ];
+    };
     libinput = {
       enable = true;
       touchpad.tapping = true;
