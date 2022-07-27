@@ -9,18 +9,14 @@
     extensions = with pkgs.vscode-extensions; [
       _4ops.terraform
       #TO INSTALL: aaron-bond.better-comments
-      adpyke.codesnap
       bbenoist.nix
-      #TO INSTALL: brunoventura.sqltools-athena-driver
       bungcip.better-toml
       christian-kohler.path-intellisense
-      #donjayamanne.python-environment-manager
       eamodio.gitlens
       #TO INSTALL: innoverio.vscode-dbt-power-user
       #TO INSTALL: iterative.dvc
       #TO INSTALL: kevinglasson.cornflakes-linter
       #TO INSTALL: KevinRose.vsc-python-indent
-      #TO INSTALL: kj.sqltools-driver-redshift
       mechatroner.rainbow-csv
       ms-azuretools.vscode-docker
       ms-python.python
@@ -33,9 +29,6 @@
       #TO INSTALL: ms-vscode-remote.remote-ssh-edit
       #TO INSTALL: ms-vscode-remote.remote-wsl
       #TO INSTALL: ms-vscode-remote.vscode-remote-extensionpack
-      #TO INSTALL: mtxr.sqltools
-      #TO INSTALL: mtxr.sqltools-driver-pg
-      #TO INSTALL: mtxr.sqltools-driver-sqlite
       njpwerner.autodocstring
       oderwat.indent-rainbow
       redhat.vscode-yaml
@@ -51,40 +44,63 @@
       #}
     ];
     userSettings = {
-      "telemetry.telemetryLevel" = "off";
-      "files.autoSave" = "afterDelay";
+      "diffEditor.renderSideBySide" = false;
       "dvc.doNotShowWalkthroughAfterInstall" = true;
-      "editor.formatOnSaveMode" = "file";
-      "editor.formatOnSave" = true;
       "editor.codeActionsOnSave" = {
           "source.fixAll" = true;
           "source.organizeImports" = true;
       };
-      "python.analysis.typeCheckingMode" = "basic";
-      "python.linting.enabled" = true;
-      "python.formatting.provider" = "black";
-      "python.testing.pytestEnabled" = true;
-      "vim.sneak" = true;
-      "vim.sneakReplacesF" = true;
-      "vim.smartRelativeLine" = true;
-      "vim.useSystemClipboard" = true;
-      "workbench.startupEditor" = "none";
-      "diffEditor.renderSideBySide" = false;
-      "gitlens.showWelcomeOnInstall" = false;
-      "gitlens.showWhatsNewAfterUpgrades" = false;
-      "gitlens.currentLine.enabled" = false;
+      "editor.formatOnSave" = true;
+      "editor.formatOnSaveMode" = "file";
+      "explorer.confirmDelete" = false;
+      "explorer.confirmDragAndDrop" = false;
+      "files.autoSave" = "afterDelay";
+      "git.ignoreMissingGitWarning" = false;
       "gitlens.codeLens.authors.enabled" = false;
       "gitlens.codeLens.enabled" = false;
-      "explorer.confirmDragAndDrop" = false;
-      "explorer.confirmDelete" = false;
+      "gitlens.currentLine.enabled" = false;
+      "gitlens.showWelcomeOnInstall" = false;
+      "gitlens.showWhatsNewAfterUpgrades" = false;
+      "python.analysis.typeCheckingMode" = "basic";
+      "python.formatting.provider" = "black";
+      "python.linting.enabled" = true;
+      "python.terminal.activateEnvironment" = false;
+      "python.testing.pytestEnabled" = true;
+      "redhat.telemetry.enabled" = false;
+      # I could probably install all extensions automatically using
+      # a variable instead of duplicating code.
+      "remote.containers.defaultExtensions" = [
+          "4ops.terraform"
+          "bbenoist.nix"
+          "bungcip.better-toml"
+          "christian-kohler.path-intellisense"
+          "eamodio.gitlens"
+          "eamodio.gitlens"
+          "mechatroner.rainbow-csv"
+          "ms-python.python"
+          "ms-python.vscode-pylance"
+          "ms-toolsai.jupyter"
+          "ms-toolsai.jupyter-keymap"
+          "ms-toolsai.jupyter-renderers"
+          "njpwerner.autodocstring"
+          "oderwat.indent-rainbow"
+          "redhat.vscode-yaml"
+          "samuelcolvin.jinjahtml"
+          "vscodevim.vim"
+      ];
+      "telemetry.telemetryLevel" = "off";
       "terminal.integrated.enablePersistentSessions" = false;
       "vim.handleKeys" = {
-          "<C-w>" = false;
           "<C-d>" = true;
           "<C-s>" = false;
+          "<C-w>" = false;
           "<C-z>" = false;
       };
-      "python.terminal.activateEnvironment" = false;
+      "vim.smartRelativeLine" = true;
+      "vim.sneak" = true;
+      "vim.sneakReplacesF" = true;
+      "vim.useSystemClipboard" = true;
+      "workbench.startupEditor" = "none";
     };
   };
 }

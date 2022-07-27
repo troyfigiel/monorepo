@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     tldr
+    direnv
 
     nitrokey-app
     logseq
