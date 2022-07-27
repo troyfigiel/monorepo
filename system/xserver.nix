@@ -8,10 +8,12 @@
 
     displayManager = {
       lightdm.enable = true;
-      autoLogin.enable = true;
-      autoLogin.user = "troy";
+      lightdm.greeters.pantheon.enable = true;
+      #autoLogin.enable = true;
+      #autoLogin.user = "troy";
     };
-    desktopManager.cinnamon.enable = true;
+
+    desktopManager.pantheon.enable = true;
 
     libinput = {
       enable = true;
