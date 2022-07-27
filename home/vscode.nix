@@ -3,47 +3,52 @@
 {
   programs.vscode = {
     enable = true;
-    # There currently seems to be a bug preventing me from putting this to true
-    # https://github.com/nix-community/home-manager/issues/2798
-    mutableExtensionsDir = false;
-    #package = pkgs.vscode;
+    # This is the default, but if all extensions are properly
+    # packaged, I can switch this to false.
+    mutableExtensionsDir = true;
     extensions = with pkgs.vscode-extensions; [
       _4ops.terraform
-      #aaron-bond.better-comments
+      #TO INSTALL: aaron-bond.better-comments
       adpyke.codesnap
       bbenoist.nix
-      #brunoventura.sqltools-athena-driver
+      #TO INSTALL: brunoventura.sqltools-athena-driver
       bungcip.better-toml
       christian-kohler.path-intellisense
       #donjayamanne.python-environment-manager
       eamodio.gitlens
-      #innoverio.vscode-dbt-power-user
-      #iterative.dvc
-      #kevinglasson.cornflakes-linter
-      #KevinRose.vsc-python-indent
-      #kj.sqltools-driver-redshift
+      #TO INSTALL: innoverio.vscode-dbt-power-user
+      #TO INSTALL: iterative.dvc
+      #TO INSTALL: kevinglasson.cornflakes-linter
+      #TO INSTALL: KevinRose.vsc-python-indent
+      #TO INSTALL: kj.sqltools-driver-redshift
       mechatroner.rainbow-csv
       ms-azuretools.vscode-docker
       ms-python.python
       ms-python.vscode-pylance
       ms-toolsai.jupyter
-      #ms-toolsai.jupyter-keymap
+      #TO INSTALL: ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
-      #ms-vscode-remote.remote-containers
+      #TO INSTALL: ms-vscode-remote.remote-containers
       ms-vscode-remote.remote-ssh
-      #ms-vscode-remote.remote-ssh-edit
-      #ms-vscode-remote.remote-wsl
-      #ms-vscode-remote.vscode-remote-extensionpack
-      #mtxr.sqltools
-      #mtxr.sqltools-driver-pg
-      #mtxr.sqltools-driver-sqlite
+      #TO INSTALL: ms-vscode-remote.remote-ssh-edit
+      #TO INSTALL: ms-vscode-remote.remote-wsl
+      #TO INSTALL: ms-vscode-remote.vscode-remote-extensionpack
+      #TO INSTALL: mtxr.sqltools
+      #TO INSTALL: mtxr.sqltools-driver-pg
+      #TO INSTALL: mtxr.sqltools-driver-sqlite
       njpwerner.autodocstring
       oderwat.indent-rainbow
       redhat.vscode-yaml
-      #samuelcolvin.jinjahtml
+      #TO INSTALL: samuelcolvin.jinjahtml
       vscodevim.vim      
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-
+      # I have not been able to get this to work yet, unfortunately.
+      #{
+      #  name = "sqltools";
+      #  publisher = "mtxr";
+      #  version = "";
+      #  sha256 = "";
+      #}
     ];
     userSettings = {
       "telemetry.telemetryLevel" = "off";

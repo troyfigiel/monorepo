@@ -19,7 +19,6 @@
     nitrokey-app
     firefox
     logseq
-    vscode
     dbeaver
 
     google-chrome
