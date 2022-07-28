@@ -1,24 +1,41 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./system/gpg.nix
-      ./system/graphics.nix
-      ./system/networking.nix
-      ./system/openvpn.nix
-      ./system/sound.nix
-      ./system/syncthing.nix
-      ./system/users.nix
-      ./system/xserver.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./system/gpg.nix
+    ./system/graphics.nix
+    ./system/networking.nix
+    ./system/openvpn.nix
+    ./system/sound.nix
+    ./system/syncthing.nix
+    ./system/users.nix
+    ./system/xserver.nix
+  ];
 
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     efi.efiSysMountPoint = "/boot/efi";
   };
+
+  # This is approximately how I should do an auto-upgrade, but the code here
+  # probably does not work as-is.
+
+  # system.autoUpgrade = {
+  #   enable = true;
+  #   allowReboot = true;
+  #   # What is self.outPath?
+  #   flake = self.outPath;
+  #   # These are the flags going into nixos-rebuild
+  #   flags = [
+  #     "--recreate-lock-file"
+  #     "--no-write-lock-file"
+  #     "-L" # print build logs
+  #   ];
+  #   dates = "daily";
+  #   # I might want to change the rebootWindow parameters.
+  # };
 
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.utf8";
@@ -34,6 +51,7 @@
     w3m
     wget
     xclip
+    nixfmt
   ];
 
   services.printing.enable = true;
@@ -41,13 +59,12 @@
 
   nix = {
     package = pkgs.nixFlakes;
-    extraOptions = pkgs.lib.optionalString (config.nix.package == pkgs.nixFlakes)
+    extraOptions =
+      pkgs.lib.optionalString (config.nix.package == pkgs.nixFlakes)
       "experimental-features = nix-command flakes";
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  }; 
+  nixpkgs.config = { allowUnfree = true; };
 
   virtualisation.docker.enable = true;
 

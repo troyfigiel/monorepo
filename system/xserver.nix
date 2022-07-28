@@ -9,8 +9,6 @@
     displayManager = {
       lightdm.enable = true;
       lightdm.greeters.pantheon.enable = true;
-      #autoLogin.enable = true;
-      #autoLogin.user = "troy";
     };
 
     desktopManager.pantheon.enable = true;
