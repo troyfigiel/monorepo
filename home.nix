@@ -39,7 +39,9 @@
   # Is it a problem I have a home service as well as a system service?
   services.gpg-agent = {
     enable = true;
+    enableSshSupport = true;
     sshKeys = [ "8ABF0116DA24246700017F956358D89FE8B148B8" ];
+    pinentryFlavor = "gtk2";
     verbose = true;
   };
 
