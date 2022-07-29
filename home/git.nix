@@ -12,4 +12,11 @@
       merge = { conflictstyle = "diff3"; };
     };
   };
+
+  programs.lazygit ={
+    enable = true;
+    settings = {
+      disableStartupPopups = true;
+    };
+  };
 }

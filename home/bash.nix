@@ -2,6 +2,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
+      lg = "lazygit";
       ll = "ls -alF";
       la = "ls -A";
       l = "ls -CF";
