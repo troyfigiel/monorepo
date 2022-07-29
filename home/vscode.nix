@@ -29,8 +29,6 @@
         #TO INSTALL: ms-vscode-remote.remote-containers
         ms-vscode-remote.remote-ssh
         #TO INSTALL: ms-vscode-remote.remote-ssh-edit
-        #TO INSTALL: ms-vscode-remote.remote-wsl
-        #TO INSTALL: ms-vscode-remote.vscode-remote-extensionpack
         njpwerner.autodocstring
         oderwat.indent-rainbow
         redhat.vscode-yaml

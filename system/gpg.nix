@@ -5,9 +5,10 @@
 {
   environment.systemPackages = with pkgs; [ gnupg pinentry ];
 
-  # Allows communication with smartcards.
+  # Allows communication with smartcards. Do I need this still?
   services.pcscd.enable = true;
 
+  # Can I move this to the home config like I did with the gpg-agent?
   programs.ssh.startAgent = false;
   services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
 }

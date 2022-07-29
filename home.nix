@@ -25,8 +25,6 @@
     tdesktop
     whatsapp-for-linux
     skypeforlinux
-
-    flameshot
   ];
 
   home.sessionVariables = {
@@ -47,7 +45,12 @@
 
   programs.home-manager.enable = true;
 
+  programs.browserpass = {
+    enable = true;
+    browsers = [ "firefox" ];
+  };
   programs.password-store.enable = true;
+
   # autojump seems interesting, but how useful really?
   # programs.autojump.enable = true;
 
@@ -57,6 +60,7 @@
   # programs.direnv.nix-direnv.enable = true;
 
   # For when I switch to i3wm
+  # programs.alacritty.enable = true;
   # programs.feh.enable = true;
   # programs.zathura.enable = true;
   # services.flameshot.enable = true;
@@ -77,6 +81,13 @@
 
   # What does this do exactly?
   programs.command-not-found.enable = true;
+
+  programs.lf.enable = true;
+
+  programs.atuin.enable = true;
+
+  programs.less.enable = true;
+  programs.lesspipe.enable = true;
 
   xdg = {
     enable = true;

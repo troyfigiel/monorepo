@@ -10,14 +10,8 @@
       fgrep = "fgrep --color=auto";
       egrep = "egrep --color=auto";
     };
-    profileExtra = ''
-      . ~/nixfiles/home/config/profile
-    '';
     bashrcExtra = ''
       . ~/nixfiles/home/config/bashrc
-    '';
-    logoutExtra = ''
-      . ~/nixfiles/home/config/bash_logout
     '';
   };
 }
