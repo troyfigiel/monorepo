@@ -1,8 +1,10 @@
 {
   programs.bash = {
     enable = true;
+    enableVteIntegration = true;
     shellAliases = {
       lg = "lazygit";
+      ld = "lazydocker";
       ll = "ls -alF";
       la = "ls -A";
       l = "ls -CF";

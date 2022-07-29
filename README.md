@@ -20,3 +20,4 @@ In my opinion, the best way to figure out which options and configurations are p
 - secret management
 - VPN -> nework manager
 - Set up i3wm
+- Set up a config for lazydocker and symlink it in place

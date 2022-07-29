@@ -14,6 +14,8 @@
     logseq
     dbeaver
 
+    lazydocker
+
     google-chrome
 
     # Steam runs into a "glXChooseVisual failed" error.
@@ -51,27 +53,21 @@
   };
   programs.password-store.enable = true;
 
-  # autojump seems interesting, but how useful really?
-  # programs.autojump.enable = true;
-
   programs.jq.enable = true;
   programs.direnv.enable = true;
   # I have never used this before, but it sounds useful.
-  # programs.direnv.nix-direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   # For when I switch to i3wm
-  # programs.alacritty.enable = true;
-  # programs.feh.enable = true;
-  # programs.zathura.enable = true;
-  # services.flameshot.enable = true;
+  programs.alacritty.enable = true;
+  programs.feh.enable = true;
+  programs.zathura.enable = true;
+  services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.
   programs.firefox.enable = true;
   programs.fzf.enable = true;
   # programs.powerline-go.enable = true;
-
-  # This seems interesting, but I need to understand it better.
-  # programs.gitui.enable = true;
 
   # Works with zsh, kitty, rofi, neovim, i3
   programs.pywal.enable = true;
@@ -107,7 +103,7 @@
 
   # My current set up with Pantheon does not seem to need dircolors, but a
   # different terminal might.
-  # programs.dircolors.enable = true;
+  programs.dircolors.enable = true;
 
   # What does this do?
   targets.genericLinux.enable = true;
