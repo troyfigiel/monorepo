@@ -1,7 +1,12 @@
+{ pkgs, ... }:
+
 {
   networking = {
     hostName = "nixos";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = [ pkgs.networkmanager-openvpn ];
+    };
   };
 
   # Configure network proxy if necessary
