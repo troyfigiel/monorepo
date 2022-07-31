@@ -65,7 +65,9 @@
   services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+  };
   programs.fzf.enable = true;
   # programs.powerline-go.enable = true;
 

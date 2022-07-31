@@ -69,10 +69,14 @@
   nixpkgs.config = { allowUnfree = true; };
 
   sops.defaultSopsFile = ./secrets/secrets.yaml;
-  sops.secrets.troy-password = { };
-  sops.secrets.work-vpn-username = { };
-  sops.secrets.work-vpn-password = { };
+
+  sops.secrets.troy-password = {
+    neededForUsers = true;
+  };
+  # sops.secrets.work-vpn-username = { };
+  # sops.secrets.work-vpn-password = { };
   # Now I can access the secret with config.sops.secrets.troy-password.path
+  # I should set up the VPN after I switch away from Pantheon as my desktop environment.
 
   virtualisation.docker.enable = true;
 

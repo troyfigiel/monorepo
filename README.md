@@ -17,7 +17,6 @@ In my opinion, the best way to figure out which options and configurations are p
 - bash
 - gitconfig in projects/work
 - copying Nix store
-- secret management
 - VPN -> nework manager
-- Set up i3wm
+- Set up awesomeWM
 - Set up a config for lazydocker and symlink it in place

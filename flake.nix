@@ -17,21 +17,22 @@
     };
   };
 
-  outputs = { home-manager, nix-colors, nixpkgs, sops-nix, ... }: {
-    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit nix-colors; };
-      modules = [
-        ./configuration.nix
-        sops-nix.nixosModules.sops
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.troy = import ./home.nix;
-        }
-        # nur.nixosModules.nur
-      ];
+  outputs = { home-manager, nix-colors, nixpkgs, # nur,
+    sops-nix, ... }: {
+      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit nix-colors; };
+        modules = [
+          ./configuration.nix
+          sops-nix.nixosModules.sops
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.troy = import ./home.nix;
+          }
+          # nur.nixosModules.nur
+        ];
+      };
     };
-  };
 }
