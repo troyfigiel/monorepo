@@ -57,6 +57,8 @@
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
+  services.openssh.enable = true;
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions =
@@ -65,6 +67,12 @@
   };
 
   nixpkgs.config = { allowUnfree = true; };
+
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.secrets.troy-password = { };
+  sops.secrets.work-vpn-username = { };
+  sops.secrets.work-vpn-password = { };
+  # Now I can access the secret with config.sops.secrets.troy-password.path
 
   virtualisation.docker.enable = true;
 

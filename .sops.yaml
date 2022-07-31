@@ -1,7 +1,9 @@
 keys:
-  - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
+  - &admin_troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
+  - &host_nixos 5ff45be63c8d9529c55f542b3e99ed6fe5ec1e80
 creation_rules:
-  - path_regex: secrets/[^/]+\.yaml$
+  - path_regex: secrets/secrets.yaml
     key_groups:
     - pgp:
-      - *troy
+      - *admin_troy
+      - *host_nixos
