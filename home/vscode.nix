@@ -15,6 +15,7 @@
         bungcip.better-toml
         christian-kohler.path-intellisense
         eamodio.gitlens
+        humao.rest-client
         #TO INSTALL: innoverio.vscode-dbt-power-user
         #TO INSTALL: iterative.dvc
         #TO INSTALL: kevinglasson.cornflakes-linter
