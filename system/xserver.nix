@@ -11,6 +11,17 @@
       lightdm.greeters.pantheon.enable = true;
     };
 
+    windowManager = {
+      xmonad = {
+        enable = false;
+        enableContribAndExtras = false;
+        extraPackages = hp: [
+          hp.xmobar
+          hp.xmonad-screenshot
+        ];
+      };
+    };
+
     desktopManager.pantheon.enable = true;
 
     libinput = {

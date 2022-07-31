@@ -1,12 +1,14 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   users.mutableUsers = false;
 
   users.users.troy = {
     isNormalUser = true;
-    home = "/home/troy"; # TODO: Is this not the default home?
+    home = "/home/troy";
     description = "Troy Figiel";
+    # Why do I not need to set this?
+    # shell = pkgs.bash;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     # I need to give the hashed version of my password with passwordFile,
     # because passwordFile is used directly in /etc/shadow. See:

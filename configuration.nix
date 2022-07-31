@@ -52,6 +52,7 @@
     wget
     xclip
     nixfmt
+    qemu
   ];
 
   services.printing.enable = true;
