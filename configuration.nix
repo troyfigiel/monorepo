@@ -53,7 +53,10 @@
     xclip
     nixfmt
     qemu
+
+    # For i3
     mpc-cli
+    brightnessctl
   ];
 
   services.printing.enable = true;
@@ -61,6 +64,7 @@
 
   services.openssh.enable = true;
 
+  programs.nm-applet.enable = true;
   #services.mpd.enable = true;
 
   nix = {
