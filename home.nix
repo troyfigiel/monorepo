@@ -2,9 +2,11 @@
 
 {
   imports = [
+    ./home/alacritty.nix
     ./home/bash.nix
     ./home/git.nix
     ./home/i3.nix
+    ./home/polybar.nix
     ./home/systemd.nix
     ./home/vscode.nix
   ];

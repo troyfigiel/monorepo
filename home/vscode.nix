@@ -37,12 +37,12 @@
         vscodevim.vim
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         # I have not been able to get this to work yet, unfortunately.
-        #{
-        #  name = "sqltools";
-        #  publisher = "mtxr";
-        #  version = "";
-        #  sha256 = "";
-        #}
+        # {
+        #   name = "sqltools";
+        #   publisher = "mtxr";
+        #   version = "";
+        #   sha256 = "";
+        # }
       ];
     userSettings = {
       "diffEditor.renderSideBySide" = false;
@@ -93,6 +93,8 @@
       "terminal.integrated.enablePersistentSessions" = false;
       "vim.handleKeys" = {
         "<C-d>" = true;
+        "<C-f>" = false;
+        "<C-h>" = false;
         "<C-s>" = false;
         "<C-w>" = false;
         "<C-z>" = false;
