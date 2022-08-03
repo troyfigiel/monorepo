@@ -86,7 +86,7 @@
   # programs.powerline-go.enable = true;
 
   # Works with zsh, kitty, rofi, neovim, i3
-  programs.pywal.enable = true;
+  # programs.pywal.enable = true;
 
   # Give neovim a try?
   # programs.neovim.enable = true;
@@ -101,24 +101,24 @@
   programs.less.enable = true;
   programs.lesspipe.enable = true;
 
-  xdg = {
+  services.betterlockscreen = { enable = true; };
+
+  xdg = let
+    homeDir = "$HOME";
+    mediaDir = "${homeDir}/Media";
+  in {
     enable = true;
     userDirs = {
       enable = true;
       createDirectories = true;
-      # How can I use variables for this?
-      music = "$HOME/Media";
-      pictures = "$HOME/Media";
-      publicShare = "$HOME";
-      templates = "$HOME";
-      videos = "$HOME/Media";
+      music = mediaDir;
+      pictures = mediaDir;
+      publicShare = homeDir;
+      templates = homeDir;
+      videos = mediaDir;
     };
-    # I can also set desktopEntry instead of having to create them manually.
-    # However, if I move over to i3wm, I might not need that anyway.
   };
 
-  # My current set up with Pantheon does not seem to need dircolors, but a
-  # different terminal might.
   programs.dircolors.enable = true;
 
   # What does this do?

@@ -10,7 +10,6 @@
 
       config = rec {
         modifier = "Mod4";
-        bars = [ ];
 
         window.border = 2;
 
@@ -42,18 +41,20 @@
           "${modifier}+d" = "exec ${pkgs.rofi}/bin/rofi -modi drun -show drun";
           # This is like a buffer switch in Emacs
           "${modifier}+b" = "exec ${pkgs.rofi}/bin/rofi -show window";
-          "${modifier}+Shift+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
           "${modifier}+Shift+g" = "mode gaps";
+          "${modifier}+Shift+x" = "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
 
           "${modifier}+Ctrl+b" = "exec ${pkgs.firefox}/bin/firefox";
-          "${modifier}+Ctrl+l" = "exec ${pkgs.logseq}/bin/logseq";
-          "${modifier}+Ctrl+g" =
-            "exec ${terminal} -e ${pkgs.lazygit}/bin/lazygit";
           "${modifier}+Ctrl+d" =
             "exec ${terminal} -e ${pkgs.lazydocker}/bin/lazydocker";
+          "${modifier}+Ctrl+f" = "exec ${terminal} -e ${pkgs.lf}/bin/lf";
+          "${modifier}+Ctrl+g" =
+            "exec ${terminal} -e ${pkgs.lazygit}/bin/lazygit";
+          "${modifier}+Ctrl+l" = "exec ${pkgs.logseq}/bin/logseq";
+          "${modifier}+Ctrl+n" = "exec ${pkgs.nitrokey-app}/bin/nitrokey-app";
+          "${modifier}+Ctrl+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
           "${modifier}+Ctrl+t" =
             "exec ${terminal} -e ${pkgs.bpytop}/bin/bpytop";
-          "${modifier}+Ctrl+f" = "exec ${terminal} -e ${pkgs.lf}/bin/lf";
           "${modifier}+Ctrl+w" = "exec ${pkgs.wireshark}/bin/wireshark";
 
           "XF86AudioMute" =

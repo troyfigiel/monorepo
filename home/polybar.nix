@@ -47,7 +47,7 @@ in {
         fixed-center = true;
 
         width = "100%";
-        height = 20;
+        height = 19;
         offset-x = "1%";
 
         scroll-up = "i3wm-wsnext";
@@ -73,7 +73,7 @@ in {
         fixed-center = true;
 
         width = "100%";
-        height = 20;
+        height = 19;
 
         offset-x = "1%";
 
@@ -144,21 +144,35 @@ in {
 
         poll-interval = 2;
 
-        label-full = "100%";
+        label-full = " 100%";
         format-full-padding = 1;
         format-full-foreground = secondary;
         format-full-background = primary;
 
-        format-charging = "<animation-charging> <label-charging>";
+        format-charging = " <animation-charging> <label-charging>";
         format-charging-padding = 1;
         format-charging-foreground = secondary;
         format-charging-background = primary;
         label-charging = "%percentage%% +%consumption%W";
+        animation-charging-0 = "";
+        animation-charging-1 = "";
+        animation-charging-2 = "";
+        animation-charging-3 = "";
+        animation-charging-4 = "";
+        animation-charging-framerate = 500;
 
         format-discharging = "<ramp-capacity> <label-discharging>";
         format-discharging-padding = 1;
         format-discharging-foreground = secondary;
         format-discharging-background = primary;
+        label-discharging = "%percentage%% -%consumption%W";
+        ramp-capacity-0 = "";
+        ramp-capacity-0-foreground = urgency;
+        ramp-capacity-1 = "";
+        ramp-capacity-1-foreground = urgency;
+        ramp-capacity-2 = "";
+        ramp-capacity-3 = "";
+        ramp-capacity-4 = "";
       };
 
       "module/cpu" = {
