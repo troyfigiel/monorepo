@@ -7,32 +7,30 @@
     settings = {
       window = {
         title = "Terminal";
-
-        padding = { y = 5; };
+        opacity = 0.3;
+        padding.y = 5;
         dimensions = {
           lines = 75;
           columns = 100;
         };
       };
 
-      font = {
-        normal.family = "JetbrainsMono Nerd Font";
-        size = 8.0;
-      };
-
-      background_opacity = 0.3;
-
-      shell = { program = "${pkgs.zsh}/bin/zsh"; };
+      # font = {
+      #   normal.family = "JetbrainsMono Nerd Font";
+      #   size = 8.0;
+      # };
 
       colors = {
         primary = {
           background = "0x000000";
           foreground = "0xEBEBEB";
         };
+
         cursor = {
           text = "0xFF261E";
           cursor = "0xFF261E";
         };
+
         normal = {
           black = "0x0D0D0D";
           red = "0xFF301B";
@@ -43,6 +41,7 @@
           cyan = "0x21DEEF";
           white = "0xEBEBEB";
         };
+
         bright = {
           black = "0x6D7070";
           red = "0xFF4352";

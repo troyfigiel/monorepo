@@ -37,6 +37,12 @@
 
     flameshot
     feh
+    neofetch
+
+    wireshark
+
+    libnotify
+    dunst
   ];
 
   home.sessionVariables = {

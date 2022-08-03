@@ -5,11 +5,17 @@
     enable = true;
     layout = "de";
     xkbVariant = "";
+
+    autoRepeatDelay = 300;
+    autoRepeatInterval = 50;
+
     videoDrivers = [ "modesetting" ];
+
     displayManager = {
       lightdm.enable = true;
       defaultSession = "none+i3";
     };
+
     desktopManager = {
       xterm.enable = false;
       xfce = {
@@ -18,10 +24,12 @@
         enableXfwm = false;
       };
     };
+
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [ rofi polybar i3lock ];
     };
+
     libinput = {
       enable = true;
       touchpad.tapping = true;

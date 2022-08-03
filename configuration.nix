@@ -43,7 +43,8 @@
 
   environment.systemPackages = with pkgs; [
     git
-    htop
+    # htop
+    bpytop
     python3
     sqlite
     sshfs

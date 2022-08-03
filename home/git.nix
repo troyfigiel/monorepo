@@ -18,10 +18,8 @@
     };
   };
 
-  programs.lazygit ={
+  programs.lazygit = {
     enable = true;
-    settings = {
-      disableStartupPopups = true;
-    };
+    settings = { disableStartupPopups = true; };
   };
 }

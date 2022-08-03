@@ -1,8 +1,5 @@
 { pkgs, ... }:
 
-# Created By @icanwalkonwater
-# Edited and ported to Nix by Th0rgal
-
 let
   ac = "#1E88E5";
   mf = "#383838";
@@ -45,8 +42,6 @@ in {
         margin-top = 0;
       };
 
-      #====================BARS====================#
-
       "bar/top" = {
         bottom = false;
         fixed-center = true;
@@ -66,9 +61,9 @@ in {
         font-0 = "FuraCode Nerd Font:size=12;3";
         font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
 
-        modules-left = "distro-icon dulS ddrT i3 dulT";
+        modules-left = "distro-icon i3";
         modules-center = "title";
-        modules-right = "durT audio ddlT date";
+        modules-right = "audio date";
 
         locale = "en_US.UTF-8";
       };
@@ -100,9 +95,8 @@ in {
         font-0 = "FuraCode Nerd Font:size=12;3";
         font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
 
-        modules-left = "powermenu ddlS";
-
-        modules-right = "ddrS cpu dulS ddrT memory dulT ddrP battery";
+        modules-left = "powermenu";
+        modules-right = "cpu memory battery";
 
         locale = "en_US.UTF-8";
       };
@@ -121,22 +115,6 @@ in {
         compositing-border = "over";
 
         pseudo-transparency = "false";
-      };
-
-      #--------------------MODULES--------------------"
-
-      "module/distro-icon" = {
-        type = "custom/script";
-        exec =
-          "${pkgs.coreutils}/bin/uname -r | ${pkgs.coreutils}/bin/cut -d- -f1";
-        interval = 999999999;
-
-        format = " <label>";
-        format-foreground = quaternary;
-        format-background = secondary;
-        format-padding = 1;
-        label = "%output%";
-        label-font = 2;
       };
 
       "module/audio" = {
@@ -366,150 +344,6 @@ in {
       #  type = "internal/network";
       #  interval = "wlp2s0";
       #};
-
-      #--------------------SOLID TRANSITIONS--------------------#
-
-      "module/dsPT" = {
-        type = "custom/text";
-        content = "";
-        content-background = primary;
-        content-foreground = tertiary;
-      };
-
-      "module/dsTS" = {
-        type = "custom/text";
-        content = "";
-        content-background = tertiary;
-        content-foreground = secondary;
-      };
-
-      "module/dsST" = {
-        type = "custom/text";
-        content = "";
-        content-background = secondary;
-        content-foreground = tertiary;
-      };
-
-      "module/daPT" = {
-        type = "custom/text";
-        content = "";
-        content-background = primary;
-        content-foreground = tertiary;
-      };
-
-      "module/daTP" = {
-        type = "custom/text";
-        content = "";
-        content-background = tertiary;
-        content-foreground = primary;
-      };
-
-      "module/daST" = {
-        type = "custom/text";
-        content = "";
-        content-background = secondary;
-        content-foreground = tertiary;
-      };
-
-      "module/daTS" = {
-        type = "custom/text";
-        content = "";
-        content-background = secondary;
-        content-foreground = primary;
-      };
-
-      "module/daSP" = {
-        type = "custom/text";
-        content = "";
-        content-background = secondary;
-        content-foreground = primary;
-      };
-
-      #--------------------GAPS TRANSITIONS--------------------#
-
-      "module/dulT" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = tertiary;
-        content-background = bg;
-      };
-
-      "module/ddrT" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = tertiary;
-        content-background = bg;
-      };
-
-      "module/ddlT" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = tertiary;
-        content-background = bg;
-      };
-
-      "module/durT" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = tertiary;
-        content-background = bg;
-      };
-
-      "module/ddlP" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = primary;
-        content-background = bg;
-      };
-
-      "module/durP" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = primary;
-        content-background = bg;
-      };
-
-      "module/dulP" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = primary;
-        content-background = bg;
-      };
-
-      "module/ddrP" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = primary;
-        content-background = bg;
-      };
-
-      "module/dulS" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = secondary;
-        content-background = bg;
-      };
-
-      "module/ddlS" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = secondary;
-        content-background = bg;
-      };
-
-      "module/durS" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = secondary;
-        content-background = bg;
-      };
-
-      "module/ddrS" = {
-        type = "custom/text";
-        content = "";
-        content-foreground = secondary;
-        content-background = bg;
-      };
     };
   };
 }
