@@ -18,7 +18,6 @@ In my opinion, the best way to figure out which options and configurations are p
 - gitconfig in projects/work
 - copying Nix store
 - VPN -> nework manager
-- Set up awesomeWM
 - Set up a config for lazydocker and symlink it in place
 - Set up browserpass
 - Set up a Nix color scheme

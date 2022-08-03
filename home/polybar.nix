@@ -128,7 +128,7 @@ in {
         format-charging-padding = 1;
         format-charging-foreground = secondary;
         format-charging-background = primary;
-        label-charging = "%percentage%%";
+        label-charging = "BAT %percentage%%";
         animation-charging-0 = "";
         animation-charging-1 = "";
         animation-charging-2 = "";
@@ -140,7 +140,7 @@ in {
         format-discharging-padding = 1;
         format-discharging-foreground = secondary;
         format-discharging-background = primary;
-        label-discharging = "%percentage%%";
+        label-discharging = "BAT %percentage%%";
         ramp-capacity-0 = "";
         ramp-capacity-0-foreground = urgency;
         ramp-capacity-1 = "";

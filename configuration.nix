@@ -13,10 +13,14 @@
     ./system/xserver.nix
   ];
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    efi.efiSysMountPoint = "/boot/efi";
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot/efi";
+    };
   };
 
   # This is approximately how I should do an auto-upgrade, but the code here
@@ -47,7 +51,7 @@
     bpytop
     python3
     sqlite
-    sshfs
+   
     vim
     w3m
     wget
@@ -55,7 +59,7 @@
     nixfmt
     qemu
 
-    # For i3
+    # For i3 sshfs
     mpc-cli
     brightnessctl
   ];
@@ -79,9 +83,7 @@
 
   sops.defaultSopsFile = ./secrets/secrets.yaml;
 
-  sops.secrets.troy-password = {
-    neededForUsers = true;
-  };
+  sops.secrets.troy-password = { neededForUsers = true; };
   # sops.secrets.work-vpn-username = { };
   # sops.secrets.work-vpn-password = { };
   # Now I can access the secret with config.sops.secrets.troy-password.path
