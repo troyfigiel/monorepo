@@ -47,7 +47,7 @@ in {
         fixed-center = true;
 
         width = "100%";
-        height = 19;
+        height = 20;
         offset-x = "1%";
 
         scroll-up = "i3wm-wsnext";
@@ -61,7 +61,7 @@ in {
         font-0 = "FuraCode Nerd Font:size=12;3";
         font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
 
-        modules-left = "distro-icon i3";
+        modules-left = "i3";
         modules-center = "title";
         modules-right = "audio date";
 
@@ -73,7 +73,7 @@ in {
         fixed-center = true;
 
         width = "100%";
-        height = 19;
+        height = 20;
 
         offset-x = "1%";
 
@@ -120,7 +120,7 @@ in {
       "module/audio" = {
         type = "internal/alsa";
 
-        format-volume = "墳 VOL <label-volume>";
+        format-volume = "VOL <label-volume>";
         format-volume-padding = 1;
         format-volume-foreground = secondary;
         format-volume-background = tertiary;
@@ -130,7 +130,6 @@ in {
         format-muted-padding = 1;
         format-muted-foreground = secondary;
         format-muted-background = tertiary;
-        format-muted-prefix = "婢 ";
         format-muted-prefix-foreground = urgency;
         format-muted-overline = bg;
 
@@ -145,35 +144,21 @@ in {
 
         poll-interval = 2;
 
-        label-full = " 100%";
+        label-full = "100%";
         format-full-padding = 1;
         format-full-foreground = secondary;
         format-full-background = primary;
 
-        format-charging = " <animation-charging> <label-charging>";
+        format-charging = "<animation-charging> <label-charging>";
         format-charging-padding = 1;
         format-charging-foreground = secondary;
         format-charging-background = primary;
         label-charging = "%percentage%% +%consumption%W";
-        animation-charging-0 = "";
-        animation-charging-1 = "";
-        animation-charging-2 = "";
-        animation-charging-3 = "";
-        animation-charging-4 = "";
-        animation-charging-framerate = 500;
 
         format-discharging = "<ramp-capacity> <label-discharging>";
         format-discharging-padding = 1;
         format-discharging-foreground = secondary;
         format-discharging-background = primary;
-        label-discharging = "%percentage%% -%consumption%W";
-        ramp-capacity-0 = "";
-        ramp-capacity-0-foreground = urgency;
-        ramp-capacity-1 = "";
-        ramp-capacity-1-foreground = urgency;
-        ramp-capacity-2 = "";
-        ramp-capacity-3 = "";
-        ramp-capacity-4 = "";
       };
 
       "module/cpu" = {
@@ -208,19 +193,17 @@ in {
         type = "internal/i3";
         pin-workspaces = false;
         strip-wsnumbers = true;
-        format = "<label-state> <label-mode>";
-        format-background = tertiary;
 
-        ws-icon-0 = "1;";
-        ws-icon-1 = "2;";
-        ws-icon-2 = "3;﬏";
-        ws-icon-3 = "4;";
-        ws-icon-4 = "5;";
-        ws-icon-5 = "6;";
-        ws-icon-6 = "7;";
-        ws-icon-7 = "8;";
-        ws-icon-8 = "9;";
-        ws-icon-9 = "10;";
+        ws-icon-0 = "0";
+        ws-icon-1 = "1";
+        ws-icon-2 = "2";
+        ws-icon-3 = "3";
+        ws-icon-4 = "4";
+        ws-icon-5 = "5";
+        ws-icon-6 = "6";
+        ws-icon-7 = "7";
+        ws-icon-8 = "8";
+        ws-icon-9 = "9";
 
         label-mode = "%mode%";
         label-mode-padding = 1;
@@ -240,8 +223,6 @@ in {
         label-urgent = "%index%";
         label-urgent-foreground = urgency;
         label-urgent-padding = 1;
-
-        label-separator = "";
       };
 
       "module/title" = {
@@ -319,31 +300,6 @@ in {
         label-warn = "TEMP %temperature-c%";
         label-warn-foreground = "#f00";
       };
-
-      "module/powermenu" = {
-        type = "custom/menu";
-        expand-right = true;
-
-        format = "<label-toggle> <menu>";
-        format-background = secondary;
-        format-padding = 1;
-
-        label-open = "";
-        label-close = "";
-        label-separator = "  ";
-
-        menu-0-0 = " Suspend";
-        menu-0-0-exec = "systemctl suspend";
-        menu-0-1 = " Reboot";
-        menu-0-1-exec = "v";
-        menu-0-2 = " Shutdown";
-        menu-0-2-exec = "systemctl poweroff";
-      };
-
-      #"module/wireless-network" = {
-      #  type = "internal/network";
-      #  interval = "wlp2s0";
-      #};
     };
   };
 }
