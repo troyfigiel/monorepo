@@ -27,3 +27,5 @@ In my opinion, the best way to figure out which options and configurations are p
 - The Nitrokey app icon should appear in the bottom bar upon startup
 - Where are all my wallpapers stored?
 - Change my cursor theme
+- betterscreenlock automatically locks after 10 mins, even when a video is playing
+- Set up impermance module. Can I use this together with Syncthing somehow?
