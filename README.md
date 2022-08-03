@@ -20,3 +20,11 @@ In my opinion, the best way to figure out which options and configurations are p
 - VPN -> nework manager
 - Set up awesomeWM
 - Set up a config for lazydocker and symlink it in place
+- Set up browserpass
+- Set up a Nix color scheme
+- Add icons to Polybar
+- Upgrade to a more recent version of the Linux kernel
+- Save a predefined set of i3 window layouts
+- The Nitrokey app icon should appear in the bottom bar upon startup
+- Where are all my wallpapers stored?
+- Change my cursor theme

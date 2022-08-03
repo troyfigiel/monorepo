@@ -34,38 +34,12 @@ in {
       alsaSupport = true;
     };
 
-    script = "polybar -q -r top & polybar -q -r bottom &";
+    script = "polybar -q -r bottom &";
 
     config = {
       "global/wm" = {
         margin-bottom = 0;
         margin-top = 0;
-      };
-
-      "bar/top" = {
-        bottom = false;
-        fixed-center = true;
-
-        width = "100%";
-        height = 19;
-        offset-x = "1%";
-
-        scroll-up = "i3wm-wsnext";
-        scroll-down = "i3wm-wsprev";
-
-        background = bg;
-        foreground = fg;
-
-        radius = 0;
-
-        font-0 = "FuraCode Nerd Font:size=12;3";
-        font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
-
-        modules-left = "i3";
-        modules-center = "title";
-        modules-right = "audio date";
-
-        locale = "en_US.UTF-8";
       };
 
       "bar/bottom" = {
@@ -95,8 +69,9 @@ in {
         font-0 = "FuraCode Nerd Font:size=12;3";
         font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
 
-        modules-left = "powermenu";
-        modules-right = "cpu memory battery";
+        modules-left = "i3 audio";
+        modules-center = "cpu memory battery";
+        modules-right = "date powermenu";
 
         locale = "en_US.UTF-8";
       };
@@ -153,7 +128,7 @@ in {
         format-charging-padding = 1;
         format-charging-foreground = secondary;
         format-charging-background = primary;
-        label-charging = "%percentage%% +%consumption%W";
+        label-charging = "%percentage%%";
         animation-charging-0 = "";
         animation-charging-1 = "";
         animation-charging-2 = "";
@@ -165,7 +140,7 @@ in {
         format-discharging-padding = 1;
         format-discharging-foreground = secondary;
         format-discharging-background = primary;
-        label-discharging = "%percentage%% -%consumption%W";
+        label-discharging = "%percentage%%";
         ramp-capacity-0 = "";
         ramp-capacity-0-foreground = urgency;
         ramp-capacity-1 = "";
@@ -193,7 +168,7 @@ in {
 
         interval = "1.0";
 
-        time = "%H:%M:%S";
+        time = "%H:%M";
         time-alt = "%Y-%m-%d%";
 
         format = "<label>";

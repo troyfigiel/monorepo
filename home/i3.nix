@@ -10,6 +10,7 @@
 
       config = rec {
         modifier = "Mod4";
+        bars = [ ];
 
         window.border = 2;
 
@@ -42,7 +43,8 @@
           # This is like a buffer switch in Emacs
           "${modifier}+b" = "exec ${pkgs.rofi}/bin/rofi -show window";
           "${modifier}+Shift+g" = "mode gaps";
-          "${modifier}+Shift+x" = "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
+          "${modifier}+Shift+x" =
+            "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
 
           "${modifier}+Ctrl+b" = "exec ${pkgs.firefox}/bin/firefox";
           "${modifier}+Ctrl+d" =

@@ -6,6 +6,7 @@
     ./home/bash.nix
     ./home/git.nix
     ./home/i3.nix
+    ./home/picom.nix
     ./home/polybar.nix
     ./home/systemd.nix
     ./home/vscode.nix
@@ -101,7 +102,10 @@
   programs.less.enable = true;
   programs.lesspipe.enable = true;
 
-  services.betterlockscreen = { enable = true; };
+  services.betterlockscreen = {
+    enable = true;
+    arguments = [ "blur" ];
+  };
 
   xdg = let
     homeDir = "$HOME";
