@@ -46,6 +46,7 @@
   console.keyMap = "de";
 
   environment.systemPackages = with pkgs; [
+    nix-index
     git
     # htop
     bpytop

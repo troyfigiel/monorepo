@@ -8,6 +8,7 @@
     ./home/i3.nix
     ./home/picom.nix
     ./home/polybar.nix
+    ./home/rofi.nix
     ./home/systemd.nix
     ./home/vscode.nix
   ];

@@ -119,7 +119,7 @@ in {
 
         poll-interval = 2;
 
-        label-full = " 100%";
+        label-full = "BAT 100%";
         format-full-padding = 1;
         format-full-foreground = secondary;
         format-full-background = primary;

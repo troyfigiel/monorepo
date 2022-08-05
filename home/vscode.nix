@@ -62,6 +62,13 @@
       "gitlens.currentLine.enabled" = false;
       "gitlens.showWelcomeOnInstall" = false;
       "gitlens.showWhatsNewAfterUpgrades" = false;
+      # The keyCode dispatch is needed because I make my
+      # caps lock into a second escape key.
+      # Unfortunately, this also messes up a whole bunch of
+      # other keys... I still need to figure out how this works.
+      # Maybe leave it as is and use Ctrl+c for returning to normal mode?
+      # VSCode keybindings are Ctrl heavy by default anyway.
+      # "keyboard.dispatch" = "keyCode";
       "python.analysis.typeCheckingMode" = "basic";
       "python.formatting.provider" = "black";
       "python.linting.enabled" = true;

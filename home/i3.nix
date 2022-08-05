@@ -23,7 +23,7 @@
 
         terminal = "${pkgs.alacritty}/bin/alacritty";
 
-        keybindings = lib.mkOptionDefault {
+        keybindings = { # I do not necessarily need the defaults, right? lib.mkOptionDefault {
           "${modifier}+h" = "focus left";
           "${modifier}+j" = "focus down";
           "${modifier}+k" = "focus up";
@@ -39,11 +39,12 @@
           "${modifier}+Shift+k" = "move up";
           "${modifier}+Shift+l" = "move right";
 
-          "${modifier}+d" = "exec ${pkgs.rofi}/bin/rofi -modi drun -show drun";
+          "${modifier}+m" = "exec ${pkgs.rofi}/bin/rofi -modi drun -show drun";
           # This is like a buffer switch in Emacs
           "${modifier}+b" = "exec ${pkgs.rofi}/bin/rofi -show window";
-          "${modifier}+Shift+g" = "mode gaps";
-          "${modifier}+Shift+x" =
+          # "${modifier}+Shift+g" = "mode gaps";
+          "${modifier}+q" = "kill";
+          "${modifier}+Shift+q" =
             "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
 
           "${modifier}+Ctrl+b" = "exec ${pkgs.firefox}/bin/firefox";
@@ -54,7 +55,7 @@
             "exec ${terminal} -e ${pkgs.lazygit}/bin/lazygit";
           "${modifier}+Ctrl+l" = "exec ${pkgs.logseq}/bin/logseq";
           "${modifier}+Ctrl+n" = "exec ${pkgs.nitrokey-app}/bin/nitrokey-app";
-          "${modifier}+Ctrl+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
+          "${modifier}+Shift+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
           "${modifier}+Ctrl+t" =
             "exec ${terminal} -e ${pkgs.bpytop}/bin/bpytop";
           "${modifier}+Ctrl+w" = "exec ${pkgs.wireshark}/bin/wireshark";
