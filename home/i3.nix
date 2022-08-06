@@ -81,6 +81,17 @@
           "XF86MonBrightnessUp" =
             "exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%+";
         };
+
+        # TODO: I hardcoded my wallpaper directory, which is not pure.
+        # I should think how I would solve this.
+        startup = let wallpaperDir = "/home/troy/.wallpapers";
+        in [{
+          command =
+            "${pkgs.feh}/bin/feh --bg-fill --randomize ${wallpaperDir}/*";
+          # TODO: Are these two not the default? Check the code.
+          always = true;
+          notification = false;
+        }];
       };
     };
   };
