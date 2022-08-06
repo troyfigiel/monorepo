@@ -31,6 +31,9 @@
           "${modifier}+k" = "focus up";
           "${modifier}+l" = "focus right";
 
+          "${modifier}+a" = "focus parent";
+          "${modifier}+d" = "focus child";
+
           "${modifier}+n" = "workspace next";
           "${modifier}+p" = "workspace prev";
 
@@ -43,6 +46,9 @@
           "${modifier}+Ctrl+j" = "move down";
           "${modifier}+Ctrl+k" = "move up";
           "${modifier}+Ctrl+l" = "move right";
+
+          "${modifier}+Ctrl+n" = "move container to workspace next";
+          "${modifier}+Ctrl+p" = "move container to workspace prev";
 
           "${modifier}+m" = "exec ${pkgs.rofi}/bin/rofi -modi drun -show drun";
           # This is like a buffer switch in Emacs
