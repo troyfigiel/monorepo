@@ -103,6 +103,7 @@
   programs.less.enable = true;
   programs.lesspipe.enable = true;
 
+  # TODO: Maybe betterlockscreen should run upon startup of i3?
   services.betterlockscreen = {
     enable = true;
     arguments = [ "blur" ];
