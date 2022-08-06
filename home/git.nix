@@ -15,6 +15,7 @@
       core.editor = "vim";
       merge.conflictstyle = "diff3";
       pull.rebase = true;
+      push.autoSetupRemote = true;
     };
   };
 
