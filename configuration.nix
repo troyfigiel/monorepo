@@ -52,25 +52,35 @@
     users.troy = import ./home.nix;
   };
 
-  environment.systemPackages = with pkgs; [
-    nix-index
-    git
-    # htop
-    bpytop
-    python3
-    sqlite
+  environment.systemPackages = with pkgs;
+    let sddm-sugar-candy = callPackage ./pkgs/sddm-sugar-candy { };
+    in [
+      sddm-sugar-candy
+      
+      # Dependencies for sddm-sugar-candy
+      libsForQt5.qt5.qtgraphicaleffects
+      libsForQt5.qt5.qtquickcontrols2
+      libsForQt5.qt5.qtsvg
 
-    vim
-    w3m
-    wget
-    xclip
-    nixfmt
-    qemu
+      # Others
+      nix-index
+      git
+      # htop
+      bpytop
+      python3
+      sqlite
 
-    # For i3 sshfs
-    mpc-cli
-    brightnessctl
-  ];
+      vim
+      w3m
+      wget
+      xclip
+      nixfmt
+      qemu
+
+      # For i3 sshfs
+      mpc-cli
+      brightnessctl
+    ];
 
   services.printing.enable = true;
   hardware.bluetooth.enable = true;

@@ -13,8 +13,11 @@
     videoDrivers = [ "modesetting" ];
 
     displayManager = {
-      lightdm.enable = true;
       defaultSession = "none+i3";
+      sddm = {
+        enable = true;
+        theme = "sugar-candy";
+      };
     };
 
     desktopManager = {
