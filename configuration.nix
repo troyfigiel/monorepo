@@ -56,7 +56,7 @@
     let sddm-sugar-candy = callPackage ./pkgs/sddm-sugar-candy { };
     in [
       sddm-sugar-candy
-      
+
       # Dependencies for sddm-sugar-candy
       libsForQt5.qt5.qtgraphicaleffects
       libsForQt5.qt5.qtquickcontrols2
@@ -115,7 +115,7 @@
 
   sops.defaultSopsFile = ./secrets/secrets.yaml;
 
-  sops.secrets.troy-password = { neededForUsers = true; };
+  # sops.secrets.troy-password = { neededForUsers = true; };
   # sops.secrets.work-vpn-username = { };
   # sops.secrets.work-vpn-password = { };
   # Now I can access the secret with config.sops.secrets.troy-password.path

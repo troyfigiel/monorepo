@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  users.mutableUsers = false;
+  users.mutableUsers = true;
 
   users.users.troy = {
     isNormalUser = true;
@@ -13,6 +13,6 @@
     # I need to give the hashed version of my password with passwordFile,
     # because passwordFile is used directly in /etc/shadow. See:
     # https://nixos.org/manual/nixos/stable/options.html#opt-users.users._name_.passwordFile
-    passwordFile = config.sops.secrets.troy-password.path;
+    # passwordFile = config.sops.secrets.troy-password.path;
   };
 }

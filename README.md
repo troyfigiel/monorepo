@@ -1,5 +1,12 @@
 # NixOS configuration
 
+## Getting started
+
+- Need the GPG key on my Nitrokey card
+- Unlock and import GPG key obtained from SSH host key
+
+# Some notes
+
 ## Decoupling my configuration from my machine
 
 My workflow on other distros has always been to manually change config files. This inevitably puts me in a position where I have to change a piece of software and I do not remember the specifics of its installation and configuration.
@@ -33,3 +40,4 @@ Be aware, a lot of code has been copy-pasted and works for my specific case.
 - Change my cursor theme
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Set up impermance module. Can I use this together with Syncthing somehow?
+- Look into Peerix

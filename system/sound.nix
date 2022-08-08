@@ -1,6 +1,7 @@
 {
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  services.blueman.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
