@@ -95,22 +95,21 @@
           {
             command =
               "${pkgs.feh}/bin/feh --bg-fill --randomize ${wallpaperDir}/*";
-            # TODO: Are these two not the default? Check the code.
             always = true;
             notification = false;
           }
           {
-            command =
-              "${pkgs.blueman}/bin/blueman-applet";
+            command = "${pkgs.blueman}/bin/blueman-applet";
             always = true;
             notification = false;
           }
-          {
-            command =
-              "${pkgs.nitrokey-app}/bin/nitrokey-app";
-            always = true;
-            notification = false;
-          }
+          #{
+          #  # I just want to icon in the tray, not the entire screen on start up.
+          #  # TODO: What is the right command to use for this?
+          #  command = "${pkgs.nitrokey-app}/bin/nitrokey-app";
+          #  always = true;
+          #  notification = false;
+          #}
         ];
       };
     };

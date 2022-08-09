@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
-{
+let sshPath = "/etc/ssh";
+in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./system/gpg.nix
@@ -80,12 +81,32 @@
       # For i3 sshfs
       mpc-cli
       brightnessctl
+
+      # Nicer form of du
+      ncdu
     ];
 
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    # Harden
+    passwordAuthentication = false;
+    permitRootLogin = "no";
+
+    hostKeys = [
+      {
+        bits = 4096;
+        path = "${sshPath}/ssh_host_rsa_key";
+        type = "rsa";
+      }
+      {
+        path = "${sshPath}/ssh_host_ed25519_key";
+        type = "ed25519";
+      }
+    ];
+  };
 
   programs.nm-applet.enable = true;
   #services.mpd.enable = true;
@@ -115,9 +136,13 @@
 
   sops.defaultSopsFile = ./secrets/secrets.yaml;
 
+  # sops.gnupg.home = "/root/.gnupg";
+  sops.gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];
+  sops.age.sshKeyPaths = [ ];
+
   # sops.secrets.troy-password = { neededForUsers = true; };
-  # sops.secrets.work-vpn-username = { };
-  # sops.secrets.work-vpn-password = { };
+  sops.secrets.work-vpn-username = { };
+  sops.secrets.work-vpn-password = { };
   # Now I can access the secret with config.sops.secrets.troy-password.path
   # I should set up the VPN after I switch away from Pantheon as my desktop environment.
 

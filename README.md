@@ -3,9 +3,27 @@
 ## Getting started
 
 - Need the GPG key on my Nitrokey card
-- Unlock and import GPG key obtained from SSH host key
+- Need the SSH key from my /nix/persist/
+- There is no need to store the SSH private key in secrets.yaml, since I persist it anyway.
 
 # Some notes
+
+The problems I am encountering with sops-nix do not have to do with:
+- age vs gpg. If you create different key groups you need more than one key to unlock the file.
+Previously I would add the pgp keys to the same keygroup, hence not encountering the problems.
+- sops itself. I can decrypt and encrypt without issues.
+
+This works:
+- Import private ssh key as gpg key for root.
+- Import public ssh key as gpg key for troy (needed to create the sops file and encrypt it to be readable by root).
+- Encrypt in such a way that both me with my Nitrokey as well as root can read my secrets.
+
+This requires:
+- Persisting /etc/ssh
+- Re-encrypting my secrets if I get a new computer
+
+Updates to my config should be done as root. I should persist /etc/nixos and place my nixfiles git repo on top of that location.
+This also makes things easier if I need to run nixos-generate-config.
 
 ## Decoupling my configuration from my machine
 
@@ -41,3 +59,4 @@ Be aware, a lot of code has been copy-pasted and works for my specific case.
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Set up impermance module. Can I use this together with Syncthing somehow?
 - Look into Peerix
+- Re encrypt my secrets.yaml with my new SSH key

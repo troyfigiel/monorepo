@@ -58,10 +58,23 @@
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
+    # What does the extra socket do?
+    enableExtraSocket = true;
     sshKeys = [ "8ABF0116DA24246700017F956358D89FE8B148B8" ];
     pinentryFlavor = "gtk2";
     verbose = true;
   };
+
+  #programs.gpg = {
+  #  enable = true;
+  #  publicKeys = [{
+  #    source = builtins.fetchurl {
+  #      url = "https://gitlab.com/troy.figiel/nixfiles/-/blob/main/secrets/keys/users/troy.asc";
+  #      sha256 = "sha256:16xpq66lp78y6knp85cjv20m31yplxl8dhiblb42myv3jfc3kdxw";
+  #    };
+  #    trust = 5;
+  #  }];
+  #};
 
   programs.home-manager.enable = true;
 
