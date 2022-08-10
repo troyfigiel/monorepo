@@ -2,10 +2,10 @@ keys:
   - users:
     - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
   - hosts:
-    - &nixos 53BA215C79CFD829A722D5DDB05F6ED222F19591
+    - &inspiron 53BA215C79CFD829A722D5DDB05F6ED222F19591
 creation_rules:
   - path_regex: secrets/secrets.yaml
     key_groups:
     - pgp:
       - *troy
-      - *nixos
+      - *inspiron

@@ -25,7 +25,7 @@
     let
       system = "x86_64-linux";
     in {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.inspiron = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit nix-colors; };
         modules = [

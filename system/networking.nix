@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "nixos";
+    hostName = "inspiron";
     extraHosts = "192.168.178.31 raspberry";
     networkmanager = {
       enable = true;
