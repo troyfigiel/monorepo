@@ -66,16 +66,19 @@
     verbose = true;
   };
 
-  #programs.gpg = {
-  #  enable = true;
-  #  publicKeys = [{
-  #    source = builtins.fetchurl {
-  #      url = "https://gitlab.com/troy.figiel/nixfiles/-/blob/main/secrets/keys/users/troy.asc";
-  #      sha256 = "sha256:16xpq66lp78y6knp85cjv20m31yplxl8dhiblb42myv3jfc3kdxw";
-  #    };
-  #    trust = 5;
-  #  }];
-  #};
+  programs.gpg = {
+    enable = true;
+    publicKeys = [
+      {
+        source = ../../keys/troy.pub.asc;
+        trust = 5;
+      }
+      {
+        source = ../../keys/inspiron.pub.asc;
+        trust = 5;
+      }
+    ];
+  };
 
   programs.home-manager.enable = true;
 
