@@ -53,5 +53,5 @@ Be aware, a lot of code has been copy-pasted and works for my specific case.
 - Change my cursor theme
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Set up impermance module. Can I use this together with Syncthing somehow?
-- copying Nix store / Look into Peerix
+- copying Nix store / Look into Peerix / Cachix
 - Automatically import public keys into /home/troy/.gnupg with ultimate trust
