@@ -4,15 +4,15 @@ let sshPath = "/etc/ssh";
 in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./system/gpg.nix
-    ./system/graphics.nix
-    ./system/networking.nix
-    ./system/openvpn.nix
-    ./system/sound.nix
-    ./system/syncthing.nix
-    ./system/users.nix
-    ./system/xserver.nix
-    ./system/impermanence.nix
+    ./modules/gpg.nix
+    ./modules/graphics.nix
+    ./modules/networking.nix
+    ./modules/openvpn.nix
+    ./modules/sound.nix
+    ./modules/syncthing.nix
+    ./modules/users.nix
+    ./modules/xserver.nix
+    ./modules/impermanence.nix
   ];
 
   boot = {
@@ -48,7 +48,7 @@ in {
   console.keyMap = "de";
 
   environment.systemPackages = with pkgs;
-    let sddm-sugar-candy = callPackage ./pkgs/sddm-sugar-candy { };
+    let sddm-sugar-candy = callPackage ../../pkgs/sddm-sugar-candy { };
     in [
       sddm-sugar-candy
 
@@ -128,7 +128,7 @@ in {
 
   nixpkgs.config = { allowUnfree = true; };
 
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFile = ./secrets.yaml;
 
   # sops.gnupg.home = "/root/.gnupg";
   sops.gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];

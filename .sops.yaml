@@ -4,7 +4,7 @@ keys:
   - hosts:
     - &inspiron 53BA215C79CFD829A722D5DDB05F6ED222F19591
 creation_rules:
-  - path_regex: secrets/secrets.yaml
+  - path_regex: hosts/inspiron/secrets.yaml
     key_groups:
     - pgp:
       - *troy

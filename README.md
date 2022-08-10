@@ -22,9 +22,7 @@ This requires:
 - Persisting /etc/ssh
 - Re-encrypting my secrets if I get a new computer
 
-Updates to my config should be done as root. I should persist /etc/nixos.
-
-I should not do development in /etc/nixos directly, because it would require me to open my IDE with root privileges. What are some strategies? Symlink the configuration.nix to /etc/nixos?
+Hardware config can be updated by `nixos-generate-config --show-hardware-config > ...`
 
 ## Decoupling my configuration from my machine
 
@@ -60,4 +58,4 @@ Be aware, a lot of code has been copy-pasted and works for my specific case.
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Set up impermance module. Can I use this together with Syncthing somehow?
 - Look into Peerix
-- Re encrypt my secrets.yaml with my new SSH key
+- Automatically import public keys into /home/troy/.gnupg with ultimate trust

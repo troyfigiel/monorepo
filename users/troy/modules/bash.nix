@@ -1,4 +1,5 @@
 {
+  # TODO: What config is still in bashrc that I have not copied here?
   programs.bash = {
     enable = true;
     enableVteIntegration = true;
@@ -13,8 +14,5 @@
       fgrep = "fgrep --color=auto";
       egrep = "egrep --color=auto";
     };
-    bashrcExtra = ''
-      . ~/nixfiles/home/config/bashrc
-    '';
   };
 }

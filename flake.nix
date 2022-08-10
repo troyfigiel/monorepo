@@ -29,14 +29,14 @@
         inherit system;
         specialArgs = { inherit nix-colors; };
         modules = [
-          ./configuration.nix
+          ./hosts/inspiron/configuration.nix
           sops-nix.nixosModules.sops
           impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.troy = import ./home.nix;
+            home-manager.users.troy = import ./users/troy/home.nix;
           }
           # TODO: I am actually not using nur yet. Why is it in here?
           nur.nixosModules.nur
