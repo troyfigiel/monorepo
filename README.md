@@ -42,20 +42,16 @@ Make this configuration less of a Frankenstein. In its current state it works fo
 
 Be aware, a lot of code has been copy-pasted and works for my specific case.
 
-- bash
-- gitconfig in projects/work
-- copying Nix store
-- VPN -> nework manager
-- Set up a config for lazydocker and symlink it in place
+- Finish Bash config
+- Symlink a gitconfig in projects/work so I do not accidentally commit with the wrong email
+- Use NetworkManager to manager my VPN connections
 - Set up browserpass
 - Set up a Nix color scheme
 - Add icons to Polybar
-- Upgrade to a more recent version of the Linux kernel
 - Save a predefined set of i3 window layouts
 - The Nitrokey app icon should appear in the bottom bar upon startup
-- Where are all my wallpapers stored?
 - Change my cursor theme
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Set up impermance module. Can I use this together with Syncthing somehow?
-- Look into Peerix
+- copying Nix store / Look into Peerix
 - Automatically import public keys into /home/troy/.gnupg with ultimate trust
