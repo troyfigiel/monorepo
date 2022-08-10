@@ -10,7 +10,6 @@ in {
     ./modules/openvpn.nix
     ./modules/sound.nix
     ./modules/syncthing.nix
-    ./modules/users.nix
     ./modules/xserver.nix
     ./modules/impermanence.nix
   ];
@@ -85,7 +84,6 @@ in {
 
   services.openssh = {
     enable = true;
-    # Harden
     passwordAuthentication = false;
     permitRootLogin = "no";
 
@@ -128,25 +126,43 @@ in {
 
   nixpkgs.config = { allowUnfree = true; };
 
-  sops.defaultSopsFile = ./secrets.yaml;
+  users = {
+    mutableUsers = false;
+    users.troy = {
+      isNormalUser = true;
+      home = "/home/troy";
+      description = "Troy Figiel";
+      # Why do I not need to set this?
+      # shell = pkgs.bash;
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      # I need to give the hashed version of my password with passwordFile,
+      # because passwordFile is used directly in /etc/shadow. See:
+      # https://nixos.org/manual/nixos/stable/options.html#opt-users.users._name_.passwordFile
+      passwordFile = config.sops.secrets.troy-password.path;
+    };
+  };
 
-  # sops.gnupg.home = "/root/.gnupg";
-  sops.gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];
-  sops.age.sshKeyPaths = [ ];
+  # TODO: By default the sudo password is the same password as my own password?
+  # security.sudo = {
+  #   enable = true;
+  #   wheelNeedsPassword = true;
+  #   execWheelOnly = true;
+  # };
 
-  # sops.secrets.troy-password = { neededForUsers = true; };
-  sops.secrets.work-vpn-username = { };
-  sops.secrets.work-vpn-password = { };
-  # Now I can access the secret with config.sops.secrets.troy-password.path
-  # I should set up the VPN after I switch away from Pantheon as my desktop environment.
+  sops = {
+    defaultSopsFile = ./secrets.yaml;
+    gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];
+    age.sshKeyPaths = [ ];
+
+    secrets = {
+      # Now I can access the secret with config.sops.secrets.troy-password.path
+      troy-password = { neededForUsers = true; };
+      work-vpn-username = { };
+      work-vpn-password = { };
+    };
+  };
 
   virtualisation.docker.enable = true;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05"; # Did you read the comment?
+  system.stateVersion = "22.05";
 }
