@@ -127,6 +127,7 @@
   };
 
   xdg = let
+    # TODO: Change this into home.homeDirectory
     homeDir = "$HOME";
     mediaDir = "${homeDir}/Media";
   in {
@@ -134,11 +135,17 @@
     userDirs = {
       enable = true;
       createDirectories = true;
+
+      desktop = homeDir;
+      documents = "${homeDir}/Documents";
+      download = "${homeDir}/Downloads";
       music = mediaDir;
       pictures = mediaDir;
       publicShare = homeDir;
       templates = homeDir;
       videos = mediaDir;
+
+      extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/Projects"; };
     };
   };
 

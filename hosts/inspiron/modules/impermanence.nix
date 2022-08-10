@@ -10,6 +10,8 @@
       directories = [ ".gnupg" ];
     };
 
-    users.troy = { directories = [ "nixos-config" ]; };
+    users.troy = {
+      directories = [ "Documents" "Downloads" "Media" "Projects" ];
+    };
   };
 }
