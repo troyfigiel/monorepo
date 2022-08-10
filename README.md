@@ -22,8 +22,9 @@ This requires:
 - Persisting /etc/ssh
 - Re-encrypting my secrets if I get a new computer
 
-Updates to my config should be done as root. I should persist /etc/nixos and place my nixfiles git repo on top of that location.
-This also makes things easier if I need to run nixos-generate-config.
+Updates to my config should be done as root. I should persist /etc/nixos.
+
+I should not do development in /etc/nixos directly, because it would require me to open my IDE with root privileges. What are some strategies? Symlink the configuration.nix to /etc/nixos?
 
 ## Decoupling my configuration from my machine
 

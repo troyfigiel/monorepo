@@ -47,12 +47,6 @@ in {
   i18n.defaultLocale = "en_US.utf8";
   console.keyMap = "de";
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.troy = import ./home.nix;
-  };
-
   environment.systemPackages = with pkgs;
     let sddm-sugar-candy = callPackage ./pkgs/sddm-sugar-candy { };
     in [

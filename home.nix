@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -13,9 +13,10 @@
     ./home/vscode.nix
   ];
 
-  home.username = "troy";
   home.homeDirectory = "/home/troy";
+  home.username = "troy";
 
+  # TODO: I don't need this if I set user packages?
   home.packages = with pkgs; [
     tldr
 

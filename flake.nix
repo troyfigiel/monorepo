@@ -21,15 +21,23 @@
   };
 
   outputs =
-    { home-manager, impermanence, nix-colors, nixpkgs, nur, sops-nix, ... }@inputs: {
-      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+    { home-manager, impermanence, nix-colors, nixpkgs, nur, sops-nix, ... }:
+    let
+      system = "x86_64-linux";
+    in {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
         specialArgs = { inherit nix-colors; };
         modules = [
-          (import ./configuration.nix)
+          ./configuration.nix
           sops-nix.nixosModules.sops
           impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.troy = import ./home.nix;
+          }
           # TODO: I am actually not using nur yet. Why is it in here?
           nur.nixosModules.nur
         ];
