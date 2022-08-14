@@ -132,6 +132,7 @@ in {
 
   nixpkgs.config = { allowUnfree = true; };
 
+  # TODO: Should I set the group to be "troy" as well?
   users = {
     mutableUsers = false;
     users.troy = {

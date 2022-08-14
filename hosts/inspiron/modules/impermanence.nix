@@ -4,7 +4,11 @@
   environment.persistence."/nix/persist" = {
     hideMounts = true;
     directories = [
-      "/etc/NetworkManager/system-connections"
+      # I might need to change the permissions to 755
+      {
+        directory = "/etc/NetworkManager";
+        mode = "0755";
+      }
       # "/etc/nixos"
       "/var/log"
       # This gets rid of the local sysadmin lecture message.
@@ -21,8 +25,7 @@
 
     files = [
       "/etc/machine-id"
-      "/etc/NetworkManager/passwd-file"
-      # TODO: We actually do not need this to be symlinked. We are pointing directly at /nix/persist anyway.
+      # TODO: We actually do not need this to be symlinked or bound. We are pointing directly at /nix/persist anyway.
       # {
       #   file = "/etc/ssh/ssh_host_rsa_key";
       #   parentDirectory = { mode = "0700"; };
@@ -31,7 +34,7 @@
 
     users.root = {
       home = "/root";
-      directories = [ ".cert" ".gnupg" ];
+      directories = [ ".gnupg" ];
     };
 
     users.troy = {
@@ -45,6 +48,7 @@
         ".mozilla"
         ".wallpapers"
         ".steam"
+        ".cert"
         ".local/share/Steam"
         # TODO: I am not sure what this is, but it got pulled in with Steam I believe.
         ".local/share/vulkan"
