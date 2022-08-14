@@ -80,7 +80,10 @@ in {
     ];
 
   services.printing.enable = true;
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   services.openssh = {
     enable = true;
@@ -102,6 +105,9 @@ in {
 
   programs.nm-applet.enable = true;
   #services.mpd.enable = true;
+
+  # TODO: How do I use Proton in Nix?
+  programs.steam.enable = true;
 
   nix = {
     package = pkgs.nixFlakes;

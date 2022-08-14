@@ -51,6 +51,7 @@
         "source.fixAll" = true;
         "source.organizeImports" = true;
       };
+      "editor.detectIndentation" = false;
       "editor.formatOnSave" = true;
       "editor.formatOnSaveMode" = "file";
       "explorer.confirmDelete" = false;

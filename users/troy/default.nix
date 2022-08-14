@@ -28,9 +28,6 @@
 
     google-chrome
 
-    # Steam runs into a "glXChooseVisual failed" error.
-    # This probably has to do with my GPU set up.
-    # steam
     minecraft
 
     signal-desktop
