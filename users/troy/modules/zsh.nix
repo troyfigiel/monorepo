@@ -1,8 +1,14 @@
 {
-  # TODO: What config is still in bashrc that I have not copied here?
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     enableVteIntegration = true;
+
+    autocd = true;
+    dirHashes = { docs = "$HOME/Documents"; };
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+
     shellAliases = {
       lg = "lazygit";
       ld = "lazydocker";

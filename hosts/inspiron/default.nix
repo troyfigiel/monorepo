@@ -139,8 +139,7 @@ in {
       isNormalUser = true;
       home = "/home/troy";
       description = "Troy Figiel";
-      # Why do I not need to set this?
-      # shell = pkgs.bash;
+      shell = pkgs.zsh;
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       # I need to give the hashed version of my password with passwordFile,
       # because passwordFile is used directly in /etc/shadow. See:

@@ -3,7 +3,6 @@
 {
   imports = [
     ./modules/alacritty.nix
-    ./modules/bash.nix
     ./modules/git.nix
     ./modules/i3.nix
     ./modules/picom.nix
@@ -11,6 +10,7 @@
     ./modules/rofi.nix
     ./modules/systemd.nix
     ./modules/vscode.nix
+    ./modules/zsh.nix
   ];
 
   home.homeDirectory = "/home/troy";
