@@ -1,4 +1,6 @@
 {
+  # TODO: Use the includeModule options to create different git configs
+  # for Projects/Private and Projects/Work.
   programs.git = {
     enable = true;
     userName = "Troy Figiel";

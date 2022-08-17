@@ -42,16 +42,13 @@ Make this configuration less of a Frankenstein. In its current state it works fo
 
 Be aware, a lot of code has been copy-pasted and works for my specific case.
 
-- Finish Bash config
-- Symlink a gitconfig in projects/work so I do not accidentally commit with the wrong email
-- Use NetworkManager to manager my VPN connections
 - Set up browserpass
-- Set up a Nix color scheme
+- Set up a consistent Nix color scheme using nix-colors
 - Add icons to Polybar
 - Save a predefined set of i3 window layouts
 - The Nitrokey app icon should appear in the bottom bar upon startup
 - Change my cursor theme
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
-- Set up impermance module. Can I use this together with Syncthing somehow?
+- Can I use the impermanence module together with Syncthing somehow?
 - copying Nix store / Look into Peerix / Cachix
 - Can I add my bluetooth connection to NetworkManager?

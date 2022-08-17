@@ -16,8 +16,12 @@
   home.homeDirectory = "/home/troy";
   home.username = "troy";
 
+  fonts.fontconfig.enable = true;
+
   # TODO: I don't need this if I set user packages?
   home.packages = with pkgs; [
+    inconsolata
+
     tldr
     # Not sure about exa. I might as well put sane defaults on my ls aliases.
     # exa
@@ -106,7 +110,7 @@
   services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.
-  programs.firefox = { enable = true; };
+  programs.firefox.enable = true;
   programs.fzf.enable = true;
   # programs.powerline-go.enable = true;
 
