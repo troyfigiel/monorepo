@@ -20,6 +20,12 @@
 
   # TODO: I don't need this if I set user packages?
   home.packages = with pkgs; [
+    # TODO: Rofi-pass could be really nice, but needs some set up.
+    # For example, it does not take my German keyboard into account.
+    rofi-pass
+
+    papirus-icon-theme
+
     inconsolata
 
     tldr

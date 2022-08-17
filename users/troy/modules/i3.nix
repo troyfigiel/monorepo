@@ -50,9 +50,9 @@
           "${modifier}+Ctrl+n" = "move container to workspace next";
           "${modifier}+Ctrl+p" = "move container to workspace prev";
 
-          "${modifier}+m" = "exec ${pkgs.rofi}/bin/rofi -show-icons -modi drun -show drun";
-          # This is like a buffer switch in Emacs
-          "${modifier}+b" = "exec ${pkgs.rofi}/bin/rofi -show-icons -show window";
+          "${modifier}+m" = "exec ${pkgs.rofi}/bin/rofi -show drun";
+          "${modifier}+b" = "exec ${pkgs.rofi}/bin/rofi -show window";
+          "${modifier}+i" = "exec ${pkgs.rofi-pass}/bin/rofi-pass";
           # "${modifier}+Shift+g" = "mode gaps";
           "${modifier}+q" = "kill";
 

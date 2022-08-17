@@ -42,7 +42,8 @@ Make this configuration less of a Frankenstein. In its current state it works fo
 
 Be aware, a lot of code has been copy-pasted and works for my specific case.
 
-- Set up browserpass
+- Start using LUKS Disk Encryption
+- Set up browserpass. Or can I use rofi-pass for that?
 - Set up a consistent Nix color scheme using nix-colors
 - Add icons to Polybar
 - Save a predefined set of i3 window layouts
@@ -52,3 +53,19 @@ Be aware, a lot of code has been copy-pasted and works for my specific case.
 - Can I use the impermanence module together with Syncthing somehow?
 - copying Nix store / Look into Peerix / Cachix
 - Can I add my bluetooth connection to NetworkManager?
+
+Different topics I should be notified on somehow:
+
+- Volume
+- Brightness
+- Music player
+- Bluetooth
+- Networks
+- VPN
+- Active window (i3)
+- Date and time (Format: Wed, Nov 17 12:43)
+- RAM used
+- CPU used
+- Temperature
+- Battery left
+- Hard disk drive remaining and tmpfs size remaining

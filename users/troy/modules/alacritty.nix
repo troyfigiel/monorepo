@@ -26,6 +26,7 @@
 
       font = {
         normal.family = "Inconsolata";
+        style = "Medium";
         size = 12;
       };
 

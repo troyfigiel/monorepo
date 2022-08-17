@@ -66,6 +66,7 @@
       ls = "ls --color=auto -h";
       ld = "lazydocker";
       lg = "lazygit";
+      nb = "sudo nixos-rebuild switch --flake .";
       # Yank to system clipboard
       clip = "xclip -selection clipboard";
     };

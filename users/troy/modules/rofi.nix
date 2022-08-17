@@ -5,6 +5,15 @@
     enable = true;
 
     extraConfig = {
+      # TODO: Add emoji, rofi-pass?
+      # Does this work properly?
+      modi = "drun,window";
+      display-drun = "Applications:";
+      display-window = "Windows:";
+      font = "Inconsolata Medium 16";
+      drun-display-format = "{icon} {name}";
+      show-icons = true;
+      icon-theme = "Papirus";
       kb-row-up = "Super+k";
       kb-row-down = "Super+j";
     };
