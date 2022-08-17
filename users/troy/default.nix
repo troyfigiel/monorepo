@@ -19,6 +19,15 @@
   # TODO: I don't need this if I set user packages?
   home.packages = with pkgs; [
     tldr
+    # Not sure about exa. I might as well put sane defaults on my ls aliases.
+    # exa
+
+    fd
+
+    libreoffice
+    # zip and rar files
+    unzip
+    unar
 
     nitrokey-app
     logseq
