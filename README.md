@@ -43,6 +43,9 @@ Make this configuration less of a Frankenstein. In its current state it works fo
 Be aware, a lot of code has been copy-pasted and works for my specific case.
 
 - Start using LUKS Disk Encryption
+- Use headphones to start and pause videos / music
+- Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
+- Set up a nice notification theme for increasing / decreasing brightness and volume
 - Set up browserpass. Or can I use rofi-pass for that?
 - Set up a consistent Nix color scheme using nix-colors
 - Add icons to Polybar

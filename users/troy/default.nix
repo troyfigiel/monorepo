@@ -26,6 +26,7 @@
 
     papirus-icon-theme
 
+    font-awesome
     inconsolata
 
     tldr

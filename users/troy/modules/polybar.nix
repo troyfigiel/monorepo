@@ -4,7 +4,7 @@ let
   ac = "#1E88E5";
   mf = "#383838";
 
-  bg = "#00000000";
+  bg = "#11121D";
   fg = "#FFFFFF";
 
   # Colored
@@ -25,6 +25,8 @@ let
   # Red
   urgency = "#e74c3c";
 
+  offset = "3";
+
 in {
   services.polybar = {
     enable = true;
@@ -32,6 +34,7 @@ in {
     package = pkgs.polybar.override {
       i3GapsSupport = true;
       alsaSupport = true;
+      mpdSupport = true;
     };
 
     script = "polybar -q -r bottom &";
@@ -44,45 +47,23 @@ in {
 
       "bar/bottom" = {
         bottom = true;
-        fixed-center = true;
 
         width = "100%";
-        height = 19;
-
-        offset-x = "1%";
 
         background = bg;
         foreground = fg;
 
-        radius-top = 0;
-
         tray-position = "left";
-        tray-background = primary;
+        tray-background = bg;
 
-        font-0 = "FuraCode Nerd Font:size=12;3";
-        font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
+        font-0 = "Inconsolata:size=16;${offset}";
+        font-1 = "Font Awesome 6 Free,Font Awesome 6 Free Solid:style=Solid;${offset}";
 
         modules-left = "i3 audio";
         modules-center = "cpu memory battery";
-        modules-right = "date powermenu";
+        modules-right = "date wlan powermenu";
 
         locale = "en_US.UTF-8";
-      };
-
-      "settings" = {
-        throttle-output = 5;
-        throttle-output-for = 10;
-        throttle-input-for = 30;
-
-        screenchange-reload = true;
-
-        compositing-background = "source";
-        compositing-foreground = "over";
-        compositing-overline = "over";
-        comppositing-underline = "over";
-        compositing-border = "over";
-
-        pseudo-transparency = "false";
       };
 
       "module/audio" = {
@@ -106,13 +87,13 @@ in {
 
       "module/battery" = {
         type = "internal/battery";
-        full-at = 101; # to disable it
+        full-at = 99; # to disable it
         battery = "BAT0"; # TODO: Better way to fill this
         adapter = "AC0";
 
         poll-interval = 2;
 
-        label-full = "BAT 100%";
+        label-full = " 100%";
         format-full-padding = 1;
         format-full-foreground = secondary;
         format-full-background = primary;
@@ -121,7 +102,7 @@ in {
         format-charging-padding = 1;
         format-charging-foreground = secondary;
         format-charging-background = primary;
-        label-charging = "BAT %percentage%%";
+        label-charging = "%percentage%%";
         animation-charging-0 = "";
         animation-charging-1 = "";
         animation-charging-2 = "";
@@ -133,7 +114,8 @@ in {
         format-discharging-padding = 1;
         format-discharging-foreground = secondary;
         format-discharging-background = primary;
-        label-discharging = "BAT %percentage%%";
+        # On click time left should be shown
+        label-discharging = "%percentage%%";# %time%";
         ramp-capacity-0 = "";
         ramp-capacity-0-foreground = urgency;
         ramp-capacity-1 = "";
@@ -146,26 +128,25 @@ in {
       "module/cpu" = {
         type = "internal/cpu";
 
-        interval = "0.5";
+        interval = 1;
 
-        format = " <label>";
+        format = " <label>";
         format-foreground = quaternary;
         format-background = secondary;
         format-padding = 1;
 
-        label = "CPU %percentage%%";
+        label = "%percentage-sum%%";
       };
 
       "module/date" = {
         type = "internal/date";
 
-        interval = "1.0";
+        interval = "1";
 
-        time = "%H:%M";
-        time-alt = "%Y-%m-%d%";
+        time = "%a, %b %d %H:%M";
 
         format = "<label>";
-        format-padding = 4;
+        format-padding = 1;
         format-foreground = fg;
 
         label = "%time%";
@@ -173,19 +154,6 @@ in {
 
       "module/i3" = {
         type = "internal/i3";
-        pin-workspaces = false;
-        strip-wsnumbers = true;
-
-        ws-icon-0 = "0";
-        ws-icon-1 = "1";
-        ws-icon-2 = "2";
-        ws-icon-3 = "3";
-        ws-icon-4 = "4";
-        ws-icon-5 = "5";
-        ws-icon-6 = "6";
-        ws-icon-7 = "7";
-        ws-icon-8 = "8";
-        ws-icon-9 = "9";
 
         label-mode = "%mode%";
         label-mode-padding = 1;
@@ -195,7 +163,6 @@ in {
         label-unfocused-padding = 1;
 
         label-focused = "%index% %icon%";
-        label-focused-font = 2;
         label-focused-foreground = secondary;
         label-focused-padding = 1;
 
@@ -220,45 +187,36 @@ in {
 
         interval = 3;
 
-        format = " <label>";
+        format = " <label>";
         format-background = tertiary;
         format-foreground = secondary;
         format-padding = 1;
 
-        label = "RAM %percentage_used%%";
+        label = "%used%";
       };
 
-      "module/network" = {
+      "module/wlan" = {
         type = "internal/network";
-        interface = "enp3s0";
-
-        interval = "1.0";
-
-        accumulate-stats = true;
-        unknown-as-up = true;
+        interface = "wlan0";
+        interval = 1;
 
         format-connected = "<label-connected>";
-        format-connected-background = mf;
-        format-connected-underline = bg;
-        format-connected-overline = bg;
-        format-connected-padding = 2;
-        format-connected-margin = 0;
+        format-connected-padding = 1;
+        label-connected = "%{A1:wifimenu:} %essid%%{A}";
+        label-connected-foreground = fg;
+        label-connected-padding = 1;
 
         format-disconnected = "<label-disconnected>";
-        format-disconnected-background = mf;
-        format-disconnected-underline = bg;
-        format-disconnected-overline = bg;
-        format-disconnected-padding = 2;
-        format-disconnected-margin = 0;
-
-        label-connected = "D %downspeed:2% | U %upspeed:2%";
-        label-disconnected = "DISCONNECTED";
+        format-disconnected-padding = 1;
+        label-disconnected = "%{A1:wifimenu:}%{A}";
+        label-disconnected-foreground = fg;
+        label-disconnected-padding = 1;
       };
 
       "module/temperature" = {
         type = "internal/temperature";
 
-        interval = "0.5";
+        interval = 1;
 
         thermal-zone = 0; # TODO: Find a better way to fill that
         warn-temperature = 60;
