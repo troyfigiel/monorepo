@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/alacritty.nix
+    ./modules/dunst.nix
     ./modules/git.nix
     ./modules/i3.nix
     ./modules/picom.nix
@@ -60,9 +61,6 @@
     neofetch
 
     wireshark
-
-    libnotify
-    dunst
   ];
 
   home.sessionVariables = {

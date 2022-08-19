@@ -19,8 +19,7 @@
       }
       # Trusting a bluetooth device is needed to automatically connect.
       "/var/lib/bluetooth"
-      # TODO: Do I really need this?
-      "/var/lib/systemd/coredump"
+      "/var/lib/docker"
     ];
 
     files = [
@@ -54,6 +53,8 @@
         ".local/share/vulkan"
         ".local/share/atuin"
         ".local/share/password-store"
+        ".local/share/DBeaverData"
+        ".local/share/direnv/allow"
         ".vscode"
         "Documents"
         "Downloads"
