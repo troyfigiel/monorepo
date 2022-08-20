@@ -22,7 +22,7 @@
       inspiron = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/inspiron
+          ./hosts/inspiron
           inputs.sops-nix.nixosModules.sops
           inputs.impermanence.nixosModules.impermanence
           inputs.home-manager.nixosModules.home-manager

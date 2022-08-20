@@ -16,11 +16,4 @@
       passwordFile = config.sops.secrets.troy-password.path;
     };
   };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    # users.root = ./root;
-    users.troy = ./troy;
-  };
 }

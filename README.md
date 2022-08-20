@@ -38,9 +38,7 @@ In my opinion, the best way to figure out which options and configurations are p
 
 # TODOs
 
-Make this configuration less of a Frankenstein. In its current state it works for me, but I would not recommend it to anyone else.
-
-Be aware, a lot of code has been copy-pasted and works for my specific case.
+Literate programming: ...
 
 - Start using LUKS Disk Encryption
 - Use headphones to start and pause videos / music

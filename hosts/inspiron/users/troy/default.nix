@@ -167,7 +167,6 @@
 
   programs.dircolors.enable = true;
 
-  # What does this do?
+  # TODO: What does this do?
   targets.genericLinux.enable = true;
-
 }
