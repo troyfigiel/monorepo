@@ -38,9 +38,11 @@
           "${modifier}+p" = "workspace prev";
 
           "${modifier}+v" = ''
-            split vertical; exec ${pkgs.libnotify}/bin/notify-send "Tiling vertically."'';
+            split vertical; exec ${pkgs.dunst}/bin/dunstify "i3" "Tiling vertically"
+          '';
           "${modifier}+z" = ''
-            split horizontal; exec ${pkgs.libnotify}/bin/notify-send "Tiling horizontally."'';
+            split horizontal; exec ${pkgs.dunst}/bin/dunstify "i3" "Tiling horizontally"
+          '';
 
           "${modifier}+Ctrl+h" = "move left";
           "${modifier}+Ctrl+j" = "move down";
@@ -71,21 +73,26 @@
             "exec ${terminal} -e ${pkgs.bpytop}/bin/bpytop";
           "${modifier}+Shift+w" = "exec ${pkgs.wireshark}/bin/wireshark";
 
-          "XF86AudioMute" =
-            "exec ${pkgs.alsa-utils}/bin/amixer set Master toggle";
-          "XF86AudioLowerVolume" =
-            "exec ${pkgs.alsa-utils}/bin/amixer set Master 1%-";
-          "XF86AudioRaiseVolume" =
-            "exec ${pkgs.alsa-utils}/bin/amixer set Master 1%+";
+          "XF86AudioMute" = ''
+            exec ${pkgs.alsa-utils}/bin/amixer set Master toggle; exec ${pkgs.dunst}/bin/dunstify "Toggling mute"
+          '';
+          "XF86AudioLowerVolume" = ''
+            exec ${pkgs.alsa-utils}/bin/amixer set Master 1%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing volume"
+          '';
+          "XF86AudioRaiseVolume" = ''
+            exec ${pkgs.alsa-utils}/bin/amixer set Master 1%+; exec ${pkgs.dunst}/bin/dunstify "Increasing volume"
+          '';
 
           #"XF86AudioPause" = "exec ${pkgs.mpc-cli}/bin/mpc toggle";
           #"XF86AudioPrev" = "exec ${pkgs.mpc-cli}/bin/mpc prev";
           #"XF86AudioNext" = "exec ${pkgs.mpc-cli}/bin/mpc next";
 
-          "XF86MonBrightnessDown" =
-            "exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%-";
-          "XF86MonBrightnessUp" =
-            "exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%+";
+          "XF86MonBrightnessDown" = ''
+            exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing brightness"
+          '';
+          "XF86MonBrightnessUp" = ''
+            exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%+; exec ${pkgs.dunst}/bin/dunstify "Increasing brightness"
+          '';
         };
 
         # TODO: I hardcoded my wallpaper directory, which is not pure.

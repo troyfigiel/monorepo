@@ -21,6 +21,6 @@
     # TODO: Add rounded corners
     # TODO: Move theme to rofi.nix
     # TODO: Clean up some variables and simplify theme
-    theme = ./config/rofi-theme.rasi;
+    theme = ./rofi-theme.rasi;
   };
 }

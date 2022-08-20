@@ -54,7 +54,8 @@
       }
       {
         name = "powerlevel10k-config";
-        src = lib.cleanSource ./config;
+        # TODO: What does cleanSource even do?
+        src = lib.cleanSource ./.;
         file = "p10k.zsh";
       }
     ];

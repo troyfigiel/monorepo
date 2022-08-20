@@ -143,7 +143,7 @@ in {
 
         interval = "1";
 
-        time = "%a, %b %d %H:%M";
+        time = "%a, %b %d, %Y at %H:%M";
 
         format = "<label>";
         format-padding = 1;

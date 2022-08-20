@@ -2,16 +2,15 @@
 
 {
   imports = [
-    ./modules/alacritty.nix
-    ./modules/dunst.nix
-    ./modules/git.nix
-    ./modules/i3.nix
-    ./modules/picom.nix
-    ./modules/polybar.nix
-    ./modules/rofi.nix
-    ./modules/systemd.nix
-    ./modules/vscode.nix
-    ./modules/zsh.nix
+    ./modules/alacritty
+    ./modules/dunst
+    ./modules/git
+    ./modules/i3
+    ./modules/picom
+    ./modules/polybar
+    ./modules/rofi
+    ./modules/vscode
+    ./modules/zsh
   ];
 
   home.homeDirectory = "/home/troy";
