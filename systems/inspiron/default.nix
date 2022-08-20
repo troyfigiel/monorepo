@@ -2,8 +2,11 @@
 
 let sshPath = "/nix/persist/etc/ssh";
 in {
-  imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+  imports = [
+    ./hardware
+    ./programs
+    ./services
+    ./users
     ./modules/gpg.nix
     ./modules/graphics.nix
     ./modules/networking.nix
@@ -131,21 +134,6 @@ in {
 
   nixpkgs.config = { allowUnfree = true; };
 
-  # TODO: Should I set the group to be "troy" as well?
-  users = {
-    mutableUsers = false;
-    users.troy = {
-      isNormalUser = true;
-      home = "/home/troy";
-      description = "Troy Figiel";
-      shell = pkgs.zsh;
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
-      # I need to give the hashed version of my password with passwordFile,
-      # because passwordFile is used directly in /etc/shadow. See:
-      # https://nixos.org/manual/nixos/stable/options.html#opt-users.users._name_.passwordFile
-      passwordFile = config.sops.secrets.troy-password.path;
-    };
-  };
 
   # TODO: By default the sudo password is the same password as my own password?
   # security.sudo = {

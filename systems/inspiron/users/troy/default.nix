@@ -84,11 +84,11 @@
     enable = true;
     publicKeys = [
       {
-        source = ../../keys/troy.pub.asc;
+        source = ./keys/troy.pub.asc;
         trust = 5;
       }
       {
-        source = ../../keys/inspiron.pub.asc;
+        source = ./keys/inspiron.pub.asc;
         trust = 5;
       }
     ];
@@ -110,7 +110,9 @@
   # For when I switch to i3wm
   programs.alacritty.enable = true;
   programs.feh.enable = true;
-  programs.zathura.enable = true;
+  # For some reason Zathura fails to build now.
+  # See: https://github.com/NixOS/nixpkgs/issues/187305
+  # programs.zathura.enable = true;
   services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.

@@ -1,0 +1,2 @@
+- How to import private keys for root?
+- Need to set the permissions on /root/.gnupg properly
