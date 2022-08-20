@@ -7,7 +7,6 @@ in {
     ./modules/gpg.nix
     ./modules/graphics.nix
     ./modules/networking.nix
-    ./modules/openvpn.nix
     ./modules/sound.nix
     ./modules/syncthing.nix
     ./modules/xserver.nix

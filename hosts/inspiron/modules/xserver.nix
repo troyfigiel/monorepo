@@ -5,7 +5,6 @@
     enable = true;
     layout = "de";
     xkbVariant = "";
-    xkbOptions = "caps:escape";
 
     autoRepeatDelay = 300;
     autoRepeatInterval = 50;
