@@ -8,6 +8,7 @@
         directory = "/etc/NetworkManager";
         mode = "0755";
       }
+      "/etc/nixos"
       "/var/log"
       # This gets rid of the local sysadmin lecture message.
       # TODO: This could be symlinked in place, because it only requires a file with username to exist.
