@@ -28,7 +28,7 @@ Hardware config can be updated by `nixos-generate-config --show-hardware-config 
 
 My workflow on other distros has always been to manually change config files. This inevitably puts me in a position where I have to change a piece of software and I do not remember the specifics of its installation and configuration.
 
-Nix circumvents this problem for me by creating the appropriate symlinks for me. This means that if some configuration does not work, I can rollback to a previous configuration without any pain.
+Nix circumvents this problem by creating the appropriate symlinks for me. This means that if some configuration does not work, I can rollback to a previous configuration without any pain.
 
 ## But grokking Nix is also difficult
 
@@ -38,9 +38,14 @@ In my opinion, the best way to figure out which options and configurations are p
 
 # TODOs
 
-Literate programming: ...
-
+Learning more about Nix:
 - Start using LUKS Disk Encryption
+- Create an overlay with the sddm package
+- Create my own iso
+- Move sddm dependencies to pkgs
+- Import home-manager, sops, etc. inside the hosts/inspiron/default.nix file instead of in the flake
+
+Setting up the right configuration:
 - Use headphones to start and pause videos / music
 - Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
 - Set up a nice notification theme for increasing / decreasing brightness and volume
@@ -55,8 +60,7 @@ Literate programming: ...
 - copying Nix store / Look into Peerix / Cachix
 - Can I add my bluetooth connection to NetworkManager?
 
-Different topics I should be notified on somehow:
-
+To be added to polybar / dunst:
 - Volume
 - Brightness
 - Music player
@@ -64,9 +68,5 @@ Different topics I should be notified on somehow:
 - Networks
 - VPN
 - Active window (i3)
-- Date and time (Format: Wed, Nov 17 12:43)
-- RAM used
-- CPU used
 - Temperature
-- Battery left
 - Hard disk drive remaining and tmpfs size remaining

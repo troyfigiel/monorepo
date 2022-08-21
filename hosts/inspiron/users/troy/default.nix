@@ -131,6 +131,8 @@
 
   programs.lf.enable = true;
 
+  programs.mpv.enable = true;
+
   programs.atuin.enable = true;
 
   programs.less.enable = true;

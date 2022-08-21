@@ -100,6 +100,9 @@
         startup = let wallpaperDir = "/home/troy/.wallpapers";
         in [
           {
+            # TODO: There is a service called `random-background` in home-manager to do this.
+            # It basically does the same thing, but creates a systemd service instead of having
+            # to put it in my i3 startups.
             command =
               "${pkgs.feh}/bin/feh --bg-fill --randomize ${wallpaperDir}/*";
             always = true;
