@@ -1,7 +1,7 @@
 { lib, ... }:
 
 {
-  imports = [ ./networkmanager.nix ./syncthing.nix ];
+  imports = [ ./bluetooth.nix ./networkmanager.nix ./syncthing.nix ];
 
   networking = {
     hostName = "inspiron";
@@ -9,6 +9,5 @@
     useDHCP = lib.mkDefault true;
   };
 
-  services.blueman.enable = true;
   services.printing.enable = true;
 }

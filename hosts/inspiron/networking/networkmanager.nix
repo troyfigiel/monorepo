@@ -7,4 +7,9 @@
   };
 
   programs.nm-applet.enable = true;
+
+  environment.persistence."/nix/persist".directories = [{
+    directory = "/etc/NetworkManager";
+    mode = "0755";
+  }];
 }

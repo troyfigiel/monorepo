@@ -1,12 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./impermanence.nix
-    ./locale.nix
-    ./sound.nix
-    ./xorg.nix
-  ];
+  imports = [ ./docker.nix ./locale.nix ./sound.nix ./xorg.nix ];
 
   # This is approximately how I should do an auto-upgrade, but the code here
   # probably does not work as-is.
@@ -30,7 +25,7 @@
 
   # TODO: I have to move the packages to the respective modules that use them.
   environment.systemPackages = with pkgs;
-    # TODO: Can I make this into an overlay instead?
+  # TODO: Can I make this into an overlay instead?
     let sddm-sugar-candy = callPackage ../../../pkgs/sddm-sugar-candy { };
     in [
       sddm-sugar-candy
@@ -70,5 +65,18 @@
   # TODO: How do I use Proton in Nix?
   programs.steam.enable = true;
 
-  virtualisation.docker.enable = true;
+  environment.persistence."/nix/persist" = {
+    directories = [
+      "/etc/nixos"
+      "/var/log"
+      # This gets rid of the local sysadmin lecture message.
+      # TODO: This could be symlinked in place, because it only requires a file with username to exist.
+      {
+        directory = "/var/db/sudo/lectured";
+        mode = "0700";
+      }
+    ];
+
+    files = [ "/etc/machine-id" ];
+  };
 }
