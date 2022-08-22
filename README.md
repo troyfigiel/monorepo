@@ -44,6 +44,7 @@ Learning more about Nix:
 - Create my own iso
 - Move sddm dependencies to pkgs
 - Import home-manager, sops, etc. inside the hosts/inspiron/default.nix file instead of in the flake
+- Is it possible to use persistence as a home-manager module as well? What would be the nicest way to move my persisted user directories to the appropriate modules?
 
 Setting up the right configuration:
 - Use headphones to start and pause videos / music

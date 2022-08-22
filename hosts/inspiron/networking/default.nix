@@ -5,7 +5,10 @@
 
   networking = {
     hostName = "inspiron";
-    extraHosts = "192.168.178.31 raspberry";
+    extraHosts = ''
+      192.168.178.31 raspberry
+      192.168.178.37 nas
+    '';
     useDHCP = lib.mkDefault true;
   };
 

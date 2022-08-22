@@ -19,6 +19,19 @@
       device = "/dev/disk/by-uuid/25bc3363-81ad-4123-a79d-b5cda738eb2d";
       fsType = "ext4";
     };
+
+    "/home/troy/Share" = {
+      device = "//nas/shared";
+      fsType = "cifs";
+      options = [
+        # TODO: These credentials can be set with username= and password= using sops
+        "credentials=/nix/persist/etc/nixos/smb-secrets"
+        "x-systemd.automount"
+        "noauto"
+        "uid=1000"
+        "gid=100"
+      ];
+    };
   };
 
   swapDevices = [ ];
