@@ -149,7 +149,6 @@
   xdg = let
     # TODO: Change this into home.homeDirectory
     homeDir = "$HOME";
-    mediaDir = "${homeDir}/Media";
   in {
     enable = true;
     userDirs = {
@@ -159,14 +158,13 @@
       desktop = homeDir;
       documents = "${homeDir}/Documents";
       download = "${homeDir}/Downloads";
-      music = "${mediaDir}/Music";
-      pictures = "${mediaDir}/Pictures";
+      music = homeDir;
+      pictures = homeDir;
       publicShare = homeDir;
       templates = homeDir;
-      videos = "${mediaDir}/Videos";
+      videos = homeDir;
 
       extraConfig = {
-        XDG_MISC_DIR = "${homeDir}/Misc";
         XDG_PROJECTS_DIR = "${homeDir}/Projects";
       };
     };

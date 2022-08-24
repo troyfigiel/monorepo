@@ -10,10 +10,8 @@
     dirHashes = {
         do = "$HOME/Documents";
         dl = "$HOME/Downloads";
-        me = "$HOME/Media";
-        mi = "$HOME/Misc";
-        nc = "$HOME/Projects/nixos-config";
-        ls = "$HOME/Projects/logseq";
+        nc = "$HOME/Projects/Private/nixos-config";
+        ls = "$HOME/Projects/Private/logseq";
         pr = "$HOME/Projects";
         sh = "$HOME/Share";
     };

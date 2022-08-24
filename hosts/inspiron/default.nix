@@ -63,8 +63,6 @@
         ".vscode"
         "Documents"
         "Downloads"
-        "Media"
-        "Misc"
         "Projects"
       ];
 
