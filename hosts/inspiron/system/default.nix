@@ -40,6 +40,10 @@
       nix-index
       git
 
+      # TODO: For now I will need to symlink a config in place
+      # However, it would make more sense to create my own module for it.
+      minio-client
+
       # bpytop
       python3
       # sqlite

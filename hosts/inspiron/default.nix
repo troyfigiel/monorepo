@@ -64,6 +64,7 @@
         "Documents"
         "Downloads"
         "Media"
+        "Misc"
         "Projects"
       ];
 

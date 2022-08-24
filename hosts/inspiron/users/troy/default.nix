@@ -159,13 +159,16 @@
       desktop = homeDir;
       documents = "${homeDir}/Documents";
       download = "${homeDir}/Downloads";
-      music = mediaDir;
-      pictures = mediaDir;
+      music = "${mediaDir}/Music";
+      pictures = "${mediaDir}/Pictures";
       publicShare = homeDir;
       templates = homeDir;
-      videos = mediaDir;
+      videos = "${mediaDir}/Videos";
 
-      extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/Projects"; };
+      extraConfig = {
+        XDG_MISC_DIR = "${homeDir}/Misc";
+        XDG_PROJECTS_DIR = "${homeDir}/Projects";
+      };
     };
   };
 

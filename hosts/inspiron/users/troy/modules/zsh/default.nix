@@ -10,8 +10,12 @@
     dirHashes = {
         do = "$HOME/Documents";
         dl = "$HOME/Downloads";
-        pr = "$HOME/Projects";
+        me = "$HOME/Media";
+        mi = "$HOME/Misc";
         nc = "$HOME/Projects/nixos-config";
+        ls = "$HOME/Projects/logseq";
+        pr = "$HOME/Projects";
+        sh = "$HOME/Share";
     };
 
     # TODO: How to set case-insensitive completion?
