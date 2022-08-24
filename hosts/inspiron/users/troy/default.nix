@@ -62,6 +62,8 @@
     neofetch
 
     wireshark
+
+    awscli
   ];
 
   home.sessionVariables = {

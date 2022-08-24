@@ -45,10 +45,12 @@
       directories = [
         # Signal stores its data in the .config directory.
         # See: https://github.com/signalapp/Signal-Desktop/issues/4975
+        ".aws"
         ".config/Signal"
         ".config/whatsapp-for-linux"
         ".cache/whatsapp-for-linux"
         ".cache/mozilla"
+        ".cache/nix-index"
         ".mozilla"
         ".wallpapers"
         ".steam"
