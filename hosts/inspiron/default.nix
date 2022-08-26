@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -6,7 +6,13 @@
 
   nix = {
     package = pkgs.nixFlakes;
-    settings.auto-optimise-store = true;
+    settings = {
+      substituters = [ "http://192.168.178.37:10106/nix-cache/" ];
+      trusted-public-keys =
+        [ "minio.local-1:ZTYgVFeAYCoDqu0HppKRQRy54es8EZ5LVAmZQJO/VDA=" ];
+      trusted-users = [ "troy" ];
+      auto-optimise-store = true;
+    };
 
     gc = {
       automatic = true;
@@ -46,7 +52,9 @@
         # Signal stores its data in the .config directory.
         # See: https://github.com/signalapp/Signal-Desktop/issues/4975
         ".aws"
+        ".mc"
         ".config/Signal"
+        ".config/nix"
         ".config/whatsapp-for-linux"
         ".cache/whatsapp-for-linux"
         ".cache/mozilla"
