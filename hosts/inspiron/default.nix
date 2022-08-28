@@ -7,7 +7,7 @@
   nix = {
     package = pkgs.nixFlakes;
     settings = {
-      substituters = [ "http://192.168.178.37:10106/nix-cache/" ];
+      substituters = [ "http://192.168.178.37:10106/nix-binary-cache/" ];
       trusted-public-keys =
         [ "minio.local-1:ZTYgVFeAYCoDqu0HppKRQRy54es8EZ5LVAmZQJO/VDA=" ];
       trusted-users = [ "troy" ];

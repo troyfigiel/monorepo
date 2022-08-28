@@ -24,6 +24,14 @@ This requires:
 
 Hardware config can be updated by `nixos-generate-config --show-hardware-config > ...`
 
+## Copying Nix store
+
+`nix copy --to 's3://nix-binary-cache?profile=minio&endpoint=192.168.178.37:10106&scheme=http' --all`
+
+For Nix to be able to read from the binary cache, I will need to make sure the bucket is publicly readable.
+
+What is the preferred way to clean up my binary cache? Is there a garbage control?
+
 ## Decoupling my configuration from my machine
 
 My workflow on other distros has always been to manually change config files. This inevitably puts me in a position where I have to change a piece of software and I do not remember the specifics of its installation and configuration.

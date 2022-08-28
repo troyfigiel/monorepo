@@ -16,7 +16,7 @@
     };
 
     "/nix" = {
-      device = "/dev/disk/by-uuid/25bc3363-81ad-4123-a79d-b5cda738eb2d";
+      device = "/dev/disk/by-uuid/47cda452-dc47-4654-ba46-e46035d7a672";
       fsType = "ext4";
     };
 
