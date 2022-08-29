@@ -116,7 +116,7 @@
   programs.feh.enable = true;
   # For some reason Zathura fails to build now.
   # See: https://github.com/NixOS/nixpkgs/issues/187305
-  # programs.zathura.enable = true;
+  programs.zathura.enable = true;
   services.flameshot.enable = true;
 
   # There is a lot of configuration I can still set for these programs.

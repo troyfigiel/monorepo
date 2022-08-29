@@ -69,6 +69,7 @@
       ls = "ls --color=auto -h";
       ld = "lazydocker";
       lg = "lazygit";
+      mv = "mv -i"; # Ask before overwriting
       nb = "sudo nixos-rebuild switch --flake .";
       # Yank to system clipboard
       clip = "xclip -selection clipboard";
