@@ -11,6 +11,7 @@
     ./modules/rofi
     ./modules/vscode
     ./modules/zsh
+    ./modules/smb.nix
     ./modules/xdg.nix
   ];
 

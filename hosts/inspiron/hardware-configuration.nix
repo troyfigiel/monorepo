@@ -19,20 +19,6 @@
       device = "/dev/disk/by-uuid/47cda452-dc47-4654-ba46-e46035d7a672";
       fsType = "ext4";
     };
-
-    # Temporarily turn off Share since the NAS is down.
-    # "/home/troy/share" = {
-    #   device = "//nas/shared";
-    #   fsType = "cifs";
-    #   options = [
-    #     # TODO: These credentials can be set with username= and password= using sops
-    #     "credentials=/nix/persist/etc/nixos/smb-secrets"
-    #     "x-systemd.automount"
-    #     "noauto"
-    #     "uid=1000"
-    #     "gid=100"
-    #   ];
-    # };
   };
 
   swapDevices = [ ];

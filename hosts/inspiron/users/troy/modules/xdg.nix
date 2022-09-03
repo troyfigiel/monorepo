@@ -13,7 +13,7 @@
       download = "${home}/downloads";
       music = home;
       pictures = home;
-      publicShare = home;
+      publicShare = "${home}/share";
       templates = home;
       videos = home;
 
