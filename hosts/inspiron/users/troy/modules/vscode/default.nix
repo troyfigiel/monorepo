@@ -37,6 +37,7 @@
         vscodevim.vim
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         # I have not been able to get this to work yet, unfortunately.
+        # TODO: Turn the remaining vscode-extensions into pkgs and add an overlay
         # {
         #   name = "sqltools";
         #   publisher = "mtxr";

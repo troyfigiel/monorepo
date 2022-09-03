@@ -11,10 +11,21 @@
     ./modules/rofi
     ./modules/vscode
     ./modules/zsh
+    ./modules/xdg.nix
   ];
 
-  home.homeDirectory = "/home/troy";
-  home.username = "troy";
+  home = {
+    # TODO: I have also had to define this in the users folder? Why?
+    homeDirectory = "/home/troy";
+    username = "troy";
+
+    sessionVariables = {
+      EDITOR = "vim";
+      BROWSER = "firefox";
+    };
+
+    stateVersion = "22.05";
+  };
 
   fonts.fontconfig.enable = true;
 
@@ -73,13 +84,6 @@
 
     awscli
   ];
-
-  home.sessionVariables = {
-    EDITOR = "vim";
-    BROWSER = "firefox";
-  };
-
-  home.stateVersion = "22.05";
 
   # Is it a problem I have a home service as well as a system service?
   services.gpg-agent = {
@@ -154,28 +158,6 @@
   services.betterlockscreen = {
     enable = true;
     arguments = [ "blur" ];
-  };
-
-  xdg = let
-    # TODO: Change this into home.homeDirectory
-    homeDir = "$HOME";
-  in {
-    enable = true;
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-
-      desktop = homeDir;
-      documents = "${homeDir}/documents";
-      download = "${homeDir}/downloads";
-      music = homeDir;
-      pictures = homeDir;
-      publicShare = homeDir;
-      templates = homeDir;
-      videos = homeDir;
-
-      extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };
-    };
   };
 
   programs.dircolors.enable = true;

@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   programs.zsh = {
@@ -7,13 +7,18 @@
 
     autocd = true;
 
-    dirHashes = {
-        do = "$HOME/documents";
-        dl = "$HOME/downloads";
-        nc = "$HOME/projects/private/nixos-config";
-        ls = "$HOME/projects/private/logseq";
-        pr = "$HOME/projects";
-        sh = "$HOME/share";
+    dirHashes = let
+      home = config.home.homeDirectory;
+      documents = config.xdg.userDirs.documents;
+      download = config.xdg.userDirs.download;
+      projects = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
+    in {
+      do = documents;
+      dl = download;
+      nc = "${projects}/private/nixos-config";
+      ls = "${projects}/private/logseq";
+      pr = projects;
+      sh = "${home}/share";
     };
 
     # TODO: How to set case-insensitive completion?
@@ -27,16 +32,16 @@
     enableSyntaxHighlighting = true;
 
     plugins = [
-    # TODO: I have not been able to make this plugin work yet.
-    #   {
-    #     name = "pass-zsh-completion";
-    #     src = pkgs.fetchFromGitHub {
-    #       owner = "ninrod";
-    #       repo = "pass-zsh-completion";
-    #       rev = "e4d8d2c27d8999307e8f34bf81b2e15df4b76177";
-    #       sha256 = "sha256-KfZJ9XxZ8cBePcJPOAPQZ+f5kVUgLExDw/5QSduDA/0=";
-    #     };
-    #   }
+      # TODO: I have not been able to make this plugin work yet.
+      #   {
+      #     name = "pass-zsh-completion";
+      #     src = pkgs.fetchFromGitHub {
+      #       owner = "ninrod";
+      #       repo = "pass-zsh-completion";
+      #       rev = "e4d8d2c27d8999307e8f34bf81b2e15df4b76177";
+      #       sha256 = "sha256-KfZJ9XxZ8cBePcJPOAPQZ+f5kVUgLExDw/5QSduDA/0=";
+      #     };
+      #   }
       {
         name = "zsh-colored-man-pages";
         file = "colored-man-pages.plugin.zsh";
