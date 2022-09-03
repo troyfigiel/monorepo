@@ -21,7 +21,7 @@
     };
 
     # Temporarily turn off Share since the NAS is down.
-    # "/home/troy/Share" = {
+    # "/home/troy/share" = {
     #   device = "//nas/shared";
     #   fsType = "cifs";
     #   options = [

@@ -98,6 +98,7 @@
         "vscodevim.vim"
       ];
       "telemetry.telemetryLevel" = "off";
+      "terminal.integrated.enableMultiLinEPasteWarning" = false;
       "terminal.integrated.enablePersistentSessions" = false;
       "vim.handleKeys" = {
         "<C-d>" = true;

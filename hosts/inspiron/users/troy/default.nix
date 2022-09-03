@@ -22,6 +22,13 @@
   home.packages = with pkgs; [
     nmap
 
+    rclone
+    fdupes
+
+    # TODO: For now I will need to symlink a config in place
+    # However, it would make more sense to create my own module for it.
+    minio-client
+
     # TODO: Rofi-pass could be really nice, but needs some set up.
     # For example, it does not take my German keyboard into account.
     rofi-pass
@@ -35,6 +42,7 @@
     # Not sure about exa. I might as well put sane defaults on my ls aliases.
     # exa
 
+    file
     fd
 
     libreoffice
@@ -158,17 +166,15 @@
       createDirectories = true;
 
       desktop = homeDir;
-      documents = "${homeDir}/Documents";
-      download = "${homeDir}/Downloads";
+      documents = "${homeDir}/documents";
+      download = "${homeDir}/downloads";
       music = homeDir;
       pictures = homeDir;
       publicShare = homeDir;
       templates = homeDir;
       videos = homeDir;
 
-      extraConfig = {
-        XDG_PROJECTS_DIR = "${homeDir}/Projects";
-      };
+      extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };
     };
   };
 

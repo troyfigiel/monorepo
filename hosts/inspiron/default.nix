@@ -72,9 +72,9 @@
         ".local/share/DBeaverData"
         ".local/share/direnv/allow"
         ".vscode"
-        "Documents"
-        "Downloads"
-        "Projects"
+        "documents"
+        "downloads"
+        "projects"
       ];
 
       files = [ ".ssh/known_hosts" ];

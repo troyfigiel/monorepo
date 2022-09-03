@@ -8,12 +8,12 @@
     autocd = true;
 
     dirHashes = {
-        do = "$HOME/Documents";
-        dl = "$HOME/Downloads";
-        nc = "$HOME/Projects/Private/nixos-config";
-        ls = "$HOME/Projects/Private/logseq";
-        pr = "$HOME/Projects";
-        sh = "$HOME/Share";
+        do = "$HOME/documents";
+        dl = "$HOME/downloads";
+        nc = "$HOME/projects/private/nixos-config";
+        ls = "$HOME/projects/private/logseq";
+        pr = "$HOME/projects";
+        sh = "$HOME/share";
     };
 
     # TODO: How to set case-insensitive completion?
