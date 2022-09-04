@@ -26,15 +26,8 @@
   # TODO: I have to move the packages to the respective modules that use them.
   environment.systemPackages = with pkgs;
   # TODO: Can I make this into an overlay instead?
-    let sddm-sugar-candy = callPackage ../../../pkgs/sddm-sugar-candy { };
-    in [
+    [
       sddm-sugar-candy
-
-      # TODO: This should be moved to the sddm package instead
-      # Dependencies for sddm-sugar-candy
-      libsForQt5.qt5.qtgraphicaleffects
-      libsForQt5.qt5.qtquickcontrols2
-      libsForQt5.qt5.qtsvg
 
       # Others
       nix-index

@@ -19,8 +19,15 @@
 
   outputs = inputs: {
     nixosConfigurations = {
-      inspiron = inputs.nixpkgs.lib.nixosSystem {
+      inspiron = inputs.nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
+
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [ (import ./overlay.nix) ];
+          config.allowUnfree = true;
+        };
+
         modules = [
           ./hosts/inspiron
           inputs.sops-nix.nixosModules.sops
