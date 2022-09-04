@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 
-{
+rec {
   imports = [
     ./modules/alacritty
     ./modules/dunst
@@ -159,6 +159,11 @@
   services.betterlockscreen = {
     enable = true;
     arguments = [ "blur" ];
+  };
+
+  services.random-background = {
+    enable = true;
+    imageDirectory = "${home.homeDirectory}/.wallpapers";
   };
 
   programs.dircolors.enable = true;

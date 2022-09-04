@@ -95,32 +95,16 @@
           '';
         };
 
-        # TODO: I hardcoded my wallpaper directory, which is not pure.
-        # I should think how I would solve this.
-        startup = let wallpaperDir = "/home/troy/.wallpapers";
-        in [
-          {
-            # TODO: There is a service called `random-background` in home-manager to do this.
-            # It basically does the same thing, but creates a systemd service instead of having
-            # to put it in my i3 startups.
-            command =
-              "${pkgs.feh}/bin/feh --bg-fill --randomize ${wallpaperDir}/*";
-            always = true;
-            notification = false;
-          }
-          {
-            command = "${pkgs.blueman}/bin/blueman-applet";
-            always = true;
-            notification = false;
-          }
-          #{
-          #  # I just want to icon in the tray, not the entire screen on start up.
-          #  # TODO: What is the right command to use for this?
-          #  command = "${pkgs.nitrokey-app}/bin/nitrokey-app";
-          #  always = true;
-          #  notification = false;
-          #}
-        ];
+        startup = [{
+          command = "${pkgs.blueman}/bin/blueman-applet";
+          always = true;
+          notification = false;
+        }];
+        #  # I just want to icon in the tray, not the entire screen on start up.
+        #  # TODO: What is the right command to use for this?
+        #  command = "${pkgs.nitrokey-app}/bin/nitrokey-app";
+        #  always = true;
+        #  notification = false;
       };
     };
   };
