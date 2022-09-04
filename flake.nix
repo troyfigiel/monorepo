@@ -46,6 +46,20 @@
           inputs.home-manager.nixosModules.home-manager
         ];
       };
+
+      vulture = inputs.nixpkgs.lib.nixosSystem rec {
+        system = "x86_64-linux";
+
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+
+        modules = [
+          ./hosts/vulture
+          inputs.sops-nix.nixosModules.sops
+        ];
+      };
     };
   };
 }
