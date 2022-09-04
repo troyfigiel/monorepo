@@ -3,13 +3,21 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.utils.follows = "flake-utils";
     };
 
     impermanence.url = "github:nix-community/impermanence";
+
+    nix-vscode-marketplace = {
+      url = "github:AmeerTaweel/nix-vscode-marketplace";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
 
     sops-nix = {
       url = "github:mic92/sops-nix";
@@ -24,7 +32,10 @@
 
         pkgs = import inputs.nixpkgs {
           inherit system;
-          overlays = [ (import ./overlay.nix) ];
+          overlays = [
+            (import ./overlay.nix)
+            inputs.nix-vscode-marketplace.overlays.${system}.default
+          ];
           config.allowUnfree = true;
         };
 

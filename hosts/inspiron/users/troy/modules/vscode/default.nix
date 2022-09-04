@@ -3,48 +3,39 @@
 {
   programs.vscode = {
     enable = true;
-    # This is the default, but if all extensions are properly
-    # packaged, I can switch this to false.
-    mutableExtensionsDir = true;
-    extensions = with pkgs.vscode-extensions;
-      [
+    mutableExtensionsDir = false;
+    extensions = let
+      vscode-extensions = with pkgs.vscode-extensions; [
         _4ops.terraform
-        #TO INSTALL: aaron-bond.better-comments
         bbenoist.nix
         brettm12345.nixfmt-vscode
         bungcip.better-toml
         christian-kohler.path-intellisense
         eamodio.gitlens
         humao.rest-client
-        #TO INSTALL: innoverio.vscode-dbt-power-user
-        #TO INSTALL: iterative.dvc
-        #TO INSTALL: kevinglasson.cornflakes-linter
-        #TO INSTALL: KevinRose.vsc-python-indent
         mechatroner.rainbow-csv
         ms-azuretools.vscode-docker
         ms-python.python
         ms-python.vscode-pylance
-        ms-toolsai.jupyter
-        #TO INSTALL: ms-toolsai.jupyter-keymap
-        ms-toolsai.jupyter-renderers
-        #TO INSTALL: ms-vscode-remote.remote-containers
         ms-vscode-remote.remote-ssh
-        #TO INSTALL: ms-vscode-remote.remote-ssh-edit
+        ms-toolsai.jupyter
+        ms-toolsai.jupyter-renderers
         njpwerner.autodocstring
         oderwat.indent-rainbow
         redhat.vscode-yaml
-        #TO INSTALL: samuelcolvin.jinjahtml
         vscodevim.vim
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        # I have not been able to get this to work yet, unfortunately.
-        # TODO: Turn the remaining vscode-extensions into pkgs and add an overlay
-        # {
-        #   name = "sqltools";
-        #   publisher = "mtxr";
-        #   version = "";
-        #   sha256 = "";
-        # }
       ];
+      vscode-marketplace = with pkgs.vscode-marketplace.vscode; [
+        aaron-bond.better-comments
+        innoverio.vscode-dbt-power-user
+        iterative.dvc
+        kevinglasson.cornflakes-linter
+        kevinrose.vsc-python-indent
+        ms-toolsai.jupyter-keymap
+        ms-vscode-remote.remote-containers
+        samuelcolvin.jinjahtml
+      ];
+    in vscode-extensions ++ vscode-marketplace;
     userSettings = {
       "diffEditor.renderSideBySide" = false;
       "dvc.doNotShowWalkthroughAfterInstall" = true;
@@ -77,14 +68,11 @@
       "python.terminal.activateEnvironment" = false;
       "python.testing.pytestEnabled" = true;
       "redhat.telemetry.enabled" = false;
-      # I could probably install all extensions automatically using
-      # a variable instead of duplicating code.
       "remote.containers.defaultExtensions" = [
         "4ops.terraform"
         "bbenoist.nix"
         "bungcip.better-toml"
         "christian-kohler.path-intellisense"
-        "eamodio.gitlens"
         "eamodio.gitlens"
         "mechatroner.rainbow-csv"
         "ms-python.python"

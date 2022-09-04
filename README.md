@@ -48,10 +48,7 @@ In my opinion, the best way to figure out which options and configurations are p
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption
-- Create an overlay with the sddm package
 - Create my own iso
-- Move sddm dependencies to pkgs
-- Import home-manager, sops, etc. inside the hosts/inspiron/default.nix file instead of in the flake
 - Is it possible to use persistence as a home-manager module as well? What would be the nicest way to move my persisted user directories to the appropriate modules?
 
 Setting up the right configuration:
@@ -66,8 +63,6 @@ Setting up the right configuration:
 - Change my cursor theme
 - betterscreenlock automatically locks after 10 mins, even when a video is playing
 - Can I use the impermanence module together with Syncthing somehow?
-- copying Nix store / Look into Peerix / Cachix
-- Can I add my bluetooth connection to NetworkManager?
 
 To be added to polybar / dunst:
 - Volume

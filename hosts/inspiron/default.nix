@@ -69,7 +69,7 @@
         ".local/share/password-store"
         ".local/share/DBeaverData"
         ".local/share/direnv/allow"
-        ".vscode"
+        #".vscode"
         "documents"
         "downloads"
         "projects"
