@@ -46,6 +46,8 @@ In my opinion, the best way to figure out which options and configurations are p
 
 # TODOs
 
+I will need to use a tool like deploy-rs to deploy my configurations. I have a VPS and I do not want to always have to deploy by calling nixos-rebuild from an ssh connection.
+
 Learning more about Nix:
 - Start using LUKS Disk Encryption
 - Create my own iso
