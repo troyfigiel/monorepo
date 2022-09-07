@@ -75,7 +75,7 @@
       ld = "lazydocker";
       lg = "lazygit";
       mv = "mv -i"; # Ask before overwriting
-      nb = "sudo nixos-rebuild switch --flake .";
+      tf = "terraform";
       # Yank to system clipboard
       clip = "xclip -selection clipboard";
     };

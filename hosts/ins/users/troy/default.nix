@@ -34,6 +34,9 @@ rec {
   home.packages = with pkgs; [
     nmap
 
+    deploy-rs
+    sops
+
     rclone
     fdupes
 

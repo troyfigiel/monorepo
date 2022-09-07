@@ -9,3 +9,8 @@ creation_rules:
     - pgp:
       - *troy
       - *ins
+  - path_regex: infrastructure/vtr/secrets.yaml
+    key_groups:
+    - pgp:
+      - *troy
+      - *ins

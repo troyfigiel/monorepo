@@ -1,7 +1,2 @@
 # Symlinks to the built result
 **/result
-
-# Do not add certain terraform files
-**/.terraform
-**/terraform.tfstate
-**/terraform.tfstate.backup
