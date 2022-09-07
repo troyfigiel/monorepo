@@ -1,10 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [ ./hardware-configuration.nix ];
 
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
@@ -13,19 +10,15 @@
   networking.hostName = "vulture"; # Define your hostname.
 
   users.users.root = {
-    openssh.authorizedKeys.keys = [(builtins.readFile ./key.pub) ];
+    openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
   };
 
   users.users.nixos = {
     isNormalUser = true;
     initialPassword = "nixos";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      git
-      vim
-      hello
-    ];
-    openssh.authorizedKeys.keys = [(builtins.readFile ./key.pub) ];
+    packages = with pkgs; [ git vim hello ];
+    openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
   };
 
   services.openssh = {

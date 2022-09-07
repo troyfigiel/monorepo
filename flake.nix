@@ -9,7 +9,7 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.utils.follows = "flake-utils";
-    }; 
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -61,11 +61,39 @@
           config.allowUnfree = true;
         };
 
-        modules = [
-          ./hosts/vulture
-          inputs.sops-nix.nixosModules.sops
-        ];
+        modules = [ ./hosts/vulture inputs.sops-nix.nixosModules.sops ];
       };
     };
+
+    deploy.nodes = {
+      inspiron = {
+        hostname = "inspiron";
+        profiles = {
+          system = {
+            user = "root";
+            # TODO: This obviously is not secure, but needed to get it to work.
+            sshUser = "root";
+            path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+              inputs.self.nixosConfigurations.inspiron;
+          };
+        };
+      };
+
+      vulture = {
+        hostname = "vulture";
+        profiles = {
+          system = {
+            user = "root";
+            sshUser = "root";
+            path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+              inputs.self.nixosConfigurations.vulture;
+          };
+        };
+      };
+    };
+
+    checks = builtins.mapAttrs
+      (system: deployLib: deployLib.deployChecks inputs.self.deploy)
+      inputs.deploy-rs.lib;
   };
 }
