@@ -49,7 +49,10 @@ in {
     gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];
     age.sshKeyPaths = [ ];
 
-    secrets = { acme-email-address = { }; };
+    secrets = {
+      acme-email-address = { };
+      mail-troy-password = { };
+    };
   };
 
   services.nginx = {
@@ -71,6 +74,19 @@ in {
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];
 
+#   mailserver = {
+#     enable = true;
+#     fqdn = "mail.troyfigiel.com";
+#     domains = [ "troyfigiel.com" ];
+#     # TODO: I have not been able to set up SSL/TLS yet.
+#     #certificateScheme = 3;
+
+#     loginAccounts = {
+#       "troy@troyfigiel.com" = {
+#         hashedPasswordFile = config.sops.secrets.mail-troy-password.path;
+#       };
+#     };
+#   };
+
   system.stateVersion = "22.05";
 }
-

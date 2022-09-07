@@ -21,3 +21,9 @@ resource "vultr_instance" "vtr" {
   ddos_protection  = false
   label            = "vtr"
 }
+
+resource "vultr_reverse_ipv4" "vtr_reverse_ipv4" {
+    instance_id = vultr_instance.vtr.id
+    ip = vultr_instance.vtr.main_ip
+    reverse = "mail.${var.domain}"
+}

@@ -70,7 +70,11 @@
           config.allowUnfree = true;
         };
 
-        modules = [ ./hosts/vtr inputs.sops-nix.nixosModules.sops ];
+        modules = [
+          ./hosts/vtr
+          inputs.sops-nix.nixosModules.sops
+          inputs.simple-nixos-mailserver.nixosModules.mailserver
+        ];
       };
     };
 

@@ -34,6 +34,8 @@ rec {
   home.packages = with pkgs; [
     nmap
 
+    thunderbird
+
     deploy-rs
     sops
 
