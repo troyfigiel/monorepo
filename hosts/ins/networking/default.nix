@@ -4,11 +4,11 @@
   imports = [ ./bluetooth.nix ./networkmanager.nix ./syncthing.nix ];
 
   networking = {
-    hostName = "inspiron";
+    hostName = "ins";
     extraHosts = ''
-      192.168.178.31 raspberry
+      192.168.178.31 rpi
       192.168.178.37 nas
-      80.240.27.131 vulture
+      80.240.27.131 vtr
     '';
     useDHCP = lib.mkDefault true;
   };

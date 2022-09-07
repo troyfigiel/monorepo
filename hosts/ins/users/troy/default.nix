@@ -107,7 +107,7 @@ rec {
         trust = 5;
       }
       {
-        source = ./keys/inspiron.pub.asc;
+        source = ./keys/ins.pub.asc;
         trust = 5;
       }
     ];

@@ -33,7 +33,7 @@
 
   outputs = inputs: {
     nixosConfigurations = {
-      inspiron = inputs.nixpkgs.lib.nixosSystem rec {
+      ins = inputs.nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
 
         pkgs = import inputs.nixpkgs {
@@ -46,14 +46,14 @@
         };
 
         modules = [
-          ./hosts/inspiron
+          ./hosts/ins
           inputs.sops-nix.nixosModules.sops
           inputs.impermanence.nixosModules.impermanence
           inputs.home-manager.nixosModules.home-manager
         ];
       };
 
-      vulture = inputs.nixpkgs.lib.nixosSystem rec {
+      vtr = inputs.nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
 
         pkgs = import inputs.nixpkgs {
@@ -61,32 +61,32 @@
           config.allowUnfree = true;
         };
 
-        modules = [ ./hosts/vulture inputs.sops-nix.nixosModules.sops ];
+        modules = [ ./hosts/vtr inputs.sops-nix.nixosModules.sops ];
       };
     };
 
     deploy.nodes = {
-      inspiron = {
-        hostname = "inspiron";
+      ins = {
+        hostname = "ins";
         profiles = {
           system = {
             user = "root";
             # TODO: This obviously is not secure, but needed to get it to work.
             sshUser = "root";
             path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-              inputs.self.nixosConfigurations.inspiron;
+              inputs.self.nixosConfigurations.ins;
           };
         };
       };
 
-      vulture = {
-        hostname = "vulture";
+      vtr = {
+        hostname = "vtr";
         profiles = {
           system = {
             user = "root";
             sshUser = "root";
             path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-              inputs.self.nixosConfigurations.vulture;
+              inputs.self.nixosConfigurations.vtr;
           };
         };
       };

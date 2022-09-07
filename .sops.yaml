@@ -2,10 +2,10 @@ keys:
   - users:
     - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
   - hosts:
-    - &inspiron 53BA215C79CFD829A722D5DDB05F6ED222F19591
+    - &ins 53BA215C79CFD829A722D5DDB05F6ED222F19591
 creation_rules:
-  - path_regex: hosts/inspiron/security/secrets.yaml
+  - path_regex: hosts/ins/security/secrets.yaml
     key_groups:
     - pgp:
       - *troy
-      - *inspiron
+      - *ins

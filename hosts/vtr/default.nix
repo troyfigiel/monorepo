@@ -7,7 +7,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/vda";
 
-  networking.hostName = "vulture"; # Define your hostname.
+  networking.hostName = "vtr";
 
   users.users.root = {
     openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
@@ -16,7 +16,7 @@
   users.users.nixos = {
     isNormalUser = true;
     initialPassword = "nixos";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [ git vim hello ];
     openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
   };
