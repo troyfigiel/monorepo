@@ -24,7 +24,6 @@ in {
     age.sshKeyPaths = [ ];
 
     secrets = {
-      # Now I can access the secret with config.sops.secrets.troy-password.path
       troy-password = { neededForUsers = true; };
       work-vpn-username = { };
       work-vpn-password = { };

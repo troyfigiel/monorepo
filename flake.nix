@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-22_05.url = "github:nixos/nixpkgs/release-22.05";
     flake-utils.url = "github:numtide/flake-utils";
 
     deploy-rs = {
@@ -25,9 +26,17 @@
       inputs.flake-utils.follows = "flake-utils";
     };
 
+    simple-nixos-mailserver = {
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-22_05.follows = "nixpkgs-22_05";
+      inputs.utils.follows = "flake-utils";
+    };
+
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-22_05.follows = "nixpkgs-22_05";
     };
   };
 
@@ -80,7 +89,7 @@
       };
 
       vtr = {
-        hostname = "vtr";
+        hostname = "troyfigiel.com";
         profiles = {
           system = {
             user = "root";

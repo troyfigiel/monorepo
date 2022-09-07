@@ -3,14 +3,19 @@ keys:
     - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
   - hosts:
     - &ins 53BA215C79CFD829A722D5DDB05F6ED222F19591
+    - &vtr 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
 creation_rules:
   - path_regex: hosts/ins/security/secrets.yaml
     key_groups:
     - pgp:
       - *troy
       - *ins
+  - path_regex: hosts/vtr/secrets.yaml
+    key_groups:
+    - pgp:
+      - *troy
+      - *vtr
   - path_regex: infrastructure/vtr/secrets.yaml
     key_groups:
     - pgp:
       - *troy
-      - *ins

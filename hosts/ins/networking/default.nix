@@ -8,7 +8,7 @@
     extraHosts = ''
       192.168.178.31 rpi
       192.168.178.37 nas
-      80.240.27.131 vtr
+      troyfigiel.com vtr
     '';
     useDHCP = lib.mkDefault true;
   };

@@ -15,11 +15,11 @@
       # because passwordFile is used directly in /etc/shadow. See:
       # https://nixos.org/manual/nixos/stable/options.html#opt-users.users._name_.passwordFile
       passwordFile = config.sops.secrets.troy-password.path;
-      openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
+      openssh.authorizedKeys.keys = [ (builtins.readFile ./troy/keys/troy.pub.ssh) ];
     };
 
     users.root = {
-      openssh.authorizedKeys.keys = [ (builtins.readFile ./key.pub) ];
+      openssh.authorizedKeys.keys = [ (builtins.readFile ./troy/keys/troy.pub.ssh) ];
     };
   };
 }

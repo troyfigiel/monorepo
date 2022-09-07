@@ -113,6 +113,10 @@ rec {
         source = ./keys/ins.pub.asc;
         trust = 5;
       }
+      {
+        source = ../../../vtr/vtr.pub.asc;
+        trust = 5;
+      }
     ];
   };
 

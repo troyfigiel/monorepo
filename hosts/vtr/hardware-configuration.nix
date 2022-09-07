@@ -6,23 +6,33 @@
 {
   imports = [ ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" =
-    { 
-      device = "/dev/disk/by-uuid/b435eadb-bfa9-4522-b527-ef4dc815a950";
-      fsType = "ext4";
+  boot = {
+    loader.grub = {
+      enable = true;
+      version = 2;
+      device = "/dev/vda";
     };
 
+    initrd = {
+      availableKernelModules =
+        [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
+      kernelModules = [ ];
+    };
+
+    kernelModules = [ ];
+    extraModulePackages = [ ];
+  };
+
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/b435eadb-bfa9-4522-b527-ef4dc815a950";
+    fsType = "ext4";
+  };
+
   swapDevices =
-    [{
-      device = "/dev/disk/by-uuid/38d31099-6977-4754-9ee8-5dcddbcb2685";
-    }];
+    [{ device = "/dev/disk/by-uuid/38d31099-6977-4754-9ee8-5dcddbcb2685"; }];
 
   networking.useDHCP = lib.mkDefault true;
 
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
