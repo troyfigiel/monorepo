@@ -44,6 +44,20 @@ The biggest downside to Nix is its learning curve: Not only do you need to know 
 
 In my opinion, the best way to figure out which options and configurations are possible, is by using the Nix REPL and reading the source code of nixpkgs.
 
+## Hermetic sealing
+
+Because Nix is so strict on reproducibility and hermetically sealing your environment, you end up having to bring dependencies close together.
+
+For example, if I want to add a blog and create that as a separate repository, that is not going to work nicely. If I update the blog I expect the changes to be visible instanteneously, but this will not happen with Nix since it will pull in a specific git revision and not the latest.
+
+I am not sure if there is a nice solution to this problem while maintaining my blog in a separate repository.
+
+I can think of either:
+- I trigger a nixos-config pipeline from a blog pipeline to rebuild my website and update it.
+- I treat the website as state on my server, but then there is no guarantee I get exactly what I want.
+
+Overall, I would say, Nix does a great job keeping all of the related code in a single repository. Dependencies between Nix flakes will be loosely coupled by design.
+
 # TODOs
 
 I will need to use a tool like deploy-rs to deploy my configurations. I have a VPS and I do not want to always have to deploy by calling nixos-rebuild from an ssh connection.
