@@ -48,7 +48,7 @@
         pkgs = import inputs.nixpkgs {
           inherit system;
           overlays = [
-            (import ./overlay.nix)
+            (import ./overlays)
             inputs.nix-vscode-marketplace.overlays.${system}.default
           ];
           config.allowUnfree = true;
