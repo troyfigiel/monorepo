@@ -1,2 +1,6 @@
 # Symlinks to the built result
 **/result
+
+# Terraform files that should not be committed
+**/.terraform
+**/*tfstate*

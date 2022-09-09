@@ -15,7 +15,7 @@ creation_rules:
     - pgp:
       - *troy
       - *vtr
-  - path_regex: infrastructure/vtr/secrets.yaml
+  - path_regex: infrastructure/secrets.yaml
     key_groups:
     - pgp:
       - *troy

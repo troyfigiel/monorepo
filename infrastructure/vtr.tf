@@ -1,7 +1,3 @@
-provider "vultr" {
-  api_key = local.vultr_api_key
-}
-
 data "vultr_snapshot" "nixos-snapshot" {
   filter {
     name   = "description"
@@ -23,7 +19,7 @@ resource "vultr_instance" "vtr" {
 }
 
 resource "vultr_reverse_ipv4" "vtr_reverse_ipv4" {
-    instance_id = vultr_instance.vtr.id
-    ip = vultr_instance.vtr.main_ip
-    reverse = "mail.${var.domain}"
+  instance_id = vultr_instance.vtr.id
+  ip          = vultr_instance.vtr.main_ip
+  reverse     = "mail.${local.domain}"
 }
