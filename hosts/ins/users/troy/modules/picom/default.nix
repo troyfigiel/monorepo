@@ -1,5 +1,5 @@
 {
-  # The tray randomly disappears. Maybe a compositor issue?
+  # TODO:The tray randomly disappears. Maybe a compositor issue?
   services.picom = {
     enable = true;
     experimentalBackends = true;

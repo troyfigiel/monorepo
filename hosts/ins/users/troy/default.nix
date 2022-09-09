@@ -128,18 +128,18 @@ rec {
     enable = true;
     browsers = [ "firefox" ];
   };
+
   programs.password-store.enable = true;
 
   programs.jq.enable = true;
-  programs.direnv.enable = true;
-  # I have never used this before, but it sounds useful.
-  programs.direnv.nix-direnv.enable = true;
 
-  # For when I switch to i3wm
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   programs.alacritty.enable = true;
   programs.feh.enable = true;
-  # For some reason Zathura fails to build now.
-  # See: https://github.com/NixOS/nixpkgs/issues/187305
   programs.zathura.enable = true;
   services.flameshot.enable = true;
 
@@ -179,6 +179,5 @@ rec {
 
   programs.dircolors.enable = true;
 
-  # TODO: What does this do?
   targets.genericLinux.enable = true;
 }

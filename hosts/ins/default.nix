@@ -20,8 +20,6 @@
       dates = "weekly";
     };
 
-    # Run garbage collections when 3 GiB is left.
-    # Clean up until we have 10 GiB of space left.
     extraOptions = ''
       experimental-features = nix-command flakes
       min-free = ${toString (3 * 1024 * 1024 * 1024)}
