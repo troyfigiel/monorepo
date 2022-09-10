@@ -1,29 +1,45 @@
 {
+  description = "Flake for @package@";
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs";
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+    poetry2nix = {
+      url = "github:nix-community/poetry2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
-  outputs = { self, nixpkgs, utils }:
-    let
-      out = system:
-        let pkgs = nixpkgs.legacyPackages."${system}";
-        in {
-
-          devShell = pkgs.mkShell {
-            buildInputs = with pkgs; [ python3Packages.poetry ];
-          };
-
-          defaultPackage = with pkgs.poetry2nix;
-            mkPoetryApplication {
-              projectDir = ./.;
-              preferWheels = true;
-            };
-
-          defaultApp =
-            utils.lib.mkApp { drv = self.defaultPackage."${system}"; };
-
+  outputs = inputs:
+    (inputs.flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [ inputs.devshell.overlay inputs.poetry2nix.overlay ];
         };
-    in with utils.lib; eachSystem defaultSystems out;
 
+        package-name = "@package@";
+        python = pkgs.python310;
+        poetry = pkgs.poetry.override { inherit python; };
+
+        venv = pkgs.poetry2nix.mkPoetryEnv {
+          inherit python;
+          projectDir = ./.;
+        };
+      in {
+        devShell = pkgs.devshell.mkShell {
+          name = "${package-name}-dev-shell";
+          packages = [ venv ];
+          commands = [{
+            name = "poetry";
+            package = poetry;
+          }];
+        };
+      }));
 }

@@ -62,7 +62,7 @@ Overall, I would say, Nix does a great job keeping all of the related code in a 
 
 I will need to use a tool like deploy-rs to deploy my configurations. I have a VPS and I do not want to always have to deploy by calling nixos-rebuild from an ssh connection.
 
-I am currently using home-manager as a NixOS module, but I would also like to be able to use home-manager on non-NixOS. This means I will need to separate out my home-manager config.
+Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption
