@@ -42,6 +42,7 @@ rec {
     rclone
     fdupes
 
+    hugo
     terraform
 
     # TODO: For now I will need to symlink a config in place

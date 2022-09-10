@@ -1,7 +1,8 @@
 final: prev:
 
 {
-  sddm-sugar-candy = prev.callPackage ../pkgs/sddm-sugar-candy { };
+  sddm-sugar-candy = prev.callPackage ./pkgs/sddm-sugar-candy { };
+  website = prev.callPackage ./website { };
 
   # The remote container extension requires version 1.71.0 of vscode.
   # Currently the latest version on nixpkgs is 1.70.2.

@@ -21,7 +21,7 @@ in {
     isNormalUser = true;
     initialPassword = "nixos";
     extraGroups = [ "wheel" ];
-    packages = with pkgs; [ git vim hello ];
+    packages = with pkgs; [ git vim ];
     openssh.authorizedKeys.keys =
       [ (builtins.readFile ../ins/users/troy/keys/troy.pub.ssh) ];
   };
@@ -62,7 +62,7 @@ in {
         forceSSL = true;
         enableACME = true;
         serverAliases = [ "www.troyfigiel.com" ];
-        locations."/" = { root = "/var/www/troyfigiel.com"; };
+        locations."/" = { root = "${pkgs.website}/public"; };
       };
     };
   };
@@ -74,19 +74,19 @@ in {
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];
 
-#   mailserver = {
-#     enable = true;
-#     fqdn = "mail.troyfigiel.com";
-#     domains = [ "troyfigiel.com" ];
-#     # TODO: I have not been able to set up SSL/TLS yet.
-#     #certificateScheme = 3;
+  #   mailserver = {
+  #     enable = true;
+  #     fqdn = "mail.troyfigiel.com";
+  #     domains = [ "troyfigiel.com" ];
+  #     # TODO: I have not been able to set up SSL/TLS yet.
+  #     #certificateScheme = 3;
 
-#     loginAccounts = {
-#       "troy@troyfigiel.com" = {
-#         hashedPasswordFile = config.sops.secrets.mail-troy-password.path;
-#       };
-#     };
-#   };
+  #     loginAccounts = {
+  #       "troy@troyfigiel.com" = {
+  #         hashedPasswordFile = config.sops.secrets.mail-troy-password.path;
+  #       };
+  #     };
+  #   };
 
   system.stateVersion = "22.05";
 }
