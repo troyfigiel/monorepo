@@ -27,6 +27,7 @@
       ];
       vscode-marketplace = with pkgs.vscode-marketplace.vscode; [
         aaron-bond.better-comments
+        budparr.language-hugo-vscode
         innoverio.vscode-dbt-power-user
         iterative.dvc
         kevinglasson.cornflakes-linter
