@@ -15,9 +15,9 @@
     in {
       do = documents;
       dl = download;
-      nc = "${projects}/private/nixos-config";
-      ls = "${projects}/private/logseq";
       pr = projects;
+      ls = "${projects}/private/logseq";
+      nc = "${projects}/private/nixos-config";
       sh = "${home}/share";
     };
 

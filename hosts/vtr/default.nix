@@ -62,7 +62,7 @@ in {
         forceSSL = true;
         enableACME = true;
         serverAliases = [ "www.troyfigiel.com" ];
-        locations."/" = { root = "${pkgs.website}/public"; };
+        locations."/" = { root = pkgs.troyfigiel-com; };
       };
     };
   };
