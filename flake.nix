@@ -26,6 +26,8 @@
       inputs.flake-utils.follows = "flake-utils";
     };
 
+    nur.url = "github:nix-community/NUR";
+
     simple-nixos-mailserver = {
       url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,6 +52,7 @@
           overlays = [
             (import ./overlay.nix)
             inputs.nix-vscode-marketplace.overlays.${system}.default
+            inputs.nur.overlay
           ];
           config.allowUnfree = true;
         };

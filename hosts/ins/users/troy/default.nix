@@ -4,6 +4,7 @@ rec {
   imports = [
     ./modules/alacritty
     ./modules/dunst
+    ./modules/emacs
     ./modules/git
     ./modules/i3
     ./modules/picom

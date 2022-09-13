@@ -60,10 +60,11 @@ Overall, I would say, Nix does a great job keeping all of the related code in a 
 
 # TODOs
 
-I will need to use a tool like deploy-rs to deploy my configurations. I have a VPS and I do not want to always have to deploy by calling nixos-rebuild from an ssh connection.
-
 Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
+
 I am currently using home-manager as a NixOS module, but I would also like to be able to use home-manager on non-NixOS. This means I will need to separate out my home-manager config.
+
+I keep on running into infinite recursion errors when I try to add modules. This is currently what is blocking me from adding the emacs-init home-manager module. Why is this happening?
 
 It would make sense to start splitting my large flake.nix into multiple smaller ones. Flakes for my hosts, for my homes, etc.
 
