@@ -110,15 +110,15 @@ rec {
     enable = true;
     publicKeys = [
       {
-        source = ./keys/troy.pub.asc;
+        source = ../../keys/troy.pub.asc;
         trust = 5;
       }
       {
-        source = ./keys/ins.pub.asc;
+        source = ../../keys/ins.pub.asc;
         trust = 5;
       }
       {
-        source = ../../hosts/vtr/vtr.pub.asc;
+        source = ../../keys/vtr.pub.asc;
         trust = 5;
       }
     ];

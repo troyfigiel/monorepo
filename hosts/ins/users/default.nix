@@ -12,11 +12,11 @@
       shell = pkgs.zsh;
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       passwordFile = config.sops.secrets.troy-password.path;
-      openssh.authorizedKeys.keys = [ (builtins.readFile ../../../homes/troy/keys/troy.pub.ssh) ];
+      openssh.authorizedKeys.keys = [ (builtins.readFile ../../../keys/troy.pub.ssh) ];
     };
 
     users.root = {
-      openssh.authorizedKeys.keys = [ (builtins.readFile ../../../homes/troy/keys/troy.pub.ssh) ];
+      openssh.authorizedKeys.keys = [ (builtins.readFile ../../../keys/troy.pub.ssh) ];
     };
   };
 }

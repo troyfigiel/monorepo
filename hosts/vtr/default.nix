@@ -14,7 +14,7 @@ in {
 
   users.users.root = {
     openssh.authorizedKeys.keys =
-      [ (builtins.readFile ../../homes/troy/keys/troy.pub.ssh) ];
+      [ (builtins.readFile ../../keys/troy.pub.ssh) ];
   };
 
   users.users.nixos = {
@@ -23,7 +23,7 @@ in {
     extraGroups = [ "wheel" ];
     packages = with pkgs; [ git vim ];
     openssh.authorizedKeys.keys =
-      [ (builtins.readFile ../../homes/troy/keys/troy.pub.ssh) ];
+      [ (builtins.readFile ../../keys/troy.pub.ssh) ];
   };
 
   services.openssh = {
