@@ -44,20 +44,31 @@
 
   outputs = inputs:
     let
-      system = "x86_64-linux";
-      pkgs = import inputs.nixpkgs {
-        inherit system;
-        overlays = [
-          (import ./overlay.nix)
-          inputs.nix-vscode-marketplace.overlays.${system}.default
-          inputs.emacs-overlay.overlay
-        ];
-        config.allowUnfree = true;
-      };
+      systems = [ "x86_64-linux" ];
+      inherit (inputs.nixpkgs.lib) nixosSystem genAttrs;
+      inherit (inputs.home-manager.lib) homeManagerConfiguration;
     in {
+      # TODO: What if someone wants to add sddm-sugar-candy but does not want to override vscode?
+      overlays.default = import ./overlay.nix;
+
+      templates = import ./templates;
+
+      legacyPackages = genAttrs systems (system:
+        import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+          overlays = [
+            inputs.self.overlays.default
+            inputs.nix-vscode-marketplace.overlays.${system}.default
+            inputs.emacs-overlay.overlay
+          ];
+        });
+
       nixosConfigurations = {
-        ins = inputs.nixpkgs.lib.nixosSystem {
-          inherit system pkgs;
+        ins = let system = "x86_64-linux";
+        in nixosSystem rec {
+          inherit system;
+          pkgs = inputs.self.legacyPackages.${system};
           modules = [
             ./hosts/ins
             inputs.sops-nix.nixosModules.sops
@@ -65,8 +76,10 @@
           ];
         };
 
-        vtr = inputs.nixpkgs.lib.nixosSystem {
-          inherit system pkgs;
+        vtr = let system = "x86_64-linux";
+        in nixosSystem rec {
+          inherit system;
+          pkgs = inputs.self.legacyPackages.${system};
           modules = [
             ./hosts/vtr
             inputs.sops-nix.nixosModules.sops
@@ -76,8 +89,8 @@
       };
 
       homeConfigurations = {
-        troy = inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+        troy = homeManagerConfiguration {
+          pkgs = inputs.self.nixosConfigurations.ins.pkgs;
           modules = [ ./homes/troy ];
         };
       };
@@ -116,7 +129,6 @@
         };
       };
 
-      templates = import ./templates;
 
       checks = builtins.mapAttrs
         (system: deployLib: deployLib.deployChecks inputs.self.deploy)
