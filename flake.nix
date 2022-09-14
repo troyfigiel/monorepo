@@ -1,27 +1,25 @@
 {
   description = "Flake for Troy's Nixfiles";
 
+  # We only follow nixpkgs explicitly, because pulling in different versions
+  # will bloat the build process quite a bit.
+  # Not following inputs might be better if you want full compatibility?
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-22_05.url = "github:nixos/nixpkgs/release-22.05";
-    flake-utils.url = "github:numtide/flake-utils";
 
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.utils.follows = "flake-utils";
     };
 
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.utils.follows = "flake-utils";
     };
 
     impermanence.url = "github:nix-community/impermanence";
@@ -29,7 +27,6 @@
     nix-vscode-marketplace = {
       url = "github:AmeerTaweel/nix-vscode-marketplace";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
 
     nur.url = "github:nix-community/NUR";
@@ -37,14 +34,11 @@
     simple-nixos-mailserver = {
       url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-22_05.follows = "nixpkgs-22_05";
-      inputs.utils.follows = "flake-utils";
     };
 
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-22_05.follows = "nixpkgs-22_05";
     };
   };
 
