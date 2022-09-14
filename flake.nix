@@ -13,9 +13,9 @@
     };
 
     emacs-overlay = {
-        url = "github:nix-community/emacs-overlay";
-        inputs.nixpkgs.follows = "nixpkgs";
-        inputs.flake-utils.follows = "flake-utils";
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     home-manager = {
@@ -51,54 +51,28 @@
   outputs = inputs:
     let
       system = "x86_64-linux";
-      nurNoPkgs = import inputs.nur {
-        nurpkgs = import inputs.nixpkgs { inherit system; };
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        overlays = [
+          (import ./overlay.nix)
+          inputs.nix-vscode-marketplace.overlays.${system}.default
+          inputs.emacs-overlay.overlay
+        ];
+        config.allowUnfree = true;
       };
     in {
       nixosConfigurations = {
         ins = inputs.nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            overlays = [
-              (import ./overlay.nix)
-              inputs.nix-vscode-marketplace.overlays.${system}.default
-              inputs.emacs-overlay.overlay
-            ];
-            config.allowUnfree = true;
-          };
-
+          inherit system pkgs;
           modules = [
             ./hosts/ins
             inputs.sops-nix.nixosModules.sops
             inputs.impermanence.nixosModules.impermanence
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                # users.root = ./users/root;
-                users.troy = {
-                  imports = [
-                    ./hosts/ins/users/troy
-                    nurNoPkgs.repos.rycee.hmModules.emacs-init
-                  ];
-                };
-              };
-            }
           ];
         };
 
         vtr = inputs.nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            overlays = [ (import ./overlay.nix) ];
-            config.allowUnfree = true;
-          };
-
+          inherit system pkgs;
           modules = [
             ./hosts/vtr
             inputs.sops-nix.nixosModules.sops
@@ -107,9 +81,17 @@
         };
       };
 
+      homeConfigurations = {
+        troy = inputs.home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./homes/troy ];
+        };
+      };
+
       deploy.nodes = {
         ins = {
           hostname = "ins";
+          profilesOrder = [ "system" "troy" ];
           profiles = {
             system = {
               user = "root";
@@ -117,6 +99,12 @@
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                 inputs.self.nixosConfigurations.ins;
+            };
+
+            troy = {
+              user = "troy";
+              path = inputs.deploy-rs.lib.x86_64-linux.activate.home-manager
+                inputs.self.homeConfigurations.troy;
             };
           };
         };

@@ -1,10 +1,10 @@
 { inputs, pkgs, ... }:
 
 rec {
+  # TODO: Put back Emacs when I get homeConfigurations to work in my flake
   imports = [
     ./modules/alacritty
     ./modules/dunst
-    ./modules/emacs
     ./modules/git
     ./modules/i3
     ./modules/picom
@@ -118,7 +118,7 @@ rec {
         trust = 5;
       }
       {
-        source = ../../../vtr/vtr.pub.asc;
+        source = ../../hosts/vtr/vtr.pub.asc;
         trust = 5;
       }
     ];
