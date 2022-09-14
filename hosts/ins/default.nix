@@ -27,13 +27,6 @@
     '';
   };
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    # users.root = ./users/root;
-    users.troy = ./users/troy;
-  };
-
   # TODO: The directories that are required to be persisted should be moved to the appropriate modules.
   # Here it is too unclear why I am persisting certain directories or files.
   # NOTE: The NixOS module system will actually take care of that. If an attribute is defined in multiple modules,

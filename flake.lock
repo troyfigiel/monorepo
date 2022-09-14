@@ -40,6 +40,29 @@
         "type": "github"
       }
     },
+    "emacs-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1663131546,
+        "narHash": "sha256-YZ22qq57scSztid5oeyOvdxk55M0qGkotNlFLNqEShA=",
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "rev": "99b9791022c7d1904208fed44f9aa8bdf8845da9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -119,11 +142,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1663040778,
-        "narHash": "sha256-jkqbNlMa0aJOT9YvfhwUBQ5hUUMXFIGOnbHU9oh/KSg=",
+        "lastModified": 1663138299,
+        "narHash": "sha256-xBpobt7zvE8EJlENwvA7dL/wuZWuNDsclqmajVzJtQY=",
         "owner": "AmeerTaweel",
         "repo": "nix-vscode-marketplace",
-        "rev": "bb2bbb3fcac702a8b62f0d81eb3c32c3588672b7",
+        "rev": "e6b8eb76872a6d1401bae61f93f0f87f16301463",
         "type": "github"
       },
       "original": {
@@ -166,11 +189,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1663100481,
-        "narHash": "sha256-8f4aCJ/cx1pMVh9iEa5NkQn44oOroWjHU4WuiKBvf0s=",
+        "lastModified": 1663140352,
+        "narHash": "sha256-l6zXiLm/nYezRORU3QEfgTg/cXs67UhEW83r64XPckU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bce93c1b8ec55a13ccab172d97f87909f20adb47",
+        "rev": "930c526eccdc1b32ada04b9014724e15247cacf6",
         "type": "github"
       },
       "original": {
@@ -182,6 +205,7 @@
     "root": {
       "inputs": {
         "deploy-rs": "deploy-rs",
+        "emacs-overlay": "emacs-overlay",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "impermanence": "impermanence",

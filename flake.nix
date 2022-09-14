@@ -12,6 +12,12 @@
       inputs.utils.follows = "flake-utils";
     };
 
+    emacs-overlay = {
+        url = "github:nix-community/emacs-overlay";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.flake-utils.follows = "flake-utils";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,77 +48,96 @@
     };
   };
 
-  outputs = inputs: {
-    nixosConfigurations = {
-      ins = inputs.nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-
-        pkgs = import inputs.nixpkgs {
+  outputs = inputs:
+    let
+      system = "x86_64-linux";
+      nurNoPkgs = import inputs.nur {
+        nurpkgs = import inputs.nixpkgs { inherit system; };
+      };
+    in {
+      nixosConfigurations = {
+        ins = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          overlays = [
-            (import ./overlay.nix)
-            inputs.nix-vscode-marketplace.overlays.${system}.default
-            inputs.nur.overlay
+
+          pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [
+              (import ./overlay.nix)
+              inputs.nix-vscode-marketplace.overlays.${system}.default
+              inputs.emacs-overlay.overlay
+            ];
+            config.allowUnfree = true;
+          };
+
+          modules = [
+            ./hosts/ins
+            inputs.sops-nix.nixosModules.sops
+            inputs.impermanence.nixosModules.impermanence
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                # users.root = ./users/root;
+                users.troy = {
+                  imports = [
+                    ./hosts/ins/users/troy
+                    nurNoPkgs.repos.rycee.hmModules.emacs-init
+                  ];
+                };
+              };
+            }
           ];
-          config.allowUnfree = true;
         };
 
-        modules = [
-          ./hosts/ins
-          inputs.sops-nix.nixosModules.sops
-          inputs.impermanence.nixosModules.impermanence
-          inputs.home-manager.nixosModules.home-manager
-        ];
-      };
-
-      vtr = inputs.nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-
-        pkgs = import inputs.nixpkgs {
+        vtr = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          overlays = [ (import ./overlay.nix) ];
-          config.allowUnfree = true;
+
+          pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [ (import ./overlay.nix) ];
+            config.allowUnfree = true;
+          };
+
+          modules = [
+            ./hosts/vtr
+            inputs.sops-nix.nixosModules.sops
+            inputs.simple-nixos-mailserver.nixosModules.mailserver
+          ];
+        };
+      };
+
+      deploy.nodes = {
+        ins = {
+          hostname = "ins";
+          profiles = {
+            system = {
+              user = "root";
+              # TODO: This obviously is not secure, but needed to get it to work.
+              sshUser = "root";
+              path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+                inputs.self.nixosConfigurations.ins;
+            };
+          };
         };
 
-        modules = [
-          ./hosts/vtr
-          inputs.sops-nix.nixosModules.sops
-          inputs.simple-nixos-mailserver.nixosModules.mailserver
-        ];
-      };
-    };
-
-    deploy.nodes = {
-      ins = {
-        hostname = "ins";
-        profiles = {
-          system = {
-            user = "root";
-            # TODO: This obviously is not secure, but needed to get it to work.
-            sshUser = "root";
-            path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-              inputs.self.nixosConfigurations.ins;
+        vtr = {
+          hostname = "troyfigiel.com";
+          profiles = {
+            system = {
+              user = "root";
+              sshUser = "root";
+              path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+                inputs.self.nixosConfigurations.vtr;
+            };
           };
         };
       };
 
-      vtr = {
-        hostname = "troyfigiel.com";
-        profiles = {
-          system = {
-            user = "root";
-            sshUser = "root";
-            path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-              inputs.self.nixosConfigurations.vtr;
-          };
-        };
-      };
+      templates = import ./templates;
+
+      checks = builtins.mapAttrs
+        (system: deployLib: deployLib.deployChecks inputs.self.deploy)
+        inputs.deploy-rs.lib;
     };
-
-    templates = import ./templates;
-
-    checks = builtins.mapAttrs
-      (system: deployLib: deployLib.deployChecks inputs.self.deploy)
-      inputs.deploy-rs.lib;
-  };
 }
