@@ -3,17 +3,17 @@
 rec {
   # TODO: Put back Emacs when I get homeConfigurations to work in my flake
   imports = [
-    ./modules/alacritty
-    ./modules/dunst
-    ./modules/git
-    ./modules/i3
-    ./modules/picom
-    ./modules/polybar
-    ./modules/rofi
-    ./modules/vscode
-    ./modules/zsh
-    ./modules/smb.nix
-    ./modules/xdg.nix
+    ./alacritty.nix
+    ./dunst.nix
+    ./git.nix
+    ./i3.nix
+    ./picom.nix
+    ./polybar.nix
+    ./rofi
+    ./vscode.nix
+    ./zsh
+    ./smb.nix
+    ./xdg.nix
   ];
 
   home = {

@@ -1,8 +1,7 @@
 { config, inputs, lib, pkgs, ... }:
 
 {
-  imports =
-    [ ./hardware-configuration.nix ./networking ./security ./system ./users ];
+  imports = [ ./hardware-configuration.nix ./networking ./security ./system ./users ];
 
   nix = {
     package = pkgs.nixFlakes;
