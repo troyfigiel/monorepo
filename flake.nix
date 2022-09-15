@@ -45,11 +45,12 @@
   outputs = inputs:
     let
       systems = [ "x86_64-linux" ];
-      inherit (inputs.nixpkgs.lib) nixosSystem genAttrs;
+      inherit (inputs.nixpkgs.lib) nixosSystem genAttrs composeManyExtensions;
       inherit (inputs.home-manager.lib) homeManagerConfiguration;
     in {
-      # TODO: What if someone wants to add sddm-sugar-candy but does not want to override vscode?
-      overlays.default = import ./overlay.nix;
+
+      # TODO: Add keys in overlay instead? Then I don't have to mess with relative paths all the time
+      overlays.default = import ./pkgs;
 
       templates = import ./templates;
 
@@ -63,6 +64,15 @@
             inputs.emacs-overlay.overlay
           ];
         });
+
+      # TODO: This works for deploy, but do I need to create an install binary to run terraform as well?
+      apps = genAttrs systems (system: {
+        default = {
+          type = "app";
+          program =
+            "${inputs.self.legacyPackages.${system}.deploy-rs}/bin/deploy";
+        };
+      });
 
       nixosConfigurations = {
         ins = let system = "x86_64-linux";
@@ -128,7 +138,6 @@
           };
         };
       };
-
 
       checks = builtins.mapAttrs
         (system: deployLib: deployLib.deployChecks inputs.self.deploy)
