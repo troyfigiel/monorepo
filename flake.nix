@@ -49,7 +49,6 @@
       inherit (inputs.home-manager.lib) homeManagerConfiguration;
     in {
 
-      # TODO: Add keys in overlay instead? Then I don't have to mess with relative paths all the time
       overlays.default = import ./pkgs;
 
       templates = import ./templates;

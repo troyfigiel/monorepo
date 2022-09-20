@@ -25,7 +25,6 @@
 
   # TODO: I have to move the packages to the respective modules that use them.
   environment.systemPackages = with pkgs;
-  # TODO: Can I make this into an overlay instead?
     [
       sddm-sugar-candy
 
