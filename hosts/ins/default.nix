@@ -35,13 +35,14 @@
 
     users.troy = {
       directories = [
-        # Signal stores its data in the .config directory.
-        # See: https://github.com/signalapp/Signal-Desktop/issues/4975
         ".aws"
         ".mc"
+        # Signal stores its data in the .config directory.
+        # See: https://github.com/signalapp/Signal-Desktop/issues/4975
         ".config/Signal"
-        ".config/nix"
         ".config/whatsapp-for-linux"
+        ".config/rclone"
+        ".config/nix"
         ".cache/whatsapp-for-linux"
         ".cache/mozilla"
         ".cache/nix-index"
