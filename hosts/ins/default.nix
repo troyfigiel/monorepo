@@ -62,6 +62,7 @@
     users.root = {
       home = "/root";
       directories = [ ".gnupg" ];
+      files = [ ".ssh/known_hosts" ];
     };
   };
 

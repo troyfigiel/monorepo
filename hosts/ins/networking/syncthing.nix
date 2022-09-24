@@ -6,18 +6,14 @@
 #     overrideDevices = true;
 #     overrideFolders = true;
 #     devices = {
-#       "Raspberry Pi".id =
-#         "I2X3E7U-A6WNSZI-W222VHC-IN5ZSO5-BMZMSCQ-E5THLGB-2HNF2MA-HDBNEAH";
+#       "raspberrypi".id =
+#         "NTIKLAK-WZDJKEO-K2LFHO2-2ZWC7PE-U2IPHIG-HSF2CKC-PKJY7QW-EILSJQT";
 #     };
 #     folders = {
-#       # Can this be anything besides the folder ID?
 #       "cjwuz-qsuvo" = {
-#         path = "/home/troy/our-files";
-#         devices = [ "Raspberry Pi" ];
-#       };
-#       "ansoq-roezf" = {
-#         path = "/home/troy/misc-files";
-#         devices = [ "Raspberry Pi" ];
+#         path = "/nix/persist";
+#         devices = [ "raspberrypi" ];
+#         ignorePerms = false;
 #       };
 #     };
 #   };

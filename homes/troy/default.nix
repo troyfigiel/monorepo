@@ -37,6 +37,8 @@ rec {
 
     thunderbird
 
+    restic
+
     deploy-rs
     sops
 
@@ -68,6 +70,7 @@ rec {
 
     libreoffice
     # zip and rar files
+    zip
     unzip
     unar
 

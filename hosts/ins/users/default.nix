@@ -12,6 +12,7 @@
       shell = pkgs.zsh;
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       passwordFile = config.sops.secrets.troy-password.path;
+      # This is needed to be able to call deploy using my Nitrokey.
       openssh.authorizedKeys.keys = [ (builtins.readFile ../../../keys/troy.pub.ssh) ];
     };
 

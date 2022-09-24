@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./docker.nix ./locale.nix ./sound.nix ./xorg.nix ];
+  imports = [ ./docker.nix ./locale.nix ./restic.nix ./sound.nix ./xorg.nix ];
 
   # This is approximately how I should do an auto-upgrade, but the code here
   # probably does not work as-is.
@@ -24,34 +24,33 @@
   system.stateVersion = "22.05";
 
   # TODO: I have to move the packages to the respective modules that use them.
-  environment.systemPackages = with pkgs;
-    [
-      sddm-sugar-candy
+  environment.systemPackages = with pkgs; [
+    sddm-sugar-candy
 
-      # Others
-      nix-index
-      git
+    # Others
+    nix-index
+    git
 
-      # bpytop
-      python3
-      # sqlite
+    # bpytop
+    python3
+    # sqlite
 
-      inxi
+    inxi
 
-      vim
-      # w3m
-      wget
-      # xclip
-      nixfmt
-      # qemu
+    vim
+    # w3m
+    wget
+    # xclip
+    nixfmt
+    # qemu
 
-      # For i3 sshfs
-      # mpc-cli
-      brightnessctl
+    # For i3 sshfs
+    # mpc-cli
+    brightnessctl
 
-      # Nicer form of du
-      # ncdu
-    ];
+    # Nicer form of du
+    # ncdu
+  ];
 
   # TODO: Is there a way to set this up with home-manager? Not system-wide
   # TODO: How do I use Proton in Nix?

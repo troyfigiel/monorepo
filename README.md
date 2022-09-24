@@ -19,10 +19,13 @@ This works:
 - Encrypt in such a way that both me with my Nitrokey as well as root can read my secrets.
 
 This requires:
-- Persisting /etc/ssh
+- Persisting /etc/ssh/
 - Re-encrypting my secrets if I get a new computer
 
 Hardware config can be updated by `nixos-generate-config --show-hardware-config > ...`
+
+- I rely on sops for Terraform as well. agenix might not be a good alternative to sops-nix in this case.
+- sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.
 
 ## Copying Nix store
 

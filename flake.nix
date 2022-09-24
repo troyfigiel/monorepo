@@ -110,15 +110,13 @@
           profilesOrder = [ "system" "troy" ];
           profiles = {
             system = {
-              user = "root";
-              # TODO: This obviously is not secure, but needed to get it to work.
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                 inputs.self.nixosConfigurations.ins;
             };
 
             troy = {
-              user = "troy";
+              sshUser = "troy";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.home-manager
                 inputs.self.homeConfigurations.troy;
             };
@@ -129,7 +127,6 @@
           hostname = "troyfigiel.com";
           profiles = {
             system = {
-              user = "root";
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                 inputs.self.nixosConfigurations.vtr;

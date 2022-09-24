@@ -23,10 +23,12 @@ in {
     gnupg.sshKeyPaths = [ "${sshPath}/ssh_host_rsa_key" ];
     age.sshKeyPaths = [ ];
 
+    # TODO: It makes more sense to store the secrets with the nix files that use them.
     secrets = {
       troy-password = { neededForUsers = true; };
-      work-vpn-username = { };
-      work-vpn-password = { };
+      rpi-mnt-password = { };
+      rpi-backup-password = { };
+      ssh-restic = { };
     };
   };
 }

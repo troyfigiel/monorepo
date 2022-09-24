@@ -22,8 +22,6 @@ in {
     initialPassword = "nixos";
     extraGroups = [ "wheel" ];
     packages = with pkgs; [ git vim ];
-    openssh.authorizedKeys.keys =
-      [ (builtins.readFile ../../keys/troy.pub.ssh) ];
   };
 
   services.openssh = {
