@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [ ./bluetooth.nix ./networkmanager.nix ./syncthing.nix ];
@@ -8,10 +8,18 @@
     extraHosts = ''
       192.168.178.31 rpi
       192.168.178.37 nas
-      troyfigiel.com vtr
     '';
     useDHCP = lib.mkDefault true;
   };
 
-  services.printing.enable = true;
+  # TODO: This works, but need to check how to configure my printers declaratively in NixOS
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.epson-escpr2 ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+  };
 }
