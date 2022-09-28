@@ -17,39 +17,14 @@
   # Nix will try to automatically merge these definitions. This makes it very easy to create a modular config.
   environment.persistence."/nix/persist" = {
     hideMounts = true;
-
-    users.troy = {
-      directories = [
-        ".aws"
-        ".mc"
-        # Signal stores its data in the .config directory.
-        # See: https://github.com/signalapp/Signal-Desktop/issues/4975
-        ".config/Signal"
-        ".config/whatsapp-for-linux"
-        ".config/rclone"
-        ".config/nix"
-        ".cache/whatsapp-for-linux"
-        ".cache/mozilla"
-        ".cache/nix-index"
-        ".mozilla"
-        ".wallpapers"
-        ".steam"
-        ".cert"
-        ".local/share"
-        "documents"
-        "downloads"
-        "projects"
-      ];
-
-      files = [ ".ssh/known_hosts" ];
-    };
-
     users.root = {
       home = "/root";
       directories = [ ".gnupg" ];
       files = [ ".ssh/known_hosts" ];
     };
   };
+
+  programs.fuse.userAllowOther = true;
 
   # TODO: How would this work if I have a completely new install? I would still have to activate my home environment for the first time?
   environment.loginShellInit = ''

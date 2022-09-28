@@ -6,7 +6,7 @@
     enable = true;
     userDirs = {
       enable = true;
-      createDirectories = true;
+      createDirectories = false;
 
       desktop = home;
       documents = "${home}/documents";

@@ -100,7 +100,10 @@
       homeConfigurations = {
         troy = homeManagerConfiguration {
           pkgs = inputs.self.nixosConfigurations.ins.pkgs;
-          modules = [ ./homes/troy ];
+          modules = [
+            ./homes/troy
+            inputs.impermanence.nixosModules.home-manager.impermanence
+          ];
         };
       };
 

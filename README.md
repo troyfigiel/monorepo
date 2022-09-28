@@ -1,11 +1,5 @@
 # NixOS configuration
 
-## Getting started
-
-- Need the GPG key on my Nitrokey card
-- Need the SSH key from my /nix/persist/
-- There is no need to store the SSH private key in secrets.yaml, since I persist it anyway.
-
 # Some notes
 
 The problems I am encountering with sops-nix do not have to do with:
@@ -26,6 +20,12 @@ Hardware config can be updated by `nixos-generate-config --show-hardware-config 
 
 - I rely on sops for Terraform as well. agenix might not be a good alternative to sops-nix in this case.
 - sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.
+
+- I can sync my persistent home files using Syncthing. I should not run Syncthing as root. The remaining persisted files and directories should be backed up with restic. There are fewer of them anyway and they are probably machine specific.
+- For extra precautions, I can decide to run Syncthing only in my local network.
+- I should run Syncthing as a home-manager service, not NixOS module. The home-manager service also has a tray option.
+
+This requires first using impermanence as a home-manager module and moving over my persisted home directories and files to that module instead.
 
 ## Copying Nix store
 
@@ -64,12 +64,6 @@ Overall, I would say, Nix does a great job keeping all of the related code in a 
 # TODOs
 
 Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
-
-I am currently using home-manager as a NixOS module, but I would also like to be able to use home-manager on non-NixOS. This means I will need to separate out my home-manager config.
-
-I keep on running into infinite recursion errors when I try to add modules. This is currently what is blocking me from adding the emacs-init home-manager module. Why is this happening?
-
-It would make sense to start splitting my large flake.nix into multiple smaller ones. Flakes for my hosts, for my homes, etc.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption

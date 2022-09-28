@@ -153,9 +153,6 @@ rec {
   programs.fzf.enable = true;
   # programs.powerline-go.enable = true;
 
-  # Works with zsh, kitty, rofi, neovim, i3
-  # programs.pywal.enable = true;
-
   # Give neovim a try?
   # programs.neovim.enable = true;
 
@@ -165,8 +162,6 @@ rec {
   programs.lf.enable = true;
 
   programs.mpv.enable = true;
-
-  programs.atuin.enable = true;
 
   programs.less.enable = true;
   programs.lesspipe.enable = true;
@@ -185,4 +180,40 @@ rec {
   programs.dircolors.enable = true;
 
   targets.genericLinux.enable = true;
+
+  # This is necessary to auto-start services such as the bind mounts.
+  systemd.user.startServices = "sd-switch";
+
+  home.persistence."/nix/persist/home/troy" = {
+    directories = [
+      # TODO: Which directories do I even need here?
+      ".mc"
+      # Signal stores its data in the .config directory.
+      # See: https://github.com/signalapp/Signal-Desktop/issues/4975
+      ".config/Signal"
+      ".config/whatsapp-for-linux"
+      ".config/rclone"
+      ".config/nix"
+      ".cache/whatsapp-for-linux"
+      ".cache/mozilla"
+      ".cache/nix-index"
+      ".mozilla/firefox"
+      ".mozilla/extensions"
+      ".wallpapers"
+      ".steam"
+      ".local/share/DBeaverData"
+      ".local/share/direnv"
+      ".local/share/godot"
+      ".local/share/gvfs-metadata"
+      ".local/share/nix"
+      ".local/share/password-store"
+      ".local/share/Steam"
+      ".local/share/vulkan"
+      "documents"
+      "downloads"
+      "projects"
+    ];
+    files = [ ".ssh/known_hosts" ];
+    allowOther = true;
+  };
 }
