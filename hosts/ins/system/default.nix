@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./docker.nix ./locale.nix ./restic.nix ./sound.nix ./xorg.nix ];
+  imports = [ ./docker.nix ./nix.nix ./restic.nix ./sound.nix ./xorg.nix ];
 
   # This is approximately how I should do an auto-upgrade, but the code here
   # probably does not work as-is.

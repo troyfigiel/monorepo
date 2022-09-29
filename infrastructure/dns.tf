@@ -19,6 +19,23 @@ resource "cloudflare_record" "www" {
   ttl     = 3600
 }
 
+resource "cloudflare_record" "search" {
+  zone_id = cloudflare_zone.troyfigiel.id
+  name    = "search.${local.domain}"
+  value   = local.domain
+  type    = "CNAME"
+  ttl     = 3600
+}
+
+resource "cloudflare_record" "www-search" {
+  zone_id = cloudflare_zone.troyfigiel.id
+  name    = "www.search.${local.domain}"
+  value   = local.domain
+  type    = "CNAME"
+  ttl     = 3600
+}
+
+# TODO: Why do I need this again?
 resource "cloudflare_record" "sub" {
   zone_id = cloudflare_zone.troyfigiel.id
   name    = "*.${local.domain}"

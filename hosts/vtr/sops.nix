@@ -1,4 +1,4 @@
-let sshPath = "/nix/persist/etc/ssh";
+let sshPath = "/etc/ssh";
 in {
   sops = {
     defaultSopsFile = ./secrets.yaml;
@@ -6,4 +6,3 @@ in {
     age.sshKeyPaths = [ ];
   };
 }
-

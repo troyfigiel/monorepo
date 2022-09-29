@@ -4,6 +4,13 @@ let
   backupUser = "pi";
   backupHost = "rpi";
 in {
+
+  sops.secrets = {
+    ssh-restic = { };
+    rpi-mnt-password = { };
+    rpi-backup-password = { };
+  };
+
   services.restic.backups = {
     rpi-mnt = let backupLocation = "/home/pi/mnt/restic";
     in {
@@ -11,9 +18,7 @@ in {
       initialize = true;
       passwordFile = config.sops.secrets.rpi-mnt-password.path;
       paths = [ "/nix/persist" ];
-      timerConfig = {
-        OnCalendar = "11:00";
-      };
+      timerConfig = { OnCalendar = "11:00"; };
       extraOptions = [
         "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
       ];
@@ -25,9 +30,7 @@ in {
       initialize = true;
       passwordFile = config.sops.secrets.rpi-backup-password.path;
       paths = [ "/nix/persist" ];
-      timerConfig = {
-        OnCalendar = "11:00";
-      };
+      timerConfig = { OnCalendar = "11:00"; };
       extraOptions = [
         "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
       ];
