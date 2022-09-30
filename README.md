@@ -24,6 +24,7 @@ Hardware config can be updated by `nixos-generate-config --show-hardware-config 
 - I can sync my persistent home files using Syncthing. I should not run Syncthing as root. The remaining persisted files and directories should be backed up with restic. There are fewer of them anyway and they are probably machine specific.
 - For extra precautions, I can decide to run Syncthing only in my local network.
 - I should run Syncthing as a home-manager service, not NixOS module. The home-manager service also has a tray option.
+- Should I make my /nix/persist a zfs file system? Then I can do roll-backs just as I would for Nix but on my data. Might be nice? Create a snapshot on boot.
 
 This requires first using impermanence as a home-manager module and moving over my persisted home directories and files to that module instead.
 
