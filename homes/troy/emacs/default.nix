@@ -1,13 +1,18 @@
 {
   imports = [
-    ./deft.nix
+    ./editing.nix
+    ./eglot.nix
+    ./languages.nix
     ./org.nix
-    ./org-roam.nix
-    ./org-roam-timestamps.nix
-    ./org-roam-ui.nix
+    ./roam.nix
+    ./scratch.nix
+    ./terminal.nix
+    ./theming.nix
+    ./version-control.nix
   ];
 
-  services.emacs.enable = true;
+  # TODO: Do I really need this? This is slowing down my startup times?
+  # services.emacs.enable = true;
 
   programs.emacs = {
     enable = true;

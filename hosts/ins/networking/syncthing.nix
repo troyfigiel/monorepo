@@ -1,4 +1,5 @@
 {
+  # TODO: Why does Syncthing still create a Sync folder upon boot? How do I fix this?
   services.syncthing = {
     enable = true;
     user = "troy";
