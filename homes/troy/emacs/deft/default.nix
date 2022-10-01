@@ -1,7 +1,7 @@
 {
-  programs.emacs.init.usePackage.org-roam = {
+  programs.emacs.init.usePackage.deft = {
     enable = true;
-    after = [ "org" ];
+    after = [ "org-roam" ];
     config = builtins.readFile ./config.el;
   };
 }

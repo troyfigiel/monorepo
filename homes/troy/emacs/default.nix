@@ -1,5 +1,11 @@
 {
-  imports = [];
+  imports = [
+    ./deft
+    ./org
+    ./org-roam
+    ./org-roam-timestamps
+    ./org-roam-ui
+  ];
 
   services.emacs.enable = true;
 
