@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f6c5de10-a2a4-41a7-b4fd-089491811725
+:mtime:    20220305112757
+:ctime:    20220305112545
+:END:
+#+title: McNamara fallacy
+#+filetags: :stub:
+
+The McNamara fallacy was named after the US secretary of Defense in the context of the Vietnam war.
+
+It involves
+1. Measuring what can easily be measured
+2. Disregarding that which cannot be measured easily or to give it an arbitrary quantitative value
+3. Presume that what cannot be measured is not important

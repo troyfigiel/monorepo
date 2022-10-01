@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       bb3c3484-1727-4564-acb1-475283038b3e
+:mtime:    20220319212436
+:ctime:    20220319212258
+:END:
+#+title: Incomplete gamma function
+#+filetags: :stub:
+
+- [[id:88c12d47-6a68-4aa5-93a1-845d5b588a98][Gamma function]]
+- [[id:a0254703-c1ff-4de2-a8f7-abbed6609892][Upper incomplete gamma function]]
+- [[id:7ef48fb2-f9cf-496d-84ff-af87d6b7189d][Lower incomplete gamma function]]
+
+Special cases:
+- [[id:e9f3a04e-a4b1-4408-b76f-40f86fc858b7][Exponential integral]]
+- [[id:a1568804-1021-429a-918a-f09a49b45d8a][Error function]]

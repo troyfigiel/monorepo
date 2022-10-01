@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ee65f131-295f-46d4-a3b8-222f23fbb854
+:mtime:    20220302215650
+:ctime:    20220302215649
+:END:
+#+title: Left censoring
+#+filetags: :stub:
+
+

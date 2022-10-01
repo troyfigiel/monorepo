@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       32c9892d-2bdb-4fca-b0e5-0dce7d71f3f7
+:mtime:    20220324124132
+:ctime:    20220324124131
+:END:
+#+title: Site percolation
+#+filetags: :stub:
+
+

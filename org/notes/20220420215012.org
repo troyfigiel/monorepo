@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       1aac55a3-ca42-4e93-bd93-7d53bb1524ee
+:ROAM_ALIASES: "Artificial landscape"
+:mtime:    20220420220104
+:ctime:    20220420215012
+:END:
+#+title: Test function for optimization
+#+filetags: :stub:
+
+- [[id:cd6c15d8-cbd0-4b85-b0c5-4c2d60eac36a][Goldstein-Price function]]
+- [[id:7b8dd8c9-a863-4c4d-8a14-9aa48cccc133][Rosenbrock function]]
+- [[id:e586e987-5cf0-47ef-8062-9bf818aa1eae][Rastrigin function]]

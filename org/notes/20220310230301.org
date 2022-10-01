@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       7a30d542-da62-4b82-a1de-61b1cbfb7df2
+:mtime:    20220406214921
+:ctime:    20220310230301
+:END:
+#+title: Statistical learning theory
+#+filetags: :stub:
+
+When in a set of functions \( \{ f(x) \} \) can we minimize the functional
+
+\[
+R(f) = \int L(y, f(x)) \, dP(x, y), \quad f(x) \in \{f(x)\}
+\]
+
+?
+
+Answer: If and only if the [[id:36c71e10-9b42-4cb7-8298-73386bd49c3e][Vapnik-Chervonenkis dimension]] h of the set \( \{ f(x) \} \) is finite.

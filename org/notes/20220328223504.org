@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       92eeee9d-841e-4eb6-942b-02042b3918e2
+:mtime:    20220328223505
+:ctime:    20220328223504
+:END:
+#+title: Lumpable Markov chain
+#+filetags: :stub:
+
+

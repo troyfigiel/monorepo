@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       64b4e447-e7d9-48f0-b02a-40c0fdd580a7
+:mtime:    20220302235321
+:ctime:    20220302235314
+:END:
+#+title: Kaplan-Meier estimator
+#+filetags: :stub:
+
+

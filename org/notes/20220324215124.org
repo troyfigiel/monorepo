@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7af0b060-33cf-4f2a-8275-8b76deb6898f
+:mtime:    20220324215125
+:ctime:    20220324215124
+:END:
+#+title: Aerodynamics
+#+filetags: :stub:
+
+

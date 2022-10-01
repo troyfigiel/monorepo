@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       7af08f43-cef3-4387-b23d-7a4cdc18844f
+:mtime:    20220322094931
+:ctime:    20220319234922
+:END:
+#+title: Transcendentally small terms
+#+filetags: :stub:
+
+These are terms that are much smaller than any non-negative power of \( \epsilon \) as \( \epsilon
+\rightarrow 0 \) or of \( \frac{1}{x} \) as \( x \rightarrow \infty \).
+
+TST are important, because they cause a serious kind of non-uniqueness and other troubles.
+
+
+The standard example is \( e^{-x} \) which has the same asymptotic expansion as \( 0 \) in terms of
+powers of \( \frac{1}{x} \). In fact, any constant times this function has the same asymptotic
+expansion, which can lead to big numerical differences at any finite \( x \) even though they have the same asymptotic expansion.
+
+[[id:14b1094d-24e6-4809-89e4-5528b0efcdd8][Hyperasymptotics]] deals with this = Asymptotics beyond all orders.
+
+Trouble occurs because \( e^{-z} \) is not analytic at \( z = \infty \) in the complex plane. It
+has an [[id:23aafca6-9304-4729-9df9-7423e4155ec8][Essential singularity]].

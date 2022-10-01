@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4bfffd3f-2919-486e-8205-331886c77d79
+:ROAM_ALIASES: Specificity
+:mtime:    20220313165423
+:ctime:    20220313165414
+:END:
+#+title: True negative rate
+#+filetags: :stub:
+
+

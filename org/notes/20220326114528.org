@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4dac2032-e4b9-44d8-82af-1bff355664dc
+:mtime:    20220327010448
+:ctime:    20220326114528
+:END:
+#+title: Boltzmann constant
+#+filetags: :stub:
+
+\[
+k_B = 1.380649 \times 10^{-23} \, \mathrm{J} \cdot \mathrm{K}^{-1}
+\]
+
+It can be interpreted as a conversion factor from temperature to energy. It is customary to set \(
+k_B = 1 \). This is a conversion from "human scale" (temperature) to a more fundamental scale
+(energy). The scale of temperature was defined before it was understood it had anything to do with
+the energy of constituents. Indeed, average energy of molecule is \( E = \frac{3}{2} k_B T \).

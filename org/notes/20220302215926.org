@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c6f9c509-4ac8-4538-8f9c-2713dd2c342b
+:mtime:    20220302215927
+:ctime:    20220302215926
+:END:
+#+title: Interval censoring
+#+filetags: :stub:
+
+

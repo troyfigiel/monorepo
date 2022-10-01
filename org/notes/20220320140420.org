@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       251b3217-2e5a-4c46-a0ef-872ea0502991
+:mtime:    20220320140424
+:ctime:    20220320140420
+:END:
+#+title: Stirling number
+#+filetags: :stub:
+
+

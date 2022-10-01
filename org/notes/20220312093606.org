@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       24b2cea9-9ae5-4c6d-99ce-d179cf49af2d
+:mtime:    20220312093607
+:ctime:    20220312093606
+:END:
+#+title: Patch theory
+#+filetags: :stub:
+
+

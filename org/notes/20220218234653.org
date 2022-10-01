@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       49fc6f24-ff1c-4035-8cb5-148a35d51524
+:mtime:    20220225223628
+:ctime:    20220218234653
+:END:
+#+title: Bloch sphere
+#+filetags: :stub:
+
+* TODO
+Work out relation to [[id:2113a6f8-315e-49f7-a25d-a58742a0acd2][Fubini-Study metric]]

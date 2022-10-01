@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4b4f5a43-e71b-407e-a031-7eb9b4eca111
+:mtime:    20220302205949
+:ctime:    20220302205734
+:END:
+#+title: R^2 is always non-negative for OLS with an intercept
+#+filetags: :stub:
+
+Although this is true if we have an intercept, [[id:8ccf8fd2-ff06-4e91-8660-e611b8b5bba9][R^2 can be negative for OLS without an intercept]].

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       aa5722ea-e9f2-4cd0-8fed-c740d7cf4d2e
+:mtime:    20220225223634
+:ctime:    20220223093906
+:END:
+#+title: tobit model
+#+filetags: :stub:
+
+

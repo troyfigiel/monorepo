@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       796ad554-980f-4bd5-99fe-c9b8bdae3ce8
+:mtime:    20220405095539
+:ctime:    20220303233535
+:END:
+#+title: Cumulant generating function
+#+filetags: :math:stub:
+
+

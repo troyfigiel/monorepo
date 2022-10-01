@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       bfedeec1-074d-4fdf-8c6e-94bee81d63bc
+:mtime:    20220412203920
+:ctime:    20220412202029
+:END:
+#+title: ?Dido's problem
+#+filetags: :appendix:stub:
+
+We want to find the curve that bounds the maximum area with the x-axis for a fixed perimeter.
+
+Hence, we want to maximize
+
+\[
+A[y] = \int\limits_{-a}^a y \, dx
+\]
+
+with the constraint
+
+\[
+C[y] = \int\limits_{-a}^a \sqrt{1 + (y^{\prime})^2} \, dx = L
+\]
+
+Using [[id:f3e6cddf-4d91-416b-a4e7-a12d24a05ff8][Lagrange multipliers]], we can write
+
+\[
+H(y, y^{\prime}) = y + \lambda \sqrt{1 + (y^{\prime})^2}
+\]
+
+and apply the [[id:1717f7bb-50e2-44b5-88ee-9411601f1cf2][Euler-Lagrange equation]] to find
+
+\[
+\frac{\partial H}{\partial y} - \frac{d}{dx} \frac{\partial H}{\partial y^{\prime}} = 1 -
+\frac{d}{dx} \frac{\lambda y^{\prime}}{\sqrt{1 + (y^{\prime})^2}} = 0
+\]
+
+This is solved by
+
+\[
+(x - C_1)^2 = \frac{\lambda^2 (y^{\prime})^2}{1 + (y^{\prime})^2}
+\]
+
+# TODO: Fill in the missing step
+
+So
+
+\begin{equation*}
+\begin{align}
+x &= C_1 + \lambda \sin \theta \\
+y &= C_2 - \lambda \cos \theta
+\end{align}
+\end{equation*}
+
+which means that the solution is a part of a circle.

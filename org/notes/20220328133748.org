@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       197ecbe8-e5ed-43c6-adfa-4a1f3238eaf3
+:mtime:    20220328134134
+:ctime:    20220328133748
+:END:
+#+title: Conjugate distribution
+#+filetags: :stub:
+
+

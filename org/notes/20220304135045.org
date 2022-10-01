@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ecd0ba99-d9cc-46cf-b5e7-e6e6f05a5519
+:mtime:    20220304135445
+:ctime:    20220304135045
+:END:
+#+title: Truncated distribution
+#+filetags: :stub:
+
+A truncated probability distribution is a distribution that is obtained by truncating its domain.
+
+Truncated distributions appear when we can only observe part of the domain of the distribution. For
+example, if we look at a school to determine the distribution of ages across the population, we
+will only observe the ages that are admitted at the school.

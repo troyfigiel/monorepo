@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       fc6069cc-e83a-4b86-a72c-f906f7132427
+:mtime:    20220415111625
+:ctime:    20220415111624
+:END:
+#+title: General relativity
+#+filetags: :stub:
+

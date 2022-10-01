@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       cd6c15d8-cbd0-4b85-b0c5-4c2d60eac36a
+:mtime:    20220420215046
+:ctime:    20220420215045
+:END:
+#+title: Goldstein-Price function
+#+filetags: :stub:
+

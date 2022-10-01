@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a35d6ca7-f60c-4a3e-8bd0-8b61e271c1de
+:mtime:    20220310231300
+:ctime:    20220223082948
+:END:
+#+title: Higher model complexity decreases bias, but increases variance
+#+filetags: :stub:
+
+
+

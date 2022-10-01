@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a75690fd-82e0-4560-ba1d-097a1d00d6ec
+:mtime:    20220402191522
+:ctime:    20220402191522
+:END:
+#+title: Equation of state
+#+filetags: :stub:
+
+

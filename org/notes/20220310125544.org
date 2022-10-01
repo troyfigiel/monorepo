@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       14f74e91-c07f-49ca-82a8-a52ee427583d
+:mtime:    20220310193554
+:ctime:    20220310125544
+:END:
+#+title: Supervised learning
+#+filetags: :stub:
+
+Examples include:
+- [[id:97d4f725-30c0-4dad-8eab-4044ddbe702f][Decision tree]]
+
+  Supervised learning is much easier to determine the quality of a prediction. This is in contrast
+  to [[id:962ca45b-3e27-464e-9ebf-2f531f1e6c76][Unsupervised learning]].

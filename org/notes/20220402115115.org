@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       623d4a27-b14a-487d-98e7-4245de36e4c6
+:mtime:    20220402115116
+:ctime:    20220402115115
+:END:
+#+title: Probability measure
+#+filetags: :stub:
+
+

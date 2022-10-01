@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       3c86cca7-d6eb-49e9-9a4a-e71a52e65951
+:mtime:    20220225223628
+:ctime:    20220219002806
+:END:
+#+title: logistic differential equation
+
+The logistic differential equation is a simple first-order non-linear ODE of the form
+
+\[
+\frac{\mathrm{d}f(x)}{\mathrm{d}x} = f(x) \left( 1 - f(x) \right)
+\]
+
+with the boundary condition \( f(0) = 1/2 \). Its solution is known as the [[id:f4c1dbf3-0f05-4a68-ba2e-b9f6602789d5][logistic function]].
+
+A typical application of the logistic equation is to model population growth.
+
+* TODO
+This is related to the [[id:f590986d-8b66-4737-87d4-64f035b0f05b][Lotka-Volterra equations]], for one species somehow? Not sure how.

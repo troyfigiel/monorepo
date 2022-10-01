@@ -1,0 +1,147 @@
+:PROPERTIES:
+:ID:       3a022c2c-ccad-4f94-9f06-a985ff3a4c76
+:mtime:    20220404193520
+:ctime:    20220328204017
+:ROAM_ALIASES: "Ehrenfest chain"
+:END:
+#+title: Ehrenfest model
+#+filetags: :unclean:
+
+* Definition
+# TODO: There are many different Ehrenfest models. Can we make a classification? Continuous,
+# discrete, aperiodic by allowing a particle to stay in the same urn, multiple urn models.
+The Ehrenfest model is a [[id:00fa9c4b-ce93-43a3-b0d8-a99f2aad4625][Markov chain]] model that considers two containers exchanging particles. At
+each time step we decide to either do nothing with probability \( \epsilon \) or to pick a particle at random and move it from one container to the other.
+
+If we have a total of \( N \) particles, we may denote by state \( i \) the case where \( i \)
+particles are situated in the first container. In that case the [[id:f87cfbed-01da-4bcc-b89f-6a7510e0f213][Transition probability matrix]] takes
+the form
+
+\begin{equation*}
+\begin{align}
+P_{i, i-1} &= \frac{i}{N}(1-\epsilon) \quad &&\text{ for } i = 1, 2, ..., N \\
+P_{i, i+1} &= \frac{N-i}{N}(1-\epsilon) \quad &&\text{ for } i = 0, 1, ..., N-1 \\
+P_{i, i} &= \epsilon \quad &&\text{ for } i = 0, 1, ..., N
+\end{align}
+\end{equation*}
+
+* Steady state
+It turns out that there exists a solution \( \pi \) to the [[id:c3723918-d1d7-4be2-9179-87500c4eb836][Detailed balance]] equation
+
+\begin{equation*}
+\begin{align}
+\pi_i P_{i, i+1} &= \pi_{i+1} P_{i+1, i} \\
+\pi_{i+1} &= \frac{N-i}{i+1} \pi_i
+\end{align}
+\end{equation*}
+
+These equations are solved by
+
+\[
+\pi_i = \binom{N}{i} \pi_0
+\]
+
+as immediately follows from [[id:4f4d03fb-f463-4a9d-822b-8f8feae223d2][Induction]] on \( i \). Since the total sum of the probability must equal
+to 1 and the fact that [[id:c0c8de45-1f04-4cd0-bf17-4ed141c6a850][?The sum of binomial coefficients is a power of two]], we find
+
+\[
+\pi_i = 2^{-N} \binom{N}{i}
+\]
+
+Clearly, the Ehrenfest model describes a [[id:f255deb6-9194-457a-8657-5d5c06f51048][Recurrent Markov chain]] because there is a non-zero
+probability to be back at the initial state after two steps. On top of that, this model is an
+example of an [[id:065bc86e-25c6-41ba-84a6-0c634a3df240][Irreducible Markov chain]], since it is always possible to reach every single state
+from every other state. Finally, the Markov chain is also clearly an example of a [[id:e00e1ae4-d048-468f-9b2f-e88b6c9caa31][Periodic Markov
+chain]] if \( \epsilon = 0 \).
+
+* Recurrence time
+The mean recurrence time \( \tau_i \) is known to satisfy \( \tau_i \pi_i = 1 \) so that
+
+\[
+\tau_i = \frac{2^N}{\binom{N}{i}}
+\]
+
+This means that for \( i = 0 \) the mean recurrence time grows as \( 2^N \). If \( N = 2n \), we
+may express the mean recurrence time \( \tau_n \) in terms of the [[id:2e7f416b-f843-44a1-9234-fe028d2c8b14][Central binomial coefficients]]. By
+[[id:1f2a060d-f682-4cb3-8e84-43b0595f84a3][Stirling's approximation]] we can establish
+
+\[
+\binom{2n}{n} \sim \frac{4^n}{\sqrt{\pi n}}
+\]
+
+so that
+
+\[
+\tau_n \sim \sqrt{\pi n}
+\]
+
+If we look at a number of particles of the order of the [[id:82cd4b82-3d85-489b-a696-e0171d65fe74][Avogadro number]], \( n = 10^{24} \) and consider the [[id:eb264088-f6a7-44a5-8a67-a82ef13fbb73][Collision
+time]] of helium, which is approximately \( 10^{-13} \, s \), as our time step, we see that the mean
+recurrence time \( \tau_n \sim 10^{-1} \, s \), whereas \( \tau_0 \sim 4^{10^{24}} \) which is an
+astronomically large number.
+
+This shows that a mathematical certainty is not necessarily a practical possibility. However, this
+does underline the difference between the [[id:1f2fe34d-c304-4047-9d59-e5382f85c66f][Boltzmann entropy]] and the [[id:69df7ba6-d13b-439b-a246-a691a97129e1][Gibbs entropy]].
+
+http://home.mathematik.uni-freiburg.de/nelvis/bachelorthesis.pdf
+
+* Lumpable Random walk
+# TODO: We should make a separate note of this random walk. This is where a lot of interesting math
+# comes in, such as harmonic analysis and we can recover quite a few extra results.
+Consider the [[id:3e6ed4fc-8d04-4e28-880a-09511262e563][Random walk]] on the hypercube \( \{0, 1\}^N \). Every time step one of the \( N \)
+coordinates is chosen at random and switched from 0 to 1 or vice versa. This is a [[id:92eeee9d-841e-4eb6-942b-02042b3918e2][Lumpable Markov
+chain]] with respect to the [[id:af7c82a6-dda2-486b-8cb2-3c8e9731e0f8][Hamming weight]], which precisely gives rise to the Ehrenfest model.
+
+This is like a 1D Ising model at infinite temperature at infinite temperature, where we evolve the
+system one step at a time and measure the overall magnetization. The magnetization is the number of
+particles in a single box.
+
+http://www.pages.drexel.edu/~zc86/MC_Classic%20Markov%20Chains.pdf
+
+* Entropy
+# TODO: Finish the entropy calculation
+To calculate the entropy, we need to calculate the probability that the system is in state \( i \)
+at a time step \( t \) after starting in state 0.
+
+https://www-liphy.univ-grenoble-alpes.fr/pagesperso/bahram/Phys_Stat/Biblio/klein_ehrenfestmodel_1956.pdf
+
+* Time until equilibrium
+# TODO: This is just calculating averages for Markov chains?
+If we denote by \( X(t) \) the random variable denoting the number of particles in the first
+container at time step \( t \) and \( \Delta(t) = \mathbb{E}[X(t)] - \frac{N}{2} \), we can calculate (setting \(
+\epsilon = 0 \)):
+
+\begin{equation*}
+\begin{align}
+\Delta(t+1)
+&= \Delta(t) + \frac{N/2 - \Delta(t)}{N} - \frac{N/2 + \Delta(t)}{N} \\
+&= \left( 1 - \frac{2}{N} \right) \Delta(t)
+\end{align}
+\end{equation*}
+
+
+# TODO: Make a note on solving linear recursion relations like this
+We can find an exact expression of the form
+
+\[
+\Delta(t) = \left( 1 - \frac{2}{N} \right)^t \Delta(0)
+\]
+
+For \( N \gg 1 \) we see that the time scale of diffusion is set by \( N/2 \) since
+
+\[
+\Delta(t) \sim e^{-2t/N} \Delta(0)
+\]
+
+# TODO: Do the same calculation for the continuous case
+This dependence of the time scale on \( N \) is a result of the fact that we move one particle per
+time step at most. If we consider a [[id:20e6a772-314a-49bf-9714-3a7af9c65cf5][Continuous Markov chain]], we will not find this result.
+
+* [[id:96962a21-b199-4a3a-bf45-ae4d7ac69143][Ideal gas law]] and [[id:ea43df53-5465-45a7-ae88-6c6a7b7a151c][Diffusion]]
+# TODO: Work out the multiple urn Ehrenfest model
+This requires the Ehrenfest model with multiple urns.
+
+See https://journals.flvc.org/cee/article/download/122226/121171
+
+* Renormalization
+# TODO: Can we apply renormalization to the continuous Ehrenfest model?

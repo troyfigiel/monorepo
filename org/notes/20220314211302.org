@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       bfdfffb0-74ad-4eba-a83d-9c3403ea348f
+:mtime:    20220405094458
+:ctime:    20220314211302
+:END:
+#+title: Group theory
+#+filetags: :stub:
+
+- [[id:df1ee66e-d2b0-474f-8674-de584da6a6c1][Group]]
+- [[id:29d60a1f-d851-4820-8563-77fc4d972df3][Lie group]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6e12566d-9909-4870-9837-a983dc605852
+:mtime:    20220323084255
+:ctime:    20220323084254
+:END:
+#+title: Semi-classical limit
+#+filetags: :stub:
+
+

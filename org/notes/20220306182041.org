@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       59aa0cdd-18c6-45d3-b31a-d1b48222fb74
+:mtime:    20220306182255
+:ctime:    20220306182041
+:END:
+#+title: Machine learning broadly speaking covers only two types of problems
+#+filetags: :stub:
+
+These types of problems are related to
+- [[id:e060cd15-fe67-43a7-92c2-03887014fb58][Tabular data]]
+- [[id:2b5fbf4b-6f4a-42d6-89d3-63d3c2a0fb7c][Raw data]]
+

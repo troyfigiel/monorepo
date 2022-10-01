@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       d35c0a44-aca1-4ff6-add3-c8a92d69539a
+:mtime:    20220406204740
+:ctime:    20220406204709
+:END:
+#+title: Envelope method
+#+filetags: :stub:
+
+# TODO: Is this history correct?
+[[id:e624dec4-80fe-41c8-bc7b-225f0199c387][Renormalization]] subsumes many methods in perturbation theory. In dynamical systems it also goes by
+the name of the envelope method which was independently discovered.
+
+It uses the [[id:d6228b0d-d9ea-40b3-98b4-75bf619a9667][Envelope equation]] to construct a solution out of an envelope of perturbative solutions.
+
+It was shown by Kunihiro that these methods actually coincide and that the [[id:b4891449-950f-4096-94df-068523f0f90a][Renormalization group
+equations]] follow from the envelope equation.

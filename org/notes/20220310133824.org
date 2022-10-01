@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d8ec5d35-3fbc-4b3c-9461-dc705b607660
+:ROAM_ALIASES: SVM
+:mtime:    20220310200909
+:ctime:    20220310133824
+:END:
+#+title: Support vector machine
+#+filetags: :stub:
+
+It has a Lagrangian formulation (see: [[id:49db1960-ea45-47d4-b6b0-114acc4d61f8][Lagrangian]]).

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       08af474d-5ab2-47aa-837c-4c7c58033b23
+:mtime:    20220313110210
+:ctime:    20220313105249
+:END:
+#+title: REPL
+#+filetags: :stub:
+
+[[id:fc76e1b3-cd29-4ec1-9239-f14b069affb3][Notebooks versus REPLs]]

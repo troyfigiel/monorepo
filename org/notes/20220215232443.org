@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b8e61a93-91c9-48e9-a4dc-dd9b13623706
+:mtime:    20220303175921
+:ctime:    20220215232443
+:END:
+#+title: Type II error
+

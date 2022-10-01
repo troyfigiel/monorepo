@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5742c01a-b095-4361-9527-1ebd4e55a2ed
+:mtime:    20220408230755
+:ctime:    20220314211246
+:END:
+#+title: Statistics
+#+filetags: :stub:
+
+[[id:56e64f18-24cd-49fc-8b32-1f60c2f50456][Probability theory]] and statistics are closely related, but there is a [[id:74a7749f-1fcd-445c-92bf-06a85e4fa1d2][Distinction between
+probability theory and statistics]].
+
+For extreme values in samples:
+- [[id:fd1606cd-12b3-4bbb-adf8-0c65b6092f3c][Extreme value theory]]
+
+- [[id:d12b2509-2fe3-47cf-9129-40a6cc5b2d5b][All models are wrong]]

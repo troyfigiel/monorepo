@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7d44f76c-6425-45d8-a0ec-f3427dc29fdc
+:mtime:    20220408203055
+:ctime:    20220408203054
+:END:
+#+title: Tangent space
+#+filetags: :stub:
+
+

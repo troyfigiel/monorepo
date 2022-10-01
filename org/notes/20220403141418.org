@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e4d38689-8165-406e-83fc-e2bd17b406ad
+:mtime:    20220403141418
+:ctime:    20220403141418
+:END:
+#+title: Transfer-matrix method
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a85044d6-e655-436a-b7b7-d83a9be264f0
+:mtime:    20220320140934
+:ctime:    20220320140934
+:END:
+#+title: Stirling number of the first kind
+#+filetags: :stub:
+
+

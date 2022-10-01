@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ba770822-a3c3-48c1-9a64-e89a92ca3cbc
+:mtime:    20220324153740
+:ctime:    20220315133946
+:END:
+#+title: Python virtual environment
+#+filetags: :stub:

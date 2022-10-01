@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       ad3e4599-2e42-4f62-a937-85f26386d57f
+:mtime:    20220318001354
+:ctime:    20220310194320
+:END:
+#+title: Classification
+#+filetags: :stub:
+
+See [[id:2b918933-b437-4bde-a384-bdfe2d108959][Decision boundary]], [[id:1e406603-bebf-48c7-a4e8-38fc9883cfa0][Margin]].
+
+Useful way to evaluation a classifier is through [[id:1c003e23-00c2-4969-a23f-8abe316fcc77][ROC curves]].
+
+Three types of classification models:
+- [[id:1c4460ec-e370-448e-a961-1ab6c899fa61][Generative model]]
+- [[id:0de076b2-e9ce-4e2b-b099-136654516ce4][Discriminative model]]
+- Classifiers trained without using a probability model

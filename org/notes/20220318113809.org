@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1721d4e0-650a-4366-a163-27e68e45bdde
+:mtime:    20220318113810
+:ctime:    20220318113809
+:END:
+#+title: Pareto/NBD model
+#+filetags: :stub:
+
+

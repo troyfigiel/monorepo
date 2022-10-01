@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1ffdeedc-3e8f-4d6f-b34f-8c5f66dc886e
+:mtime:    20220307165652
+:ctime:    20220304144308
+:END:
+#+title: ?Variance of the geometric distribution
+#+filetags: :appendix:stub:
+
+

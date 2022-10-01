@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       dca3b8a7-3639-470f-9e2f-8736b4e2eda4
+:mtime:    20220409132308
+:ctime:    20220409132307
+:END:
+#+title: Homogeneous polynomial
+#+filetags: :stub:
+
+

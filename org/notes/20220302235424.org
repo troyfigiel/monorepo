@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e3aca83f-f08d-4d0f-a767-d04105002235
+:mtime:    20220302235425
+:ctime:    20220302235424
+:END:
+#+title: Weibull distribution
+#+filetags: :stub:
+
+

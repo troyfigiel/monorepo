@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       356a4bfd-90f4-4f10-b5f1-e3e2f3beb91e
+:mtime:    20220329234046
+:ctime:    20220329234044
+:END:
+#+title: Plasma
+#+filetags: :stub:
+
+

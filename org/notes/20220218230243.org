@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bff1fecf-8c11-4b63-9bbf-c65dcbf79301
+:mtime:    20220225223635
+:ctime:    20220218230243
+:END:
+#+title: Terraform
+
+Terraform is open-source software used to provision infrastructure as code.

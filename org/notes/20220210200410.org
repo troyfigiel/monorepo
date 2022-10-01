@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e7bf4db5-402c-405e-a03d-be68a143ee91
+:mtime:    20220225223638
+:ctime:    20220210200410
+:END:
+#+title: representation theory
+

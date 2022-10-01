@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       7b34185e-75dd-4f27-bd22-e058357053ac
+:ROAM_ALIASES: "Law of parsimony" "Occam's razor"
+:mtime:    20220310232009
+:ctime:    20220310201832
+:END:
+#+title: Ockham's razor
+#+filetags: :stub:
+
+See: [[id:93c064f3-ae17-4cd7-9fb0-415b477ac69e][Duck test]].
+
+In [[id:7a30d542-da62-4b82-a1de-61b1cbfb7df2][Statistical learning theory]]: The best models are simple models that fit the data well. This
+forces machine learning engineers to define what simplicity means.
+
+This can be achieved, for example, by using [[id:c757d51c-43ad-43b9-93fe-3b165beb810e][Regularization]].

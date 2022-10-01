@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       55b0bfb4-a8bd-4c50-957a-da1609d18c47
+:mtime:    20220316135057
+:ctime:    20220315094740
+:END:
+#+title: Users becoming programmers
+#+filetags: :stub:
+
+Where it happens:
+- [[id:4b525bf1-c380-4af1-ba34-2706222b5d03][Emacs]]
+- [[id:cffe690c-8a58-43fc-8ce6-8ac777a3acb1][GNU Guix]]
+
+It does not mean it is necessarily difficult to get started, but that there is a clear development
+from user to programmer the more you get to know about configuring the program. This especially
+happens when there is no clear distinction between code and data (see: [[id:bcdf9967-fca4-435e-b425-f876b816b575][Duality between code and
+data]]). For example, this can happen with languages in the [[id:c13150c6-8c19-4bc5-ae6e-d1deb78fcc32][Lisp]] family.
+
+This is also reflected in the documentation. Documentation to get started might happen on a general
+level, but at some point to continue improving configurations, users are redirected to
+[[id:8e845680-740d-4f7c-97fd-f4385dda9bf9][Self-documenting code]] and [[id:c853992b-d0b6-4858-a037-54d2e86c1cd0][Software tests]].
+
+This allows for:
+- a very high skill-cap
+- recruiting new software maintainers from advanced users
+
+The latter making this type of development especially helpful in the case of [[id:1e728ae3-609f-4c78-bf6c-ec3c6440e9c4][Open source software]].

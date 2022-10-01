@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       3486294f-3dc9-420d-8c7f-ade2773fcc26
+:mtime:    20220325144143
+:ctime:    20220325142935
+:END:
+#+title: Shattered set
+#+filetags: :stub:
+
+The idea of shattered sets plays an important role in [[id:0cfbc9db-ee37-48d0-b2dc-a36d54a8ccad][Vapnik-Chervonenkis theory]].
+
+If \( A \) is a set and \( C \) is a class of sets, then \( C \) shatters \( A \) if for each
+subset \( a \subset A \) there is a \( c \in C \) such that \( a = c \cap A \).
+
+- [[id:fcdf924a-51e0-40e5-bbf5-800b007f9667][?The discs in the plane do not shatter all sets of four points on a circle]]
+- [[id:cd3eb13c-dd78-4cd9-93d2-a388172973c2][?The convex sets in the plane shatter any set of finite points on a circle]]

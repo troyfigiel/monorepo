@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5f261014-9553-475f-b110-e95fc9c92628
+:mtime:    20220307165645
+:ctime:    20220304144251
+:END:
+#+title: ?Mean of the geometric distribution
+#+filetags: :appendix:stub:
+
+

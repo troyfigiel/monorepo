@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       39253c51-52f6-46bf-bbc1-29650f407acb
+:ROAM_ALIASES: EGT
+:mtime:    20220409001101
+:ctime:    20220409001053
+:END:
+#+title: Evolutionary game theory
+#+filetags: :stub:
+
+

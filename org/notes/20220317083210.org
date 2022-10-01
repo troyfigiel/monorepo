@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       372dfbc2-a455-4507-8092-6cf177f338b8
+:mtime:    20220317083211
+:ctime:    20220317083210
+:END:
+#+title: Type safety
+#+filetags: :stub:
+
+

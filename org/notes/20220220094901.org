@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       82005d43-c01a-4e01-8ef1-98830edc7468
+:mtime:    20220225223631
+:ctime:    20220220094901
+:END:
+#+title: C++
+#+filetags: :stub:
+

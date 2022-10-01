@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       2863a482-4a08-4b7e-b5ce-4ba4fedfcd78
+:mtime:    20220227171807
+:ctime:    20220210125006
+:END:
+#+title: Cumulative distribution
+#+filetags: :stub:
+

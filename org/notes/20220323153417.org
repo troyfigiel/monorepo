@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e73b8088-2865-49fd-97fc-efb768bf2fbf
+:mtime:    20220323153441
+:ctime:    20220323153417
+:END:
+#+title: Newton's generalized binomial theorem
+#+filetags: :stub:
+
+This is a generalization of the [[id:97f3ca80-62e8-4387-82c6-39bb019c513f][Binomial theorem]] allowing real exponents instead of only
+nonnegative integers.

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1c0ae085-f15d-4274-8977-81959107a515
+:mtime:    20220309181540
+:ctime:    20220220094753
+:END:
+#+title: SQL
+#+filetags: :stub:
+
+[[id:84e32aae-2bf5-4dea-849d-e4310c18efdc][The SQL join is a categorical pullback]]

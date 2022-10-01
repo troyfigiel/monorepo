@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5ea03543-93e7-4195-b57d-e772e7218278
+:ROAM_ALIASES: AST
+:mtime:    20220314130435
+:ctime:    20220314130431
+:END:
+#+title: Abstract syntax tree
+#+filetags: :stub:
+
+

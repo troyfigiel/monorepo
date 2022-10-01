@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       997b80e8-345d-46b4-b2dc-7e0856c11cdd
+:mtime:    20220324095800
+:ctime:    20220306174334
+:END:
+#+title: ?Proof of Vandermonde's identity using generating functions
+#+filetags: :appendix:stub:
+
+* Definition
+Vandermonde's identity is the equality
+
+\[
+\binom{m+n}{r} = \sum\limits_{k=0}^r \binom{m}{k} \binom{n}{r-k}
+\]
+
+for non-negative integers \( r, m, n \).
+
+* Generating functions
+We may rewrite the identity in terms of generating functions as the equality
+
+\[
+\sum\limits_{r=0}^{m+n} \binom{m+n}{r} x^r = \sum\limits_{r=0}^{m+n} \sum\limits_{k=0}^{r}
+\binom{m}{k} \binom{n}{r-k} x^r
+\]
+
+But now we notice that the right-hand side is nothing but a [[id:ddb31305-d703-45c7-8e5e-df361c9df07b][Convolution of generating functions]],
+which we may rewrite as
+
+\[
+\sum\limits_{r=0}^{m+n} \sum\limits_{k=0}^r \binom{m}{k} \binom{n}{r-k} x^r = \left( \sum\limits_{i=0}^m
+\binom{m}{i} x^i \right) \left( \sum\limits_{j=0}^n \binom{n}{j} x^j \right)
+\]
+
+Since the generating function of the binomial coefficients is \( (1+x)^p \), Vandermonde's identity
+follows from
+
+\[
+(1 + x)^{m+n} = (1+x)^m (1+x)^n
+\]

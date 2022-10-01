@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ade49c3c-9edd-4611-83b1-8759dcc9bf4a
+:mtime:    20220225223634
+:ctime:    20220210124459
+:END:
+#+title: Conditional probability
+

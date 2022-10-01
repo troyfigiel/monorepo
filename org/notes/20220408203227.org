@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2faceb77-f478-4f5b-9a88-f109b32b9763
+:mtime:    20220408220204
+:ctime:    20220408203227
+:END:
+#+title: Inner product
+#+filetags: :stub:
+
+[[id:b258c443-ae40-4ab4-a79e-771d404c5234][Triangle inequality]]

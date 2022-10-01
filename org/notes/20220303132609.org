@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9dcf3a17-31fd-44f5-b886-34424a1df9fd
+:mtime:    20220303132610
+:ctime:    20220303132609
+:END:
+#+title: Train-test split
+#+filetags: :stub:
+
+

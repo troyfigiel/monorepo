@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       682e6037-e344-4406-a1b4-971e37078f42
+:mtime:    20220415000537
+:ctime:    20220415000537
+:END:
+#+title: Dynamic programming
+#+filetags: :stub:
+

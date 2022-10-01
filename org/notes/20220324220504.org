@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       29d60a1f-d851-4820-8563-77fc4d972df3
+:mtime:    20220405094456
+:ctime:    20220324220504
+:END:
+#+title: Lie group
+#+filetags: :stub:
+
+An object that is both a [[id:df1ee66e-d2b0-474f-8674-de584da6a6c1][Group]] and a [[id:61fa204e-4b7e-4adf-b7f0-0e9b94f7f8a9][Manifold]].

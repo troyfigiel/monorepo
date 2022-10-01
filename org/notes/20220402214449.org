@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5110b606-a3c3-42bb-b7c5-b86353d413e0
+:mtime:    20220402214450
+:ctime:    20220402214449
+:END:
+#+title: Gibbs free energy
+#+filetags: :stub:
+
+

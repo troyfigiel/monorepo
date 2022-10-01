@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3e495520-25c1-48a8-b573-b55cbaeac0d0
+:mtime:    20220411180714
+:ctime:    20220411180708
+:END:
+#+title: Spurious correlation
+#+filetags: :stub:
+
+- [[id:e525033b-dfb4-4fdb-98be-25d28636ddf8][Confounding variable]]

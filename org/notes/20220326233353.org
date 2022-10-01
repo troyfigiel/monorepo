@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7377c626-f7cc-484b-b7e3-91a98c4298da
+:mtime:    20220326233353
+:ctime:    20220326233353
+:END:
+#+title: Indistinguishable particles
+#+filetags: :stub:
+
+

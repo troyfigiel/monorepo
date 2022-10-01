@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7b6fb399-b93c-491d-bea7-693701f270ac
+:mtime:    20220225223631
+:ctime:    20220211095924
+:END:
+#+title: triangle inequality follows from Cauchy-Schwary inequality

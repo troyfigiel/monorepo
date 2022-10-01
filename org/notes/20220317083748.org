@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f66c0a8e-31b8-43b0-821a-ad1db9283cf8
+:mtime:    20220317084116
+:ctime:    20220317083748
+:END:
+#+title: Typing catches a large class of errors early in development
+#+filetags: :stub:
+
+[[id:372dfbc2-a455-4507-8092-6cf177f338b8][Type safety]]
+
+This makes it less bug-prone and makes [[id:2d3118ad-5642-4a40-9354-c68f6b28bd94][Refactoring]] easier.

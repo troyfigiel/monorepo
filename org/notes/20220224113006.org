@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5e9e1534-c952-406a-be07-2091e5d02d2c
+:mtime:    20220324220343
+:ctime:    20220224113006
+:END:
+#+title: Method chaining
+#+filetags: :stub:
+
+

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4c1ac363-7a17-42c8-9da8-86244410956b
+:mtime:    20220225223629
+:ctime:    20220224205929
+:END:
+#+title: SQL code is not geared towards the development process
+#+filetags: :stub:
+
+[[id:1c0ae085-f15d-4274-8977-81959107a515][SQL]] is a set-based, declarative language. This allows for better speed and optimization, because
+[[id:02fa64db-84dc-45f6-be75-359e18f96baa][The query execution plan is decided by the database management system]].
+
+However, the set-based nature of the code also makes it impossible to quickly comment out a line of
+code to determine what is happening.
+
+This makes it important to the effectiveness of the debugging process to [[id:7f79d062-1c6a-40fb-96cc-4c2f8ce1515a][Use CTEs abundantly]].
+

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       2cce02b0-6f86-4b58-adeb-12758bcd6e2d
+:mtime:    20220317214453
+:ctime:    20220317214156
+:END:
+#+title: Grammar of interactions
+#+filetags: :stub:
+
+Specific to [[id:75b2b303-ecb8-4456-b4dc-5d84faa0614f][Altair]] and based on the idea of a [[id:74875146-ef52-4fe1-bcbc-859f039639c7][Grammar of graphics]].
+
+Not only static, but also dynamic graphics can be very easily created with a similar approach as
+the [[id:74875146-ef52-4fe1-bcbc-859f039639c7][Grammar of graphics]] except applied to interactive elements.
+
+https://github.com/altair-viz/altair/blob/master/paper/paper.md

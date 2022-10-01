@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e8c8ff3c-6352-4e2b-8466-730e92b86f6f
+:mtime:    20220307165817
+:ctime:    20220304142707
+:END:
+#+title: ?Mean of the Poisson distribution
+#+filetags: :appendix:stub:
+
+

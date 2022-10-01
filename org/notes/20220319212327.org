@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a0254703-c1ff-4de2-a8f7-abbed6609892
+:mtime:    20220319212329
+:ctime:    20220319212327
+:END:
+#+title: Upper incomplete gamma function
+#+filetags: :stub:
+
+

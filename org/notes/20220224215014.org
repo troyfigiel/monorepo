@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       fde4038b-3526-45e4-88ae-d12cf00c525f
+:mtime:    20220225223639
+:ctime:    20220224215014
+:END:
+#+title: Exponential generating function
+#+filetags: :stub:
+
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       85ef5c3e-6c5c-4c06-b24a-db471e3d385d
+:mtime:    20220225223632
+:ctime:    20220220094716
+:END:
+#+title: Haskell
+#+filetags: :stub:
+

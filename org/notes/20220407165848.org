@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a5ab431d-eb12-4e48-9a98-73cae6d80bcc
+:ROAM_ALIASES: GIGO
+:mtime:    20220407165854
+:ctime:    20220407165848
+:END:
+#+title: Garbage in, garbage out
+#+filetags: :stub:
+
+This can be alleviated by using [[id:ad0d9b9b-2373-41c1-a299-3500af4909d9][Data validation]].

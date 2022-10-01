@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4f43c795-9796-40dd-87cc-f3e82f337b2e
+:mtime:    20220313181958
+:ctime:    20220313181956
+:END:
+#+title: Chi-squared statistic
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       28dd2199-59d1-4bdd-9f77-812d1e1df1d1
+:mtime:    20220324220552
+:ctime:    20220324220547
+:END:
+#+title: Differential geometry
+#+filetags: :stub:
+
+[[id:61fa204e-4b7e-4adf-b7f0-0e9b94f7f8a9][Manifold]]

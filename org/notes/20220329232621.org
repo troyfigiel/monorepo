@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d7471bd4-8945-4b0a-a81e-f13912d4c563
+:mtime:    20220329232622
+:ctime:    20220329232621
+:END:
+#+title: Composition series
+#+filetags: :stub:
+
+

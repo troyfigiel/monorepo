@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b39bd64e-1128-460c-b02f-6ff98e0886ba
+:mtime:    20220225223634
+:ctime:    20220210143009
+:END:
+#+title: Sum distribution
+

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       dcc426c8-e458-4555-85f7-5f984ea99a98
+:mtime:    20220310195147
+:ctime:    20220223095622
+:END:
+#+title: Score
+#+filetags: :stub:
+
+Score is useful due to the [[id:6dec1cf8-10b6-4ddc-9314-a9877f03ba47][Scoring algorithm]], allowing us to solve maximum likelihood equations
+numerically (see: [[id:7186f362-2b90-4438-bf99-dcce57121834][Maximum likelihood estimate]]).

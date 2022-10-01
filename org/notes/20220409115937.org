@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a77d96b0-2010-45b9-abba-1adc27f037ee
+:mtime:    20220409115951
+:ctime:    20220409115937
+:END:
+#+title: Helmholtz free entropy
+#+filetags: :stub:
+
+Closely related to the [[id:b0f1e8ae-b370-4266-bc9e-8cffcffda856][Helmholtz free energy]] by a factor of \( \beta \).

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       df1a13a1-8679-43f2-8a89-7d231e84c0d1
+:mtime:    20220327163017
+:ctime:    20220327160204
+:END:
+#+title: Convergence of random variables
+#+filetags: :stub:

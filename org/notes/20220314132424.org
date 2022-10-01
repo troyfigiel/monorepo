@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       adb76ca1-2503-491a-b0f4-be4f91536659
+:mtime:    20220314132425
+:ctime:    20220314132424
+:END:
+#+title: Functional programming
+#+filetags: :stub:
+
+

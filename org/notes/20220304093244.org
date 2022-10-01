@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       46a03589-a9d4-4a99-8e05-4b50fd295de1
+:mtime:    20220307165834
+:ctime:    20220304093244
+:END:
+#+title: ?Characteristic function of the binomial distribution
+#+filetags: :appendix:stub:
+
+\begin{equation*}
+\begin{align}
+\varphi_X(t)
+&= \mathbb{E} \left[ e^{itX} \right] \\
+&= \sum\limits_{k=0}^{n} e^{itk} \binom{n}{k}p^k  (1 - p)^{n-k} \\
+&= \left( 1 - p + pe^{it} \right)^n
+\end{align}
+\end{equation*}
+
+The final equality is the result of the [[id:97f3ca80-62e8-4387-82c6-39bb019c513f][Binomial formula]].

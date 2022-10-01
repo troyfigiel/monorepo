@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       79150299-eefb-408f-acd8-96824977e37a
+:mtime:    20220322175548
+:ctime:    20220322175547
+:END:
+#+title: Lossless compression
+#+filetags: :stub:
+
+

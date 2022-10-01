@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2fdcde9b-eb4e-4d1b-9999-f1cc5ddbd0d0
+:mtime:    20220307165658
+:ctime:    20220304144925
+:END:
+#+title: ?Variance of the Bernoulli distribution
+#+filetags: :appendix:stub:
+
+

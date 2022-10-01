@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       644673a6-3ad8-4295-9413-4da986833e39
+:mtime:    20220225223630
+:ctime:    20220215233118
+:END:
+#+title: G-test
+

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ee68a20e-0dc7-4125-b63d-30ae9f29d605
+:mtime:    20220324093710
+:ctime:    20220320140753
+:ROAM_ALIASES: "Stirling number of the third kind"
+:END:
+#+title: Lah number
+#+filetags: :stub:
+
+

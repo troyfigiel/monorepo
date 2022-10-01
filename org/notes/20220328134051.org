@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       acc8eb9b-8e48-4d89-9c1e-daf1704052e4
+:ROAM_ALIASES: "Mixture distribution"
+:mtime:    20220328134126
+:ctime:    20220328134051
+:END:
+#+title: Compound probability distribution
+#+filetags: :stub:
+
+Used in [[id:361223d4-c9ad-4595-b6e8-e071ee0eb987][Mixture models]].

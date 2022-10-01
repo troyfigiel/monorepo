@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f1729d5d-0973-4d5d-9a43-06bc6315dfd9
+:mtime:    20220320153935
+:ctime:    20220320153934
+:END:
+#+title: Euler's reflection formula
+#+filetags: :stub:
+
+

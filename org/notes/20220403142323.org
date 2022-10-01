@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0a27e931-4cbf-4b78-ad92-5ce6f39381b4
+:mtime:    20220403142324
+:ctime:    20220403142323
+:END:
+#+title: Bipartite graph
+#+filetags: :stub:
+
+

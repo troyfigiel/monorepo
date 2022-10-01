@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c757d51c-43ad-43b9-93fe-3b165beb810e
+:mtime:    20220310132128
+:ctime:    20220218233454
+:END:
+#+title: Regularization
+#+filetags: :stub:
+

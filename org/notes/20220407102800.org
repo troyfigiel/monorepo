@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       988825cd-692f-43de-a61c-a747caa93a94
+:mtime:    20220407102802
+:ctime:    20220407102800
+:END:
+#+title: Separation of concerns
+#+filetags: :stub:
+
+

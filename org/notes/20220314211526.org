@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9a56000d-da8c-4cba-82cc-6038fe352323
+:mtime:    20220403004402
+:ctime:    20220314211526
+:END:
+#+title: Quantum mechanics
+#+filetags: :stub:
+
+

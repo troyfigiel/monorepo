@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6957776a-23eb-4e8a-8c56-a227de9e5ffd
+:mtime:    20220422092448
+:ctime:    20220422092447
+:END:
+#+title: YAML
+#+filetags: :stub:
+

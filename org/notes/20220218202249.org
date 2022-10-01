@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       fdb455fe-357b-4e7f-8cc4-ea22ab14cfce
+:mtime:    20220302105042
+:ctime:    20220218202249
+:END:
+#+title: The OLS estimator is the maximum likelihood estimate for normally distributed errors
+

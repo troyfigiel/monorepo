@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       041f26d4-7fc4-4bfd-b7b8-e4cd080ebb81
+:mtime:    20220225223625
+:ctime:    20220215222123
+:END:
+#+title: multiple linear regression
+

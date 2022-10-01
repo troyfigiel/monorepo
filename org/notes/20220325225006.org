@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4ec68f86-9801-4464-9114-5c9a2704cc42
+:mtime:    20220325225020
+:ctime:    20220325225006
+:END:
+#+title: Lévy distribution
+#+filetags: :stub:
+
+

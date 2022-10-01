@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       7dbdf69f-0506-423d-9c8d-015177b2591e
+:mtime:    20220322110705
+:ctime:    20220322110319
+:END:
+#+title: !Techniques for constructing asymptotic series of integrals
+#+filetags: :facts:stub:
+
+* Integration by parts
+See [[id:850ae262-155c-457c-89b5-1b29d2e3187e][Integration by parts]]
+
+* Laplace's method
+See [[id:d753b3f8-8fe2-4b15-b74b-8e758dba455f][Laplace's method]]
+
+* Stationary phase approximation
+See [[id:6695e737-590b-4802-9448-66d370363fc0][Stationary phase approximation]]
+
+* Method of steepest descent
+See [[id:adfc5016-ccaf-4b11-800d-a8392c59ba5c][Method of steepest descent]]

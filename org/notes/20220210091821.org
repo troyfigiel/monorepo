@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       c1da7521-4593-449e-9d2b-a78f0be6855c
+:mtime:    20220327155900
+:ctime:    20220210091821
+:END:
+#+title: Probability distribution
+#+filetags: :stub:
+
+* Important cases of distributions
+- [[id:41885348-0221-4ebd-af0a-4f501ca5fa96][Stable distribution]] for the [[id:22637763-04bb-49a6-b3e4-4e700b43eddd][Central limit theorem]] and [[id:794e2f29-5e05-496f-bbb6-080781da9287][Generalized central limit theorem]].
+- [[id:1f7f6fbd-66cc-4ef9-ac4b-1279879c7198][Exponential family]]
+- [[id:c8791002-0d56-45e6-994f-1fa4c991cd00][Uniform distribution]]
+
+*  Distribution classes
+- [[id:ebbac5a1-47e3-4112-bd8a-a1511f50add0][Discrete probability distribution]]
+- [[id:8599863e-13c6-45db-8239-6d50e4230975][Continuous probability distribution]]
+- [[id:721a32b5-a1a7-4a60-8173-e17c8e2571ec][Circular probability distribution]]
+
+* Calculational tools
+- [[id:77e596e1-ec6b-45fd-a737-e95d28d6b9d9][Law of total cumulance]]
+
+A key result for probability distributions is the [[id:22637763-04bb-49a6-b3e4-4e700b43eddd][Central limit theorem]].
+
+# TODO: Clean up these indices. What is the point of these exactly?
+- [[id:0bd2f7ca-f195-4505-a5d5-ce5be7ad86a6][§Examples of probability distributions]]
+- [[id:dd7ccc2d-2ce3-4a59-926b-cb8cf3819c11][§Properties of probability distributions]]

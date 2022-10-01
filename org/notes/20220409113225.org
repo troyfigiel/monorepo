@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       527546b6-738d-43a0-aa0c-5afdbfa250bc
+:mtime:    20220409113539
+:ctime:    20220409113225
+:END:
+#+title: ?Moment generating function of the Boltzmann distribution
+#+filetags: :stub:

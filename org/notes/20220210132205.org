@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0a8c9c6d-3089-4f1f-86c0-8c05e298172e
+:mtime:    20220314203910
+:ctime:    20220210132205
+:END:
+#+title: Harmonic mean
+#+filetags: :stub:
+

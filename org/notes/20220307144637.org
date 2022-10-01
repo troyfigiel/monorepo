@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       4536cafc-57c4-455c-ad8b-adf0041796b7
+:mtime:    20220307151411
+:ctime:    20220307144637
+:END:
+#+title: Reproducibility
+#+filetags: :stub:
+
+Reproducibility can refer both to experimental reproducibility as well as reproducibility of
+software. The degree of reproducibility can differ here: For an experiment we might be satisfied if
+the results are similar enough, but when it comes to software we often mean a completely
+reproducible program or workflow. See: [[id:b23d8dfc-cb57-4154-aab9-88d1d17bd8c9][Reproducible build]].
+
+# TODO: Link to reproducibility crisis
+[[id:0052577c-a666-4e9a-ab60-3a4f8c992a96][Reproducibility crisis]]
+
+See: [[id:857edabb-94d9-4c19-9a6b-188c9c989a31][§Reproducibility]].

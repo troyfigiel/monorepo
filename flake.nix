@@ -116,9 +116,9 @@
       deploy.nodes = {
         ins = {
           hostname = "ins";
-          profilesOrder = [ "system" "troy" ];
+          profilesOrder = [ "host" "troy" ];
           profiles = {
-            system = {
+            host = {
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                 inputs.self.nixosConfigurations.ins;
@@ -135,7 +135,7 @@
         vtr = {
           hostname = "troyfigiel.com";
           profiles = {
-            system = {
+            host = {
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                 inputs.self.nixosConfigurations.vtr;

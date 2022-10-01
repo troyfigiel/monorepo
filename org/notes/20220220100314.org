@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c58992a2-b4d7-411a-a10c-370595ab5c32
+:mtime:    20220225223635
+:ctime:    20220220100314
+:END:
+#+title: regular expression
+#+filetags: :stub:
+

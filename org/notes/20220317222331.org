@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       74fef4a0-3274-4a6f-949e-0858e5ace968
+:mtime:    20220318001645
+:ctime:    20220317222331
+:END:
+#+title: Hook
+#+filetags: :stub:
+
+A hook is a piece of code that allows the programmer to intercept function calls, events or
+messages to inject their own code or to augment some behaviour.
+
+https://stackoverflow.com/questions/467557/what-is-meant-by-the-term-hook-in-programming

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b908e98e-6c24-40da-8e4e-f2bfe5c4f417
+:mtime:    20220318152920
+:ctime:    20220318152919
+:END:
+#+title: Bootstrapping
+#+filetags: :stub:
+
+

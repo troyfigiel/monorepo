@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a5730b51-eabb-4d52-8a48-e886aa943b46
+:mtime:    20220313161938
+:ctime:    20220313161937
+:END:
+#+title: Spectral embedding
+#+filetags: :stub:
+
+

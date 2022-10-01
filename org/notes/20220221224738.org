@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       9093ee31-62d5-4593-94e8-bec7fde1ceb6
+:mtime:    20220225223633
+:ctime:    20220221224738
+:END:
+#+title: Vim
+#+filetags: :stub:
+
+Vim stands for Vi Improved and is a follow-up of the original Vi text-editor.
+
+Vim uses modal editing with some of the most important modes being:
+- Normal mode
+- Insert mode
+- Visual mode
+- Command-line mode

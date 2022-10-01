@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       70f1fc2e-a475-47e9-99c2-053a6d8ea373
+:mtime:    20220225223630
+:ctime:    20220216090952
+:END:
+#+title: weighted least squares
+

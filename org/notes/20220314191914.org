@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       edccd8a1-e6d0-4c2d-a7b3-0bc2b751b40b
+:mtime:    20220314204137
+:ctime:    20220314191914
+:END:
+#+title: Zipfian distribution
+#+filetags: :stub:
+
+\[
+f_{N, s}(k) = \frac{k^{-s}}{H_{N,s}}
+\]
+
+where \( H_{N,s} \) is the N-th [[id:2f369ec4-8f30-473c-b527-c529954069e6][Generalized harmonic number]].
+
+Since \( \lim_{N \rightarrow \infty} H_{N, s} = \zeta(s) \), the limit of the Zipfian distribution
+is the [[id:2ca0b709-60e1-4e5f-a9fd-7ec25da6e088][Zeta distribution]].
+
+# TODO: Why do we use the Zipfian distribution? Examples?

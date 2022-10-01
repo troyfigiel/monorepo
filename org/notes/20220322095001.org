@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       09c7db4c-f13f-4d3b-be20-fc9d36a403fb
+:mtime:    20220322095109
+:ctime:    20220322095001
+:END:
+#+title: Bessel function
+#+filetags: :stub:
+
+Appears in problems with circular or cylindrical symmetry. Can be related to the [[id:bb3c3484-1727-4564-acb1-475283038b3e][Incomplete gamma function]].
+
+\[
+J_0(x) = \frac{1}{\pi} \int\limits_0^{\pi} \cos \left( x \sin t \right) \, dt
+\]

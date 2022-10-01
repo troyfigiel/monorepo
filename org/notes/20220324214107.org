@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b5ebcb88-3b48-4c71-8048-ba19cb0a52ac
+:mtime:    20220324214107
+:ctime:    20220324214107
+:END:
+#+title: Temperature
+#+filetags: :stub:
+
+

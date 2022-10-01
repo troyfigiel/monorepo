@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       364080a6-eca0-4359-97cc-17b5ea08af52
+:mtime:    20220225223627
+:ctime:    20220211100602
+:END:
+#+title: Fisher transformation
+

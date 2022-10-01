@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       ba06ff9e-6adb-4a1e-92a3-e864257e9c15
+:mtime:    20220307160521
+:ctime:    20220303224629
+:END:
+#+title: Facts about the binomial distribution
+#+filetags: :stub:
+
+* Probability mass function
+
+\[
+f(k) = \binom{n}{k} p^k (1 - p)^{n - k}
+\]
+
+See:
+- [[id:cc138d15-9b40-4bfc-98c0-0cdab8c7bcc4][!PMF of the binomial distribution sums to one]]
+
+* Cumulative distribution function
+
+# TODO: CDF of the binomial distribution
+
+See:
+- [[id:652c9663-ab66-45b7-8a52-607e1d104a5d][!CDF of the binomial distribution]]
+
+* Characteristic function
+
+\[
+\varphi_X(t) = (1 - p + pe^{it})^n
+\]
+
+See:
+- [[id:46a03589-a9d4-4a99-8e05-4b50fd295de1][!Characteristic function of the binomial distribution]]
+
+* Cumulants
+# TODO: Calculate the cumulants for the binomial distribution
+
+See:
+- [[id:3fc13e2d-0a52-4d6a-9f6e-5e5abc5a4ec6][!Cumulants of the binomial distribution]]
+* Raw moments
+
+\begin{equation*}
+\begin{align}
+\mathbb{E}[X^k]
+&= (it)^{-k} \varphi_X^{(k)}(t) \bigr|_{t=0}
+\end{align}
+\end{equation*}
+
+See:
+- [[id:aeaf5181-5556-4ac8-952a-046cd71eb53f][!Raw moments of the binomial distribution]]
+
+* Factorial moments

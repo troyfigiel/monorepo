@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e2cb4147-b69f-4654-9d06-aa1816283537
+:mtime:    20220314210629
+:ctime:    20220314210628
+:END:
+#+title: Computer science
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       854c4fd7-0941-4c55-a0e2-2cfbd3d8f19b
+:mtime:    20220316133550
+:ctime:    20220316133549
+:END:
+#+title: Network protocol
+#+filetags: :stub:
+
+

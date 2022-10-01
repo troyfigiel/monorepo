@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9cb87e93-a28c-47ad-8183-7c6af52fa3f2
+:mtime:    20220324153939
+:ctime:    20220324153938
+:END:
+#+title: Pip-tools
+#+filetags: :stub:
+
+

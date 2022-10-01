@@ -1,0 +1,87 @@
+:PROPERTIES:
+:ID:       6066af96-b69a-49f8-bf9b-69186f1c7ccb
+:mtime:    20220322124418
+:ctime:    20220322115730
+:END:
+#+title: ?Renormalizing the damped harmonic oscillator
+#+filetags: :appendix:stub:
+
+Consider the damped harmonic oscillator equation:
+
+\[
+\ddot{x}(t) + \epsilon \dot{x}(t) + x(t) = 0
+\]
+
+Because this is a linear problem, we can find an exact solution of the form
+
+\[
+x(t) = A_0 e^{-\epsilon t / 2} \sin \left( t \sqrt{1 - \epsilon^2 / 4} + \phi_0} \right)
+\]
+
+We see two distinct effects due to the dampening:
+- Decreasing amplitude (visible at \( O(\epsilon) \))
+- Decreased frequency (visible at \( O(\epsilon^2) \))
+
+Let us now calculate the perturbation result up to \( O(\epsilon^2) \) to show we can
+recover these effects through renormalization, that would normally be invisible in standard
+perturbation theory.
+
+\begin{equation*}
+\begin{align}
+\ddot{x_0}(t) + x_0(t) &= 0 \\
+\ddot{x_1}(t) + x_1(t) &= - \dot{x_0}(t) \\
+\ddot{x_2}(t) + x_2(t) &= - \dot{x_1}(t)
+\end{align}
+\end{equation*}
+
+Hence,
+
+\begin{equation*}
+\begin{align}
+x_0(t) &= A(t_0) \sin(t + \phi(t_0)) \\
+x_1(t) &= -\frac{A(t_0)}{2} (t-t_0) \sin(t + \phi(t_0)) \\
+x_2(t) &= \frac{A(t_0)}{8} \left[ (t-t_0)^2 \sin(t + \phi(t_0)) - (t-t_0) \cos(t + \phi(t_0)) \right]
+\end{align}
+\end{equation*}
+
+Now,
+
+\begin{equation*}
+\begin{align}
+\frac{\partial x(t, t_0)}{\partial t_0}
+&= \left( \dot{A} - \epsilon \frac{A}{2} \right) \sin(t + \phi) + \left( \dot{\phi} + \frac{\epsilon^2}{8} \right) A \cos(t + \phi) + (t-t_0) [...] + O(\epsilon^3) \\
+&= 0
+\end{align}
+\end{equation*}
+
+Since this has to be zero for any \( t \), we will find (after setting \( t_0 = t \))
+
+\begin{equation*}
+\begin{align}
+\dot{A} &= \epsilon \frac{A}{2} \\
+\dot{\phi} &= -\frac{\epsilon^2}{8}
+\end{align}
+\end{equation*}
+
+These are the [[id:b4891449-950f-4096-94df-068523f0f90a][Renormalization group equations]].
+
+We deliberately avoided calculating the terms that multiply the \( t-t_0 \) terms, because these
+disappear anyway in when we set \( t_0 = t \).
+
+The RG equations are solved by
+
+\begin{equation*}
+\begin{align}
+A(t) &= A_0 e^{-\epsilon t / 2} \\
+\phi(t) &= \phi_0 - \epsilon^2 t / 8
+\end{align}
+\end{equation*}
+
+Plugging these results back in the original equation for \( x(t, t_0 = t) \), we find
+
+\[
+x(t) = A_0 e^{-\epsilon t / 2} \sin \left( t(1- \epsilon^2 / 8) + \phi_0 \right) + O(\epsilon^3)
+\]
+
+It should be noted that \( \sqrt{1 - \epsilon^2 / 4} = 1 - \epsilon^2 / 8 + O(\epsilon^4) \),
+showing that we do indeed recover the expected frequency reduction as well.

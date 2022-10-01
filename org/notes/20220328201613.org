@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       472f36ad-4e07-44d8-b0b6-8cf93ac9e7ae
+:mtime:    20220329001324
+:ctime:    20220328201613
+:ROAM_ALIASES: Surprisal
+:END:
+#+title: Information content
+#+filetags: :stub:
+
+This is a way of transforming probabilities, similar to how we would define the [[id:3e70a590-b781-47da-bd6e-1853eb535c97][Odds]] or the [[id:ba62fa12-02b4-47cc-b2f8-95964e3d5e34][Log-odds]]

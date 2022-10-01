@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       decc6032-ad49-44aa-a200-320553a6b064
+:mtime:    20220320151715
+:ctime:    20220320151714
+:END:
+#+title: Standard Gumbel distribution
+#+filetags: :stub:
+
+

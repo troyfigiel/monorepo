@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       686b6d89-0f75-4c2d-aa65-fda8f0bd34b7
+:mtime:    20220409121015
+:ctime:    20220314193000
+:END:
+#+title: Harmonic number
+#+filetags: :stub:
+
+The harmonic numbers are related to the [[id:0a8c9c6d-3089-4f1f-86c0-8c05e298172e][Harmonic mean]] due to the fact that
+
+\[
+H_n = \frac{n}{\mathrm{HM}(1, 2, ..., n)}
+\]
+
+[[id:a570595c-dae0-46e1-ad37-869935b2e1cd][Euler-Mascheroni constant]]
+
+[[id:95022dea-fada-445a-aae3-86e588b59545][The harmonic numbers are never integers]]

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       2a7319ca-5128-46ee-8c7e-e455d2bf3e92
+:mtime:    20220316150521
+:ctime:    20220316150204
+:END:
+#+title: Attribution model
+#+filetags: :stub:
+
+Splits into:
+- [[id:681a5526-2185-4150-87ef-6370cfae3c3f][Single-touch attribution]]
+- [[id:681dc5f3-b6a4-4b85-9c50-08807a86acd5][Multi-touch attribution]]
+
+Examples of single-touch:
+- [[id:455a2554-96cb-42a4-86bf-dc069045a5ff][First-touch attribution]]
+- [[id:1a150921-3ed7-4661-98b2-1a18b4f852a8][Last-touch attribution]]
+
+Examples of multi-touch:
+- Using [[id:00fa9c4b-ce93-43a3-b0d8-a99f2aad4625][Markov chain]] and calculating the [[id:4deb5413-a437-4498-a63f-8c0bfdd4e184][Removal effect]].
+- Using the [[id:9671a5bc-6387-46ad-ac0b-fb65b87f7285][Shapley value]] and [[id:faf75ad1-ebe8-43ef-8f97-9d9d01be5b85][Game theory]].
+- [[id:ee733485-cd53-4c7b-a263-1476931f4eea][Linear attribution]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b9860804-ad2f-42e9-88f4-fdbee6f263bb
+:mtime:    20220325220845
+:ctime:    20220325220844
+:END:
+#+title: ?Proof of the CLT using characteristic functions
+#+filetags: :appendix:stub:
+
+

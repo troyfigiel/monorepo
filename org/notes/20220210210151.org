@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       e1359a2c-d435-4c73-b46f-3c3be387e889
+:mtime:    20220406000840
+:ctime:    20220210210151
+:ROAM_ALIASES: "Statistical physics"
+:END:
+#+title: Statistical mechanics
+#+filetags: :stub:
+
+When a system has a large number of possible [[id:812456fe-443a-420f-96f2-60d197214a3d][Microstates]], it is often impossible to follow its
+evolution exactly. In this case, we resort to describing the [[id:0dd63aa6-e7e4-4332-8d6a-9b5f24e7d6ce][Macrostate]] of the
+system.
+
+Statistical physics is precisely the set of tools used to form this bridge between the
+microscopic world and the macroscopic world.
+
+Although there system often behave completely differently on a microscopic level, their macroscopic
+behaviour is often very similar (e.g. [[id:dab5fd16-ed87-4be8-ab34-767bafd056e4][Universality]], [[id:96962a21-b199-4a3a-bf45-ae4d7ac69143][Ideal gas law]] for very different gases, ...)
+
+A key aspect of statistical mechanics is that the microscopic world can have fully reversible laws
+of motion, but the macroscopic world is irreversible (see [[id:de251877-f28a-485f-954d-709034f908ef][Second law of thermodynamics]]). This is
+also closely related to [[id:6cce58a7-da3e-4116-b36f-e2e1be600607][Chaos theory]].
+
+Many concepts in [[id:56e64f18-24cd-49fc-8b32-1f60c2f50456][Probability theory]] play a central role in statistical mechanics. Especially the
+[[id:22637763-04bb-49a6-b3e4-4e700b43eddd][Central limit theorem]], which is the underlying reason why macroscopic quantities can often be seen
+as pure numbers.
+
+The [[id:f234a005-9b38-469a-a759-c8dea11ca203][Fundamental postulate of statistical mechanics]] motivates the definition of the [[id:20c3f318-e49f-4ed1-878c-95627cc4713a][Microcanonical
+ensemble]] and allows us to derive other [[id:bcce6b72-a887-4d33-b45b-e518bdda58dc][Statistical ensembles]]. Alternative derivations of these
+ensembles follow from the [[id:918f9036-af99-4c5a-bb2a-1a27e465dd13][Principle of maximum entropy]]. This has close ties to [[id:09ea6533-7613-4979-9efc-88e0f99bd5f0][Information theory]],
+
+- [[id:11490629-a93f-4ddf-9734-6f71f7a7d600][Thermodynamic limit]]
+- [[id:a1085e61-0103-411a-8ac4-f5319da6b3c8][Partition function]]
+
+Some famous models:
+- [[id:f20fe09c-6435-4730-bc0a-2529c2029d4d][Ising model]]

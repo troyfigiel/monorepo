@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       9b5a1b59-91a2-405f-95b3-14643fc6a545
+:mtime:    20220326011324
+:ctime:    20220221224049
+:END:
+#+title: Declarative operating system configuration
+#+filetags: :unclean:
+
+A declarative system is a system where the code denotes the desired end state.
+
+A big advantage of a declarative over an imperative system is that [[id:27ba21b2-c4b7-4d6b-b69a-806ac993b451][A declarative system is
+bit-for-bit reproducible]], avoiding [[id:364c4a7f-6a3f-4d80-92cb-a8ca5b8409bf][Configuration drift]]. Additionally, [[id:c7939ee7-f04d-4e66-87ef-7205f084a211][Rolling back to a previous
+configuration is trivial with a declarative system]]. Another advantage is the lack of global state
+(see [[id:79c2df6b-f704-40b0-949e-715c90b4e608][Global state is evil]]). In an imperative approach, if we set up an operating system, each step
+will depend on the previous step. For example, first need to download an editor and then we can set
+`$EDITOR` in our profile. Install a font, then create a font config and then set the fonts in the
+window manager, terminal, editor, etc.
+
+The declarative approach makes it much easier to roll-back changes as well as try out different
+applications. You do not need to remember what steps you took to set up your system, instead it is
+described in your configuration files.
+
+# TODO: Specify the difference between declarative operating system and functional operating
+# system. Currently I am conflating these two terms.
+# TODO: Rename or extract operating system from configuration
+
+Examples include:
+- [[id:b2430170-98ab-4801-ad2e-84a1ed686865][Guix System]]
+- [[id:1a102303-3340-4553-a664-8655a66a8051][NixOS]]
+
+https://www.youtube.com/watch?v=chKc_YsvXKU

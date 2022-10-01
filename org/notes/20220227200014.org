@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0049e5f6-cdfd-42d5-98d7-17247fd9063a
+:mtime:    20220228114922
+:ctime:    20220227200014
+:ROAM_REFS:
+:END:
+#+title: Cumulative hazard function
+#+filetags: :stub:
+

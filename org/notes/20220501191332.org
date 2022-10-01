@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c67cd0e4-d18b-439c-9cc4-515011bef384
+:END:
+#+title: Dynamic scope
+#+filetags: :stub:
+

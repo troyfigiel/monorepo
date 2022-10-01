@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       361062e5-f9b5-4356-b771-8f26b90ed065
+:mtime:    20220310130251
+:ctime:    20220310125913
+:END:
+#+title: Boosting
+#+filetags: :stub:
+
+Boosting can be used to build [[id:66dc6851-7186-4940-84fa-f97a2bf70690][Additive models]].

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       98699707-c0b9-4f56-8385-768648bfcd96
+:mtime:    20220302110631
+:ctime:    20220302110128
+:END:
+#+title: In the presence of high multicollinearity, linear regression coefficients change erratically upon slight data perturbations
+#+filetags: :stub:
+
+

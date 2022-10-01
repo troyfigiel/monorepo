@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4d866a11-50d4-4873-8439-f82209726a37
+:mtime:    20220225223629
+:ctime:    20220215232749
+:END:
+#+title: Z-test
+

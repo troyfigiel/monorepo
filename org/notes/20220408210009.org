@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6e45d13d-b622-47e4-a531-f4d68b68a8d1
+:mtime:    20220408210009
+:ctime:    20220408210009
+:END:
+#+title: Wick rotation
+#+filetags: :stub:
+
+

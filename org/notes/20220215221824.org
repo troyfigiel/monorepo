@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       ded30554-7495-4218-9314-6145de6aa926
+:mtime:    20220303200458
+:ctime:    20220215221824
+:END:
+#+title: Linear regression
+
+Linear regression models a relationship between response (dependent) variables and explanatory (independent) variables.
+
+Linear regression with a single explanatory variable is called [[id:210d719e-febc-439a-bd81-a96a58fbe06b][simple linear regression]] and with more than one explanatory variables is known as [[id:041f26d4-7fc4-4bfd-b7b8-e4cd080ebb81][multiple linear regression]].
+
+Two common forms of regularization are
+- [[id:c7a907c0-ec16-46ec-9926-7bdf56b3e64a][ridge regression]]
+- [[id:b23396a7-a01c-4521-8a7e-9dc64a555fce][lasso regression]]

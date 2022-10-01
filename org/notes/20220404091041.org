@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7dfce04f-35e1-4d68-a347-7ea13ce2e6b0
+:mtime:    20220404091042
+:ctime:    20220404091041
+:END:
+#+title: Orbit-stabilizer theorem
+#+filetags: :stub:
+
+

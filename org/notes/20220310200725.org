@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       31b0361e-b258-4c11-a0ad-60e9d770e17d
+:mtime:    20220310200728
+:ctime:    20220310200725
+:END:
+#+title: Physics
+#+filetags: :stub:
+
+

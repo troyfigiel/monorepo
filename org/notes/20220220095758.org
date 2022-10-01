@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f1eb9173-b39e-4be4-8423-41d16c1258d5
+:mtime:    20220225223638
+:ctime:    20220220095758
+:END:
+#+title: dependency injection
+#+filetags: :stub:
+

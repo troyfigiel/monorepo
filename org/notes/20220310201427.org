@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1ed8bc9b-d20b-4d95-8e43-61fa3146a939
+:mtime:    20220310201429
+:ctime:    20220310201427
+:END:
+#+title: Logistic loss function
+#+filetags: :stub:
+
+

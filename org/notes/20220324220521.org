@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       61fa204e-4b7e-4adf-b7f0-0e9b94f7f8a9
+:mtime:    20220408203125
+:ctime:    20220324220521
+:END:
+#+title: Manifold
+#+filetags: :stub:
+
+[[id:7d44f76c-6425-45d8-a0ec-f3427dc29fdc][Tangent space]]

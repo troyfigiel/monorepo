@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       3873e249-99ae-4b47-9651-1ace256daf81
+:mtime:    20220420214836
+:ctime:    20220420214835
+:END:
+#+title: Non-greedy wrapper method
+#+filetags: :stub:
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       84b1de7f-cd50-493f-802d-d3fff0eb2f5b
+:mtime:    20220422143525
+:ctime:    20220422143525
+:END:
+#+title: Ruby on Rails
+#+filetags: :stub:
+

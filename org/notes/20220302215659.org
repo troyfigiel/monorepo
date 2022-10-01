@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ec154c05-69df-4c33-b9ee-c243a7fcae02
+:mtime:    20220302215700
+:ctime:    20220302215659
+:END:
+#+title: Right censoring
+#+filetags: :stub:
+
+

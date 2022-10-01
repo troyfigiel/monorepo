@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ee733485-cd53-4c7b-a263-1476931f4eea
+:mtime:    20220316150520
+:ctime:    20220316150309
+:END:
+#+title: Linear attribution
+#+filetags: :stub:
+
+Gives each touchpoint along a conversion the same value. For example, Facebook to Google to
+conversion gives Facebook 1/2 a conversion and Google 1/2 a conversion.

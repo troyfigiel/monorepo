@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7fcc1e26-8e19-4fd6-8d93-4d41ef049b34
+:mtime:    20220302211226
+:ctime:    20220302211217
+:END:
+#+title: In OLS the value of R^2 is the amount of explained variance
+#+filetags: :stub:
+
+

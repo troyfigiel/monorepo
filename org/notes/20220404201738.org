@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0c44a67c-cf04-4fd2-bd4c-33c7a67037b0
+:mtime:    20220404201739
+:ctime:    20220404201738
+:END:
+#+title: Kolmogorov's criterion
+#+filetags: :stub:
+
+

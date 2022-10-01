@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       af7927ed-1cf5-46a1-b72b-54c545a459b7
+:mtime:    20220403120914
+:ctime:    20220314215454
+:END:
+#+title: Types of notes I distinguish
+#+filetags: :stub:
+
+A couple of types of notes have emerged from my note-taking:
+- Notes with a title that is a noun or a couple of words lacking a verb form as a hub for related
+  ideas. These are usually bigger concepts.
+- Notes with a title that is a full sentence usually encompass a single idea.
+- Notes starting with § are [[id:78c5b7ee-6ecc-4fd4-ac77-59a689d1f617][Index notes]]
+- Notes starting with ! are fact sheets containing numerous facts that I might need to reference at
+  some point or another.
+- Notes starting with ? are notes that contain appendixs, calculations, examples or programs that are
+  not necessarily very insightful in themselves, but do provide a supporting role in understanding
+  a concept.
+- Notes starting with @ are inbox notes.
+- Notes starting with * are example notes. These are used for specific examples that exemplify a
+  relationship between two ideas very well. For example, renormalization applied to the Ising model
+  would be an example of renormalization that goes beyond what the ? notes are intended for.
+  However, * notes should still be concrete: The numerical relationship between two entities should be
+  immediately clear (up to some ? notes clarifying smaller calculations) and not just described in
+  words.
+
+  Examples notes are for notes that illuminate a specific property / characteristic / idea very
+  well, whereas appendix notes are just there for completeness of calculations, i.e. supporting role.
+- Notes starting with > are programming notes. They include the source code for a program that
+  relates to the topic at hand.

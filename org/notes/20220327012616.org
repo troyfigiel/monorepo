@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       df0e4e79-4ad0-448a-8746-f64a3b2aed84
+:mtime:    20220327012617
+:ctime:    20220327012616
+:END:
+#+title: Dispersion relation
+#+filetags: :stub:
+
+

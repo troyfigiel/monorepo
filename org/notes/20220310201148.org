@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3a3ab55c-4699-4ff1-acff-03ab6380105a
+:mtime:    20220310201337
+:ctime:    20220310201148
+:END:
+#+title: Exponential loss function
+#+filetags: :stub:
+
+

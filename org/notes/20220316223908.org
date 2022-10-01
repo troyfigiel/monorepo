@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a10826b3-7c1a-489b-9d99-8f05df288f22
+:mtime:    20220316224159
+:ctime:    20220316223908
+:END:
+#+title: Vega
+#+filetags: :stub:
+
+Used for [[id:5aa3405a-5785-424a-ae15-f7d0ec5124ea][Visualization]]. This is a more detailed output than [[id:074ef121-9a4f-4f3a-975d-eebd9ce73c71][Vega-Lite]], but is still an example of
+[[id:520ece5f-e0f1-45cb-bc4c-69557dc4afc2][Declarative programming]]. It is built on top of [[id:5610c235-edd5-4506-9835-0959b45d9bf4][D3]] and is a [[id:77c09da7-ca77-428a-bed3-f6d81f424c7b][JSON]]-specification.

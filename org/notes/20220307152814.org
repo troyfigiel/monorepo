@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       dd7ccc2d-2ce3-4a59-926b-cb8cf3819c11
+:mtime:    20220307162324
+:ctime:    20220307152814
+:END:
+#+title: §Properties of probability distributions
+#+filetags: :index:stub:
+
+- [[id:9dc43215-c9a0-4c80-b106-2b683fdf651c][Characteristic function]]
+- [[id:6aa59df5-de7c-4fa9-8384-06ebe0cf771f][Entropy]]
+- [[id:e9f900da-212c-421a-ba47-03c55ed8fc8f][Moment]]
+  - [[id:b51b2a03-4898-4090-af3f-04526ba20504][Raw moment]]
+  - [[id:5805a7a9-62f9-42b6-825f-3c4b2b8be18c][Factorial moment]]
+  - [[id:26df21fe-44fb-4463-95fd-c1fb183ef257][Cumulant]]
+- [[id:da99be38-e43b-44ba-8eaf-9fe61ad05105][Moment generating function]]
+  - [[id:e91baf7b-0062-4750-ac07-d4ecea189938][Factorial moment generating function]]
+  - [[id:796ad554-980f-4bd5-99fe-c9b8bdae3ce8][Cumulant generating function]]
+
+* Calculations
+- [[id:1531721d-0cd3-46c5-bc67-2988a3ad818a][?Factorial moment generating function]]
+- [[id:3f1133fb-75f2-42d8-8639-304caa4842f4][?Survival function]]
+- [[id:a330e1eb-5cd8-43e5-834f-2e50d604ce95][?Entropy]]
+- [[id:b10fb6ba-07f8-418b-8edf-9b262be9d027][?Dispersion]]
+- [[id:328afd0f-ddc6-4160-bac7-783973edd391][?Characteristic function]]

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       03e39316-6ea3-4ef0-b3aa-f21ce867ed46
+:mtime:    20220314212455
+:ctime:    20220314185944
+:END:
+#+title: ?The Gini coefficient of the uniform distribution
+#+filetags: :unclean:appendix:
+
+For the uniform distribution we have \( f(x) = \frac{1}{b-a} \) and \( a \leq x \leq b \).
+
+Therefore,
+
+\begin{equation*}
+\begin{align}
+G
+&= \frac{1}{2 \mathbb{E}[X]} \int\limits_0^{\infty} \int\limits_0^{\infty} |s-t| f(s) f(t) \, ds \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \int\limits_a^b |s-t| f(s) f(t) \, ds \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \int\limits_a^b \frac{|s-t|}{(b-a)^2} \, ds \, dt \\
+&= \frac{2}{(b+a)} \int\limits_a^b \int\limits_t^b \frac{s-t}{(b-a)^2} \, ds \, dt \\
+&= \frac{2}{(b+a)} \int\limits_a^b \int\limits_0^{b-t} \frac{u}{(b-a)^2} \, du \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \frac{(b-t)^2}{(b-a)^2} \, dt \\
+&= \frac{b-a}{3(b+a)}
+\end{align}
+\end{equation*}
+
+See also: [[id:4eb924cc-81a0-4cb8-9820-80e4238f1bff][?Mean of the uniform distribution]].

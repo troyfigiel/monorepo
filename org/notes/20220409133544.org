@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3a82e577-1a6a-4eb8-a1c1-2746dca9480c
+:mtime:    20220409133707
+:ctime:    20220409133544
+:END:
+#+title: Quadratic form
+#+filetags: :stub:
+
+There is a one-to-one correspondence between quadratic forms and [[id:03e4fed5-fb2c-40a2-b93a-627b202bc906][Symmetric matrices]]. In particular,
+this means we can always diagonalize a quadratic form.

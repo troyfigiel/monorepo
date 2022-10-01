@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       549fc149-c199-43e3-93c0-e5261bbf01e2
+:ROAM_ALIASES: "binomial trial"
+:mtime:    20220301115713
+:ctime:    20220301115513
+:END:
+#+title: Bernoulli trial
+#+filetags: :stub:
+
+A Bernoulli trial is a random experiment with exactly two outcomes (a success or a failure).
+
+See also [[id:a52537ca-6373-4385-a4fd-0a0777e95dd7][Bernoulli distribution]] and [[id:f76121f7-264b-4a7f-8c53-4aa1a59d6fad][Bernoulli process]] .
+
+https://en.wikipedia.org/wiki/Bernoulli_trial

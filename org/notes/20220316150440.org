@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       681dc5f3-b6a4-4b85-9c50-08807a86acd5
+:mtime:    20220316150441
+:ctime:    20220316150440
+:END:
+#+title: Multi-touch attribution
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       fc80fa05-0e87-4ed1-bcf2-e636c59b0f10
+:mtime:    20220301172806
+:ctime:    20220301172804
+:END:
+#+title: The t-test is a special case of ANOVA
+#+filetags: :stub:
+
+

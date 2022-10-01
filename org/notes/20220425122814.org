@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6ebf71d5-0cb2-41a1-a043-7eef4a591786
+:mtime:    20220425122815
+:ctime:    20220425122814
+:END:
+#+title: Monorepo
+#+filetags: :stub:
+

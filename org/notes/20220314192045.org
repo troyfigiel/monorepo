@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6dd8632c-68ff-4aa8-99a9-10b9561a030d
+:mtime:    20220314192104
+:ctime:    20220314192045
+:END:
+#+title: Rank-frequency distribution
+#+filetags: :stub:
+
+https://en.wikipedia.org/wiki/Rank%E2%80%93size_distribution

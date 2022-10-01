@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       04cedc63-1f16-4186-8467-cba18811d85f
+:mtime:    20220424213910
+:ctime:    20220424213636
+:END:
+#+title: Software versioning
+#+filetags: :stub:
+
+- [[id:b540227b-b08a-4f5d-962b-e437f16ea006][Semantic versioning]]

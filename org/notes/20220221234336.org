@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ad17a8fa-cabe-4574-a03e-505b2ef092b8
+:mtime:    20220225223634
+:ctime:    20220221234336
+:END:
+#+title: Granger causality test
+#+filetags: :stub:
+
+The Granger causality test is useful to determine if one time series can be used to explain another
+time series.

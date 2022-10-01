@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       df1ee66e-d2b0-474f-8674-de584da6a6c1
+:mtime:    20220405094805
+:ctime:    20220218232930
+:END:
+#+title: Group
+#+filetags: :stub:math:
+
+A group is a set equipped with an operation that can combine two elements to form a third element, such that
+   1. the operation is associative
+   2. an identity element exists
+   3. every element has an inverse
+
+

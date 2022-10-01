@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       a0348d42-5ede-4f27-a8f0-eea3e4ca65c7
+:mtime:    20220408215704
+:ctime:    20220404200557
+:END:
+#+title: Shannon entropy
+#+filetags: :stub:
+
+[[id:90a00b01-8b43-43fd-9eeb-e916456f75a5][Shannon index]]
+
+Related to [[id:ba62fa12-02b4-47cc-b2f8-95964e3d5e34][Log-odds]] by
+
+\[
+\text{log-odds}(x) = I(\neg x) - I(x)
+\]

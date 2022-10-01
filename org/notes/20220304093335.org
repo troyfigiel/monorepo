@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       cc138d15-9b40-4bfc-98c0-0cdab8c7bcc4
+:mtime:    20220304093346
+:ctime:    20220304093335
+:END:
+#+title: Proving that the PMF of the binomial distribution sums to one
+#+filetags: :stub:
+
+

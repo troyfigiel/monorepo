@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       916c9862-6f8a-435c-a0fd-96f57b6f6005
+:mtime:    20220307160942
+:ctime:    20220304141236
+:END:
+#+title: Coefficient of dispersion
+#+filetags: :stub:
+
+The coefficient of dispersion is defined as the ratio
+
+\[
+D = \frac{\sigma^2}{\mu}
+\]
+
+and is only defined for \( \mu > 0 \). It is generally used for positive statistics (such as counts
+or waiting times) or when the underlying distribution is assumed to be either the [[id:38725721-c78d-40ae-b54a-37b679c574ca][Poisson
+distribution]] or the [[id:4b4a04e8-a6f4-47c4-afbd-b501cb1ebb35][Exponential distribution]]. In those cases, we have \( D = 1 \).
+
+# TODO: Which test is used to check D = 1 ?
+
+When \( D > 1 \) we call the distribution over-dispersed whereas a distribution with \( D < 1 \) is
+an under-dispersed distribution.
+
+For various calculations, see [[id:b10fb6ba-07f8-418b-8edf-9b262be9d027][?Dispersion]].

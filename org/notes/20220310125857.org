@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       f66f365d-07cd-4eea-9ff1-63ae17dce55a
+:mtime:    20220318153445
+:ctime:    20220310125857
+:ROAM_ALIASES: "Decision forest"
+:END:
+#+title: Random forest
+#+filetags: :stub:
+
+Random forest allow us to determine [[id:821a8569-32e1-402f-b9bd-b905ea948e1a][Feature importance]] which can be useful for other algorithms as well.
+
+A random forest is an example of a [[id:345f1c7c-e045-4568-8967-52a055fc429d][Black box model]]. The idea is to average the votes of diverse
+[[id:97d4f725-30c0-4dad-8eab-4044ddbe702f][Decision trees]]. If you average many different, but accurate and even overfitted models, it will
+reduce variance in the predictions. This is similar to [[id:59ee9dcc-663f-46a2-8b21-86eb1e602dbd][Bagging]].
+
+The algorithm works as follows:
+
+We pick \( T \) trees (where \( T \) is odd so we can calculate a majority) and we have \( m \) and
+\( n_{\mathrm{min}} \) parameters. As we would do with [[id:b908e98e-6c24-40da-8e4e-f2bfe5c4f417][Bootstrapping]], we pick a sample of size \( n
+\) (with replacement) from our training data of size \( n \).
+
+We build a tree by picking \( m \) features at random, split nodes based on the best feature and
+stop if any node has less than \( n_{min} \) points.
+
+Prediction on a new observation is done using the majority vote.
+
+# TODO: Majority vote only works for classification. What about regression?

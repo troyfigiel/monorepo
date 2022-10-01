@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       ab6e7a3e-f42e-42ac-bd4d-a5ad56a9562d
+:mtime:    20220310201556
+:ctime:    20220211090016
+:ROAM_ALIASES: "Square loss function"
+:END:
+#+title: Quadratic loss function
+

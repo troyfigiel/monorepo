@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       82d454aa-5c8c-4bd9-8f28-bef2c002c411
+:mtime:    20220225223631
+:ctime:    20220215232406
+:END:
+#+title: type I error
+

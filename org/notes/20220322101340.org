@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c171a7c6-2458-4b02-855c-1ef007c56f49
+:mtime:    20220322105936
+:ctime:    20220322101340
+:END:
+#+title: Asymptotic series of sums
+#+filetags: :stub:
+
+- [[id:7de72839-2a48-4aa0-9804-7e7111fc2eb7][Euler-Maclaurin formula]]
+- [[id:1856ae75-357e-43bc-8266-2b9fba7661d0][Abel-Plana formula]]

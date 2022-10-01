@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6f2ef7e0-e57c-4fd7-b622-8f4aa944cead
+:END:
+#+title: Model-based properties
+#+filetags: :stub:
+

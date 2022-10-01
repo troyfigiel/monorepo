@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       b51b2a03-4898-4090-af3f-04526ba20504
+:mtime:    20220304095131
+:ctime:    20220215235330
+:END:
+#+title: Raw moment
+
+The n-th moment of a probability distribution about a value \( c \) refers to the expectation value \( \mathbb{E} \left[ (X - c)^{n} \right] \). The first raw moment is known as the [[id:3800e3f3-4edc-4c8d-aee8-13c768a55a32][mean]] and often denoted by \( \mu \).
+
+Any higher order moment about the mean is called a central moment.
+
+The second central moment is called the [[id:8d3b88a5-fed6-426e-9f11-d89b05547d05][variance]] and denoted by \( \mathrm{Var}(X) \) or \( \sigma^2 \) in terms of the [[id:88147f30-2389-48f5-9406-255d16d16171][standard deviation]] \( \sigma \).
+
+Higher moments are often standardized, i.e. we are interested in the expectation values
+
+\[
+\tilde{\mu}_n = \mathbb{E} \left[ \left( \frac{X - \mu}{\sigma} \right)^n \right]
+\]
+
+The third and fourth standardized moments \( \tilde{\mu}_3 \) and \( \tilde{\mu}_4 \) are known as the [[id:a4e8e753-89f3-4260-8fc2-da9cb3ad2ca8][skewness]] and the [[id:4378316d-9724-4e58-8eea-1e03f7e0bba3][kurtosis]] respectively.

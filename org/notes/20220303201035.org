@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       167f12f8-3b42-49d1-9c81-77ec3fcd2679
+:mtime:    20220303201225
+:ctime:    20220303201035
+:END:
+#+title: Least squares regression
+#+filetags: :stub:
+
+There is both [[id:c448791b-a83b-4c9a-85a2-104864cb3d8e][Linear least squares]] regression as well as [[id:2d9b74f6-74bf-4273-a049-b82e036fc32b][Non-linear least squares]] regression.
+
+For linear least squares, we assume the [[id:dd1cf8d6-3c14-4188-a158-27edb88235ce][Dependent variable]] linearly depends on the parameters of
+the model. [[id:cf984b62-74bd-409b-ab7f-af7ef9833b8c][Linear regression does not mean the dependent variable depends linearly on the
+independent variable]].

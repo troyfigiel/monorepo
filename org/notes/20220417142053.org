@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e2d6af48-65f0-42eb-a915-793d8f54072e
+:mtime:    20220417142054
+:ctime:    20220417142053
+:END:
+#+title: Ellipse
+#+filetags: :stub:
+

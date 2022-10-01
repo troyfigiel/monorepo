@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c3723918-d1d7-4be2-9179-87500c4eb836
+:mtime:    20220328212313
+:ctime:    20220328212312
+:END:
+#+title: Detailed balance
+#+filetags: :stub:
+
+

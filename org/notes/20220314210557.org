@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       ca7060f7-53dc-46a6-9e46-e1d0c1343158
+:mtime:    20220415203230
+:ctime:    20220314210557
+:END:
+#+title: §Index
+#+filetags: :index:
+
+* [[id:31b0361e-b258-4c11-a0ad-60e9d770e17d][Physics]]
+** [[id:9a56000d-da8c-4cba-82cc-6038fe352323][Quantum physics]]
+** [[id:e1359a2c-d435-4c73-b46f-3c3be387e889][Statistical mechanics]]
+** [[id:09efc736-73a1-4855-9b36-cc1c2b8ecec1][Thermodynamics]]
+** [[id:e624dec4-80fe-41c8-bc7b-225f0199c387][Renormalization]]
+** [[id:a8b1df13-1ab4-4eca-a9b4-5f0f39c74acd][Quantum field theory]]
+* [[id:64f8614c-d414-42f8-98d5-e3fe0a08cdeb][Mathematics]]
+** [[id:8228ecba-de90-413c-847a-6c764bb3b17e][Category theory]]
+** [[id:5a591858-a1cd-4882-93b7-6d6af7f7408e][Complex analysis]]
+** [[id:5742c01a-b095-4361-9527-1ebd4e55a2ed][Statistics]]
+** [[id:56e64f18-24cd-49fc-8b32-1f60c2f50456][Probability theory]]
+** [[id:bfdfffb0-74ad-4eba-a83d-9c3403ea348f][Group theory]]
+** [[id:e5c77c9a-6d8e-4ea0-8997-9e4a79db3117][Graph theory]]
+** [[id:09ea6533-7613-4979-9efc-88e0f99bd5f0][Information theory]]
+** [[id:bafc5759-1098-48b7-b9ff-ec458d629254][Asymptotic series]]
+** [[id:1177ce83-7dd0-4f02-9cb7-355654092ac1][Perturbation theory]]
+** [[id:f08360d3-5d10-4afd-a8dd-3025531a1ea8][Percolation theory]]
+** [[id:72eeab42-23bb-44d2-afcb-f2b59aea0746][Number theory]]
+** [[id:9a165ebf-1ab5-4994-8faf-e87a1b6736e8][Differential equation]]
+** [[id:28dd2199-59d1-4bdd-9f77-812d1e1df1d1][Differential geometry]]
+* [[id:e2cb4147-b69f-4654-9d06-aa1816283537][Computer science]]
+* [[id:516ac96d-aece-434c-addc-8af9857b8b16][Note taking]]
+** [[id:d1968552-6a83-4e46-9fe3-76048108bc1e][Note taking as a tool for learning]]
+** [[id:2094556f-2aa8-4f50-a84e-0f88e8233234][Maintaining an increasingly complex system of notes]]
+** [[id:a7c9967e-9cdd-43c5-9c24-bbbd45a1564d][Similarities between taking notes, writing mathematics and maintaining software]]
+** [[id:b897355f-2a9e-471d-9450-c333ace038a9][Abstraction is a powerful tool to fight increasing complexity]]

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       3d6f2f10-7b62-4628-a65d-c16b37b991fd
+:ROAM_ALIASES: TDD
+:mtime:    20220427091824
+:ctime:    20220317223641
+:END:
+#+title: Test-driven development
+#+filetags: :stub:
+
+- [[id:67de5ab0-1355-4df6-95f6-3f00158d327b][Behaviour-driven development]]
+- [[id:591fefe2-02b1-489a-aa90-2cdb60482073][ERT]]
+- [[id:4f921a7a-517c-403f-965b-d988c4caecd1][Property-based testing]]

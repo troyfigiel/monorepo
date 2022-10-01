@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       25f8ccb7-2c86-46d1-bef3-c3650dd3c567
+:mtime:    20220323231403
+:ctime:    20220323230039
+:END:
+#+title: Terminating Markov chain
+#+filetags: :stub:
+
+A terminating Markov chain is a Markov chain that solely has [[id:015d3737-7016-425e-be84-a65b510f69e7][Transient states]] with exception of a
+single [[id:042db342-5cdf-4d7f-9220-1a5d052a45fc][Absorbing state]].
+
+The [[id:f87cfbed-01da-4bcc-b89f-6a7510e0f213][Stochastic matrix]] of this process, may be written as
+
+\begin{equation*}
+P =
+\begin{pmatrix}
+T & \mathbf{T}^0 \\
+\mathbf{0}^{\intercal} & 1
+\end{pmatrix}
+\end{equation*}
+
+The time until absorption is modeled by a [[id:134015a8-f925-4604-bddb-45867ffec567][Discrete phase-type distribution]].

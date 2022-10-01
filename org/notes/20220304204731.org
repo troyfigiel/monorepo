@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       7fd22877-fe73-4e80-a50a-363ac7771251
+:mtime:    20220304204822
+:ctime:    20220304204731
+:END:
+#+title: Data leakage can easily sneak into time series analysis
+#+filetags: :stub:
+
+# TODO: It is not completely clear to me yet how this works, but what is clear, is that it has to
+# do with the fact that we cannot simply permute all of our data. Instead, we need to predict the
+# future from past events.

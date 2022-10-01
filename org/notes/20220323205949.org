@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       9eec1b8d-b4ed-4d77-a87d-afd9a84ae3bb
+:mtime:    20220323210943
+:ctime:    20220323205949
+:END:
+#+title: ?Renormalizing the exponential
+#+filetags: :stub:
+
+Consider the differential equation \( \dot{x}(t) = \epsilon x(t) \). The exact solution is \( x(t)
+= x(0) e^{\epsilon t} \) and we would like to see if we can recover this behaviour through
+renormalization.
+
+Solving perturbatively, we find for \( x(t) = x_0(t) + x_1(t) \epsilon + O(\epsilon^2) \) the
+solution
+
+\begin{equation*}
+\begin{align}
+x_0(t) &= A \\
+x_1(t) &= A (t-t_0)
+\end{align}
+\end{equation*}
+
+so that \( x(t) = A \left( 1 + \epsilon (t-t_0) \right) + O(\epsilon^2) \).
+
+We will denote this solution by \( x(t, t_0) \) to clarify the dependence on \( t_0 \).
+
+Clearly, the naive solution breaks down when \( t-t_0 \) becomes large.
+
+The renormalization technique tells us to make \( A \) dependent on \( t_0 \) and solve the RG
+equations:
+
+\begin{equation*}
+\begin{align}
+\frac{\partial x(t, t_0)}{\partial t_0} \big|_{t_0=t}
+&= 0 \\
+&= \left( \dot{A}(t_0) (1 + \epsilon (t-t_0)) + \epsilon A(t_0) \right) \big|_{t_0=t} \\
+&= \dot{A}(t) + \epsilon A(t)
+\end{align}
+\end{equation*}
+
+This has the solution \( A(t) = A(0) e^{\epsilon t} \). Now we plug this into our original solution
+and set \( t_0 = t \). This leads to \( x(t) = A(t) = A(0) e^{\epsilon t} \) indeed recovering the
+exact solution.

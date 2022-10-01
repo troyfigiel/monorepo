@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       721a32b5-a1a7-4a60-8173-e17c8e2571ec
+:mtime:    20220327155209
+:ctime:    20220327122240
+:ROAM_ALIASES: "Circular distribution"
+:END:
+#+title: Circular probability distribution
+#+filetags: :stub:
+
+A circular distribution is a probability distribution for a random variable with angular values.
+Any distribution on the real line can be converted to a circular distribution by wrapping it around
+the unit circle. (See [[id:dcba589e-8195-4347-9be6-fb8ec12a9a7b][Wrapped distribution]])
+
+Examples of circular distributions are:
+- [[id:7c66b57f-e576-4823-a5c3-dacffa40ec26][Von Mises distribution]]
+- [[id:2204790b-f4ae-4450-abfa-b12c7d720e5a][Circular uniform distribution]]
+- [[id:dcba589e-8195-4347-9be6-fb8ec12a9a7b][Wrapped distribution]]

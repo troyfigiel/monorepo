@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       732cf119-1a5d-43b3-925e-aaf87ca49ebb
+:mtime:    20220310134407
+:ctime:    20220310133922
+:END:
+#+title: Regression
+#+filetags: :stub:
+
+Main branches are:
+- [[id:ded30554-7495-4218-9314-6145de6aa926][Linear regression]]
+- [[id:96ce7845-c938-4105-988b-7bbf6da9fa99][Non-linear regression]]
+
+Many other regressions can be understood as generalizations of the linear regression model. For
+example, the [[id:547e3074-6e8e-4990-a184-c336c37b63ea][Generalized linear model]] which includes:
+- [[id:ded30554-7495-4218-9314-6145de6aa926][Linear regression]]
+- [[id:cb309f5a-c65c-4c56-8ea0-f5a5e86da157][Logistic regression]]
+- [[id:951c87c5-77df-4e06-9f75-f5c857208fc3][Poisson regression]]
+- [[id:d7d41df2-d755-49a1-8bfe-2e71a7a4d490][Gamma regression]]
+
+Regression is also often used together with [[id:c757d51c-43ad-43b9-93fe-3b165beb810e][Regularization]]. For example:
+- [[id:b23396a7-a01c-4521-8a7e-9dc64a555fce][Lasso regression]]
+- [[id:c7a907c0-ec16-46ec-9926-7bdf56b3e64a][Ridge regression]]
+- [[id:e00bb8ee-b864-4f33-adca-b53a3ce1cef1][Elastic net regression]]

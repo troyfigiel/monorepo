@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       8b2907c7-0fb7-496f-abc2-9f6d4ff6bc8a
+:mtime:    20220420223332
+:ctime:    20220323132538
+:END:
+#+title: §In progress
+#+filetags: :unclean:index:
+
+* [[id:413139a4-16b3-4231-b8ce-905c0d92ea14][@All]]
+* [[id:072e66af-2413-44ef-a83a-e8ab3036cd8d][@Renormalization]]
+Inspired by the final video of Strogatz, I started looking at more high-level connections between
+renormalization and other fields.
+
+* Analogies between 0D QFT and probability theory
+* Category theory
+I should make a start with this so I can learn how to work with Tikz.
+
+
+* [[id:d803c5b7-11c8-448e-95c8-89fc100f1aaf][@Percolation theory]]
+* [[id:6ab3ecfa-d34a-4ba7-8eb7-80934f805479][@Statistical mechanics]]
+* [[id:32e79adf-f95b-4d9d-aa61-afbbb611b215][@Information geometry]]
+* [[id:1b1e637b-536a-47d2-9d0e-13ad54fbe9b8][@Study design]]
+* [[id:b33a3889-88cc-4d62-81d8-c6b33748ad7b][@Talk with Arpan 2022-04-16]]
+* [[id:2bd904d1-c1da-489c-a089-5aaedc29c145][@Building a computer]]
+* [[id:8dab481a-29d3-4d9a-8bfb-b21a2265968e][@Feature engineering and selection: A practical approach for predictive models]]
+* [[id:c9b737e8-8c9c-4de1-86d4-fe424528f1e0][@Large deviations theory and statistical physics]]
+* [[id:f19f7cc4-2928-4abd-8c50-0a0790a00585][@Network theory]]
+* [[id:7ae5aa55-139a-438b-b06c-adc522e8bd0f][@Keeping my notes clean]]

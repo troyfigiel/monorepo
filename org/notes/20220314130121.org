@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       dba9e53a-cd4d-41c9-9ccd-6ac35020f420
+:mtime:    20220314130122
+:ctime:    20220314130121
+:END:
+#+title: Metaprogramming
+#+filetags: :stub:
+
+

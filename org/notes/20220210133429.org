@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       3d83ef63-d2fa-48d7-8e71-4e483c8e5c7e
+:mtime:    20220225223628
+:ctime:    20220210133429
+:END:
+#+title: Generalized mean
+
+The generalized mean, also known as Hölder mean or power mean, is defined as
+
+\[ M_p (x_1, ..., x_n) = \left( \sum_{i = 1}^n x_i^p \right)^{1 / p} \]
+
+For some special values, this leads to
+
+- [[id:78007b4e-3486-4df8-a3d3-3df9a171874f][Maximum]] \( p \rightarrow \infty \)
+- [[id:3b492b25-7d6f-4283-8899-1f0a201cb7f6][Cubic mean]] \( p = 3 \)
+- [[id:72679659-f19d-44b1-8d30-b697aca3cc53][Root mean square]] \( p = 2 \)
+- [[id:de880bd6-4759-41c6-84d5-9baeccd85fb1][Arithmetic mean]] \( p = 1 \)
+- [[id:2ba59e71-71d2-45ed-b543-dd701757bde0][Geometric mean]] \( p \rightarrow 0 \)
+- [[id:0a8c9c6d-3089-4f1f-86c0-8c05e298172e][Harmonic mean]] \( p = -1 \)
+- [[id:e0c25fbd-c8d1-48f1-a3d0-61be575c77ce][Minimum]] \( p \rightarrow - \infty \)
+
+Moreover, using [[id:9db117f9-aa26-46d5-9a88-61f29a8b5bc0][Jensen's inequality]] we may prove that
+
+\[ M_p (x_1, ..., x_n) \leq M_q (x_1, ..., x_n) \]
+
+when \( p < q \) with strict equality only for \( x_1 = x_2 = ... = x_n \).

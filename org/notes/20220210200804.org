@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5884f400-eae7-4763-8104-52ca4a141ea9
+:mtime:    20220225223629
+:ctime:    20220210200804
+:END:
+#+title: epidemiology
+

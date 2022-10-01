@@ -3,6 +3,7 @@
   services.syncthing = {
     enable = true;
     user = "troy";
+    dataDir = "/home/troy/documents";
     configDir = "/home/troy/.config/syncthing";
     overrideDevices = true;
     overrideFolders = true;

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       04782578-6681-47d0-a2b3-6c064f757673
+:ROAM_ALIASES: "Parity of a permutation"
+:mtime:    20220329215811
+:ctime:    20220329215801
+:END:
+#+title: Sign of a permutation
+#+filetags: :stub:
+
+

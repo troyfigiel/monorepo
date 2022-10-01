@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       3ae00f4c-90a2-47d7-b211-b9dc126ad334
+:mtime:    20220415113219
+:ctime:    20220324213920
+:END:
+#+title: Classical mechanics
+#+filetags: :stub:
+
+- [[id:1c9a83a4-03ce-4372-8714-072f30cca67b][Liouville's theorem]]
+- [[id:3f8bb49d-1ae9-4503-b453-6bb62eb920dc][Phase space]]
+
+There are various equivalent formulations of classical mechanics:
+- [[id:33612dde-9f43-4809-b856-5ed77fa80fb0][Lagrangian mechanics]]
+- [[id:3e9ca5de-5d87-47dd-b7de-fe7037c59803][Hamiltonian mechanics]]
+- [[id:c1314da2-92d7-49c2-a23e-d792ee17f70e][Routhian mechanics]]
+- [[id:616acd78-f63a-4321-b205-4a40bb542ba7][Hamilton-Jacobi equation]]
+- [[id:9adbdff3-fa63-4230-a7a5-eb0e3981e145][Newton's laws of motion]]
+
+Important concepts:
+- [[id:09844765-68a8-49bd-ab0d-4c316ad4dc64][Constant of motion]]
+- [[id:f4b7c101-99a3-435b-a3aa-9a32f69bc43c][Bertrand's theorem]]

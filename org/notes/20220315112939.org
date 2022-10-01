@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ac6c60bb-264c-4876-9dcc-7b364df046bd
+:mtime:    20220315123643
+:ctime:    20220315112939
+:END:
+#+title: Divergent system
+#+filetags: :stub:
+
+A divergent system is a system for which the state of the system is diverging over time from how
+the administrators originally set it up.
+
+When systems are managed by individuals by hand, they will at some point become out of sync with
+expectations.
+
+It implies bad management of a system and will lead to [[id:364c4a7f-6a3f-4d80-92cb-a8ca5b8409bf][Configuration drift]] over time. It is lacking
+[[id:4536cafc-57c4-455c-ad8b-adf0041796b7][Reproducibility]] making it hard to replicate hardware or software failures to understand where bugs
+are coming from.
+
+Examples:
+- Setting up a new operating system (that is not declarative)
+- Manually setting configurations for cloud infrastructure instead of using [[id:bff1fecf-8c11-4b63-9bbf-c65dcbf79301][Terraform]].

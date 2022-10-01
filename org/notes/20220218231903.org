@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       599f8b91-8b12-45e1-9a56-8adeb6248ebd
+:mtime:    20220325164547
+:ctime:    20220218231903
+:END:
+#+title: The uniform distribution is a maximum entropy distribution
+#+filetags: :stub:
+
+- [[id:c8791002-0d56-45e6-994f-1fa4c991cd00][Uniform distribution]]
+- [[id:13aa3d30-78dc-4ddf-9b31-ac141b90ee50][Maximum entropy probability distribution]]

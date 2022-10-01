@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ae2d8d9e-a83e-4c38-a352-74b62366c68b
+:mtime:    20220415203152
+:ctime:    20220415151008
+:END:
+#+title: Harmonic function
+#+filetags: :stub:
+
+# TODO: Finish what a harmonic function is
+A harmonic function is a function on

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       22637763-04bb-49a6-b3e4-4e700b43eddd
+:mtime:    20220405234610
+:ctime:    20220210091048
+:END:
+#+title: Central limit theorem
+#+filetags: :stub:
+
+When independent random variables are added, their normalized sum tends towards the [[id:d59f2d74-dbe3-46e3-8a5e-9849350d24bc][Normal distribution]].
+
+This can be thought of as a [[id:5146c3ff-85ed-4c9b-8111-1ccf6fe6a099][Linear approximation of the characteristic function]],
+
+- If we specifically want to know about tail behaviour, we can do better than the CLT. This is why
+  we study [[id:29e64b50-1ad0-40ea-bd7f-c093bb27449e][Large deviations theory]].
+- The CLT works well in a lot of cases, but not when the tails are particularly heavy. Sometimes
+  the CLT fails completely and we need the [[id:794e2f29-5e05-496f-bbb6-080781da9287][Generalized central limit theorem]].
+- The [[id:19986678-a78f-4fe4-8bd5-56bec4a4413f][Berry-Esseen theorem]] gives a rate of convergence for the CLT when we have finite first,
+  second and third moments.
+
+You can sometimes relax the conditions that the variables are independent or identically distributed.
+
+*Example*
+Take \( n \) copies of the [[id:47c2b9e9-180d-47c9-a5df-4c2d6adee941][Rademacher distribution]]: \( \mathbb{P}(X = 1) =
+\frac{1}{2} \) and \( X \) takes values in \( \{-1, 1\} \). Then the sum \( X_1 + ... + X_n \)
+follows closer and closer a [[id:d59f2d74-dbe3-46e3-8a5e-9849350d24bc][Normal distribution]] around 0 (it is actually a [[id:e12885a7-945e-4c5b-92ea-d90f1d750a90][Binomial distribution]]). [[id:72bc7bad-0e00-4c23-bb9b-94e13316e115][Stirling's approximation proves CLT for binomial distribution]]
+

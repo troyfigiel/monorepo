@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       041ae89d-f312-4fcc-95d5-c4b9277a0be8
+:ROAM_ALIASES: "Sigmoid function"
+:mtime:    20220320161505
+:ctime:    20220320161457
+:END:
+#+title: Standard logistic function
+#+filetags: :stub:
+
+

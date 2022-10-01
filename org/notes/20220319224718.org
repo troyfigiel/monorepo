@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       45e0863a-18e6-401d-9158-144e650b6475
+:mtime:    20220319224719
+:ctime:    20220319224718
+:END:
+#+title: Lambert W function
+#+filetags: :stub:
+
+

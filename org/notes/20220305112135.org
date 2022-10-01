@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6d684a08-12b3-43d9-9078-8a0fa6aed717
+:mtime:    20220305112136
+:ctime:    20220305112135
+:END:
+#+title: Proprietary software is unethical
+#+filetags: :stub:
+
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       71da4e47-d1ba-460f-bf15-d81de84d04a3
+:mtime:    20220225223630
+:ctime:    20220218225651
+:END:
+#+title: Cauchy distribution as ratio of normal distributions
+#+filetags: :stub:
+

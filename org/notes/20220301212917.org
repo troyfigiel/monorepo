@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       08a1795c-eb6f-4c9a-836e-bc884a6e7fab
+:mtime:    20220315135131
+:ctime:    20220301212917
+:END:
+#+title: Only running a container image can be done reproducibly
+#+filetags: :stub:
+
+For at least two reasons:
+- Timestamps change, affecting the hash
+- If they call a package manager without requiring a fixed hash for a package, they might install a
+  later version of a package
+
+This can be especially annoying if you have to build a container for a different architecture and
+either the Dockerfiles are not reproducible or somewhere along the way some package versions are different
+leading to different results or a broken container. So even building a container from the same
+commit hash, might not lead to the same image.

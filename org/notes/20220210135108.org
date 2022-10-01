@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e0c25fbd-c8d1-48f1-a3d0-61be575c77ce
+:mtime:    20220225223637
+:ctime:    20220210135108
+:END:
+#+title: Minimum
+

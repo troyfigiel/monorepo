@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a570595c-dae0-46e1-ad37-869935b2e1cd
+:mtime:    20220320131859
+:ctime:    20220320131858
+:END:
+#+title: Euler-Mascheroni constant
+#+filetags: :stub:
+
+

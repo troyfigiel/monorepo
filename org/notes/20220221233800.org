@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4b525bf1-c380-4af1-ba34-2706222b5d03
+:mtime:    20220317223620
+:ctime:    20220221233800
+:END:
+#+title: Emacs
+#+filetags: :stub:
+
+[[id:55b0bfb4-a8bd-4c50-957a-da1609d18c47][Users becoming programmers]]
+
+To enhance an Emacs package, look for a [[id:74fef4a0-3274-4a6f-949e-0858e5ace968][Hook]] that you can use to run your own code.
+
+Emacs comes with its own testing library [[id:591fefe2-02b1-489a-aa90-2cdb60482073][ERT]].

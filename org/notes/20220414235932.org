@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2c5c5bec-0677-492b-bdfb-9213e1540587
+:mtime:    20220415000051
+:ctime:    20220414235932
+:END:
+#+title: Routhian
+#+filetags: :stub:
+
+This function is used in [[id:c1314da2-92d7-49c2-a23e-d792ee17f70e][Routhian mechanics]].

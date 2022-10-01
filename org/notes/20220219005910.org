@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b1a93d7e-3724-4014-8193-25f65793f202
+:mtime:    20220225223634
+:ctime:    20220219005910
+:END:
+#+title: singular value decomposition
+#+filetags: :stub:
+

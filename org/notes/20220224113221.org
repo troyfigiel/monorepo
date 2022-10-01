@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8a1481d4-e239-46f7-929f-17eac56f2ce8
+:mtime:    20220225223632
+:ctime:    20220224113221
+:END:
+#+title: Data transformations naturally form a pipeline
+#+filetags: :stub:
+
+When we are transforming data, we often have a fixed dataset and have to apply several functions to
+this dataset. An example flow could be
+
+   1. Remove any outliers
+   2. Standardize the data
+   3. Create new features
+
+Each step works on the output of the previous step, hence forming a pipeline structure.

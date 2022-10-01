@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       86565f08-6c53-44b0-a2f8-eefb7cc36f55
+:mtime:    20220225223632
+:ctime:    20220215221411
+:END:
+#+title: MAP for uniform prior coincides with MLE
+

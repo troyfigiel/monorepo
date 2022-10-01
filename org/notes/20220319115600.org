@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d01923fd-a856-4df7-b942-93209855d190
+:mtime:    20220319115857
+:ctime:    20220319115600
+:ROAM_ALIASES: "First-class entity"
+:END:
+#+title: First-class citizen
+#+filetags: :stub:
+
+For example: [[id:0f8f1193-72fb-488b-a2e5-1fa48a2a4309][First-class functions]].

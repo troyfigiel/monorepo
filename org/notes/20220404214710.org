@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       dab5fd16-ed87-4be8-ab34-767bafd056e4
+:mtime:    20220405224048
+:ctime:    20220404214710
+:END:
+#+title: Universality
+#+filetags: :stub:
+
+Different dynamical systems behave similarly at phase transitions.

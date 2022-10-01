@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       512f3438-ed92-4c55-8799-79ab334aa3ae
+:ROAM_ALIASES: Conic
+:mtime:    20220417142250
+:ctime:    20220417142008
+:END:
+#+title: Conic section
+#+filetags: :stub:
+
+- [[id:be48ffc4-7c97-460b-9a80-c784f9dd0f8d][Hyperbola]]
+- [[id:8f5b9ed8-abcf-4813-a183-5aab5edb40bc][Parabola]]
+- [[id:e2d6af48-65f0-42eb-a915-793d8f54072e][Ellipse]]
+
+- [[id:19bbd390-7169-4288-b35a-e7945dc703d5][Conic sections are equidistant sets]]

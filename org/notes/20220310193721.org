@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       17ca841c-0a35-4c6a-b136-67def16014e4
+:mtime:    20220310193759
+:ctime:    20220310193721
+:END:
+#+title: Mapping to higher-dimensional spaces
+#+filetags: :stub:
+
+This can be extremely helpful if a mapping makes your data linearly separable. However, you should
+also be careful about [[id:b624f740-dffa-4a36-ad26-43f41f2bf387][Overfitting]].

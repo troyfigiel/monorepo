@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4973e915-3129-482a-b86b-e9e4afde8ed6
+:mtime:    20220319115707
+:ctime:    20220319115706
+:END:
+#+title: Zsh
+#+filetags: :stub:
+
+

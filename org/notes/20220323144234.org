@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3935b19b-f2c1-4524-9e48-727eaf93aecf
+:mtime:    20220323144235
+:ctime:    20220323144234
+:END:
+#+title: Bernoulli random walk
+#+filetags: :stub:
+
+

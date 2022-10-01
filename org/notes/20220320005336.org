@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b5b5d3d2-1867-4037-9369-80627577bff4
+:mtime:    20220320005337
+:ctime:    20220320005336
+:END:
+#+title: Riemann-Lebesgue lemma
+#+filetags: :stub:
+
+

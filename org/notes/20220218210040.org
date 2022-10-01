@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5d9c64c2-3bba-492e-92fc-d3b388f5f6c9
+:mtime:    20220225223630
+:ctime:    20220218210040
+:END:
+#+title: uncorrelated random variables
+

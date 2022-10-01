@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       821a8569-32e1-402f-b9bd-b905ea948e1a
+:mtime:    20220318152729
+:ctime:    20220310130103
+:ROAM_ALIASES: "Variable importance"
+:END:
+#+title: Feature importance
+#+filetags: :stub:
+
+We can use for example:
+- [[id:f66f365d-07cd-4eea-9ff1-63ae17dce55a][Random forest]]
+- [[id:732cf119-1a5d-43b3-925e-aaf87ca49ebb][Regression]]
+- [[id:e444c32f-a2d4-4ac3-9f21-586c54337b32][Correlation coefficient]]
+- [[id:34f18e61-0b6a-488d-86a7-da50be4464b5][Principal component analysis]] or [[id:4deef462-d285-40b8-98bf-79edc8ce10cc][Dimensionality reduction]]

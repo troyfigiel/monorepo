@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       dfadcadc-4a2d-441f-b30a-6dc7a031cfe1
+:mtime:    20220225223637
+:ctime:    20220218203824
+:END:
+#+title: solution to strictly convex optimization is unique if it exists
+

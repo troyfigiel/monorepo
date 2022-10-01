@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       47d76987-8935-4cde-8933-c006a7f2bb8b
+:ROAM_ALIASES: FPR
+:mtime:    20220311131810
+:ctime:    20220311131803
+:END:
+#+title: False positive rate
+#+filetags: :stub:
+
+

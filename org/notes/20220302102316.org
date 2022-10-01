@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       dd0d4a46-a4b1-49cc-a6f8-bd426f83da84
+:mtime:    20220302102556
+:ctime:    20220302102316
+:END:
+#+title: Bretschneider's formula
+#+filetags: :stub:
+
+Bretscheider's formula is used to calculate the area of a general quadrilateral. If the sides are
+\( a, b, c, d \) and \( \alpha, \gamma \) are two opposite angles, the area is given by
+
+\[
+K = \sqrt{(s-a)(s-b)(s-c)(s-d) - abcd \cdot \cos^2 \left( \frac{\alpha + \gamma}{2} \right)}
+\]
+
+[[id:1d43c499-d9cf-4690-86f9-3b59fe56cc75][Heron's formula is a special case of Bretschneider's formula]].

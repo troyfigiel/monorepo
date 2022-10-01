@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5af400fc-a90b-4f8e-8c8a-02557ca62dbf
+:mtime:    20220314202649
+:ctime:    20220211100816
+:ROAM_ALIASES: t-distribution
+:END:
+#+title: Student's t-distribution
+
+The Student's t-distribution is a family of probability distributions characterized by a single parameter \( \nu \) known as the degrees of freedom.
+
+Since the [[id:d9a653dd-4a7d-421a-82e6-b79018fc744b][mean of normally distributed samples follows the t-distribution]], the t-distribution is the basis of the [[id:bfad7134-ea06-4636-8782-b42695648dc0][Student's t-test]].

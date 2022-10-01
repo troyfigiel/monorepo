@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       8ff06eb6-5982-4f23-b6eb-1168ef63f10a
+:mtime:    20220322175824
+:ctime:    20220310142314
+:END:
+#+title: Clustering
+#+filetags: :stub:
+
+This is an example of [[id:962ca45b-3e27-464e-9ebf-2f531f1e6c76][Unsupervised learning]].
+
+For example:
+- [[id:456215fe-7115-4fab-a4dd-81caef674fa5][K-means clustering]]
+- [[id:6af4efee-9742-4336-8ccc-0cf129821d89][DBSCAN]]
+- [[id:e9e1bbbf-2934-46ad-8be1-62f58e048845][Spectral clustering]]

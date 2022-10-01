@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       17eb2ad4-82ef-42e9-a2a9-11af88f0313e
+:mtime:    20220315132420
+:ctime:    20220315132419
+:END:
+#+title: Guix build daemon
+#+filetags: :stub:
+
+

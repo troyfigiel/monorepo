@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d9a653dd-4a7d-421a-82e6-b79018fc744b
+:mtime:    20220225223636
+:ctime:    20220215230030
+:END:
+#+title: mean of normally distributed samples follows t-distribution
+

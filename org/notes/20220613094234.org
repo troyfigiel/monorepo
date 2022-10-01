@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4f921a7a-517c-403f-965b-d988c4caecd1
+:END:
+#+title: Property-based testing
+#+filetags: :stub:
+
+- [[id:d6161872-aedd-4bd8-80c6-4db88fc4d4d2][Validity testing]]
+- [[id:c04fba73-d874-473a-8f22-dfc39b749342][Metamorphic properties]]
+- [[id:5228cca6-cbb8-425a-aef5-d221da1a3f88][Inductive testing]]
+- [[id:6f2ef7e0-e57c-4fd7-b622-8f4aa944cead][Model-based properties]]
+
+In terms of implementation:
+- [[id:a15b8998-4a7d-4e66-a6e1-7bff59c08a15][Hypothesis]]
+- [[id:ca9dc6f4-50cc-4b75-8121-bf2ac9672af2][QuickCheck]]
+
+https://johanneslink.net/how-to-specify-it/

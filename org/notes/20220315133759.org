@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       471d72fd-d53a-4826-8717-6fe5d35aa5e2
+:mtime:    20220315133800
+:ctime:    20220315133759
+:END:
+#+title: Guix channel
+#+filetags: :stub:
+
+

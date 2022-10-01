@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7ef48fb2-f9cf-496d-84ff-af87d6b7189d
+:mtime:    20220319212349
+:ctime:    20220319212348
+:END:
+#+title: Lower incomplete gamma function
+#+filetags: :stub:
+
+

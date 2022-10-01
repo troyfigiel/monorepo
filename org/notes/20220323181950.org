@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       0e360b69-bbd5-42da-ad83-3946ac927887
+:mtime:    20220323182341
+:ctime:    20220323181950
+:END:
+#+title: Types of tags I use
+#+filetags: :stub:
+
+* Curation
+- Unclean
+- Stub
+
+* Note classification
+- Supplement
+- Facts
+- Index
+- Inbox

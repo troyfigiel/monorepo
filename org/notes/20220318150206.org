@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       07d393c9-9013-4f3e-8c82-5335a3300c94
+:mtime:    20220318150251
+:ctime:    20220318150206
+:END:
+#+title: Ensemble learning
+#+filetags: :stub:
+
+Examples:
+- [[id:59ee9dcc-663f-46a2-8b21-86eb1e602dbd][Bagging]]
+- [[id:361062e5-f9b5-4356-b771-8f26b90ed065][Boosting]]
+- [[id:f66f365d-07cd-4eea-9ff1-63ae17dce55a][Random forest]]

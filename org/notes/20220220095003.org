@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9d2e5fe4-39f5-4428-9248-1da52876d168
+:mtime:    20220225223633
+:ctime:    20220220095003
+:END:
+#+title: JavaScript
+#+filetags: :stub:
+

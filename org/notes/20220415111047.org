@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f1a2fd7b-c309-4b9f-a3e7-568cc14e0fee
+:mtime:    20220415112711
+:ctime:    20220415111047
+:END:
+#+title: Angular momentum
+#+filetags: :stub:
+
+[[id:c5720817-eda5-49d8-a3bc-3d22e3b29227][Casimir invariant]]

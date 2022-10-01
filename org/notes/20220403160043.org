@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       af715eb9-e9ba-448e-ba00-2732081f368b
+:mtime:    20220403160043
+:ctime:    20220403160043
+:END:
+#+title: Chemical potential
+#+filetags: :stub:
+
+

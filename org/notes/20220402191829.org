@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5ec897a6-11ac-4335-82ae-af763ede26ce
+:mtime:    20220402191830
+:ctime:    20220402191829
+:END:
+#+title: Phase rule
+#+filetags: :stub:
+
+

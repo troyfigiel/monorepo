@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b9746cce-8f8b-45a0-b62b-52e8dbcfd6a6
+:mtime:    20220302112602
+:ctime:    20220302112600
+:END:
+#+title: The moment matrix is not invertible in the presence of perfect multicollinearity
+#+filetags: :stub:
+
+

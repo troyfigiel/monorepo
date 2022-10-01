@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       2501a5ee-bc49-426d-b6d9-8884eacb8d30
+:mtime:    20220415150741
+:ctime:    20220415150740
+:END:
+#+title: Neumann boundary condition
+#+filetags: :stub:
+

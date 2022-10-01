@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ca48b792-78e1-4732-bd52-b7b993fb7f6a
+:mtime:    20220304201615
+:ctime:    20220304201608
+:END:
+#+title: Choices for variables to eliminate should be made using the training set
+#+filetags: :stub:
+
+

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e56cc269-d16f-4be3-a796-02edcb33501e
+:ROAM_ALIASES: Decimation
+:mtime:    20220406205318
+:ctime:    20220406205311
+:END:
+#+title: Downsampling
+#+filetags: :stub:
+
+

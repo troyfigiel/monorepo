@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       79288feb-a9f3-474e-879b-d1d38690b07c
+:mtime:    20220311132328
+:ctime:    20220311132322
+:END:
+#+title: Mann Whitney U statistic
+#+filetags: :stub:
+
+Used in the [[id:0314c61b-cdd6-4f56-b6de-f0dc548a6174][Mann Whitney U test]].

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1ca9c386-1817-487e-a6cb-1ffc8597af43
+:mtime:    20220417142251
+:ctime:    20220417141932
+:END:
+#+title: Geometry
+#+filetags: :stub:
+
+- [[id:28dd2199-59d1-4bdd-9f77-812d1e1df1d1][Differential geometry]]
+- [[id:512f3438-ed92-4c55-8799-79ab334aa3ae][Conic section]]

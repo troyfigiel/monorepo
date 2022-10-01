@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       8766c96e-3dcb-423e-8375-5de03708ee83
+:mtime:    20220225223632
+:ctime:    20220211100400
+:END:
+#+title: correlation coefficient is bounded by 1
+

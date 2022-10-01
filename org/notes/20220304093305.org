@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       aeaf5181-5556-4ac8-952a-046cd71eb53f
+:mtime:    20220307165829
+:ctime:    20220304093305
+:END:
+#+title: ?Raw moments of the binomial distribution
+#+filetags: :appendix:stub:
+
+

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0d49cc0e-f0a9-4104-a657-8af6787f2ad0
+:mtime:    20220225223625
+:ctime:    20220218231532
+:END:
+#+title: fingerprinting
+

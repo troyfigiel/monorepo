@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       1c4460ec-e370-448e-a961-1ab6c899fa61
+:mtime:    20220318113128
+:ctime:    20220318001230
+:END:
+#+title: Generative model
+#+filetags: :stub:
+
+A generative model learns a [[id:1aeadf16-e33b-41b9-87ab-c23e1c71c47b][Joint probability distribution]].
+
+Examples:
+- [[id:a7028c96-2a77-4626-aa2d-8e054e87985b][Naive Bayes classifier]]
+- [[id:7aed3beb-0422-48e2-96dd-c246479cecef][Linear discriminant analysis]]
+
+# TODO: Is the Buy 'till you die model an example of a generative model?

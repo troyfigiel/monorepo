@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3e05d23e-40a9-451e-9934-85ed62faae69
+:mtime:    20220307173057
+:ctime:    20220307173055
+:END:
+#+title: CI/CD
+#+filetags: :stub:
+
+

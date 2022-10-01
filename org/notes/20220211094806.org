@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a7620e8f-c352-4f83-83fe-7ef86747afc6
+:mtime:    20220225223634
+:ctime:    20220211094806
+:END:
+#+title: Cramér–Rao bound
+

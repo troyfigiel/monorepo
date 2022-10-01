@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       14b1094d-24e6-4809-89e4-5528b0efcdd8
+:mtime:    20220319110949
+:ctime:    20220319110945
+:END:
+#+title: Hyperasymptotics
+#+filetags: :stub:
+
+

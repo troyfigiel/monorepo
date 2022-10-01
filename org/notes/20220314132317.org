@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7afe5e88-5645-4674-b305-bd71262b6b7e
+:ROAM_ALIASES: OOP
+:mtime:    20220314132553
+:ctime:    20220314132317
+:END:
+#+title: Object-oriented programming
+#+filetags: :stub:
+
+

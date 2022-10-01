@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       fc020c1e-4677-4310-9775-492fcdf9b0f1
+:mtime:    20220303000904
+:ctime:    20220227162750
+:ROAM_ALIASES: "Failure rate" "Hazard rate"
+:END:
+#+title: Hazard function
+#+filetags: :stub:
+
+The hazard function describes the probability of failure in the next step of time. When the time is
+continuous, it is defined as
+
+\[
+\lambda(t) = \lim_{h \rightarrow 0^+} \frac{\mathbb{P}(t \leq T < t + h | T \geq t)}{h}
+\]
+
+
+where \( T \) is the random variable describing the time of failure.
+
+The hazard function is closely related to the [[id:9cc23a42-b037-4960-b113-74766502676b][Survival function]], because [[id:b39ee671-5675-4024-8b4e-8c0283e81b7f][The survival function is
+the exponential of the cumulative hazard function]].
+
+
+# TODO: Expand on the relation between [[id:9fb4ee22-fbdc-4a3b-9bbc-cdc107f63c88][Memoryless]] distributions and a constant hazard function.
+[[id:9fb4ee22-fbdc-4a3b-9bbc-cdc107f63c88][Memoryless]]
+
+https://en.wikipedia.org/wiki/Failure_rate

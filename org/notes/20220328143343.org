@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       291d6e23-bf39-4e16-99ac-a45daaf96adc
+:mtime:    20220328145104
+:ctime:    20220328143343
+:END:
+#+title: ?Stirling's approximation applied to the multinomial coefficients
+#+filetags: :appendix:stub:
+
+Consider a [[id:2d056106-74f8-484b-997a-3f9c270b5570][Multinomial coefficient]]
+
+\[
+\binom{n}{k_1, ..., k_m} = \frac{n!}{k_1! ... k_m!}
+\]
+
+such that \( \sum\limits_{i=1}^{m} k_i = n \). Taking the logarithm makes it easier to apply
+[[id:1f2a060d-f682-4cb3-8e84-43b0595f84a3][Stirling's approximation]]:
+
+\begin{equation*}
+\begin{align}
+\log \frac{n!}{k_1! ... k_m!}
+&= \log n! - \sum\limits_{i=1}^m \log k_i! \\
+&= n \log n - n - \sum\limits_{i=1}^m \left( k_i \log k_i - k_i \right) + O(\log n) \\
+&= n \log n - \sum\limits_{i=1}^m k_i \log k_i + O(\log n) \\
+&= n \left( \log n - \sum\limits_{i=1}^m \left( \frac{k_i}{n} \log k_i  \right) \right) + O(\log n) \\
+&= - n \sum\limits_{i=1}^m \left( \frac{k_i}{n} \log \frac{k_i}{n} \right) + O(\log n) \\
+\end{align}
+\end{equation*}
+
+Now if we denote \( n p_i = k_i \), we may suggestively write
+
+\[
+\frac{1}{n} \log \frac{n!}{k_1! ... k_m!} = S(\mathbf{p}) + O \left( \frac{\log n}{n} \right)
+\]
+
+where \( S(\mathbf{p}) \) is the [[id:6aa59df5-de7c-4fa9-8384-06ebe0cf771f][Entropy]] of a finite discrete probability distribution with probability \(
+p_i \) of seeing state \( i \).
+
+When \( n \rightarrow \infty \), the logarithm approaches \( n \) times the entropy.

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       be48ffc4-7c97-460b-9a80-c784f9dd0f8d
+:mtime:    20220417142038
+:ctime:    20220417142036
+:END:
+#+title: Hyperbola
+#+filetags: :stub:
+

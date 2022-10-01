@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c7a907c0-ec16-46ec-9926-7bdf56b3e64a
+:mtime:    20220310134325
+:ctime:    20220215222308
+:END:
+#+title: Ridge regression
+#+filetags: :stub:
+

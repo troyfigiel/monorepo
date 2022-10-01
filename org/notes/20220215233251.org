@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0314c61b-cdd6-4f56-b6de-f0dc548a6174
+:ROAM_ALIASES: "Wilcoxon rank-sum test"
+:ctime:    20220215233251
+:mtime:    20220225223625
+:END:
+#+title: Mann Whitney U test
+
+Tests whether the probability \( \mathbb{P}(X > Y) = \mathbb{P}(Y > X) \).

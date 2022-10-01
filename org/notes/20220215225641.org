@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       951c87c5-77df-4e06-9f75-f5c857208fc3
+:mtime:    20220225223633
+:ctime:    20220215225641
+:END:
+#+title: Poisson regression
+

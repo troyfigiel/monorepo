@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e2547fd7-5752-4452-89cd-1fc25b938cd8
+:mtime:    20220324232102
+:ctime:    20220324232100
+:END:
+#+title: It is easier to connect ideas to clean notes
+#+filetags: :stub:
+
+

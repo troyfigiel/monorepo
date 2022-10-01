@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       41885348-0221-4ebd-af0a-4f501ca5fa96
+:mtime:    20220325230314
+:ctime:    20220325223446
+:END:
+#+title: Stable distribution
+#+filetags: :stub:
+
+A distribution is stable if a linear combination of two independent random variables with this
+distribution has the same distribution up to location and scaling.
+
+This defines a four-parameter family of distributions with characteristic function
+
+\begin{equation*}
+\varphi(t; \alpha, \beta, c, \mu) = \exp \left( it \mu - |ct|^{\alpha} (1 - i \beta \text{sgn}(t) \Phi) \right)
+\end{equation*}
+
+where
+
+\begin{equation*}
+\Phi =
+\begin{cases}
+\tan \left( \frac{\pi \alpha}{2} \right) & \alpha \neq 1 \\
+-\frac{2}{\pi} \log |ct| & \alpha = 1
+\end{cases}
+\end{equation*}
+
+Examples are:
+- [[id:b0d3cec8-6efb-48d9-9087-3587954884d7][Cauchy distribution]] for \( (\alpha, \beta, c, \mu) = (1, 0, 1, 0) \)
+- [[id:4ec68f86-9801-4464-9114-5c9a2704cc42][Lévy distribution]] for \( (\alpha, \beta, c, \mu) = (1/2, 1, 1, 0) \)
+- [[id:d59f2d74-dbe3-46e3-8a5e-9849350d24bc][Normal distribution]] for \( (\alpha, \beta, c, \mu) = (2, 0, 1, 0) \)
+
+The stable distribution plays an important role in the [[id:794e2f29-5e05-496f-bbb6-080781da9287][Generalized central limit theorem]].

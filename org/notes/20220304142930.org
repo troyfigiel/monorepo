@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6d6f0a37-4e58-4232-ad5d-7108467beec5
+:mtime:    20220307165750
+:ctime:    20220304142930
+:END:
+#+title: ?Variance of the binomial distribution
+#+filetags: :appendix:stub:
+
+

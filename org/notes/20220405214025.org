@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0dd63aa6-e7e4-4332-8d6a-9b5f24e7d6ce
+:mtime:    20220405214941
+:ctime:    20220405214025
+:END:
+#+title: Macrostate
+#+filetags: :stub:
+
+Macrostates: [[id:ba51eb1b-9a60-4edc-84f0-731a62ab6e34][Pressure]], [[id:7f04d024-7284-4dfa-8bcb-444155951a4c][Volume]], [[id:b5ebcb88-3b48-4c71-8048-ba19cb0a52ac][Temperature]], [[id:09efc736-73a1-4855-9b36-cc1c2b8ecec1][Thermodynamics]]

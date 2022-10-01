@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a6be1384-4648-4096-b945-80fd1597c118
+:mtime:    20220330233028
+:ctime:    20220330233028
+:END:
+#+title: Yukawa potential
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       49363f0e-cc8a-4870-a6e6-6c03e18b6cd8
+:mtime:    20220404201741
+:ctime:    20220404201404
+:END:
+#+title: Reversible Markov chain
+#+filetags: :stub:
+
+[[id:0c44a67c-cf04-4fd2-bd4c-33c7a67037b0][Kolmogorov's criterion]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7ade1875-ee8b-464c-958f-312358e52fd0
+:mtime:    20220301172923
+:ctime:    20220301172919
+:END:
+#+title: ANOVA is a special case of linear regression
+#+filetags: :stub:
+
+

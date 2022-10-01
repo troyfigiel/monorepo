@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4deef462-d285-40b8-98bf-79edc8ce10cc
+:mtime:    20220313153541
+:ctime:    20220313153303
+:END:
+#+title: Dimensionality reduction
+#+filetags: :stub:
+
+[[id:33a65cca-10b3-4745-9f81-caa8640d5d09][Curse of dimensionality]]: High dimensions are often sparse
+# TODO: Show example where high dimensions are sparse. Volume and area of spheres?
+
+Examples:
+- [[id:34f18e61-0b6a-488d-86a7-da50be4464b5][Principal component analysis]]
+- [[id:90c60046-2523-43b2-a709-b3221b3456ee][UMAP]]
+- [[id:3d9fb638-d7c9-40e2-a97e-54a330489cea][t-SNE]]
+- [[id:0e4b803b-933e-4849-9703-e986b797d0a0][Autoencoder]]

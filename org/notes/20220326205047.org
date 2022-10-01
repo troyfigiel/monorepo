@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0226f573-54ed-403b-9ddd-7ad78c247baa
+:mtime:    20220326223111
+:ctime:    20220326205047
+:END:
+#+title: MathML
+#+filetags: :stub:

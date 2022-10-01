@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       04ff0fb7-caf1-41d7-a384-7aeb81949c27
+:ROAM_ALIASES: DSL
+:ctime:    20220220095028
+:mtime:    20220314133219
+:END:
+#+title: Domain-specific language
+#+filetags: :stub:
+
+A domain-specific language (DSL) is a programming language specialized to a specific application domain.
+
+Examples include:
+- [[id:450c7a92-8da9-4ff1-9e01-168f6c83ffbe][R]]
+
+Languages in the [[id:c13150c6-8c19-4bc5-ae6e-d1deb78fcc32][Lisp]] family are also well-known to be able to easily create domain-specific
+languages due to their [[id:b91e6c3a-1239-476f-ad1f-518ff928bffc][Homoiconicity]].

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       474eb746-d6ff-4e70-a8fd-eadc2eeca52d
+:mtime:    20220405235409
+:ctime:    20220405235408
+:END:
+#+title: Riemannian metric
+#+filetags: :stub:
+
+

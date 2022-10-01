@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       448c609f-d2cc-4c62-b87a-c95f360755d6
+:mtime:    20220301171137
+:ctime:    20220301171134
+:END:
+#+title: Mood's median test
+#+filetags: :stub:
+
+

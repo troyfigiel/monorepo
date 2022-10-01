@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       fa6cb1c4-3049-4876-8fde-bff3c295607f
+:mtime:    20220327165148
+:ctime:    20220327165145
+:END:
+#+title: Coupon collector's problem
+#+filetags: :stub:
+
+

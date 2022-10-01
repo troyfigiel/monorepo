@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7211907a-0be9-4a92-818c-24ba8dc325dd
+:mtime:    20220225223630
+:ctime:    20220211094336
+:END:
+#+title: maximum a posteriori estimate
+
+The maximum a posteriori probability estimate (MAP) is an estimate of an unobserved quantity based on empirical data. It is equal to the mode of the posterior distribution.
+
+It is closely relation to the maximum likelihood estimate (MLE), because the [[id:86565f08-6c53-44b0-a2f8-eefb7cc36f55][MAP with uniform prior coincides with the MLE]].

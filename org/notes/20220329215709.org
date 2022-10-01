@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0668efd3-f400-4a05-b8dd-dbe321c52895
+:mtime:    20220329215709
+:ctime:    20220329215709
+:END:
+#+title: Normal subgroup
+#+filetags: :stub:
+
+

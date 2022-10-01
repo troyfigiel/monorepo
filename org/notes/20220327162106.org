@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d1af2890-676e-47cb-a7a3-1c0b06f08620
+:mtime:    20220327163026
+:ctime:    20220327162106
+:END:
+#+title: Index notes should go down two levels of abstraction
+#+filetags: :stub:

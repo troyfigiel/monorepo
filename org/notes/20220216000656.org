@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       88147f30-2389-48f5-9406-255d16d16171
+:mtime:    20220225223632
+:ctime:    20220216000656
+:END:
+#+title: standard deviation
+

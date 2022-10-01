@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       acf51e9a-5aad-4169-aa48-bf675a0b3dd3
+:mtime:    20220307152416
+:ctime:    20220307152415
+:END:
+#+title: Gamma distribution
+#+filetags: :stub:
+
+

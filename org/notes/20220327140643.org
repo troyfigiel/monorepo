@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0bc7a71f-2acc-4131-a38d-5275078cd7cd
+:mtime:    20220327162949
+:ctime:    20220327140643
+:END:
+#+title: Cantor distribution
+#+filetags: :stub:

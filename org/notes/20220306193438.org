@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       dee1e063-0fc2-4328-bb64-9a08f7f62a3a
+:mtime:    20220306193808
+:ctime:    20220306193438
+:END:
+#+title: Lorenz system
+#+filetags: :stub:
+
+The Lorenz system is a system of differential equations of the form
+
+\begin{equation*}
+\begin{align}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (x-y) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= x(\rho - z) - y \\
+\frac{\mathrm{d}z}{\mathrm{d}t} &= xy - \beta z
+\end{align}
+\end{equation*}
+
+The Lorenz system is particularly important in [[id:6cce58a7-da3e-4116-b36f-e2e1be600607][Chaos theory]]
+
+https://en.wikipedia.org/wiki/Lorenz_system

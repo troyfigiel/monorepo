@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       522261cb-2182-4c15-b8d7-e8e6aea4b3a8
+:mtime:    20220416120024
+:ctime:    20220416115919
+:END:
+#+title: Action-angle coordinate
+#+filetags: :stub:
+
+The action coordinates are [[id:0e7cee73-72e6-4c18-9173-592cd8f90582][Adiabatic invariants]].

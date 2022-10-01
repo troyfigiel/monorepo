@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       2113a6f8-315e-49f7-a25d-a58742a0acd2
+:mtime:    20220225223626
+:ctime:    20220218234418
+:END:
+#+title: Fubini-Study metric
+#+filetags: :stub:
+
+* TODO
+Work out relation to [[id:86ee58b9-fb96-4fd9-9d64-2bf35dbdbca9][Fisher information]] metric

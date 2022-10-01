@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ba51eb1b-9a60-4edc-84f0-731a62ab6e34
+:mtime:    20220324220353
+:ctime:    20220324214056
+:END:
+#+title: Pressure
+#+filetags: :stub:
+
+- [[id:96962a21-b199-4a3a-bf45-ae4d7ac69143][Ideal gas law]]
+- [[id:f9a989b2-b9e4-4611-a3ea-242e9f8e298d][Bernoulli's equation]]

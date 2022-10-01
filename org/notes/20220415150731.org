@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7674c5a7-020d-4dc6-9195-9ac5f842cbcb
+:mtime:    20220415203155
+:ctime:    20220415150731
+:END:
+#+title: Dirichlet boundary condition
+#+filetags: :stub:
+
+- [[id:ae2d8d9e-a83e-4c38-a352-74b62366c68b][Harmonic function]]

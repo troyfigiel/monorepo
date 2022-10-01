@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6a12d478-84a3-408c-8b80-62a940731294
+:mtime:    20220310192834
+:ctime:    20220310142350
+:END:
+#+title: Ranking
+#+filetags: :stub:
+
+Useful for search engines or if you need to predict what to maintain. For example, machine failures.

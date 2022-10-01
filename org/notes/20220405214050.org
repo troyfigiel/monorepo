@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       812456fe-443a-420f-96f2-60d197214a3d
+:mtime:    20220405214931
+:ctime:    20220405214050
+:END:
+#+title: Microstate
+#+filetags: :stub:
+
+Microstates: [[id:25964f41-1d24-49cd-9a0a-d302913ffd85][Momenta]], positions, [[id:a00e92f2-6cae-4515-bad8-264c6bc9dc55][Hamiltonian]], [[id:3e9ca5de-5d87-47dd-b7de-fe7037c59803][Hamiltonian mechanics]]

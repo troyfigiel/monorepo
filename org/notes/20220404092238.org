@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       b50d40bb-5519-419f-9861-6e9059bb94fb
+:ROAM_ALIASES: "Dots and dividers method" "Balls and bars method"
+:mtime:    20220404093446
+:ctime:    20220404092238
+:END:
+#+title: Stars and bars method
+#+filetags: :stub:
+
+Can be used to prove how many positive or non-negative integers tuples exist whose sum is equal to
+a specified number.
+
+For example, \( x_1 + x_2 + x_3 + x_4 = 10 \) and we are looking at non-negative integers, then
+there are
+
+\[
+\binom{10+4-1}{4-1} = 286
+\]
+
+arrangements.
+
+For only positive integers, we have only
+
+\[
+\binom{10-1}{4-1} = 84
+\]
+
+arrangements.
+
+# TODO: Is this related to the number theoretical partition function?

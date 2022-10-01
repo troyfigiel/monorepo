@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       00fa9c4b-ce93-43a3-b0d8-a99f2aad4625
+:mtime:    20220403162653
+:ctime:    20220210195925
+:END:
+#+title: Markov chain
+#+filetags: :unclean:
+
+A Markov chain is a stochastic model where the probability of an event occurring only depends on the current state.
+
+Finite-dimensional Markov chains can be described through finite-dimensional [[id:e7bf4db5-402c-405e-a03d-be68a143ee91][Representation theory]]
+using a [[id:f87cfbed-01da-4bcc-b89f-6a7510e0f213][Stochastic matrix]].
+
+Markov chains satisfy a form of memorylessness, often called the [[id:34e88da2-9935-4d9e-9cc1-a873e86de7fa][Markov property]].
+
+We can broadly classify Markov chains in four classes based on whether time is discrete or
+continuous and based on whether the state space is countable or continuous.
+
+Markov chains often have a [[id:7fb9079c-7485-4a0e-a1a7-dea306afa992][Steady state distribution]], but not always. This can happen for [[id:e00e1ae4-d048-468f-9b2f-e88b6c9caa31][Periodic Markov chains]] for example.
+
+Another class of Markov chains are [[id:25f8ccb7-2c86-46d1-bef3-c3650dd3c567][Terminating Markov chain]].
+
+Markov chains appear in many different fields such as
+- [[id:09efc736-73a1-4855-9b36-cc1c2b8ecec1][Thermodynamics]]
+- [[id:88c2bef4-3272-46ac-96a5-fe138e9f4ade][Population dynamics]]
+- [[id:5884f400-eae7-4763-8104-52ca4a141ea9][Epidemiology]]
+- [[id:09ea6533-7613-4979-9efc-88e0f99bd5f0][Information theory]]
+- [[id:dcf532f4-7c3d-4997-9391-8ae3613bcb12][Natural language processing]]
+
+Also: [[id:dc2c08c0-c932-428d-bbda-9cb134f60191][Birth-death process]] for a continuous chain.
+
+Interesting example: [[id:3a022c2c-ccad-4f94-9f06-a985ff3a4c76][Ehrenfest chain]]
+
+Interesting reference: https://www.cs.rpi.edu/~szymansk/theses/pickering_com.16.pdf

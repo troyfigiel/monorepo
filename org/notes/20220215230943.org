@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       42c5abef-3eee-4bf8-9466-6d7376d9fac3
+:mtime:    20220225223628
+:ctime:    20220215230943
+:END:
+#+title: prior information
+

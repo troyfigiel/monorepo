@@ -1,0 +1,68 @@
+:PROPERTIES:
+:ID:       bafc5759-1098-48b7-b9ff-ec458d629254
+:mtime:    20220406204318
+:ctime:    20220318231524
+:ROAM_ALIASES: "Asymptotic expansion"
+:END:
+#+title: Asymptotic series
+#+filetags: :stub:
+
+Asymptotic series often arise when we are [[id:958fd601-f3ed-4fe8-a697-aa6c2d13835a][Extracting asymptotic series from integrals]]. However, the
+definitions encompass a broader range of applications, for example including [[id:c171a7c6-2458-4b02-855c-1ef007c56f49][Asymptotic series of sums]].
+
+# TODO: How to make precise the optimal number of terms?
+[[id:885ee530-1b47-484c-8e99-9eb900a9f186][Convergent series versus asymptotic series]]. Also, there is often an optimal number of terms to take
+in an asymptotic expansion.
+
+It is common to calibrate a new technique against exactly solvable problems that exhibit a desired behaviour.
+
+Although generally things will work out, one has to be careful about [[id:0348be40-2e97-4b59-8768-0b9ed10771eb][Uniqueness of asymptotic series]].
+
+For a list of common asymptotic series, see [[id:7fa3925a-0e4c-4bf8-9478-53a90ba6388a][!Asymptotic series]].
+
+* Formal definition
+# TODO: This needs significant cleaning
+1)  \( f(x) \sim g(x) \) means \( f \) is asymptotic to \( g \). So it means
+
+  \[ \lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = 1 \] for some point of interest \( x_0 \).
+
+  Examples:
+  - Small angle approximation: \( \sin x \sim x \) as \( x \rightarrow 0 \). Similarly \( \sin x
+    \sim x - \frac{x^3}{3!} \)
+
+    But if we include two or more terms, all of them should be correct. We cannot just say \( \sin x \sim x - 117 x^3 \)
+
+2) \( f(x) = O(g(x)) \) means \( \frac{f(x)}{g(x)} \) is bounded as \( x \rightarrow x_0
+   \). Useful for orders of magnitude, if we don't care about the prefactor. For example, \( \sin x = O(x) \) or \( \sin x = x + O(x^3) \). This is known as the [[id:1d945ae0-1c90-4284-9bdc-504407992fc3][Big O notation]].
+
+3) \( f(x) = o(g(x)) \) or more suggestively \( f(x) \ll g(x) \) as \( x \rightarrow x_0 \) means
+
+\[ \lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = 0 \]
+
+For example, \( \sin x = o(1) \) as \( x \rightarrow 0 \). In other words, \( f \) tends to 0
+faster than \( g \) does. This is known as the [[id:10ba91a9-2308-472a-b8be-e9c23453efd4][Little o notation]].
+
+4) A series \( \{ \phi_j(x) \} \) is called an "asymptotic sequence" as \( x \rightarrow x_0 \) if
+   \( \phi_{j+1}(x) \ll \phi_j(x) \) as \( x \rightarrow x_0 \). For example,
+
+   \[ \frac{1}{x} \gg \frac{1}{x^2} \gg \frac{1}{x^3} \gg ... \text{ as }x \rightarrow \infty \]
+
+5) \( f(x) \) has the asymptotic expansion
+
+   \[ f(x) \sim a_1 \phi_1(x) + a_2 \phi_2(x) + ... \text{ as } x \rightarrow x_0 \]
+
+if \( \{ \phi_j(x) \} \) is an asymptotic sequence and
+
+\[ f(x) - \sum\limits_{j=1}^n a_j \phi_j(x) \ll \phi_n(x) \]
+
+for each \( n = 1, 2, ... \). Equivalently with the partial sum notation, \( S_n(x) =
+\sum\limits_{j=1}^n a_j \phi_j(x) \) and \( R_n(x) = f(x) - S_n(x) \), then \( R_n(x) \ll
+\phi_n(x)\). (I personally think this definition is clearer than the one before.)
+
+# TODO: Make a separate note for this? This is pretty straightforward though.
+This implies additionally that \( R_n(x) = O(\phi_{n+1}(x)) \).
+
+* References
+- https://www.youtube.com/watch?v=KZsk8B_z8pI&list=PL5EH0ZJ7V0jV7kMYvPcZ7F9oaf_YAlfbI&index=1
+- Bender and Orszag
+- Olver

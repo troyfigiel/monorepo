@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1e406603-bebf-48c7-a4e8-38fc9883cfa0
+:mtime:    20220310194437
+:ctime:    20220310194406
+:END:
+#+title: Margin
+#+filetags: :stub:
+
+In a [[id:ad3e4599-2e42-4f62-a937-85f26386d57f][Classification]] problem, the margin of a data point is the distance from the data point to the [[id:2b918933-b437-4bde-a384-bdfe2d108959][Decision boundary]].

@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       9048c6ad-ed34-4eaa-a818-c161c7317e7f
+:mtime:    20220302211351
+:ctime:    20220218202620
+:ROAM_ALIASES: R^2 "R squared"
+:END:
+#+title: Coefficient of determination
+
+The coefficient of determination is often used as a measure of [[id:4a4d6889-94e0-4d58-a6ab-2d69f44b489a][Goodness-of-fit]]. The most general
+definition of \( R^2 \) for a data set \( (y_1, ..., y_n) \) together with predicted values \(
+(\hat{y}_1, ..., \hat{y}_n) \) is as
+
+\[
+R^2 = 1 - \frac{\sum\limits_{i=1}^n (y_i - \hat{y}_i)^2}{\sum\limits_{i=1}^n (y_i - \bar{y})^2}
+\]
+
+with \( \bar{y} \) the sample mean.
+
+The numerator can be understood as the sum of squares of residuals whereas the denominator is the
+total sum of squares.
+
+* OLS
+Although \( R^2 \) could theoretically become negative if a model performs worse than estimating
+the mean for every point in the sample, [[id:4b4f5a43-e71b-407e-a031-7eb9b4eca111][R^2 is always non-negative for OLS with an intercept]].
+
+[[id:7fcc1e26-8e19-4fd6-8d93-4d41ef049b34][In OLS the value of R^2 is the amount of explained variance]].
+
+* Generalizations
+Since [[id:b9c0714a-c88b-467c-a7f3-70092432673a][Adding more regressors can never decrease R^2]], often an [[id:1334aadb-9a6c-47aa-9afb-72a8ecee65a3][Adjusted R^2]] is defined to avoid a
+[[id:23877ece-c637-4956-9cc6-1f1231f8c780][Kitchen sink regression]].
+
+* References
+https://en.wikipedia.org/wiki/Coefficient_of_determination

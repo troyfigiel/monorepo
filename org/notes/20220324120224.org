@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f08360d3-5d10-4afd-a8dd-3025531a1ea8
+:mtime:    20220324120226
+:ctime:    20220324120224
+:END:
+#+title: Percolation theory
+#+filetags: :stub:
+
+

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       dc56dc61-ee77-4592-a376-82e9cf545fa5
+:mtime:    20220309182354
+:ctime:    20220215212810
+:END:
+#+title: ?The exponential distribution belongs to the exponential family
+

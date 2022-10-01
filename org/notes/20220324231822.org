@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e4447d54-f674-456b-9c1d-d8208d5f6ea2
+:mtime:    20220324232153
+:ctime:    20220324231822
+:END:
+#+title: Clean notes are easier to find back
+#+filetags: :stub:
+
+A logical structure to the context of a note makes it easier to find back using a variety of tools.

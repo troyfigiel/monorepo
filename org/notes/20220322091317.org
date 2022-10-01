@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       96e15259-b935-45f4-acdc-5d99d4d159eb
+:mtime:    20220322091319
+:ctime:    20220322091317
+:END:
+#+title: Asymptotic sequence
+#+filetags: :stub:
+
+

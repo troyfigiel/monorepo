@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a7028c96-2a77-4626-aa2d-8e054e87985b
+:mtime:    20220318001407
+:ctime:    20220318001406
+:END:
+#+title: Naive Bayes classifier
+#+filetags: :stub:
+
+

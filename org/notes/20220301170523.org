@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       db9f8b18-736b-446f-bcaa-c85d0d30b631
+:mtime:    20220301170525
+:ctime:    20220301170523
+:END:
+#+title: Fisher's exact test
+#+filetags: :stub:
+
+

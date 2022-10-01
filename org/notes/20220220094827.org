@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d7e23209-2ebd-481d-9a2d-88ff779056f0
+:mtime:    20220225223636
+:ctime:    20220220094827
+:END:
+#+title: Bash
+#+filetags: :stub:
+

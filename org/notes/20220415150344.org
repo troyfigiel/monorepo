@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1d166e46-73ce-45d8-8c0b-69ceef1c9852
+:mtime:    20220415150911
+:ctime:    20220415150344
+:END:
+#+title: Green's function
+#+filetags: :stub:
+
+- [[id:8e2f769f-810d-4703-bf60-fcf0949275a6][Dirac delta function]]

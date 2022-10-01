@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9a7a476d-e439-4555-8829-c4f09603bf77
+:mtime:    20220303175049
+:ctime:    20220303173013
+:END:
+#+title: Example - pairing for covariant normal distribution is more powerful
+#+filetags: :stub:
+
+# TODO: Randomly generate some data and show that pairing does give significance, but unpaired not

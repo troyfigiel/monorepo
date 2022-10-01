@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       b9dc555c-b2f0-45e6-ab67-0c153a88bb8d
+:ROAM_ALIASES: "likelihood function"
+:ctime:    20220223094325
+:mtime:    20220225223635
+:END:
+#+title: likelihood
+#+filetags: :stub:
+
+* TODO
+Refer to
+- [[id:0b8bbf87-329a-4705-b140-8701f5dfd15d][log-likelihood]]
+- [[id:16836f9e-bf84-47d0-af9a-a7ab20822527][likelihood principle]]
+- [[id:9c2ae31a-b983-406f-bc5d-86164a94105d][likelihood ratio]]
+- [[id:86ee58b9-fb96-4fd9-9d64-2bf35dbdbca9][Fisher information]]

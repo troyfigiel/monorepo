@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       dcee4e89-4640-47f3-a373-246e0410fe29
+:mtime:    20220225223637
+:ctime:    20220220094955
+:END:
+#+title: Java
+#+filetags: :stub:
+

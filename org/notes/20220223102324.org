@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bdaa634b-e222-4fbe-8c3c-03ac982aa6bc
+:mtime:    20220225223635
+:ctime:    20220223102324
+:END:
+#+title: Newton's method
+#+filetags: :stub:
+
+

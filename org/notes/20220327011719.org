@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       12da4056-0099-4244-8d08-2df14c599b04
+:mtime:    20220327011719
+:ctime:    20220327011719
+:END:
+#+title: Maxwell-Boltzmann distribution
+#+filetags: :stub:
+
+

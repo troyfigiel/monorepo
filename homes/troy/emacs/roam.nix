@@ -1,5 +1,5 @@
 let
-  orgRoamDirectory = "/home/troy/projects/private/nixos-config/writings/notes";
+  orgRoamDirectory = "/home/troy/projects/private/nixos-config/org/notes";
 in {
   programs.emacs.init.usePackage = {
     org-roam = {

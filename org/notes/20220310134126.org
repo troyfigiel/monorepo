@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       547e3074-6e8e-4990-a184-c336c37b63ea
+:ROAM_ALIASES: GLM
+:mtime:    20220310134129
+:ctime:    20220310134126
+:END:
+#+title: Generalized linear model
+#+filetags: :stub:
+
+

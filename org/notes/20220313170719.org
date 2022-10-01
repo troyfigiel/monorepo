@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       961b0d54-650d-4517-bc88-b4cc63a3b771
+:mtime:    20220313170720
+:ctime:    20220313170719
+:END:
+#+title: Contingency table
+#+filetags: :stub:
+
+

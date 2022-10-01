@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       01cb19cb-7919-4dcb-8b20-8fd00027b442
+:mtime:    20220328134134
+:ctime:    20220223222455
+:END:
+#+title: Compound Poisson distribution
+#+filetags: :stub:
+
+Let \( X_{1}, X_{2}, ... \) be independent, identically-distributed random variables and \( N \sim
+\mathrm{Pois}(\lambda) \).
+
+The random variable \( Y = \sum\limits_{n=1}^N X_n \) is said to follow a compound Poisson
+distribution.
+
+The compound Poisson distribution is an example of a [[id:acc8eb9b-8e48-4d89-9c1e-daf1704052e4][Compound probability distribution]]

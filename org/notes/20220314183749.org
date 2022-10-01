@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       cfb28783-67c7-4e53-a883-fbe0e3a4ecc6
+:mtime:    20220314212208
+:ctime:    20220314183749
+:END:
+#+title: !Gini coefficient per distribution
+#+filetags: :facts:stub:
+
+* Point mass distribution
+
+\[
+G = 0
+\]
+
+See:
+- [[id:a6c57baa-f4ff-490a-8ad3-cec129dc5833][?The point mass distribution is the only distribution with vanishing Gini coefficient]].
+
+* Exponential distribution
+
+\[
+G = \frac{1}{2}
+\]
+
+See:
+- [[id:8bff1ec3-79a6-44ef-8ac6-b7cce2b3723a][?Gini coefficient of the exponential distribution]]
+
+* Uniform distribution
+
+\[
+G = \frac{b-a}{3(b+a)}
+\]
+
+See:
+- [[id:03e39316-6ea3-4ef0-b3aa-f21ce867ed46][?Gini coefficient of the uniform distribution]]

@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       a59560f9-96e6-4036-83be-843bda2a18cd
+:mtime:    20220327155555
+:ctime:    20220309181806
+:END:
+#+title: !Distributions in the exponential family
+#+filetags: :facts:stub:
+
+* [[id:a52537ca-6373-4385-a4fd-0a0777e95dd7][Bernoulli distribution]]
+- [[id:d2bea082-0b58-40a4-bfe9-59e9d6473649][?The Bernoulli distribution belongs to the exponential family]]
+
+* [[id:17bb1860-bdbf-4dc5-a981-1aff7f6086bd][Beta distribution]]
+- [[id:3a4cd3b6-a2ef-434b-91c1-8979ccd40e65][?The beta distribution belongs to the exponential family]]
+
+* [[id:e12885a7-945e-4c5b-92ea-d90f1d750a90][Binomial distribution]]
+- [[id:a7b5671a-b7ce-44c0-b7a4-edf767650b79][?The binomial distribution belongs to the exponential family]]
+
+* [[id:107a2208-37c7-41b8-a4ff-dac2157c83ef][Chi-squared distribution]]
+- [[id:2e7f7e6b-2776-4fa2-a244-210389b8ffed][?The chi-squared distribution belongs to the exponential family]]
+
+* [[id:4b4a04e8-a6f4-47c4-afbd-b501cb1ebb35][Exponential distribution]]
+- [[id:dc56dc61-ee77-4592-a376-82e9cf545fa5][?The exponential distribution belongs to the exponential family]]
+
+* [[id:acf51e9a-5aad-4169-aa48-bf675a0b3dd3][Gamma distribution]]
+- [[id:68b55e53-6a20-4707-ab4d-04f6eaf467c2][?The gamma distribution belongs to the exponential family]]
+
+* [[id:2658d0d8-16bb-471c-ba12-405a767d52c6][Negative binomial distribution]]
+- [[id:d84ffd3c-1768-4c78-9a04-bde6b1eef9ed][?The negative binomial distribution belongs to the exponential family]]
+
+* [[id:d59f2d74-dbe3-46e3-8a5e-9849350d24bc][Normal distribution]]
+- [[id:24270070-d7ad-4cc1-be28-0ac2b231daae][?The normal distribution belongs to the exponential family]]
+
+* [[id:96bf43fa-e9ce-4019-9c9b-b80693a1b951][Pareto distribution]]
+- [[id:16fb9c8c-ccb1-4416-b052-fd0c48e77d9e][?The Pareto distribution belongs to the exponential family]]
+
+* [[id:38725721-c78d-40ae-b54a-37b679c574ca][Poisson distribution]]
+- [[id:731306b1-9ec8-44ed-8fe6-7c795ef41183][?The Poisson distribution belongs to the exponential family]]
+

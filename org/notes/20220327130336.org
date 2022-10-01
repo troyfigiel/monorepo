@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       de8c8963-aa1e-4d99-8da5-9bad5b187d35
+:mtime:    20220327130356
+:ctime:    20220327130336
+:END:
+#+title: Dirac comb
+#+filetags: :stub:
+
+This is the [[id:dcba589e-8195-4347-9be6-fb8ec12a9a7b][Wrapped distribution]] of the [[id:6bd012d7-b585-48d7-8096-a28770cd7fcf][Dirac delta distribution]].

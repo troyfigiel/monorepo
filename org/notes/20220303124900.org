@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4adacf4a-fe73-4431-8123-04750c4b1e34
+:mtime:    20220303125107
+:ctime:    20220303124900
+:END:
+#+title: Timestamps are meaningless for reproducible builds
+#+filetags: :stub:
+
+# TODO: Read the link and write out some ideas here
+https://reproducible-builds.org/docs/timestamps/

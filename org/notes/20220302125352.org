@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e444c32f-a2d4-4ac3-9f21-586c54337b32
+:mtime:    20220302125353
+:ctime:    20220302125352
+:END:
+#+title: Correlation coefficient
+#+filetags: :stub:
+
+

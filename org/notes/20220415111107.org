@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       f751dc77-d667-4fea-b973-29917b4f38c2
+:mtime:    20220415111655
+:ctime:    20220415111107
+:END:
+#+title: Laplace-Runge-Lenz vector
+#+filetags: :stub:
+
+This vector is a [[id:09844765-68a8-49bd-ab0d-4c316ad4dc64][Constant of motion]] when the only acting force is an inverse-square, central force.
+
+It is defined as
+
+\[
+\mathbf{A} = \mathbf{p} \times \mathbf{L} - m k \hat{\mathbf{r}}
+\]
+
+The [[id:9e573b4b-bd57-41c6-9cad-3f28a281150d][Apsidal precession]] of planetary orbits was used to verify the theory of [[id:fc6069cc-e83a-4b86-a72c-f906f7132427][General relativity]]
+which predicts a small effective inverse-cubic correction to the classical inverse-square force.

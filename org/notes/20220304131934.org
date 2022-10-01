@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       5ed1f03b-e82a-41c8-af7f-2933c516d0fb
+:mtime:    20220304132728
+:ctime:    20220304131934
+:END:
+#+title: Heat equation
+#+filetags: :stub:
+
+The heat equation takes the form
+
+\[
+\frac{\partial u}{\partial t} = \Delta u
+\]
+
+# TODO: Link to random walks
+[[id:3e6ed4fc-8d04-4e28-880a-09511262e563][Random walk]]
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       059c23bc-f98b-4b51-95cc-90eda0a2369c
+:mtime:    20220328134130
+:ctime:    20220328133727
+:END:
+#+title: Conjugate prior
+#+filetags: :stub:
+
+

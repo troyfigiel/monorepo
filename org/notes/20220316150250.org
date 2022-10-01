@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9671a5bc-6387-46ad-ac0b-fb65b87f7285
+:mtime:    20220316150251
+:ctime:    20220316150250
+:END:
+#+title: Shapley value
+#+filetags: :stub:
+
+

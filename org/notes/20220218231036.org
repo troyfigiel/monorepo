@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       dd646073-93ac-436c-bd9d-3b343ee41d8b
+:mtime:    20220303180634
+:ctime:    20220218231036
+:END:
+#+title: Content-addressable storage
+#+filetags: :stub:
+
+Content-addressable storage is a way to store data so it can be retrieved based on its content, not by its location in a file system. A standard way of implementing such storage, is by using a hash function.

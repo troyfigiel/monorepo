@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e0094864-3af9-4a48-8a41-d0e99f81615c
+:mtime:    20220326005355
+:ctime:    20220210091919
+:END:
+#+title: Probability density
+#+filetags: :stub:
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1d43c499-d9cf-4690-86f9-3b59fe56cc75
+:mtime:    20220302102258
+:ctime:    20220302102238
+:END:
+#+title: Heron's formula is a special case of Bretschneider's formula
+#+filetags: :stub:
+
+Simply set \( d = 0 \).

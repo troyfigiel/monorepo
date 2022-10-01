@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f2405e57-7c29-4a39-a0a8-2c651a44933c
+:mtime:    20220320152350
+:ctime:    20220320152349
+:END:
+#+title: ?Characteristic function of the logistic distribution
+#+filetags: :stub:
+
+

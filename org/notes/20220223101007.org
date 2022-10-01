@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6dec1cf8-10b6-4ddc-9314-a9877f03ba47
+:ROAM_ALIASES: "Fisher's scoring"
+:ctime:    20220223101007
+:mtime:    20220310134508
+:END:
+#+title: Scoring algorithm
+#+filetags: :stub:
+
+The scoring algorithm is a form of [[id:bdaa634b-e222-4fbe-8c3c-03ac982aa6bc][Newton's method]] used to solve maximum likelihood equations numerically.

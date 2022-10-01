@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ca32cd08-e5bf-4658-8348-eb1235f3b9cf
+:mtime:    20220404221002
+:ctime:    20220404221001
+:END:
+#+title: Latent heat
+#+filetags: :stub:
+
+

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a1568804-1021-429a-918a-f09a49b45d8a
+:mtime:    20220322095102
+:ctime:    20220319212416
+:END:
+#+title: Error function
+#+filetags: :stub:
+
+Appears in heat flow, probability, diffusion, ...
+
+\[
+\mathrm{erf}(x) = \frac{2}{\sqrt{\pi}} \int\limits_0^x e^{-t^2} \, dt
+\]

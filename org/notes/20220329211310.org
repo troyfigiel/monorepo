@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6a44025f-f644-41ed-b74e-53f994c9593a
+:mtime:    20220329211311
+:ctime:    20220329211310
+:END:
+#+title: Adjacency matrix
+#+filetags: :stub:
+
+

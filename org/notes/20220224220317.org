@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       66f657e7-d56d-4f3c-98a9-4bdd93e68c27
+:mtime:    20220225223630
+:ctime:    20220224220317
+:END:
+#+title: Every probability distribution has a characteristic function
+#+filetags: :stub:
+
+

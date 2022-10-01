@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8144e9cd-b319-4c2e-b87a-b07b0e00b412
+:ROAM_ALIASES: FDR
+:ctime:    20220221213413
+:mtime:    20220313180301
+:END:
+#+title: False discovery rate
+#+filetags: :stub:
+
+The false discovery rate (FDR) is a conceptualization of the false positive rate when conducting
+[[id:8f0c6651-b460-4338-9ad3-d6f2d7de3705][multiple comparisons]].
+
+These procedures have less strict control over false positives compared to [[id:d221a181-8ae8-40d0-836f-844b5185f8c9][familywise error rate]]
+controlling procedures.
+
+One example of a method is the [[id:61d0fc1c-8524-4692-a8d1-3ca55aecddbf][Benjamini-Hochberg method]].

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       cbdb8404-b5bd-48f4-af8d-b086cca638ea
+:mtime:    20220314131016
+:ctime:    20220314131014
+:END:
+#+title: Emergent phenomenon
+#+filetags: :stub:
+
+

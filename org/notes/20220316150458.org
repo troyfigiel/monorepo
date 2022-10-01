@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       455a2554-96cb-42a4-86bf-dc069045a5ff
+:mtime:    20220316150459
+:ctime:    20220316150458
+:END:
+#+title: First-touch attribution
+#+filetags: :stub:
+
+

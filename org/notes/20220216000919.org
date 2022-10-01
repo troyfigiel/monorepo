@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4378316d-9724-4e58-8eea-1e03f7e0bba3
+:mtime:    20220225223628
+:ctime:    20220216000919
+:END:
+#+title: kurtosis
+

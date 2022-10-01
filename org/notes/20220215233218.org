@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c026e04f-cb72-468b-ab43-af24eb5f6c12
+:mtime:    20220313165211
+:ctime:    20220215233218
+:ROAM_ALIASES: "Wilcoxon test of ranks"
+:END:
+#+title: Wilcoxon signed-rank test
+
+Tests whether the difference in median of two samples is likely to be zero or not.

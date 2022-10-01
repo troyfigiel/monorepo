@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a83c0ecc-947b-4e60-8bc5-0af7c5f67f0c
+:mtime:    20220302090007
+:ctime:    20220302090005
+:END:
+#+title: Superuser (Linux)
+#+filetags: :stub:
+
+

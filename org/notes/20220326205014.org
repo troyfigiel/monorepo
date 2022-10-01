@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       02aeb462-78d1-4f82-ba6a-ea0c5c51e4a9
+:mtime:    20220326223100
+:ctime:    20220326205014
+:END:
+#+title: LaTeX
+#+filetags: :stub:

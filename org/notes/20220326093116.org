@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       2094556f-2aa8-4f50-a84e-0f88e8233234
+:mtime:    20220329004027
+:ctime:    20220326093116
+:END:
+#+title: Maintaining an increasingly complex system of notes
+#+filetags: :unclean:
+
+The more notes I write, the more ideas I need to sort and connect. The [[id:4914cb50-f5ec-40b6-9ee1-2d14489893ad][Requirements for my system
+of notes]] give me more concrete goals to work towards, but ultimately many of the concepts
+applied to the maintenance of complex systems are fairly general.
+
+Although [[id:b897355f-2a9e-471d-9450-c333ace038a9][Abstraction is a powerful tool to fight increasing complexity]], you should be careful not
+to fall into the trap of abstracting in anticipation of complexity. Instead, [[id:022d50af-f814-4578-8ff6-a1979a03b287][Abstraction should
+emerge naturally]].
+
+# TODO: What is specifically different for maintaining notes compared to maintaining software?
+- [[id:20a58e77-66d1-4ae0-b749-87031e190003][Different fields of knowledge require different styles of note taking]].
+- [[id:7ae5aa55-139a-438b-b06c-adc522e8bd0f][@Keeping my notes clean]]
+
+# TODO: Expand on the similarities between note taking, math and software engineering.
+This kind of note taking is also a way to teach yourself how to maintain an increasingly complex
+system. The skills tranfer. Indeed, there are many similarities between taking notes versus writing
+a mathematics paper versus maintaining a complex software system. [[id:a7c9967e-9cdd-43c5-9c24-bbbd45a1564d][Similarities between taking
+notes, writing mathematics and maintaining software]].
+
+# TODO: Somehow mention that it normally takes a while for the notes to become useful. Their
+# usefulness accumulates over time.

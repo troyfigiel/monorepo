@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1d16764b-13d8-4974-8755-5d020e845261
+:ROAM_ALIASES: "Taylor expansion"
+:mtime:    20220319102604
+:ctime:    20220319102559
+:END:
+#+title: Taylor series
+#+filetags: :stub:
+
+

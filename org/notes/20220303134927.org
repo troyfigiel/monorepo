@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       64287899-3f32-4593-a327-b06fdf7d9f1d
+:mtime:    20220310133611
+:ctime:    20220303134927
+:END:
+#+title: Interpretable machine learning
+#+filetags: :stub:
+
+Examples:
+- [[id:8d6cd3b6-35e0-4483-a6c7-3e433b2ba85b][2HELPS2B]]
+- [[id:e45d86ef-4c00-4a03-ae9e-ae0c28c35fb3][CORELS]]
+
+A very important advantage of interpretable models is that [[id:cc3ec6f1-dcd6-4f62-99c3-2ddc377c3b65][Experts can decide whether to trust an
+interpretable machine learning model]]. This is unlike a [[id:345f1c7c-e045-4568-8967-52a055fc429d][Black box model]].
+
+https://www.youtube.com/watch?v=sl78EgrT4TY

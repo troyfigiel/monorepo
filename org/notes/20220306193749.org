@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6cce58a7-da3e-4116-b36f-e2e1be600607
+:mtime:    20220306193750
+:ctime:    20220306193749
+:END:
+#+title: Chaos theory
+#+filetags: :stub:
+
+

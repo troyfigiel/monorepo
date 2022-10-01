@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f0751771-cdcb-484d-8c40-c3855717ea1a
+:mtime:    20220320140135
+:ctime:    20220320140134
+:END:
+#+title: Laplace-type integral
+#+filetags: :stub:
+
+

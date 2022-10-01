@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       2b236c57-ca9f-43c2-bdf1-d12b5a2d360e
+:mtime:    20220302174723
+:ctime:    20220302154045
+:END:
+#+title: General correlation coefficient
+#+filetags: :stub:
+
+Both the [[id:c0c2ddf9-6fc0-4571-9578-cdb201930cec][Kendall rank correlation coefficient]] and [[id:b53cc863-348d-432c-bd72-e93c740c84ed][Spearman's rank correlation coefficient]] are
+special cases of a more general correlation coefficient.
+
+Suppose we have a sample \( \left\{ (x_1, y_1), ..., (x_n, y_n) \right\} \). We can define a
+generalized correlation coefficient \( \Gamma \) by
+
+\[
+\Gamma = \frac{\sum\limits_{i,j=1}^n a_{ij}b_{ij}}{\sqrt{\sum\limits_{i,j=1}^n a_{ij}^2
+\sum\limits_{i,j=1}^n b_{ij}^{2}}}
+\]
+
+# TODO: What does this x-score and y-score mean?
+where \( a_{ij} \) and \( b_{ij} \) are respectively \( x \)-scores and \( y \)-scores with the
+only requirement being that \( A = (a_{ij}) \) and \( B = (b_{ij}) \) are anti-symmetric matrices.
+
+To recover the Kendall and Spearman's rank correlation coefficient, set \( r_i \) and \( s_i \) to
+be the rank of the \( x_i \) and \( y_i \) among all \( x \)'s and \( y \)'s respectively.
+
+Kendall's \( \tau \) is recovered by
+
+\begin{equation*}
+\begin{align}
+a_{ij} &= \mathrm{sgn}(r_i - r_j) \\
+b_{ij} &= \mathrm{sgn}(s_i - s_j)
+\end{align}
+\end{equation*}
+
+whereas Spearman's \( \rho \) is recovered by
+
+\begin{equation*}
+\begin{align}
+a_{ij} &= r_i - r_j \\
+b_{ij} &= s_i - s_j
+\end{align}
+\end{equation*}
+
+https://en.wikipedia.org/wiki/Rank_correlation#General_correlation_coefficient

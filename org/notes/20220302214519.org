@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       04ea9676-7741-4157-ad71-d7787494808e
+:mtime:    20220302214657
+:ctime:    20220302214519
+:END:
+#+title: Terminal multiplexer
+#+filetags: :stub:
+
+Examples are:
+- [[id:30bfb8d1-1e02-4e2d-9f7b-e13b572a30a2][GNU Screen]]
+- [[id:49c5be1e-1097-42f5-9d48-cb7235cb9ae2][tmux]]

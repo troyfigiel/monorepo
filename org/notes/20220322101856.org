@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1856ae75-357e-43bc-8266-2b9fba7661d0
+:mtime:    20220322184532
+:ctime:    20220322101856
+:END:
+#+title: Abel-Plana formula
+#+filetags: :stub:
+
+Example:
+- Creating an asymptotic series for the [[id:f5683ec8-1982-4357-845a-e007091c738f][Riemann zeta function]].

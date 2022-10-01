@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       06e9722a-18eb-421d-b35b-c85ad1e56461
+:mtime:    20220323214501
+:ctime:    20220323214500
+:END:
+#+title: Cellular automaton
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3fc13e2d-0a52-4d6a-9f6e-5e5abc5a4ec6
+:mtime:    20220307165823
+:ctime:    20220304095713
+:END:
+#+title: ?Cumulants of the binomial distribution
+#+filetags: :appendix:stub:
+
+

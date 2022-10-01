@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       652c9663-ab66-45b7-8a52-607e1d104a5d
+:mtime:    20220307165840
+:ctime:    20220304093438
+:END:
+#+title: ?CDF of the binomial distribution
+#+filetags: :appendix:stub:
+
+

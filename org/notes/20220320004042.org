@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b86e488e-e661-47d9-ba9d-f8dc140480c3
+:mtime:    20220320004044
+:ctime:    20220320004042
+:END:
+#+title: Watson's lemma
+#+filetags: :stub:
+
+

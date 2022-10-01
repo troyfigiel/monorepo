@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7405c924-2d7e-4215-a9e9-e5b58406287c
+:mtime:    20220331000651
+:ctime:    20220331000650
+:END:
+#+title: Utility function
+#+filetags: :stub:
+
+

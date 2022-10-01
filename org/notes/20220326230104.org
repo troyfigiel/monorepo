@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       32b0ca4e-bff5-4ac0-80d5-a88e9252f109
+:mtime:    20220326230105
+:ctime:    20220326230104
+:END:
+#+title: Distinguishable particles
+#+filetags: :stub:
+
+

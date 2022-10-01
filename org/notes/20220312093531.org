@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7c4d3bd7-c303-4563-b527-a51e8ab8dbe9
+:mtime:    20220312093608
+:ctime:    20220312093531
+:END:
+#+title: Darcs
+#+filetags: :stub:
+
+Relies on the idea of [[id:24b2cea9-9ae5-4c6d-99ce-d179cf49af2d][Patch theory]]

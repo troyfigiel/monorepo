@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       857edabb-94d9-4c19-9a6b-188c9c989a31
+:mtime:    20220307162407
+:ctime:    20220307151255
+:END:
+#+title: §Reproducibility
+#+filetags: :index:stub:
+
+Software / programming
+- [[id:b23d8dfc-cb57-4154-aab9-88d1d17bd8c9][Reproducible build]]
+- [[id:1653a154-c780-4b6d-987e-dba7293b70a8][Reproducible workflow]]
+
+Experimental
+- [[id:0052577c-a666-4e9a-ab60-3a4f8c992a96][Reproducibility crisis]]

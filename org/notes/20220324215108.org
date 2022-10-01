@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       e92c89b6-fdf5-43a0-95ea-bf47fd8a77e8
+:mtime:    20220324215609
+:ctime:    20220324215108
+:END:
+#+title: Fluid dynamics
+#+filetags: :stub:
+
+Two subdisciplines:
+- [[id:7af0b060-33cf-4f2a-8275-8b76deb6898f][Aerodynamics]]
+- [[id:a57b0cf2-f86b-4b56-b333-9be91a77ae3c][Hydrodynamics]]
+
+Important equations:
+- [[id:8b257c84-d0ac-4644-9937-acf565145079][Navier-Stokes equation]]
+- [[id:f9a989b2-b9e4-4611-a3ea-242e9f8e298d][Bernoulli's equation]]

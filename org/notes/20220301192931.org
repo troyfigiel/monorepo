@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c7939ee7-f04d-4e66-87ef-7205f084a211
+:mtime:    20220301192932
+:ctime:    20220301192931
+:END:
+#+title: Rolling back to a previous configuration is trivial with a declarative system
+#+filetags: :stub:
+
+

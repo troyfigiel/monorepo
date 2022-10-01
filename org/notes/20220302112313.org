@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       abbead16-022a-4063-b8b1-352f20b9ebf5
+:mtime:    20220302112314
+:ctime:    20220302112313
+:END:
+#+title: Multicollinearity does not bias results
+#+filetags: :stub:
+
+

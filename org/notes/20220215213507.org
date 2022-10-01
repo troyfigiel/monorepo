@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       89bfa238-7a69-4154-86c8-2da95acf095b
+:mtime:    20220225223632
+:ctime:    20220215213507
+:END:
+#+title: sufficient statistic for exponential family
+

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9db117f9-aa26-46d5-9a88-61f29a8b5bc0
+:mtime:    20220225223633
+:ctime:    20220210135234
+:END:
+#+title: Jensen's inequality
+
+Loosely speaking Jensen's inequality generalizes the idea that a line intersecting a convex function always lies above the the graph of the function.
+
+It has various forms.
+
+In probability theory, it is stated as \( \varphi \left( \mathbb{E}[X] \right) \leq \mathbb{E}\left[ \varphi(X) \right] \) for a convex function \( \varphi \).
+
+* TODO
+- It is important in statistical physics because we have \( e^{\mathbb{E}[X]} \leq \mathbb{E} \left[ e^X \right] \). What does this imply?
+- Add the finite form which proves the AM-GM inequality. In particular, this follows from the fact that logarithm is concave.

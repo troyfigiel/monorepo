@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       f234a005-9b38-469a-a759-c8dea11ca203
+:mtime:    20220405234415
+:ctime:    20220405225120
+:END:
+#+title: Fundamental postulate of statistical mechanics
+#+filetags: :stub:
+
+If a system is isolated, the fundamental postulate of statistical mechanics states that every
+accessible [[id:812456fe-443a-420f-96f2-60d197214a3d][Microstate]] is equally likely.
+
+Although every [[id:812456fe-443a-420f-96f2-60d197214a3d][Microstate]] is equally likely, it is possible that there are many more [[id:812456fe-443a-420f-96f2-60d197214a3d][Microstates]]
+leading to the same [[id:0dd63aa6-e7e4-4332-8d6a-9b5f24e7d6ce][Macrostate]]. This idea might involve the [[id:22637763-04bb-49a6-b3e4-4e700b43eddd][Central limit theorem]].

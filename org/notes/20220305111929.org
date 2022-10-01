@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       7544e7d0-a5be-40dd-9988-20498f652ec1
+:mtime:    20220305234459
+:ctime:    20220305111929
+:END:
+#+title: Black box models lead to serious societal harm
+#+filetags: :stub:
+
+It is not uncommon that decisions are based purely on a number. In her 2021 Nobel conference
+lecture, Cynthia Rudin mentions the case of a miscalculated score which caused an inmate to spend
+longer in jail than they should have. On top of that, the software behind the calculated score was
+proprietary with no way to verify its correctness. See [[id:6d684a08-12b3-43d9-9078-8a0fa6aed717][Proprietary software is unethical]].
+
+The above example also showcases another important trap black box models can fall into: The [[id:f6c5de10-a2a4-41a7-b4fd-089491811725][McNamara fallacy]].
+
+Instead, [[id:652a3994-0fac-4d16-9bcc-7b0433d8f7fc][Interpretable models should be used for high-stake decisions]].
+
+# TODO: Add some examples. Need to look up these examples.
+- Sacramento's air pollution. Google used proprietary index that said it was safe to go outside
+- COMPAS score, inmate spent longer in jail than necessary
+- FDA approved models for detecting intercranial hemmorages not performing well and no one knows why

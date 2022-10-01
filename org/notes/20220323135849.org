@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1e092046-ad51-49b5-b16d-aa31052aa098
+:mtime:    20220324093843
+:ctime:    20220323135849
+:ROAM_ALIASES: KISS
+:END:
+#+title: Keep it simple, stupid
+#+filetags: :stub:
+
+

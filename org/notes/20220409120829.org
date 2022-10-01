@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3a6cfe75-25d1-40ef-8b9f-4edf03465ec3
+:mtime:    20220409120830
+:ctime:    20220409120829
+:END:
+#+title: Bertrand's postulate
+#+filetags: :stub:
+
+

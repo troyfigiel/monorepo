@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ade00633-2bfc-4ba9-8207-47487fa6ac11
+:mtime:    20220326004928
+:ctime:    20220326004926
+:END:
+#+title: Equivalence relation
+#+filetags: :stub:
+
+

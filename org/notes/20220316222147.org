@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       54c23a92-d7f6-46e0-996e-0d1fd7affc21
+:ROAM_ALIASES: EDA
+:mtime:    20220316222158
+:ctime:    20220316222147
+:END:
+#+title: Exploratory data analysis
+#+filetags: :stub:
+
+

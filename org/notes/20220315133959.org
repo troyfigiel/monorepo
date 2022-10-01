@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       34feef7e-2b9b-42ca-9539-b881a9a07434
+:mtime:    20220324231037
+:ctime:    20220315133959
+:END:
+#+title: Docker container
+#+filetags: :stub:
+
+See also:
+- [[id:e2bf3c9d-aeab-4f26-8a0d-fe2ea62203fd][Docker]]
+
+[[id:0832bb79-4908-4f5c-8a9d-19427ea2191f][Tag a container with a commit hash]]

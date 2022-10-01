@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9339a1e6-7b28-4b07-b6a2-63eb5c88cb19
+:mtime:    20220322175552
+:ctime:    20220322175531
+:END:
+#+title: Lossy compression
+#+filetags: :stub:
+
+Loses information in contrast to a [[id:79150299-eefb-408f-acd8-96824977e37a][Lossless compression]] algorithm.

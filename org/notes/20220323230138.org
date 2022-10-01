@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       042db342-5cdf-4d7f-9220-1a5d052a45fc
+:mtime:    20220323230139
+:ctime:    20220323230138
+:END:
+#+title: Absorbing state
+#+filetags: :stub:
+
+

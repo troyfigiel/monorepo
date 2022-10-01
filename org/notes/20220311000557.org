@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       83625d45-8c54-49d0-bf74-a227136c3c0c
+:mtime:    20220311000632
+:ctime:    20220311000557
+:END:
+#+title: §Types of machine learning
+#+filetags: :index:stub:
+
+There are different types of learning:
+- [[id:14f74e91-c07f-49ca-82a8-a52ee427583d][Supervised learning]]
+- [[id:44f89fce-45b8-4c19-ade5-3854abc7524d][Semi-supervised learning]]
+- [[id:962ca45b-3e27-464e-9ebf-2f531f1e6c76][Unsupervised learning]]
+- [[id:a6e42d62-5506-42a3-979a-3881e12aa2d5][Reinforcement learning]]

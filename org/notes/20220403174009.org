@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ee4fa106-93d3-41fa-a183-dea39f91b2ff
+:mtime:    20220403174010
+:ctime:    20220403174009
+:END:
+#+title: Boltzmann factor
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       015d3737-7016-425e-be84-a65b510f69e7
+:mtime:    20220323230123
+:ctime:    20220323230122
+:END:
+#+title: Transient state
+#+filetags: :stub:
+
+

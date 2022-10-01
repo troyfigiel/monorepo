@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       814308d2-a76c-47ac-9692-e1f5134a9021
+:mtime:    20220415111041
+:ctime:    20220415111040
+:END:
+#+title: Linear momentum
+#+filetags: :stub:
+

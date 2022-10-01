@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       3d764f9f-50a7-4070-9f61-ac437c3720da
+:mtime:    20220322095150
+:ctime:    20220322095140
+:END:
+#+title: Airy function
+#+filetags: :stub:
+
+It appears in quantum mechanics for a particle in a constant force field.
+
+\[
+\mathrm{Ai}(x) = \frac{1}{\pi} \int\limits_0^{\infty} \cos \left( \frac{t^3}{3} + xt \right) \, dt
+\]

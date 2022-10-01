@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       373af934-53b3-4e0c-92c6-14a290baa809
+:mtime:    20220318113919
+:ctime:    20220318113142
+:END:
+#+title: Marketing
+#+filetags: :stub:
+
+- [[id:2a7319ca-5128-46ee-8c7e-e455d2bf3e92][Attribution model]]
+- [[id:48ab37e1-7c54-4e53-9e02-e898d2fb5766][Buy Till You Die]]

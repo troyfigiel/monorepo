@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3717a123-d405-4a08-a1fe-697ec55f28f1
+:mtime:    20220225223627
+:ctime:    20220219003806
+:END:
+#+title: Chapman-Kolmogorov equation
+

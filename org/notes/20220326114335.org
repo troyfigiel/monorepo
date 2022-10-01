@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       82cd4b82-3d85-489b-a696-e0171d65fe74
+:mtime:    20220326114509
+:ctime:    20220326114335
+:END:
+#+title: Avogadro number
+#+filetags: :stub:
+
+\[
+N_A = 6.02214076 \times 10^{23} \, \mathrm{mol}^{-1}
+\]

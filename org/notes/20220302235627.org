@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a11ae8a4-bd25-4454-957a-616664c6f4ed
+:mtime:    20220302235629
+:ctime:    20220302235627
+:END:
+#+title: The exponential distribution is a special case of the Weibull distribution
+#+filetags: :stub:
+
+

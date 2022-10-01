@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       af7c82a6-dda2-486b-8cb2-3c8e9731e0f8
+:mtime:    20220328223515
+:ctime:    20220328223514
+:END:
+#+title: Hamming weight
+#+filetags: :stub:
+
+

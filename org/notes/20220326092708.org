@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a8b1df13-1ab4-4eca-a9b4-5f0f39c74acd
+:ROAM_ALIASES: QFT
+:mtime:    20220329233648
+:ctime:    20220326092708
+:END:
+#+title: Quantum field theory
+#+filetags: :stub:
+
+[[id:e624dec4-80fe-41c8-bc7b-225f0199c387][Renormalization]]
+[[id:ef7de5c8-83e2-4a3d-9b3e-ac61a57c6464][Quantum electrodynamics]]

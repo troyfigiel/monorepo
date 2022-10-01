@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3069e3e6-4c91-4498-9874-3f6c63e670c5
+:mtime:    20220326223126
+:ctime:    20220326130225
+:END:
+#+title: What I would tell myself just starting out with this system of notes
+#+filetags: :stub:
+
+- [[id:1ebe7887-d253-453d-b0f2-725acfcbcbd7][Just get started]]
+- [[id:022d50af-f814-4578-8ff6-a1979a03b287][Abstraction should emerge naturally]]

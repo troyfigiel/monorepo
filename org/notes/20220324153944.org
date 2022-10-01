@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       39c8a80c-6de6-4232-9165-ed3a4864440f
+:mtime:    20220324153945
+:ctime:    20220324153944
+:END:
+#+title: Poetry
+#+filetags: :stub:
+
+

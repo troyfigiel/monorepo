@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       20a58e77-66d1-4ae0-b749-87031e190003
+:mtime:    20220324233245
+:ctime:    20220324232936
+:END:
+#+title: Different fields of knowledge require different styles of note taking
+#+filetags: :stub:
+
+What works in one field, might not work in another field. For example, sometimes you need to know a
+appendix even though it is not directly relevant to the main ideas and concepts in play.
+
+- [[id:af7927ed-1cf5-46a1-b72b-54c545a459b7][Types of notes I distinguish]]

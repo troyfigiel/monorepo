@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       20ccc2fe-09d0-4d78-b2a9-07efd0f1c0e9
+:mtime:    20220311133211
+:ctime:    20220311133210
+:END:
+#+title: Accuracy
+#+filetags: :stub:
+
+

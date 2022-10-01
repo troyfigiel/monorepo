@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       afa0ca2d-89fd-4a83-b350-2f6c82cb2b50
+:mtime:    20220304133402
+:ctime:    20220304133401
+:END:
+#+title: Hurdle model
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2d3118ad-5642-4a40-9354-c68f6b28bd94
+:mtime:    20220324222907
+:ctime:    20220317084112
+:END:
+#+title: Refactoring
+#+filetags: :stub:
+
+- [[id:c58c0663-8600-49b9-9349-732cd7f4ce86][Code smell]]

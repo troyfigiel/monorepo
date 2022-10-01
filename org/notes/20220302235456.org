@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9be9c9cf-9cf6-45c7-90ac-3cc777a6271d
+:mtime:    20220302235456
+:ctime:    20220302235456
+:END:
+#+title: Cox proportional hazards model
+#+filetags: :stub:
+
+

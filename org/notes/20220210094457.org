@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a52537ca-6373-4385-a4fd-0a0777e95dd7
+:mtime:    20220225223634
+:ctime:    20220210094457
+:END:
+#+title: Bernoulli distribution
+

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       516ac96d-aece-434c-addc-8af9857b8b16
+:mtime:    20220326210447
+:ctime:    20220314211414
+:END:
+#+title: Note taking
+#+filetags: :stub:
+
+- Communication
+
+- [[id:02aeb462-78d1-4f82-ba6a-ea0c5c51e4a9][LaTeX]]
+- [[id:0226f573-54ed-403b-9ddd-7ad78c247baa][MathML]]

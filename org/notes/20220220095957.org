@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       8228ecba-de90-413c-847a-6c764bb3b17e
+:mtime:    20220324221009
+:ctime:    20220220095957
+:END:
+#+title: Category theory
+#+filetags: :stub:
+
+Category theory abstracts a lot of mathematical structures.

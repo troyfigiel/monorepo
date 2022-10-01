@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       b83b6ef9-7d43-4b19-9a63-6ef157a4fc63
+:mtime:    20220303223957
+:ctime:    20220303195212
+:END:
+#+title: Gauss-Newton method
+#+filetags: :stub:
+
+The Gauss-Newton method can be understood as a generalization of [[id:bdaa634b-e222-4fbe-8c3c-03ac982aa6bc][Newton's method]] and is used to fit
+a [[id:2d9b74f6-74bf-4273-a049-b82e036fc32b][Non-linear least squares]] model.

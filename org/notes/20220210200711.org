@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       88c2bef4-3272-46ac-96a5-fe138e9f4ade
+:mtime:    20220225223632
+:ctime:    20220210200711
+:END:
+#+title: population dynamics
+

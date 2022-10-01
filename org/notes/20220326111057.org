@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       bcce6b72-a887-4d33-b45b-e518bdda58dc
+:mtime:    20220326111649
+:ctime:    20220326111057
+:END:
+#+title: Statistical ensemble
+#+filetags: :stub:
+
+In [[id:3ae00f4c-90a2-47d7-b211-b9dc126ad334][Classical mechanics]] an ensemble is a joint probability distribution \( \rho(\mathbf{p},
+\mathbf{q}) \) of the systems internal degrees of freedom. For example, \( \mathbf{q} = (q_1, ... ,
+q_{3N}) \) if we have \( N \) particles (for each dimension one).
+
+- [[id:20c3f318-e49f-4ed1-878c-95627cc4713a][Microcanonical ensemble]]
+* [[id:96028615-0685-4eb2-9491-f065cec8d2a5][Canonical ensemble]]
+We have
+
+\[
+\rho = \frac{1}{h^n C} \exp \left( \frac{F - E}{k_B T} \right)
+\]
+
+- [[id:60518a2f-d8bf-494d-a8cc-1b30c936fd80][Grand canonical ensemble]]
+

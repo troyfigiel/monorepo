@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f7ad75d2-cb09-4a82-b556-2eca7cbe950f
+:mtime:    20220315113940
+:ctime:    20220315113939
+:END:
+#+title: Puppet
+#+filetags: :stub:
+
+

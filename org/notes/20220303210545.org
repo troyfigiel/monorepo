@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       361223d4-c9ad-4595-b6e8-e071ee0eb987
+:mtime:    20220318113530
+:ctime:    20220303210545
+:END:
+#+title: Mixture model
+#+filetags: :stub:
+
+See:
+- [[id:3ec7855e-14b6-4f4b-962e-fa14b35f5a04][Zero-inflated models are mixture models]]

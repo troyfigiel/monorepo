@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       2bc03f9a-111e-40d9-b050-77235a8836f5
+:mtime:    20220225223627
+:ctime:    20220223214643
+:END:
+#+title: Dobiński's formula
+#+filetags: :stub:
+
+* Relations
+Dobiński's formula expresses the Bell numbers in terms of an infinite sum.
+
+* Formal statement
+The n-th Bell number \( B_{n} \) satisfies
+
+\[
+B_{n} = \frac{1}{e} \sum\limits_{k=0}^{\infty} \frac{k^n}{k!}
+\]
+
+* Proof

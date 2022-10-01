@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5cc3f48f-cd46-44e9-852e-ca1f788b8635
+:mtime:    20220415150846
+:ctime:    20220415150722
+:END:
+#+title: Boundary value condition
+#+filetags: :stub:
+
+- [[id:7674c5a7-020d-4dc6-9195-9ac5f842cbcb][Dirichlet boundary condition]]
+- [[id:2501a5ee-bc49-426d-b6d9-8884eacb8d30][Neumann boundary condition]]
+- [[id:bdef51de-2ab3-4f5d-8d94-2c71e304492f][Cauchy boundary condition]]

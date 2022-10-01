@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       90a00b01-8b43-43fd-9eeb-e916456f75a5
+:mtime:    20220406211132
+:ctime:    20220406211120
+:END:
+#+title: Shannon index
+#+filetags: :stub:
+
+[[id:71249f75-4f4a-49dc-9fe0-b5be2e2cc712][Diversity index]]

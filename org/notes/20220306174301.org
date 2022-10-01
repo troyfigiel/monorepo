@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       dced2b14-7c7a-4a5b-987e-822ce7b1206c
+:mtime:    20220309183542
+:ctime:    20220306174301
+:END:
+#+title: ?The PMF of the hypergeometric distribution sums to one
+#+filetags: :appendix:stub:
+
+

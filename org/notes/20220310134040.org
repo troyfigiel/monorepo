@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       96ce7845-c938-4105-988b-7bbf6da9fa99
+:mtime:    20220310134551
+:ctime:    20220310134040
+:END:
+#+title: Non-linear regression
+#+filetags: :stub:
+
+For example, [[id:2d9b74f6-74bf-4273-a049-b82e036fc32b][Non-linear least squares]].

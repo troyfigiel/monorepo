@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       b23d8dfc-cb57-4154-aab9-88d1d17bd8c9
+:ROAM_ALIASES: "Deterministic compilation"
+:mtime:    20220315134758
+:ctime:    20220307145320
+:END:
+#+title: Reproducible build
+#+filetags: :stub:
+
+A program can be reproducibly built if it can be compiled to the exact same binary code as long
+as the input to the compiler is the same.
+
+Besides scientific implications, reproducibility is also important from an operational security standpoint.
+
+# TODO: Link to the following topics.
+[[id:4adacf4a-fe73-4431-8123-04750c4b1e34][Timestamps are meaningless for reproducible builds]]
+[[id:27ba21b2-c4b7-4d6b-b69a-806ac993b451][A declarative system is bit-for-bit reproducible]]
+[[id:08a1795c-eb6f-4c9a-836e-bc884a6e7fab][Only running a container image can be done reproducibly]]

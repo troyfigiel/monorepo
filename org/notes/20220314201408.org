@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c0edfb32-a9d8-4d3f-b037-670ad8057b54
+:mtime:    20220314201410
+:ctime:    20220314201408
+:END:
+#+title: Stochastic gradient descent
+#+filetags: :stub:
+
+

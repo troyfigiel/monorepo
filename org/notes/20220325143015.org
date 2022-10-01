@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0cfbc9db-ee37-48d0-b2dc-a36d54a8ccad
+:mtime:    20220325143016
+:ctime:    20220325143015
+:END:
+#+title: Vapnik-Chervonenkis theory
+#+filetags: :stub:
+
+

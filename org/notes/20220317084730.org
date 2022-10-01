@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       418139b5-734f-4b48-9c66-97376ffec66f
+:mtime:    20220317085011
+:ctime:    20220317084730
+:END:
+#+title: Types help machines infer programming intent
+#+filetags: :stub:
+
+- [[id:a035d0ef-a6a0-42da-90eb-4f0b03395341][IDEs]] can use types to show programmers helpful documentation.
+- Large parts of code can be inferred from types, since there is only one way the pieces of the
+  puzzle can fit together.

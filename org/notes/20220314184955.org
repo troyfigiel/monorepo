@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b3b00e4a-d01d-4570-96f3-a27338b6c30f
+:mtime:    20220314212514
+:ctime:    20220314184955
+:END:
+#+title: ?The mean of the exponential distribution
+#+filetags: :appendix:stub:
+
+

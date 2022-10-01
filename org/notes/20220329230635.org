@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ad8e1afc-6177-4634-87f2-06b236086076
+:mtime:    20220329230636
+:ctime:    20220329230635
+:END:
+#+title: The only way to go fast is to go well
+#+filetags: :stub:
+
+

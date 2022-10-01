@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6f7e6d77-a437-4fa3-accc-fd43a30cec39
+:mtime:    20220411181333
+:ctime:    20220411181240
+:END:
+#+title: Bidirectional causation
+#+filetags: :stub:
+
+For example, [[id:f590986d-8b66-4737-87d4-64f035b0f05b][Predator-prey equations]]. The lack of prey causes predator amounts to dwindle, but this
+in turn causes prey amounts to rise. They have a bidirectional causal connection.

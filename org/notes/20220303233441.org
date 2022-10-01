@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       26df21fe-44fb-4463-95fd-c1fb183ef257
+:mtime:    20220303234334
+:ctime:    20220303233441
+:END:
+#+title: Cumulant
+#+filetags: :stub:
+
+The cumulants of a probability distribution are defined through the [[id:796ad554-980f-4bd5-99fe-c9b8bdae3ce8][Cumulant generating function]].
+
+The first cumulant is the [[id:3800e3f3-4edc-4c8d-aee8-13c768a55a32][Mean]] and the second the [[id:8d3b88a5-fed6-426e-9f11-d89b05547d05][Variance]].
+
+[[id:249ede43-4208-43dd-97a8-8965e9cffa34][The normal distribution is the only distribution with all cumulants vanishing from a certain order
+on]].
+
+https://en.wikipedia.org/wiki/Cumulant

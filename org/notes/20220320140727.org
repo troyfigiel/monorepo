@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       156ccab5-3468-40b0-ace7-4eaa78679549
+:mtime:    20220320141112
+:ctime:    20220320140727
+:END:
+#+title: Rising factorial
+#+filetags: :stub:
+
+- They can be related to [[id:27eb39d1-309a-4d6b-a782-963ddc0fdbd3][Falling factorial]] through [[id:ee68a20e-0dc7-4125-b63d-30ae9f29d605][Lah numbers]].
+- \( x^{(n)} \) can be related to \( x^n \) through [[id:251b3217-2e5a-4c46-a0ef-872ea0502991][Stirling numbers]]. The relation one way through
+  [[id:a85044d6-e655-436a-b7b7-d83a9be264f0][Stirling numbers of the first kind]] and the inverse relation through [[id:7e42d113-4948-4e7f-a443-a7e6a58d9954][Stirling numbers of the second kind]]

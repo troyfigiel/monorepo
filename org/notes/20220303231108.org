@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9616ff81-f023-496b-8f36-0aa7fbc547fb
+:mtime:    20220303231110
+:ctime:    20220303231108
+:END:
+#+title: Factorial moments are related to raw moments through Stirling numbers of the second kind
+#+filetags: :stub:
+
+

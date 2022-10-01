@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       a4e8e753-89f3-4260-8fc2-da9cb3ad2ca8
+:mtime:    20220225223634
+:ctime:    20220215233710
+:END:
+#+title: skewness
+
+Skewness is a measure of the asymmetry of a probability distribution about its mean.
+
+Although skewness sometimes refers to [[id:ea941b68-950b-463d-b659-9ac7833a7fc7][nonparametric skew]], the standard definition uses the third standardized moment, defined as
+
+\[
+\tilde{\mu}_3 = \mathbb{E} \left[ \left( \frac{X - \mu}{\sigma} \right)^3 \right]
+\]

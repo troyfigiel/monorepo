@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       f566dbd2-875d-4dc4-8b5a-d6a23102074d
+:mtime:    20220307165726
+:ctime:    20220304102000
+:END:
+#+title: ?Factorial moments of the binomial distribution
+#+filetags: :appendix:stub:
+
+With \( \mathbb{P}(X=k) = \binom{n}{k}p^k (1-p)^{n-k} \) we find
+
+\begin{equation*}
+\begin{align}
+M_X(t)
+&= \sum\limits_{k=0}^{n} \binom{n}{k} (tp)^k (1-p)^{n-k} \\
+&= (1 + (t-1)p)^n
+\end{align}
+\end{equation*}
+
+Hence, \( \mathbb{E}[(X)_r] = (n)_r p^r \).

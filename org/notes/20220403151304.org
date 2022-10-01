@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       536ccbcb-bdca-4f95-b5fa-5b9246a22a71
+:mtime:    20220403151305
+:ctime:    20220403151304
+:END:
+#+title: Spontaneous symmetry breaking
+#+filetags: :stub:
+
+

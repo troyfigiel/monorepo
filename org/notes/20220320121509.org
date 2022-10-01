@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       a1ef55c7-19d7-4633-a38f-0add4e40b460
+:mtime:    20220320162158
+:ctime:    20220320121509
+:END:
+#+title: ?Faulhaber's formula through the Euler-Maclaurin formula
+#+filetags: :stub:
+
+* Euler-Maclaurin formula
+[[id:7de72839-2a48-4aa0-9804-7e7111fc2eb7][Euler-Maclaurin formula]]
+
+Let \( S = \sum\limits_{t=0}^n t^r \).
+
+\[
+S - I = \sum\limits_{k=1}^p \frac{B_k}{k!} \left( f^{(k-1)}(n) - f^{(k-1)}(m) \right) + R_p
+\]
+
+So if \( f(x) = x^r \) we have
+
+\[
+I = \int\limits_0^n t^r \, dt = \frac{n^{r+1}}{r+1}
+\]
+
+There are only finite correction terms, because
+
+\[
+f^{(k-1)}(x) = \left( \prod\limits_{a=0}^{k-2} (r-a) \right) x^{r-k+1} = (r)_{k-1} x^{r-k+1}
+\]
+
+So we find
+
+\[
+S = \frac{n^{r+1}}{r+1} + \sum\limits_{k=1}^{r+1} \frac{B_{k}}{k!} (r)_{k-1} n^{r-k+1}
+\]
+
+Indeed, for \( r = 0 \), we find \( S = n \), for \( r = 1 \) we have
+
+\[
+S = \frac{1}{2} n^2 + B_1 n + \frac{B_2}{2} = \frac{1}{2} n^2 - \frac{1}{2} n + \frac{1jj}{}
+\]

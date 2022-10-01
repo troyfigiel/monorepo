@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5c27ab43-37d4-4baa-b08a-6fb22cab5a29
+:mtime:    20220225223630
+:ctime:    20220218202913
+:END:
+#+title: OLS optimization is convex
+
+* TODO
+Add theorem that it is convex, but not necessarily strictly convex. The second derivative goes as
+
+\[
+2 X^{\intercal} X
+\]
+
+which is strictly positive depending on the rank of \( X \).

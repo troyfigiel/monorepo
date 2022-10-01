@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       81acbfcf-5f2f-4f8e-9a23-49e332108570
+:mtime:    20220408230625
+:ctime:    20220408230624
+:END:
+#+title: Parametric statistics
+#+filetags: :stub:
+
+

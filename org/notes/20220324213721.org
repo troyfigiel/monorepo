@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6f907084-ee72-400f-9b21-c70fd17e9541
+:mtime:    20220324213722
+:ctime:    20220324213721
+:END:
+#+title: Elasticity
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2cebd9a9-0048-4d69-892b-6ebfe1f2f670
+:mtime:    20220310132602
+:ctime:    20220310132601
+:END:
+#+title: Feature vector
+#+filetags: :stub:
+
+

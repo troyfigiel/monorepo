@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       503315d9-9574-4d9d-b3bf-c6e872b6aab1
+:mtime:    20220225223629
+:ctime:    20220220095745
+:END:
+#+title: builder pattern
+#+filetags: :stub:
+

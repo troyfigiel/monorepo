@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7c66b57f-e576-4823-a5c3-dacffa40ec26
+:mtime:    20220327134919
+:ctime:    20220327122619
+:END:
+#+title: Von Mises distribution
+#+filetags: :stub:
+
+Special case of the [[id:bf8a596a-3b42-44ef-8872-4eb48a48d703][Von Mises-Fisher distribution]].

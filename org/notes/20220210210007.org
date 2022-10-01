@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       6aa59df5-de7c-4fa9-8384-06ebe0cf771f
+:mtime:    20220405095603
+:ctime:    20220210210007
+:END:
+#+title: Entropy
+#+filetags: :phys:math:stub:
+
+The term entropy appears in two at first seemingly different contexts:
+- [[id:09efc736-73a1-4855-9b36-cc1c2b8ecec1][Thermodynamics]] and [[id:e1359a2c-d435-4c73-b46f-3c3be387e889][statistical mechanics]]
+- [[id:09ea6533-7613-4979-9efc-88e0f99bd5f0][Information theory]]
+
+[[id:a330e1eb-5cd8-43e5-834f-2e50d604ce95][!Entropy]]
+
+[[id:b8e29ba4-03ec-4c09-839c-2b30aa8fefe8][The point mass distribution is the only distribution with vanishing entropy]]
+
+[[id:28a98009-3d8e-4a4d-8845-0d89dde7bd93][Motivating the functional form of entropy]]
+
+Entropy is defined as the expected [[id:472f36ad-4e07-44d8-b0b6-8cf93ac9e7ae][Information content]].
+
+There are different types of entropy:
+- [[id:1f2fe34d-c304-4047-9d59-e5382f85c66f][Boltzmann entropy]]
+- [[id:69df7ba6-d13b-439b-a246-a691a97129e1][Gibbs entropy]]
+- [[id:e1701e68-43e8-4a57-8f7a-efd9e5a9a0ff][Von Neumann entropy]]
+- [[id:a0348d42-5ede-4f27-a8f0-eea3e4ca65c7][Shannon entropy]]

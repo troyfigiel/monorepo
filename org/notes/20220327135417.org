@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       04ab0066-129b-478f-a530-227ac1ce6fe9
+:mtime:    20220327135915
+:ctime:    20220327135417
+:END:
+#+title: Principle of indifference
+#+filetags: :stub:
+
+- Different reparametrizations lead to different [[id:8fde3d14-ab6c-43ce-aa7d-d7185f184ad9][Prior distributions]]. A distribution is
+  uninformative only for a specific parametrization.
+- In [[id:e1359a2c-d435-4c73-b46f-3c3be387e889][Statistical mechanics]], [[id:1c9a83a4-03ce-4372-8714-072f30cca67b][Liouville's theorem]] gives a basis for using the measure that comes from
+  the [[id:3e9ca5de-5d87-47dd-b7de-fe7037c59803][Hamiltonian mechanics]] of the system ([[id:05fa18e7-6511-49a2-8f81-c447a95b6f78][Symplectic geometry]]).
+
+  # TODO: This is the unique measure that is time-invariant for the system. How to prove this?
+https://physics.stackexchange.com/questions/251462/is-the-principle-of-indifference-enough-to-derive-the-microcanonical-ensemble

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       f4c1dbf3-0f05-4a68-ba2e-b9f6602789d5
+:mtime:    20220320161534
+:ctime:    20220219003626
+:END:
+#+title: Logistic function
+#+filetags: :stub:
+
+Because the [[id:041ae89d-f312-4fcc-95d5-c4b9277a0be8][Standard logistic function]] standard logistic function has an image lying between 0 and
+1 and is monotonically increasing, it can be seen as the cumulative distribution of the [[id:76de247c-a9ac-4e8b-a31c-e0e30f519ea6][Standard
+logistic distribution]].
+
+Similarly, the [[id:f4c1dbf3-0f05-4a68-ba2e-b9f6602789d5][Logistic function]] relates to the [[id:6a7ab0e7-d600-4bcf-9398-ec7ea8f0ea23][Logistic distribution]].
+
+The inverse of the standard logistic function is known as the [[id:e9b783ae-9bdf-418d-a024-499e634d5782][Logit function]] and hence is the
+quantile function of the [[id:6a7ab0e7-d600-4bcf-9398-ec7ea8f0ea23][Logistic distribution]].

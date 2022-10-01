@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       279bd970-5d55-425e-bef2-fe55539164b5
+:mtime:    20220301120411
+:ctime:    20220301120410
+:END:
+#+title: Binomial test
+#+filetags: :stub:
+
+

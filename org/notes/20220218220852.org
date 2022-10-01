@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       75ce5c38-d19b-4145-8f36-af9627381f76
+:mtime:    20220225223631
+:ctime:    20220218220852
+:END:
+#+title: Chebyshev's inequality
+
+Chebyshev's inequality loosely states that the probability mass of a distribution cannot be too far away from the mean, depending on the standard deviation of the distribution.
+
+More precisely, if \( X \) is a random variable with expectation value \( \mu \) and standard deviation \( \sigma \), for any real number \( k > 0 \) we have
+
+\[
+\mathbb{P} \left(  | X - \mu | \geq k \sigma \right) \leq \frac{1}{k^2}
+\]
+
+The bounds are relatively loose in practice and sharper bounds can be obtained if more is known about the distribution. However, [[id:8ca59335-a8bc-4f8b-8236-ea6c133d6079][Chebyshev's inequality gives sharp bounds for arbitrary distributions]].

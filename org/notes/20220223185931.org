@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       482d1c94-d161-44d5-90d2-a72d294b2f56
+:mtime:    20220326005514
+:ctime:    20220223185931
+:END:
+#+title: sum of cubic numbers
+#+filetags: :unclean:appendix:
+
+* TODO
+What is the intuition behind this result?
+
+* As a corollary
+This formula is a special case of [[id:f6d1d579-6cd4-42df-bbe9-7dcf184bd3a2][Faulhaber's formula]].
+
+* Formal statement
+For any natural number \( n \), the following equality holds:
+
+\[
+(1 + ... + n)^{2} = 1^{3}+ ... + n^{3}
+\]
+
+In fact, due to the formula for the [[id:61a02bbc-f8b4-457c-aea3-cd063b8eddb0][sum of natural numbers]], this may be rewritten as
+
+\[
+1^{3} + ... + n^{3} = \frac{n²(n+1)^{2}}{4}
+\]
+
+* Proof
+We can use induction for this result. It clearly holds for \( n = 1 \).
+
+Now assume it holds for a natural number \( n \), then
+
+\begin{equation*}
+\begin{align}
+(1 + ... + n + n+1)^{2} & = (1 + ... + n)^{2} + 2(n+1)(1 + ... + n) + (n+1)^{2} \\
+& = (1 + ... + n)^{2} + 2(n+1)\frac{1}{2}n(n+1) + (n+1)^{2} \\
+& = (1 + ... + n)^{2} + (n+1)^{3} \\
+& = 1 + ... + (n+1)^{3}
+\end{align}
+\end{equation*}
+
+Where the second equality follows due to the [[id:61a02bbc-f8b4-457c-aea3-cd063b8eddb0][sum of natural numbers]] and the final equality due to
+the induction hypothesis. \( \blacksquare \)

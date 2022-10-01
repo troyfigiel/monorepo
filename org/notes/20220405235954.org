@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       83601649-3af6-42c0-b54b-032150ce4787
+:mtime:    20220408205004
+:ctime:    20220405235954
+:END:
+#+title: Fisher information metric
+#+filetags: :stub:
+
+[[id:e4359b92-a4da-4531-b41a-1bc05fb94070][Chentsov's theorem]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       02fa64db-84dc-45f6-be75-359e18f96baa
+:mtime:    20220225223625
+:ctime:    20220224211549
+:END:
+#+title: The query execution plan is decided by the database management system
+#+filetags: :stub:
+
+Often times there are many equivalent ways a single query can be executed.

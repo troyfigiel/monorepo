@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       45a99358-0efc-41a0-84e0-dee476fbaf02
+:mtime:    20220316221931
+:ctime:    20220316221930
+:END:
+#+title: Imperative programming
+#+filetags: :stub:
+
+

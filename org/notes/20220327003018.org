@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1e8f5ce6-7cf1-4957-bbdb-a01a67cf621d
+:mtime:    20220405232557
+:ctime:    20220327003018
+:ROAM_ALIASES: "Gibbs distribution"
+:END:
+#+title: Boltzmann distribution
+#+filetags: :stub:
+
+[[id:8ebf7216-c544-46a3-a1c7-aa7e22eb8b09][Log-linear models]]

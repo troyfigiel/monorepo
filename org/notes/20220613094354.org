@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5228cca6-cbb8-425a-aef5-d221da1a3f88
+:END:
+#+title: Inductive testing
+#+filetags: :stub:
+

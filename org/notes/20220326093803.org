@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       02a96a91-d4f3-4ac7-9336-28886c7bc14c
+:mtime:    20220326093803
+:ctime:    20220326093803
+:END:
+#+title: Evergreen note-taking
+#+filetags: :stub:
+
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       4d7d004b-de90-41c5-baea-4b35cae63326
+:mtime:    20220324215939
+:ctime:    20220218220632
+:END:
+#+title: Weak law of large numbers
+#+filetags: :stub:
+

@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID:       2bd904d1-c1da-489c-a089-5aaedc29c145
+:mtime:    20220419215947
+:ctime:    20220419212854
+:END:
+#+title: @Building a computer
+#+filetags: :inbox:
+
+* How to build a PC
+The components always change, but the patterns / process behind picking the right components does not.
+
+* What am I going to with my computer?
+** Some examples
+| Hardcore gamer  | More budget to GPU and CPU                                             |
+| Content creator | Ease up on GPU and invest in CPU and RAM                               |
+| Glorified NAS   | Motherboard with lots of IO and case for drive mounts and power supply |
+
+** Gamers
+Ask the question again, but deeper. For example gamers:
+
+| RPG and visually complex games | High resolution display with HDR                    |
+| Hardcore competitive shooters  | Premium mouse, high-end keyboard, high refresh rate |
+
+Games will also affect number of CPU cores you should get, because different genres of games tend
+to utilize them differently.
+
+A good rule of thumb: At least as many cores as a current gen console. Stream and record, at around
+2 or 4 more and a high quality video encoder built in.
+
+** Content creators
+As for the content creators, what should you focus on? It depends on what you create:
+
+| Digital artist | Nothing special for GPU, but would need a drawing table                       |
+| Musician       | Tons of RAM to load up on to load up on instrument patches and samples        |
+| Video editor   | Moderate GPU, a lot of RAM and even more storage. Preferably fast             |
+| 3D modeler     | Reasonably fast CPU and GPU for rendering, for example capable of ray-tracing |
+| Engineer       | Sacrifice horse power for validated hardware like quadro GPU                  |
+| Programmer     | Hefty CPU with lots of threads and lot of RAM to go with it                   |
+| Writer         | Maybe only needs a keyboard and a decent display                              |
+
+** NAS and home storage
+
+| Cold storage | Backups, ripped media, game installs  | Speed is less important, higher capacity HDD |
+| Warm storage | Document or photo dump                | Balance of capacity and speed                |
+| Hot storage  | Footage ingest or network boot device | Higher speed and may need a fast CPU         |
+
+Left at 3:30.
+
+* References
+https://www.youtube.com/watch?v=BL4DCEp7blY

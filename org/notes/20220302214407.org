@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       30bfb8d1-1e02-4e2d-9f7b-e13b572a30a2
+:mtime:    20220302214551
+:ctime:    20220302214407
+:END:
+#+title: GNU Screen
+#+filetags: :stub:
+
+GNU Screen is an example of a [[id:04ea9676-7741-4157-ad71-d7787494808e][Terminal multiplexer]]

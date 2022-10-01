@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e123223f-ca28-489b-a8a0-0006847da4cc
+:mtime:    20220329232722
+:ctime:    20220329232721
+:END:
+#+title: Symmetric group
+#+filetags: :stub:
+
+

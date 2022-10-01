@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4b5956e4-7274-4344-9a2c-f5731895f6e1
+:mtime:    20220310133059
+:ctime:    20220310133058
+:END:
+#+title: Computer vision
+#+filetags: :stub:
+
+

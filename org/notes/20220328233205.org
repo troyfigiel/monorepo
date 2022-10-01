@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b4917646-0f0e-4275-a5b6-adcef81c78a7
+:mtime:    20220328233206
+:ctime:    20220328233205
+:END:
+#+title: Fick's second law
+#+filetags: :stub:
+
+

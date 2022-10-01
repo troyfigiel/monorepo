@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       990fe795-9597-4114-a7d8-3c53f28efc99
+:mtime:    20220404090241
+:ctime:    20220404090230
+:END:
+#+title: Bose-Einstein condensation
+#+filetags: :stub:
+
+

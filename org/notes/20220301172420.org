@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       faf3100d-0157-4d7c-8f8b-63d3fd265114
+:mtime:    20220301172434
+:ctime:    20220301172420
+:END:
+#+title: When other tests can be applied, the sign test is often the least powerful
+#+filetags: :stub:
+
+Normally, when the [[id:83cb1207-c9c3-4b04-938e-16f9bd0a9771][Paired t-test]] or the [[id:c026e04f-cb72-468b-ab43-af24eb5f6c12][Wilcoxon signed-rank test]] are applicable, they are often
+more powerful than the sign test.

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0480af71-6d8e-4341-9560-103f0ea1c08c
+:mtime:    20220329232735
+:ctime:    20220329232735
+:END:
+#+title: Alternating group
+#+filetags: :stub:
+
+

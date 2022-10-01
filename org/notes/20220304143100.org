@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d94372a6-446d-4be7-a385-901012a24b70
+:mtime:    20220307165739
+:ctime:    20220304143100
+:END:
+#+title: ?Variance of the negative binomial distribution
+#+filetags: :appendix:stub:
+
+

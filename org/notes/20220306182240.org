@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2251f973-c062-4e31-889b-efec586a150b
+:mtime:    20220306182242
+:ctime:    20220306182240
+:END:
+#+title: Neural network
+#+filetags: :stub:
+
+

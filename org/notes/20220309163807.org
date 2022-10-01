@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       15bb787b-4ba1-46f0-8c52-e60c95961e94
+:mtime:    20220309163808
+:ctime:    20220309163807
+:END:
+#+title: Makefile
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6e05d635-3cfd-4200-91cc-fd0bd6c565d1
+:mtime:    20220406210436
+:ctime:    20220406210435
+:END:
+#+title: Perplexity
+#+filetags: :stub:
+
+

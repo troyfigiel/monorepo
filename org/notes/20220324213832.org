@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3e9ca5de-5d87-47dd-b7de-fe7037c59803
+:mtime:    20220324213833
+:ctime:    20220324213832
+:END:
+#+title: Hamiltonian mechanics
+#+filetags: :stub:
+
+

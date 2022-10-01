@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4a4d6889-94e0-4d58-a6ab-2d69f44b489a
+:mtime:    20220302204621
+:ctime:    20220302204619
+:END:
+#+title: Goodness-of-fit
+#+filetags: :stub:
+
+

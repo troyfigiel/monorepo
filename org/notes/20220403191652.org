@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       680c11bb-e92b-43e3-ac12-a547737c052f
+:mtime:    20220403191652
+:ctime:    20220403191652
+:END:
+#+title: Microcanonical partition function
+#+filetags: :stub:
+
+

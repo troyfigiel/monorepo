@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       be61fee7-8b68-4af8-a543-91fde7f25314
+:mtime:    20220320152335
+:ctime:    20220320152334
+:END:
+#+title: ?Characteristic function of the Gumbel distribution
+#+filetags: :stub:
+
+

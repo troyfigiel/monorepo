@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       8f5b9ed8-abcf-4813-a183-5aab5edb40bc
+:mtime:    20220417142045
+:ctime:    20220417142044
+:END:
+#+title: Parabola
+#+filetags: :stub:
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       4bdc860f-ff96-430d-a33c-61171223a670
+:mtime:    20220420214726
+:ctime:    20220420214725
+:END:
+#+title: Filter method
+#+filetags: :stub:
+

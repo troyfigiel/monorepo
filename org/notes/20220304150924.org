@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a5ca5ab2-b167-4b21-a02e-fcd728476587
+:mtime:    20220417183641
+:ctime:    20220304150924
+:END:
+#+title: ?Entropy of the Bernoulli distribution
+#+filetags: :stub:appendix:
+
+\[
+H(X) = - p \log p - (1-p) \log (1-p)
+\]

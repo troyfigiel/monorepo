@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f6a2bfbc-4e4e-45a7-976b-9f7b69b01d0d
+:mtime:    20220310133624
+:ctime:    20220310133301
+:END:
+#+title: Ethical concerns in machine learning
+#+filetags: :stub:
+
+For example, face recognition. But also [[id:6d684a08-12b3-43d9-9078-8a0fa6aed717][Proprietary software is unethical]] when the machine learning
+models are closed source and of course [[id:652a3994-0fac-4d16-9bcc-7b0433d8f7fc][Interpretable models should be used for high-stake
+decisions]]. See: [[id:7544e7d0-a5be-40dd-9988-20498f652ec1][Black box models lead to serious societal harm]].

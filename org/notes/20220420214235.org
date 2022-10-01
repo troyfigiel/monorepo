@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ad742bb6-e24d-4113-85b5-c2b671da2978
+:mtime:    20220420214728
+:ctime:    20220420214235
+:END:
+#+title: Supervised feature selection
+#+filetags: :stub:
+
+- [[id:0a2751e9-c78a-42fe-b7eb-476621b1b33b][Intrinsic method]]
+- [[id:0c683964-058e-4467-8122-4a0bc824fb36][Wrapper method]]
+- [[id:4bdc860f-ff96-430d-a33c-61171223a670][Filter method]]

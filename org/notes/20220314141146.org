@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID:       75f8c3ba-4f72-48bd-89f5-37eceaac6454
+:mtime:    20220314183811
+:ctime:    20220314141146
+:END:
+#+title: Gini coefficient
+#+filetags: :stub:
+
+For a sample \( \{ x_1, x_2, ..., x_n \} \), the Gini coefficient is defined as
+
+\[
+G = \frac{\sum\limits_{i=1}^n \sum\limits_{j=1}^n \left| x_i - x_j \right|}{2 n^2 \bar{x}}
+\]
+
+Alternatively, if we let \( X_1, X_2 \) be two identically distributed random variables, we can
+write
+
+\begin{equation*}
+\begin{align}
+\mathrm{MD}
+&= \mathbb{E} \left[ \left| X_1 - X_2 \right| \right] \\
+&= \mathbb{E}_{X_1} \left[ \mathbb{E}_{X_2 | X_1} \left[ \left| X_1 - X_2 \right| \right] \right] \\
+&= \frac{1}{n^2} \sum\limits_{i=1}^n \sum\limits_{j=1}^n \left| x_i - x_j \right|
+\end{align}
+\end{equation*}
+
+for the [[id:a970d2ce-b0aa-4b03-b7e7-0ddea952f325][Mean absolute difference]] (MD), so that if we define the [[id:6080313e-fefb-4237-a355-5f2245371404][Relative mean absolute difference]]
+(RMD) as
+
+\[
+\mathrm{RMD} = \frac{\mathrm{MD}}{\bar{x}}
+\]
+
+it becomes clear that \( 2 G = \mathrm{RMD} \).
+
+If we let \( x_{(i)} \) be the i-th [[id:d8d642f5-14d3-440d-ab49-be2c7dd50562][Order statistic]], we may rewrite
+
+\begin{equation*}
+\begin{align}
+G
+&= \frac{\sum\limits_{i=1}^n \sum\limits_{j=1}^n \left| x_{(i)} - x_{(j)} \right|}{2 n^2 \bar{x}} \\
+&= \frac{\sum\limits_{i=1}^n \sum\limits_{j < i}^n \left( x_{(i)} - x_{(j)} \right)}{n^2 \bar{x}} \\
+&= \frac{\sum\limits_{i=1}^n \left( 2i - n - 1 \right) x_{(i)}}{n^2 \bar{x}} \\
+&= \frac{2}{n^2} \frac{\sum\limits_{i=1}^n i x_{(i)}}{\bar{x}} - \frac{n+1}{n}
+\end{align}
+\end{equation*}
+
+Can be understood as being an area under the [[id:c3643789-a23f-4aea-9c8b-f69e75871b40][Lorenz curve]] in broad lines.
+
+See: [[id:cfb28783-67c7-4e53-a883-fbe0e3a4ecc6][!Gini coefficient]].

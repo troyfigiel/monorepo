@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8ec9fa61-f29d-478f-8303-5f16c22d2e1d
+:mtime:    20220303134935
+:ctime:    20220303134736
+:END:
+#+title: Explainable machine learning
+#+filetags: :stub:
+
+When you use a [[id:345f1c7c-e045-4568-8967-52a055fc429d][Black box model]] and explain it afterwards.
+Start with a black box, then:
+- Create another model that approximates it
+- Compute derivatives of it
+- Visualize what part of the input the model is paying attention to
+
+This is in contrast to [[id:64287899-3f32-4593-a327-b06fdf7d9f1d][Interpretable machine learning]].
+
+https://www.youtube.com/watch?v=sl78EgrT4TY

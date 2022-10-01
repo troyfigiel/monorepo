@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       96324228-af3f-4beb-9692-65ab30803d03
+:mtime:    20220225223633
+:ctime:    20220221233910
+:END:
+#+title: R Markdown
+#+filetags: :stub:
+
+

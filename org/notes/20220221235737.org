@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       48e5fb53-8b61-48b3-a7b1-16f9d14a8b07
+:mtime:    20220225223628
+:ctime:    20220221235737
+:END:
+#+title: Lisp is a good configuration language
+#+filetags: :stub:
+
+Due to its homoiconicity, malleability as well as resemblance to languages like YAML, XML, JSON, etc.

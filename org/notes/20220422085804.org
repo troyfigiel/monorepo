@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9029ce16-77a1-4499-90b6-bb9c3b718efe
+:mtime:    20220422085805
+:ctime:    20220422085804
+:END:
+#+title: Coupling
+#+filetags: :stub:
+

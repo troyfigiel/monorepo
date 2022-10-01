@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f102dba1-daf7-4dc3-8a33-559129df8d42
+:mtime:    20220329233018
+:ctime:    20220329233017
+:END:
+#+title: Semi-group
+#+filetags: :stub:
+
+

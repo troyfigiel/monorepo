@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       849da448-ccd1-4ded-ad82-0f361c6fcec3
+:mtime:    20220314212252
+:ctime:    20220313174945
+:END:
+#+title: !Expressions derived from the confusion matrix
+#+filetags: :facts:stub:
+
+Define
+
+| variable | name                      |
+|----------+---------------------------|
+| TP       | number of true positives  |
+| FP       | number of false positives |
+| TN       | number of true negatives  |
+| FN       | number of false negatives |
+| P        | number of real positives  |
+| N        | number of real negatives  |
+
+* Rates
+** True positive rate (TPR)
+
+\[
+\mathrm{TPR} = \frac{\mathrm{TP}}{\mathrm{P}}
+\]
+
+The [[id:f976663e-6586-4230-a148-1c32fb72f4d7][True positive rate]] is the fraction of true positives over the total number of positives in the observations.
+
+** False positive rate (FPR)
+
+\[
+\mathrm{FPR} = \frac{\mathrm{FP}}{\mathrm{P}}
+\]
+
+The [[id:47d76987-8935-4cde-8933-c006a7f2bb8b][False positive rate]] is the fraction of false positives over the total number of positives in
+the observations. In other words, this is the rate of [[id:b8e61a93-91c9-48e9-a4dc-dd9b13623706][Type II errors]].
+
+** True negative rate (TNR)
+
+\[
+\mathrm{TNR} = \frac{\mathrm{TN}}{\mathrm{N}}
+\]
+
+The [[id:4bfffd3f-2919-486e-8205-331886c77d79][True negative rate]] is the fraction of true negatives over the total number of negatives in the observations.
+
+** False negative rate (FNR)
+
+\[
+\mathrm{FNR} = \frac{\mathrm{FN}}{\mathrm{P}}
+\]
+
+The [[id:f976663e-6586-4230-a148-1c32fb72f4d7][True positive rate]] is the fraction of true positives over the total number of positives in the observations.
+
+* Evaluation
+** Precision (PPV)
+** F1-score
+** Accuracy
+** Phi coefficient
+
+
+| defining equation                                               | name                      |
+|-----------------------------------------------------------------+---------------------------|
+| \( \frac{TP}{P} \)                                              | [[id:f976663e-6586-4230-a148-1c32fb72f4d7][True positive rate]]        |
+| \( \frac{TN}{N} \)                                              | [[id:4bfffd3f-2919-486e-8205-331886c77d79][True negative rate]]        |
+| \( 1 - \mathrm{TNR} \)                                          | [[id:47d76987-8935-4cde-8933-c006a7f2bb8b][False positive rate]]       |
+| \( 1 - \mathrm{TPR} \)                                          | [[id:04b7ba8e-ecb5-40d0-b910-6fed81078f73][False negative rate]]       |
+| \( \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}} \)             | [[id:9b29d717-da49-4923-bcd7-fc55156f63ad][Precision]]                 |
+| \( 1 - \mathrm{PPV} \)                                          | [[id:8144e9cd-b319-4c2e-b87a-b07b0e00b412][False discovery rate]]      |
+| \( \frac{\mathrm{TPR}}{\mathrm{FPR}} \)                         | [[id:12d0ae5f-3587-4832-a0ea-7d4364d39926][Positive likelihood ratio]] |
+| \( \frac{\mathrm{FNR}}{\mathrm{TNR}} \)                         | [[id:a20cf9e1-c810-41f2-9795-19af3d88823e][Negative likelihood ratio]] |
+| \( \frac{2}{\frac{1}{\mathrm{PPV}} + \frac{1}{\mathrm{TPR}}} \) | [[id:8e76c38a-79c7-403a-8a23-34d344b29245][F1-score]]                  |
+| \( \frac{\mathrm{TP} + \mathrm{TN}}{\mathrm{P} + \mathrm{N}} \) | [[id:20ccc2fe-09d0-4d78-b2a9-07efd0f1c0e9][Accuracy]]                  |
+| [[id:4f43c795-9796-40dd-87cc-f3e82f337b2e][Chi-squared statistic]] of contingency table                      | [[id:d8e48032-4017-421c-bb7c-17977685ac8a][Phi coefficient]]           |

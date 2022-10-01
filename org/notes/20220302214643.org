@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       49c5be1e-1097-42f5-9d48-cb7235cb9ae2
+:mtime:    20220302214645
+:ctime:    20220302214643
+:END:
+#+title: tmux
+#+filetags: :stub:
+
+

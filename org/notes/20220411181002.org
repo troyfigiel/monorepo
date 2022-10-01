@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d65ea899-b3c2-488a-8ad2-4f97a47a88ff
+:mtime:    20220411181003
+:ctime:    20220411181002
+:END:
+#+title: Observational study
+#+filetags: :stub:
+

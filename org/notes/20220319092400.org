@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1d945ae0-1c90-4284-9bdc-504407992fc3
+:mtime:    20220319092401
+:ctime:    20220319092400
+:END:
+#+title: Big O notation
+#+filetags: :stub:
+
+

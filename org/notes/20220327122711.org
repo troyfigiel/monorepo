@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       8fab4669-ac9d-4d61-90b3-462ce8c3ca87
+:mtime:    20220327123017
+:ctime:    20220327122711
+:END:
+#+title: Wrapped Cauchy distribution
+#+filetags: :stub:
+
+Obtained by wrapping the [[id:b0d3cec8-6efb-48d9-9087-3587954884d7][Cauchy distribution]] around the unit circle.

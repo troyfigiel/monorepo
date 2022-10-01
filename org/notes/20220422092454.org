@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b877ee25-4987-4f1a-9f1f-57af9eca1b39
+:mtime:    20220422092455
+:ctime:    20220422092454
+:END:
+#+title: XML
+#+filetags: :stub:
+

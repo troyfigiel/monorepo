@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d12b2509-2fe3-47cf-9129-40a6cc5b2d5b
+:mtime:    20220408230754
+:ctime:    20220408230754
+:END:
+#+title: All models are wrong
+#+filetags: :stub:
+
+

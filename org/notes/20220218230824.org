@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       51561c84-6bb9-456f-9b06-dfa47cb1060c
+:mtime:    20220309134350
+:ctime:    20220218230824
+:END:
+#+title: Git
+
+Git is an example of a version-control system. Internally, it uses [[id:dd646073-93ac-436c-bd9d-3b343ee41d8b][content-addressable
+storage]]. This means [[id:aca049fb-5976-4a0a-ab9e-72c31005e8ad][Git is not well-suited for large files]], since any change to a file will be
+saved as a separate new file.
+
+[[id:29421657-c53c-47e1-9f63-9a36432c90b2][Ignoring files in git]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0a7bc2b0-bd54-45ee-bcd2-d2779bdc69b6
+:mtime:    20220309181609
+:ctime:    20220303092234
+:END:
+#+title: !Guix
+#+filetags: :facts:stub:
+
+- Show old package generations `guix package -l` optionally with `-p` to specify a profile.

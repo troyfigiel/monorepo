@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       da7a4143-ea3a-4799-9ddd-548561de7d44
+:mtime:    20220304201233
+:ctime:    20220304200835
+:END:
+#+title: The training and test sets must be properly randomized
+#+filetags: :stub:
+
+When doing a [[id:9dcf3a17-31fd-44f5-b886-34424a1df9fd][Train-test split]], the train and test sets must be correctly randomized. If the
+randomization technique in some way depends on the data itself, it is likely that a model picks up
+features it should not know about.

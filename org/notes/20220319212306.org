@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       88c12d47-6a68-4aa5-93a1-845d5b588a98
+:mtime:    20220322095232
+:ctime:    20220319212306
+:ROAM_ALIASES: "Complete gamma function"
+:END:
+#+title: Gamma function
+#+filetags: :stub:
+
+Appears as a generalization of the factorial, but also in probability theory
+
+\[
+\Gamma(x) = \int\limits_0^{\infty} t^{x-1} e^{-t} \, dt
+\]
+
+See [[id:3adb06c7-ddc6-4d62-8328-44781c7fecfe][?Asymptotic series of the gamma function]].

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       09844765-68a8-49bd-ab0d-4c316ad4dc64
+:mtime:    20220415111140
+:ctime:    20220415111015
+:END:
+#+title: Constant of motion
+#+filetags: :stub:
+
+Examples:
+- [[id:94577d1c-a827-4ba7-8923-d34e77ef0259][Energy]]
+- [[id:814308d2-a76c-47ac-9692-e1f5134a9021][Linear momentum]]
+- [[id:f1a2fd7b-c309-4b9f-a3e7-568cc14e0fee][Angular momentum]]
+- [[id:f751dc77-d667-4fea-b973-29917b4f38c2][Laplace-Runge-Lenz vector]]
