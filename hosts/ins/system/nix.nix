@@ -2,7 +2,7 @@
 
 {
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     settings = {
       # Until my own binary cache is set up, let's turn it off.
       # substituters = [ "http://192.168.178.37:10106/nix-binary-cache/" ];
