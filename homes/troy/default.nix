@@ -167,9 +167,12 @@ rec {
   programs.lesspipe.enable = true;
 
   # TODO: Maybe betterlockscreen should run upon startup of i3?
+  # TODO: Can betterlockscreen run only when there is no video running?
+  # If so, we can turn inactiveInterval down to 10 again.
   services.betterlockscreen = {
     enable = true;
     arguments = [ "blur" ];
+    inactiveInterval = 60;
   };
 
   services.random-background = {
