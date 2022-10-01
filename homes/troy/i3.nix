@@ -8,8 +8,11 @@
       enable = true;
       package = pkgs.i3-gaps;
 
-      config = rec {
+      config = let
         modifier = "Mod4";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
+      in {
+        inherit modifier terminal;
         bars = [ ];
 
         window.border = 2;
@@ -20,8 +23,6 @@
           smartGaps = true;
           smartBorders = "on";
         };
-
-        terminal = "${pkgs.alacritty}/bin/alacritty";
 
         # TODO: Do not depend on the defaults.
         # I have too many keybindings here to know what is default and what is mine.

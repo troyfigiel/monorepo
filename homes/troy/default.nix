@@ -1,10 +1,11 @@
 { inputs, pkgs, ... }:
 
-rec {
-  # TODO: Put back Emacs when I get homeConfigurations to work in my flake
+let homeDirectory = "/home/troy";
+in {
   imports = [
     ./alacritty.nix
     ./dunst.nix
+    ./emacs.nix
     ./git.nix
     ./i3.nix
     ./picom.nix
@@ -17,8 +18,7 @@ rec {
   ];
 
   home = {
-    # TODO: I have also had to define this in the users folder? Why?
-    homeDirectory = "/home/troy";
+    inherit homeDirectory;
     username = "troy";
 
     sessionVariables = {
@@ -177,7 +177,7 @@ rec {
 
   services.random-background = {
     enable = true;
-    imageDirectory = "${home.homeDirectory}/.wallpapers";
+    imageDirectory = "${homeDirectory}/.wallpapers";
   };
 
   programs.dircolors.enable = true;

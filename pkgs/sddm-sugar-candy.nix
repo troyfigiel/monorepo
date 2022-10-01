@@ -1,8 +1,10 @@
 { pkgs }:
 
-pkgs.stdenv.mkDerivation rec {
+let version = "2b72ef6c6f720fe0ffde5ea5c7c48152e02f6c4f";
+in pkgs.stdenv.mkDerivation {
+  inherit version;
+
   pname = "sddm-sugar-candy";
-  version = "2b72ef6c6f720fe0ffde5ea5c7c48152e02f6c4f";
   dontBuild = true;
 
   # This works, but is this the best way to do it?

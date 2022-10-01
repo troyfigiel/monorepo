@@ -75,7 +75,7 @@
 
       nixosConfigurations = {
         ins = let system = "x86_64-linux";
-        in nixosSystem rec {
+        in nixosSystem {
           inherit system;
           pkgs = inputs.self.legacyPackages.${system};
           modules = [
@@ -86,7 +86,7 @@
         };
 
         vtr = let system = "x86_64-linux";
-        in nixosSystem rec {
+        in nixosSystem {
           inherit system;
           pkgs = inputs.self.legacyPackages.${system};
           modules = [
@@ -100,9 +100,15 @@
       homeConfigurations = {
         troy = homeManagerConfiguration {
           pkgs = inputs.self.nixosConfigurations.ins.pkgs;
-          modules = [
+          modules = let
+            nur-modules = import inputs.nur {
+              nurpkgs = inputs.self.legacyPackages.x86_64-linux;
+              pkgs = inputs.self.legacyPackages.x86_64-linux;
+            };
+          in [
             ./homes/troy
             inputs.impermanence.nixosModules.home-manager.impermanence
+            nur-modules.repos.rycee.hmModules.emacs-init
           ];
         };
       };
