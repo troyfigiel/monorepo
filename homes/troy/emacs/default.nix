@@ -1,10 +1,10 @@
 {
   imports = [
-    ./deft
-    ./org
-    ./org-roam
-    ./org-roam-timestamps
-    ./org-roam-ui
+    ./deft.nix
+    ./org.nix
+    ./org-roam.nix
+    ./org-roam-timestamps.nix
+    ./org-roam-ui.nix
   ];
 
   services.emacs.enable = true;
@@ -15,7 +15,6 @@
       enable = true;
       recommendedGcSettings = true;
       usePackageVerbose = true;
-      usePackage = { nix-mode = { enable = true; }; };
     };
   };
 }

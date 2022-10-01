@@ -68,6 +68,8 @@ Unfortunately, I have not found that poetry2nix is 100% effective. It often happ
 
 How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
 
+I should collect all possible sources of non-reproducibility in "features". These would be sets containing for example the org-roam directory location, whether I am persisting data, etc.
+
 Learning more about Nix:
 - Start using LUKS Disk Encryption
 - Create my own iso

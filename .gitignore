@@ -4,3 +4,6 @@
 # Terraform files that should not be committed
 **/.terraform
 **/*tfstate*
+
+# Do not store the produced LaTeX images in my writings
+**/ltximg/*
