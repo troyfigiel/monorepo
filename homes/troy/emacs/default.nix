@@ -1,4 +1,6 @@
 {
+  imports = [];
+
   services.emacs.enable = true;
 
   programs.emacs = {

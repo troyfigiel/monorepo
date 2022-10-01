@@ -13,6 +13,7 @@
         christian-kohler.path-intellisense
         eamodio.gitlens
         humao.rest-client
+        mattn.lisp
         mechatroner.rainbow-csv
         ms-azuretools.vscode-docker
         ms-python.python
@@ -35,6 +36,7 @@
         ms-toolsai.jupyter-keymap
         ms-vscode-remote.remote-containers
         samuelcolvin.jinjahtml
+        sir2b.lispbeautifier
       ];
     in vscode-extensions ++ vscode-marketplace;
     userSettings = {

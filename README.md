@@ -66,6 +66,8 @@ Overall, I would say, Nix does a great job keeping all of the related code in a 
 
 Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
 
+How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
+
 Learning more about Nix:
 - Start using LUKS Disk Encryption
 - Create my own iso

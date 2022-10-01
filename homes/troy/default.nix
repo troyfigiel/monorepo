@@ -5,7 +5,7 @@ in {
   imports = [
     ./alacritty.nix
     ./dunst.nix
-    ./emacs.nix
+    ./emacs
     ./git.nix
     ./i3.nix
     ./picom.nix
