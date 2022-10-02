@@ -84,5 +84,6 @@
     #   ;; org-superstar-item-bullet-alist also has good defaults.
     #   (org-superstar-headline-bullets-list '("◉" "○"))
 
+    ox-hugo = { enable = true; };
   };
 }

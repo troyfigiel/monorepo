@@ -1,7 +1,7 @@
 { lib, ... }:
 
 {
-  imports = [ ./bluetooth.nix ./networkmanager.nix ./printing.nix ./syncthing.nix ];
+  imports = [ ./bluetooth.nix ./networkmanager.nix ./printing.nix ];
 
   networking = {
     hostName = "ins";

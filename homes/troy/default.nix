@@ -11,6 +11,7 @@ in {
     ./picom.nix
     ./polybar.nix
     ./rofi
+    ./syncthing.nix
     ./vscode.nix
     ./zsh
     ./smb.nix
