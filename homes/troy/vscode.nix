@@ -34,6 +34,7 @@
         kevinglasson.cornflakes-linter
         kevinrose.vsc-python-indent
         ms-toolsai.jupyter-keymap
+        ms-vscode.makefile-tools
         ms-vscode-remote.remote-containers
         samuelcolvin.jinjahtml
         sir2b.lispbeautifier

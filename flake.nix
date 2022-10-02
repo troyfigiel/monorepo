@@ -64,6 +64,7 @@
           ];
         });
 
+      # TODO: For some reason if I try to change deploy to make, it keeps on looping through the Terraform apply. Why?
       apps = genAttrs systems (system: {
         default = {
           type = "app";

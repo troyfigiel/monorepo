@@ -34,68 +34,46 @@ in {
 
   # TODO: I don't need this if I set user packages?
   home.packages = with pkgs; [
+    gnumake
     nmap
-
     thunderbird
-
     restic
-
     deploy-rs
     sops
-
     rclone
     fdupes
-
     hugo
     terraform
-
     # TODO: For now I will need to symlink a config in place
     # However, it would make more sense to create my own module for it.
     minio-client
-
     # TODO: Rofi-pass could be really nice, but needs some set up.
     # For example, it does not take my German keyboard into account.
     rofi-pass
-
     papirus-icon-theme
-
     font-awesome
     inconsolata
-
     tldr
-    # Not sure about exa. I might as well put sane defaults on my ls aliases.
-    # exa
-
     file
     fd
-
     libreoffice
-    # zip and rar files
     zip
     unzip
     unar
-
     nitrokey-app
     logseq
     dbeaver
-
     lazydocker
-
     google-chrome
-
     minecraft
-
     signal-desktop
     tdesktop
     whatsapp-for-linux
     skypeforlinux
-
     flameshot
     feh
     neofetch
-
     wireshark
-
     awscli
   ];
 
