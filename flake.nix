@@ -64,7 +64,6 @@
           ];
         });
 
-      # TODO: This works for deploy, but do I need to create an install binary to run terraform as well?
       apps = genAttrs systems (system: {
         default = {
           type = "app";
