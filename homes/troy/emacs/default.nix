@@ -22,4 +22,9 @@
       usePackageVerbose = true;
     };
   };
+
+  home.persistence."/nix/persist/home/troy" = {
+    directories = [ ".emacs.d/eln-cache" ];
+    files = [ ".emacs.d/org-roam.db" ];
+  };
 }
