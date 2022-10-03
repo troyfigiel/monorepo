@@ -33,6 +33,8 @@
       '';
     };
 
+    all-the-icons = { enable = true; };
+
     all-the-icons-dired = {
       enable = true;
       after = [ "dired" ];
@@ -67,7 +69,7 @@
       enable = true;
       config = ''
         (setq doom-modeline-minor-modes t)
-        (doom-modeline-vcs-max-length 24)
+        (setq doom-modeline-vcs-max-length 24)
         (doom-modeline-mode 1)
       '';
     };

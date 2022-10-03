@@ -26,9 +26,6 @@
       # TODO: Indent this config properly
       config = ''
         (setq magit-todos-branch-list nil)
-        (add-to-list
-         'safe-local-variable-values
-         `(magit-todos-exclude-globs . (,core-literate-config-file)))
         (magit-todos-mode 1)
       '';
     };

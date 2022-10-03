@@ -7,7 +7,7 @@
 
     savehist = {
       enable = true;
-      config = "(save-hist-mode 1)";
+      config = "(savehist-mode 1)";
     };
 
     super-save = {
