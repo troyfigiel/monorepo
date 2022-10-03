@@ -17,7 +17,7 @@
       dl = download;
       pr = projects;
       ls = "${projects}/private/logseq";
-      nc = "${projects}/private/nixos-config";
+      rb = "${projects}/private/reproducible-builds";
       sh = "${home}/share";
     };
 

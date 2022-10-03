@@ -1,24 +1,31 @@
 { pkgs }:
 
-pkgs.runCommand "troyfigiel-com" {
+pkgs.runCommand "website" {
   # TODO: Should "name" be the same everywhere?
-  website = builtins.path {
+  # TODO: Copying the script does not seem very nice, is there not a better builder I can use?
+  script = builtins.path {
     path = ./.;
-    name = "troyfigiel-com";
+    name = "website";
+  };
+
+  website = builtins.path {
+    path = ../../website;
+    name = "website";
   };
 
   notes = builtins.path {
     path = ../../org/notes;
-    name = "troyfigiel-com";
+    name = "website";
   };
 
   blog = builtins.path {
     path = ../../org/blog;
-    name = "troyfigiel-com";
+    name = "website";
   };
 
   nativeBuildInputs = with pkgs; [ hugo emacs emacsPackages.ox-hugo ];
 } ''
+  cp -r $script/. .
   cp -r $website/. .
   chmod +w -R ./
   emacs -Q --batch -l publish.el -f 'build-all' --kill

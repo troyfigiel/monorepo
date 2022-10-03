@@ -4,7 +4,7 @@
   imports = [ ./bluetooth.nix ./networkmanager.nix ./printing.nix ];
 
   networking = {
-    hostName = "ins";
+    hostName = "laptop";
     extraHosts = ''
       192.168.178.31 rpi
       192.168.178.37 nas

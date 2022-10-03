@@ -6,7 +6,7 @@ resource "cloudflare_zone" "troyfigiel" {
 resource "cloudflare_record" "troyfigiel" {
   zone_id = cloudflare_zone.troyfigiel.id
   name    = local.domain
-  value   = vultr_instance.vtr.main_ip
+  value   = vultr_instance.cloud-server.main_ip
   type    = "A"
   ttl     = 3600
 }
@@ -39,7 +39,7 @@ resource "cloudflare_record" "www-search" {
 resource "cloudflare_record" "sub" {
   zone_id = cloudflare_zone.troyfigiel.id
   name    = "*.${local.domain}"
-  value   = vultr_instance.vtr.main_ip
+  value   = vultr_instance.cloud-server.main_ip
   type    = "A"
   ttl     = 3600
 }

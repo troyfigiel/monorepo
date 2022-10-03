@@ -74,23 +74,23 @@
       });
 
       nixosConfigurations = {
-        ins = let system = "x86_64-linux";
+        laptop = let system = "x86_64-linux";
         in nixosSystem {
           inherit system;
           pkgs = inputs.self.legacyPackages.${system};
           modules = [
-            ./hosts/ins
+            ./hosts/laptop
             inputs.sops-nix.nixosModules.sops
             inputs.impermanence.nixosModules.impermanence
           ];
         };
 
-        vtr = let system = "x86_64-linux";
+        cloud-server = let system = "x86_64-linux";
         in nixosSystem {
           inherit system;
           pkgs = inputs.self.legacyPackages.${system};
           modules = [
-            ./hosts/vtr
+            ./hosts/cloud-server
             inputs.sops-nix.nixosModules.sops
             inputs.simple-nixos-mailserver.nixosModules.mailserver
           ];
@@ -99,7 +99,7 @@
 
       homeConfigurations = {
         troy = homeManagerConfiguration {
-          pkgs = inputs.self.nixosConfigurations.ins.pkgs;
+          pkgs = inputs.self.nixosConfigurations.laptop.pkgs;
           modules = let
             nur-modules = import inputs.nur {
               nurpkgs = inputs.self.legacyPackages.x86_64-linux;
@@ -114,14 +114,14 @@
       };
 
       deploy.nodes = {
-        ins = {
-          hostname = "ins";
+        laptop = {
+          hostname = "laptop";
           profilesOrder = [ "host" "troy" ];
           profiles = {
             host = {
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-                inputs.self.nixosConfigurations.ins;
+                inputs.self.nixosConfigurations.laptop;
             };
 
             troy = {
@@ -132,13 +132,13 @@
           };
         };
 
-        vtr = {
+        cloud-server = {
           hostname = "troyfigiel.com";
           profiles = {
             host = {
               sshUser = "root";
               path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-                inputs.self.nixosConfigurations.vtr;
+                inputs.self.nixosConfigurations.cloud-server;
             };
           };
         };

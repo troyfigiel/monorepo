@@ -1,21 +1,21 @@
 keys:
   - users:
-    - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
+      - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
   - hosts:
-    - &ins 53BA215C79CFD829A722D5DDB05F6ED222F19591
-    - &vtr 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
+      - &laptop 53BA215C79CFD829A722D5DDB05F6ED222F19591
+      - &cloud-server 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
 creation_rules:
-  - path_regex: hosts/ins/security/secrets.yaml
+  - path_regex: hosts/laptop/security/secrets.yaml
     key_groups:
-    - pgp:
-      - *troy
-      - *ins
-  - path_regex: hosts/vtr/secrets.yaml
+      - pgp:
+          - *troy
+          - *laptop
+  - path_regex: hosts/cloud-server/secrets.yaml
     key_groups:
-    - pgp:
-      - *troy
-      - *vtr
+      - pgp:
+          - *troy
+          - *cloud-server
   - path_regex: infrastructure/secrets.yaml
     key_groups:
-    - pgp:
-      - *troy
+      - pgp:
+          - *troy

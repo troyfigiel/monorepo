@@ -1,5 +1,5 @@
 {
-  imports = [ ./mail.nix ./searx.nix ./troyfigiel-com.nix ];
+  imports = [ ./mail.nix ./searx.nix ./website.nix ];
 
   networking.firewall = {
     enable = true;

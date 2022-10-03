@@ -96,11 +96,11 @@ in {
         trust = 5;
       }
       {
-        source = ../../keys/ins.pub.asc;
+        source = ../../keys/laptop.pub.asc;
         trust = 5;
       }
       {
-        source = ../../keys/vtr.pub.asc;
+        source = ../../keys/cloud-server.pub.asc;
         trust = 5;
       }
     ];

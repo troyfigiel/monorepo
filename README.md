@@ -19,6 +19,8 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
 
+In the future it could be worthwhile to have a separate folder containing my .emacs.d. Right now it is part of my home, but if I want to use my Emacs config on a different machine that does not run NixOS or home-manager, I could still do it. Something to think about.
+
 I should collect all possible sources of non-reproducibility in "features". These would be sets containing for example the org-roam directory location, whether I am persisting data, etc.
 
 Learning more about Nix:
