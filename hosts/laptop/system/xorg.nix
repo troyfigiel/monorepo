@@ -21,6 +21,9 @@
 
     desktopManager = {
       xterm.enable = false;
+
+      cinnamon.enable = true;
+
       xfce = {
         enable = true;
         noDesktop = true;

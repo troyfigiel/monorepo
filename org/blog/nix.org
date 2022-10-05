@@ -27,3 +27,9 @@ I can think of either:
 - I treat the website as state on my server, but then there is no guarantee I get exactly what I want.
 
 Overall, I would say, Nix does a great job keeping all of the related code in a single repository. Dependencies between Nix flakes will be loosely coupled by design.
+
+** Separating home from configuration
+
+The nice thing about this, is that if I break something in my home environment, it would not brick my NixOS install.
+
+To fix things, I would first be able to try a different desktop environment. I can elevate to root when necessary.

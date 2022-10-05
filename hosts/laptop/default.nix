@@ -5,6 +5,7 @@
     ./security
     ./system
     ./users.nix
+    ./vm.nix
   ];
 
   time.timeZone = "Europe/Berlin";

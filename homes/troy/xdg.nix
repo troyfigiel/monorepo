@@ -20,4 +20,14 @@
       extraConfig = { XDG_PROJECTS_DIR = "${home}/projects"; };
     };
   };
+
+  home.persistence."/nix/persist/home/troy" = {
+    directories = [
+      "documents"
+      "downloads"
+      "projects"
+    ];
+    allowOther = true;
+  };
+
 }

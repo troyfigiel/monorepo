@@ -191,9 +191,6 @@ in {
       ".local/share/password-store"
       ".local/share/Steam"
       ".local/share/vulkan"
-      "documents"
-      "downloads"
-      "projects"
     ];
     files = [ ".ssh/known_hosts" ];
     allowOther = true;

@@ -42,12 +42,13 @@
     wget
     # xclip
     nixfmt
-    # qemu
 
     # For i3 sshfs
     # mpc-cli
     brightnessctl
 
+    qemu
+    virt-manager
     # Nicer form of du
     # ncdu
   ];
