@@ -17,6 +17,11 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 # TODOs
 
+**Important**
+Currently I have a single lock file. If I update this lock file, I might end up breaking a configuration that I do not immediately test with my deploy. Instead I should have a flake and a lock file in each module (each host, each home, etc.) and a main flake file which triggers my deploys from the root of the repository. This does make updates more complicated, because I will have to update all flakes simultaneously, but this can be easily fixed by using a Makefile.
+
+Additionally, to share configs between different hosts, would it be better to create and use a home-manager or NixOS module instead of a config in a `shared/` or so?
+
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
 How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
