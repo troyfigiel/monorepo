@@ -44,7 +44,7 @@
 
   outputs = inputs:
     let
-      systems = [ "x86_64-linux" ];
+      systems = [ "x86_64-linux" "aarch64-linux" ];
       inherit (inputs.nixpkgs.lib) nixosSystem genAttrs composeManyExtensions;
       inherit (inputs.home-manager.lib) homeManagerConfiguration;
     in {
@@ -93,6 +93,15 @@
             ./hosts/cloud-server
             inputs.sops-nix.nixosModules.sops
             inputs.simple-nixos-mailserver.nixosModules.mailserver
+          ];
+        };
+
+        virtual-devbox = let system = "aarch64-linux";
+        in nixosSystem {
+          inherit system;
+          pkgs = inputs.self.legacyPackages.${system};
+          modules = [
+            ./hosts/virtual-devbox
           ];
         };
       };
