@@ -1,3 +1,4 @@
+# TODO: Something changed with the latest flake update. I now have a bar with the name of the window in every i3 mode.
 { lib, pkgs, ... }:
 
 {

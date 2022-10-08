@@ -22,6 +22,17 @@ Currently I have a single lock file. If I update this lock file, I might end up 
 
 Additionally, to share configs between different hosts, would it be better to create and use a home-manager or NixOS module instead of a config in a `shared/` or so?
 
+More notes:
+1. Would it be better to move back to home-manager as a NixOS module instead? I would rather use a VM than home-manager, since I have quite often had difficulties with Nix on other OSes. I do not see myself using home-manager standalone.
+2. I want a given host to have a lock file that I am sure works. I do not want to be in a situation where I have updated my lockfile but did not check a certain host and now some packages broke. Instead, I would prefer to let Nix do automatic updates.
+3. The second point also implies it does not make sense to have a flake for a home: It could be possible that due to the host having different hardware or settings, a home works correctly on one host and malfunctions on another. Hence strenghtening my first point, that I should use home-manager as a NixOS module.
+4. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
+5. I would have different flakes for each host, each virtual machine, infrastructure, website / org, my overlay
+6. I should start by creating flakes for my website and overlay which have an overlay output.
+7. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example.
+8. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
+9. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
+
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
 How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
@@ -57,3 +68,59 @@ To be added to polybar / dunst:
 - Active window (i3)
 - Temperature
 - Hard disk drive remaining and tmpfs size remaining
+
+## flakes
+- Use separate flakes, but have a shared flake-module.nix in hosts that imports lib
+- Keep flakes DRY by importing flake modules with flake-parts
+
+## templates
+- Add a host template which sets up a basic host config with flake and all
+
+## hosts
+- Rename to nixos if I am only going to be running NixOS
+- Development is done on virtual machines, no standalone home-manager is needed
+
+## modules & lib
+- Create them at the root of the monorepo
+
+### modules
+- I can create modules and enable them to specify exactly which config is used by which host
+  - This is cleaner than importing, because it also allows me to set any variables I need to
+  - The Nix code for each host will be fairly small. Just setting which config to enable.
+
+### lib
+- To extend the default lib from nixpkgs, I can use lib.extend and supply an overlay
+
+## website
+- Blogs and articles should be different
+  - Blogs are more opinion-based and "life lessons"
+  - Articles contain more clear-cut information and can often span series
+- Instead of using a git commit hash, I could use the derivation Nix returns
+  - This has the advantage that I could even save all the previous versions of my website in my own cache and let people request them as needed
+- Clarify that the website is a work in progress and there is no guarantee for correctness or representability of myself at this point in time
+
+## tfmacs
+- I should create a home-manager module out of my config
+- tfmacs should be a separate directory with all of my Emacs config
+- README.org at the base of tfmacs explaining how I am using my Emacs config together with Nix
+- settings.el at the base of tfmacs which reads environment variables and turns this into a modular Emacs config (e.g. if ORG_ROAM_DIRECTORY is not set, do not load org-roam)
+- Packages required by Nix should be read from a simple epkgs.txt file
+
+## packages
+- Rename pkgs to packages
+- Add a flake.nix that outputs an overlay? Not so sure yet how to handle my own packages.
+
+## Lutris on Nix?
+- How does it work? How many Windows-only games are included?
+
+## README
+- Turn this README into an org file
+- Clean up this README
+- Clarify that this repo is a work in progress and only intended for me
+
+## deploy
+- Create my own basic command line tool to handle multiple flakes in this monorepo?
+- deploy should have update and upgrade options
+
+## License
+- Add license if I continue developing, but I am not sure which one is legally allowed... If there is any Emacs code in there, it should be GPL?

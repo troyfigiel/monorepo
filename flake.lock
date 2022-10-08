@@ -75,6 +75,26 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1664385320,
+        "narHash": "sha256-uSCHb9RUqHRjTpI8OzyaUuHckFnnxwZqlXEuo+yUpYQ=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "45298bd207b26e1bcd030a0bb075aa2da29f8e30",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1659877975,
@@ -228,6 +248,7 @@
       "inputs": {
         "deploy-rs": "deploy-rs",
         "emacs-overlay": "emacs-overlay",
+        "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nix-vscode-marketplace": "nix-vscode-marketplace",

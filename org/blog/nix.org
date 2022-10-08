@@ -33,3 +33,11 @@ Overall, I would say, Nix does a great job keeping all of the related code in a 
 The nice thing about this, is that if I break something in my home environment, it would not brick my NixOS install.
 
 To fix things, I would first be able to try a different desktop environment. I can elevate to root when necessary.
+
+** Too much freedom?
+
+Nix gives you a lot of freedom to build your own configs and definitely enough freedom to make your life miserable by making the wrong design choices.
+
+You need to experiment a lot with Nix and figure out over time which tools and design choices are best for your personal requirements. There are often multiple, almost equivalent ways of doing something.
+
+For example, I have gone back and forth between using home-manager as a standalone module versus using it as a NixOS module. In principle, you could even completely get rid of home-manager and write some modules yourself if you so desire.
