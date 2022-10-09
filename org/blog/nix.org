@@ -41,3 +41,5 @@ Nix gives you a lot of freedom to build your own configs and definitely enough f
 You need to experiment a lot with Nix and figure out over time which tools and design choices are best for your personal requirements. There are often multiple, almost equivalent ways of doing something.
 
 For example, I have gone back and forth between using home-manager as a standalone module versus using it as a NixOS module. In principle, you could even completely get rid of home-manager and write some modules yourself if you so desire.
+
+Understanding all of the different ways in which you can configure stuff, shows you a large part of the Nix landscape. The switch back from home-manager as a standalone module to using it as a NixOS module was fairly trivial now, although I initially struggled quite a lot to turn it from a NixOS module back into a standalone module.

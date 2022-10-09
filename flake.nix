@@ -56,7 +56,6 @@
 
       imports = [
         ./overlay
-        ./homes/troy/flake-module.nix
         ./hosts/cloud-server
         ./hosts/laptop
         ./hosts/virtual-devbox
@@ -75,18 +74,11 @@
         deploy.nodes = {
           laptop = {
             hostname = "laptop";
-            profilesOrder = [ "host" "troy" ];
             profiles = {
               host = {
                 sshUser = "root";
                 path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                   inputs.self.nixosConfigurations.laptop;
-              };
-
-              troy = {
-                sshUser = "troy";
-                path = inputs.deploy-rs.lib.x86_64-linux.activate.home-manager
-                  inputs.self.homeConfigurations.troy;
               };
             };
           };

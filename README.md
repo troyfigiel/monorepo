@@ -20,12 +20,8 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 **Important**
 Currently I have a single lock file. If I update this lock file, I might end up breaking a configuration that I do not immediately test with my deploy. Instead I should have a flake and a lock file in each module (each host, each home, etc.) and a main flake file which triggers my deploys from the root of the repository. This does make updates more complicated, because I will have to update all flakes simultaneously, but this can be easily fixed by using a Makefile.
 
-Additionally, to share configs between different hosts, would it be better to create and use a home-manager or NixOS module instead of a config in a `shared/` or so?
-
 More notes:
-1. Would it be better to move back to home-manager as a NixOS module instead? I would rather use a VM than home-manager, since I have quite often had difficulties with Nix on other OSes. I do not see myself using home-manager standalone.
 2. I want a given host to have a lock file that I am sure works. I do not want to be in a situation where I have updated my lockfile but did not check a certain host and now some packages broke. Instead, I would prefer to let Nix do automatic updates.
-3. The second point also implies it does not make sense to have a flake for a home: It could be possible that due to the host having different hardware or settings, a home works correctly on one host and malfunctions on another. Hence strenghtening my first point, that I should use home-manager as a NixOS module.
 4. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
 5. I would have different flakes for each host, each virtual machine, infrastructure, website / org, my overlay
 6. I should start by creating flakes for my website and overlay which have an overlay output.
@@ -34,12 +30,6 @@ More notes:
 9. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
-
-How cleanly separated are home-manager and NixOS? I should have a look by setting up a VM with e.g. Ubuntu and then installing home-manager and my home.
-
-In the future it could be worthwhile to have a separate folder containing my .emacs.d. Right now it is part of my home, but if I want to use my Emacs config on a different machine that does not run NixOS or home-manager, I could still do it. Something to think about.
-
-I should collect all possible sources of non-reproducibility in "features". These would be sets containing for example the org-roam directory location, whether I am persisting data, etc.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption
