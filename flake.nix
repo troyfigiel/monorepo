@@ -50,7 +50,9 @@
   outputs = inputs:
     let
       inherit (inputs) self;
+      inherit (inputs.nixpkgs) lib;
       inherit (inputs.flake-parts.lib) mkFlake;
+      inherit (import ./lib/modules.nix { inherit lib; }) mapModules;
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
@@ -69,6 +71,9 @@
       };
 
       flake = {
+        nixosModules = mapModules import ./modules/nixos;
+        homeManagerModules = mapModules import ./modules/home-manager;
+
         # TODO: It seems the default boot entry is not updated. That is particularly annoying and not sure why this happens.
         # Do I really need deploy-rs? Would a simple Makefile not suffice?
         deploy.nodes = {

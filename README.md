@@ -77,6 +77,11 @@ To be added to polybar / dunst:
 - I can create modules and enable them to specify exactly which config is used by which host
   - This is cleaner than importing, because it also allows me to set any variables I need to
   - The Nix code for each host will be fairly small. Just setting which config to enable.
+- Since these are kind of "meta-modules" that are only useful to keep my code DRY, it is best to keep the number of options as small as possible.
+  - If a configuration does not vary between hosts, do not add it as an option
+  - The exception is the "enable" option which allows me to easily add or delete configurations, plus it is standard in nixpkgs as well.
+- Because these modules are "meta-modules", I might want to rename them to distinguish them from the modules that I might need to create myself
+  - Profiles might be a good naming?
 
 ### lib
 - To extend the default lib from nixpkgs, I can use lib.extend and supply an overlay
@@ -114,3 +119,10 @@ To be added to polybar / dunst:
 
 ## License
 - Add license if I continue developing, but I am not sure which one is legally allowed... If there is any Emacs code in there, it should be GPL?
+
+## features
+- Some cross-cutting concerns exist that cannot be fixed through the module structure. For example, whether we are persisting data or not
+- Similarly, sops and all the security settings are cross-cutting
+- Sometimes the choice of desktop (like gnome) also defines certain functionality. For example, Gnome automatically sets its own keyring.
+- This is reminiscent of aspect-oriented programming. We might want to call the options such as whether a machine is using persistence aspects instead of features.
+- The type of hardware I have (bluetooth, sound, wifi, etc.) could also be cross-cutting

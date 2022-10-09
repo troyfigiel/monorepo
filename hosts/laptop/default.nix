@@ -25,13 +25,29 @@ in lib.mkHostFlake {
           inputs.impermanence.nixosModules.home-manager.impermanence
           nur-modules.repos.rycee.hmModules.emacs-init
           ../../homes/troy
+          self.homeManagerModules.alacritty
+          self.homeManagerModules.dunst
+          self.homeManagerModules.git
+          self.homeManagerModules.i3
+          self.homeManagerModules.picom
+          self.homeManagerModules.polybar
+          self.homeManagerModules.smb
+          self.homeManagerModules.syncthing
+          self.homeManagerModules.vscode
+          self.homeManagerModules.xdg
         ];
       };
     }
-    ./networking
-    ./security
     ./system
     ./configuration.nix
     ./hardware-configuration.nix
+    ./networking.nix
+    ./security.nix
+    # TODO: This is not nice, this is hard-coding which should be avoided.
+    self.nixosModules.bluetooth
+    self.nixosModules.networkmanager
+    self.nixosModules.printing
+    self.nixosModules.sops
+    self.nixosModules.gpg
   ];
 }

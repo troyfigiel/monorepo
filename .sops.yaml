@@ -5,7 +5,7 @@ keys:
       - &laptop 53BA215C79CFD829A722D5DDB05F6ED222F19591
       - &cloud-server 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
 creation_rules:
-  - path_regex: hosts/laptop/security/secrets.yaml
+  - path_regex: hosts/laptop/secrets.yaml
     key_groups:
       - pgp:
           - *troy

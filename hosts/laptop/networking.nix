@@ -1,8 +1,6 @@
 { lib, ... }:
 
 {
-  imports = [ ./bluetooth.nix ./networkmanager.nix ./printing.nix ];
-
   networking = {
     hostName = "laptop";
     extraHosts = ''
@@ -15,5 +13,11 @@
   services.avahi = {
     enable = true;
     nssmdns = true;
+  };
+
+  localModules = {
+    networkmanager.enable = true;
+    printing.enable = true;
+    bluetooth.enable = true;
   };
 }

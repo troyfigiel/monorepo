@@ -2,21 +2,7 @@
 
 let homeDirectory = "/home/troy";
 in {
-  imports = [
-    ./alacritty.nix
-    ./dunst.nix
-    ./emacs
-    ./git.nix
-    ./i3.nix
-    ./picom.nix
-    ./polybar.nix
-    ./rofi
-    ./syncthing.nix
-    ./vscode.nix
-    ./zsh
-    ./smb.nix
-    ./xdg.nix
-  ];
+  imports = [ ./emacs ./rofi ./zsh ];
 
   home = {
     inherit homeDirectory;
@@ -194,5 +180,17 @@ in {
     ];
     files = [ ".ssh/known_hosts" ];
     allowOther = true;
+  };
+
+  localModules = {
+    alacritty.enable = true;
+    dunst.enable = true;
+    git.enable = true;
+    i3.enable = true;
+    picom.enable = true;
+    polybar.enable = true;
+    syncthing.enable = true;
+    vscode.enable = true;
+    xdg.enable = true;
   };
 }

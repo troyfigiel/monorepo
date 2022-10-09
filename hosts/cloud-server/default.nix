@@ -9,9 +9,8 @@ in lib.mkHostFlake {
     inputs.simple-nixos-mailserver.nixosModules.mailserver
     ./configuration.nix
     ./hardware-configuration.nix
-    ./sops.nix
-    ./sshd.nix
     ./users.nix
     ./website
+    self.nixosModules.sops
   ];
 }
