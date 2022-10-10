@@ -1,6 +1,8 @@
 #!/run/current-system/sw/bin/env sh
 
-echo "Just ran the deploy script!"
+terraform -chdir=infrastructure apply -auto-approve
+deploy
+
 # This script should do the following:
 # - Deploy my Terraform code and all my NixOS configurations to my servers.
 # - Have the option to update the flake beforehand (deploy.sh --update).

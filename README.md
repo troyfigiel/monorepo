@@ -25,7 +25,7 @@ More notes:
 4. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
 5. I would have different flakes for each host, each virtual machine, infrastructure, website / org, my overlay
 6. I should start by creating flakes for my website and overlay which have an overlay output.
-7. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example.
+7. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example. Maybe Make is still nice? It can easily parallellize the deploy steps, is kind of declarative and well-known.
 8. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
 9. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 

@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
   networking.hostName = "virtual-devbox"; # Define your hostname.
 
   time.timeZone = "Europe/Berlin";

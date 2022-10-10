@@ -23,7 +23,7 @@ in {
           mattn.lisp
           mechatroner.rainbow-csv
           ms-azuretools.vscode-docker
-          ms-python.python
+          #ms-python.python
           ms-python.vscode-pylance
           ms-vscode-remote.remote-ssh
           ms-toolsai.jupyter
