@@ -1,14 +1,12 @@
-{ inputs, self, ... }:
+{ inputs, lib, self, ... }:
 
 let
-  lib = import ../../lib/hosts.nix { inherit inputs self; };
+  mylib = import ../../lib/hosts.nix { inherit inputs lib self; };
   system = "aarch64-linux";
-in lib.mkHostFlake {
+in mylib.mkHostFlake {
   inherit system;
   host = "virtual-devbox";
   modules = [
-    ./configuration.nix
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;

@@ -21,13 +21,14 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 Currently I have a single lock file. If I update this lock file, I might end up breaking a configuration that I do not immediately test with my deploy. Instead I should have a flake and a lock file in each module (each host, each home, etc.) and a main flake file which triggers my deploys from the root of the repository. This does make updates more complicated, because I will have to update all flakes simultaneously, but this can be easily fixed by using a Makefile.
 
 More notes:
-2. I want a given host to have a lock file that I am sure works. I do not want to be in a situation where I have updated my lockfile but did not check a certain host and now some packages broke. Instead, I would prefer to let Nix do automatic updates.
-4. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
-5. I would have different flakes for each host, each virtual machine, infrastructure, website / org, my overlay
-6. I should start by creating flakes for my website and overlay which have an overlay output.
-7. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example. Maybe Make is still nice? It can easily parallellize the deploy steps, is kind of declarative and well-known.
-8. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
-9. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
+1. I want a given host to have a lock file that I am sure works. I do not want to be in a situation where I have updated my lockfile but did not check a certain host and now some packages broke. Instead, I would prefer to let Nix do automatic updates.
+2. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
+3. I would have different flakes for each host, each virtual machine, infrastructure, website / org, my overlay
+4. I should start by creating flakes for my website and overlay which have an overlay output.
+5. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example. Maybe Make is still nice? It can easily parallellize the deploy steps, is kind of declarative and well-known.
+6. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
+7. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
+8. I do not need to use home-manager in a home.nix file. If I preface everything with home-manager.users, this works just as well. This can make my code more modular.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 

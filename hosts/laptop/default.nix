@@ -1,9 +1,9 @@
-{ inputs, self, ... }:
+{ inputs, lib, self, ... }:
 
 let
-  lib = import ../../lib/hosts.nix { inherit inputs self; };
+  mylib = import ../../lib/hosts.nix { inherit inputs lib self; };
   system = "x86_64-linux";
-in lib.mkHostFlake {
+in mylib.mkHostFlake {
   inherit system;
   host = "laptop";
   modules = [
@@ -39,15 +39,7 @@ in lib.mkHostFlake {
       };
     }
     ./system
-    ./configuration.nix
-    ./hardware-configuration.nix
     ./networking.nix
     ./security.nix
-    # TODO: This is not nice, this is hard-coding which should be avoided.
-    self.nixosModules.bluetooth
-    self.nixosModules.networkmanager
-    self.nixosModules.printing
-    self.nixosModules.sops
-    self.nixosModules.gpg
   ];
 }
