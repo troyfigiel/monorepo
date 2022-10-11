@@ -24,7 +24,7 @@ in lib.mkHostFlake {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
           nur-modules.repos.rycee.hmModules.emacs-init
-          ../../homes/troy
+          ./home
           self.homeManagerModules.alacritty
           self.homeManagerModules.dunst
           self.homeManagerModules.git
