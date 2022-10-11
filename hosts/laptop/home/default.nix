@@ -22,7 +22,6 @@ in {
   home.packages = with pkgs; [
     gnumake
     nmap
-    thunderbird
     restic
     deploy-rs
     sops
@@ -47,11 +46,7 @@ in {
     unzip
     unar
     nitrokey-app
-    logseq
     dbeaver
-    lazydocker
-    google-chrome
-    minecraft
     signal-desktop
     tdesktop
     whatsapp-for-linux
@@ -60,7 +55,6 @@ in {
     feh
     neofetch
     wireshark
-    awscli
   ];
 
   # Is it a problem I have a home service as well as a system service?
@@ -78,15 +72,15 @@ in {
     enable = true;
     publicKeys = [
       {
-        source = ../../keys/troy.pub.asc;
+        source = ../../../keys/troy.pub.asc;
         trust = 5;
       }
       {
-        source = ../../keys/laptop.pub.asc;
+        source = ../../../keys/laptop.pub.asc;
         trust = 5;
       }
       {
-        source = ../../keys/cloud-server.pub.asc;
+        source = ../../../keys/cloud-server.pub.asc;
         trust = 5;
       }
     ];
