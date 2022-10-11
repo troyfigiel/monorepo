@@ -1,7 +1,7 @@
 { inputs, self, ... }:
 
 let
-  lib = import ../lib.nix { inherit inputs self; };
+  lib = import ../../lib/hosts.nix { inherit inputs self; };
   system = "aarch64-linux";
 in lib.mkHostFlake {
   inherit system;

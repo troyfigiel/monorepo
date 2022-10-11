@@ -1,6 +1,6 @@
 { inputs, self, ... }:
 
-let lib = import ../lib.nix { inherit inputs self; };
+let lib = import ../../lib/hosts.nix { inherit inputs self; };
 in lib.mkHostFlake {
   host = "cloud-server";
   system = "x86_64-linux";
