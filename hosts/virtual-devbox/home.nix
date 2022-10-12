@@ -6,9 +6,7 @@ in {
     # inherit homeDirectory;
     username = "troy";
 
-    sessionVariables = {
-      EDITOR = "vim";
-    };
+    sessionVariables = { EDITOR = "vim"; };
 
     stateVersion = "22.05";
   };
@@ -28,11 +26,7 @@ in {
 
   localModules = {
     alacritty.enable = true;
-    git = {
-      enable = true;
-      userEmail = "troy.figiel@gmail.com";
-      lazygit.enable = true;
-    };
+    git.enable = true;
     vscode.enable = true;
     xdg-no-persist.enable = true;
   };

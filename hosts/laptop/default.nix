@@ -5,11 +5,12 @@ let
   system = "x86_64-linux";
 in mylib.mkHostFlake {
   inherit system;
+  impermanence = true;
   host = "laptop";
   modules = [
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
-    # If homeManagerModules is empty, do not put this in here.
+    inputs.simple-nixos-mailserver.nixosModules.mailserver
     inputs.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
