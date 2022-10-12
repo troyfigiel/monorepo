@@ -1,5 +1,9 @@
 # NixOS configuration
 
+# Disclaimer, be aware!
+
+This is very much a work in progress. This is a side project, which means I work on this project when my main job does not constrain my time too much. Currently, this repository is intended to be used only by me. Although I am cleaning up code along the way and I am aiming to turn the code here into a presentable format, if something works, it is good enough at this stage. This is made possible precisely by the declarative nature of Terraform and Nix that give me assurance I can always roll back to a working state of my builds.
+
 # Some notes
 
 - I rely on sops for Terraform as well. agenix might not be a good alternative to sops-nix in this case.
