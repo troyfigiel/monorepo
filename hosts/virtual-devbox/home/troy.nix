@@ -28,6 +28,6 @@ in {
     alacritty.enable = true;
     git.enable = true;
     vscode.enable = true;
-    xdg-no-persist.enable = true;
+    xdg.enable = true;
   };
 }

@@ -1,12 +1,11 @@
 { impermanence, config, lib, pkgs, ... }:
 
-let
-  cfg = config.localModules.networkmanager;
-  inherit (lib) mkEnableOption mkIf optionalAttrs mkMerge;
+with lib;
+let cfg = config.localModules.networkmanager;
 in {
   options.localModules.networkmanager.enable = mkEnableOption "NetworkManager";
 
-  config = mkMerge [
+  config = mkIf cfg.enable (mkMerge [
     {
       networking.networkmanager = {
         enable = true;
@@ -16,11 +15,11 @@ in {
       programs.nm-applet.enable = true;
     }
 
-    (optionalAttrs (impermanence) {
+    (optionalAttrs impermanence {
       environment.persistence."/nix/persist".directories = [{
         directory = "/etc/NetworkManager";
         mode = "0755";
       }];
     })
-  ];
+  ]);
 }

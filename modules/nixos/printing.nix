@@ -1,8 +1,7 @@
 { config, lib, pkgs, ... }:
 
-let
-  cfg = config.localModules.printing;
-  inherit (lib) mkEnableOption mkIf;
+with lib;
+let cfg = config.localModules.printing;
 in {
   options.localModules.printing.enable = mkEnableOption "Printing";
 

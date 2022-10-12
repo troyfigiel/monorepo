@@ -1,8 +1,7 @@
 { config, lib, ... }:
 
-let
-  cfg = config.localModules.alacritty;
-  inherit (lib) mkEnableOption mkIf;
+with lib;
+let cfg = config.localModules.alacritty;
 in {
   options.localModules.alacritty.enable = mkEnableOption "Alacritty";
 

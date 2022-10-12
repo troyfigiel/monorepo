@@ -1,8 +1,7 @@
 { config, lib, ... }:
 
-let
-  cfg = config.localModules.sops;
-  inherit (lib) mkEnableOption mkIf mkOption types;
+with lib;
+let cfg = config.localModules.sops;
 in {
   options.localModules.sops = {
     enable = mkEnableOption "sops-nix";

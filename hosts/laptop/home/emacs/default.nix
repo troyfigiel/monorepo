@@ -1,3 +1,5 @@
+{config,...}:
+
 {
   imports = [
     ./completion.nix
@@ -42,7 +44,7 @@
     };
   };
 
-  home.persistence."/nix/persist/home/troy" = {
+  home.persistence."/nix/persist/${config.home.homeDirectory}" = {
     directories = [ ".emacs.d/eln-cache" ".emacs.d/var" ".emacs.d/etc" ];
   };
 }

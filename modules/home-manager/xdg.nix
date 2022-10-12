@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ impermanence, config, lib, ... }:
 
 with lib;
 let cfg = config.localModules.xdg;
@@ -13,30 +13,35 @@ in {
     # };
   };
 
-  config = mkIf cfg.enable {
-    xdg = let home = config.home.homeDirectory;
-    in {
-      enable = true;
-      userDirs = {
+  config = mkIf cfg.enable (mkMerge [
+    {
+      xdg = {
         enable = true;
-        createDirectories = false;
+        userDirs = {
+          enable = true;
+          createDirectories = false;
 
-        desktop = home;
-        documents = "${home}/documents";
-        download = "${home}/downloads";
-        music = home;
-        pictures = home;
-        publicShare = "${home}/share";
-        templates = home;
-        videos = home;
+          desktop = config.home.homeDirectory;
+          documents = "${config.home.homeDirectory}/documents";
+          download = "${config.home.homeDirectory}/downloads";
+          music = config.home.homeDirectory;
+          pictures = config.home.homeDirectory;
+          publicShare = "${config.home.homeDirectory}/share";
+          templates = config.home.homeDirectory;
+          videos = config.home.homeDirectory;
 
-        extraConfig = { XDG_PROJECTS_DIR = "${home}/projects"; };
+          extraConfig = {
+            XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
+          };
+        };
       };
-    };
+    }
 
-    home.persistence."/nix/persist/home/troy" = {
-      directories = [ "documents" "downloads" "projects" ];
-      allowOther = true;
-    };
-  };
+    (optionalAttrs impermanence {
+      home.persistence."/nix/persist/${config.home.homeDirectory}" = {
+        directories = [ "documents" "downloads" "projects" ];
+        allowOther = true;
+      };
+    })
+  ]);
 }

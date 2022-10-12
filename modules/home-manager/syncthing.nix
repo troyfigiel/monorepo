@@ -14,7 +14,7 @@ in {
 
     # Syncthing stores everything in the config folder, including xml settings, stateful data such as databases, etc.
     # It is safer to manually add the folders that need to be synced to Syncthing and then persist the data.
-    home.persistence."/nix/persist/home/troy".directories =
+    home.persistence."/nix/persist/${config.home.homeDirectory}".directories =
       [ ".config/syncthing" ];
   };
 }

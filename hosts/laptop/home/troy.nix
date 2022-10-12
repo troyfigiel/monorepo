@@ -146,7 +146,7 @@ in {
   # This is necessary to auto-start services such as the bind mounts.
   systemd.user.startServices = "sd-switch";
 
-  home.persistence."/nix/persist/home/troy" = {
+  home.persistence."/nix/persist/${homeDirectory}" = {
     directories = [
       # TODO: Which directories do I even need here?
       ".mc"

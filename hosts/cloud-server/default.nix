@@ -6,10 +6,7 @@ in mylib.mkHostFlake {
   system = "x86_64-linux";
   impermanence = false;
   modules = [
-    inputs.sops-nix.nixosModules.sops
-    inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-    inputs.simple-nixos-mailserver.nixosModules.mailserver
     ./website
   ];
 }

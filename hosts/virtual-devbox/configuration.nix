@@ -33,5 +33,23 @@
     packages = with pkgs; [ vim git ];
   };
 
+  environment.systemPackages = with pkgs; [ git python3 vim nixfmt ];
+
+  nix = {
+    package = pkgs.nixVersions.stable;
+    settings.auto-optimise-store = true;
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
+
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      min-free = ${toString (3 * 1024 * 1024 * 1024)}
+      max-free = ${toString (10 * 1024 * 1024 * 1024)}
+    '';
+  };
+
   system.stateVersion = "22.11";
 }

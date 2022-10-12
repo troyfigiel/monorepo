@@ -1,8 +1,7 @@
 { config, lib, pkgs, ... }:
 
-let
-  cfg = config.localModules.dunst;
-  inherit (lib) mkEnableOption mkIf;
+with lib;
+let cfg = config.localModules.dunst;
 in {
   options.localModules.dunst.enable = mkEnableOption "dunst";
 

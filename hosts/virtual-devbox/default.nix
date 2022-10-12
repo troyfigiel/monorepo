@@ -8,22 +8,24 @@ in mylib.mkHostFlake {
   host = "virtual-devbox";
   impermanence = false;
   modules = [
-    inputs.sops-nix.nixosModules.sops
-    inputs.impermanence.nixosModules.impermanence
-    inputs.simple-nixos-mailserver.nixosModules.mailserver
     inputs.home-manager.nixosModules.home-manager
     {
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.users.troy = let packages = self.legacyPackages.${system};
-      in {
-        imports = [
-          ./home.nix
-          self.homeManagerModules.alacritty
-          self.homeManagerModules.git
-          self.homeManagerModules.vscode
-          self.homeManagerModules.xdg-no-persist
-        ];
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = { impermanence = false; };
+        users.troy = let packages = self.legacyPackages.${system};
+        in {
+          imports = [
+            # TODO: It should be enough to know the filename. 
+            # I can create a function to deduplicate the many times I have "troy" scattered throughout my code.
+            ./home/troy.nix
+            self.homeManagerModules.alacritty
+            self.homeManagerModules.git
+            self.homeManagerModules.vscode
+            self.homeManagerModules.xdg
+          ];
+        };
       };
     }
   ];

@@ -1,8 +1,7 @@
 { config, lib, pkgs, ... }:
 
-let
-  cfg = config.localModules.gpg;
-  inherit (lib) mkEnableOption mkIf;
+with lib;
+let cfg = config.localModules.gpg;
 in {
   options.localModules.gpg.enable = mkEnableOption "GPG";
 

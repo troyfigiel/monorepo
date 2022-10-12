@@ -6,7 +6,7 @@ This is very much a work in progress. This is a side project, which means I work
 
 # Some notes
 
-- I rely on sops for Terraform as well. agenix might not be a good alternative to sops-nix in this case.
+- I rely on sops for Terraform as well. However, I could maybe still use agenix. The advantage is that it uses my existing ssh infrastructure, meaning I do not need a gpg key for each ssh key. The additional advantage agenix has, is that I can commit the ssh keys and then manually add them to my machines after decrypting them through sops.
 - sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.
 
 Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
@@ -33,6 +33,8 @@ More notes:
 6. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
 7. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 8. I do not need to use home-manager in a home.nix file. If I preface everything with home-manager.users, this works just as well. This can make my code more modular.
+9. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
+10. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
@@ -63,6 +65,8 @@ To be added to polybar / dunst:
 - Active window (i3)
 - Temperature
 - Hard disk drive remaining and tmpfs size remaining
+
+B00merang-Project's Windows themes to make it easier for any guests?
 
 ## flakes
 - Use separate flakes, but have a shared flake-module.nix in hosts that imports lib
