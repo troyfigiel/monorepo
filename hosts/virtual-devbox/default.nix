@@ -1,6 +1,8 @@
 { inputs, lib, self, ... }:
 
 let
+  inherit (lib) attrValues;
+  inherit (import ../../lib/modules.nix { inherit lib; }) mapModules;
   mylib = import ../../lib/hosts.nix { inherit inputs lib self; };
   system = "aarch64-linux";
 in mylib.mkHostFlake {
@@ -20,11 +22,7 @@ in mylib.mkHostFlake {
             # TODO: It should be enough to know the filename. 
             # I can create a function to deduplicate the many times I have "troy" scattered throughout my code.
             ./home/troy.nix
-            self.homeManagerModules.alacritty
-            self.homeManagerModules.git
-            self.homeManagerModules.vscode
-            self.homeManagerModules.xdg
-          ];
+          ] ++ attrValues (mapModules import ../../modules/home-manager);
         };
       };
     }
