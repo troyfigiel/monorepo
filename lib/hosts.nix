@@ -3,9 +3,10 @@
 # TODO: Do we really need the mkHostFlake? It is now a tiny wrapper around nixosConfigurations
 let
   inherit (builtins) attrValues;
+  inherit (lib) optionalAttrs;
   inherit (import ./modules.nix { inherit lib; }) mapModules;
 in {
-  mkHostFlake = { host, system, impermanence, modules ? { } }:
+  mkHostFlake = { host, system, impermanence, home-manager, modules ? [ ] }:
     let inherit (inputs.nixpkgs.lib) nixosSystem;
     in {
       flake.nixosConfigurations.${host} = nixosSystem {
@@ -20,7 +21,32 @@ in {
           inputs.simple-nixos-mailserver.nixosModules.mailserver
           ../hosts/${host}/configuration.nix
           ../hosts/${host}/hardware-configuration.nix
-        ] ++ attrValues (mapModules import ../modules/nixos);
+        ] ++ attrValues (mapModules import ../modules/nixos)
+          ++ (optionalAttrs home-manager ([
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit impermanence; };
+                users = {
+                  troy = let
+                    packages = self.legacyPackages.${system};
+                    nur-modules = import inputs.nur {
+                      nurpkgs = packages;
+                      pkgs = packages;
+                    };
+                  in {
+                    imports = [
+                      inputs.impermanence.nixosModules.home-manager.impermanence
+                      nur-modules.repos.rycee.hmModules.emacs-init
+                      ../hosts/${host}/home/troy.nix
+                    ] ++ attrValues (mapModules import ../modules/home-manager);
+                  };
+                };
+              };
+            }
+          ]));
       };
     };
 }

@@ -21,6 +21,10 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 # TODOs
 
+The great thing about Nix is the reproducibility. If I want a dev environment on my desktop that is the same as the dev environment on my laptop, I just need to set the same options. This reproducibility is a key feature of Nix, meaning that there is a clear incentive to minimize the number of options my own modules have.
+
+Only add options where you really expect differences between your machines. The code is more maintainable and cleaner if you do not do so with the benefit that your environments are very similar and you can easily move around in them.
+
 **Important**
 Currently I have a single lock file. If I update this lock file, I might end up breaking a configuration that I do not immediately test with my deploy. Instead I should have a flake and a lock file in each module (each host, each home, etc.) and a main flake file which triggers my deploys from the root of the repository. This does make updates more complicated, because I will have to update all flakes simultaneously, but this can be easily fixed by using a Makefile.
 
@@ -79,10 +83,7 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - Rename to nixos if I am only going to be running NixOS
 - Development is done on virtual machines, no standalone home-manager is needed
 
-## modules & lib
-- Create them at the root of the monorepo
-
-### modules
+## modules
 - I can create modules and enable them to specify exactly which config is used by which host
   - This is cleaner than importing, because it also allows me to set any variables I need to
   - The Nix code for each host will be fairly small. Just setting which config to enable.
@@ -92,7 +93,7 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - Because these modules are "meta-modules", I might want to rename them to distinguish them from the modules that I might need to create myself
   - Profiles might be a good naming?
 
-### lib
+## lib
 - To extend the default lib from nixpkgs, I can use lib.extend and supply an overlay
 
 ## website

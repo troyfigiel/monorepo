@@ -9,22 +9,5 @@ in mylib.mkHostFlake {
   inherit system;
   host = "virtual-devbox";
   impermanence = false;
-  modules = [
-    inputs.home-manager.nixosModules.home-manager
-    {
-      home-manager = {
-        useGlobalPkgs = true;
-        useUserPackages = true;
-        extraSpecialArgs = { impermanence = false; };
-        users.troy = let packages = self.legacyPackages.${system};
-        in {
-          imports = [
-            # TODO: It should be enough to know the filename. 
-            # I can create a function to deduplicate the many times I have "troy" scattered throughout my code.
-            ./home/troy.nix
-          ] ++ attrValues (mapModules import ../../modules/home-manager);
-        };
-      };
-    }
-  ];
+  home-manager = true;
 }
