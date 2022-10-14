@@ -57,9 +57,9 @@
 
       imports = [
         ./overlay
-        ./hosts/cloud-server
-        ./hosts/laptop
-        ./hosts/virtual-devbox
+        ./machines/cloud-server
+        ./machines/laptop
+        ./machines/virtual-devbox
         ./infrastructure/flake-module.nix
         ./templates/flake-module.nix
       ];

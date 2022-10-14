@@ -1,16 +1,16 @@
 keys:
-  - users:
+  - admins:
       - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
-  - hosts:
+  - machines:
       - &laptop 53BA215C79CFD829A722D5DDB05F6ED222F19591
       - &cloud-server 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
 creation_rules:
-  - path_regex: hosts/laptop/secrets.yaml
+  - path_regex: machines/laptop/secrets.yaml
     key_groups:
       - pgp:
           - *troy
           - *laptop
-  - path_regex: hosts/cloud-server/secrets.yaml
+  - path_regex: machines/cloud-server/secrets.yaml
     key_groups:
       - pgp:
           - *troy
