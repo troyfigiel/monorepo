@@ -1,7 +1,7 @@
 { lib }:
 
 let
-  inherit (builtins) filter pathExists readDir typeOf;
+  inherit (builtins) pathExists readDir typeOf;
   inherit (lib)
     flatten hasSuffix mapAttrs mapAttrs' mapAttrsToList nameValuePair;
 in rec {

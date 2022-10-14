@@ -5,5 +5,4 @@ in mylib.mkMachineFlake {
   machine = "virtual-devbox";
   system = "aarch64-linux";
   impermanence = false;
-  home-manager = true;
 }
