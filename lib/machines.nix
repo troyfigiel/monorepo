@@ -13,15 +13,22 @@ in {
         inherit system;
         specialArgs = { inherit impermanence; };
         pkgs = self.legacyPackages.${system};
-        modules = [
-          { networking.hostName = machine; }
-          inputs.sops-nix.nixosModules.sops
-          inputs.impermanence.nixosModules.impermanence
-          inputs.simple-nixos-mailserver.nixosModules.mailserver
-          ../machines/${machine}/configuration.nix
-          ../machines/${machine}/hardware-configuration.nix
-        ] ++ (map import (modulesToList ../roles/nixos))
-          ++ (optionals (homeExists machine) ([
+        modules = let
+          inputModules = [
+            inputs.sops-nix.nixosModules.sops
+            inputs.impermanence.nixosModules.impermanence
+            inputs.simple-nixos-mailserver.nixosModules.mailserver
+          ];
+
+          configurationModules = [
+            { networking.hostName = machine; }
+            ../machines/${machine}/configuration.nix
+            ../machines/${machine}/hardware-configuration.nix
+          ];
+
+          roleModules = map import (modulesToList ../roles/nixos);
+
+          homeManagerModules = [
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -31,7 +38,9 @@ in {
                 users = homeManagerUsers { inherit system machine; };
               };
             }
-          ]));
+          ];
+        in inputModules ++ configurationModules ++ roleModules
+        ++ (optionals (homeExists machine) homeManagerModules);
       };
     };
 }

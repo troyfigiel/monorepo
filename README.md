@@ -39,6 +39,7 @@ More notes:
 8. I do not need to use home-manager in a home.nix file. If I preface everything with home-manager.users, this works just as well. This can make my code more modular.
 9. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
 10. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
+11. Because the flake will be so small for my machines, it might be possible to just define the roles a system has inside the flake itself.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
