@@ -52,7 +52,6 @@
       inherit (inputs) self;
       inherit (inputs.nixpkgs) lib;
       inherit (inputs.flake-parts.lib) mkFlake;
-      inherit (import ./lib/modules.nix { inherit lib; }) findNixFilesRec;
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 

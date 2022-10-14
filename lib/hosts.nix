@@ -4,7 +4,7 @@
 let
   inherit (builtins) attrValues;
   inherit (lib) optionalAttrs;
-  inherit (import ./modules.nix { inherit lib; }) findNixFilesRec;
+  inherit (import ./modules.nix { inherit lib; }) modulesToList;
 in {
   mkHostFlake = { host, system, impermanence, home-manager, modules ? [ ] }:
     let inherit (inputs.nixpkgs.lib) nixosSystem;
@@ -21,7 +21,7 @@ in {
           inputs.simple-nixos-mailserver.nixosModules.mailserver
           ../hosts/${host}/configuration.nix
           ../hosts/${host}/hardware-configuration.nix
-        ] ++ (map import (findNixFilesRec ../modules/nixos))
+        ] ++ (map import (modulesToList ../modules/nixos))
           ++ (optionalAttrs home-manager ([
             inputs.home-manager.nixosModules.home-manager
             {
@@ -41,7 +41,7 @@ in {
                       inputs.impermanence.nixosModules.home-manager.impermanence
                       nur-modules.repos.rycee.hmModules.emacs-init
                       ../hosts/${host}/home/troy.nix
-                    ] ++ (map import (findNixFilesRec ../modules/home-manager));
+                    ] ++ (map import (modulesToList ../modules/home-manager));
                   };
                 };
               };

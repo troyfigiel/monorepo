@@ -1,7 +1,7 @@
 { lib }:
 
 let
-  inherit (builtins) filter readDir typeOf;
+  inherit (builtins) filter pathExists readDir typeOf;
   inherit (lib)
     flatten hasSuffix mapAttrs mapAttrs' mapAttrsToList nameValuePair;
 in rec {
@@ -9,20 +9,22 @@ in rec {
     mapAttrs' (name: value: nameValuePair "${toString dir}/${name}" value)
     (readDir dir);
 
-  absoluteReadDirRec = dir:
-    mapAttrs (name: value:
-      if value == "directory" then (absoluteReadDirRec name) else value)
-    (absoluteReadDir dir);
-
   mapAttrsToListRec = f: attrs:
     mapAttrsToList (name: value:
       if typeOf value == "set" then mapAttrsToListRec f value else f name value)
     attrs;
 
-  findNixFilesRec = dir:
-    filter (file: hasSuffix ".nix" file)
-    (flatten (mapAttrsToListRec (name: value: name) (absoluteReadDirRec dir)));
+  isModule = name: value:
+    (value == "regular" && hasSuffix ".nix" name)
+    || (value == "directory" && pathExists "${name}/default.nix");
 
-  # TODO: If there is a default.nix in a directory, I should only import the default.nix, not the rest.
+  findModulesRec = dir:
+    mapAttrs
+    (name: value: if isModule name value then "module" else findModulesRec name)
+    (absoluteReadDir dir);
+
+  modulesToList = dir:
+    flatten (mapAttrsToListRec (name: value: name) (findModulesRec dir));
+
   # TODO: Maybe in the future I might want to define nixosModules in my flake? That does not work like this, because I am returning a list
 }
