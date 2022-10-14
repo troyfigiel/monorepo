@@ -14,6 +14,7 @@ in {
         specialArgs = { inherit impermanence; };
         pkgs = self.legacyPackages.${system};
         modules = [
+          { networking.hostName = machine; }
           inputs.sops-nix.nixosModules.sops
           inputs.impermanence.nixosModules.impermanence
           inputs.simple-nixos-mailserver.nixosModules.mailserver

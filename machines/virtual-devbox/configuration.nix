@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "virtual-devbox"; # Define your hostname.
-
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 

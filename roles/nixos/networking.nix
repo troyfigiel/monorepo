@@ -7,7 +7,6 @@ in {
 
   config = mkIf cfg.enable {
     networking = {
-      hostName = "laptop";
       extraHosts = ''
         192.168.178.31 rpi
         192.168.178.37 nas

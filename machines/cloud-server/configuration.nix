@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  networking.hostName = "cloud-server";
   environment.systemPackages = with pkgs; [ git vim gnupg ];
   system.stateVersion = "22.05";
 
