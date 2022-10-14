@@ -1,19 +1,17 @@
 { inputs, lib, self }:
 
-# TODO: Do we really need the mkHostFlake? It is now a tiny wrapper around nixosConfigurations
 let
-  inherit (builtins) attrValues;
-  inherit (lib) optionalAttrs;
+  inherit (lib) optionals;
   inherit (import ./modules.nix { inherit lib; }) modulesToList;
 in {
-  mkHostFlake = { host, system, impermanence, home-manager, modules ? [ ] }:
+  mkHostFlake = { host, system, impermanence, home-manager }:
     let inherit (inputs.nixpkgs.lib) nixosSystem;
     in {
       flake.nixosConfigurations.${host} = nixosSystem {
         inherit system;
         specialArgs = { inherit impermanence; };
         pkgs = self.legacyPackages.${system};
-        modules = modules ++ [
+        modules = [
           # TODO: Think about how I want to import modules. I cannot import my own sops.nix module if the sops input does not exist.
           # However, maybe not all machines need to have sops. For example VMs might not need sops.
           inputs.sops-nix.nixosModules.sops
@@ -22,7 +20,7 @@ in {
           ../hosts/${host}/configuration.nix
           ../hosts/${host}/hardware-configuration.nix
         ] ++ (map import (modulesToList ../modules/nixos))
-          ++ (optionalAttrs home-manager ([
+          ++ (optionals home-manager ([
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -41,6 +39,11 @@ in {
                       inputs.impermanence.nixosModules.home-manager.impermanence
                       nur-modules.repos.rycee.hmModules.emacs-init
                       ../hosts/${host}/home/troy.nix
+                      /* Note that I still cannot import other Nix files in the default.nix!
+                         To import Nix files in my home-manager.user.troy,
+                         home-manager already has to exist and I am precisely defining home-manager in this very line.
+                         This means it will not be able to find the imports.
+                      */
                     ] ++ (map import (modulesToList ../modules/home-manager));
                   };
                 };

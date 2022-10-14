@@ -9,5 +9,4 @@ in mylib.mkHostFlake {
   impermanence = true;
   host = "laptop";
   home-manager = true;
-  modules = [ ./system ./networking.nix ./security.nix ];
 }

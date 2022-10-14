@@ -6,5 +6,4 @@ in mylib.mkHostFlake {
   system = "x86_64-linux";
   impermanence = false;
   home-manager = false;
-  modules = [ ./website ];
 }

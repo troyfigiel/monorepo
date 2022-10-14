@@ -2,8 +2,6 @@
 
 let homeDirectory = "/home/troy";
 in {
-  imports = [ ./emacs ./rofi ./zsh ];
-
   home = {
     inherit homeDirectory;
     username = "troy";
@@ -186,5 +184,8 @@ in {
     syncthing.enable = true;
     vscode.enable = true;
     xdg.enable = true;
+    emacs.enable = true;
+    rofi.enable = true;
+    zsh.enable = true;
   };
 }

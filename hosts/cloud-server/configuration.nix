@@ -19,9 +19,14 @@
     };
   };
 
-  localModules.sops = {
-    enable = true;
-    defaultSopsFile = ./secrets.yaml;
-    sshPath = "/etc/ssh";
+  localModules = {
+    sops = {
+      enable = true;
+      defaultSopsFile = ./secrets.yaml;
+      sshPath = "/etc/ssh";
+    };
+    website.enable = true;
+    mail.enable = true;
+    searx.enable = true;
   };
 }

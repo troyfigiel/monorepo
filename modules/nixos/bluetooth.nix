@@ -5,7 +5,6 @@ let cfg = config.localModules.bluetooth;
 in {
   options.localModules.bluetooth.enable = mkEnableOption "Bluetooth";
 
-  # TODO: I get the attempt to call something which is not a function when I try to add mkIf cfg.enable. Why?
   config = mkIf cfg.enable (mkMerge [
     {
       services.blueman.enable = true;
