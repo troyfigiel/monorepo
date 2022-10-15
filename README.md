@@ -2,7 +2,14 @@
 
 # Disclaimer, be aware!
 
-This is very much a work in progress. This is a side project, which means I work on this project when my main job does not constrain my time too much. Currently, this repository is intended to be used only by me. Although I am cleaning up code along the way and I am aiming to turn the code here into a presentable format, if something works, it is good enough at this stage. This is made possible precisely by the declarative nature of Terraform and Nix that give me assurance I can always roll back to a working state of my builds.
+This is very much a work in progress and (currently) is only intended to be used by me. Although I am cleaning up code along the way and I am aiming to turn the code here into a presentable format, if something works, it is good enough for me at this stage.
+
+Since the lack of Nix examples has been a major stumbling block for me initially, I hope this can pose as an example of what a functioning Nix setup could look like. Some useful references I have been using often (in no particular order):
+- https://github.com/hlissner/dotfiles
+- https://gitlab.com/NickCao/flakes
+- https://github.com/misterio77/nix-config (see also https://github.com/Misterio77/nix-starter-configs)
+- https://github.com/Mic92/dotfiles
+- https://github.com/mitchellh/nixos-config
 
 # Some notes
 
@@ -36,10 +43,12 @@ More notes:
 5. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example. Maybe Make is still nice? It can easily parallellize the deploy steps, is kind of declarative and well-known.
 6. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
 7. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
-8. I do not need to use home-manager in a home.nix file. If I preface everything with home-manager.users, this works just as well. This can make my code more modular.
-9. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
-10. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
-11. Because the flake will be so small for my machines, it might be possible to just define the roles a system has inside the flake itself.
+8. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
+9. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
+10. Because the flake will be so small for my machines, it might be possible to just define the roles a system has inside the flake itself.
+11. It would be interesting to start using Terranix. This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
+    - terranix.lib.terranixConfiguration is compatible with flakes
+    - I could start looking into using agenix instead of sops. It is a bit annoying I need to both have a gpg as well as an ssh key.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
