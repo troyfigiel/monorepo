@@ -1,6 +1,13 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+    inputs.impermanence.nixosModules.impermanence
+    inputs.simple-nixos-mailserver.nixosModules.mailserver
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 

@@ -1,6 +1,16 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+    inputs.impermanence.nixosModules.impermanence
+    inputs.simple-nixos-mailserver.nixosModules.mailserver
+    ../../features/nixos/mail.nix
+    ../../features/nixos/sops.nix
+    ../../features/nixos/searx.nix
+    ../../features/nixos/website.nix
+  ];
+
   environment.systemPackages = with pkgs; [ git vim gnupg ];
   system.stateVersion = "22.05";
 

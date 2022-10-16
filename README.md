@@ -47,9 +47,10 @@ More notes:
 9. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
 10. Because the flake will be so small for my machines, it might be possible to just define the features a system has inside the flake itself.
 11. It would be interesting to start using Terranix. This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
-    - terranix.lib.terranixConfiguration is compatible with flakes
     - I can make my setup more modular, because I can now include Terraform code inside of my Nix config
     - I could start looking into using agenix instead of sops. It is a bit annoying I need to both have a gpg as well as an ssh key.
+12. I need to think how and where I need flakes. Should I keep a single flake for all machines that are constantly on and I deploy to all at the same time? What about devices that are not always part of my network? What about virtual machines? network/ and machines/? I will probably only have a single real machine not part of my network, namely a backup laptop. Maybe machines/backup/ and machines/virtual/ as a directory structure?
+13. I should modularize my terranix code. For example, my nginx virtualhosts also use my domain name. It might be better to have all those settings in a single location, namely in my cloud-server flake.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 

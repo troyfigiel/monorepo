@@ -1,6 +1,26 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+    inputs.impermanence.nixosModules.impermanence
+    inputs.home-manager.nixosModules.home-manager
+    ../../features/nixos/bluetooth.nix
+    ../../features/nixos/docker.nix
+    ../../features/nixos/gpg.nix
+    ../../features/nixos/locale.nix
+    ../../features/nixos/networking.nix
+    ../../features/nixos/networkmanager.nix
+    ../../features/nixos/nix.nix
+    ../../features/nixos/printing.nix
+    ../../features/nixos/restic.nix
+    ../../features/nixos/sops.nix
+    ../../features/nixos/sound.nix
+    ../../features/nixos/system.nix
+    ../../features/nixos/vm.nix
+    ../../features/nixos/xorg.nix
+  ];
+
   programs.fuse.userAllowOther = true;
 
   features = {

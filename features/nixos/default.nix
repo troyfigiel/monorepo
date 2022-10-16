@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./bluetooth.nix
+    ./docker.nix
+    ./gpg.nix
+    ./locale.nix
+    ./mail.nix
+    ./networking.nix
+    ./networkmanager.nix
+    ./nix.nix
+    ./printing.nix
+    ./restic.nix
+    ./searx.nix
+    ./sops.nix
+    ./sound.nix
+    ./system.nix
+    ./vm.nix
+    ./website.nix
+    ./xorg.nix
+  ];
+}
