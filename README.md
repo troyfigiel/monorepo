@@ -48,6 +48,7 @@ More notes:
 10. Because the flake will be so small for my machines, it might be possible to just define the features a system has inside the flake itself.
 11. It would be interesting to start using Terranix. This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
     - terranix.lib.terranixConfiguration is compatible with flakes
+    - I can make my setup more modular, because I can now include Terraform code inside of my Nix config
     - I could start looking into using agenix instead of sops. It is a bit annoying I need to both have a gpg as well as an ssh key.
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.

@@ -17,10 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -45,6 +42,11 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    terranix = {
+      url = "github:terranix/terranix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -65,6 +67,11 @@
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { system, ... }: {
+        packages.default = inputs.terranix.lib.terranixConfiguration {
+          inherit system;
+          modules = [ ./infrastructure/main.nix ];
+        };
+
         checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
       };
 
