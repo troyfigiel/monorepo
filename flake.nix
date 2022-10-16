@@ -75,7 +75,7 @@
           laptop = {
             hostname = "laptop";
             profiles = {
-              host = {
+              system = {
                 sshUser = "root";
                 path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                   inputs.self.nixosConfigurations.laptop;
@@ -86,7 +86,7 @@
           cloud-server = {
             hostname = "troyfigiel.com";
             profiles = {
-              host = {
+              system = {
                 sshUser = "root";
                 path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
                   self.nixosConfigurations.cloud-server;

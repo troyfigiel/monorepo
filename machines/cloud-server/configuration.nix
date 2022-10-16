@@ -18,7 +18,7 @@
     };
   };
 
-  roles = {
+  features = {
     sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;

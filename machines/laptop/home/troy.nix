@@ -174,7 +174,7 @@ in {
     allowOther = true;
   };
 
-  roles = {
+  features = {
     alacritty.enable = true;
     dunst.enable = true;
     git.enable = true;

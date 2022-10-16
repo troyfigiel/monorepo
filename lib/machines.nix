@@ -26,7 +26,7 @@ in {
             ../machines/${machine}/hardware-configuration.nix
           ];
 
-          roleModules = map import (modulesToList ../roles/nixos);
+          roleModules = map import (modulesToList ../features/nixos);
 
           homeManagerModules = [
             inputs.home-manager.nixosModules.home-manager

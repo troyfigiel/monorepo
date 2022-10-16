@@ -45,7 +45,7 @@ More notes:
 7. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 8. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
 9. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
-10. Because the flake will be so small for my machines, it might be possible to just define the roles a system has inside the flake itself.
+10. Because the flake will be so small for my machines, it might be possible to just define the features a system has inside the flake itself.
 11. It would be interesting to start using Terranix. This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
     - terranix.lib.terranixConfiguration is compatible with flakes
     - I could start looking into using agenix instead of sops. It is a bit annoying I need to both have a gpg as well as an ssh key.

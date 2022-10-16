@@ -3,7 +3,7 @@
 {
   programs.fuse.userAllowOther = true;
 
-  roles = {
+  features = {
     sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;

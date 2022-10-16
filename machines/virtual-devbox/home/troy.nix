@@ -24,7 +24,7 @@ in {
 
   programs.dircolors.enable = true;
 
-  roles = {
+  features = {
     alacritty.enable = true;
     git.enable = true;
     vscode.enable = true;

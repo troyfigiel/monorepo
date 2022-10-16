@@ -30,7 +30,7 @@ in rec {
              home-manager already has to exist and I am precisely defining home-manager in this very line.
              This means it will not be able to find the imports.
           */
-        ] ++ (map import (modulesToList ../roles/home-manager));
+        ] ++ (map import (modulesToList ../features/home-manager));
       };
     };
 
