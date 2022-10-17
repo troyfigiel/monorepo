@@ -11,8 +11,12 @@
         imports = [
           ../../features/home-manager/alacritty.nix
           ../../features/home-manager/git.nix
+        #   ../../features/home-manager/i3.nix
+        #   ../../features/home-manager/picom.nix
+        #   ../../features/home-manager/polybar.nix
           ../../features/home-manager/vscode.nix
           ../../features/home-manager/xdg.nix
+          ../../features/home-manager/zsh
         ];
 
         home = {
@@ -29,7 +33,6 @@
           enable = true;
           nix-direnv.enable = true;
         };
-        programs.fzf.enable = true;
         programs.dircolors.enable = true;
 
         features = {
@@ -37,6 +40,10 @@
           git.enable = true;
           vscode.enable = true;
           xdg.enable = true;
+          zsh.enable = true;
+        #   i3.enable = true;
+        #   picom.enable = true;
+        #   polybar.enable = true;
         };
       };
     };

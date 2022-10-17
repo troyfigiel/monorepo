@@ -17,11 +17,13 @@
     ../../features/nixos/sops.nix
     ../../features/nixos/sound.nix
     ../../features/nixos/system.nix
-    ../../features/nixos/vm.nix
+    ../../features/nixos/qemu.nix
     ../../features/nixos/xorg.nix
   ];
 
   programs.fuse.userAllowOther = true;
+
+  system.stateVersion = "22.05";
 
   features = {
     sops = {
@@ -35,9 +37,19 @@
     nix.enable = true;
     restic.enable = true;
     sound.enable = true;
-    system.enable = true;
-    vm.enable = true;
-    xorg.enable = true;
+    system = {
+        enable = true;
+        games = true;
+    };
+
+    qemu.enable = true;
+
+    xorg = {
+      enable = true;
+      # TODO: What does this do?
+      videoDrivers = [ "modesetting" ];
+    };
+
     networking.enable = true;
     networkmanager.enable = true;
     printing.enable = true;

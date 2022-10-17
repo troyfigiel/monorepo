@@ -3,7 +3,11 @@
 with lib;
 let cfg = config.features.xorg;
 in {
-  options.features.xorg.enable = mkEnableOption "xorg";
+  options.features.xorg = {
+    enable = mkEnableOption "xorg";
+
+    videoDrivers = mkOption { type = types.listOf types.str; };
+  };
 
   config = mkIf cfg.enable {
     services.xserver = {
@@ -14,7 +18,8 @@ in {
       autoRepeatDelay = 300;
       autoRepeatInterval = 50;
 
-      videoDrivers = [ "modesetting" ];
+      # TODO: What does this do?
+      videoDrivers = cfg.videoDrivers;
 
       displayManager = {
         defaultSession = "none+i3";
@@ -26,9 +31,6 @@ in {
 
       desktopManager = {
         xterm.enable = false;
-
-        cinnamon.enable = true;
-
         xfce = {
           enable = true;
           noDesktop = true;
@@ -36,10 +38,7 @@ in {
         };
       };
 
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [ rofi polybar i3lock ];
-      };
+      windowManager.i3.enable = true;
 
       libinput = {
         enable = true;

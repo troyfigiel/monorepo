@@ -1,9 +1,9 @@
 { impermanence, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.features.vm;
+let cfg = config.features.qemu;
 in {
-  options.features.vm.enable = mkEnableOption "vm";
+  options.features.qemu.enable = mkEnableOption "qemu";
 
   config = mkIf cfg.enable (mkMerge [
     { virtualisation.libvirtd.enable = true; }

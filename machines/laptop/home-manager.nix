@@ -20,8 +20,13 @@ in {
           ../../features/home-manager/alacritty.nix
           ../../features/home-manager/dunst.nix
           ../../features/home-manager/emacs.nix
+          ../../features/home-manager/firefox.nix
           ../../features/home-manager/git.nix
+          ../../features/home-manager/gpg.nix
           ../../features/home-manager/i3.nix
+          ../../features/home-manager/messenger.nix
+          ../../features/home-manager/nvim.nix
+          ../../features/home-manager/pass.nix
           ../../features/home-manager/picom.nix
           ../../features/home-manager/polybar.nix
           ../../features/home-manager/rofi
@@ -34,12 +39,6 @@ in {
         home = {
           username = "troy";
           homeDirectory = "/home/${cfg.home.username}";
-
-          sessionVariables = {
-            EDITOR = "vim";
-            BROWSER = "firefox";
-          };
-
           stateVersion = "22.05";
         };
 
@@ -47,6 +46,7 @@ in {
 
         # TODO: I don't need this if I set user packages?
         home.packages = with pkgs; [
+          nixfmt
           gnumake
           nmap
           restic
@@ -74,53 +74,11 @@ in {
           unar
           nitrokey-app
           dbeaver
-          signal-desktop
-          tdesktop
-          whatsapp-for-linux
-          skypeforlinux
           flameshot
           feh
           neofetch
           wireshark
         ];
-
-        # Is it a problem I have a home service as well as a system service?
-        services.gpg-agent = {
-          enable = true;
-          enableSshSupport = true;
-          # What does the extra socket do?
-          enableExtraSocket = true;
-          sshKeys = [ "8ABF0116DA24246700017F956358D89FE8B148B8" ];
-          pinentryFlavor = "gtk2";
-          verbose = true;
-        };
-
-        programs.gpg = {
-          enable = true;
-          publicKeys = [
-            {
-              source = ../../keys/troy.pub.asc;
-              trust = 5;
-            }
-            {
-              source = ../../keys/laptop.pub.asc;
-              trust = 5;
-            }
-            {
-              source = ../../keys/cloud-server.pub.asc;
-              trust = 5;
-            }
-          ];
-        };
-
-        programs.home-manager.enable = true;
-
-        programs.browserpass = {
-          enable = true;
-          browsers = [ "firefox" ];
-        };
-
-        programs.password-store.enable = true;
 
         programs.jq.enable = true;
 
@@ -129,18 +87,9 @@ in {
           nix-direnv.enable = true;
         };
 
-        programs.alacritty.enable = true;
         programs.feh.enable = true;
         programs.zathura.enable = true;
         services.flameshot.enable = true;
-
-        # There is a lot of configuration I can still set for these programs.
-        programs.firefox.enable = true;
-        programs.fzf.enable = true;
-        # programs.powerline-go.enable = true;
-
-        # Give neovim a try?
-        # programs.neovim.enable = true;
 
         # What does this do exactly?
         programs.command-not-found.enable = true;
@@ -168,26 +117,15 @@ in {
 
         programs.dircolors.enable = true;
 
-        targets.genericLinux.enable = true;
-
-        # This is necessary to auto-start services such as the bind mounts.
-        systemd.user.startServices = "sd-switch";
-
         home.persistence."/nix/persist/${cfg.home.homeDirectory}" = {
           directories = [
             # TODO: Which directories do I even need here?
             ".mc"
             # Signal stores its data in the .config directory.
             # See: https://github.com/signalapp/Signal-Desktop/issues/4975
-            ".config/Signal"
-            ".config/whatsapp-for-linux"
             ".config/rclone"
             ".config/nix"
-            ".cache/whatsapp-for-linux"
-            ".cache/mozilla"
             ".cache/nix-index"
-            ".mozilla/firefox"
-            ".mozilla/extensions"
             ".wallpapers"
             ".steam"
             ".local/share/DBeaverData"
@@ -195,7 +133,6 @@ in {
             ".local/share/godot"
             ".local/share/gvfs-metadata"
             ".local/share/nix"
-            ".local/share/password-store"
             ".local/share/Steam"
             ".local/share/vulkan"
           ];
@@ -206,8 +143,17 @@ in {
         features = {
           alacritty.enable = true;
           dunst.enable = true;
+
+          firefox = {
+            enable = true;
+            defaultBrowser = true;
+          };
+
           git.enable = true;
+          gpg.enable = true;
           i3.enable = true;
+          messenger.enable = true;
+          pass.enable = true;
           picom.enable = true;
           polybar.enable = true;
           syncthing.enable = true;
@@ -215,6 +161,12 @@ in {
           xdg.enable = true;
           emacs.enable = true;
           rofi.enable = true;
+
+          nvim = {
+            enable = true;
+            defaultEditor = true;
+          };
+
           zsh.enable = true;
         };
       };

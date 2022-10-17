@@ -7,11 +7,8 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      services.syncthing = {
-        enable = true;
-        # TODO: What does the tray allow me to do extra?
-        # tray.enable = true;
-      };
+      # TODO: What does the tray allow me to do extra?
+      services.syncthing.enable = true;
     }
 
     (optionalAttrs impermanence {

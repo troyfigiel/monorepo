@@ -5,7 +5,19 @@ let cfg = config.features.vscode;
 in {
   # TODO: Split up the vscode based on "package type"?
   # For example, I might not need Terraform in every case.
-  options.features.vscode = { enable = mkEnableOption "vscode"; };
+  options.features.vscode = {
+    enable = mkEnableOption "vscode";
+
+    hugo = mkOption {
+      default = false;
+      type = types.bool;
+    };
+
+    lisp = mkOption {
+      default = false;
+      type = types.bool;
+    };
+  };
 
   config = mkIf cfg.enable {
     programs.vscode = {
@@ -23,7 +35,8 @@ in {
           mattn.lisp
           mechatroner.rainbow-csv
           ms-azuretools.vscode-docker
-          #ms-python.python
+          # TODO: This is not supported on aarch64-linux
+          # ms-python.python
           ms-python.vscode-pylance
           ms-vscode-remote.remote-ssh
           ms-toolsai.jupyter

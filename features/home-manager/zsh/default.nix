@@ -12,18 +12,15 @@ in {
 
       autocd = true;
 
-      dirHashes = let
-        home = config.home.homeDirectory;
-        documents = config.xdg.userDirs.documents;
-        download = config.xdg.userDirs.download;
-        projects = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
-      in {
-        do = documents;
-        dl = download;
-        pr = projects;
-        ls = "${projects}/private/logseq";
-        rb = "${projects}/private/reproducible-builds";
-        sh = "${home}/share";
+      # TODO: Will I actually use this as much when I use lf to move around?
+      dirHashes = {
+        do = config.xdg.userDirs.documents;
+        dl = config.xdg.userDirs.download;
+        pr = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
+        rb =
+          "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/reproducible-builds";
+        # TODO: This brings me to the Nix store. I might want to try it differently.
+        sh = "${config.home.homeDirectory}/share";
       };
 
       # TODO: How to set case-insensitive completion?
@@ -75,15 +72,15 @@ in {
       shellAliases = {
         # TODO: Some aliases for Nix?
         grep = "grep --color=auto";
-        df = "df -h";
         ls = "ls --color=auto -h";
-        ld = "lazydocker";
         lg = "lazygit";
         mv = "mv -i"; # Ask before overwriting
-        tf = "terraform";
-        # Yank to system clipboard
-        clip = "xclip -selection clipboard";
       };
+    };
+
+    programs.fzf = {
+      enable = true;
+      enableZshIntegration = true;
     };
   };
 }

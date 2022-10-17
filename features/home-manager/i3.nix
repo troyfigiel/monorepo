@@ -67,28 +67,15 @@ in {
 
             "${modifier}+Shift+q" =
               "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
-            "${modifier}+Shift+b" = "exec ${pkgs.firefox}/bin/firefox";
-            "${modifier}+Shift+d" =
-              "exec ${terminal} -e ${pkgs.lazydocker}/bin/lazydocker";
-            "${modifier}+Shift+f" = "exec ${terminal} -e ${pkgs.lf}/bin/lf";
-            "${modifier}+Shift+g" =
-              "exec ${terminal} -e ${pkgs.lazygit}/bin/lazygit";
-            "${modifier}+Shift+l" = "exec ${pkgs.logseq}/bin/logseq";
-            "${modifier}+Shift+n" =
-              "exec ${pkgs.nitrokey-app}/bin/nitrokey-app";
-            "${modifier}+Shift+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
-            "${modifier}+Shift+t" =
-              "exec ${terminal} -e ${pkgs.bpytop}/bin/bpytop";
-            "${modifier}+Shift+w" = "exec ${pkgs.wireshark}/bin/wireshark";
 
             "XF86AudioMute" = ''
               exec ${pkgs.alsa-utils}/bin/amixer set Master toggle; exec ${pkgs.dunst}/bin/dunstify "Toggling mute"
             '';
             "XF86AudioLowerVolume" = ''
-              exec ${pkgs.alsa-utils}/bin/amixer set Master 1%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing volume"
+              exec ${pkgs.alsa-utils}/bin/amixer set Master 2%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing volume"
             '';
             "XF86AudioRaiseVolume" = ''
-              exec ${pkgs.alsa-utils}/bin/amixer set Master 1%+; exec ${pkgs.dunst}/bin/dunstify "Increasing volume"
+              exec ${pkgs.alsa-utils}/bin/amixer set Master 2%+; exec ${pkgs.dunst}/bin/dunstify "Increasing volume"
             '';
 
             #"XF86AudioPause" = "exec ${pkgs.mpc-cli}/bin/mpc toggle";
@@ -96,10 +83,10 @@ in {
             #"XF86AudioNext" = "exec ${pkgs.mpc-cli}/bin/mpc next";
 
             "XF86MonBrightnessDown" = ''
-              exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing brightness"
+              exec ${pkgs.brightnessctl}/bin/brightnessctl set 4%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing brightness"
             '';
             "XF86MonBrightnessUp" = ''
-              exec ${pkgs.brightnessctl}/bin/brightnessctl set 2%+; exec ${pkgs.dunst}/bin/dunstify "Increasing brightness"
+              exec ${pkgs.brightnessctl}/bin/brightnessctl set 4%+; exec ${pkgs.dunst}/bin/dunstify "Increasing brightness"
             '';
           };
 
@@ -107,11 +94,11 @@ in {
             # TODO: I should probably add something like this. How can I do that?
             # mkIf
             # config.features.bluetooth.enable
-            {
-              command = "${pkgs.blueman}/bin/blueman-applet";
-              always = true;
-              notification = false;
-            }
+            # {
+            #   command = "${pkgs.blueman}/bin/blueman-applet";
+            #   always = true;
+            #   notification = false;
+            # }
           ];
           #  # I just want to icon in the tray, not the entire screen on start up.
           #  # TODO: What is the right command to use for this?

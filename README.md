@@ -51,6 +51,7 @@ More notes:
     - I could start looking into using agenix instead of sops. It is a bit annoying I need to both have a gpg as well as an ssh key.
 12. I need to think how and where I need flakes. Should I keep a single flake for all machines that are constantly on and I deploy to all at the same time? What about devices that are not always part of my network? What about virtual machines? network/ and machines/? I will probably only have a single real machine not part of my network, namely a backup laptop. Maybe machines/backup/ and machines/virtual/ as a directory structure?
 13. I should modularize my terranix code. For example, my nginx virtualhosts also use my domain name. It might be better to have all those settings in a single location, namely in my cloud-server flake.
+14. The big downside of having multiple flakes, is that my setups are not necessarily consistent anymore across machines! I might have a guarantee that my setup does not break, but that also means I do not have a guarantee anymore that my setups across machines are the same. I need to weigh my options, but I am leaning towards having consistency across machines, even if that means some modules might accidentally have broken without me having properly tested them. Maybe requires a testing VM?
 
 Cleanly separate the different parts of my home configuration. Picom, i3, polybar, etc. all belong under the overarching desktop setup, whereas syncthing or vscode fall under a different umbrella.
 
