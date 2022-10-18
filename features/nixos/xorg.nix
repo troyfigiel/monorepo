@@ -10,6 +10,9 @@ in {
   };
 
   config = mkIf cfg.enable {
+    imports =
+      [ ../../modules/sddm-sugar-candy.nix { inherit config lib pkgs; } ];
+
     services.xserver = {
       enable = true;
       layout = "de";
@@ -26,6 +29,11 @@ in {
         sddm = {
           enable = true;
           theme = "sugar-candy";
+
+          sugar-candy = {
+            enable = true;
+            background = "Backgrounds/Desert.jpg";
+          };
         };
       };
 
