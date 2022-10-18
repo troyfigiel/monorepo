@@ -14,31 +14,19 @@
     ../../features/nixos/xorg.nix
   ];
 
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      gdm.enable = true;
-      autoLogin = {
-        enable = true;
-        user = "troy";
-      };
-    };
-    desktopManager.gnome.enable = true;
-    layout = "de";
-    libinput.enable = true;
-    videoDrivers = [ "qxl" ];
-  };
-
   features = {
     docker.enable = true;
     locale.enable = true;
     nix.enable = true;
     qemu-guest.enable = true;
-    # system.enable = true;
-    # xorg = {
-    #   enable = true;
-    #   videoDrivers = [ "qxl" ];
-    # };
+    system.enable = true;
+    xorg = {
+      enable = true;
+      # TODO: modesetting is necessary to even get i3 to run successfully. Otherwise no screens will be found. What does this do?
+      # Modesetting fixed the issues I had with sddm and i3.
+      # I do have some issues with the compositor still.
+      videoDrivers = [ "modesetting" ]; # "qxl" ];
+    };
   };
 
   users.users.troy = {

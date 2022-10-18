@@ -3,21 +3,30 @@
 with lib;
 let cfg = config.features.pass;
 in {
-  options.features.pass.enable = mkEnableOption "Pass";
+  options.features.pass = {
+    enable = mkEnableOption "Pass";
+
+    passwordStoreDir = mkOption {
+      # TODO: How do I simplify this with xdg.dataHome?
+      default = ".local/share/password-store";
+      type = types.str;
+    };
+  };
 
   config = mkIf cfg.enable (mkMerge [
     {
       programs.password-store = {
         enable = true;
         settings = {
-          PASSWORD_STORE_DIR = "${config.xdg.dataHome}/password-store";
+          PASSWORD_STORE_DIR =
+            "${config.home.homeDirectory}/${cfg.passwordStoreDir}";
         };
       };
     }
 
     (optionalAttrs impermanence {
-      home.persistence."/nix/persist/${config.home.homeDirectory}" = {
-        directories = [ "${config.xdg.dataHome}/password-store" ];
+      home.persistence."/nix/persist/home/troy" = {
+        directories = [ cfg.passwordStoreDir ];
         allowOther = true;
       };
     })

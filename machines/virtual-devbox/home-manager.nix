@@ -12,9 +12,9 @@
           ../../features/home-manager/alacritty.nix
           ../../features/home-manager/background.nix
           ../../features/home-manager/git.nix
-        #   ../../features/home-manager/i3.nix
+          ../../features/home-manager/i3.nix
         #   ../../features/home-manager/picom.nix
-        #   ../../features/home-manager/polybar.nix
+          ../../features/home-manager/polybar.nix
           ../../features/home-manager/vscode.nix
           ../../features/home-manager/xdg.nix
           ../../features/home-manager/zsh
@@ -42,15 +42,10 @@
           vscode.enable = true;
           xdg.enable = true;
           zsh.enable = true;
-
-          background = {
-            enable = true;
-            wallpaperDirectory = "/nix/persist/home/troy/.wallpapers";
-          };
-
-        #   i3.enable = true;
+          background.enable = true;
+          i3.enable = true;
         #   picom.enable = true;
-        #   polybar.enable = true;
+          polybar.enable = true;
         };
       };
     };

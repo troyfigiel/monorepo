@@ -13,7 +13,6 @@ in {
     services.xserver = {
       enable = true;
       layout = "de";
-      xkbVariant = "";
 
       autoRepeatDelay = 300;
       autoRepeatInterval = 50;

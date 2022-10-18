@@ -72,10 +72,10 @@ in {
               exec ${pkgs.alsa-utils}/bin/amixer set Master toggle; exec ${pkgs.dunst}/bin/dunstify "Toggling mute"
             '';
             "XF86AudioLowerVolume" = ''
-              exec ${pkgs.alsa-utils}/bin/amixer set Master 2%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing volume"
+              exec ${pkgs.alsa-utils}/bin/amixer set Master 1%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing volume"
             '';
             "XF86AudioRaiseVolume" = ''
-              exec ${pkgs.alsa-utils}/bin/amixer set Master 2%+; exec ${pkgs.dunst}/bin/dunstify "Increasing volume"
+              exec ${pkgs.alsa-utils}/bin/amixer set Master 1%+; exec ${pkgs.dunst}/bin/dunstify "Increasing volume"
             '';
 
             #"XF86AudioPause" = "exec ${pkgs.mpc-cli}/bin/mpc toggle";
@@ -83,10 +83,10 @@ in {
             #"XF86AudioNext" = "exec ${pkgs.mpc-cli}/bin/mpc next";
 
             "XF86MonBrightnessDown" = ''
-              exec ${pkgs.brightnessctl}/bin/brightnessctl set 4%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing brightness"
+              exec ${pkgs.brightnessctl}/bin/brightnessctl set 3%-; exec ${pkgs.dunst}/bin/dunstify "Decreasing brightness"
             '';
             "XF86MonBrightnessUp" = ''
-              exec ${pkgs.brightnessctl}/bin/brightnessctl set 4%+; exec ${pkgs.dunst}/bin/dunstify "Increasing brightness"
+              exec ${pkgs.brightnessctl}/bin/brightnessctl set 3%+; exec ${pkgs.dunst}/bin/dunstify "Increasing brightness"
             '';
           };
 
