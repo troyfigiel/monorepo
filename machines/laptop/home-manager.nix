@@ -18,6 +18,7 @@ in {
           nur-modules.repos.rycee.hmModules.emacs-init
           inputs.impermanence.nixosModules.home-manager.impermanence
           ../../features/home-manager/alacritty.nix
+          ../../features/home-manager/background.nix
           ../../features/home-manager/dunst.nix
           ../../features/home-manager/emacs.nix
           ../../features/home-manager/firefox.nix
@@ -110,11 +111,6 @@ in {
           inactiveInterval = 60;
         };
 
-        services.random-background = {
-          enable = true;
-          imageDirectory = "${cfg.home.homeDirectory}/.wallpapers";
-        };
-
         programs.dircolors.enable = true;
 
         home.persistence."/nix/persist/${cfg.home.homeDirectory}" = {
@@ -142,6 +138,12 @@ in {
 
         features = {
           alacritty.enable = true;
+
+          background = {
+            enable = true;
+            wallpaperDirectory = "/nix/persist/home/troy/.wallpapers";
+          };
+
           dunst.enable = true;
 
           firefox = {

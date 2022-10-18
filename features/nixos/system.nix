@@ -33,7 +33,6 @@ in {
 
       # TODO: I have to move the packages to the respective modules that use them.
       environment.systemPackages = with pkgs; [
-        sddm-sugar-candy
         nix-index
         git
         python3

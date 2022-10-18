@@ -14,7 +14,11 @@
   };
 
   flake.overlays.default = final: prev: {
-    sddm-sugar-candy = prev.callPackage ./sddm-sugar-candy.nix { };
+    sddm-sugar-candy = prev.callPackage ./sddm-sugar-candy.nix {
+      inherit (prev.libsForQt5) qtgraphicaleffects;
+      wallpaper = final.wallpaper;
+    };
+    wallpaper = prev.callPackage ./wallpaper.nix { };
     website = prev.callPackage ../website { };
   };
 }

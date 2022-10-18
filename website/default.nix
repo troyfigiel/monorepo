@@ -1,6 +1,6 @@
-{ pkgs }:
+{ hugo, emacs, emacsPackages, runCommand }:
 
-pkgs.runCommand "website" {
+runCommand "website" {
   website = builtins.path {
     path = ./.;
     name = "website";
@@ -16,7 +16,7 @@ pkgs.runCommand "website" {
     name = "website";
   };
 
-  nativeBuildInputs = with pkgs; [ hugo emacs emacsPackages.ox-hugo ];
+  nativeBuildInputs = [ hugo emacs emacsPackages.ox-hugo ];
 } ''
   cp -r $website/. .
   chmod +w -R ./

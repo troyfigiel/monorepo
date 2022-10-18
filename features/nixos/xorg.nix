@@ -45,5 +45,7 @@ in {
         touchpad.tapping = true;
       };
     };
+
+    environment.systemPackages = with pkgs; [ sddm-sugar-candy ];
   };
 }
