@@ -4,7 +4,7 @@ let
   inherit (inputs.nixpkgs.lib) nixosSystem;
   machine = "virtual-devbox";
   system = "aarch64-linux";
-  impermanence = false;
+  impermanence = true;
 in {
   flake.nixosConfigurations.${machine} = nixosSystem {
     inherit system;

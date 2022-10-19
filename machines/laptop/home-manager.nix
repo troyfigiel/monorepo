@@ -47,8 +47,6 @@ in {
 
         # TODO: I don't need this if I set user packages?
         home.packages = with pkgs; [
-          nixfmt
-          gnumake
           nmap
           restic
           deploy-rs
@@ -56,7 +54,6 @@ in {
           rclone
           fdupes
           hugo
-          terraform
           # TODO: For now I will need to symlink a config in place
           # However, it would make more sense to create my own module for it.
           minio-client

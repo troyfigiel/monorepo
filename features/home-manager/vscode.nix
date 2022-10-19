@@ -128,5 +128,7 @@ in {
         "workbench.startupEditor" = "none";
       };
     };
+
+    home.packages = with pkgs; [ nixfmt gnumake terraform ];
   };
 }

@@ -1,4 +1,4 @@
-{ impermanence, inputs, pkgs, ... }:
+{ impermanence, config, inputs, pkgs, ... }:
 
 {
   home-manager = {
@@ -7,13 +7,15 @@
     extraSpecialArgs = { inherit inputs impermanence; };
 
     users = {
-      troy = {
+      troy = let cfg = config.home-manager.users.troy;
+      in {
         imports = [
+          inputs.impermanence.nixosModules.home-manager.impermanence
           ../../features/home-manager/alacritty.nix
           ../../features/home-manager/background.nix
           ../../features/home-manager/git.nix
           ../../features/home-manager/i3.nix
-        #   ../../features/home-manager/picom.nix
+          #   ../../features/home-manager/picom.nix
           ../../features/home-manager/polybar.nix
           ../../features/home-manager/vscode.nix
           ../../features/home-manager/xdg.nix
@@ -21,7 +23,7 @@
         ];
 
         home = {
-          # homeDirectory = "/home/troy";
+          homeDirectory = "/home/troy";
           username = "troy";
           sessionVariables = { EDITOR = "vim"; };
           stateVersion = "22.05";
@@ -44,8 +46,13 @@
           zsh.enable = true;
           background.enable = true;
           i3.enable = true;
-        #   picom.enable = true;
+          #   picom.enable = true;
           polybar.enable = true;
+        };
+
+        home.persistence."/nix/persist/${cfg.home.homeDirectory}" = {
+          directories = [ ".ssh" ];
+          allowOther = true;
         };
       };
     };

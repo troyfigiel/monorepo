@@ -38,8 +38,8 @@
     restic.enable = true;
     sound.enable = true;
     system = {
-        enable = true;
-        games = true;
+      enable = true;
+      games = true;
     };
 
     qemu.enable = true;

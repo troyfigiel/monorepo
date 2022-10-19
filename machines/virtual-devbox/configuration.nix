@@ -34,8 +34,10 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "docker" ];
-    packages = with pkgs; [ vim git ];
+    packages = with pkgs; [ git gnumake vim ];
   };
+
+  programs.fuse.userAllowOther = true;
 
   system.stateVersion = "22.11";
 }

@@ -25,7 +25,7 @@ in {
     }
 
     (optionalAttrs impermanence {
-      home.persistence."/nix/persist/home/troy" = {
+      home.persistence."/nix/persist/${config.home.homeDirectory}" = {
         directories = [ cfg.passwordStoreDir ];
         allowOther = true;
       };
