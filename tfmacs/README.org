@@ -1,1 +1,2142 @@
-Directory containing my emacs config.
+#+title: Emacs configuration
+* Table of contents :TOC:
+- [[#introduction][Introduction]]
+- [[#configuration][Configuration]]
+  - [[#authenticationel][authentication.el]]
+  - [[#ciel][ci.el]]
+  - [[#completionel][completion.el]]
+  - [[#data-scienceel][data-science.el]]
+  - [[#defaultsel][defaults.el]]
+  - [[#dev-envel][dev-env.el]]
+  - [[#directoryel][directory.el]]
+  - [[#emacs-debuggingel][emacs-debugging.el]]
+  - [[#emacs-miscel][emacs-misc.el]]
+  - [[#evilel][evil.el]]
+  - [[#feedel][feed.el]]
+  - [[#infrastructureel][infrastructure.el]]
+  - [[#latexel][latex.el]]
+  - [[#eglotel][eglot.el]]
+  - [[#nixel][nix.el]]
+  - [[#orgel][org.el]]
+  - [[#persistenceel][persistence.el]]
+  - [[#pythonel][python.el]]
+  - [[#repeatingel][repeating.el]]
+  - [[#roamel][roam.el]]
+  - [[#systemel][system.el]]
+  - [[#terminalel][terminal.el]]
+  - [[#text-editingel][text-editing.el]]
+  - [[#themingel][theming.el]]
+  - [[#version-controlel][version-control.el]]
+  - [[#whitespaceel][whitespace.el]]
+  - [[#windowel][window.el]]
+  - [[#workspacesel][workspaces.el]]
+  - [[#keybindingsel][keybindings.el]]
+- [[#patches][Patches]]
+  - [[#asdf-reshim][asdf-reshim]]
+  - [[#asdf-transient][asdf-transient]]
+  - [[#org-sticky-header][org-sticky-header]]
+  - [[#lisp][lisp]]
+- [[#experimentation][Experimentation]]
+  - [[#drag-stuff][Drag-stuff]]
+  - [[#move-text][Move-text]]
+  - [[#buffer-removal][Buffer removal]]
+  - [[#latex-command-shortcuts][LaTeX command shortcuts]]
+  - [[#yasnippet][Yasnippet]]
+  - [[#popper][Popper]]
+  - [[#shackle][Shackle]]
+  - [[#ejc-sql][Ejc-sql]]
+  - [[#eldoc][ElDoc]]
+  - [[#aggressive-indent-mode][Aggressive-indent-mode]]
+  - [[#evil-snipe][Evil-snipe]]
+  - [[#desktop][Desktop]]
+  - [[#ovpn-mode][ovpn-mode]]
+  - [[#fontaine][fontaine]]
+  - [[#emojify][emojify]]
+  - [[#flycheck-inline][flycheck-inline]]
+  - [[#hledger-mode--flycheck-hledger][hledger-mode / flycheck-hledger]]
+  - [[#multiple-cursors][multiple-cursors]]
+  - [[#git-undo][git-undo]]
+  - [[#expand-region][expand-region]]
+  - [[#fix-word][fix-word]]
+  - [[#zoxide][zoxide]]
+  - [[#visual-regexp-steroids][visual-regexp-steroids]]
+  - [[#minimap][minimap]]
+  - [[#firestarter][firestarter]]
+  - [[#org-transclusion][org-transclusion]]
+  - [[#dap-mode][dap-mode]]
+  - [[#org-ref][org-ref]]
+  - [[#notmuch][notmuch]]
+  - [[#password-store][password-store]]
+  - [[#0x0][0x0]]
+  - [[#goto-last-change][goto-last-change]]
+  - [[#lispy--lispyville][lispy / lispyville]]
+  - [[#interesting-org-mode-options][Interesting org mode options]]
+  - [[#mode-line-idle][mode-line-idle]]
+  - [[#tree-sitter][tree-sitter]]
+  - [[#screenshot][screenshot]]
+  - [[#relative-date][relative-date]]
+  - [[#taxy][taxy]]
+  - [[#modus-theme][modus-theme]]
+  - [[#asynchronous-fuzzy-file-finding-for-emacs][Asynchronous fuzzy-file finding for Emacs]]
+  - [[#openstreetmap-viewer-for-emacs][OpenStreetMap viewer for Emacs]]
+  - [[#miscellaneous-ideas][Miscellaneous ideas]]
+
+* Introduction
+This repository contains the code used to set up my Emacs environment.
+Clone this repository to .emacs.d and the rest of the configuration
+will bootstrap itself upon starting up.
+
+Straight is used as a package manager and use-package to define the
+package configuration. Straight is integrated into use-package, so
+that each declaration of a package automatically calls
+`straight-use-package`.
+
+Upon start up, the elisp code blocks in the configuration section of
+this file are tangled into a separate directory called `tangled/config/`. This
+directory is then loaded using init-loader.
+
+Although the `tangled/config/` directory is recreated upon every start up, for
+an easier time understanding the code, I have opted to include the
+generated modules as well.
+
+Finally, the glue code that is needed to bring all these pieces
+together or add some features to packages I feel is missing, has been
+turned into a separate package called band-aid.
+
+* Configuration
+** authentication.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_authentication.el
+
+  (use-package pinentry
+    :custom (epg-pinentry-mode 'loopback)
+    :config (pinentry-start))
+
+#+end_src
+
+** ci.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_ci.el
+
+  (use-package gitlab-ci-mode
+    ;; I either put my gitlab-ci files in .gitlab-ci.yml or inside the .gitlab folder.
+    :mode "\\.gitlab/.*\\.ya?ml")
+
+#+end_src
+
+** completion.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_completion.el
+
+  (use-package vertico
+    ;; Vertico stores its extensions in a separate directory.
+    ;; Straight needs to be able to find this directory.
+    :straight
+    (:files (:defaults "extensions/*")
+     :includes
+     (vertico-buffer
+      vertico-directory
+      vertico-flat
+      vertico-indexed
+      vertico-mouse
+      vertico-quick
+      vertico-repeat
+      vertico-reverse))
+    ;; BUG: It seems `vertico-count' set to 5 does not work with `vertico-buffer'.
+    ;;:custom (vertico-count 5)
+    :config (vertico-mode 1))
+
+  (use-feature vertico-buffer
+    :after vertico
+    :custom
+    ;; The confusing thing is that the buffer is still underneath the rest when using windmove.
+    (vertico-buffer-display-action
+     `(display-buffer-in-side-window
+       (window-height . ,(+ 3 vertico-count))
+       (side . top)))
+    (vertico-buffer-mode 1))
+
+  (use-feature vertico-directory
+    :after vertico
+    ;; TODOC: What is the `rfn-eshadow-update-overlay-hook' and when does it trigger?
+    ;; TODOC: What does the `vertico-directory-tidy' function do?
+    :hook (rfn-eshadow-update-overlay . vertico-directory-tidy)
+    ;; IDEA: I should rewrite this with the general package. Which keybindings would make sense?
+    :bind
+    (:map vertico-map
+     ("RET" . vertico-directory-enter)
+     ("DEL" . vertico-directory-delete-char)
+     ("M-DEL" . vertico-directory-delete-word)))
+
+  (use-package orderless
+    :custom
+    (completion-styles '(orderless))
+    (completion-category-defaults nil)
+    (completion-category-overrides '((file (styles . (partial-completion)))))
+    ;; orderless-flex ends up giving too many candidates.
+    (orderless-matching-styles '(orderless-prefixes)))
+
+  ;; consult-find
+  ;; consult-ripgrep
+  ;; consult-yank are useful functions.
+  (use-package consult)
+
+  (use-package marginalia
+    :custom (marginalia-mode 1))
+
+  ;; IDEA: To start understanding how I could use embark, I should put together a number of examples.
+  ;; - Open a file by selecting the text and running embark-act on it.
+  (use-package embark
+    :bind
+    (("C-." . embark-act)
+     ("M-." . embark-dwim)
+     ("C-h B" . embark-bindings)))
+
+  (use-package embark-consult)
+
+  (use-package ace-window
+    :custom
+    (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+    :general
+    ("s-w" 'ace-window))
+
+  ;; There are some other useful functions that I could bind. I need to think about them.
+  ;; BUG: Capital letters seem to be counted as two different matches.
+  (use-package ctrlf
+    :custom
+    ;; So I can search multiple words separated by spaces.
+    ;; If I ever need to search for a space, double space works.
+    (ctrlf-default-search-style 'fuzzy)
+    ;; So I can search and immediately change a word by going to the beginning.
+    (ctrlf-go-to-end-of-match nil)
+    (ctrlf-mode 1)
+    :general
+    ;; IDEA: I need better keypresses, because these are inconvient to press. What are some better options?
+    ("s-g" 'ctrlf-forward-default)
+    (:keymaps 'ctrlf-mode-map
+     "s-j" 'ctrlf-forward-default
+     "s-k" 'ctrlf-backward-default))
+
+  (use-package corfu
+    :custom
+    (corfu-auto t)
+    (corfu-auto-prefix 2)
+    (corfu-cycle t)
+    (corfu-auto-delay 0.1)
+    :config (global-corfu-mode 1))
+
+  (use-package prescient
+    :config (prescient-persist-mode 1))
+
+  ;; Can helpful be replaced somehow?
+  ;; (use-package helpful
+  ;;   :custom
+  ;;   (describe-function-function #'helpful-callable)
+  ;;   (describe-variable-function #'helpful-variable))
+
+  (use-package which-key
+    :config (which-key-mode 1))
+
+#+end_src
+
+** data-science.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_data-science.el
+
+  (use-package yaml-mode)
+  (use-package yaml-pro
+    :straight (:type git :host github :repo "zkry/yaml-pro"))
+
+  (use-package toml-mode)
+
+  (use-package csv-mode
+    :hook
+    (csv-mode . csv-align-mode)
+    (csv-mode . csv-guess-set-separator))
+
+  ;; IDEA: It would be nice if I can open a separate buffer in SES mode to edit
+  ;; a dataframe. I can do this using `ein:kernel-utils-pandas-to-ses', but what
+  ;; about more generally?
+  (use-package ein
+    ;; Apparently this hook is necessary for undo inside ein.
+    :hook (evil-local-mode . turn-on-undo-tree-mode)
+    ;; I can set additional properties through ein:output-area-inlined-image-properties.
+    :custom (ein:output-area-inlined-images t))
+
+  ;; This comes with the very handy function `ein:kernel-utils-pandas-to-ses`.
+  (use-package ein-kernel-utils
+    :straight (:type git :host github :repo "millejoh/ein-kernel-utils")
+    :after ein
+    :init
+    (use-package company)
+    (use-package popup))
+
+  ;; IDEA: Some spreadsheet tool would be a useful addition, but is SES mode
+  ;; the best option? I know there is also a package `cell-mode' for example.
+  (use-feature ses
+    :hook (ses-mode . linum-mode))
+
+#+end_src
+
+** defaults.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_defaults.el
+
+  (use-feature emacs
+    :custom
+    (mode-line-percent-position nil)
+    ;; No custom file. Complete reproducibility.
+    (custom-file null-device)
+    ;; By default emacs requires two spaces after a period to end a sentence. This is an old default that interferes with evil.
+    (sentence-end-double-space nil)
+    ;; Without the visible bell, hitting the edges of a file will make an annoying noise.
+    ;; TODOC: Is this really the case?
+    (visible-bell t)
+    :config (column-number-mode 1)
+    :general ("s-x" 'keyboard-escape-quit))
+
+  (use-feature patches/01_lisp)
+
+#+end_src
+
+** dev-env.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_dev-env.el
+
+  (use-package direnv
+    :custom (direnv-mode 1))
+
+  (use-package asdf
+    :straight (:type git :host github :repo "tabfugnic/asdf.el")
+    :custom
+    (asdf-path
+     (concat (file-name-as-directory no-littering-var-directory) "asdf"))
+    (asdf-binary
+     (concat (file-name-as-directory asdf-path) "bin/asdf"))
+    :config
+    (setenv "ASDF_DIR" asdf-path)
+    (setenv "ASDF_DATA_DIR" asdf-path)
+    (band-aid-git-clone "https://github.com/asdf-vm/asdf.git"
+		      asdf-path
+		      "--branch v0.10.0")
+    (asdf-enable)
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "a" 'asdf))
+
+    (use-feature patches/01_asdf-reshim :after asdf)
+    (use-feature patches/01_asdf-transient :after asdf)
+
+  ;; TODO: Is `project-execute-extended-command' something I will use regularly?
+  ;; TODO: How would I set up automatic testing? Should I use firestarter or just
+  ;; reuse `project-compile'?
+  ;; TODO: Browse dirty projects could be very useful. How do I create this for project?
+  (use-package project
+    :config
+    (transient-define-prefix project-transient ()
+      "project.el transient menu."
+      [["Buffers"
+	("b" "Switch to project buffer" project-switch-to-buffer)
+	("k" "Kill project buffers" project-kill-buffers)]
+       ["Search"
+	("f" "Find file in project" project-find-file)
+	("F" "Find file in project or external roots" project-or-external-find-file)
+	("g" "Find regexp in project" project-find-regexp)
+	("G" "Find regexp in project or external roots" project-or-external-find-regexp)
+	("R" "Find and replace regexp" project-query-replace-regexp)]
+       ["Shell"
+	("s" "Start" project-shell)
+	("!" "Run command" project-shell-command)
+	("&" "Run async command" project-async-shell-command)]
+       ["Manage"
+	("D" "Open dired at project root" project-dired)
+	("m" "Open magit status at project root" magit-project-status)
+	("c" "Compile Project" project-compile)
+	("p" "Switch Project" project-switch-project)]])
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "p" 'project-transient))
+
+  (use-package smartparens
+    :hook (prog-mode . smartparens-mode))
+
+  (use-package rainbow-delimiters
+    :hook (prog-mode . rainbow-delimiters-mode))
+
+
+#+end_src
+
+** directory.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_directory.el
+
+  (use-package dired
+    :straight (:type built-in)
+    :general
+    ("s-d" 'dired-jump))
+
+  (use-package dired-hacks-utils
+    :custom (dired-utils-format-information-line-mode 1))
+
+  ;; TODO: With dired-single I can give dired a buffer name it always keeps.
+  ;; Is this something useful for my workflow?
+  (use-package dired-single
+    :after (dired evil-collection)
+    :general
+    (:states 'normal
+     :keymaps 'dired-mode-map
+     "h" 'dired-single-up-directory
+     ;; I like going down directories like this, but not if
+     ;; I accidentally open the file in another buffer.
+     ;; TODO: Can I run dired-single-buffer only for directories?
+     "l" 'dired-single-buffer))
+
+  ;; Most of the time I do not want to change or see my dotfiles.
+  ;; Seeing them should be a keypress away though, so as to not
+  ;; have too much friction.
+  (use-package dired-hide-dotfiles
+    :after (dired evil-collection)
+    :hook (dired-mode . dired-hide-dotfiles-mode)
+    :general
+    (:states 'normal
+     :keymaps 'dired-mode-map
+     "H" 'dired-hide-dotfiles-mode))
+
+  ;; IDEA: Can I already view images inline with dired?
+  ;; If not, should I set up image-dired?
+  (use-package dired-open
+    :after dired
+    :custom
+    ;; Doesn't work as expected!
+    ;;(add-to-list 'dired-open-functions #'dired-open-xdg t)
+    (dired-open-extensions '(("png" . "feh")
+			     ("mkv" . "mpv"))))
+  (use-package dired-rainbow
+    :after dired
+    :config
+    ;; TODO: There is a lot to potentially fix with these colourings.
+    ;; For example, why is .el under compiled instead of interpreted?
+    ;; Nonetheless, it is a good start.
+    (dired-rainbow-define-chmod
+     directory "#6cb2eb"
+     "d.*")
+    (dired-rainbow-define
+     html "#eb5286"
+     ("css" "less" "sass" "scss" "htm"
+      "html" "jhtm" "mht" "eml" "mustache"
+      "xhtml"))
+    (dired-rainbow-define
+     xml "#f2d024"
+     ("xml" "xsd" "xsl" "xslt" "wsdl"
+      "bib" "json" "msg" "pgn" "rss"
+      "yaml" "yml" "rdata" "conf"))
+    (dired-rainbow-define
+     document "#9561e2"
+     ("docm" "doc" "docx" "odb" "odt"
+      "pdb" "pdf" "ps" "rtf" "djvu"
+      "epub" "odp" "ppt" "pptx"))
+    (dired-rainbow-define
+     markdown "#ffed4a"
+     ("org" "etx" "info" "markdown" "md"
+      "mkd" "nfo" "pod" "rst" "tex"
+      "textfile" "txt"))
+    (dired-rainbow-define
+     database "#6574cd"
+     ("xlsx" "xls" "csv" "accdb" "db"
+      "mdb" "sqlite" "nc"))
+    (dired-rainbow-define
+     media "#de751f"
+     ("mp3" "mp4" "MP3" "MP4" "avi"
+      "mpeg" "mpg" "flv" "ogg" "mov"
+      "mid" "midi" "wav" "aiff" "flac"))
+    (dired-rainbow-define
+     image "#f66d9b"
+     ("tiff" "tif" "cdr" "gif" "ico"
+      "jpeg" "jpg" "png" "psd" "eps"
+      "svg"))
+    (dired-rainbow-define
+     log "#c17d11"
+     ("log"))
+    (dired-rainbow-define
+     shell "#f6993f"
+     ("awk" "bash" "bat" "sed" "sh"
+      "zsh" "vim"))
+    (dired-rainbow-define
+     interpreted "#38c172"
+     ("py" "ipynb" "rb" "pl" "t"
+      "msql" "mysql" "pgsql" "sql" "r"
+      "clj" "cljs" "scala" "js" "nix"))
+    (dired-rainbow-define
+     compiled "#4dc0b5"
+     ("asm" "cl" "lisp" "el" "c"
+      "h" "c++" "h++" "hpp" "hxx"
+      "m" "cc" "cs" "cp" "cpp"
+      "go" "f" "for" "ftn" "f90"
+      "f95" "f03" "f08" "s" "rs"
+      "hi" "hs" "pyc" ".java"))
+    (dired-rainbow-define
+     executable "#8cc4ff"
+     ("exe" "msi"))
+    (dired-rainbow-define
+     compressed "#51d88a"
+     ("7z" "zip" "bz2" "tgz" "txz"
+      "gz" "xz" "z" "Z" "jar"
+      "war" "ear" "rar" "sar" "xpi"
+      "apk" "xz" "tar"))
+    (dired-rainbow-define
+     packaged "#faad63"
+     ("deb" "rpm" "apk" "jad" "jar"
+      "cab" "pak" "pk3" "vdf" "vpk"
+      "bsp"))
+    (dired-rainbow-define
+     encrypted "#ffed4a"
+     ("gpg" "pgp" "asc" "bfe" "enc"
+      "signature" "sig" "p12" "pem"))
+    (dired-rainbow-define
+     fonts "#6cb2eb"
+     ("afm" "fon" "fnt" "pfb" "pfm"
+      "ttf" "otf"))
+    (dired-rainbow-define
+     partition "#e3342f"
+     ("dmg" "iso" "bin" "nrg" "qcow"
+      "toast" "vcd" "vmdk" "bak"))
+    (dired-rainbow-define
+     vc "#0074d9"
+     ("git" "gitignore" "gitattributes" "gitmodules"))
+    (dired-rainbow-define-chmod
+     executable-unix "#38c172"
+     "-.*x.*"))
+
+  ;; This gives behaviour similar to what you see for example on GitHub and GitLab
+  ;; where a directory `foo/' containing a single file `bar' is shortened to
+  ;; `foo/bar'.
+  (use-package dired-collapse
+    :after dired
+    :config (dired-collapse-mode 1))
+
+  ;; I prefer dired-ranger over ranger, because dired is actually built-in.
+  ;; On top of that, it is quite good and has a lot of extensions.
+  (use-package dired-ranger
+    :general
+    (:states 'normal
+     :keymaps 'dired-mode-map
+     "y" 'dired-ranger-copy
+     "p" 'dired-ranger-paste
+     ;; IDEA: How should I bind `dired-ranger-move'? Is "X" the best binding?
+     "X" 'dired-ranger-move))
+
+  (use-package treemacs
+    :after solaire-mode)
+
+#+end_src
+
+** emacs-debugging.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_emacs-debugging.el
+
+  ;; BUG: I keep running into a bug here with some wrong types. This is
+  ;; more annoying than helpful.
+  ;; (use-package explain-pause-mode :custom
+  ;;   (explain-pause-mode 1))
+
+  ;; IDEA: It seems bug-hunter does not handle the existence of
+  ;; early-init.el. It will just load and bissect init.el on an empty
+  ;; Emacs instance. Potentially, I could fix this, because it does not
+  ;; sound too difficult. (use-package bug-hunter)
+
+#+end_src
+
+** emacs-misc.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_emacs-misc.el
+
+  (use-package crux)
+
+  (use-package restart-emacs
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "R" 'restart-emacs))
+
+  (use-package crontab-mode
+    :mode "\\.?cron\\(tab\\)?\\'")
+
+#+end_src
+
+** evil.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_evil.el
+
+  (use-package evil-escape
+    :custom
+    (evil-escape-unordered-key-sequence t)
+    ;; I prefer not to use letters, because I find it disturbs my workflow
+    ;; if I accidentally bump myself out of insert mode.
+    ;; However, evil-escape is very convenient if it works as expected.
+    ;; Therefore, I keep the delay at 0.1 and bind it to keys that
+    ;; are never used together (period and comma).
+    ;; IDEA: I only use this key sequence to return back to the normal state.
+    ;; Can I make that implicit? I believe evil-escape can also be used for
+    ;; various other `quit' functionalities.
+    (evil-escape-key-sequence ".,")
+    ;; Because I rarely use the escape key sequence in combination anyway,
+    ;; there is no harm in setting the delay slightly higher to avoid not
+    ;; being quick enough with the key-chord.
+    (evil-escape-delay 0.2)
+    :config (evil-escape-mode 1))
+
+  (use-package evil
+    :custom
+    (evil-want-C-u-scroll t)
+    (evil-want-C-i-jump nil)
+    (evil-undo-system 'undo-tree)
+    (evil-mode-line-format nil)
+    :config (evil-mode 1)
+    ;; Use visual line motions even outside of visual-line-mode buffers
+    ;; TODOC: What does this do exactly?
+    :general
+    (:states 'motion
+     "j" 'evil-next-visual-line
+     "k" 'evil-previous-visual-line))
+
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal)
+
+  ;; BUG: Sometimes comments too much. Why?
+  (use-package evil-nerd-commenter
+    :general
+    ("s-#" 'evilnc-comment-or-uncomment-lines))
+
+#+end_src
+
+** feed.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_feed.el
+
+  (use-package elfeed
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "f" 'elfeed))
+
+  (use-package elfeed-org
+    :after elfeed)
+  ;;   :custom (rmh-elfeed-org-files (list "~/org/private/feeds.org"))
+  ;;   :config (elfeed-org))
+
+  (use-package elfeed-tube
+    :after elfeed)
+
+#+end_src
+
+** infrastructure.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_infrastructure.el
+
+  (use-package docker
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "d" 'docker))
+
+  (use-package dockerfile-mode)
+  (use-package docker-compose-mode)
+
+  (use-package terraform-mode)
+  (use-package company-terraform)
+
+#+end_src
+
+** latex.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_latex.el
+
+  (use-package tex-mode
+    :straight (:type built-in)
+    :hook
+    (LaTeX-mode . prettify-symbols-mode)
+    (LaTeX-mode . TeX-fold-mode)
+    (LaTeX-mode . latex-preview-pane-mode)
+    :custom
+    (TeX-auto-save t)
+    (TeX-parse-self t))
+
+  ;; The fact that straight needs to pull a different package from
+  ;; the file that I actually need to require, comes from the
+  ;; historical naming.
+  (use-package tex
+    :straight auctex
+    :init (require 'texmathp))
+
+  (use-package cdlatex
+    :after tex
+    ;; BUG: Something about this hook did not work. I do not remember what it was exactly.
+    ;;:hook ((LaTeX-mode org-mode) . cdlatex-mode)
+    :custom
+    (cdlatex-math-modify-prefix ?')
+    (cdlatex-math-symbol-prefix ?§)
+    (qcdlatex-math-modify-alist
+     '((?a "\\mathbb" nil t nil nil)))
+    (cdlatex-env-alist
+     '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil)))
+    (cdlatex-command-alist
+     '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil)))
+    :bind (:map cdlatex-mode-map
+	   ("C-c e" . cdlatex-environment)
+	   ("'" . cdlatex-math-modify)
+	   ("§" . cdlatex-math-symbol)))
+
+#+end_src
+
+** eglot.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_eglot.el
+
+  (use-package consult-eglot)
+  ;; TODOC: What about ctags and etags? Can I use them for code completions?
+
+  ;; All the tools in here require external dependencies:
+  ;; - Language servers
+  ;; - Formatters
+
+  ;; I do not use eglot for formatting, instead deferring to apheleia which runs
+  ;; my formatter asynchronously.
+  (use-package apheleia
+    :init
+    (band-aid-parse-executable "black")
+    ;; (band-aid-parse-executable "prettier")
+    :config (apheleia-global-mode 1)
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "ta"))
+
+  (use-package eglot
+    :init
+    (band-aid-parse-executable "pylsp")
+    (band-aid-parse-executable "flake8")
+    :hook
+    ;; IDEA: These need to be separate sexps,
+    ;; because they will ultimately be separate noweb styled code blocks.
+    (python-mode . eglot-ensure)
+    (terraform-mode . eglot-ensure)
+    (nix-mode . eglot-ensure)
+    (sql-mode . eglot-ensure)
+    ;; IDEA: If eglot messes up some of my settings, I can use
+    ;; `eglot-stay-out-of'. For example, (eglot-stay-out-of '(completion-styles))
+    :config
+    (setq-default
+     eglot-workspace-configuration
+     ;; IDEA: It would be nice to have refactoring capabilities with pylsp-rope.
+     ;; Unfortunately, it is not packaged for Nix yet.
+     '((pylsp
+	(plugins
+	 ;; I use apheleia + black for formatting so do not need autopep8.
+	 (autopep8 (enabled . nil))
+	 (pycodestyle (enabled . nil))
+	 (flake8 (enabled . t))
+	 (jedi_completion (fuzzy . t))))))
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "e" '(:ignore t :which-key "IDE")
+     "ed" #'eglot-find-declaration
+     "er" #'eglot-rename))
+
+  (use-package flymake
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "ec" #'consult-flymake
+     "ef" #'flymake-show-buffer-diagnostics
+     "en" #'flymake-goto-next-error
+     "ep" #'flymake-goto-prev-error))
+
+  ;; TODO: Add keybindings for going to definition etc.
+  (use-package xref)
+
+#+end_src
+
+** nix.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_nix.el
+
+  (use-package nix-mode
+    ;; The \\' matches the empty string.
+    :mode "\\.nix\\'")
+
+#+end_src
+
+** org.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_org.el
+
+  ;; TODO: Create a simple binding for previewing the entire buffer in LaTeX
+  ;; TODO: This should be org-cdlatex-mode, but can't get it to work.
+  (use-package org
+    :custom
+    ;; TODO: Does this work as a custom or does it need to be a default?
+    (org-catch-invisible-edits 'show-and-error)
+    (org-ellipsis " …")
+    (org-pretty-entities t)
+    (org-hide-emphasis-markers t)
+    (org-startup-with-latex-preview t)
+    :config
+    (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+    (add-to-list 'org-structure-template-alist '("py" . "src python"))
+    (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+    (add-to-list 'org-structure-template-alist '("r" . "src R"))
+    (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+    (add-to-list 'org-structure-template-alist '("sq" . "src sql"))
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((emacs-lisp . t)
+       (python . t)
+       (shell . t)
+       (R . t)
+       (sql . t)))
+    (push '("conf-unix" . conf-unix) org-src-lang-modes))
+
+  (use-package org-modern
+    :custom (line-spacing 0.2)
+    :config (global-org-modern-mode 1))
+
+  ;; TODO: Does this interfere with org-modern?
+  ;; TODO: Find out how well this works compared to the default.
+  ;; (use-package valign
+  ;;   :custom (valign-fancy-bar t)
+  ;;   :hook (org-mode . valign-mode))
+
+  (use-feature patches/01_org-sticky-header :after org-sticky-header)
+
+  (use-package org-sticky-header
+    :custom
+    (org-sticky-header-full-path 'full)
+    (org-sticky-header-heading-star "")
+    :hook (org-mode . org-sticky-header-mode))
+
+  (use-package toc-org
+    :hook
+    (org-mode . toc-org-mode)
+    (markdown-mode . toc-org-mode))
+
+  ;; BUG: This does not work together well with `diff-hl', because it ends
+  ;; up creating a very large coloured block instead of a small fringe whenever
+  ;; I changed, add or delete something to a git controlled file.
+  ;; IDEA: Can I add `olivetti' and have it work together well with `visual-fill-column'
+  ;; or is it a replacement of that package?
+  (use-package visual-fill-column
+    ;; What does visual-line-mode do? When does it trigger?
+    :hook (visual-line-mode . visual-fill-column-mode)
+    :custom (visual-fill-column-center-text t))
+
+  (use-package org-appear
+    :hook (org-mode . org-appear-mode))
+
+  ;; TODO: Does this interfere with org-modern?
+  ;; (use-package org-superstar
+  ;;   :hook (org-mode . org-superstar-mode)
+  ;;   :custom
+  ;;   ;; org-superstar-cycle-headline-bullets: By default we cycle through the list.
+  ;;   ;; org-superstar-leading-bullet: Also by default, the bullets are connected
+  ;;   ;; by . to the left margin.
+  ;;   ;; I can also add a lot of customization to TODOs.
+  ;;   ;; org-superstar-item-bullet-alist also has good defaults.
+  ;;   (org-superstar-headline-bullets-list '("◉" "○")))
+
+#+end_src
+
+** persistence.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_persistence.el
+
+  ;; This package remembers where the point was when the buffer was last visited.
+  (use-package saveplace
+    :custom (save-place-mode 1))
+
+  ;; This package saves the minibuffer history.
+  (use-package savehist
+    :custom (save-hist-mode 1))
+
+  ;; I do not like the automatic save after idling, because if I am typing,
+  ;; pause at a space or tab and wait for too long, whitespace-cleanup-mode
+  ;; will remove the space again. This can be annoying.
+  ;; Generally speaking though, I don't pause after a space very often anyway.
+  (use-package super-save
+    ;; This hook ensures we do not need to click yes on the prompt asking us to save
+    ;; when we try to quit Emacs.
+    ;; Setting the default has the drawback that is tries to save also non-file buffers
+    ;; such as the minibuffer. Hooking this after `find-file` will prevent this issue.
+    ;; Since auto-save-mode is enabled by default, if Emacs ever crashes, we still have
+    ;; the backups to recover from.
+    ;; IDEA: Maybe do not change the colour of the filename if it needs saving anymore.
+    ;; We are automatically saving anyway at every opportunity.
+    :hook (find-file . (lambda () (setq buffer-save-without-query t)))
+    :custom (super-save-mode 1))
+
+  ;; There is a persistent-scratch-mode which remaps the save and write buffer
+  ;; to their persistent-scratch counterparts. Should I hook this somehow?
+  ;; No, not necessary. I shouldn't be trying to save automatically anyway.
+  ;; super-save will do that for me automatically.
+  (use-package emacs
+    :straight (:type built-in)
+    :custom (initial-scratch-message nil))
+
+  ;; We protect the scratch buffer from accidentally being killed.
+  ;; And if it does not exist, create it.
+  (use-package protbuf
+    :custom (protect-buffer-bury-p nil)
+    :config
+    ;; The scratch buffer SHOULD exist at this point. If it does not, I want to run into an error.
+    (protect-buffer-from-kill-mode 1 (get-buffer "*scratch*")))
+
+  (use-package persistent-scratch
+    :custom
+    (persistent-scratch-backup-directory
+     (concat (file-name-as-directory no-littering-var-directory)
+	     "persistent-scratch-backups"))
+    ;; I do not use persistent-scratch-default-setup because it is not idempotent.
+    ;; It toggles persistent-scratch-autosave-mode instead of setting it to t.
+    (persistent-scratch-autosave-mode 1)
+    :config
+    ;; I am running this code only because it is a habit to call C-x C-s to save.
+    ;; I want to be able to do this in the scratch buffer as well without being
+    ;; asked to open a file to save to contents in.
+    ;; It does not work though, not sure why not. Maybe better to not have it anyway? Autosave-mode works fine.
+    ;; (with-current-buffer (get-buffer "*scratch*")
+    ;;   (persistent-scratch-mode 1))
+    (persistent-scratch--auto-restore))
+
+  ;; (use-feature band-aid
+  ;; :general
+  ;; (:states 'normal
+  ;;  :prefix core-keybindings-leader-key
+  ;; IDEA: "ss" switch to scratch buffer
+  ;; "sn" 'band-aid-scratch))
+
+#+end_src
+
+** python.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_python.el
+
+  ;; pylsp-rope supposedly contains some nice refactoring capabilities
+  (use-package python
+    :config
+    ;; We can use the :interpreter keyword
+    (setq python-shell-interpreter "python3"
+	  dap-python-executable "python3"
+	  dap-python-debugger 'debugpy)
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "l"  '(:ignore t :which-key "languages")
+     "lp" '(:ignore t :which-key "python")))
+
+  ;; IDEA: Is poetry not enough? Do I still need pyvenv?
+  (use-package pyvenv
+    ;; TODO: The venv in the modeline does not look very nice. Can I give it a different face?
+    :config (pyvenv-mode 1)
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "lpv"  '(:ignore t :which-key "pyvenv")
+     "lpva" 'pyvenv-activate
+     "lpvd" 'pyvenv-deactivate))
+
+  (use-package poetry
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "lpp" 'poetry))
+
+#+end_src
+
+** repeating.el
+Transients are useful for complicated menus bringing together various
+commands or when state is required. Repeat mode on the other hand is
+useful for simple commands that only need to be repeated a number of
+times.
+
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_repeating.el
+
+  (use-package repeat
+    :config (repeat-mode 1))
+
+  ;; The default popup-type for repeat-help uses embark, not which-key.
+  (use-package repeat-help
+    :after (repeat embark)
+    :custom (repeat-help-auto t)
+    ;; IDEA: I can actually also hook repeat-help-mode after repeat-mode
+    ;; and hook repeat-mode into the after-init hook. Would that be nicer?
+    ;; Potentially, because it is more descriptive.
+    ;; And can I do this for other modes as well?
+    :config (repeat-help-mode 1))
+
+  (use-package define-repeat-map
+    :straight
+    (:type git
+     :host nil
+     :repo "https://tildegit.org/acdw/define-repeat-map.el")
+    :after repeat)
+
+#+end_src
+
+** roam.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_roam.el
+
+  (use-package delve
+    :straight (:type git :host github :repo "publicimageltd/delve")
+    :after org-roam)
+
+  (use-package org-roam
+    ;; Note that we cannot currently use 01_org as a feature, because config is not in our load path.
+    ;; Do we need this?
+    :after org
+    :custom
+    ;; TODO: Try to create an overlay so I can use [[id:...]] and the title is always up to date
+    ;; TODO: Make a hydra out of some of the roam commands
+    (org-roam-directory
+     (expand-file-name "org/notes" user-emacs-directory))
+    (org-roam-completion-everywhere t)
+    :config
+    (band-aid-git-clone
+     "git@gitlab.com:troy.figiel/zettelkasten.git"
+     org-roam-directory)
+    (org-roam-setup)
+    (band-aid-org-roam-set-templates
+     (expand-file-name "org/templates" user-emacs-directory))
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "r"   '(:ignore t :which-key "org-roam")
+     "rb"  'org-roam-buffer-toggle
+     "rn"  '(:ignore t :which-key "node")
+     "rnf" 'org-roam-node-find
+     "rni" 'org-roam-node-insert
+     "rnr" 'org-roam-node-random
+     "ra"  '(:ignore t :which-key "alias")
+     "raa" 'org-roam-alias-add
+     "rar" 'org-roam-alias-remove
+     "rr"  '(:ignore t :which-key "ref")
+     "rra" 'org-roam-ref-add
+     "rrr" 'org-roam-ref-remove
+     "rt"  '(:ignore t :which-key "tag")
+     "rta" 'org-roam-tag-add
+     "rtr" 'org-roam-tag-remove
+     "ra"  '(:ignore t :which-key "add")))
+  ;; (use-package org-roam-bibtex)
+
+  (use-package org-roam-ui
+    :after org-roam
+    :diminish
+    :custom
+    (org-roam-ui-sync-theme t)
+    (org-roam-ui-follow t)
+    (org-roam-ui-update-on-save t)
+    (org-roam-ui-open-on-start nil)
+    :hook (after-init . org-roam-ui-mode))
+
+  (use-package org-roam-timestamps
+    :after org-roam
+    :diminish
+    :custom
+    (org-roam-timestamps-remember-timestamps nil)
+    :hook (after-init . org-roam-timestamps-mode))
+
+  (use-package deft
+    :after org-roam
+    :custom
+    ;; Need to figure out how deft works precisely
+    (deft-recursive t)
+    (deft-use-filter-string-for-filename t)
+    (deft-default-extension "org")
+    (deft-directory org-roam-directory)
+    :general
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "rd"  'deft))
+
+#+end_src
+
+** system.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_system.el
+
+  ;; BUG: My init system is not supported, even on Ubuntu. What am I doing wrong? Do I need sudo?
+  (use-package daemons)
+
+#+end_src
+
+** terminal.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_terminal.el
+
+  (use-package term
+    :custom
+    (explicit-shell-file-name "bash"))
+
+  (use-package eterm-256color
+    :hook (term-mode . eterm-256color-mode))
+
+  (use-package tldr
+    ;; IDEA: I should not always have to contact GitHub for updates.
+    ;; Maybe I should turn this into a transient?
+    :config (tldr-update-docs))
+
+#+end_src
+
+** text-editing.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_text-editing.el
+
+  (use-package undo-fu)
+
+  (use-package undo-fu-session)
+  ;; (use-package undo-fu-session
+  ;;   :custom (global-undo-fu-session-mode 1))
+
+  (use-package vundo)
+
+  (use-package default-text-scale)
+
+  ;; TODO: Figure out when we actually get ^L characters instead of line breaks.
+  ;; Dashboard works fine, right?
+  (use-package page-break-lines
+    :config (global-page-break-lines-mode 1))
+
+  ;; IDEA: Spellchecking probably needs to be turned off in other file types as well.
+  ;; I should think of which other ones.
+  ;; Examples: csv
+  (use-package flyspell
+    :straight (:type built-in)
+    :hook
+    (text-mode . flyspell-mode)
+    (prog-mode . flyspell-prog-mode))
+
+#+end_src
+
+** theming.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/00_theming.el
+
+  (defvar tf/default-font-size 120)
+  (defvar tf/default-variable-font-size 120)
+
+  (set-face-attribute 'default nil :height tf/default-font-size)
+
+  ;; Set the fixed pitch face
+  (set-face-attribute 'fixed-pitch nil :height tf/default-font-size)
+
+  ;; Set the variable pitch face
+  (set-face-attribute 'variable-pitch nil :height tf/default-variable-font-size :weight 'regular)
+
+  (defvar tf/frame-transparency '(100 . 100))
+
+  (set-frame-parameter (selected-frame) 'alpha tf/frame-transparency)
+  (add-to-list 'default-frame-alist `(alpha . ,tf/frame-transparency))
+
+  (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+  (use-package hide-mode-line
+    :hook (dashboard-after-initialize . hide-mode-line-mode))
+
+  (use-package dashboard
+    :custom
+    (dashboard-startup-banner 'logo)
+    (dashboard-center-content t)
+    (dashboard-set-heading-icons t)
+    (dashboard-set-file-icons t)
+    ;; It is a bit strange I have to set this to a value different from projectile.
+    ;; If I don't do this and try to show projects, it will pull in projectile instead
+    ;; of using project.el.
+    (dashboard-projects-backend 'project-el)
+    (dashboard-items
+     '((recents  . 10)
+       (bookmarks . 5)
+       (projects . 5)
+       (agenda . 5)))
+    :config (dashboard-setup-startup-hook))
+
+  (use-package beacon
+    :custom (beacon-blink-duration 0.5)
+    :config (beacon-mode 1))
+
+  (use-package all-the-icons
+    :unless (find-font (font-spec :name "all-the-icons"))
+    :config (all-the-icons-install-fonts t))
+
+  (use-package all-the-icons-dired
+    :after (all-the-icons dired)
+    :hook (dired-mode . all-the-icons-dired-mode))
+
+  (use-package autorevert
+    :straight (:type built-in))
+
+  ;; NOTE: How can bufler and consult work together?
+  (use-package bufler
+    :custom
+    (bufler-workspace-mode 1))
+
+  (use-package zoom
+    ;; Golden ratio. Just kind of looks nice.
+    :custom (zoom-size '(0.618 . 0.618))
+    :config (zoom-mode 1))
+
+  ;; I need to add some mode-icons that are missing.
+  (use-package mode-icons
+    :custom (mode-icons-show-mode-name t)
+    :config (mode-icons-mode 1))
+
+  ;; IDEA: I would like my org #+begin_src and #+end_src line to have a slightly darker colour.
+  ;; How do I set this? Would this be superfluous with the right org-modern settings?
+  (use-package doom-themes
+    :custom (doom-themes-padded-modeline t)
+    :config (load-theme 'doom-vibrant t))
+
+  (use-package doom-modeline
+    :custom
+    (doom-modeline-minor-modes t)
+    (doom-modeline-vcs-max-length 24)
+    :config (doom-modeline-mode 1))
+
+  (use-package minions
+    :custom (minions-mode t))
+
+  (use-package dimmer
+    :custom
+    (dimmer-fraction 0.35)
+    (dimmer-mode 1)
+    :config
+    (dimmer-configure-company-box)
+    (dimmer-configure-magit)
+    (dimmer-configure-org)
+    (dimmer-configure-which-key)
+    (dimmer-configure-posframe))
+
+  (use-package solaire-mode
+    ;; IDEA: This is not very consistent.
+    ;; It is better if I change the function that determines what is a real buffer.
+    ;; Buffers *dashboard*, " *ivy-posframe-buffer*"
+    ;; I can set band-aid-solaire-mode-excluded-buffers and a function band-aid-solaire-mode-real-buffer-p that excludes the excluded buffers from solaire mode.
+    :hook
+    (dashboard-after-initialize . turn-off-solaire-mode)
+    :config (solaire-global-mode 1))
+
+#+end_src
+
+** version-control.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_version-control.el
+
+  ;; IDEA: I should set up pretty-magit. This integrates well with conventional commits.
+  (use-package magit
+    :custom
+    (magit-display-buffer-function
+     #'magit-display-buffer-same-window-except-diff-v1)
+    (vc-follow-symlinks t)
+    :general
+    ;; BUG: These keybindings do not work in dired. Why not? Wrong keymap?
+    (:states 'normal
+     :prefix core-keybindings-leader-key
+     "g"  '(:ignore t :which-key "git")
+     "gs" 'magit-status))
+
+  (use-package hl-todo
+    :custom
+    (hl-todo-keyword-faces
+     '(("TODO" . "#cc9393")
+       ("TODOC" . "#afd8af")
+       ("BUG" . "#d0bf8f")
+       ("IDEA" . "#7cb8bb")))
+    :config (global-hl-todo-mode 1))
+
+  ;; BUG: My magit-todos disappears in the nix-shell. Why does this happen?
+  ;; Am I missing a required package?
+  ;; IDEA: Unfortunately, magit-todos calls the sections "TODOs" and this
+  ;; value is hard coded throughout the code. It is possible to fix this
+  ;; using el-patch but it is too much effort for now.
+  ;; BUG: Even if I remove ".git/" from the magit-todos-exclude-glob
+  ;; it seems not to find the TODOs anyway. Can I figure out why?
+  (use-package magit-todos
+    :after hl-todo
+    ;; BUG: It does not seem like magit-todos-branch-list works flawlessly. For example,
+    ;; it does not seem to take into account the `magit-todos-keyword' suffix variable
+    ;; and greps for all TODOs instead.
+    :custom (magit-todos-branch-list nil)
+    ;; `magit-todos-max-items' determines when a section should automatically collapse.
+    ;; The default setting of 10 is a reasonable number.
+    ;; (magit-todos-max-items 10)
+    ;; TODOC: I do not know what this variable actually does.
+    ;; I leave it set to the default of 20.
+    ;; (magit-todos-auto-group-items 20)
+    :config
+    ;; I do not need to see the TODOs in the README,
+    ;; because they already show up in my config directory.
+    ;; Having them show up in my config directory gives a clearer
+    ;; semantic separation as well.
+    ;; This is why I have added the README file to .dir-locals.el.
+    ;; It also means I need to add the README file to my safe-local-variable-values.
+    (add-to-list 'safe-local-variable-values `(magit-todos-exclude-globs . (,core-literate-config-file)))
+    (magit-todos-mode 1))
+
+  ;; IDEA: What is diff-hl-magit? Should I add a hook for that?
+  (use-package diff-hl
+    :hook (dired-mode . diff-hl-dired-mode)
+    :custom
+    (diff-hl-margin-symbols-alist
+     ;; I prefer to use background colours instead.
+     '((insert . " ")
+       (delete . " ")
+       (change . " ")
+       (unknown . "?")
+       (ignored . "i")))
+    ;; This mode will instantly show changes instead of only after saving the file.
+    ;; I like the immediate feedback better. Especially because if I am using super
+    ;; save mode, I should not have to think about saving at all.
+    (diff-hl-flydiff-mode 1)
+    ;; TODOC: What difference does this mode actually make? The help was not that clear.
+    (diff-hl-margin-mode 1)
+    (global-diff-hl-mode 1)
+    :custom-face
+    ;; IDEA: I am setting both the foreground and background colour now.
+    ;; What is the difference and do we need to set both?
+    (diff-hl-insert ((t (:foreground "#7bc275" :background "#7bc275"))))
+    (diff-hl-delete ((t (:foreground "#ff665c" :background "#ff665c"))))
+    (diff-hl-change ((t (:foreground "#fcce7b" :background "#fcce7b")))))
+
+  ;; BUG: Both of these packages have some problems upon loading.
+  ;;(use-package git-timemachine)
+  ;;(use-package git-undo)
+
+  (use-package forge
+    :custom
+    ;; Set maximum open issues shown in forge to 200.
+    ;; Function forge-toggle-closed-visibility changes the sign of -200.
+    (forge-topic-list-limit '(200 . -200))
+    (forge-alist
+     '(("gitlab.justdice-ops.io"
+	"gitlab.justdice-ops.io/api/v4"
+	"gitlab.justdice-ops.io"
+	forge-gitlab-repository)
+       ("github.com"
+	"api.github.com"
+	"github.com"
+	forge-github-repository)
+       ("gitlab.com"
+	"gitlab.com/api/v4"
+	"gitlab.com"
+	forge-gitlab-repository)))
+    :config
+    ;; This will need to be set before magit! Does not work otherwise.
+    (setq forge-add-default-bindings nil))
+
+  (use-package git-modes
+    :mode ("\\.dockerignore\\'" . 'gitignore-mode))
+
+    #+end_src
+
+** whitespace.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_whitespace.el
+
+  (use-package whitespace-cleanup-mode
+    :hook (prog-mode text-mode))
+
+  ;; BUG: The dim grey background does show up in commit messages. I need to exclude these.
+  ;; BUG: The same is true for ein.
+  (use-feature band-aid
+    :custom-face
+    ;; IDEA: Not the nicest, but better than red. Can I make it a bullet instead?
+    (trailing-whitespace ((t :background "dim grey")))
+    :hook
+    ((prog-mode text-mode) . band-aid-show-trailing-whitespace))
+
+#+end_src
+
+** window.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_window.el
+
+  (use-package winner
+    :straight (:type built-in)
+    :custom
+    (winner-mode 1))
+
+#+end_src
+
+** workspaces.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/01_workspaces.el
+
+  (use-package burly)
+
+#+end_src
+
+** keybindings.el
+#+begin_src elisp :mkdirp yes :tangle tangled/config/02_keybindings.el
+
+  (general-define-key
+   "s-b" 'consult-buffer)
+
+  (general-define-key
+   "s-q" 'delete-window
+   "s-u" 'winner-undo
+   "s-f" 'find-file)
+
+  (general-define-key
+   "s-1" 'delete-other-windows
+   "s-2" 'split-window-below
+   "s-3" 'split-window-right)
+
+  (general-create-definer tf/extra-keys
+    :prefix tf-keybindings/extra-prefix)
+
+  (tf/extra-keys
+    tf-keybindings/extra-prefix 'tf-core/redefine-shortcut)
+
+  (tf/extra-keys
+    "t"  '(:ignore t :which-key "toggle")
+    "td" 'toggle-debug-on-error
+    "tw" 'whitespace-mode
+    "tl" 'display-line-numbers-mode
+    "tt" 'consult-theme)
+  ;; Does not work yet because I removed hydras
+  ;;"ts" '(tf/hydra-text-scale/body :which-key "tf/hydra-text-scale"))
+
+  (tf/extra-keys
+    "o"   '(:ignore t :which-key "org")
+    "oo"  'org-open-at-point
+    "ob"  '(tf/hydra-org-babel/body :which-key "tf/hydra-org-babel"))
+
+  (tf/extra-keys
+    "e"  '(:ignore t :which-key "eval")
+    "eb" 'eval-buffer)
+
+  (tf/extra-keys
+    :keymaps '(visual)
+    "er" 'eval-region)
+
+  (tf/extra-keys
+    "g"  '(:ignore t :which-key "git")
+    "gt" 'git-timemachine
+    "gl" 'git-link
+    "gi" 'magit-init)
+
+  (general-create-definer tf/fast-keys
+    :prefix tf-keybindings/fast-prefix)
+
+  (tf/fast-keys
+    "c"   'evil-avy-goto-char-2
+    "g"   'magit-status
+    "i"   'crux-find-user-init-file
+    "l"   'evil-avy-goto-line
+    ;;"m" 'evil-avy-pop-mark
+    ;; "s" something with scratch buffer
+    "k" '(lambda () (interactive) (kill-buffer (current-buffer))))
+
+  ;; (use-package helpful
+  ;;   :bind
+  ;;   ([remap describe-function] . counsel-describe-function)
+  ;;   ([remap describe-command] . helpful-command)
+  ;;   ([remap describe-variable] . counsel-describe-variable)
+  ;;   ([remap describe-key] . helpful-key))
+
+  (define-key global-map (kbd "C-c j")
+    (lambda () (interactive) (org-capture nil "jj")))
+
+#+end_src
+
+* Patches
+** asdf-reshim
+#+begin_src elisp :mkdirp yes :tangle tangled/patches/01_asdf-reshim.el
+
+  (defun asdf-reshim ()
+    (interactive)
+    (shell-command (asdf--command "reshim")))
+
+#+end_src
+
+** asdf-transient
+#+begin_src elisp :mkdirp yes :tangle tangled/patches/01_asdf-transient.el
+
+  (use-package transient)
+
+  (transient-define-prefix asdf ()
+    "asdf menu."
+    [["Packages"
+      ("c" "current" asdf-current)
+      ("i" "install" asdf-install)
+      ("r" "reshim" asdf-reshim)]
+     ["Plugins"
+      ("a" "add" asdf-plugin-add)
+      ("l" "list" asdf-plugin-list)]])
+
+#+end_src
+
+** org-sticky-header
+#+begin_src elisp :mkdirp yes :tangle tangled/patches/01_org-sticky-header.el
+
+  ;; Make sure we do not get an additional asterisk if we are not using indent mode.
+  (el-patch-feature org-sticky-header)
+  (with-eval-after-load 'org-sticky-header
+    (el-patch-defun org-sticky-header--indent-prefix ()
+      "Return indentation prefix for heading at point.
+  This will do the right thing both with and without `org-indent-mode'."
+      ;; Modelled after `org-indent-set-line-properties'
+      (let* ((level (org-current-level))
+	     (indent-mode (bound-and-true-p org-indent-mode))
+	     (npre (if (<= level 1) 0
+		     (+ (if indent-mode
+			    (* (1- org-indent-indentation-per-level)
+			       (1- level))
+			  0)
+			level -1)))
+	     (prefix (concat (make-string npre (el-patch-splice 2 1 (if indent-mode ?\ ?*))) org-sticky-header-heading-star " ")))
+	(org-add-props prefix nil 'face
+		       (if org-cycle-level-faces
+			   (setq org-f (nth (% (1- level) org-n-level-faces) org-level-faces))
+			 (setq org-f (nth (1- (min level org-n-level-faces)) org-level-faces)))))))
+
+#+end_src
+
+** lisp
+#+begin_src elisp :mkdirp yes :tangle tangled/patches/01_lisp.el
+
+  ;; Fix the indentation of keyword lists in Emacs Lisp. See [1] and [2].
+
+  ;; Before:
+  ;;  (:foo bar
+  ;;        :baz quux)
+
+  ;; After:
+  ;;  (:foo bar
+  ;;   :bar quux)
+
+  ;; [1]: https://github.com/Fuco1/.emacs.d/blob/af82072196564fa57726bdbabf97f1d35c43b7f7/site-lisp/redef.el#L12-L94
+  ;; [2]: http://emacs.stackexchange.com/q/10230/12534
+  (el-patch-defun lisp-indent-function (indent-point state)
+    "This function is the normal value of the variable `lisp-indent-function'.
+  The function `calculate-lisp-indent' calls this to determine
+  if the arguments of a Lisp function call should be indented specially.
+  INDENT-POINT is the position at which the line being indented begins.
+  Point is located at the point to indent under (for default indentation);
+  STATE is the `parse-partial-sexp' state for that position.
+  If the current line is in a call to a Lisp function that has a non-nil
+  property `lisp-indent-function' (or the deprecated `lisp-indent-hook'),
+  it specifies how to indent.  The property value can be:
+   ,* `defun', meaning indent `defun'-style
+   (this is also the case if there is no property and the function
+   has a name that begins with \"def\", and three or more arguments);
+   ,* an integer N, meaning indent the first N arguments specially
+   (like ordinary function arguments), and then indent any further
+   arguments like a body;
+   ,* a function to call that returns the indentation (or nil).
+   `lisp-indent-function' calls this function with the same two arguments
+   that it itself received.
+  This function returns either the indentation to use, or nil if the
+  Lisp function does not specify a special indentation."
+    (el-patch-let (($cond (and (elt state 2)
+			       (el-patch-wrap 1 1
+				 (or (not (looking-at "\\sw\\|\\s_"))
+				     (looking-at ":")))))
+		   ($then (progn
+			    (if (not (> (save-excursion (forward-line 1) (point))
+					calculate-lisp-indent-last-sexp))
+				(progn (goto-char calculate-lisp-indent-last-sexp)
+				       (beginning-of-line)
+				       (parse-partial-sexp (point)
+							   calculate-lisp-indent-last-sexp 0 t)))
+			    ;; Indent under the list or under the first sexp on the same
+			    ;; line as calculate-lisp-indent-last-sexp.  Note that first
+			    ;; thing on that line has to be complete sexp since we are
+			    ;; inside the innermost containing sexp.
+			    (backward-prefix-chars)
+			    (current-column)))
+		   ($else (let ((function (buffer-substring (point)
+							    (progn (forward-sexp 1) (point))))
+				method)
+			    (setq method (or (function-get (intern-soft function)
+							   'lisp-indent-function)
+					     (get (intern-soft function) 'lisp-indent-hook)))
+			    (cond ((or (eq method 'defun)
+				       (and (null method)
+					    (> (length function) 3)
+					    (string-match "\\`def" function)))
+				   (lisp-indent-defform state indent-point))
+				  ((integerp method)
+				   (lisp-indent-specform method state
+							 indent-point normal-indent))
+				  (method
+				   (funcall method indent-point state))))))
+      (let ((normal-indent (current-column))
+	    (el-patch-add
+	      (orig-point (point))))
+	(goto-char (1+ (elt state 1)))
+	(parse-partial-sexp (point) calculate-lisp-indent-last-sexp 0 t)
+	(el-patch-swap
+	  (if $cond
+	      ;; car of form doesn't seem to be a symbol
+	      $then
+	    $else)
+	  (cond
+	   ;; car of form doesn't seem to be a symbol, or is a keyword
+	   ($cond $then)
+	   ((and (save-excursion
+		   (goto-char indent-point)
+		   (skip-syntax-forward " ")
+		   (not (looking-at ":")))
+		 (save-excursion
+		   (goto-char orig-point)
+		   (looking-at ":")))
+	    (save-excursion
+	      (goto-char (+ 2 (elt state 1)))
+	      (current-column)))
+	   (t $else))))))
+
+#+end_src
+
+* Experimentation
+** [[https://github.com/rejeep/drag-stuff.el][Drag-stuff]]
+#+begin_src elisp
+
+  (use-package drag-stuff)
+
+#+end_src
+
+** [[https://github.com/emacsfodder/move-text][Move-text]]
+Why would I prefer drag-stuff over move-text or vice versa? Move-text
+has some issues with dragging regions.
+#+begin_src elisp
+
+  (use-package move-text)
+
+#+end_src
+
+** Buffer removal
+- Kill a buffer directly from buffer search
+- Be able to delete the current buffer as file
+
+** LaTeX command shortcuts
+- LaTeX- Quick command for \intercal = transpose symbol
+- Quick command for \cap = intersection symbol
+- Quick command for \leq and \geq as well as \ll and \gg
+- Have some macros for common expressions like \mathbb{E}[...] and \mathbb{P}[...]
+- Quick command for \sim
+- Quick command for \sqrt
+- I need a way to easily set up a matrix environment, align, equations, etc. Whether with begin and
+  end or brackets.
+- Have macros for \( and \[ environments
+
+** [[https://github.com/joaotavora/yasnippet][Yasnippet]]
+#+begin_src elisp
+
+  (use-package yasnippet)
+
+#+end_src
+
+** [[https://github.com/karthink/popper][Popper]]
+#+begin_src elisp
+
+  (use-package popper)
+
+#+end_src
+
+** [[https://depp.brause.cc/shackle/][Shackle]]
+#+begin_src elisp
+
+  (use-package shackle)
+
+#+end_src
+
+** [[https://github.com/kostafey/ejc-sql][Ejc-sql]]
+I have not tried this out with a database yet. I can give it a try
+with a local SQLite database and later with Athena or Redshift.
+
+#+begin_src elisp
+
+  (use-package ejc-sql
+    :hook (ejc-sql-minor-mode . company-mode))
+
+  (use-package ejc-company
+    :straight ejc-sql
+    :config (add-to-list 'company-backends 'ejc-company-backend)
+    ;; Not necessary if company-minimum-prefix-length = 0
+    :custom (ejc-complete-on-dot t))
+
+#+end_src
+
+I will need to create connections in the following way:
+
+#+begin_src elisp
+
+  (ejc-create-connection
+   "MariaDB-db-connection"
+   :dependencies [[org.mariadb.jdbc/mariadb-java-client "2.6.0"]]
+   :classname "org.mariadb.jdbc.Driver"
+   :connection-uri "jdbc:mariadb://localhost:3306/db_name"
+   :user "a_user"
+   :password "secret")
+
+#+end_src
+
+** ElDoc
+This is a built-in package that can integrate with ejc-sql. How
+exactly and why?
+
+** [[https://github.com/Malabarba/aggressive-indent-mode][Aggressive-indent-mode]]
+A replacement of electric-indent-mode?
+
+#+begin_src elisp
+
+  (use-package aggressive-indent)
+
+#+end_src
+
+** [[https://github.com/hlissner/evil-snipe][Evil-snipe]]
+#+begin_src elisp
+
+  (use-package evil-snipe)
+
+#+end_src
+
+** Desktop
+Desktop-save-mode did not work immediately as expected. It will ask me
+if I want to save my desktop and if I say yes, I ended up conflicting
+with straight telling me my sources are out of date.
+
+Can I reproduce this? Was it a one-off error?
+
+#+begin_src elisp
+
+  (use-package desktop
+    :straight (:type built-in))
+    ;; :config
+    ;; (desktop-save-mode 1))
+
+#+end_src
+
+** [[https://github.com/anticomputer/ovpn-mode][ovpn-mode]]
+I need to first set the directories in which my ovpn configurations are stored.
+
+#+begin_src elisp
+
+ (use-package ovpn-mode)
+
+#+end_src
+
+** [[https://github.com/protesilaos/fontaine][fontaine]]
+#+begin_src elisp
+
+  (use-package fontaine)
+
+#+end_src
+
+** [[https://github.com/iqbalansari/emacs-emojify][emojify]]
+#+begin_src elisp
+
+  (use-package emojify
+    :hook (after-init . global-emojify-mode))
+
+#+end_src
+
+** flycheck-inline
+#+begin_src elisp
+
+  (use-package flycheck)
+  (use-package flycheck-inline)
+
+#+end_src
+
+** [[https://github.com/narendraj9/hledger-mode][hledger-mode]] / [[https://github.com/DamienCassou/flycheck-hledger][flycheck-hledger]]
+#+begin_src elisp
+
+  (use-package hledger-mode
+    :mode "\\.journal\\'"
+    :custom
+    (hledger-jfile "~/journal-file.journal")
+    (add-to-list 'company-backends #'hledger-company))
+
+  (use-package flycheck-hledger
+    :after (flycheck hledger-mode))
+
+#+end_src
+
+** [[https://github.com/magnars/multiple-cursors.el][multiple-cursors]]
+This kind of functionality is standard in other IDEs. I am not
+convinced it is very useful in Emacs though. When would I really use
+it?
+
+#+begin_src elisp
+
+  (use-package multiple-cursors)
+
+#+end_src
+
+** [[https://github.com/jwiegley/git-undo-el][git-undo]]
+I get a warning about cl being deprecated. Does this package still
+work?
+
+#+begin_src elisp
+
+  (use-package git-undo)
+
+#+end_src
+
+** [[https://github.com/magnars/expand-region.el][expand-region]]
+There seems to be a lot of functionality that I have never even seen
+or tried out. What are all the things I can do with this package?
+
+#+begin_src elisp
+
+  (use-package expand-region)
+  (global-set-key (kbd "C-<right>") 'er/expand-region)
+  (global-set-key (kbd "C-<left>") 'er/contract-region)
+
+#+end_src
+
+** [[https://github.com/mrkkrp/fix-word][fix-word]]
+Uppercase, lowercase or capitalize words.
+
+#+begin_src elisp
+
+  (use-package fix-word)
+
+#+end_src
+
+** [[https://gitlab.com/Vonfry/zoxide.el][zoxide]]
+It is not completely clear to me what this package can do.
+
+#+begin_src elisp
+
+  (use-package zoxide)
+
+#+end_src
+
+** [[https://github.com/benma/visual-regexp-steroids.el][visual-regexp-steroids]]
+I also do not know exactly what this package does.
+
+#+begin_src elisp
+
+  (use-package visual-regexp-steroids)
+
+#+end_src
+
+** [[https://github.com/dengste/minimap][minimap]]
+I am wondering how useful this will be for my developer experience. I
+have never felt like I was missing a minimap when developing in
+PyCharm for example.
+
+It seems I have some trouble disabling the minimap. If I disable
+minimap-mode, the minimap still shows. It also seems minimap-kill does
+not stop the minimap from showing.
+#+begin_src elisp
+
+  (use-package minimap
+    :custom (minimap-major-modes '(prog-mode org-mode)))
+
+#+end_src
+
+** firestarter
+This is a package that automatically runs code (shell scripts, elisp
+code, etc.) upon saving. This could be very helpful when I need to
+compile a text file to a pdf for example.
+
+There are definitely a lot of uses, but I am wondering whether running
+commands every save is not too slow. For example, running tests each
+save might be too much?
+
+#+begin_src elisp
+
+  (use-package firestarter)
+
+#+end_src
+
+** [[https://github.com/nobiot/org-transclusion][org-transclusion]]
+
+#+begin_src elisp
+
+  (use-package org-transclusion
+    :config
+    ;; IDEA: How could I make org-transclusion work best? With indices and fact sheets?
+    ;; TODO: Figure out how to get a properly indented fringe. Now it looks like the transcluded block is part of the original file. Maybe some sidebar to indicate it is "collapsible"?
+    (add-to-list 'org-transclusion-exclude-elements 'keyword)
+    ;; TODO: I can get it to work like this, but not in the hook of use-package. Fix this.
+    :hook (org-transclusion-after-add-functions . #'(lambda (_beg _end) (org-latex-preview '(16)))))
+
+  (set-face-attribute
+   'org-transclusion-source-fringe nil
+   :foreground "green"
+   :background "green")
+
+  (set-face-attribute
+   'org-transclusion-fringe nil
+   :foreground "green"
+   :background "green")
+
+#+end_src
+
+** [[https://github.com/emacs-lsp/dap-mode][dap-mode]]
+#+begin_src elisp
+
+  (use-package dap-mode)
+
+#+end_src
+
+** [[https://github.com/jkitchin/org-ref][org-ref]]
+#+begin_src elisp
+
+  ;; (use-package org-ref)
+
+#+end_src
+
+** [[https://github.com/DamienCassou/notmuch][notmuch]]
+#+begin_src elisp
+
+  (use-package notmuch)
+
+#+end_src
+
+** password-store
+#+begin_src elisp
+
+  (use-package password-store)
+
+#+end_src
+
+** 0x0
+#+begin_src elisp
+
+  (use-package 0x0)
+
+#+end_src
+
+** goto-last-change
+#+begin_src elisp
+
+  (use-package goto-last-change)
+
+#+end_src
+
+** lispy / lispyville
+#+begin_src elisp
+
+  (use-package lispy)
+  (use-package lispyville)
+
+#+end_src
+
+** Interesting org mode options
+#+begin_src elisp
+
+  ;; For searching through org files.
+  (use-package org-ql)
+
+  ;; I am not yet sure about how I could use org-sidebar best.
+  ;; org already lets me tab close all my headings.
+  (use-package org-sidebar)
+
+  (use-package ox-report)
+
+  ;; Used to export org files to a blog.
+  (use-package ox-hugo)
+
+  ;; `For if I start using org-agenda.
+  (use-package org-notifications)
+  (use-package org-gcal)
+  (use-package org-hyperscheduler)
+
+  (use-package org-super-links)
+
+  ;; I can pick one of either to set up dependencies between tasks.
+  (use-package org-edna)
+  (use-package org-depend)
+
+  ;; Do I already use this with evil-collection?
+  (use-package evil-org-mode)
+
+#+end_src
+
+Besides some packages, here are a couple of interesting ideas:
+- create my resume in org-mode using a LaTeX template
+
+** mode-line-idle
+#+begin_src elisp
+
+  (use-package mode-line-idle)
+
+#+end_src
+
+** tree-sitter
+#+begin_src elisp
+
+  (use-package evil-tree-edit)
+  (use-package tree-edit)
+
+  (use-package tree-sitter-langs
+    :after tree-sitter)
+
+  (use-package tree-sitter
+    :hook (tree-sitter-after-on . tree-sitter-hl-mode)
+    :config (global-tree-sitter-mode 1))
+
+#+end_src
+
+[[https://blog.meain.io/2022/navigating-config-files-using-tree-sitter/][Tree-sitter for config files]].
+#+begin_src elisp
+
+  (defun meain/tree-sitter-config-nesting ()
+    (if (or (eq major-mode 'json-mode) (eq major-mode 'yaml-mode) (eq major-mode 'nix-mode))
+	(let* ((cur-point (point))
+	       (query (pcase major-mode
+			('json-mode "(object (pair (string (string_content) @key) (_)) @item)")
+			('yaml-mode "(block_mapping_pair (flow_node) @key (_)) @item")
+			('nix-mode "(bind (attrpath (attr_identifier) @key)) @item")))
+	       (root-node (tsc-root-node tree-sitter-tree))
+	       (query (tsc-make-query tree-sitter-language query))
+	       (matches (tsc-query-matches query root-node #'tsc--buffer-substring-no-properties)))
+	  (string-join (remove-if (lambda (x) (eq x nil))
+				  (seq-map (lambda (x)
+					     (let (
+						   (item (seq-elt (cdr x) 0))
+						   (key (seq-elt (cdr x) 1)))
+					       (if (and
+						    (> cur-point (byte-to-position (car (tsc-node-byte-range (cdr item)))))
+						    (< cur-point (byte-to-position (cdr (tsc-node-byte-range (cdr item))))))
+						   (format "%s" (tsc-node-text (cdr key)))
+						 nil)))
+					   matches))
+		       "."))))
+
+  (defun meain/get-config-nesting-paths ()
+    "Get out all the nested paths in a config file."
+    (let* ((query (pcase major-mode
+		    ('json-mode "(object (pair (string (string_content) @key) (_)) @item)")
+		    ('yaml-mode "(block_mapping_pair (flow_node) @key (_)) @item")
+		    ('nix-mode "(bind (attrpath (attr_identifier) @key)) @item")))
+	   (root-node (tsc-root-node tree-sitter-tree))
+	   (query (tsc-make-query tree-sitter-language query))
+	   (matches (tsc-query-matches query root-node #'tsc--buffer-substring-no-properties))
+	   (prev-node-ends '(0)) ;; we can get away with just end as the list is sorted
+	   (current-key-depth '())
+	   (item-ranges (seq-map (lambda (x)
+				   (let ((item (seq-elt (cdr x) 0))
+					 (key (seq-elt (cdr x) 1)))
+				     (list (tsc-node-text (cdr key))
+					   (tsc-node-range (cdr key))
+					   (tsc-node-range (cdr item)))))
+				 matches)))
+      (mapcar (lambda (x)
+		(let* ((current-end (seq-elt (cadr (cdr x)) 1))
+		       (parent-end (car prev-node-ends))
+		       (current-key (car x)))
+		  (progn
+		    (if (> current-end parent-end)
+			(mapcar (lambda (x)
+				  (if (> current-end x)
+				      (progn
+					(setq prev-node-ends (cdr prev-node-ends))
+					(setq current-key-depth (cdr current-key-depth)))))
+				prev-node-ends))
+		    (setq current-key-depth (cons current-key current-key-depth))
+		    (setq prev-node-ends (cons current-end prev-node-ends))
+		    (list (reverse current-key-depth) (seq-elt (cadr x) 0)))))
+	      item-ranges)))
+
+  (defun meain/goto-config-nesting-path ()
+    "Interactively go to a nested path in a config file."
+    (interactive)
+    (let* ((paths (mapcar (lambda (x)
+			    (cons (string-join (car x) ".") (cadr x)))
+			  (meain/get-config-nesting-paths))))
+      (goto-char (cdr (assoc
+		       (completing-read "Choose path: " paths)
+		       paths)))))
+
+  (defun meain/imenu-config-nesting-path ()
+    "Return config-nesting paths for use in imenu"
+    (mapcar (lambda (x)
+	      (cons (string-join (car x) ".") (cadr x)))
+	    (meain/get-config-nesting-paths)))
+
+  (add-hook 'nix-mode-hook (lambda ()
+			     (setq imenu-create-index-function #'meain/imenu-config-nesting-path)))
+
+#+end_src
+
+** screenshot
+#+begin_src elisp
+
+  (use-package screenshot)
+
+#+end_src
+
+** relative-date
+#+begin_src elisp
+
+  (use-package relative-date
+    :straight (:type git :host github :repo "rougier/relative-date"))
+
+#+end_src
+
+** taxy
+I can see this package could potentially be very useful, but I am not
+sure how I would implement it in my current workflow.
+
+It is also used in org-ql?
+
+#+begin_src elisp
+
+  (use-package taxy)
+
+#+end_src
+
+** modus-theme
+#+begin_src elisp
+
+  (use-package modus-themes
+    ;; I can make this theme work together well with Moody. How exactly?
+    :custom
+    (modus-themes-mode-line '(moody))
+    (modus-themes-region '(bg-only))
+    ;; I could have different colours for different programming languages.
+    ;; This requires 'tinted-background and setting org-src-block-faces.
+    (modus-themes-org-blocks 'gray-background)
+    ;;modus-themes-completions 'minimal A lot of options possible here
+    (modus-themes-italic-constructs t)
+    (modus-themes-bold-constructs t)
+    (modus-themes-links '(faint))
+    (modus-themes-markup '(bold italic intense background))
+    (modus-themes-syntax '(alt-syntax yellow-comments green-strings))
+    :config (load-theme 'modus-vivendi t))
+
+#+end_src
+
+** Asynchronous fuzzy-file finding for Emacs
+#+begin_src elisp
+
+  (use-package affe)
+
+#+end_src
+
+** OpenStreetMap viewer for Emacs
+#+begin_src elisp
+
+  (use-package osm)
+
+#+end_src
+
+** Miscellaneous ideas
+- Focus? On the one hand seems nice, but I don't really see myself
+  using it too much either.
+- Emacs has a built-in savehist-mode. How does prescient improve on
+  that?
+- I would need to make my config modular by breaking it into parts
+  that I might want to turn off or on depending on the machine. How
+  would that work? I could use init-loader, but only load a select
+  subset or just replace init-loader by a set of requires? On NixOS or
+  when I am using the Nix home-manager, I should just be able to set
+  some environment variables that are read and automatically set up
+  the right Emacs config. On other OSes (for example if I need to work
+  on a different Linux distro for work) I would do this manually.
+  https://www.youtube.com/watch?v=y7E18HpG1wU
+- Regarding security, I should think about how I could use subuser to
+  run Emacs. In principle, I could be downloading and running
+  arbitrary code on my machine when looking for 3rd party packages.
+  How to mitigate this?
+  https://subuser.org/
+- Add a more personal picture and some phrases to my Emacs dashboard.
+- How can I make toc-org work on GitLab? Locally it is just C-c C-o to
+  get to the thing at point.
+- It seems that toc-org does not work if the section is a link?
+- I should be able to view running processes from Emacs. I recall that
+  such a package existed, but do not remember its name
+- I should be able to tangle with a given output directory instead of
+  always specifying the config directory in each tangled block. I can
+  check out dotcrafter.el for that. That package solves a similar
+  issue.
+- I should create a band-aid function to automatically open this README.
+  Similar to the crux function for the init-file.
+- I keep getting messages that the org cache is outdated. What is
+  causing these issues?
+- Running org-fill-paragraph with source blocks crashes Emacs. Why?
+- How could I use occur in my workflow?
+- Rigpa seems like an interesting framework, but I am wondering whether
+  it will not overburden me when I am typing and moving around text.
