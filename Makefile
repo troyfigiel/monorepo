@@ -22,7 +22,11 @@ terranix:
 	rm -f $(ROOT_DIR)/infrastructure/config.tf.json
 
 update:
-	nix flake update $(ROOT_DIR)
+	if [ -z $(INPUT) ]; then \
+		nix flake update $(ROOT_DIR); \
+	else \
+		nix flake lock --update-input $(INPUT) $(ROOT_DIR); \
+	fi
 
 upgrade:
 	$(MAKE) update
