@@ -43,7 +43,7 @@ More notes:
 5. If I have so many flakes, I will need to simplify the update process. The best would be to create a simple deploy script that helps me out. The Makefile calls the deploy script, but can also be used for building iso files for example. Maybe Make is still nice? It can easily parallellize the deploy steps, is kind of declarative and well-known.
 6. For the website, I should probably end up with a blog of more introductory articles and then have a separate series that goes into more detail.
 7. I should keep the host names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
-8. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. Maybe have a look at the disko module?
+8. Create automatic partitioning in a Makefile for both a tmpfs as root and a normal setup. I keep forgetting the exact commands when using parted. There is an interesting module called disko, which can do the configuration declaratively. That looks quite nice, but a simple bash script using parted suffices for now.
 9. Ultimately I should make everything impermanent. There is no reason not to use impermanence. This will require some repartioning of my hosts though.
 10. Because the flake will be so small for my machines, it might be possible to just define the features a system has inside the flake itself.
 11. It would be interesting to start using Terranix. This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
@@ -106,9 +106,6 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - Because these modules are "meta-modules", I might want to rename them to distinguish them from the modules that I might need to create myself
   - Profiles might be a good naming?
 
-## lib
-- To extend the default lib from nixpkgs, I can use lib.extend and supply an overlay
-
 ## website
 - Blogs and articles should be different
   - Blogs are more opinion-based and "life lessons"
@@ -134,11 +131,6 @@ B00merang-Project's Windows themes to make it easier for any guests?
 ## README
 - Turn this README into an org file
 - Clean up this README
-- Clarify that this repo is a work in progress and only intended for me
-
-## deploy
-- Create my own basic command line tool to handle multiple flakes in this monorepo?
-- deploy should have update and upgrade options
 
 ## License
 - Add license if I continue developing, but I am not sure which one is legally allowed... If there is any Emacs code in there, it should be GPL?
