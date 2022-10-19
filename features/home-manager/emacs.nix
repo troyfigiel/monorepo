@@ -10,6 +10,9 @@ in {
       # TODO: Do I really need this? This is slowing down my startup times?
       # services.emacs.enable = true;
 
+      home.file."emacs.d".source = config.lib.file.mkOutOfStoreSymlink
+        "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/reproducible-builds/tfmacs";
+
       programs.emacs = {
         enable = true;
         init = {

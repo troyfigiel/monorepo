@@ -119,7 +119,8 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - tfmacs should be a separate directory with all of my Emacs config
 - README.org at the base of tfmacs explaining how I am using my Emacs config together with Nix
 - settings.el at the base of tfmacs which reads environment variables and turns this into a modular Emacs config (e.g. if ORG_ROAM_DIRECTORY is not set, do not load org-roam)
-- Packages required by Nix should be read from a simple epkgs.txt file
+- Packages required by Nix should be read from a simple nix file containing the required systemPackages
+- I need a better way to get the reproducible-builds location on my host and minimize dependencies on it (tfmacs must have this dependency if I want to be able to update in place).
 
 ## packages
 - Rename pkgs to packages
