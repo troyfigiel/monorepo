@@ -114,8 +114,8 @@ let
 
       # TODO: It should be relatively easy to turn the 'custom' code into an attribute set.
       custom = mkOption {
-        type = types.lines;
-        default = "";
+        type = types.attrs;
+        default = { };
         description = ''
           Code to place in the <option>:custom</option> section.
         '';
@@ -211,9 +211,10 @@ let
         ++ mkDefines config.defines ++ mkFunctions config.functions
         ++ mkDemand config.demand ++ mkDiminish config.diminish
         ++ mkHook config.hook ++ mkMode config.mode
+        ++ optionals (config.custom != { }) ([ ":custom" ]
+          ++ (mapAttrsToList (name: value: "(${name} ${value})") config.custom))
         ++ optionals (config.init != "") [ ":init" config.init ]
         ++ optionals (config.config != "") [ ":config" config.config ]
-        ++ optionals (config.custom != "") [ ":custom" config.custom ]
         ++ optionals (config.general != "") [ ":general" config.general ]
         ++ optional (config.extraConfig != "") config.extraConfig) + ")";
     };

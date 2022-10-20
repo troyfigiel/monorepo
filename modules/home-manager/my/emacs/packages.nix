@@ -20,7 +20,7 @@ in {
 
     pinentry = {
       enable = true;
-      custom = "(epg-pinentry-mode 'loopback)";
+      custom = { epg-pinentry-mode = "'loopback"; };
       config = "(pinentry-start)";
     };
 
@@ -32,13 +32,14 @@ in {
     vertico-buffer = {
       enable = true;
       after = [ "vertico" ];
-      custom = ''
-        (vertico-buffer-display-action
-         `(display-buffer-in-side-window
-           (window-height . ,(+ 3 vertico-count))
-           (side . top)))
-        (vertico-buffer-mode 1)
-      '';
+      custom = {
+        vertico-buffer-display-action = ''
+          `(display-buffer-in-side-window
+            (window-height . ,(+ 3 vertico-count))
+            (side . top))
+        '';
+        vertico-buffer-mode = "t";
+      };
     };
 
     vertico-directory = {
@@ -55,19 +56,20 @@ in {
 
     orderless = {
       enable = true;
-      custom = ''
-        (completion-styles '(orderless))
-        (completion-category-defaults nil)
-        (completion-category-overrides '((file (styles . (partial-completion)))))
-        (orderless-matching-styles '(orderless-prefixes))
-      '';
+      custom = {
+        completion-styles = "'(orderless)";
+        completion-category-defaults = "nil";
+        completion-category-overrides =
+          "'((file (styles . (partial-completion))))";
+        orderless-matching-styles = "'(orderless-prefixes)";
+      };
     };
 
     consult = { enable = true; };
 
     marginalia = {
       enable = true;
-      custom = "(marginalia-mode 1)";
+      custom = { marginalia-mode = "t"; };
     };
 
     embark = {
@@ -83,37 +85,19 @@ in {
 
     ace-window = {
       enable = true;
-      custom = "(aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))";
+      custom = { aw-keys = "'(?a ?s ?d ?f ?g ?h ?j ?k ?l)"; };
       general = ''("C-M-w" 'ace-window)'';
     };
 
     corfu = {
       enable = true;
-      custom = ''
-        (corfu-auto t)
-        (corfu-auto-prefix 2)
-        (corfu-cycle t)
-        (corfu-auto-delay 0.1)
-        (global-corfu-mode 1)
-      '';
-    };
-
-    ctrlf = {
-      enable = true;
-      custom = ''
-        ;; So I can search multiple words separated by spaces.
-        ;; If I ever need to search for a space, double space works.
-        (ctrlf-default-search-style 'fuzzy)
-        ;; So I can search and immediately change a word by going to the beginning.
-        (ctrlf-go-to-end-of-match nil)
-        (ctrlf-mode 1) 
-      '';
-      general = ''
-        ("C-M-g" 'ctrlf-forward-default)
-        (:keymaps 'ctrlf-mode-map
-         "C-M-j" 'ctrlf-forward-default
-         "C-M-k" 'ctrlf-backward-default)
-      '';
+      custom = {
+        corfu-auto = "t";
+        corfu-auto-prefix = "2";
+        corfu-cycle = "t";
+        corfu-auto-delay = "0.1";
+        global-corfu-mode = "t";
+      };
     };
 
     prescient = {
@@ -128,10 +112,10 @@ in {
 
     helpful = {
       enable = true;
-      custom = ''
-        (describe-function-function #'helpful-callable)
-        (describe-variable-function #'helpful-variable)
-      '';
+      custom = {
+        describe-function-function = "#'helpful-callable";
+        describe-variable-function = "#'helpful-variable";
+      };
     };
 
     undo-fu = { enable = true; };
@@ -235,12 +219,12 @@ in {
 
     evil-escape = {
       enable = true;
-      custom = ''
-        (evil-escape-unordered-key-sequence t)
-        (evil-escape-key-sequence ".,")
-        (evil-escape-delay 0.2)
-        (evil-escape-mode 1)
-      '';
+      custom = {
+        evil-escape-unordered-key-sequence = "t";
+        evil-escape-key-sequence = ''".,"'';
+        evil-escape-delay = "0.2";
+        evil-escape-mode = "t";
+      };
     };
 
     evil-nerd-commenter = {
@@ -270,11 +254,11 @@ in {
     python = {
       enable = true;
       # TODO: Set "python3" using a Nix expression such as config.python3
-      custom = ''
-        (python-shell-interpreter "python3")
-        (dap-python-executable "python3")
-        (dap-python-debugger 'debugpy)
-      '';
+      custom = {
+        python-shell-interpreter = ''"python3"'';
+        dap-python-executable = ''"python3"'';
+        dap-python-debugger = "'debugpy";
+      };
       general = ''
         (:states 'normal
          "${leaderKey} l"  '(:ignore t :which-key "languages")
@@ -309,10 +293,10 @@ in {
     repeat-help = {
       enable = true;
       after = [ "repeat" "embark" ];
-      custom = ''
-        (repeat-help-auto t)
-        (repeat-help-mode 1)
-      '';
+      custom = {
+        repeat-help-auto = "t";
+        repeat-help-mode = "t";
+      };
     };
 
     # Does not exist on emacs-overlay.
@@ -360,23 +344,6 @@ in {
       ];
     };
 
-    # TODO: This does not seem to work, giving autoloading errors
-    ein = {
-      enable = false;
-      hook = [ "(evil-local-mode . turn-on-undo-tree-mode)" ];
-      custom = "(ein:output-area-inlined-images t)";
-    };
-
-    # TODO: And this does not seem to exist
-    ein-kernel-utils = {
-      enable = false;
-      after = [ "ein" ];
-      init = ''
-        (require 'company)
-        (require 'popup)
-      '';
-    };
-
     ses = {
       enable = true;
       hook = [ "(ses-mode . linum-mode)" ];
@@ -384,7 +351,7 @@ in {
 
     direnv = {
       enable = true;
-      custom = "(direnv-mode 1)";
+      custom = { direnv-mode = "t"; };
     };
 
     project = {
@@ -449,13 +416,13 @@ in {
 
     org = {
       enable = true;
-      custom = ''
-        (org-catch-invisible-edits 'show-and-error)
-        (org-ellipsis " …")
-        (org-pretty-entities t)
-        (org-hide-emphasis-markers t)
-        (org-startup-with-latex-preview t)
-      '';
+      custom = {
+        org-catch-invisible-edits = "'show-and-error";
+        org-ellipsis = ''" …"'';
+        org-pretty-entities = "t";
+        org-hide-emphasis-markers = "t";
+        org-startup-with-latex-preview = "t";
+      };
       config = ''
         ;; TODO: Create a simple binding for previewing the entire buffer in LaTeX
         ;; TODO: This should be org-cdlatex-mode, but can't get it to work.
@@ -479,10 +446,10 @@ in {
 
     org-modern = {
       enable = true;
-      custom = ''
-        (line-spacing 0.2)
-        (global-org-modern-mode 1)
-      '';
+      custom = {
+        line-spacing = "0.2";
+        global-org-modern-mode = "t";
+      };
     };
 
     # TODO: Does this interfere with org-modern?
@@ -494,10 +461,10 @@ in {
     org-sticky-header = {
       enable = true;
       hook = [ "(org-mode . org-sticky-header-mode)" ];
-      custom = ''
-        (org-sticky-header-full-path 'full);
-        (org-sticky-header-heading-star "")
-      '';
+      custom = {
+        org-sticky-header-full-path = "'full";
+        org-sticky-header-heading-star = ''""'';
+      };
     };
 
     toc-org = {
@@ -514,7 +481,7 @@ in {
       enable = true;
       # What does visual-line-mode do? When does it trigger?
       hook = [ "(visual-line-mode . visual-fill-column-mode)" ];
-      custom = "(visual-fill-column-center-text t)";
+      custom = { visual-fill-column-center-text = "t"; };
     };
 
     org-appear = {
@@ -538,10 +505,11 @@ in {
     org-roam = {
       enable = true;
       after = [ "org" ];
-      custom = ''
-        (org-roam-directory (expand-file-name "notes" (getenv "ORG_DIRECTORY")))
-        (org-roam-completion-everywhere t) 
-      '';
+      custom = {
+        org-roam-directory =
+          ''(expand-file-name "notes" (getenv "ORG_DIRECTORY"))'';
+        org-roam-completion-everywhere = "t";
+      };
       config = ''
         (org-roam-db-autosync-enable)
 
@@ -593,30 +561,30 @@ in {
       after = [ "org-roam" ];
       diminish = [ "org-roam-ui-mode" ];
       hook = [ "(after-init . org-roam-ui-mode)" ];
-      custom = ''
-        (org-roam-ui-sync-theme t)
-        (org-roam-ui-follow t)
-        (org-roam-ui-update-on-save t)
-        (org-roam-ui-open-on-start nil)
-      '';
+      custom = {
+        org-roam-ui-sync-theme = "t";
+        org-roam-ui-follow = "t";
+        org-roam-ui-update-on-save = "t";
+        org-roam-ui-open-on-start = "nil";
+      };
     };
 
     org-roam-timestamps = {
       enable = true;
       after = [ "org-roam" ];
       diminish = [ "org-roam-timestamps-mode" ];
-      custom = "(org-roam-timestamps-remember-timestamps nil)";
+      custom = { org-roam-timestamps-remember-timestamps = "nil"; };
     };
 
     deft = {
       enable = true;
       after = [ "org-roam" ];
-      custom = ''
-        (deft-recursive t)
-        (deft-use-filter-string-for-filename t)
-        (deft-default-extension "org")
-        (deft-directory org-roam-directory)
-      '';
+      custom = {
+        deft-recursive = "t";
+        deft-use-filter-string-for-filename = "t";
+        deft-default-extension = ''"org"'';
+        deft-directory = "org-roam-directory";
+      };
       general = ''
         (:states 'normal
          "${leaderKey} rd"  'deft)
@@ -636,10 +604,10 @@ in {
         "(LaTeX-mode . TeX-fold-mode)"
         "(LaTeX-mode . latex-preview-pane-mode)"
       ];
-      custom = ''
-        (TeX-auto-save t)
-        (TeX-parse-self t)
-      '';
+      custom = {
+        TeX-auto-save = "t";
+        TeX-parse-self = "t";
+      };
     };
 
     # TODO: I get an error that tex cannot be loaded. Related to the other todo?
@@ -649,19 +617,19 @@ in {
       # init = "(require 'texmathp)";
     };
 
+    # TODO: Enable again
     cdlatex = {
       enable = true;
       after = [ "tex" ];
-      custom = ''
-        (cdlatex-math-modify-prefix ?')
-        (cdlatex-math-symbol-prefix ?§)
-        (qcdlatex-math-modify-alist
-         '((?a "\\mathbb" nil t nil nil)))
-        (cdlatex-env-alist
-         '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil)))
-        (cdlatex-command-alist
-         '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil))) 
-      '';
+      custom = {
+        cdlatex-math-modify-prefix = "?'";
+        cdlatex-math-symbol-prefix = "?§";
+        cdlatex-math-modify-alist = '''((?a "\\mathbb" nil t nil nil))'';
+        cdlatex-env-alist = ''
+          '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil))'';
+        cdlatex-command-alist = ''
+          '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil))'';
+      };
       general = ''
         (:keymaps 'cdlatex-mode-map
          "C-c e" 'cdlatex-environment
@@ -672,42 +640,34 @@ in {
 
     saveplace = {
       enable = true;
-      custom = "(save-place-mode 1)";
+      custom = { save-place-mode = "t"; };
     };
 
     savehist = {
       enable = true;
-      custom = "(savehist-mode 1)";
+      custom = { savehist-mode = "t"; };
     };
 
     super-save = {
       enable = true;
       hook = [ "(find-file . (lambda () (setq buffer-save-without-query t)))" ];
-      custom = "(super-save-mode 1)";
+      custom = { super-save-mode = "t"; };
     };
 
     persistent-scratch = {
       enable = true;
-      custom = ''
-          (persistent-scratch-backup-directory
-                (concat (file-name-as-directory no-littering-var-directory)
-        	            "persistent-scratch-backups"))
-          (persistent-scratch-autosave-mode 1)
-      '';
+      custom = {
+        persistent-scratch-backup-directory = ''
+          (concat (file-name-as-directory no-littering-var-directory) "persistent-scratch-backups")'';
+        persistent-scratch-autosave-mode = "t";
+      };
       config = "(persistent-scratch--auto-restore)";
-    };
-
-    # Does not exist on emacs-overlay.
-    protbuf = {
-      enable = false;
-      custom = "(protect-buffer-bury-p nil)";
-      config = ''(protect-buffer-from-kill-mode 1 (get-buffer "*scratch*"))'';
     };
 
     term = {
       enable = true;
       # TODO: Should I make "zsh" into a Nix variable?
-      custom = ''(explicit-shell-file-name "zsh")'';
+      custom = { explicit-shell-file-name = ''"zsh"''; };
     };
 
     # TODO: This package is marked as broken. What should I do with it?
@@ -723,32 +683,28 @@ in {
 
     dashboard = {
       enable = true;
-      custom = ''
-        (dashboard-startup-banner 'logo)
-        (dashboard-center-content t)
-        (dashboard-set-heading-icons t)
-        (dashboard-set-file-icons t)
-        ;; It is a bit strange I have to set this to a value different from projectile.
-        ;; If I don't do this and try to show projects, it will pull in projectile instead
-        ;; of using project.el.
-        (dashboard-projects-backend 'project-el)
-        (dashboard-items
-         '((recents  . 10)
-           (bookmarks . 5)
-           (projects . 5)
-           (agenda . 5)))
-      '';
-      config = ''
-        (dashboard-setup-startup-hook)
-      '';
+      custom = {
+        dashboard-startup-banner = "'logo";
+        dashboard-center-content = "t";
+        dashboard-set-heading-icons = "t";
+        dashboard-set-file-icons = "t";
+        dashboard-projects-backend = "'project-el";
+        dashboard-items = ''
+          '((recents  . 10)
+            (bookmarks . 5)
+            (projects . 5)
+            (agenda . 5))
+        '';
+      };
+      config = "(dashboard-setup-startup-hook)";
     };
 
     beacon = {
       enable = true;
-      custom = ''
-        (beacon-blink-duration 0.5)
-        (beacon-mode 1)
-      '';
+      custom = {
+        beacon-blink-duration = "0.5";
+        beacon-mode = "t";
+      };
     };
 
     all-the-icons = {
@@ -769,14 +725,12 @@ in {
 
     dired-hacks-utils = {
       enable = true;
-      custom = ''
-        (dired-utils-format-information-line-mode 1)
-      '';
+      custom = { dired-utils-format-information-line-mode = "t"; };
     };
 
     bufler = {
       enable = true;
-      custom = "(bufler-workspace-mode 1)";
+      custom = { bufler-workspace-mode = "t"; };
     };
 
     # TODO: With dired-single I can give dired a buffer name it always keeps.
@@ -814,12 +768,11 @@ in {
     dired-open = {
       enable = true;
       after = [ "dired" ];
-      custom = ''
-          ;; Doesn't work as expected!
-          ;;(add-to-list 'dired-open-functions #'dired-open-xdg t)
-        (dired-open-extensions '(("png" . "feh")
-        			     ("mkv" . "mpv")))
-      '';
+      custom = {
+        dired-open-extensions = ''
+          '(("png" . "feh") ("mkv" . "mpv"))
+        '';
+      };
     };
 
     dired-rainbow = {
@@ -924,7 +877,7 @@ in {
     dired-collapse = {
       enable = true;
       after = [ "dired" ];
-      custom = "(dired-collapse-mode 1)";
+      custom = { dired-collapse-mode = "t"; };
     };
 
     dired-ranger = {
@@ -948,47 +901,47 @@ in {
 
     zoom = {
       enable = true;
-      config = ''
-        (setq zoom-size '(0.618 . 0.618))
-        (zoom-mode 1)
-      '';
+      custom = {
+        zoom-size = "'(0.618 . 0.618)";
+        zoom-mode = "t";
+      };
     };
 
     # TODO: Apparently I can also use font-awesome. Let's give that a try.
     mode-icons = {
       enable = true;
-      custom = ''
-        (mode-icons-show-mode-name t)
-        (mode-icons-mode 1)
-      '';
+      custom = {
+        mode-icons-show-mode-name = "t";
+        mode-icons-mode = "t";
+      };
     };
 
     doom-themes = {
       enable = true;
-      custom = "(doom-themes-padded-modeline t)";
+      custom = { doom-themes-padded-modeline = "t"; };
       config = "(load-theme 'doom-vibrant t)";
     };
 
     doom-modeline = {
       enable = true;
-      custom = ''
-        (doom-modeline-minor-modes t)
-        (doom-modeline-vcs-max-length 24)
-        (doom-modeline-mode 1)
-      '';
+      custom = {
+        doom-modeline-minor-modes = "t";
+        doom-modeline-vcs-max-length = "24";
+        doom-modeline-mode = "t";
+      };
     };
 
     minions = {
       enable = true;
-      custom = "(minions-mode 1)";
+      custom = { minions-mode = "t"; };
     };
 
     dimmer = {
       enable = true;
-      custom = ''
-        (dimmer-fraction 0.35)
-        (dimmer-mode 1)
-      '';
+      custom = {
+        dimmer-fraction = "0.35";
+        dimmer-mode = "t";
+      };
       config = ''
         (dimmer-configure-company-box)
         (dimmer-configure-magit)
@@ -1001,15 +954,16 @@ in {
     solaire-mode = {
       enable = true;
       hook = [ "(dashboard-after-initialize . turn-off-solaire-mode)" ];
-      config = "(solaire-global-mode 1)";
+      custom = { solaire-global-mode = "t"; };
     };
 
     magit = {
       enable = true;
-      custom = ''
-        (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-        (vc-follow-symlinks t)
-      '';
+      custom = {
+        magit-display-buffer-function =
+          "#'magit-display-buffer-same-window-except-diff-v1";
+        vc-follow-symlinks = "t";
+      };
       general = ''
         (:states 'normal
          "${leaderKey} g"  '(:ignore t :which-key "git")
@@ -1019,23 +973,24 @@ in {
 
     hl-todo = {
       enable = true;
-      custom = ''
-        (hl-todo-keyword-faces
-         '(("TODO" . "#cc9393")
-           ("TODOC" . "#afd8af")
-           ("BUG" . "#d0bf8f")
-           ("IDEA" . "#7cb8bb")))
-        (global-hl-todo-mode 1)
-      '';
+      custom = {
+        hl-todo-keyword-faces = ''
+          '(("TODO" . "#cc9393")
+            ("TODOC" . "#afd8af")
+            ("BUG" . "#d0bf8f")
+            ("IDEA" . "#7cb8bb"))
+        '';
+        global-hl-todo-mode = "t";
+      };
     };
 
     magit-todos = {
       enable = true;
       after = [ "hl-todo" ];
-      custom = ''
-        (magit-todos-branch-list nil)
-        (magit-todos-mode 1)
-      '';
+      custom = {
+        magit-todos-branch-list = "nil";
+        magit-todos-mode = "t";
+      };
     };
 
     # TODO: I get an error "failed to define diff-hl-dired-mode". Why?
@@ -1043,22 +998,23 @@ in {
     diff-hl = {
       enable = false;
       hook = [ "(dired-mode . diff-hl-dired-mode)" ];
-      custom = ''
-        (diff-hl-margin-symbols-alist
-         ;; I prefer to use background colours instead.
-         '((insert . " ")
-           (delete . " ")
-           (change . " ")
-           (unknown . "?")
-           (ignored . "i")))
-        ;; This mode will instantly show changes instead of only after saving the file.
-        ;; I like the immediate feedback better. Especially because if I am using super
-        ;; save mode, I should not have to think about saving at all.
-        (diff-hl-flydiff-mode 1)
-        ;; TODOC: What difference does this mode actually make? The help was not that clear.
-        (diff-hl-margin-mode 1)
-        (global-diff-hl-mode 1)
-      '';
+      custom = {
+        # I prefer to use background colours instead.
+        diff-hl-margin-symbols-alist = ''
+          '((insert . " ")
+            (delete . " ")
+            (change . " ")
+            (unknown . "?")
+            (ignored . "i"))
+        '';
+        # This mode will instantly show changes instead of only after saving the file.
+        # I like the immediate feedback better. Especially because if I am using super
+        # save mode, I should not have to think about saving at all.
+        diff-hl-flydiff-mode = "t";
+        # TODOC: What difference does this mode actually make? The help was not that clear.
+        diff-hl-margin-mode = "t";
+        global-diff-hl-mode = "t";
+      };
     };
   };
 }
