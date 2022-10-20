@@ -11,15 +11,15 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          ../../features/home-manager/alacritty.nix
-          ../../features/home-manager/background.nix
-          ../../features/home-manager/git.nix
-          ../../features/home-manager/i3.nix
-          #   ../../features/home-manager/picom.nix
-          ../../features/home-manager/polybar.nix
-          ../../features/home-manager/vscode.nix
-          ../../features/home-manager/xdg.nix
-          ../../features/home-manager/zsh
+          ../../modules/home-manager/alacritty.nix
+          ../../modules/home-manager/background.nix
+          ../../modules/home-manager/git.nix
+          ../../modules/home-manager/i3.nix
+          #   ../../modules/home-manager/picom.nix
+          ../../modules/home-manager/polybar.nix
+          ../../modules/home-manager/vscode.nix
+          ../../modules/home-manager/xdg.nix
+          ../../modules/home-manager/zsh
         ];
 
         home = {

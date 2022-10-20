@@ -6,12 +6,12 @@
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
     inputs.home-manager.nixosModules.home-manager
-    ../../features/nixos/docker.nix
-    ../../features/nixos/locale.nix
-    ../../features/nixos/nix.nix
-    ../../features/nixos/qemu-guest.nix
-    ../../features/nixos/system.nix
-    ../../features/nixos/xorg.nix
+    ../../modules/nixos/docker.nix
+    ../../modules/nixos/locale.nix
+    ../../modules/nixos/nix.nix
+    ../../modules/nixos/qemu-guest.nix
+    ../../modules/nixos/system.nix
+    ../../modules/nixos/xorg.nix
   ];
 
   features = {

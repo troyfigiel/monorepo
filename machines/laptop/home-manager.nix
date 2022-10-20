@@ -1,11 +1,6 @@
 { config, impermanence, inputs, pkgs, ... }:
 
-let
-  nur-modules = import inputs.nur {
-    inherit pkgs;
-    nurpkgs = pkgs;
-  };
-in {
+{
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -15,26 +10,25 @@ in {
       troy = let cfg = config.home-manager.users.troy;
       in {
         imports = [
-          nur-modules.repos.rycee.hmModules.emacs-init
           inputs.impermanence.nixosModules.home-manager.impermanence
-          ../../features/home-manager/alacritty.nix
-          ../../features/home-manager/background.nix
-          ../../features/home-manager/dunst.nix
-          ../../features/home-manager/emacs.nix
-          ../../features/home-manager/firefox.nix
-          ../../features/home-manager/git.nix
-          ../../features/home-manager/gpg.nix
-          ../../features/home-manager/i3.nix
-          ../../features/home-manager/messenger.nix
-          ../../features/home-manager/nvim.nix
-          ../../features/home-manager/pass.nix
-          ../../features/home-manager/picom.nix
-          ../../features/home-manager/polybar.nix
-          ../../features/home-manager/rofi
-          ../../features/home-manager/syncthing.nix
-          ../../features/home-manager/vscode.nix
-          ../../features/home-manager/xdg.nix
-          ../../features/home-manager/zsh
+          ../../modules/home-manager/alacritty.nix
+          ../../modules/home-manager/background.nix
+          ../../modules/home-manager/dunst.nix
+          ../../modules/home-manager/emacs
+          ../../modules/home-manager/firefox.nix
+          ../../modules/home-manager/git.nix
+          ../../modules/home-manager/gpg.nix
+          ../../modules/home-manager/i3.nix
+          ../../modules/home-manager/messenger.nix
+          ../../modules/home-manager/nvim.nix
+          ../../modules/home-manager/pass.nix
+          ../../modules/home-manager/picom.nix
+          ../../modules/home-manager/polybar.nix
+          ../../modules/home-manager/rofi
+          ../../modules/home-manager/syncthing.nix
+          ../../modules/home-manager/vscode.nix
+          ../../modules/home-manager/xdg.nix
+          ../../modules/home-manager/zsh
         ];
 
         home = {

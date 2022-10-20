@@ -5,10 +5,10 @@
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
-    ../../features/nixos/mail.nix
-    ../../features/nixos/sops.nix
-    ../../features/nixos/searx.nix
-    ../../features/nixos/website.nix
+    ../../modules/nixos/mail.nix
+    ../../modules/nixos/sops.nix
+    ../../modules/nixos/searx.nix
+    ../../modules/nixos/website.nix
   ];
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];

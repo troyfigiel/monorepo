@@ -76,6 +76,12 @@
       };
 
       flake = {
+        hmModules = {
+          emacs-init = import ./modules/home-manager/emacs/init.nix;
+        };
+
+        nixosModules = { };
+
         # TODO: It seems the default boot entry is not updated. That is particularly annoying and not sure why this happens.
         # Do I really need deploy-rs? Would a simple Makefile not suffice?
         deploy.nodes = {

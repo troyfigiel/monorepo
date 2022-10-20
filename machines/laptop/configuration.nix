@@ -5,20 +5,20 @@
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-    ../../features/nixos/bluetooth.nix
-    ../../features/nixos/docker.nix
-    ../../features/nixos/gpg.nix
-    ../../features/nixos/locale.nix
-    ../../features/nixos/networking.nix
-    ../../features/nixos/networkmanager.nix
-    ../../features/nixos/nix.nix
-    ../../features/nixos/printing.nix
-    ../../features/nixos/restic.nix
-    ../../features/nixos/sops.nix
-    ../../features/nixos/sound.nix
-    ../../features/nixos/system.nix
-    ../../features/nixos/qemu.nix
-    ../../features/nixos/xorg.nix
+    ../../modules/nixos/bluetooth.nix
+    ../../modules/nixos/docker.nix
+    ../../modules/nixos/gpg.nix
+    ../../modules/nixos/locale.nix
+    ../../modules/nixos/networking.nix
+    ../../modules/nixos/networkmanager.nix
+    ../../modules/nixos/nix.nix
+    ../../modules/nixos/printing.nix
+    ../../modules/nixos/restic.nix
+    ../../modules/nixos/sops.nix
+    ../../modules/nixos/sound.nix
+    ../../modules/nixos/system.nix
+    ../../modules/nixos/qemu.nix
+    ../../modules/nixos/xorg.nix
   ];
 
   programs.fuse.userAllowOther = true;
