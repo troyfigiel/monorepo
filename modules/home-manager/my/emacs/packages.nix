@@ -46,12 +46,12 @@ in {
       enable = true;
       after = [ "vertico" ];
       hook = [ "(rfn-eshadow-update-overlay . vertico-directory-tidy)" ];
-      general = ''
+      general = [''
         (:keymaps 'vertico-map
          "RET" 'vertico-directory-enter
          "DEL" 'vertico-directory-delete-char
          "M-DEL" 'vertico-directory-delete-word)
-      '';
+      ''];
     };
 
     orderless = {
@@ -74,11 +74,11 @@ in {
 
     embark = {
       enable = true;
-      general = ''
+      general = [''
         (("C-." embark-act)
         ("M-." embark-dwim)
         ("C-h B" embark-bindings))
-      '';
+      ''];
     };
 
     embark-consult = { enable = true; };
@@ -86,7 +86,7 @@ in {
     ace-window = {
       enable = true;
       custom = { aw-keys = "'(?a ?s ?d ?f ?g ?h ?j ?k ?l)"; };
-      general = ''("C-M-w" 'ace-window)'';
+      general = [ ''("C-M-w" 'ace-window)'' ];
     };
 
     corfu = {
@@ -145,10 +145,9 @@ in {
 
     consult-eglot = { enable = true; };
 
-    # TODO: This requires black and prettier to be installed
     apheleia = {
       enable = true;
-      config = "(apheleia-global-mode 1)";
+      custom = { apheleia-global-mode = "t"; };
       extraPackages = [ pkgs.black pkgs.nodePackages.prettier ];
     };
 
@@ -173,12 +172,12 @@ in {
              (flake8 (enabled . t))
              (jedi_completion (fuzzy . t))))))
       '';
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} e" '(:ignore t :which-key "IDE")
          "${leaderKey} ed" #'eglot-find-declaration
          "${leaderKey} er" #'eglot-rename)
-      '';
+      ''];
       extraPackages = [
         pkgs.python3Packages.python-lsp-server
         # pkgs.python3Packages.pylsp-rope
@@ -193,13 +192,13 @@ in {
 
     flymake = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} ec" #'consult-flymake
          "${leaderKey} ef" #'flymake-show-buffer-diagnostics
          "${leaderKey} en" #'flymake-goto-next-error
          "${leaderKey} ep" #'flymake-goto-prev-error)
-      '';
+      ''];
     };
 
     xref = { enable = true; };
@@ -210,11 +209,11 @@ in {
         (evil-set-initial-state 'messages-buffer-mode 'normal)
         (evil-set-initial-state 'dashboard-mode 'normal)
       '';
-      general = ''
+      general = [''
         (:states 'motion
          "j" 'evil-next-visual-line
          "k" 'evil-previous-visual-line) 
-      '';
+      ''];
     };
 
     evil-escape = {
@@ -229,17 +228,17 @@ in {
 
     evil-nerd-commenter = {
       enable = true;
-      general = ''
+      general = [''
         ("C-M-#" 'evilnc-comment-or-uncomment-lines)
-      '';
+      ''];
     };
 
     elfeed = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} f" 'elfeed)
-      '';
+      ''];
     };
 
     elfeed-org = {
@@ -259,30 +258,30 @@ in {
         dap-python-executable = ''"python3"'';
         dap-python-debugger = "'debugpy";
       };
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} l"  '(:ignore t :which-key "languages")
          "${leaderKey} lp" '(:ignore t :which-key "python"))
-      '';
+      ''];
     };
 
     pyvenv = {
       enable = true;
       config = "(pyvenv-mode 1)";
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} lpv"  '(:ignore t :which-key "pyvenv")
          "${leaderKey} lpva" 'pyvenv-activate
          "${leaderKey} lpvd" 'pyvenv-deactivate)
-      '';
+      ''];
     };
 
     poetry = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} lpp" 'poetry)
-      '';
+      ''];
     };
 
     repeat = {
@@ -322,10 +321,10 @@ in {
 
     docker = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} d" 'docker)
-      '';
+      ''];
     };
 
     dockerfile-mode = { enable = true; };
@@ -378,10 +377,10 @@ in {
         	("c" "Compile Project" project-compile)
         	("p" "Switch Project" project-switch-project)]])
       '';
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} p" 'project-transient)
-      '';
+      ''];
     };
 
     smartparens = {
@@ -398,10 +397,10 @@ in {
 
     restart-emacs = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} R" 'restart-emacs)
-      '';
+      ''];
     };
 
     crontab-mode = {
@@ -533,7 +532,7 @@ in {
         (band-aid-org-roam-set-templates
           (expand-file-name "templates" (getenv "ORG_DIRECTORY")))
       '';
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} r"   '(:ignore t :which-key "org-roam")
          "${leaderKey} rb"  'org-roam-buffer-toggle
@@ -551,7 +550,7 @@ in {
          "${leaderKey} rta" 'org-roam-tag-add
          "${leaderKey} rtr" 'org-roam-tag-remove
          "${leaderKey} ra"  '(:ignore t :which-key "add"))
-      '';
+      ''];
     };
 
     org-roam-bibtex = { enable = true; };
@@ -585,10 +584,10 @@ in {
         deft-default-extension = ''"org"'';
         deft-directory = "org-roam-directory";
       };
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} rd"  'deft)
-      '';
+      ''];
     };
 
     # Does not exist on emacs-overlay.
@@ -630,12 +629,12 @@ in {
         cdlatex-command-alist = ''
           '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil))'';
       };
-      general = ''
+      general = [''
         (:keymaps 'cdlatex-mode-map
          "C-c e" 'cdlatex-environment
          "'" 'cdlatex-math-modify
          "§" 'cdlatex-math-symbol)
-      '';
+      ''];
     };
 
     saveplace = {
@@ -720,7 +719,7 @@ in {
 
     dired = {
       enable = true;
-      general = ''("C-M-d" 'dired-jump)'';
+      general = [ ''("C-M-d" 'dired-jump)'' ];
     };
 
     dired-hacks-utils = {
@@ -738,7 +737,7 @@ in {
     dired-single = {
       enable = true;
       after = [ "dired" ];
-      general = ''
+      general = [''
         (:states 'normal
          :keymaps 'dired-mode-map
          "h" 'dired-single-up-directory
@@ -746,7 +745,7 @@ in {
          ;; I accidentally open the file in another buffer.
          ;; TODO: Can I run dired-single-buffer only for directories?
          "l" 'dired-single-buffer)
-      '';
+      ''];
     };
 
     # Most of the time I do not want to change or see my dotfiles.
@@ -756,11 +755,11 @@ in {
       enable = true;
       after = [ "dired" ];
       hook = [ "(dired-mode . dired-hide-dotfiles-mode)" ];
-      general = ''
+      general = [''
         (:states 'normal
          :keymaps 'dired-mode-map
          "H" 'dired-hide-dotfiles-mode)
-      '';
+      ''];
     };
 
     # IDEA: Can I already view images inline with dired?
@@ -882,14 +881,14 @@ in {
 
     dired-ranger = {
       enable = true;
-      general = ''
+      general = [''
         (:states 'normal
          :keymaps 'dired-mode-map
          "y" 'dired-ranger-copy
          "p" 'dired-ranger-paste
          ;; IDEA: How should I bind `dired-ranger-move'? Is "X" the best binding?
          "X" 'dired-ranger-move)
-      '';
+      ''];
     };
 
     treemacs = {
@@ -964,11 +963,11 @@ in {
           "#'magit-display-buffer-same-window-except-diff-v1";
         vc-follow-symlinks = "t";
       };
-      general = ''
+      general = [''
         (:states 'normal
          "${leaderKey} g"  '(:ignore t :which-key "git")
          "${leaderKey} gs" 'magit-status)
-      '';
+      ''];
     };
 
     hl-todo = {
