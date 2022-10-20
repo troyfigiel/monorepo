@@ -7,12 +7,12 @@ runCommand "website" {
   };
 
   notes = builtins.path {
-    path = ../org/notes;
+    path = ../emacs.d/org/notes;
     name = "website";
   };
 
   blog = builtins.path {
-    path = ../org/blog;
+    path = ../emacs.d/org/blog;
     name = "website";
   };
 

@@ -1,11 +1,6 @@
 { config, impermanence, inputs, pkgs, ... }:
 
-let
-  nur-modules = import inputs.nur {
-    inherit pkgs;
-    nurpkgs = pkgs;
-  };
-in {
+{
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -15,7 +10,6 @@ in {
       troy = let cfg = config.home-manager.users.troy;
       in {
         imports = [
-          nur-modules.repos.rycee.hmModules.emacs-init
           inputs.impermanence.nixosModules.home-manager.impermanence
           ../../features/home-manager/alacritty.nix
           ../../features/home-manager/background.nix
