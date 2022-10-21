@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  imports = [ ./cloud-server.nix ./dns.nix ];
+  imports = [ ./cloud-server.nix ./dns.nix ./local-file.nix ];
 
   terraform.required_providers = {
     cloudflare.source = "cloudflare/cloudflare";
