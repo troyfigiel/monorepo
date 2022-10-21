@@ -1,10 +1,12 @@
-{ config, lib, ... }:
+{ config, inputs, lib, ... }:
 
 with lib;
 let cfg = config.features.sops;
 in {
+  imports = [ inputs.sops-nix.nixosModules.sops ];
+
   options.features.sops = {
-    enable = mkEnableOption "sops-nix";
+    enable = mkEnableOption "Enable sops configuration.";
 
     defaultSopsFile = mkOption {
       type = types.path;

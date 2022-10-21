@@ -1,10 +1,10 @@
 { impermanence, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.features.xorg;
+let cfg = config.features.desktop;
 in {
-  options.features.xorg = {
-    enable = mkEnableOption "xorg";
+  options.features.desktop = {
+    enable = mkEnableOption "Enable i3 desktop.";
 
     videoDrivers = mkOption { type = types.listOf types.str; };
   };

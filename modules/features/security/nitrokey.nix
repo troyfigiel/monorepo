@@ -1,9 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.features.gpg;
+let cfg = config.features.nitrokey;
 in {
-  options.features.gpg.enable = mkEnableOption "GPG";
+  options.features.nitrokey.enable =
+    mkEnableOption "Enable Nitrokey configuration.";
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ gnupg pinentry ];

@@ -1,7 +1,7 @@
 { impermanence, config, lib, ... }:
 
 with lib;
-let cfg = config.features.docker;
+let cfg = config.features.virtualisation.docker;
 in {
   options.features.docker.enable = mkEnableOption "Docker";
 

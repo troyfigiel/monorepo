@@ -1,18 +1,39 @@
 { impermanence, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.features.system;
+let cfg = config.features.defaultSettings;
 in {
-  options.features.system = {
-    enable = mkEnableOption "system";
-    games = mkOption {
-      default = false;
-      type = types.bool;
-    };
-  };
+  options.features.defaultSettings.enable = mkEnableOption "locale";
 
   config = mkIf cfg.enable (mkMerge [
     {
+      time.timeZone = "Europe/Berlin";
+      i18n.defaultLocale = "en_US.utf8";
+      console.keyMap = "de";
+
+      nix = {
+        package = pkgs.nixVersions.stable;
+        settings = {
+          # Until my own binary cache is set up, let's turn it off.
+          # substituters = [ "http://192.168.178.37:10106/nix-binary-cache/" ];
+          # trusted-public-keys =
+          #  [ "minio.local-1:ZTYgVFeAYCoDqu0HppKRQRy54es8EZ5LVAmZQJO/VDA=" ];
+          # trusted-users = [ "troy" ];
+          auto-optimise-store = true;
+        };
+
+        gc = {
+          automatic = true;
+          dates = "weekly";
+        };
+
+        extraOptions = ''
+          experimental-features = nix-command flakes
+          min-free = ${toString (3 * 1024 * 1024 * 1024)}
+          max-free = ${toString (10 * 1024 * 1024 * 1024)}
+        '';
+      };
+
       # This is approximately how I should do an auto-upgrade, but the code here
       # probably does not work as-is.
 
@@ -31,22 +52,14 @@ in {
       #   # I might want to change the rebootWindow parameters.
       # };
 
-      # TODO: I have to move the packages to the respective modules that use them.
       environment.systemPackages = with pkgs; [
-        nix-index
         git
-        python3
-        inxi
+        inxi # To detect hardware
         vim
+        # TODO: Where should I move brightnessctl?
         brightnessctl
       ];
     }
-
-    (mkIf cfg.games {
-      # TODO: Is there a way to set this up with home-manager? Not system-wide
-      # TODO: How do I use Proton in Nix?
-      programs.steam.enable = true;
-    })
 
     (optionalAttrs impermanence {
       environment.persistence."/nix/persist" = {
