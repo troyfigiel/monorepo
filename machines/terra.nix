@@ -1,8 +1,6 @@
 { config, ... }:
 
 {
-  imports = [ ./cloud-server.nix ./dns.nix ./local-file.nix ];
-
   terraform.required_providers = {
     cloudflare.source = "cloudflare/cloudflare";
     vultr.source = "vultr/vultr";
@@ -25,5 +23,17 @@
   provider = {
     cloudflare.api_token = config.locals.cloudflare_api_token;
     vultr.api_key = config.locals.vultr_api_key;
+  };
+
+  resource.local_file.nix_input = {
+    filename = "\${path.module}/network.nix";
+    content = ''
+      {
+        cloud-server.address = "''${vultr_instance.cloud-server.main_ip}";
+        laptop.address = "laptop.fritz.box";
+        raspberry.address = "raspberrypi.fritz.box";
+      }
+    '';
+    file_permission = "0644";
   };
 }

@@ -15,7 +15,7 @@ creation_rules:
       - pgp:
           - *troy
           - *cloud-server
-  - path_regex: infrastructure/secrets.yaml
+  - path_regex: machines/secrets.yaml
     key_groups:
       - pgp:
           - *troy

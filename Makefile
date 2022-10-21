@@ -18,10 +18,10 @@ format:
 	find $(ROOT_DIR) -name '*.nix' | xargs nixfmt
 
 terranix:
-	nix build -o $(ROOT_DIR)/infrastructure/config.tf.json
-	terraform -chdir=$(ROOT_DIR)/infrastructure init
-	terraform -chdir=$(ROOT_DIR)/infrastructure apply
-	rm -f $(ROOT_DIR)/infrastructure/config.tf.json
+	nix build -o $(ROOT_DIR)/machines/config.tf.json
+	terraform -chdir=$(ROOT_DIR)/machines init
+	terraform -chdir=$(ROOT_DIR)/machines apply
+	rm -f $(ROOT_DIR)/machines/config.tf.json
 
 update:
 	if [ -z $(INPUT) ]; then \

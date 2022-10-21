@@ -53,7 +53,6 @@
     let
       inherit (self) outputs;
       inherit (inputs.flake-parts.lib) mkFlake;
-      inherit (inputs.terranix.lib) terranixConfiguration;
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
@@ -67,11 +66,6 @@
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { system, ... }: {
-        packages.default = terranixConfiguration {
-          inherit system;
-          modules = [ ./infrastructure/main.nix ];
-        };
-
         checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
       };
 
