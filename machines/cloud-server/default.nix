@@ -1,8 +1,8 @@
 { inputs, nixosModules, pkgs, ... }:
 
-let inherit (import ../parameters.nix) cloud-server;
-in {
+{
   imports = [
+    ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
@@ -12,7 +12,6 @@ in {
     nixosModules.website
   ];
 
-  networking.hostName = cloud-server.machine;
   environment.systemPackages = with pkgs; [ git vim gnupg ];
   system.stateVersion = "22.05";
 

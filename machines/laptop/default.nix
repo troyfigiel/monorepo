@@ -1,8 +1,9 @@
 { inputs, config, nixosModules, pkgs, ... }:
 
-let inherit (import ../parameters.nix) laptop;
-in {
+{
   imports = [
+    ./hardware-configuration.nix
+    ./home-manager.nix
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
@@ -21,7 +22,6 @@ in {
     nixosModules.qemu
     nixosModules.xorg
   ];
-  networking.hostName = laptop.machine;
 
   programs.fuse.userAllowOther = true;
 
