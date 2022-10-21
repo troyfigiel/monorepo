@@ -1,8 +1,8 @@
 { config, ... }:
 
 let
-  domain = "troyfigiel";
-  pqdn = "${domain}.com";
+  parameters = import ../parameters.nix;
+  inherit (parameters.terranix.webserver) domain pqdn;
   zone_id = "\${cloudflare_zone.${domain}.id}";
   ttl = 3600;
 in {

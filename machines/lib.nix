@@ -5,7 +5,9 @@ let
   inherit (self) hmModules nixosModules;
 in rec {
   createNixosSystem = dir:
-    let inherit (import ./${dir}/parameters.nix) machine system impermanence;
+    let
+      parameters = import ./${dir}/parameters.nix;
+      inherit (parameters.flake) machine system impermanence;
     in {
       name = machine;
       value = nixosSystem {

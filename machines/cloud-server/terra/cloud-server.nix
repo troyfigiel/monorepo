@@ -1,6 +1,6 @@
 let
-  machine = "cloud-server";
-  pqdn = "troyfigiel.com";
+  parameters = import ../parameters.nix;
+  inherit (parameters.terranix) machine webserver;
 in {
   data.vultr_snapshot.nixos-snapshot = {
     filter = {
@@ -25,7 +25,7 @@ in {
     vultr_reverse_ipv4."${machine}_reverse_ipv4" = {
       instance_id = "\${vultr_instance.${machine}.id}";
       ip = "\${vultr_instance.${machine}.main_ip}";
-      reverse = "mail.${pqdn}";
+      reverse = "mail.${webserver.pqdn}";
     };
   };
 }
