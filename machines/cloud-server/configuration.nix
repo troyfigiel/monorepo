@@ -1,14 +1,14 @@
-{ inputs, pkgs, ... }:
+{ inputs, nixosModules, pkgs, ... }:
 
 {
   imports = [
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
-    ../../modules/nixos/mail.nix
-    ../../modules/nixos/sops.nix
-    ../../modules/nixos/searx.nix
-    ../../modules/nixos/website.nix
+    nixosModules.mail
+    nixosModules.searx
+    nixosModules.sops
+    nixosModules.website
   ];
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];

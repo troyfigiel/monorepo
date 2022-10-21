@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, nixosModules, pkgs, ... }:
 
 {
   imports = [
@@ -6,12 +6,12 @@
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
     inputs.home-manager.nixosModules.home-manager
-    ../../modules/nixos/docker.nix
-    ../../modules/nixos/locale.nix
-    ../../modules/nixos/nix.nix
-    ../../modules/nixos/qemu-guest.nix
-    ../../modules/nixos/system.nix
-    ../../modules/nixos/xorg.nix
+    nixosModules.docker
+    nixosModules.locale
+    nixosModules.nix
+    nixosModules.qemu-guest
+    nixosModules.system
+    nixosModules.xorg
   ];
 
   features = {

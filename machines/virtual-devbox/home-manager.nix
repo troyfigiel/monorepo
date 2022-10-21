@@ -1,4 +1,4 @@
-{ impermanence, config, inputs, pkgs, ... }:
+{ impermanence, config, hmModules, inputs, pkgs, ... }:
 
 {
   home-manager = {
@@ -11,15 +11,15 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          ../../modules/home-manager/alacritty.nix
-          ../../modules/home-manager/background.nix
-          ../../modules/home-manager/git.nix
-          ../../modules/home-manager/i3.nix
+          hmModules.alacritty
+          hmModules.background
+          hmModules.git
+          hmModules.i3
           #   ../../modules/home-manager/picom.nix
-          ../../modules/home-manager/polybar.nix
-          ../../modules/home-manager/vscode.nix
-          ../../modules/home-manager/xdg.nix
-          ../../modules/home-manager/zsh
+          hmModules.polybar
+          hmModules.vscode
+          hmModules.xdg
+          hmModules.zsh
         ];
 
         home = {

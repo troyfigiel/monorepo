@@ -1,4 +1,4 @@
-{ config, impermanence, inputs, pkgs, ... }:
+{ config, hmModules, impermanence, inputs, pkgs, ... }:
 
 {
   home-manager = {
@@ -11,24 +11,24 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          ../../modules/home-manager/alacritty.nix
-          ../../modules/home-manager/background.nix
-          ../../modules/home-manager/dunst.nix
-          ../../modules/home-manager/emacs
-          ../../modules/home-manager/firefox.nix
-          ../../modules/home-manager/git.nix
-          ../../modules/home-manager/gpg.nix
-          ../../modules/home-manager/i3.nix
-          ../../modules/home-manager/messenger.nix
-          ../../modules/home-manager/nvim.nix
-          ../../modules/home-manager/pass.nix
-          ../../modules/home-manager/picom.nix
-          ../../modules/home-manager/polybar.nix
-          ../../modules/home-manager/rofi
-          ../../modules/home-manager/syncthing.nix
-          ../../modules/home-manager/vscode.nix
-          ../../modules/home-manager/xdg.nix
-          ../../modules/home-manager/zsh
+          hmModules.alacritty
+          hmModules.background
+          hmModules.dunst
+          hmModules.emacs
+          hmModules.firefox
+          hmModules.git
+          hmModules.gpg
+          hmModules.i3
+          hmModules.messenger
+          hmModules.nvim
+          hmModules.pass
+          hmModules.picom
+          hmModules.polybar
+          hmModules.rofi
+          hmModules.syncthing
+          hmModules.vscode
+          hmModules.xdg
+          hmModules.zsh
         ];
 
         home = {

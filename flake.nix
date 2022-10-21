@@ -49,11 +49,11 @@
     };
   };
 
-  outputs = inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      inherit (inputs) self;
-      inherit (inputs.nixpkgs) lib;
+      inherit (self) outputs;
       inherit (inputs.flake-parts.lib) mkFlake;
+      inherit (inputs.terranix.lib) terranixConfiguration;
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
@@ -62,12 +62,14 @@
         ./machines/cloud-server
         ./machines/laptop
         ./machines/virtual-devbox
+        ./modules/home-manager
+        ./modules/nixos
         ./templates/flake-module.nix
       ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { system, ... }: {
-        packages.default = inputs.terranix.lib.terranixConfiguration {
+        packages.default = terranixConfiguration {
           inherit system;
           modules = [ ./infrastructure/main.nix ];
         };
@@ -76,12 +78,6 @@
       };
 
       flake = {
-        hmModules = {
-          emacs-init = import ./modules/home-manager/emacs/init.nix;
-        };
-
-        nixosModules = { };
-
         # TODO: It seems the default boot entry is not updated. That is particularly annoying and not sure why this happens.
         # Do I really need deploy-rs? Would a simple Makefile not suffice?
         deploy.nodes = {

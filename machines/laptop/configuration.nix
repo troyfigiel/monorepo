@@ -1,24 +1,24 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, nixosModules, pkgs, ... }:
 
 {
   imports = [
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-    ../../modules/nixos/bluetooth.nix
-    ../../modules/nixos/docker.nix
-    ../../modules/nixos/gpg.nix
-    ../../modules/nixos/locale.nix
-    ../../modules/nixos/networking.nix
-    ../../modules/nixos/networkmanager.nix
-    ../../modules/nixos/nix.nix
-    ../../modules/nixos/printing.nix
-    ../../modules/nixos/restic.nix
-    ../../modules/nixos/sops.nix
-    ../../modules/nixos/sound.nix
-    ../../modules/nixos/system.nix
-    ../../modules/nixos/qemu.nix
-    ../../modules/nixos/xorg.nix
+    nixosModules.bluetooth
+    nixosModules.docker
+    nixosModules.gpg
+    nixosModules.locale
+    nixosModules.networking
+    nixosModules.networkmanager
+    nixosModules.nix
+    nixosModules.printing
+    nixosModules.restic
+    nixosModules.sops
+    nixosModules.sound
+    nixosModules.system
+    nixosModules.qemu
+    nixosModules.xorg
   ];
 
   programs.fuse.userAllowOther = true;
