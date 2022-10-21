@@ -1,4 +1,5 @@
 {
-  laptop = { ip = "11.22.33.44"; };
-  cloud-server = { ip = "11.22.33.44"; };
+  cloud-server.address = "95.179.241.168";
+  laptop.address = "laptop.fritz.box";
+  raspberry.address = "raspberrypi.fritz.box";
 }

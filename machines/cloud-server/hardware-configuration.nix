@@ -4,8 +4,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ];
-
   boot = {
     loader.grub = {
       enable = true;

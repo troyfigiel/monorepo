@@ -4,12 +4,14 @@ ROOT_DIR = $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 MACHINE ?= $(file < /etc/hostname)
 
 .PHONY: build deploy format terranix update upgrade
-all: deploy
+all:
+	$(MAKE) terranix
+	$(MAKE) deploy
 
 build:
 	sudo nixos-rebuild switch --flake "$(ROOT_DIR)#$(MACHINE)"
 
-deploy: terranix
+deploy:
 	deploy "$(ROOT_DIR)#$(MACHINE)"
 
 format:

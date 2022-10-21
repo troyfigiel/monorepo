@@ -1,6 +1,7 @@
 { inputs, config, nixosModules, pkgs, ... }:
 
-{
+let inherit (import ../parameters.nix) virtual-devbox;
+in {
   imports = [
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
@@ -13,6 +14,7 @@
     nixosModules.system
     nixosModules.xorg
   ];
+  networking.hostName = virtual-devbox.machine;
 
   features = {
     docker.enable = true;

@@ -59,9 +59,7 @@
 
       imports = [
         ./overlay
-        ./machines/cloud-server
-        ./machines/laptop
-        ./machines/virtual-devbox
+        ./machines
         ./modules/home-manager
         ./modules/nixos
         ./templates/flake-module.nix
@@ -98,7 +96,7 @@
               system = {
                 sshUser = "root";
                 path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-                  self.nixosConfigurations.cloud-server;
+                  inputs.self.nixosConfigurations.cloud-server;
               };
             };
           };
