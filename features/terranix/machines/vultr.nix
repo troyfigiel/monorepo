@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.features.machines.vultr;
 in {
-  options.features.vultr = {
+  options.features.machines.vultr = {
     enable = mkEnableOption "Enable vultr machine.";
 
     machine = mkOption {
