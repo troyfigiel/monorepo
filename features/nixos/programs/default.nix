@@ -1,0 +1,1 @@
+{ games = import ./games.nix; }
