@@ -3,14 +3,18 @@
 let
   inherit (builtins) listToAttrs;
   inherit (inputs.terranix.lib) terranixConfiguration;
+  inherit (self) terranixModules;
   inherit (import ./lib.nix { inherit inputs self; }) createNixosSystem;
 in {
   perSystem = { system, ... }: {
     packages.default = terranixConfiguration {
       inherit system;
       modules = [
-        ./cloud-server/terra/cloud-server.nix
-        ./cloud-server/terra/dns.nix
+        terranixModules.machines.vultr
+        terranixModules.records.mail
+        terranixModules.records.searx
+        terranixModules.records.webhosting
+        ./cloud-server/terra.nix
         ./terra.nix
       ];
     };

@@ -61,6 +61,7 @@
         ./machines
         ./modules/home-manager
         ./modules/nixos
+        ./modules/terranix
         ./templates/flake-module.nix
       ];
 
