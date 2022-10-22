@@ -1,0 +1,29 @@
+#+title: Software architecture
+
+** Overall ideas
+
+- A good design is set up in such a way that the changes that are likely to happen, are easy and fast to make.
+- It is impossible to know a priori exactly what design is best for a given set of requirements, because:
+    1. Requirements might change over time or are a bit fuzzy.
+    2. Designs that sound good on paper, might perform poorly when implemented.
+- Design is a human-oriented task, since a good design makes it easy for humans to make the necessary changes to software.
+- Therefore, there are no clear-cut metrics to adhere to. In fuzzy terminology, a design is bad if it is resistant to change.
+    1. What is a good design for one set of possible changes, might be a bad design for another.
+- TODO: Is this a good example? There must be better ones I can think of.
+- For example, you can choose to either put all IaC in a separate directory or to place it with the modules that use it
+- If you have to change your cloud provider, the first design will be much more pleasant to work with.
+- But if you have to change the infrastructure only belonging to a single module, the second design will be better for you.
+- There are no clear-cut metrics that we can adhere to. The only important factors are:
+    1. How fast can we make the change?
+    2. How bugfree can we make the change?
+
+** Nix repo choices
+
+- Monorepo.
+- Single flake instead of flake per machine.
+    1. The big downside of having multiple flakes, is that my setups are not necessarily consistent anymore across machines! I might have a guarantee that my setup does not break, but that also means I do not have a guarantee anymore that my setups across machines are the same.
+    2. If I have a single flake, it can happen that I updated my lockfile and some packages broke.
+- I decided for consistency across machines, even if that might sometimes mean some modules break after a number of updates. I might want to test this somehow, but I am not sure how yet. A VM?
+- Terraform over NixOps, but Terranix to make parameter sharing with Nix easier.
+    - This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
+- sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.

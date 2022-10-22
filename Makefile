@@ -12,7 +12,7 @@ build:
 	sudo nixos-rebuild switch --flake "$(ROOT_DIR)#$(MACHINE)"
 
 deploy:
-	deploy "$(ROOT_DIR)#$(MACHINE)"
+	deploy $(ROOT_DIR)
 
 format:
 	find $(ROOT_DIR) -name '*.nix' | xargs nixfmt

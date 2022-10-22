@@ -1,0 +1,9 @@
+baseURL: 'https://troyfigiel.com'
+languageCode: 'en-us'
+title: 'My New Hugo Site'
+
+security:
+  funcs:
+    getenv:
+    - "^HUGO_"
+    - "^out$"
