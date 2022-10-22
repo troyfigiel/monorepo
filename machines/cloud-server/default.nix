@@ -1,4 +1,4 @@
-{ inputs, nixosModules, pkgs, ... }:
+{ inputs, nixosFeatures, pkgs, ... }:
 
 let parameters = import ./parameters.nix;
 in {
@@ -7,10 +7,10 @@ in {
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
-    nixosModules.security.sops
-    nixosModules.services.mail
-    nixosModules.services.searx
-    nixosModules.services.webhosting
+    nixosFeatures.security.sops
+    nixosFeatures.services.mail
+    nixosFeatures.services.searx
+    nixosFeatures.services.webhosting
   ];
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];

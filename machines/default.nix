@@ -3,8 +3,8 @@
 let
   inherit (builtins) listToAttrs;
   inherit (inputs.terranix.lib) terranixConfiguration;
-  inherit (inputs.nixpkgs.lib) nixosSystem;
-  inherit (inputs.self) hmFeatures nixosFeatures terranixFeatures;
+  inherit (self) terranixFeatures;
+  inherit (import ./lib.nix { inherit inputs self; }) createNixosSystem;
 in {
   perSystem = { system, ... }: {
     packages.default = terranixConfiguration {
@@ -20,18 +20,7 @@ in {
     };
   };
 
-  flake.nixosConfigurations = listToAttrs (map (dir:
-    let
-      parameters = import ./${dir}/parameters.nix;
-      inherit (parameters.flake) machine system impermanence;
-    in {
-      name = machine;
-      value = nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs hmFeatures nixosFeatures impermanence; };
-        pkgs = self.legacyPackages.${system};
-        modules = [ { networking.hostName = machine; } ./${dir} ];
-      };
-    }) [ "cloud-server" "laptop" "virtual-devbox" ]);
+  flake.nixosConfigurations = listToAttrs
+    (map createNixosSystem [ "cloud-server" "laptop" "virtual-devbox" ]);
 }
 

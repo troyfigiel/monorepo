@@ -8,21 +8,17 @@
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
     inputs.home-manager.nixosModules.home-manager
-    nixosModules.docker
-    nixosModules.locale
-    nixosModules.nix
-    nixosModules.qemu-guest
-    nixosModules.system
-    nixosModules.xorg
+    nixosFeatures.development.docker
+    nixosFeatures.desktop.system
+    nixosFeatures.development.qemu
   ];
 
   features = {
-    docker.enable = true;
-    locale.enable = true;
-    nix.enable = true;
-    qemu-guest.enable = true;
-    system.enable = true;
-    xorg = {
+    development.docker.enable = true;
+    desktop.system.enable = true;
+    development.qemu.guest.enable = true;
+    desktop.system.enable = true;
+    desktop.i3 = {
       enable = true;
       # TODO: modesetting is necessary to even get i3 to run successfully. Otherwise no screens will be found. What does this do?
       # Modesetting fixed the issues I had with sddm and i3.

@@ -33,7 +33,7 @@ in {
       };
     }
 
-    (mkIf cfg.enable && cfg.printing.enable {
+    (mkIf (cfg.enable && cfg.printing.enable) {
       # TODO: This works, but need to check how to configure my printers declaratively in NixOS
       services.printing = {
         enable = true;
@@ -41,7 +41,7 @@ in {
       };
     })
 
-    (mkIf cfg.enable && cfg.restic.enable {
+    (mkIf (cfg.enable && cfg.restic.enable) {
       sops.secrets = {
         ssh-restic = { };
         rpi-mnt-password = { };

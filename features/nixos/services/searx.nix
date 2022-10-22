@@ -3,8 +3,6 @@
 with lib;
 let cfg = config.features.services.searx;
 in {
-  imports = [ inputs.simple-nixos-mailserver.nixosModules.mailserver ];
-
   options.features.services.searx.enable =
     mkEnableOption "Enable the Searx service.";
 

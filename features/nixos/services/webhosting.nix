@@ -3,8 +3,6 @@
 with lib;
 let cfg = config.features.services.webhosting;
 in {
-  imports = [ inputs.simple-nixos-mailserver.nixosModules.mailserver ];
-
   options.features.services.webhosting.enable =
     mkEnableOption "Turn this machine into a webserver for my website.";
 

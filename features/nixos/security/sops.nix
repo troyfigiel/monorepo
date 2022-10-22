@@ -1,10 +1,8 @@
-{ config, inputs, lib, ... }:
+{ config, lib, ... }:
 
 with lib;
 let cfg = config.features.security.sops;
 in {
-  imports = [ inputs.sops-nix.nixosModules.sops ];
-
   options.features.security.sops = {
     enable = mkEnableOption "Enable sops configuration.";
 

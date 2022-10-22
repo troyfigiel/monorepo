@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.features.editors.emacs;
 in {
-  imports = [ hmModules.emacs ./packages.nix ];
+  imports = [ ../../../../modules/home-manager/init.nix ./packages.nix ];
 
   options.features.editors.emacs.enable = mkEnableOption "Emacs";
 

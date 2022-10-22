@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.features.desktop.system;
 in {
-  options.features.desktop.system = mkEnableOption "Default system settings.";
+  options.features.desktop.system.enable = mkEnableOption "Default system settings.";
 
   config = mkIf cfg.enable (mkMerge [
     {

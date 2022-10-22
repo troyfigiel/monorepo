@@ -1,4 +1,4 @@
-{ inputs, config, nixosModules, pkgs, ... }:
+{ inputs, config, nixosFeatures, pkgs, ... }:
 
 {
   imports = [
@@ -7,20 +7,15 @@
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-    nixosModules.bluetooth
-    nixosModules.docker
-    nixosModules.gpg
-    nixosModules.locale
-    nixosModules.networking
-    nixosModules.networkmanager
-    nixosModules.nix
-    nixosModules.printing
-    nixosModules.restic
-    nixosModules.sops
-    nixosModules.sound
-    nixosModules.system
-    nixosModules.qemu
-    nixosModules.xorg
+    nixosFeatures.hardware.sound
+    nixosFeatures.development.docker
+    nixosFeatures.security.nitrokey
+    nixosFeatures.desktop.system
+    nixosFeatures.network.networking
+    nixosFeatures.programs.games
+    nixosFeatures.security.sops
+    nixosFeatures.development.qemu
+    nixosFeatures.desktop.i3
   ];
 
   programs.fuse.userAllowOther = true;
@@ -28,34 +23,33 @@
   system.stateVersion = "22.05";
 
   features = {
-    sops = {
+    security.sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;
       sshPath = "/nix/persist/etc/ssh";
     };
-    gpg.enable = true;
-    docker.enable = true;
-    locale.enable = true;
-    nix.enable = true;
-    restic.enable = true;
-    sound.enable = true;
-    system = {
+
+    security.nitrokey.enable = true;
+    development.docker.enable = true;
+    desktop.system.enable = true;
+    network.networking = {
       enable = true;
-      games = true;
+      restic.enable = true;
+      printing.enable = true;
     };
+    hardware.sound = {
+      enable = true;
+      headset.enable = true;
+    };
+    programs.games.enable = true;
 
-    qemu.enable = true;
+    development.qemu.host.enable = true;
 
-    xorg = {
+    desktop.i3 = {
       enable = true;
       # TODO: What does this do?
       videoDrivers = [ "modesetting" ];
     };
-
-    networking.enable = true;
-    networkmanager.enable = true;
-    printing.enable = true;
-    bluetooth.enable = true;
   };
 
   sops.secrets.troy-password = { neededForUsers = true; };

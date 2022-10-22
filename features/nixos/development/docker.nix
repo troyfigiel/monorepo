@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.features.development.docker;
 in {
-  options.features.development.enable = mkEnableOption "Docker";
+  options.features.development.docker.enable = mkEnableOption "Docker";
 
   config = mkIf cfg.enable (mkMerge [
     { virtualisation.docker.enable = true; }

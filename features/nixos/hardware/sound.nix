@@ -25,7 +25,7 @@ in {
       #services.mpd.enable = true;
     })
 
-    (mkIf cfg.enable && cfg.headset.enable (mkMerge [
+    (mkIf (cfg.enable && cfg.headset.enable) (mkMerge [
       {
         services.blueman.enable = true;
       }

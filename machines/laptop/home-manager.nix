@@ -1,4 +1,4 @@
-{ config, hmModules, impermanence, inputs, pkgs, ... }:
+{ config, hmFeatures, impermanence, inputs, pkgs, ... }:
 
 {
   home-manager = {
@@ -11,24 +11,23 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          hmModules.alacritty
-          hmModules.background
-          hmModules.dunst
-          hmModules.emacs
-          hmModules.firefox
-          hmModules.git
-          hmModules.gpg
-          hmModules.i3
-          hmModules.messenger
-          hmModules.nvim
-          hmModules.pass
-          hmModules.picom
-          hmModules.polybar
-          hmModules.rofi
-          hmModules.syncthing
-          hmModules.vscode
-          hmModules.xdg
-          hmModules.zsh
+          hmFeatures.programs.alacritty
+          hmFeatures.desktop.background
+          hmFeatures.desktop.dunst
+          hmFeatures.editors.emacs
+          hmFeatures.programs.firefox
+          hmFeatures.development.git
+          hmFeatures.security.gpg
+          hmFeatures.desktop.i3
+          hmFeatures.programs.messenger
+          hmFeatures.editors.nvim
+          hmFeatures.security.pass
+          hmFeatures.desktop.picom
+          hmFeatures.desktop.polybar
+          hmFeatures.desktop.rofi
+          hmFeatures.editors.vscode
+          hmFeatures.desktop.xdg
+          hmFeatures.programs.zsh
         ];
 
         home = {
@@ -128,39 +127,38 @@
         };
 
         features = {
-          alacritty.enable = true;
+          programs.alacritty.enable = true;
 
-          background = {
+          desktop.background = {
             enable = true;
             wallpaperDirectory = "/nix/persist/home/troy/.wallpapers";
           };
 
-          dunst.enable = true;
+          desktop.dunst.enable = true;
 
-          firefox = {
+          programs.firefox = {
             enable = true;
             defaultBrowser = true;
           };
 
-          git.enable = true;
-          gpg.enable = true;
-          i3.enable = true;
-          messenger.enable = true;
-          pass.enable = true;
-          picom.enable = true;
-          polybar.enable = true;
-          syncthing.enable = true;
-          vscode.enable = true;
-          xdg.enable = true;
-          emacs.enable = true;
-          rofi.enable = true;
+          development.git.enable = true;
+          security.gpg.enable = true;
+          desktop.i3.enable = true;
+          programs.messenger.enable = true;
+          security.pass.enable = true;
+          desktop.picom.enable = true;
+          desktop.polybar.enable = true;
+          editors.vscode.enable = true;
+          desktop.xdg.enable = true;
+          editors.emacs.enable = true;
+          desktop.rofi.enable = true;
 
-          nvim = {
+          editors.nvim = {
             enable = true;
             defaultEditor = true;
           };
 
-          zsh.enable = true;
+          programs.zsh.enable = true;
         };
       };
     };

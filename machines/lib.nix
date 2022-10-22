@@ -2,7 +2,7 @@
 
 let
   inherit (inputs.nixpkgs.lib) nixosSystem;
-  inherit (self) hmModules nixosModules;
+  inherit (self) hmFeatures nixosFeatures;
 in rec {
   createNixosSystem = dir:
     let
@@ -12,7 +12,7 @@ in rec {
       name = machine;
       value = nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs hmModules nixosModules impermanence; };
+        specialArgs = { inherit inputs hmFeatures nixosFeatures impermanence; };
         pkgs = self.legacyPackages.${system};
         modules = [ { networking.hostName = machine; } ./${dir} ];
       };
