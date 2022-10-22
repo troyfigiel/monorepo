@@ -3,8 +3,8 @@
 let
   inherit (builtins) listToAttrs;
   inherit (inputs.terranix.lib) terranixConfiguration;
-  inherit (self) terranixModules;
-  inherit (import ./lib.nix { inherit inputs self; }) createNixosSystem;
+  inherit (inputs.nixpkgs.lib) nixosSystem;
+  inherit (inputs.self) hmFeatures nixosFeatures terranixFeatures;
 in {
   perSystem = { system, ... }: {
     packages.default = terranixConfiguration {

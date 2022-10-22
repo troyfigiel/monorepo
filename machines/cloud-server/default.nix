@@ -7,10 +7,10 @@ in {
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
     inputs.simple-nixos-mailserver.nixosModules.mailserver
-    nixosModules.mail
-    nixosModules.searx
-    nixosModules.sops
-    nixosModules.website
+    nixosModules.security.sops
+    nixosModules.services.mail
+    nixosModules.services.searx
+    nixosModules.services.webhosting
   ];
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];
@@ -31,13 +31,15 @@ in {
   };
 
   features = {
-    sops = {
+    security.sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;
       sshPath = "/etc/ssh";
     };
-    website.enable = true;
-    mail.enable = true;
-    searx.enable = true;
+    services = {
+      webhosting.enable = true;
+      mail.enable = true;
+      searx.enable = true;
+    };
   };
 }
