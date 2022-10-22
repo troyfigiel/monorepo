@@ -9,10 +9,13 @@
 - Design is a human-oriented task, since a good design makes it easy for humans to make the necessary changes to software.
 - Therefore, there are no clear-cut metrics to adhere to. In fuzzy terminology, a design is bad if it is resistant to change.
     1. What is a good design for one set of possible changes, might be a bad design for another.
-- TODO: Is this a good example? There must be better ones I can think of.
 - For example, you can choose to either put all IaC in a separate directory or to place it with the modules that use it
 - If you have to change your cloud provider, the first design will be much more pleasant to work with.
 - But if you have to change the infrastructure only belonging to a single module, the second design will be better for you.
+- For example, the choice in my Nix code to use a primary user.
+- This strongly couples the home-manager setup of my primary user to my NixOS configuration, but it helps keep my code DRY
+- If I would need a more modular approach where the NixOS configuration is separate from the home-manager modules, I would need to duplicate the code.
+- However, because I mainly manage single-user machines, I do not need this clear separation between NixOS and home-manager and keeping my code DRY is more beneficial.
 - There are no clear-cut metrics that we can adhere to. The only important factors are:
     1. How fast can we make the change?
     2. How bugfree can we make the change?
@@ -27,3 +30,4 @@
 - Terraform over NixOps, but Terranix to make parameter sharing with Nix easier.
     - This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
 - sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.
+- flake-parts allows me to break up my huge flake into smaller flake modules. This makes the overall design more modular.

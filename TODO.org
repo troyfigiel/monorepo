@@ -18,11 +18,12 @@ More notes:
 5. Where should I define my features? In a flake-module?
 6. I should modularize my Terranix code. For example, my nginx virtualhosts also use my domain name. It might be better to have all those settings in a single location, namely in my cloud-server flake.
 7. Can I use agenix with Terranix? The advantage of agenix is that it uses my existing ssh infrastructure, meaning I do not need a gpg key for each ssh key plus I can commit the ssh keys and then manually add them to my machines after decrypting them through sops.
-8. Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
-9. Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
-10. Can I replace the Makefile by some nix run commands? What would make the most sense?
-11. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
-12. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
+8. Should I be using output in Terraform instead of local_file? Does it really make a difference for me?
+9. Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
+10. Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
+11. Can I replace the Makefile by some nix run commands? What would make the most sense?
+12. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
+13. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption
@@ -61,8 +62,8 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - Since these are kind of "meta-modules" that are only useful to keep my code DRY, it is best to keep the number of options as small as possible.
   - If a configuration does not vary between hosts, do not add it as an option
   - The exception is the "enable" option which allows me to easily add or delete configurations, plus it is standard in nixpkgs as well.
-- Because these modules are "meta-modules", I might want to rename them to distinguish them from the modules that I might need to create myself
-  - Profiles might be a good naming?
+- Rename virtualisation to development
+- Desktop contains everything I would normally put in home-manager and more
 
 ** website
 - Blogs and articles should be different
