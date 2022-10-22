@@ -10,6 +10,19 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 * TODOs
 
+** important note
+It is actually possible to define the same setting multiple times as long as the values are consistent. Booleans should be the same, lists will be concatenated, etc.
+However, what is not possible, is to define the same bind mounts multiple times. The options I set regarding persistence can only occur once across my entire configuration.
+For example, to enable Steam, I need to enable some hardware options, firewall options as well as bind mounts in my user homes.
+By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module.
+If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
+
+** another important note
+Call the modules that mainly deal with setting my config something like "my". Separate modules/nixos, modules/terranix, etc. and modules/nixos/my as a subdirectory.
+The goal of the "my" modules is to easily share my own configuration between different machines. They are not intended for other people to use.
+
+Rename reproducible-builds to nix-builds. The name reproducible-builds might be confusing since there is a community with that name.
+
 More notes:
 1. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
 2. I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
@@ -18,11 +31,17 @@ More notes:
 5. Where should I define my features? In a flake-module?
 6. I should modularize my Terranix code. For example, my nginx virtualhosts also use my domain name. It might be better to have all those settings in a single location, namely in my cloud-server flake.
 7. Can I use agenix with Terranix? The advantage of agenix is that it uses my existing ssh infrastructure, meaning I do not need a gpg key for each ssh key plus I can commit the ssh keys and then manually add them to my machines after decrypting them through sops.
-8. Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
-9. Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
-10. Can I replace the Makefile by some nix run commands? What would make the most sense?
-11. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
-12. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
+8. Should I be using output in Terraform instead of local_file? Does it really make a difference for me?
+9. Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
+10. Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
+11. Can I replace the Makefile by some nix run commands? What would make the most sense?
+12. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
+13. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
+14. For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
+
+I have tried out Proton for Steam (which is simply a setting in the Steam client), but with bad results.
+For some reason it keeps freezing and messed up my entire Steam install. I had to reinstall to fix the issues.
+To play games, it might just be better to have a separate HDD with a Windows install.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption
@@ -61,8 +80,8 @@ B00merang-Project's Windows themes to make it easier for any guests?
 - Since these are kind of "meta-modules" that are only useful to keep my code DRY, it is best to keep the number of options as small as possible.
   - If a configuration does not vary between hosts, do not add it as an option
   - The exception is the "enable" option which allows me to easily add or delete configurations, plus it is standard in nixpkgs as well.
-- Because these modules are "meta-modules", I might want to rename them to distinguish them from the modules that I might need to create myself
-  - Profiles might be a good naming?
+- Rename virtualisation to development
+- Desktop contains everything I would normally put in home-manager and more
 
 ** website
 - Blogs and articles should be different

@@ -57,7 +57,7 @@
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
       imports = [
-        ./overlay
+        ./packages
         ./machines
         ./modules/home-manager
         ./modules/nixos

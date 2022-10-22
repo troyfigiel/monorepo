@@ -39,14 +39,11 @@ in {
         inxi
         vim
         brightnessctl
+        bpytop
       ];
     }
 
-    (mkIf cfg.games {
-      # TODO: Is there a way to set this up with home-manager? Not system-wide
-      # TODO: How do I use Proton in Nix?
-      programs.steam.enable = true;
-    })
+    (mkIf cfg.games { programs.steam.enable = true; })
 
     (optionalAttrs impermanence {
       environment.persistence."/nix/persist" = {
