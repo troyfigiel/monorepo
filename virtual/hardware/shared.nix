@@ -1,15 +1,7 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
-
   boot = {
-    initrd = {
-      availableKernelModules =
-        [ "xhci_pci" "virtio_pci" "usbhid" "usb_storage" "sr_mod" ];
-      kernelModules = [ ];
-    };
-
     kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {
@@ -38,7 +30,4 @@
   };
 
   swapDevices = [ ];
-
-  networking.useDHCP = lib.mkDefault true;
-  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }

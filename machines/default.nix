@@ -20,7 +20,7 @@ in {
     };
   };
 
-  flake.nixosConfigurations = listToAttrs
-    (map createNixosSystem [ "cloud-server" "laptop" "virtual-devbox" ]);
+  flake.nixosConfigurations =
+    listToAttrs (map createNixosSystem [ "cloud-server" "laptop" ]);
 }
 

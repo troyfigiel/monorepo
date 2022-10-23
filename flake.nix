@@ -59,6 +59,7 @@
       imports = [
         ./packages
         ./machines
+        ./virtual
         ./modules/home-manager
         ./modules/nixos
         ./modules/terranix

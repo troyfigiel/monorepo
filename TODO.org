@@ -31,6 +31,7 @@ More notes:
 11. Can I replace the Makefile by some nix run commands? What would make the most sense?
 12. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
 13. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
+14. Impermanence needs the right permissions everywhere! Otherwise it will be very painful having to create all the directories manually.
 
 Learning more about Nix:
 - Start using LUKS Disk Encryption

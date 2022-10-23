@@ -1,8 +1,7 @@
-{ inputs, config, nixosModules, pkgs, ... }:
+{ inputs, nixosModules, pkgs, ... }:
 
 {
   imports = [
-    ./hardware-configuration.nix
     ./home-manager.nix
     inputs.sops-nix.nixosModules.sops
     inputs.impermanence.nixosModules.impermanence
@@ -11,7 +10,6 @@
     nixosModules.docker
     nixosModules.locale
     nixosModules.nix
-    nixosModules.qemu-guest
     nixosModules.system
     nixosModules.xorg
   ];
@@ -20,7 +18,6 @@
     docker.enable = true;
     locale.enable = true;
     nix.enable = true;
-    qemu-guest.enable = true;
     system.enable = true;
     xorg = {
       enable = true;
