@@ -36,7 +36,7 @@ in {
           mechatroner.rainbow-csv
           ms-azuretools.vscode-docker
           # TODO: This is not supported on aarch64-linux
-          # ms-python.python
+          ms-python.python
           ms-python.vscode-pylance
           ms-vscode-remote.remote-ssh
           ms-toolsai.jupyter

@@ -5,6 +5,10 @@
     legacyPackages = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
+
+      # Software that is not built for aarch64 does seem to work fine.
+      # TODO: Does it make sense setting this for x86_64 systems as well?
+      config.allowUnsupportedSystem = true;
       overlays = [
         self.overlays.default
         inputs.nix-vscode-marketplace.overlays.${system}.default

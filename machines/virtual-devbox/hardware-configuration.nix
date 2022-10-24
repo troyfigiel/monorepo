@@ -6,7 +6,7 @@
   boot = {
     initrd = {
       availableKernelModules =
-        [ "xhci_pci" "virtio_pci" "usbhid" "usb_storage" "sr_mod" ];
+        [ "xhci_pci" "uhci_hcd" "virtio_pci" "usbhid" "usb_storage" "sr_mod" ];
       kernelModules = [ ];
     };
 

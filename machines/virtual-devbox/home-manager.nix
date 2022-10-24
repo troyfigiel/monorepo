@@ -13,10 +13,12 @@
           inputs.impermanence.nixosModules.home-manager.impermanence
           hmModules.alacritty
           hmModules.background
+          hmModules.emacs
           hmModules.git
           hmModules.i3
           #   ../../modules/home-manager/picom.nix
           hmModules.polybar
+          hmModules.rofi
           hmModules.vscode
           hmModules.xdg
           hmModules.zsh
@@ -41,6 +43,7 @@
         features = {
           alacritty.enable = true;
           git.enable = true;
+          emacs.enable = true;
           vscode.enable = true;
           xdg.enable = true;
           zsh.enable = true;
@@ -48,6 +51,7 @@
           i3.enable = true;
           #   picom.enable = true;
           polybar.enable = true;
+          rofi.enable = true;
         };
 
         home.persistence."/nix/persist/${cfg.home.homeDirectory}" = {
