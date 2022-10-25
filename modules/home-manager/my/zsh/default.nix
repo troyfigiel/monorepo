@@ -17,8 +17,8 @@ in {
         do = config.xdg.userDirs.documents;
         dl = config.xdg.userDirs.download;
         pr = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
-        rb =
-          "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/reproducible-builds";
+        nb =
+          "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/nix-builds";
         # TODO: This brings me to the Nix store. I might want to try it differently.
         sh = "${config.home.homeDirectory}/share";
       };

@@ -11,6 +11,10 @@ Since the lack of Nix examples has been a major stumbling block for me initially
 - https://github.com/Mic92/dotfiles
 - https://github.com/mitchellh/nixos-config
 
+** Modules
+
+The modules that are intended for my own use are prefixed with _my_. These are modules that contain my config, so it is easy for me to reproduce this config across different machines.
+
 ** TODOs
 
 Since I am working on this project by myself, I am using TODO.org to organize some of my thoughts and possible future directions for my reproducible builds.
