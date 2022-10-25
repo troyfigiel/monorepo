@@ -12,6 +12,7 @@ in {
       # TODO: Do I really need this? This is slowing down my startup times?
       # services.emacs.enable = true;
 
+      # We do not need to set emacsNativeComp, because the default emacs package is already natively compiled.
       programs.emacs = {
         enable = true;
         init = {
@@ -76,7 +77,7 @@ in {
       };
 
       home.sessionVariables = {
-        ORG_DIRECTORY = "/home/troy/projects/private/reproducible-builds/org/";
+        ORG_DIRECTORY = "/home/troy/projects/private/nix-builds/org/";
       };
     }
 

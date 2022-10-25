@@ -17,12 +17,6 @@ For example, to enable Steam, I need to enable some hardware options, firewall o
 By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module.
 If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
 
-** another important note
-Call the modules that mainly deal with setting my config something like "my". Separate modules/nixos, modules/terranix, etc. and modules/nixos/my as a subdirectory.
-The goal of the "my" modules is to easily share my own configuration between different machines. They are not intended for other people to use.
-
-Rename reproducible-builds to nix-builds. The name reproducible-builds might be confusing since there is a community with that name.
-
 More notes:
 1. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
 2. I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
