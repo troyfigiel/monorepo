@@ -1,22 +1,22 @@
 {
   flake.hmModules = {
-    alacritty = import ./alacritty.nix;
-    background = import ./background.nix;
-    dunst = import ./dunst.nix;
-    emacs = import ./emacs;
-    firefox = import ./firefox.nix;
-    git = import ./git.nix;
-    gpg = import ./gpg.nix;
-    i3 = import ./i3.nix;
-    messenger = import ./messenger.nix;
-    nvim = import ./nvim.nix;
-    pass = import ./pass.nix;
-    picom = import ./picom.nix;
-    polybar = import ./polybar.nix;
-    rofi = import ./rofi;
-    syncthing = import ./syncthing.nix;
-    vscode = import ./vscode.nix;
-    xdg = import ./xdg.nix;
-    zsh = import ./zsh;
+    alacritty = import ./my/alacritty.nix;
+    background = import ./my/background.nix;
+    dunst = import ./my/dunst.nix;
+    emacs = import ./my/emacs;
+    firefox = import ./my/firefox.nix;
+    git = import ./my/git.nix;
+    gpg = import ./my/gpg.nix;
+    i3 = import ./my/i3.nix;
+    messenger = import ./my/messenger.nix;
+    nvim = import ./my/nvim.nix;
+    pass = import ./my/pass.nix;
+    picom = import ./my/picom.nix;
+    polybar = import ./my/polybar.nix;
+    rofi = import ./my/rofi;
+    syncthing = import ./my/syncthing.nix;
+    vscode = import ./my/vscode.nix;
+    xdg = import ./my/xdg.nix;
+    zsh = import ./my/zsh;
   };
 }

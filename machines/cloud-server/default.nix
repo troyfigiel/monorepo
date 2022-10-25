@@ -30,7 +30,7 @@ in {
     };
   };
 
-  features = {
+  my = {
     sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;

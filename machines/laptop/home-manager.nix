@@ -127,7 +127,7 @@
           allowOther = true;
         };
 
-        features = {
+        my = {
           alacritty.enable = true;
 
           background = {

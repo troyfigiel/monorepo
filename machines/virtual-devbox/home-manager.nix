@@ -40,7 +40,7 @@
         };
         programs.dircolors.enable = true;
 
-        features = {
+        my = {
           alacritty.enable = true;
           git.enable = true;
           emacs.enable = true;

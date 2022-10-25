@@ -1,7 +1,7 @@
 let parameters = import ./parameters.nix;
 in {
 
-  features = {
+  my = {
     machines.vultr = {
       enable = true;
       machine = parameters.flake.machine;

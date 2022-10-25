@@ -1,6 +1,6 @@
 {
   flake.terranixModules = {
-    machines = import ./machines;
-    records = import ./records;
+    machines = import ./my/machines;
+    records = import ./my/records;
   };
 }

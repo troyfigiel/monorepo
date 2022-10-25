@@ -27,7 +27,7 @@
 
   system.stateVersion = "22.05";
 
-  features = {
+  my = {
     sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;

@@ -16,7 +16,7 @@
     nixosModules.xorg
   ];
 
-  features = {
+  my = {
     docker.enable = true;
     locale.enable = true;
     nix.enable = true;

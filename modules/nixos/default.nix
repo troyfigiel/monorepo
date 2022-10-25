@@ -1,22 +1,22 @@
 {
   flake.nixosModules = {
-    bluetooth = import ./bluetooth.nix;
-    docker = import ./docker.nix;
-    gpg = import ./gpg.nix;
-    locale = import ./locale.nix;
-    mail = import ./mail.nix;
-    networking = import ./networking.nix;
-    networkmanager = import ./networkmanager.nix;
-    nix = import ./nix.nix;
-    printing = import ./printing.nix;
-    qemu-guest = import ./qemu-guest.nix;
-    qemu = import ./qemu.nix;
-    restic = import ./restic.nix;
-    searx = import ./searx.nix;
-    sops = import ./sops.nix;
-    sound = import ./sound.nix;
-    system = import ./system.nix;
-    website = import ./website.nix;
-    xorg = import ./xorg.nix;
+    bluetooth = import ./my/bluetooth.nix;
+    docker = import ./my/docker.nix;
+    gpg = import ./my/gpg.nix;
+    locale = import ./my/locale.nix;
+    mail = import ./my/mail.nix;
+    networking = import ./my/networking.nix;
+    networkmanager = import ./my/networkmanager.nix;
+    nix = import ./my/nix.nix;
+    printing = import ./my/printing.nix;
+    qemu-guest = import ./my/qemu-guest.nix;
+    qemu = import ./my/qemu.nix;
+    restic = import ./my/restic.nix;
+    searx = import ./my/searx.nix;
+    sops = import ./my/sops.nix;
+    sound = import ./my/sound.nix;
+    system = import ./my/system.nix;
+    website = import ./my/website.nix;
+    xorg = import ./my/xorg.nix;
   };
 }
