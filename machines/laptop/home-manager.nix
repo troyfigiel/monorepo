@@ -151,7 +151,9 @@
           polybar.enable = true;
           syncthing.enable = true;
           vscode.enable = true;
-          xdg.enable = true;
+          directories =
+            [ "documents" "downloads" "projects" "audio" "pictures" "videos" ];
+
           emacs.enable = true;
           rofi.enable = true;
 
