@@ -13,14 +13,18 @@ in {
       autocd = true;
 
       # TODO: Will I actually use this as much when I use lf to move around?
+      # TODO: Enable based on the values of my.directories
       dirHashes = {
+        au = config.xdg.userDirs.music;
+        pi = config.xdg.userDirs.pictures;
         do = config.xdg.userDirs.documents;
         dl = config.xdg.userDirs.download;
         pr = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
         nb =
           "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/nix-builds";
         # TODO: This brings me to the Nix store. I might want to try it differently.
-        sh = "${config.home.homeDirectory}/share";
+        sh = config.xdg.userDirs.publicShare;
+        vi = config.xdg.userDirs.videos;
       };
 
       # TODO: How to set case-insensitive completion?

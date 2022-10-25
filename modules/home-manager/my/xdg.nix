@@ -1,45 +1,55 @@
 { impermanence, config, lib, ... }:
 
 with lib;
-let cfg = config.my.xdg;
+let cfg = config.my;
 in {
-  options.my.xdg = {
-    enable = mkEnableOption "xdg";
-    # directories = mkOption {
-    #   type = types.listOf types.str;
-    #   description = ''
-    #     Which directories to activate
-    #   '';
-    # };
+  options.my.directories = mkOption {
+    type = types.listOf (types.enum [
+      "documents"
+      "downloads"
+      "audio"
+      "pictures"
+      "share"
+      "videos"
+      "projects"
+    ]);
+    default = [ ];
+    description = "Directories to enable.";
   };
 
-  config = mkIf cfg.enable (mkMerge [
+  config = let homeDir = config.home.homeDirectory;
+  in mkIf (cfg.directories != [ ]) (mkMerge [
     {
-      xdg = {
+      xdg = let
+        setXDGUserDir = dir:
+          if elem dir cfg.directories then "${homeDir}/${dir}" else homeDir;
+      in {
         enable = true;
-        userDirs = {
-          enable = true;
-          createDirectories = false;
+        userDirs = (mkMerge [
+          {
+            enable = true;
+            createDirectories = false;
 
-          desktop = config.home.homeDirectory;
-          documents = "${config.home.homeDirectory}/documents";
-          download = "${config.home.homeDirectory}/downloads";
-          music = config.home.homeDirectory;
-          pictures = config.home.homeDirectory;
-          publicShare = "${config.home.homeDirectory}/share";
-          templates = config.home.homeDirectory;
-          videos = config.home.homeDirectory;
+            desktop = homeDir;
+            documents = setXDGUserDir "documents";
+            download = setXDGUserDir "downloads";
+            music = setXDGUserDir "audio";
+            pictures = setXDGUserDir "pictures";
+            publicShare = setXDGUserDir "share";
+            templates = homeDir;
+            videos = setXDGUserDir "videos";
+          }
 
-          extraConfig = {
-            XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
-          };
-        };
+          (mkIf (elem "projects" cfg.directories) {
+            extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };
+          })
+        ]);
       };
     }
 
     (optionalAttrs impermanence {
-      home.persistence."/nix/persist/${config.home.homeDirectory}" = {
-        directories = [ "documents" "downloads" "projects" ];
+      home.persistence."/nix/persist/${homeDir}" = {
+        directories = cfg.directories;
         allowOther = true;
       };
     })

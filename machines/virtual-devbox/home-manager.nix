@@ -45,7 +45,9 @@
           git.enable = true;
           emacs.enable = true;
           vscode.enable = true;
-          xdg.enable = true;
+
+          directories = [ "documents" "downloads" "projects" ];
+
           zsh.enable = true;
           background.enable = true;
           i3.enable = true;
