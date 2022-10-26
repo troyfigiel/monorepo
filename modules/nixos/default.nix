@@ -16,6 +16,7 @@
     sops = import ./my/sops.nix;
     sound = import ./my/sound.nix;
     system = import ./my/system.nix;
+    users = import ./my/users;
     website = import ./my/website.nix;
     xorg = import ./my/xorg.nix;
   };

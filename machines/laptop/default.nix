@@ -20,6 +20,7 @@
     nixosModules.sound
     nixosModules.system
     nixosModules.qemu
+    nixosModules.users
     nixosModules.xorg
   ];
 
@@ -28,6 +29,8 @@
   system.stateVersion = "22.05";
 
   my = {
+    users.enable = true;
+
     sops = {
       enable = true;
       defaultSopsFile = ./secrets.yaml;
