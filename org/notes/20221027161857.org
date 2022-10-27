@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6b3fb7f5-285d-4485-8199-9127db76e164
+:END:
+#+title: Sprint review
+#+filetags: :stub:
+
+The sprint review is where the [[id:5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e][Scrum team]] shows the completed work from the previous [[id:0fc2466c-df40-4b26-8eb1-67dcf858f465][Sprint]] to the [[id:7027bb9d-cacb-49b4-ba35-ccd38058e548][Product owner]].

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       68c4b4f4-7b6c-4d22-8ba9-73466bdbae76
+:END:
+#+title: As a, I want, So that
+#+filetags: :stub:

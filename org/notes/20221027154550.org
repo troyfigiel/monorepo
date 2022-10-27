@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       0fc2466c-df40-4b26-8eb1-67dcf858f465
+:END:
+#+title: Sprint
+#+filetags: :stub:
+
+The sprint is a time span of one to three weeks in which the topics in the [[id:2b4cdf9e-e3fc-443c-9013-de7b5173ef98][Sprint backlog]] are worked on.
+
+During the sprint, [[id:b43fad25-558b-4692-af4e-38f567f5ff4a][Daily Scrum meetings]] are held for the [[id:5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e][Scrum team]].
+
+The outcome of a sprint is a [[id:0467dcbd-0cab-4483-b6d4-f7f22e4091df][Potentially shippable product]].
+
+After the sprint the [[id:6b3fb7f5-285d-4485-8199-9127db76e164][Sprint review]] and [[id:aeb194cb-58ec-4d67-b755-8cf7f790ab8d][Sprint retrospective]] are held.

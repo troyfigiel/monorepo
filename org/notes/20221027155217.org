@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f57fd375-53ba-445b-b505-55e7568889dd
+:END:
+#+title: Scrum master
+#+filetags: :stub:
+
+The Scrum master is responsible for keeping the Scrum process going and running the meetings.

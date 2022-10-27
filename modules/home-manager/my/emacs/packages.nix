@@ -642,8 +642,9 @@ in {
       '';
     };
 
+    # TODO: I get an error that tex cannot be loaded. Related to the other todo?
     tex = {
-      enable = true;
+      enable = false;
       # TODO: This was needed when downloading it with straight. Do I still need to do this?
       # init = "(require 'texmathp)";
     };

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a44237ec-1770-4f35-8968-854644d6ca8e
+:ROAM_ALIASES: MVP
+:END:
+#+title: Minimal viable product
+#+filetags: :stub:

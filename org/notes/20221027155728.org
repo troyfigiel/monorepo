@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       2b9aa9df-4a48-4611-b947-a3bb75d2ffaa
+:END:
+#+title: User story
+#+filetags: :stub:
+
+A user story is a description of a feature to be implemented.
+Usually this is done using an [[id:68c4b4f4-7b6c-4d22-8ba9-73466bdbae76][As a, I want, So that]] approach.

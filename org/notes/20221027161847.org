@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b43fad25-558b-4692-af4e-38f567f5ff4a
+:END:
+#+title: Daily Scrum meeting
+#+filetags: :stub:
+
+The daily Scrum is a [[id:5191466a-a842-4d57-9b62-cad7c6310956][Stand-up meeting]] where the [[id:5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e][Scrum team]] discusses what they have completed, what they are working on and any [[id:7652ba67-e4f1-465a-a886-138c03b06c79][Blockers]].

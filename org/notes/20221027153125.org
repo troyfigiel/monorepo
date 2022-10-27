@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       3e5572d5-7cd4-4ebc-843e-f531ddc819d2
+:END:
+#+title: Agile development
+#+filetags: :stub:

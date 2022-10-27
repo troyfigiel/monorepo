@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0467dcbd-0cab-4483-b6d4-f7f22e4091df
+:END:
+#+title: Potentially shippable product
+#+filetags: :stub:
+
+After each [[id:0fc2466c-df40-4b26-8eb1-67dcf858f465][Sprint]], the [[id:7027bb9d-cacb-49b4-ba35-ccd38058e548][Product owner]] can decide whether the product is ready to be shipped
+or whether new features still need to be added in additional [[id:0fc2466c-df40-4b26-8eb1-67dcf858f465][Sprints]].

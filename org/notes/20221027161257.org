@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       e6efa71c-968a-4c19-80d1-3c7c6e04b0b8
+:END:
+#+title: Story point
+#+filetags: :stub:
