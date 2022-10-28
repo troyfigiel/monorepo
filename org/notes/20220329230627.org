@@ -26,3 +26,7 @@ https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-mo
 - [[id:3d2fd9c5-f880-4e6c-860c-92cd90e5491f][Multirepo]]
 
 - [[id:86fb617d-fb13-4707-8c4f-39d443388402][Scope]]
+
+Data related:
+- [[id:9f1f82e4-818e-4571-989b-4a8f2a92a8e3][Data science]]
+- [[id:72c118e7-5a28-4800-a887-ad435d389d75][Data engineering]]

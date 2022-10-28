@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9e92a377-8bf5-4be8-9ca0-4ec9e7231164
+:END:
+#+title: CAP theorem
+#+filetags: :stub:

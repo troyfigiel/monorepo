@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       99fb0ee5-11f8-41de-9c98-8d27424682e4
+:ROAM_ALIASES: "Hub-and-spoke network topology"
+:END:
+#+title: Star network topology
+#+filetags: :stub:

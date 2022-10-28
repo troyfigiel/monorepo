@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       72c118e7-5a28-4800-a887-ad435d389d75
+:END:
+#+title: Data engineering
+#+filetags: :stub:
+
+Architectural patterns:
+- [[id:99fb0ee5-11f8-41de-9c98-8d27424682e4][Star network topology]]
+- [[id:ec74a43b-86f4-4b01-8201-e0dade746d90][Lambda architecture]]
+
+Data processing:
+- Processing of [[id:8f45a23a-3f0b-4125-8701-fda7ba356b52][Data streams]]
+- [[id:7a6ba049-a1cd-43f0-af52-b915f8540759][Batch processing]]

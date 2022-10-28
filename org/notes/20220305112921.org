@@ -33,7 +33,7 @@ Machine learning is used in many different fields:
 
 There are also important [[id:f6a2bfbc-4e4e-45a7-976b-9f7b69b01d0d][Ethical concerns in machine learning]].
 
-Some examples of models:
+Some examples of [[id:87fb8d8c-c174-4a52-ab30-b92717f3fa54][Machine learning models]]:
 - [[id:cb309f5a-c65c-4c56-8ea0-f5a5e86da157][Logistic regression]]
 - [[id:97d4f725-30c0-4dad-8eab-4044ddbe702f][Decision tree]]
 - [[id:361062e5-f9b5-4356-b771-8f26b90ed065][Boosting]]

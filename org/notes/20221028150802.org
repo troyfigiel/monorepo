@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       018bc870-f8e9-408e-a3c5-e048983837ea
+:END:
+#+title: Latency
+#+filetags: :stub:
