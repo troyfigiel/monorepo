@@ -30,7 +30,7 @@ in {
           brettm12345.nixfmt-vscode
           bungcip.better-toml
           christian-kohler.path-intellisense
-          eamodio.gitlens
+          donjayamanne.githistory
           humao.rest-client
           mattn.lisp
           mechatroner.rainbow-csv
@@ -74,11 +74,6 @@ in {
         "explorer.confirmDragAndDrop" = false;
         "files.autoSave" = "afterDelay";
         "git.ignoreMissingGitWarning" = false;
-        "gitlens.codeLens.authors.enabled" = false;
-        "gitlens.codeLens.enabled" = false;
-        "gitlens.currentLine.enabled" = false;
-        "gitlens.showWelcomeOnInstall" = false;
-        "gitlens.showWhatsNewAfterUpgrades" = false;
         # The keyCode dispatch is needed because I make my
         # caps lock into a second escape key.
         # Unfortunately, this also messes up a whole bunch of
