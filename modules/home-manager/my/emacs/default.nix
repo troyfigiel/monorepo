@@ -9,9 +9,6 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      # TODO: Do I really need this? This is slowing down my startup times?
-      # services.emacs.enable = true;
-
       # We do not need to set emacsNativeComp, because the default emacs package is already natively compiled.
       programs.emacs = {
         enable = true;
@@ -26,18 +23,18 @@ in {
           '';
 
           prelude = ''
-            (defvar tf/default-font-size 120)
-            (defvar tf/default-variable-font-size 120)
+            (defvar tf/default-font-size 140)
+            (defvar tf/default-variable-font-size 140)
 
-            (set-face-attribute 'default nil :height tf/default-font-size)
+            (set-face-attribute 'default nil :font "Inconsolata" :height tf/default-font-size)
 
             ;; Set the fixed pitch face
-            (set-face-attribute 'fixed-pitch nil :height tf/default-font-size)
+            (set-face-attribute 'fixed-pitch nil :font "Inconsolata" :height tf/default-font-size)
 
             ;; Set the variable pitch face
-            (set-face-attribute 'variable-pitch nil :height tf/default-variable-font-size :weight 'regular)
+            (set-face-attribute 'variable-pitch nil :font "Inconsolata" :height tf/default-variable-font-size :weight 'regular)
 
-            (defvar tf/frame-transparency '(100 . 100))
+            (defvar tf/frame-transparency '(90 . 90))
 
             (set-frame-parameter (selected-frame) 'alpha tf/frame-transparency)
             (add-to-list 'default-frame-alist `(alpha . ,tf/frame-transparency))
@@ -54,7 +51,7 @@ in {
             (setq sentence-end-double-space nil)
 
             ;; Without the visible bell, hitting the edges of a file will make an annoying noise.
-            ;; TODOC: Is this really the case?
+            ;; TODO: Is this really the case?
             (setq visible-bell t)
             (column-number-mode 1)
           '';
@@ -62,10 +59,9 @@ in {
           evil = {
             enable = true;
             config = ''
-              (setq evil-want-C-u-scroll t)
-              (setq evil-want-C-i-jump nil)
-              (setq evil-undo-system 'undo-tree)
-              (setq evil-mode-line-format nil)
+              ;; evil seems to require customize for all its variables
+              (customize-set-variable 'evil-want-C-u-scroll t)
+              (customize-set-variable 'evil-undo-system 'undo-redo)
             '';
           };
 

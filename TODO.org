@@ -25,12 +25,13 @@ More notes:
 5. Can I use agenix with Terranix? The advantage of agenix is that it uses my existing ssh infrastructure, meaning I do not need a gpg key for each ssh key plus I can commit the ssh keys and then manually add them to my machines after decrypting them through sops.
 6. Should I be using output in Terraform instead of local_file? Does it really make a difference for me?
 7. Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
-8. Can I replace the Makefile by some nix run commands? What would make the most sense?
+8. Can I replace the Makefile by some nix run commands? What would make the most sense? The nice thing about nix run commands, is that they can encapsulate certain packages that need to be downloaded. For example, if I need a find command in my Makefile, it needs to already be installed.
 9. How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
 10. Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
 11. For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
 12. Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
 13. I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
+14. emacs-init should create config as a list. This way the module system can merge the lists together and I can modularize my config better.
 
 I have tried out Proton for Steam (which is simply a setting in the Steam client), but with bad results.
 For some reason it keeps freezing and messed up my entire Steam install. I had to reinstall to fix the issues.
