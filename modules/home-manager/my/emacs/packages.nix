@@ -2,9 +2,19 @@
 # TODO: Add latex.el from my emacs.d
 { pkgs, ... }:
 
-let leaderKey = "SPC";
-in {
-  imports = [ ./navigation ./development ./theme ];
+{
+  imports = [
+    ./treemacs.nix
+    ./completion.nix
+    ./dired.nix
+    ./magit.nix
+    ./popper.nix
+    ./development.nix
+    ./terminal.nix
+    ./theme.nix
+    ./progmodes
+    ./textmodes
+  ];
 
   programs.emacs.init.usePackage = {
     # TODO: This should not be here, but for some reason I cannot use (require 'no-littering) in either prelude or earlyInit of the usePackage definition.
@@ -34,25 +44,12 @@ in {
     #   ''];
     # };
 
-    default-text-scale = { enable = true; };
+    # default-text-scale = { enable = true; };
 
-    page-break-lines = {
-      enable = false;
-      diminish = [ "page-break-lines-mode" ];
-      config = "(global-page-break-lines-mode 1)";
-    };
-
-    flyspell = {
-      enable = true;
-      hook = [ "(text-mode . flyspell-mode)" ];
-      extraPackages = [ pkgs.ispell ];
-    };
-
-    whitespace-cleanup-mode = {
-      enable = true;
-      diminish = [ "whitespace-cleanup-mode" ];
-      hook = [ "text-mode" ];
-    };
+    # page-break-lines = {
+    #   enable = false;
+    #   config = "(global-page-break-lines-mode 1)";
+    # };
 
     xref = { enable = true; };
 
@@ -61,7 +58,7 @@ in {
       # TODO: Move dashboard config to theme/dashboard.nix
       config = ''
         (evil-set-initial-state 'messages-buffer-mode 'normal)
-        (evil-set-initial-state 'dashboard-mode 'normal)
+        ;; (evil-set-initial-state 'dashboard-mode 'normal)
       '';
       general = [''
         (:states 'motion
@@ -70,60 +67,28 @@ in {
       ''];
     };
 
-    ses = {
-      enable = true;
-      hook = [ "(ses-mode . linum-mode)" ];
-    };
+    # ses = {
+    #   enable = true;
+    #   hook = [ "(ses-mode . linum-mode)" ];
+    # };
 
-    avy = {
-      enable = true;
-      # general = [ ''(:states 'motion "f" #'evil-avy-goto-char-2)'' ];
-    };
+    # avy = {
+    #   enable = true;
+    #   # general = [ ''(:states 'motion "f" #'evil-avy-goto-char-2)'' ];
+    # };
 
     super-save = {
       enable = true;
-      diminish = [ "super-save-mode" ];
       hook = [
         "(find-file . (lambda () (setq buffer-save-without-query t)))"
         "(after-init . super-save-mode)"
       ];
     };
 
-    persistent-scratch = {
-      enable = true;
-      hook = [ "(after-init . persistent-scratch-autosave-mode)" ];
-      custom = {
-        persistent-scratch-backup-directory = ''
-          (concat (file-name-as-directory no-littering-var-directory) "persistent-scratch-backups")
-        '';
-      };
-      config = "(persistent-scratch--auto-restore)";
-    };
-
-    bufler = {
-      enable = false;
-      custom = { bufler-workspace-mode = "t"; };
-    };
-
-    daemons = { enable = true; };
-
-    zoom = {
-      enable = true;
-      diminish = [ "zoom-mode" ];
-      hook = [ "(after-init . zoom-mode)" ];
-      custom = { zoom-size = "'(0.618 . 0.618)"; };
-    };
-
-    dimmer = {
-      enable = true;
-      hook = [ "(after-init . dimmer-mode)" ];
-      custom = { dimmer-fraction = "0.35"; };
-      config = ''
-        (dimmer-configure-company-box)
-        (dimmer-configure-magit)
-        (dimmer-configure-org)
-        (dimmer-configure-which-key)
-      '';
-    };
+    # zoom = {
+    #   enable = true;
+    #   hook = [ "(after-init . zoom-mode)" ];
+    #   custom = { zoom-size = "'(0.618 . 0.618)"; };
+    # };
   };
 }

@@ -79,6 +79,7 @@ in {
         ls = "ls --color=auto -h";
         lg = "lazygit";
         mv = "mv -i"; # Ask before overwriting
+        ec = "emacsclient -cn";
       };
     };
 

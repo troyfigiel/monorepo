@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let leaderKey = "SPC";
+let leaderKey = "C-SPC";
 in {
   programs.emacs.init.usePackage = {
     eglot = {
@@ -37,9 +37,9 @@ in {
         dap-python-debugger = "'debugpy";
       };
       general = [''
-        (:states 'normal
-         "${leaderKey} l"  '(:ignore t :which-key "languages")
-         "${leaderKey} lp" '(:ignore t :which-key "python"))
+        (:prefix "${leaderKey}"
+         "l"  '(:ignore t :which-key "languages")
+         "lp" '(:ignore t :which-key "python"))
       ''];
     };
 
@@ -47,18 +47,17 @@ in {
       enable = true;
       config = "(pyvenv-mode 1)";
       general = [''
-        (:states 'normal
-         "${leaderKey} lpv"  '(:ignore t :which-key "pyvenv")
-         "${leaderKey} lpva" 'pyvenv-activate
-         "${leaderKey} lpvd" 'pyvenv-deactivate)
+        (:prefix "${leaderKey}"
+         "lpv"  '(:ignore t :which-key "pyvenv")
+         "lpva" 'pyvenv-activate
+         "lpvd" 'pyvenv-deactivate)
       ''];
     };
 
     poetry = {
       enable = true;
       general = [''
-        (:states 'normal
-         "${leaderKey} lpp" 'poetry)
+        (:prefix "${leaderKey}" "lpp" 'poetry)
       ''];
     };
   };

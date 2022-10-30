@@ -1,5 +1,7 @@
 { impermanence, config, lib, ... }:
 
+# TODO: The goal is to open emacsclient from the terminal as a project manager.
+# In this case I do not need dired, a dashboard, etc. etc. It will trim down my Emacs config considerably.
 with lib;
 let cfg = config.my.emacs;
 in {
@@ -9,6 +11,12 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
+      services.emacs = {
+        enable = true;
+        startWithUserSession = true;
+        defaultEditor = true;
+      };
+
       # We do not need to set emacsNativeComp, because the default emacs package is already natively compiled.
       programs.emacs = {
         enable = true;
@@ -23,37 +31,12 @@ in {
           '';
 
           prelude = ''
-            (defvar tf/default-font-size 140)
-            (defvar tf/default-variable-font-size 140)
-
-            (set-face-attribute 'default nil :font "Inconsolata" :height tf/default-font-size)
-
-            ;; Set the fixed pitch face
-            (set-face-attribute 'fixed-pitch nil :font "Inconsolata" :height tf/default-font-size)
-
-            ;; Set the variable pitch face
-            (set-face-attribute 'variable-pitch nil :font "Inconsolata" :height tf/default-variable-font-size :weight 'regular)
-
-            (defvar tf/frame-transparency '(90 . 90))
-
-            (set-frame-parameter (selected-frame) 'alpha tf/frame-transparency)
-            (add-to-list 'default-frame-alist `(alpha . ,tf/frame-transparency))
-
-            (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
-            (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-            (setq mode-line-percent-position nil)
-
-            ;; No custom file. Complete reproducibility.
+            (add-to-list 'default-frame-alist '(alpha 90 . 90))
             (setq custom-file null-device)
-
-            ;; By default emacs requires two spaces after a period to end a sentence. This is an old default that interferes with evil.
             (setq sentence-end-double-space nil)
-
-            ;; Without the visible bell, hitting the edges of a file will make an annoying noise.
-            ;; TODO: Is this really the case?
             (setq visible-bell t)
             (column-number-mode 1)
+            (setq initial-scratch-message "")
           '';
 
           evil = {

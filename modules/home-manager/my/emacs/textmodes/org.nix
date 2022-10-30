@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
-let leaderKey = "SPC";
-in {
+{
   programs.emacs.init.usePackage = {
     org = {
       enable = true;
@@ -40,7 +39,6 @@ in {
     org-modern = {
       enable = true;
       hook = [ "(after-init . global-org-modern-mode)" ];
-      custom = { line-spacing = "0.2"; };
     };
 
     # TODO: Does this interfere with org-modern?

@@ -3,6 +3,20 @@
     vertico = {
       enable = true;
       hook = [ "(after-init . vertico-mode)" ];
+      custom = { vertico-count = "5"; };
+    };
+
+    vertico-buffer = {
+      enable = true;
+      after = [ "vertico" ];
+      hook = [ "(vertico-mode . vertico-buffer-mode)" ];
+      custom = {
+        vertico-buffer-display-action = ''
+          `(display-buffer-in-side-window
+            (window-height . ,(+ 3 vertico-count))
+            (side . top))
+        '';
+      };
     };
 
     orderless = {
@@ -52,8 +66,7 @@
 
     which-key = {
       enable = true;
-      diminish = [ "which-key-mode" ];
-      custom = { which-key-mode = "t"; };
+      hook = [ "(after-init . which-key-mode)" ];
     };
 
     helpful = {
