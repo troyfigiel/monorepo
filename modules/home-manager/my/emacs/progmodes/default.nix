@@ -15,10 +15,14 @@
     };
 
     flyspell = {
+      enable = true;
       hook = [ "(prog-mode . flyspell-prog-mode)" ];
       extraPackages = [ pkgs.ispell ];
     };
 
-    whitespace-cleanup-mode = { hook = [ "prog-mode" ]; };
+    whitespace-cleanup-mode = {
+      enable = true;
+      hook = [ "prog-mode" ];
+    };
   };
 }

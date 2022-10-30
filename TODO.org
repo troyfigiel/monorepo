@@ -17,7 +17,13 @@ For example, to enable Steam, I need to enable some hardware options, firewall o
 By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module.
 If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
 
-More notes:
+** Emacs TODOs
+1. It would be very interesting to check out delve if it comes to Melpa: https://github.com/publicimageltd/delve
+2. Replace eglot by lsp-mode (preferred due to lsp-docker)
+3. Set up dap-mode? I'm not sure exactly what the advantage of dap-mode over a normal debugger is to be honest.
+4. The terminal version of Emacs has difficult to read colours for magit. I should fix that.
+
+** More notes:
 1. This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?
 2. I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 3. Use disko instead of automatic partitioning through my Makefile?

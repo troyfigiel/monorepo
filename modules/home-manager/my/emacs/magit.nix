@@ -1,15 +1,14 @@
-let leaderKey = "SPC";
+let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
-    git-modes = { enable = true; };
-
     magit = {
       enable = true;
-      custom = { vc-follow-symlinks = "t"; };
-      general = [''
-        (:states 'normal
-         "${leaderKey} g" 'magit-status)
-      ''];
+      custom = {
+        vc-follow-symlinks = "t";
+        magit-display-buffer-function =
+          "#'magit-display-buffer-same-window-except-diff-v1";
+      };
+      general = [ ''(:prefix "${leaderKey}" "g" 'magit-status)'' ];
     };
 
     hl-todo = {

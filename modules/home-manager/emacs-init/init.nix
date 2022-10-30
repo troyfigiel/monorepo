@@ -20,6 +20,7 @@ let
     (evil-collection-init)
     ${cfg.evil.config}
     (general-evil-setup t)
+    (general-auto-unbind-keys)
     (evil-mode 1)
   '' + ''
     ;; (require 'no-littering)
@@ -75,8 +76,8 @@ in {
           (filter (getAttr "enable") (builtins.attrValues cfg.usePackage));
       in with epkgs;
       [ use-package diminish general ]
-      ++ optional cfg.evil.enable [ epkgs.evil epkgs.evil-collection ]
-      ++ optional cfg.no-littering.enable epkgs.no-littering ++ packages;
+      ++ optional cfg.evil.enable [ evil evil-collection ]
+      ++ optional cfg.no-littering.enable no-littering ++ packages;
 
     # TODO: Create an expression to find the path of hm-init
     home.file.".emacs.d/init.el".text = initFile;

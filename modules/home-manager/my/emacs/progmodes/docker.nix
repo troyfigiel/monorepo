@@ -1,4 +1,4 @@
-let leaderKey = "SPC";
+let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
     # TODO: With lsp-docker I should be able to implement a workflow similar to vscodes devcontainers.
@@ -6,10 +6,7 @@ in {
 
     docker = {
       enable = true;
-      general = [''
-        (:states 'normal
-         "${leaderKey} d" 'docker)
-      ''];
+      general = [ ''(:prefix "${leaderKey}" "d" 'docker)'' ];
     };
 
     dockerfile-mode = { enable = true; };
