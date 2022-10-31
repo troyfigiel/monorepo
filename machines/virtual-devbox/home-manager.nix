@@ -33,6 +33,8 @@
 
         fonts.fontconfig.enable = true;
 
+        home.packages = with pkgs; [ inconsolata ];
+
         programs.home-manager.enable = true;
         programs.direnv = {
           enable = true;

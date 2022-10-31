@@ -41,6 +41,7 @@
              :line-spacing 2))
         '';
       };
+      extraPackages = [ pkgs.inconsolata ];
     };
   };
 }
