@@ -7,7 +7,6 @@
     treemacs-evil = { enable = true; };
     treemacs-file-management = { enable = true; };
     treemacs-magit = { enable = true; };
-    # treemacs-projectile = { enable = true; };
 
     hide-mode-line = {
       enable = true;

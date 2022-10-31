@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let leaderKey = "C-SPC";
+let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
     consult-eglot = { enable = true; };

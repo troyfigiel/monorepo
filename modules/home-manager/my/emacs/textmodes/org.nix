@@ -57,11 +57,13 @@
     # I changed, add or delete something to a git controlled file.
     # TODO: Can I add `olivetti' and have it work together well with `visual-fill-column'
     # or is it a replacement of that package?
+
     visual-fill-column = {
       enable = true;
       # What does visual-line-mode do? When does it trigger?
+      # TODO: Somehow if I remove this, I lose the treemacs blue indicator. Why?
       hook = [ "(visual-line-mode . visual-fill-column-mode)" ];
-      custom = { visual-fill-column-center-text = "t"; };
+      # custom = { visual-fill-column-center-text = "t"; };
     };
 
     org-appear = {
@@ -69,17 +71,12 @@
       hook = [ "(org-mode . org-appear-mode)" ];
     };
 
-    # TODO: Does this interfere with org-modern?
-    # (use-package org-superstar
-    #   :hook (org-mode . org-superstar-mode)
-    #   :custom
-    #   ;; org-superstar-cycle-headline-bullets: By default we cycle through the list.
-    #   ;; org-superstar-leading-bullet: Also by default, the bullets are connected
-    #   ;; by . to the left margin.
-    #   ;; I can also add a lot of customization to TODOs.
-    #   ;; org-superstar-item-bullet-alist also has good defaults.
-    #   (org-superstar-headline-bullets-list '("◉" "○"))
-
     ox-hugo = { enable = true; };
+
+    olivetti = {
+      enable = false;
+      hook = [ "(org-mode . olivetti-mode)" ];
+      custom = { olivetti-body-width = "99"; };
+    };
   };
 }
