@@ -2,8 +2,8 @@
 
 {
   programs.emacs.init.usePackage = {
-    eglot = {
-      hook = [ "(sql-mode . eglot-ensure)" ];
+    lsp-mode = {
+      hook = [ "(sql-mode . lsp-mode)" ];
       extraPackages = [ pkgs.sqls ];
     };
   };

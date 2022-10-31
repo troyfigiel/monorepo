@@ -10,6 +10,7 @@
     ./magit.nix
     ./popper.nix
     ./development.nix
+    ./lsp.nix
     ./terminal.nix
     ./theme.nix
     ./progmodes

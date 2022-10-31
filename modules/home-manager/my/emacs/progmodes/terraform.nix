@@ -2,8 +2,8 @@
 
 {
   programs.emacs.init.usePackage = {
-    eglot = {
-      hook = [ "(terraform-mode . eglot-ensure)" ];
+    lsp-mode = {
+      hook = [ "(terraform-mode . lsp-mode)" ];
       extraPackages = [ pkgs.terraform-ls ];
     };
 
