@@ -7,6 +7,7 @@
     firefox = import ./my/firefox.nix;
     git = import ./my/git.nix;
     gpg = import ./my/gpg.nix;
+    home = import ./my/home.nix;
     i3 = import ./my/i3.nix;
     messenger = import ./my/messenger.nix;
     nvim = import ./my/nvim.nix;

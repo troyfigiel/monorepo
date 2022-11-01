@@ -15,6 +15,7 @@
           hmModules.background
           hmModules.emacs
           hmModules.git
+          hmModules.home
           hmModules.i3
           #   ../../modules/home-manager/picom.nix
           hmModules.polybar
@@ -24,24 +25,6 @@
           hmModules.zsh
         ];
 
-        home = {
-          homeDirectory = "/home/troy";
-          username = "troy";
-          sessionVariables = { EDITOR = "vim"; };
-          stateVersion = "22.05";
-        };
-
-        fonts.fontconfig.enable = true;
-
-        home.packages = with pkgs; [ inconsolata ];
-
-        programs.home-manager.enable = true;
-        programs.direnv = {
-          enable = true;
-          nix-direnv.enable = true;
-        };
-        programs.dircolors.enable = true;
-
         my = {
           alacritty.enable = true;
           git.enable = true;
@@ -49,6 +32,11 @@
           vscode.enable = true;
 
           directories = [ "documents" "downloads" "projects" ];
+
+          home = {
+            enable = true;
+            onLaptop = false;
+          };
 
           zsh.enable = true;
           background.enable = true;

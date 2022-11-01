@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 let cfg = config.my.alacritty;
@@ -6,6 +6,9 @@ in {
   options.my.alacritty.enable = mkEnableOption "Alacritty";
 
   config = mkIf cfg.enable {
+    # TODO: For now Alacritty depends on the Inconsolata font here.
+    home.packages = [ pkgs.inconsolata ];
+
     programs.alacritty = {
       enable = true;
 
