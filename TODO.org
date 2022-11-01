@@ -26,6 +26,8 @@ B00merang-Project's Windows themes to make it easier for any guests?
 + Sometimes I need to pull in multiple elisp files of the same repository with use-package. Is this how it is supposed to be done?
 + Set up org-babel for Python so I can start moving over my data-science scratchpad.
 + The message buffer has a different colour in solaire-mode. Can I fix this somehow?
++ It happens regularly that I have a window in a horizontal split and I would prefer a vertical split. Is there a simple evil function I can bind a key to?
++ It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
 
 ** TODO General
 + This means I do not need to deploy homes separately and I do not need to use deploy-rs necessarily. Maybe I could use terraform-nixos or something like morph?

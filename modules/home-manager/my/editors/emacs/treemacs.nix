@@ -1,5 +1,7 @@
 {
   programs.emacs.init.usePackage = {
+    # TODO: If I run treemacs-rename I run into a missing crfs-read function.
+    # Which package contains this function?
     treemacs = {
       enable = true;
       general = [ ''("<f7>" 'treemacs)'' ];
