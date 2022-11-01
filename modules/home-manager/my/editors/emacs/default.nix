@@ -1,11 +1,9 @@
 { impermanence, config, lib, ... }:
 
-# TODO: The goal is to open emacsclient from the terminal as a project manager.
-# In this case I do not need dired, a dashboard, etc. etc. It will trim down my Emacs config considerably.
 with lib;
 let cfg = config.my.emacs;
 in {
-  imports = [ ../../emacs-init ./packages.nix ];
+  imports = [ ../../../emacs-init ./packages.nix ];
 
   options.my.emacs.enable = mkEnableOption "Emacs";
 

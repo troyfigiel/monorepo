@@ -5,19 +5,7 @@ let cfg = config.my.vscode;
 in {
   # TODO: Split up the vscode based on "package type"?
   # For example, I might not need Terraform in every case.
-  options.my.vscode = {
-    enable = mkEnableOption "vscode";
-
-    hugo = mkOption {
-      default = false;
-      type = types.bool;
-    };
-
-    lisp = mkOption {
-      default = false;
-      type = types.bool;
-    };
-  };
+  options.my.vscode.enable = mkEnableOption "vscode";
 
   config = mkIf cfg.enable {
     programs.vscode = {

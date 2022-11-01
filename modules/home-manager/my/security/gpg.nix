@@ -21,15 +21,15 @@ in {
       enable = true;
       publicKeys = [
         {
-          source = ../../../keys/troy.pub.asc;
+          source = ../../../../keys/troy.pub.asc;
           trust = 5;
         }
         {
-          source = ../../../keys/laptop.pub.asc;
+          source = ../../../../keys/laptop.pub.asc;
           trust = 5;
         }
         {
-          source = ../../../keys/cloud-server.pub.asc;
+          source = ../../../../keys/cloud-server.pub.asc;
           trust = 5;
         }
       ];

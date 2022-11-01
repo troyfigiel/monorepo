@@ -35,10 +35,24 @@ in {
             download = setXDGUserDir "downloads";
             music = setXDGUserDir "audio";
             pictures = setXDGUserDir "pictures";
-            publicShare = setXDGUserDir "share";
             templates = homeDir;
             videos = setXDGUserDir "videos";
           }
+
+          (mkIf (elem "shared" cfg.directories) {
+            publicShare = {
+              device = "//nas/shared";
+              fsType = "cifs";
+              options = [
+                # TODO: These credentials can be set with username= and password= using sops
+                "credentials=/nix/persist/etc/nixos/smb-secrets"
+                "x-systemd.automount"
+                "noauto"
+                "uid=1000"
+                "gid=100"
+              ];
+            };
+          })
 
           (mkIf (elem "projects" cfg.directories) {
             extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };

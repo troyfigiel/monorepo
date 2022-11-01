@@ -6,7 +6,7 @@ in {
   options.my.nvim = {
     enable = mkEnableOption "nvim";
     defaultEditor = mkOption {
-      default = true;
+      default = false;
       type = types.bool;
     };
   };
@@ -19,6 +19,7 @@ in {
         vimAlias = true;
       };
     }
+
     (mkIf cfg.defaultEditor { home.sessionVariables.EDITOR = "vi"; })
   ]);
 }

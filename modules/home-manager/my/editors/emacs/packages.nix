@@ -55,7 +55,6 @@
 
     evil = {
       enable = true;
-      # TODO: Move dashboard config to theme/dashboard.nix
       config = ''
         (evil-set-initial-state 'messages-buffer-mode 'normal)
         ;; (evil-set-initial-state 'dashboard-mode 'normal)
