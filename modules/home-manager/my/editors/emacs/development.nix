@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {

@@ -39,7 +39,8 @@ in {
       };
     };
 
-    programs.lazygit = { # mkIf cfg.lazygit.enable {
+    programs.lazygit = {
+      # mkIf cfg.lazygit.enable {
       enable = true;
       settings = { disableStartupPopups = true; };
     };

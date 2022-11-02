@@ -10,15 +10,18 @@ all:
 
 .PHONY: build
 build:
+	$(MAKE) checks
 	sudo nixos-rebuild switch --flake "$(ROOT_DIR)#$(MACHINE)"
+
+.PHONY: checks
+checks:
+	@nix fmt
+	@nix run .#lint
 
 .PHONY: deploy
 deploy:
+	$(MAKE) checks
 	deploy $(ROOT_DIR)
-
-.PHONY: format
-format:
-	find $(ROOT_DIR) -name '*.nix' | xargs nixfmt
 
 .PHONY: terranix
 terranix:

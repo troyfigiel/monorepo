@@ -25,7 +25,7 @@ in {
           if elem dir cfg.directories then "${homeDir}/${dir}" else homeDir;
       in {
         enable = true;
-        userDirs = (mkMerge [
+        userDirs = mkMerge [
           {
             enable = true;
             createDirectories = false;
@@ -57,13 +57,13 @@ in {
           (mkIf (elem "projects" cfg.directories) {
             extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };
           })
-        ]);
+        ];
       };
     }
 
     (optionalAttrs impermanence {
       home.persistence."/nix/persist/${homeDir}" = {
-        directories = cfg.directories;
+        inherit (cfg) directories;
         allowOther = true;
       };
     })

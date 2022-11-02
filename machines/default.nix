@@ -23,4 +23,3 @@ in {
   flake.nixosConfigurations = listToAttrs
     (map createNixosSystem [ "cloud-server" "laptop" "virtual-devbox" ]);
 }
-

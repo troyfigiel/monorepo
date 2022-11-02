@@ -1,4 +1,4 @@
-{ impermanence, config, hmModules, inputs, pkgs, ... }:
+{ impermanence, config, hmModules, inputs, ... }:
 
 {
   home-manager = {

@@ -1,5 +1,5 @@
 {
-  description = "Flake for Troy's Nixfiles";
+  description = "Monorepo for Troy's Nix-builds";
 
   # We only follow nixpkgs explicitly, because pulling in different versions
   # will bloat the build process quite a bit.
@@ -26,12 +26,17 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
+    nix-pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-vscode-marketplace = {
       url = "github:AmeerTaweel/nix-vscode-marketplace";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur.url = "github:nix-community/NUR";
+    nur.url = "github:nix-community/nur";
 
     simple-nixos-mailserver = {
       url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
@@ -49,10 +54,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    let
-      inherit (self) outputs;
-      inherit (inputs.flake-parts.lib) mkFlake;
+  outputs = { self, ... }@inputs:
+    let inherit (inputs.flake-parts.lib) mkFlake;
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
@@ -66,8 +69,32 @@
       ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
-      perSystem = { system, ... }: {
+      perSystem = { system, pkgs, ... }: {
         checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
+
+        # TODO: Should I maybe exclude the templates directory?
+        formatter = pkgs.writeShellApplication {
+          name = "nixfmt-dir-support";
+          runtimeInputs = [ pkgs.findutils pkgs.nixfmt ];
+          text = ''
+            find "$@" -type f -name '*.nix' -not -path '**/.git/*' -print0 \
+            | xargs -0 nixfmt
+          '';
+        };
+
+        apps = {
+          lint = {
+            type = "app";
+            program = pkgs.writeShellApplication {
+              name = "nix-builds-linter";
+              runtimeInputs = [ pkgs.coreutils pkgs.deadnix pkgs.statix ];
+              text = ''
+                deadnix --fail "$@" && printf '\e[32m%s\e[0m\n' "Deadnix succeeded!"
+                statix check "$@" 2>/dev/null && printf '\e[32m%s\e[0m\n' "Statix succeeded!"
+              '';
+            };
+          };
+        };
       };
 
       flake = {

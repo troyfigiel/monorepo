@@ -52,4 +52,6 @@ Understanding all of the different ways in which you can configure stuff, shows 
 ** To add
 
 - The great thing about Nix is the reproducibility. If I want a dev environment on my desktop that is the same as the dev environment on my laptop, I just need to set the same options. This reproducibility is a key feature of Nix, meaning that there is a clear incentive to minimize the number of options my own modules have.
+- Nix "rebuilds the world". Where did I see this phrase? For example, if gcc changes, all dependent packages will have to be rebuilt as well.
+- I do not like pre-commit. Commits should be as effortless as possible. Instead, CI/CD should contain any linters and style checkers. Formatters can be added to run automatically on save and should also not interrupt my workflow. For example, apheleia or the automatic formatter in VSCode work nicely. This is why I do linting and formatting through `nix run .#lint` and `nix fmt` instead of with a pre-commit hook.
 

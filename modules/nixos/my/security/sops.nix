@@ -23,7 +23,7 @@ in {
 
   config = mkIf cfg.enable {
     sops = {
-      defaultSopsFile = cfg.defaultSopsFile;
+      inherit (cfg) defaultSopsFile;
       gnupg.sshKeyPaths = [ "${cfg.sshPath}/ssh_host_rsa_key" ];
       age.sshKeyPaths = [ ];
     };

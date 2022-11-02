@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 with lib;
 let
@@ -50,10 +50,9 @@ let
     ${standardEarlyInit}
 
     ${concatStringsSep "\n" packageEarlyInits}
-      
+
     ${config.programs.emacs.init.earlyInit}
   '';
-
 in {
   options.programs.emacs.init.earlyInit = mkOption {
     type = types.lines;
@@ -72,7 +71,7 @@ in {
           else
             optional (isString v && hasAttr v epkgs) epkgs.${v};
 
-        packages = concatMap (v: getPkg (v.package)) (filter (getAttr "enable")
+        packages = concatMap (v: getPkg v.package) (filter (getAttr "enable")
           (builtins.attrValues config.programs.emacs.init.usePackage));
       in [ packages ];
 

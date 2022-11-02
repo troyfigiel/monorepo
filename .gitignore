@@ -1,10 +1,7 @@
-# Symlinks to the built result
 **/result
 
-# Terraform files that should not be committed
 **/.terraform
 **/*tfstate*
 **/config.tf.json
 
-# Do not store the produced LaTeX images in my writings
 **/ltximg/*

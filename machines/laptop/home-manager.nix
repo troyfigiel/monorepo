@@ -1,4 +1,4 @@
-{ config, hmModules, impermanence, inputs, pkgs, ... }:
+{ hmModules, impermanence, inputs, ... }:
 
 {
   home-manager = {
@@ -7,8 +7,7 @@
     extraSpecialArgs = { inherit inputs impermanence; };
 
     users = {
-      troy = let cfg = config.home-manager.users.troy;
-      in {
+      troy = {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
           hmModules.alacritty

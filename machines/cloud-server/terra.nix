@@ -1,32 +1,30 @@
 let parameters = import ./parameters.nix;
 in {
-
   my = {
     machines.vultr = {
       enable = true;
-      machine = parameters.flake.machine;
-      pqdn = parameters.terranix.webserver.pqdn;
+      inherit (parameters.flake) machine;
+      inherit (parameters.terranix.webserver) pqdn;
     };
 
     records = {
       mail = {
         enable = true;
-        domain = parameters.terranix.webserver.domain;
-        pqdn = parameters.terranix.webserver.pqdn;
+        inherit (parameters.terranix.webserver) domain;
+        inherit (parameters.terranix.webserver) pqdn;
       };
 
       searx = {
         enable = true;
-        domain = parameters.terranix.webserver.domain;
-        pqdn = parameters.terranix.webserver.pqdn;
+        inherit (parameters.terranix.webserver) domain;
+        inherit (parameters.terranix.webserver) pqdn;
       };
 
       webhosting = {
         enable = true;
-        domain = parameters.terranix.webserver.domain;
-        pqdn = parameters.terranix.webserver.pqdn;
+        inherit (parameters.terranix.webserver) domain;
+        inherit (parameters.terranix.webserver) pqdn;
       };
     };
   };
 }
-

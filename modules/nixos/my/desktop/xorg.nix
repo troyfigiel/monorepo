@@ -1,4 +1,4 @@
-{ impermanence, config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 let cfg = config.my.xorg;
@@ -18,7 +18,7 @@ in {
       autoRepeatInterval = 50;
 
       # TODO: What does this do?
-      videoDrivers = cfg.videoDrivers;
+      inherit (cfg) videoDrivers;
 
       displayManager = {
         defaultSession = "none+i3";

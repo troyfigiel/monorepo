@@ -169,7 +169,6 @@ with lib; {
   config = mkIf config.enable {
     usePackageCode = let
       mkAfter = vs: optional (vs != [ ]) ":after (${toString vs})";
-      mkCommand = vs: optional (vs != [ ]) ":commands (${toString vs})";
       mkDefines = vs: optional (vs != [ ]) ":defines (${toString vs})";
       mkDiminish = vs: optional (vs != [ ]) ":diminish (${toString vs})";
       mkMode = map (v: ":mode ${v}");
