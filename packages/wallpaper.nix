@@ -1,4 +1,4 @@
-{ lib, runCommand, fetchurl }:
+{ runCommand, fetchurl }:
 
 runCommand "wallpaper" {
   src = fetchurl {

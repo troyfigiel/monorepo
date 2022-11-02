@@ -1,7 +1,6 @@
 { inputs, nixosModules, pkgs, ... }:
 
-let parameters = import ./parameters.nix;
-in {
+{
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops

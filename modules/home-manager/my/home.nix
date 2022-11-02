@@ -51,7 +51,8 @@ in {
         tldr
         file
         fd
-        libreoffice
+        # TODO: Libreoffice is not working in the current flake.
+        # libreoffice
         zip
         unzip
         unar

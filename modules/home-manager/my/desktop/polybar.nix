@@ -4,9 +4,7 @@ with lib;
 let
   cfg = config.my.polybar;
 
-  ac = "#1E88E5";
   mf = "#383838";
-
   bg = "#11121D";
   fg = "#FFFFFF";
 

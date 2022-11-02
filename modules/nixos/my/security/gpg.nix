@@ -18,4 +18,3 @@ in {
     services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
   };
 }
-

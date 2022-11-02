@@ -6,10 +6,4 @@ rec {
   };
 
   nixos = { hostName = flake.machine; };
-
-  homeManager = {
-    troy = {
-
-    };
-  };
 }

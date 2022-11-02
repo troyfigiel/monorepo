@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 with lib;
 let
@@ -42,7 +42,6 @@ let
 
       ${cfg.postlude}
     '';
-
 in {
   options.programs.emacs.init = {
     prelude = mkOption {
@@ -72,7 +71,7 @@ in {
             [ (v epkgs) ]
           else
             optional (isString v && hasAttr v epkgs) epkgs.${v};
-        packages = concatMap (v: getPkg (v.package))
+        packages = concatMap (v: getPkg v.package)
           (filter (getAttr "enable") (builtins.attrValues cfg.usePackage));
       in with epkgs;
       [ use-package diminish general ]
@@ -83,4 +82,3 @@ in {
     home.file.".emacs.d/init.el".text = initFile;
   };
 }
-

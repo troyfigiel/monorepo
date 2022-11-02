@@ -1,4 +1,4 @@
-{ impermanence, config, lib, ... }:
+{ config, lib, ... }:
 
 with lib;
 let cfg = config.my.nvim;

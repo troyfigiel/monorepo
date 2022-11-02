@@ -1,7 +1,5 @@
 # TODO: Add the settings for Emacs itself
 # TODO: Add latex.el from my emacs.d
-{ pkgs, ... }:
-
 {
   imports = [
     ./treemacs.nix
@@ -62,7 +60,7 @@
       general = [''
         (:states 'motion
          "j" 'evil-next-visual-line
-         "k" 'evil-previous-visual-line) 
+         "k" 'evil-previous-visual-line)
       ''];
     };
 

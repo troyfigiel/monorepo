@@ -5,7 +5,6 @@ let
   cfg = config.my.restic;
   backupUser = "pi";
   backupHost = "rpi";
-
 in {
   options.my.restic.enable = mkEnableOption "Restic";
 

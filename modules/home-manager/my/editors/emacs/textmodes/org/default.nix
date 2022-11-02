@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   imports = [ ./org-babel.nix ./org-cdlatex.nix ./org-roam.nix ];
 
