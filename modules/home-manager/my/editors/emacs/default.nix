@@ -52,10 +52,6 @@ in {
           };
         };
       };
-
-      home.sessionVariables = {
-        ORG_DIRECTORY = "/home/troy/projects/private/nix-builds/org/";
-      };
     }
 
     (optionalAttrs impermanence {

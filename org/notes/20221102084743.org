@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ac5c69c0-e254-4280-87b4-7653a1b79576
+:mtime:    20221102084745
+:ctime:    20221102084743
+:END:
+#+title: Data warehouse
+#+filetags: :stub:

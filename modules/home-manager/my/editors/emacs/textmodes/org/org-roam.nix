@@ -5,32 +5,36 @@ in {
       enable = true;
       after = [ "org" ];
       custom = {
-        org-roam-directory =
-          ''(expand-file-name "notes" (getenv "ORG_DIRECTORY"))'';
+        # TODO: We need to extract the path /home/troy/projects/private/nix-builds to parameters.nix.
+        # TODO: We should also extract the org/notes directory as a separate parameter.
+        # TODO: We should also extract the org/templates directory as a separate parameter.
+        org-roam-directory = ''
+          (expand-file-name "/home/troy/projects/private/nix-builds/org/notes")
+        '';
         org-roam-completion-everywhere = "t";
       };
       config = ''
         (org-roam-db-autosync-enable)
 
-        ;; (defun band-aid-org-roam-capture-template (keybinding name)
-        ;;   `(,keybinding
-        ;;     ,name
-        ;;     plain
-        ;;     (file ,(expand-file-name (concat name ".org")))
-        ;;     :if-new (file "%<%Y%m%d%H%M%S>.org")
-        ;;     :unnarrowed t))
+        (defun band-aid-org-roam-capture-template (keybinding name)
+          `(,keybinding
+            ,name
+            plain
+            (file ,(expand-file-name (concat name ".org")))
+            :if-new (file "%<%Y%m%d%H%M%S>.org")
+            :unnarrowed t))
 
-        ;; (defun band-aid-org-roam-set-templates (template-directory)
-        ;;   (let ((default-directory template-directory))
-        ;;     (setq org-roam-capture-templates
-        ;;     (list (band-aid-org-roam-capture-template "d" "default")
-        ;;     (band-aid-org-roam-capture-template "i" "index")
-        ;;     (band-aid-org-roam-capture-template "f" "facts")
-        ;;     (band-aid-org-roam-capture-template "b" "inbox")
-        ;;     (band-aid-org-roam-capture-template "a" "appendix")))))
+        (defun band-aid-org-roam-set-templates (template-directory)
+          (let ((default-directory template-directory))
+            (setq org-roam-capture-templates
+            (list (band-aid-org-roam-capture-template "d" "default")
+            (band-aid-org-roam-capture-template "i" "index")
+            (band-aid-org-roam-capture-template "f" "facts")
+            (band-aid-org-roam-capture-template "b" "inbox")
+            (band-aid-org-roam-capture-template "a" "appendix")))))
 
-        ;; (band-aid-org-roam-set-templates
-        ;;   (expand-file-name "templates" (getenv "ORG_DIRECTORY")))
+        (band-aid-org-roam-set-templates
+          (expand-file-name "/home/troy/projects/private/nix-builds/org/templates"))
       '';
       general = [''
         (:prefix "${leaderKey}"

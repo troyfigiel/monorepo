@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       72c118e7-5a28-4800-a887-ad435d389d75
+:mtime:    20221102084839
+:ctime:    20221028145309
 :END:
 #+title: Data engineering
 #+filetags: :stub:
@@ -11,3 +13,8 @@ Architectural patterns:
 Data processing:
 - Processing of [[id:8f45a23a-3f0b-4125-8701-fda7ba356b52][Data streams]]
 - [[id:7a6ba049-a1cd-43f0-af52-b915f8540759][Batch processing]]
+
+Data storage:
+- [[id:ac5c69c0-e254-4280-87b4-7653a1b79576][Data warehouse]]
+- [[id:cc34a828-2ed3-436f-a381-4c2837e8ebe4][Data lake]]
+- [[id:eceb633a-83ac-49a1-a5b6-f38b1acec107][Data lakehouse]]

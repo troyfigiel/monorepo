@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       cc34a828-2ed3-436f-a381-4c2837e8ebe4
+:mtime:    20221102084810
+:ctime:    20221102084809
+:END:
+#+title: Data lake
+#+filetags: :stub:
