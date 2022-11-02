@@ -42,7 +42,14 @@ For example, I have gone back and forth between using home-manager as a standalo
 
 Understanding all of the different ways in which you can configure stuff, shows you a large part of the Nix landscape. The switch back from home-manager as a standalone module to using it as a NixOS module was fairly trivial now, although I initially struggled quite a lot to turn it from a NixOS module back into a standalone module.
 
+** Module system
+
+- Complex interactions in a relatively simple way, because a module is an abstraction layer.
+- Modules keep code DRY by abstracting away boiler plate.
+- Merging settings together automatically, making configuration more modular.
+- Easy to share configuration between different programs, because everything is the Nix language.
+
 ** To add
 
 - The great thing about Nix is the reproducibility. If I want a dev environment on my desktop that is the same as the dev environment on my laptop, I just need to set the same options. This reproducibility is a key feature of Nix, meaning that there is a clear incentive to minimize the number of options my own modules have.
- 
+
