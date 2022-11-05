@@ -1,9 +1,9 @@
-baseURL: 'https://troyfigiel.com'
-languageCode: 'en-us'
-title: 'My New Hugo Site'
+baseURL: "https://troyfigiel.com"
+languageCode: "en-us"
+title: "Troy's website"
 
 security:
   funcs:
     getenv:
-    - "^HUGO_"
-    - "^out$"
+      - "^HUGO_"
+      - "^out$"

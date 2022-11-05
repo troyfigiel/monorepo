@@ -6,14 +6,9 @@ runCommand "website" {
     name = "website";
   };
 
-  notes = builtins.path {
-    path = ../org/notes;
-    name = "website";
-  };
-
-  blog = builtins.path {
-    path = ../org/blog;
-    name = "website";
+  org = builtins.path {
+    path = ../org;
+    name = "org";
   };
 
   nativeBuildInputs = [ hugo emacs emacsPackages.ox-hugo ];
