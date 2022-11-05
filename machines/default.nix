@@ -7,7 +7,7 @@ let
   inherit (import ./lib.nix { inherit inputs self; }) createNixosSystem;
 in {
   perSystem = { system, ... }: {
-    packages.default = terranixConfiguration {
+    packages.terra = terranixConfiguration {
       inherit system;
       modules = [
         terranixModules.machines.vultr

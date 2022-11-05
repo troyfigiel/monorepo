@@ -65,7 +65,8 @@
         ./modules/home-manager
         ./modules/nixos
         ./modules/terranix
-        ./templates/flake-module.nix
+        ./templates
+        ./apps.nix
       ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
@@ -74,26 +75,12 @@
 
         # TODO: Should I maybe exclude the templates directory?
         formatter = pkgs.writeShellApplication {
-          name = "nixfmt-dir-support";
+          name = "my-formatter";
           runtimeInputs = [ pkgs.findutils pkgs.nixfmt ];
           text = ''
             find "$@" -type f -name '*.nix' -not -path '**/.git/*' -print0 \
             | xargs -0 nixfmt
           '';
-        };
-
-        apps = {
-          lint = {
-            type = "app";
-            program = pkgs.writeShellApplication {
-              name = "nix-builds-linter";
-              runtimeInputs = [ pkgs.coreutils pkgs.deadnix pkgs.statix ];
-              text = ''
-                deadnix --fail "$@" && printf '\e[32m%s\e[0m\n' "Deadnix succeeded!"
-                statix check "$@" 2>/dev/null && printf '\e[32m%s\e[0m\n' "Statix succeeded!"
-              '';
-            };
-          };
         };
       };
 

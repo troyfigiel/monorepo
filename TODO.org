@@ -49,10 +49,9 @@ B00merang-Project's Windows themes to make it easier for any guests?
 + I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
 + emacs-init should create config as a list. This way the module system can merge the lists together and I can modularize my config better.
 
-** TODO Disk
-Learning more about Nix:
+** TODO Bootstrapping
 + Start using LUKS Disk Encryption
-+ Create my own iso
++ Create my own ISO image. When I run `nix build .#nixosConfigurations.laptop.config.system.build.isoImage`, I run into a `does not provide attribute`-error. Why is that? Shouldn't this work?
 
 ** TODO Desktop
 *** General
