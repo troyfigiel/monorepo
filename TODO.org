@@ -1,5 +1,9 @@
 * TODO.org
 
+** Next up
++ The linting app fits better under the flake checks. Move it there.
++ Create a deploy script. It can be simple, but I would like to build in a check so that I do not end up locking myself out of my box.
+
 ** Copying Nix store
 
 `nix copy --to 's3://nix-binary-cache?profile=minio&endpoint=192.168.178.37:10106&scheme=http' --all`
@@ -78,14 +82,6 @@ B00merang-Project's Windows themes to make it easier for any guests?
 + Hard disk drive remaining and tmpfs size remaining
 
 ** TODO Subprojects
-*** formatter
-+ Which formatter do I want to use? There are many nix formatters to choose from
-+ I should add a pre-commit config. Cachix has a repository to help with that.
-  - Deadnix
-  - Statix
-  - Nixfmt? Alejandra
-+ Downside of Alejandra is the sponsored messages. Nixfmt is fine, but cannot format directories. Maybe just create a small shell script for that then?
-
 *** modules
 + Rename virtualisation to development
 + Desktop contains everything I would normally put in home-manager and more

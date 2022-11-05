@@ -1,7 +1,7 @@
 { writeShellApplication, parted, util-linux, coreutils, gnused }:
 
 writeShellApplication {
-  name = "install-app";
+  name = "my-installer";
   runtimeInputs = [ parted util-linux coreutils gnused ];
   text = ''
     disk=$1

@@ -1,25 +1,26 @@
 { inputs, self, ... }:
 
+# TODO: It would be simpler to just import all my hmModules and nixosModules here.
+# All modules should be hidden behind an enable option anyway.
 let
-  inherit (builtins) listToAttrs;
-  inherit (inputs.terranix.lib) terranixConfiguration;
-  inherit (self) terranixModules;
-  inherit (import ./lib.nix { inherit inputs self; }) createNixosSystem;
-in {
-  perSystem = { system, ... }: {
-    packages.terra = terranixConfiguration {
-      inherit system;
-      modules = [
-        terranixModules.machines.vultr
-        terranixModules.records.mail
-        terranixModules.records.searx
-        terranixModules.records.webhosting
-        ./cloud-server/terra.nix
-        ./terra.nix
-      ];
+  inherit (inputs.nixpkgs.lib) nixosSystem;
+  inherit (self) hmModules nixosModules;
+  createNixosSystem = dir:
+    let parameters = import ./${dir}/parameters.nix;
+    in {
+      name = parameters.flake.machine;
+      value = nixosSystem {
+        inherit (parameters.flake) system;
+        specialArgs = {
+          inherit inputs hmModules nixosModules;
+          inherit (parameters.flake) impermanence;
+        };
+        pkgs = self.legacyPackages.${parameters.flake.system};
+        modules =
+          [ { networking.hostName = parameters.flake.machine; } ./${dir} ];
+      };
     };
-  };
-
-  flake.nixosConfigurations = listToAttrs
+in {
+  flake.nixosConfigurations = builtins.listToAttrs
     (map createNixosSystem [ "cloud-server" "laptop" "virtual-devbox" ]);
 }

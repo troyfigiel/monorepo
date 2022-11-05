@@ -1,1 +1,0 @@
-This directory contains all files that help me set up new machines. For example, ISO images or bootstrap scripts.

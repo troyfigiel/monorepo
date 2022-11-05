@@ -62,18 +62,15 @@
       imports = [
         ./packages
         ./machines
-        ./modules/home-manager
-        ./modules/nixos
-        ./modules/terranix
+        ./modules
         ./templates
+        ./infrastructure
         ./apps.nix
       ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
-      perSystem = { system, pkgs, ... }: {
-        checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
-
-        # TODO: Should I maybe exclude the templates directory?
+      perSystem = { pkgs, ... }: {
+        # checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
         formatter = pkgs.writeShellApplication {
           name = "my-formatter";
           runtimeInputs = [ pkgs.findutils pkgs.nixfmt ];
@@ -87,29 +84,29 @@
       flake = {
         # TODO: It seems the default boot entry is not updated. That is particularly annoying and not sure why this happens.
         # Do I really need deploy-rs? Would a simple Makefile not suffice?
-        deploy.nodes = {
-          laptop = {
-            hostname = "laptop";
-            profiles = {
-              system = {
-                sshUser = "root";
-                path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-                  inputs.self.nixosConfigurations.laptop;
-              };
-            };
-          };
+        # deploy.nodes = {
+        # laptop = {
+        #   hostname = "laptop";
+        #   profiles = {
+        #     system = {
+        #       sshUser = "root";
+        #       path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+        #         inputs.self.nixosConfigurations.laptop;
+        #     };
+        #   };
+        # };
 
-          cloud-server = {
-            hostname = "troyfigiel.com";
-            profiles = {
-              system = {
-                sshUser = "root";
-                path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-                  inputs.self.nixosConfigurations.cloud-server;
-              };
-            };
-          };
-        };
+        # cloud-server = {
+        #   hostname = "troyfigiel.com";
+        #   profiles = {
+        #     system = {
+        #       sshUser = "root";
+        #       path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+        #         inputs.self.nixosConfigurations.cloud-server;
+        #     };
+        #   };
+        # };
+        # };
       };
     };
 }
