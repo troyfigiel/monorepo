@@ -1,0 +1,7 @@
+{
+  "cloud-server_ip-address": {
+    "sensitive": false,
+    "type": "string",
+    "value": "95.179.241.168"
+  }
+}

@@ -24,10 +24,4 @@
     cloudflare.api_token = config.locals.cloudflare_api_token;
     vultr.api_key = config.locals.vultr_api_key;
   };
-
-  resource.local_file.nix_input = {
-    content = builtins.readFile ./network.tftpl.nix;
-    filename = "\${path.module}/../network.nix";
-    file_permission = "0644";
-  };
 }

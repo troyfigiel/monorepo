@@ -3,6 +3,10 @@
 ** Next up
 + The linting app fits better under the flake checks. Move it there.
 + Create a deploy script. It can be simple, but I would like to build in a check so that I do not end up locking myself out of my box.
++ Does it make sense to even have Terranix modules? All of my infrastructure is used only once, so I do not really have a need for modules. However, Terranix is still useful, because it allows me to easily reuse parameters.nix.
+  - It might even be better to get rid of Terranix altogether. I am not going to be scaling my Terraform that much: A single machine, records, a cloud backup, maybe some router infrastructure in the future.
+  - NixOS configuration can depend on the outputs of my Terraform code. I will need to run Terraform before I can run NixOS anyway.
++ Make the apps independent of where I try to run them. I hard code paths in my scripts, how could I avoid that? Maybe this is solved by replacing Terranix by Terraform again anyway?
 
 ** Copying Nix store
 

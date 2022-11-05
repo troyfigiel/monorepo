@@ -44,5 +44,11 @@ in {
         reverse = "mail.${cfg.pqdn}";
       };
     };
+
+    output.cloud-server_ip-address = {
+      description = "Public IP address of cloud-server";
+      value = "\${vultr_instance.cloud-server.main_ip}";
+    };
+
   };
 }

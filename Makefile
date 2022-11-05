@@ -5,7 +5,7 @@ MACHINE ?= $(file < /etc/hostname)
 
 .PHONY: all
 all:
-	nix run .#terra
+	nix run .#infra
 	$(MAKE) deploy
 
 .PHONY: build
