@@ -4,7 +4,7 @@ writeShellApplication {
   name = "my-installer";
   runtimeInputs = [ parted util-linux coreutils gnused ];
   text = ''
-    disk=$1
+    disk="$1"
 
     create_partitions () {
           parted "$1" -- mklabel gpt && \
