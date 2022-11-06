@@ -1,3 +1,7 @@
+# TODO: This is currently stopping me from completely defining my host name with my directory name.
+# In principle, I could generate this file. For example, the following command extracts the fingerprint from a public key:
+# gpg --show-keys --with-colons key.pub.asc | awk -F: '$1 == "fpr" {print $10;}'
+# Also helpful, is that this file can be in JSON format as well (since JSON is a strict subset of YAML). It still needs to be named .sops.yaml.
 keys:
   - admins:
       - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
@@ -15,7 +19,7 @@ creation_rules:
       - pgp:
           - *troy
           - *cloud-server
-  - path_regex: hosts/secrets.yaml
+  - path_regex: infrastructure/secrets.yaml
     key_groups:
       - pgp:
           - *troy

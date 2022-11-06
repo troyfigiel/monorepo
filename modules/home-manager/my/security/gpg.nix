@@ -19,17 +19,18 @@ in {
 
     programs.gpg = {
       enable = true;
+      # TODO: This is currently stopping me from completely defining my host name in terms of the directory name.
       publicKeys = [
         {
           source = ../../../../keys/troy.pub.asc;
           trust = 5;
         }
         {
-          source = ../../../../keys/laptop.pub.asc;
+          source = ../../../../hosts/laptop/key.pub.asc;
           trust = 5;
         }
         {
-          source = ../../../../keys/cloud-server.pub.asc;
+          source = ../../../../hosts/cloud-server/key.pub.asc;
           trust = 5;
         }
       ];

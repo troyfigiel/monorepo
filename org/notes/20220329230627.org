@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       64c3f706-bee7-4d87-a449-d1597e9386c7
-:mtime:    20221106171906
+:mtime:    20221106174536
 :ctime:    20220329230627
 :END:
 #+title: Software engineering
@@ -36,3 +36,5 @@ https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-mo
 Data related:
 - [[id:9f1f82e4-818e-4571-989b-4a8f2a92a8e3][Data science]]
 - [[id:72c118e7-5a28-4800-a887-ad435d389d75][Data engineering]]
+
+Software should work first and foremost. Testing only comes into play when it comes to changing the software. It is therefore important to know where you are most likely to make changes and hence what you should test.

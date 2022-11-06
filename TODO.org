@@ -4,6 +4,7 @@
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
 + Hostnames should be completely specified by the directory containing the machine configuration.
++ Modularize my Terraform code.
 + Once the above point is done, let's add my raspberry pi to the network.
 + Final renaming of my repository? I am not just building with Nix, but also Terraform. Just name it my-builds?
 

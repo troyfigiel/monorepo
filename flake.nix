@@ -63,6 +63,7 @@
             type = "app";
             program = pkgs.writeShellApplication {
               name = "deploy-my-network";
+              # TODO: I should not hard code laptop and cloud-server here. How should I determine which hosts to deploy?
               text = ''
                 deploy_host () {
                    printf '\e[33m%s\e[0m\n' "Deploying to $1" \
