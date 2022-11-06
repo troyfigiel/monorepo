@@ -38,8 +38,6 @@
           runtimeInputs = with pkgs; [ coreutils execline.bin terraform ];
           text = ''
             cd infrastructure || exit 1
-            trap "rm -f config.tf.json" EXIT
-            nix build ..#infrastructure -o config.tf.json
             terraform init
             terraform apply
             terraform output -json > outputs.json

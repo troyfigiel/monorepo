@@ -3,5 +3,15 @@
     "sensitive": false,
     "type": "string",
     "value": "95.179.241.168"
+  },
+  "website_domain": {
+    "sensitive": false,
+    "type": "string",
+    "value": "troyfigiel"
+  },
+  "website_pqdn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "troyfigiel.com"
   }
 }

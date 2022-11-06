@@ -47,11 +47,6 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    terranix = {
-      url = "github:terranix/terranix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, ... }@inputs:
@@ -59,14 +54,7 @@
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
-      imports = [
-        ./packages
-        ./machines
-        ./modules
-        ./templates
-        ./infrastructure
-        ./apps.nix
-      ];
+      imports = [ ./packages ./machines ./modules ./templates ./apps.nix ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { pkgs, ... }: {

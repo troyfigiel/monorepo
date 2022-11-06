@@ -1,1 +1,0 @@
-{ vultr = import ./vultr.nix; }

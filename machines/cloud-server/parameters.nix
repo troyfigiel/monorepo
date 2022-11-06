@@ -8,7 +8,7 @@ in {
   deploy.ip = terraformOutputs.cloud-server_ip-address.value;
 
   website = rec {
-    domain = "troyfigiel";
-    pqdn = "${domain}.com";
+    domain = terraformOutputs.website_domain.value;
+    pqdn = terraformOutputs.website_pqdn.value;
   };
 }
