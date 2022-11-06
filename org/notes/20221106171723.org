@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       28df8744-03ab-4f03-8aa1-fb431d835930
+:mtime:    20221106171723
+:ctime:    20221106171723
+:END:
+#+title: Continuous integration
+#+filetags: :stub:

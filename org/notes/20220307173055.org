@@ -1,9 +1,11 @@
 :PROPERTIES:
 :ID:       3e05d23e-40a9-451e-9934-85ed62faae69
-:mtime:    20220307173057
+:mtime:    20221106171851
 :ctime:    20220307173055
 :END:
 #+title: CI/CD
 #+filetags: :stub:
 
+CI/CD stands for [[id:28df8744-03ab-4f03-8aa1-fb431d835930][Continuous integration]] and [[id:a864d414-5a34-4562-95b8-ea3330da9e42][Continuous delivery]] or [[id:d61ea814-0a7c-4145-9ffc-9da4c7879076][Continuous deployment]].
 
+The faster the development cycle, the easier it is to stay on top of failures. This is why speed correlates with higher quality software.

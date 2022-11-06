@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       64c3f706-bee7-4d87-a449-d1597e9386c7
-:mtime:    20220425123131
+:mtime:    20221106171906
 :ctime:    20220329230627
 :END:
 #+title: Software engineering
@@ -18,6 +18,12 @@
 - [[id:9029ce16-77a1-4499-90b6-bb9c3b718efe][Coupling]]
 - [[id:47e0cf5d-3964-4d3d-a525-626f0310b31f][Cohesion]]
 - [[id:ad4e0405-de2a-41e8-9acf-53de937acc47][Configuration]]
+
+Best practices:
+- [[id:3e05d23e-40a9-451e-9934-85ed62faae69][CI/CD]]
+- [[id:28df8744-03ab-4f03-8aa1-fb431d835930][Continuous integration]]
+- [[id:a864d414-5a34-4562-95b8-ea3330da9e42][Continuous delivery]]
+- [[id:d61ea814-0a7c-4145-9ffc-9da4c7879076][Continuous deployment]]
 
 Reference for repo forms:
 https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-monorepo/
