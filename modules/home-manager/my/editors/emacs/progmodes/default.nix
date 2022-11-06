@@ -22,7 +22,7 @@
 
     whitespace-cleanup-mode = {
       enable = true;
-      hook = [ "prog-mode" ];
+      hook = [ "(prog-mode . whitespace-cleanup-mode)" ];
     };
   };
 }

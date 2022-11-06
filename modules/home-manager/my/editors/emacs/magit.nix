@@ -35,7 +35,8 @@ in {
         # "(dired-mode . diff-hl-dired-mode)"
         # This mode will instantly show changes instead of only after saving the file.
         # "(after-init . diff-hl-flydiff-mode)"
-        "(after-init . global-diff-hl-mode)"
+        # TODO: I do not really need the global mode right? Let's hook it behind prog-mode and give that a try for a while.
+        "(prog-mode . diff-hl-mode)"
       ];
       custom = {
         # TODO: I prefer to use background colours instead. I will need to add faces to my Nix emacs-init.

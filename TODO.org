@@ -29,6 +29,15 @@ Lutris might still be worth looking at. I only use Steam though, so can it still
 B00merang-Project's Windows themes to make it easier for any guests?
 
 ** TODO Emacs
+*** Clean up emacs-init
+The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
+
+I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.
+
+*** Others
++ It would be nice if there is a simple function I can use that temporarily makes a buffer full-frame size. Like a full-screen button such that when I press it again, it automatically gives me back my original frame layout.
++ Solaire mode seems to be messing with the message buffer. It rapidly changes colour when I am typing. Why is that happening?
++ When I am creating my emacs-init, it is best to stick as closely as possible to Lisp configuration. This makes it very easy for me to interactively check code from the Nix file that describes my init file.
 + It would be very interesting to check out delve if it comes to Melpa: https://github.com/publicimageltd/delve
 + Replace eglot by lsp-mode (preferred due to lsp-docker)
 + Set up dap-mode? I'm not sure exactly what the advantage of dap-mode over a normal debugger is to be honest.

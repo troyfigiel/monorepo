@@ -11,14 +11,19 @@
         org-hide-emphasis-markers = "t";
         org-startup-with-latex-preview = "t";
       };
-      # TODO: For some reason the org-level face attributes do get set, but document-title and document-info do not get set immediately. Why?
-      # Something else must be setting these face attributes at some point.
+      # TODO: For some reason the org-level face attributes do get set, but document-title and document-info do not get set immediately.
+      # I think this has to do with some part of doom-themes that sets these attributes and because I run a load theme function with the server-after-make-frame-hook, it automatically overwrites these values again.
       config = ''
-        (set-face-attribute 'org-level-1 nil :height 1.2)
-        (set-face-attribute 'org-level-2 nil :height 1.1)
-        (set-face-attribute 'org-document-title nil :height 1.3)
-        (set-face-attribute 'org-document-info nil :height 1.1)
+        (set-face-attribute 'org-level-1 nil :height 1.3)
+        (set-face-attribute 'org-level-2 nil :height 1.2)
+        (set-face-attribute 'org-document-title nil :height 1.4)
+        (set-face-attribute 'org-document-info nil :height 1.2)
       '';
+    };
+
+    org-indent = {
+      enable = true;
+      hook = [ "(org-mode . org-indent-mode)" ];
     };
 
     org-modern = {
@@ -34,14 +39,6 @@
 
     toc-org = { hook = [ "(org-mode . toc-org-mode)" ]; };
 
-    # TODO: This does not work together well with `diff-hl', because it ends
-    # up creating a very large coloured block instead of a small fringe whenever
-    # I changed, add or delete something to a git controlled file.
-    # TODO: Can I add `olivetti' and have it work together well with `visual-fill-column'
-    # or is it a replacement of that package?
-
     # ox-hugo = { enable = true; };
-
-    olivetti = { hook = [ "(org-mode . olivetti-mode)" ]; };
   };
 }
