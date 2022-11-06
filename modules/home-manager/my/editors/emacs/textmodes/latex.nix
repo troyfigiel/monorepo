@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.emacs.init.usePackage = {
     tex-mode = {
@@ -11,6 +13,7 @@
         TeX-auto-save = "t";
         TeX-parse-self = "t";
       };
+      extraPackages = [ pkgs.texlive.combined.scheme-full ];
     };
 
     # TODO: I get an error that tex cannot be loaded. Related to the other todo?

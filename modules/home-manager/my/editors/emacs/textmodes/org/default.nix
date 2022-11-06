@@ -11,10 +11,12 @@
         org-hide-emphasis-markers = "t";
         org-startup-with-latex-preview = "t";
       };
+      # TODO: For some reason the org-level face attributes do get set, but document-title and document-info do not get set immediately. Why?
+      # Something else must be setting these face attributes at some point.
       config = ''
         (set-face-attribute 'org-level-1 nil :height 1.2)
         (set-face-attribute 'org-level-2 nil :height 1.1)
-        (set-face-attribute 'org-document-title nil :height 1.5)
+        (set-face-attribute 'org-document-title nil :height 1.3)
         (set-face-attribute 'org-document-info nil :height 1.1)
       '';
     };
@@ -37,11 +39,6 @@
     # I changed, add or delete something to a git controlled file.
     # TODO: Can I add `olivetti' and have it work together well with `visual-fill-column'
     # or is it a replacement of that package?
-
-    # org-appear = {
-    #   enable = true;
-    #   hook = [ "(org-mode . org-appear-mode)" ];
-    # };
 
     # ox-hugo = { enable = true; };
 
