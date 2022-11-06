@@ -17,7 +17,9 @@ The modules that are intended for my own use are prefixed with _my_. These are m
 
 ** Apps
 
-The equivalent of what used to be my Makefile has now been moved to apps.nix. All of these scripts can be run with `nix run .#<app-name>` and have the advantage of being completely self-sufficient. You do not need gnumake as a prerequisite anymore.
+The equivalent of what used to be my Makefile has now been moved to flake.nix. All of these scripts can be run with `nix run .#<app-name>` and have the advantage of being completely self-sufficient. You do not need gnumake as a prerequisite anymore.
+
+The default build of my entire network is simply `nix run` and it runs a formatter, checks, Terraform and all Nix builds.
 
 ** TODOs
 
