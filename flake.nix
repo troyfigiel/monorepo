@@ -80,33 +80,5 @@
           '';
         };
       };
-
-      flake = {
-        # TODO: It seems the default boot entry is not updated. That is particularly annoying and not sure why this happens.
-        # Do I really need deploy-rs? Would a simple Makefile not suffice?
-        # deploy.nodes = {
-        # laptop = {
-        #   hostname = "laptop";
-        #   profiles = {
-        #     system = {
-        #       sshUser = "root";
-        #       path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-        #         inputs.self.nixosConfigurations.laptop;
-        #     };
-        #   };
-        # };
-
-        # cloud-server = {
-        #   hostname = "troyfigiel.com";
-        #   profiles = {
-        #     system = {
-        #       sshUser = "root";
-        #       path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-        #         inputs.self.nixosConfigurations.cloud-server;
-        #     };
-        #   };
-        # };
-        # };
-      };
     };
 }

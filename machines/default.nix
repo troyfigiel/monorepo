@@ -5,21 +5,21 @@
 let
   inherit (inputs.nixpkgs.lib) nixosSystem;
   inherit (self) hmModules nixosModules;
-  parameters = import ./parameters.nix;
-  createNixosSystem = dir: {
-    name = parameters.${dir}.machine;
-    value = nixosSystem {
-      inherit (parameters.${dir}) system;
+  mkSystem = host:
+    let parameters = import ./${host}/parameters.nix;
+    in nixosSystem {
+      inherit (parameters) system;
       specialArgs = {
         inherit inputs hmModules nixosModules;
-        inherit (parameters.${dir}) impermanence;
+        inherit (parameters) impermanence;
       };
-      pkgs = self.legacyPackages.${parameters.${dir}.system};
-      modules =
-        [ { networking.hostName = parameters.${dir}.machine; } ./${dir} ];
+      pkgs = self.legacyPackages.${parameters.system};
+      modules = [ { networking.hostName = host; } ./${host} ];
     };
-  };
 in {
-  flake.nixosConfigurations = builtins.listToAttrs
-    (map createNixosSystem [ "cloud-server" "laptop" "virtual-devbox" ]);
+  flake.nixosConfigurations = {
+    cloud-server = mkSystem "cloud-server";
+    laptop = mkSystem "laptop";
+    virtual-devbox = mkSystem "virtual-devbox";
+  };
 }

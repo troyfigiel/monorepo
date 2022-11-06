@@ -1,7 +1,25 @@
 {
   perSystem = { pkgs, ... }: {
     apps = {
-      default = { };
+      default = {
+        type = "app";
+        program = pkgs.writeShellApplication {
+          name = "deploy-my-network";
+          text = ''
+            nix run .#infra
+
+            deploy_host () {
+               printf '\e[33m%s\e[0m\n' "Deploying to $1" \
+               && nix run .#deploy "$1" \
+               && printf '\e[32m%s\e[0m\n' "Successful deployment to $1!" \
+               || printf '\e[31m%s\e[0m\n' "Failed deployment to $1!"
+            }
+
+            deploy_host laptop
+            deploy_host cloud-server
+          '';
+        };
+      };
 
       deploy = {
         type = "app";

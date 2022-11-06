@@ -1,7 +1,8 @@
 let
-  parameters = import ../parameters.nix;
-  inherit (parameters.cloud-server) machine;
-  inherit (parameters.cloud-server.website) domain pqdn;
+  # TODO: I should not be referring to cloud-server here.
+  machine = "cloud-server";
+  parameters = import ./parameters.nix;
+  inherit (parameters.website) domain pqdn;
 in {
   my = {
     machines.vultr = {

@@ -1,3 +1,4 @@
+# TODO: Networking should be moved to my machines folder.
 { config, lib, ... }:
 
 with lib;
@@ -10,6 +11,9 @@ in {
       extraHosts = ''
         192.168.178.31 rpi
         192.168.178.37 nas
+        ${
+          (import ../../../machines/cloud-server/parameters.nix).deploy.ip
+        } cloud-server
       '';
       useDHCP = lib.mkDefault true;
     };
