@@ -4,7 +4,6 @@
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
 + Hostnames should be completely specified by the directory containing the machine configuration.
-+ Rename machines to hosts again if we specify the host name by the directory name.
 + Once the above point is done, let's add my raspberry pi to the network.
 + Final renaming of my repository? I am not just building with Nix, but also Terraform. Just name it my-builds?
 
@@ -16,8 +15,10 @@ For Nix to be able to read from the binary cache, I will need to make sure the b
 
 What is the preferred way to clean up my binary cache? Is there a garbage control?
 
-** Important note
+** Important notes
 It is actually possible to define the same setting multiple times as long as the values are consistent. Booleans should be the same, lists will be concatenated, etc. However, what is not possible, is to define the same bind mounts multiple times. The options I set regarding persistence can only occur once across my entire configuration. For example, to enable Steam, I need to enable some hardware options, firewall options as well as bind mounts in my user homes. By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module. If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
+
+Hosts should be defined per possible host name I can set. If I need two systems that are almost the same, I can define a module that contains all the overlapping options.
 
 ** Ideas
 I have tried out Proton for Steam (which is simply a setting in the Steam client), but with bad results. For some reason it keeps freezing and messed up my entire Steam install. I had to reinstall to fix the issues. To play games, it might just be better to have a separate HDD with a Windows install.

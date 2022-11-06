@@ -54,7 +54,7 @@
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
-      imports = [ ./packages ./machines ./modules ./templates ];
+      imports = [ ./packages ./hosts ./modules ./templates ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { pkgs, ... }: {
@@ -127,7 +127,7 @@
             buildInputs = [ pkgs.findutils pkgs.nix-linter ];
           } ''
             find ${./.} -type f -name '*.nix' \
-                 -not -path ${./.}/machines/default.nix \
+                 -not -path ${./.}/hosts/default.nix \
                  -print0 \
                  | xargs -0 nix-linter
             touch $out
