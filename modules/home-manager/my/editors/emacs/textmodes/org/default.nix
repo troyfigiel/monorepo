@@ -21,6 +21,21 @@
       '';
     };
 
+    # TODO: Maybe annotate.el is nice? The downside of org-remark is that if I move a file, the annotation gets lost.
+    # org-remark = {
+    #   enable = true;
+    #   hook = [ "(after-init . org-remark-global-tracking-mode)" ];
+    #   custom = {
+    #     org-remark-notes-file-name =
+    #       "/home/troy/projects/private/nix-builds/org/marginalia.org";
+    #   };
+    # };
+
+    # TODO: org-transclusion fails to build, because it is missing an org-transclusion-pkg.el when downloaded from ELPA.
+    # This file contains metadata. Maybe this gets fixed in the future?
+    # I created a ticket for it: https://github.com/nobiot/org-transclusion/issues/154
+    org-transclusion = { enable = false; };
+
     org-indent = {
       enable = true;
       hook = [ "(org-mode . org-indent-mode)" ];

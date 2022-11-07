@@ -19,6 +19,8 @@ in {
       ];
     };
 
+    docker-tramp = { enable = true; };
+
     git-modes = { mode = [ ''("\\.dockerignore\\'" . 'gitignore-mode)'' ]; };
   };
 }

@@ -53,6 +53,7 @@ in {
         fd
         # TODO: Libreoffice is not working in the current flake.
         # libreoffice
+        lzip
         zip
         unzip
         unar

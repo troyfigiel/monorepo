@@ -1,6 +1,8 @@
 let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
+    denote = { enable = true; };
+
     org-roam = {
       enable = true;
       after = [ "org" ];
@@ -41,7 +43,10 @@ in {
          "rb"  'org-roam-buffer-toggle
          "rf" 'org-roam-node-find
          "ri" 'org-roam-node-insert
-         "rd" 'org-roam-node-random
+         "rd"  '(:ignore t :which-key "dailies")
+         "rdc" 'org-roam-dailies-capture-today
+         "rdf" 'org-roam-dailies-find-date
+         ;; "rd" 'org-roam-node-random
          "ra"  '(:ignore t :which-key "alias")
          "ra"  '(:ignore t :which-key "add")
          "raa" 'org-roam-alias-add

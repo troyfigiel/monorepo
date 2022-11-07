@@ -34,7 +34,18 @@ The great thing about Emacs, is the instant feedback when I evaluate an Elisp co
 
 I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.
 
+*** Emacs as AppImage
+By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage).
+
+If I turn my Emacs into a stand alone application such that I can run a single executable, I can use Nix bundle to turn the closure into an AppImage.
+
+How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` to load a different init file. However, this means Emacs does not go through initialization and after-init-hooks will not be run and package-initialize is not done.
+
 *** Others
++ Would it make sense to switch from org-roam to denote? org-roam has a lot of features, but I do not need most of them, whereas for example a file renaming feature I do miss.
++ Since I discovered docker-tramp, would it make sense to stick to Eglot? I liked it quite a lot and I do not really see a need to download language servers inside of my Docker container as lsp-docker does. I am not sure why you would even want that, or do I misunderstand the lsp-docker package?
++ With docker-tramp, it is important to find out which packages are being used for linting and testing. Do these dev packages live inside the Docker container or on my operating system?
++ It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
 + It would be nice if there is a simple function I can use that temporarily makes a buffer full-frame size. Like a full-screen button such that when I press it again, it automatically gives me back my original frame layout.
 + Solaire mode seems to be messing with the message buffer. It rapidly changes colour when I am typing. Why is that happening?
 + When I am creating my emacs-init, it is best to stick as closely as possible to Lisp configuration. This makes it very easy for me to interactively check code from the Nix file that describes my init file.
