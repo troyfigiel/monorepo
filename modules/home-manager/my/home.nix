@@ -35,7 +35,6 @@ in {
       home.packages = with pkgs; [
         nmap
         restic
-        deploy-rs
         sops
         rclone
         fdupes

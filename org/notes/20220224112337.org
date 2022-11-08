@@ -1,14 +1,11 @@
 :PROPERTIES:
 :ID:       0f45ed8c-9f20-4ebe-8186-aed7c4c85b85
-:mtime:    20220313105115
+:mtime:    20221108212225
 :ctime:    20220224112337
 :END:
 #+title: Notebooks and spreadsheets are appropriate in different situations
 #+filetags: :stub:
 
-A notebook solution such as [[id:f4ba54fa-652e-4191-8973-1a364e638fbe][Jupyter Notebook]] or [[id:fcf1774f-4e9f-4b0a-9fcb-0057679b74ff][R Notebook]] generally makes it easier to build
-reports and work with more complicated machine learning or statistical models compared to a
-spreadsheet solution.
+A notebook solution such as [[id:f4ba54fa-652e-4191-8973-1a364e638fbe][Jupyter Notebook]] or [[id:fcf1774f-4e9f-4b0a-9fcb-0057679b74ff][R Notebook]] generally makes it easier to build reports and work with more complicated machine learning or statistical models compared to a spreadsheet solution.
 
-However, a spreadsheet solution makes data much more accessible. If data needs to be copied or has
-to be accessible to the recipient, a spreadsheet is easier to work with.
+However, a spreadsheet solution makes data much more accessible. If data needs to be copied or has to be accessible to the recipient, a spreadsheet is easier to work with.

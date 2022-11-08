@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a458206d-530e-49d0-aed0-e45850933bfb
-:mtime:    20220225223634
+:mtime:    20221109001528
 :ctime:    20220215213909
 :END:
 #+title: chi-squared distribution as sum of squares of normal distributions
@@ -8,6 +8,7 @@
 \begin{theorem}
 If \( X_i \sim \mathcal{N}(0, 1) \) are independent random variables, the random variable \( \sum\limits_{i = 1}^k X_i^2 \sim \chi^2(k).
 \end{theorem}
+
 \begin{appendix}
 To do.
 \end{appendix}

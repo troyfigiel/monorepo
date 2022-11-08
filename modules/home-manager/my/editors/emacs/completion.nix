@@ -38,15 +38,13 @@
     };
 
     embark = {
-      enable = false;
+      enable = true;
       general = [''
-        (("C-." embark-act)
-        ("M-." embark-dwim)
-        ("C-h B" embark-bindings))
+        ("C-," 'embark-act)
       ''];
     };
 
-    embark-consult = { enable = false; };
+    embark-consult = { enable = true; };
 
     corfu = {
       enable = true;

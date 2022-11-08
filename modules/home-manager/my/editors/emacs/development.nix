@@ -43,18 +43,7 @@ in {
       enable = true;
       general = [''
         (:prefix "${leaderKey}"
-         "p" '(:ignore t :which-key "project")
-         "pb" #'project-switch-to-buffer
-         "pk" #'project-kill-buffers
-         "pf" #'project-find-file
-         "pF" #'project-or-external-find-file
-         "pg" #'project-find-regexp
-         "pG" #'project-or-external-find-regexp
-         "pR" #'project-query-replace-regexp
-         "ps" #'project-shell
-         "p!" #'project-shell-command
-         "p&" #'project-async-shell-command
-         "pp" #'project-switch-project)
+         "p" #'project-find-file)
       ''];
     };
 

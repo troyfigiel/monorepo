@@ -29,6 +29,9 @@ Lutris might still be worth looking at. I only use Steam though, so can it still
 B00merang-Project's Windows themes to make it easier for any guests?
 
 ** TODO Emacs
+*** Combine embark and consult
+The combination of consult and embark is very powerful. With consult I can get a preview of lines and with embark I can export them and act on them. For example, this can be used with consult-(rip)grep. The great thing about consult-grep is that I can use my own searching pattern (orderless) to get all my candidates. This makes it great to search through my notes. I do not need deft for that.
+
 *** Clean up emacs-init
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
 
