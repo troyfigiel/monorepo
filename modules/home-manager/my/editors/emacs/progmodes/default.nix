@@ -24,5 +24,18 @@
       enable = true;
       hook = [ "(prog-mode . whitespace-cleanup-mode)" ];
     };
+
+    # TODO: Tree-sitter works great for Nix, but for Python I get an error that the language ABI is too recent.
+    # How do I fix this?
+    tree-sitter = {
+      enable = true;
+      hook = [
+        "(after-init . global-tree-sitter-mode)"
+        "(tree-sitter-after-on . tree-sitter-hl-mode)"
+      ];
+      extraPackages = [ pkgs.tree-sitter ];
+    };
+
+    tree-sitter-langs = { enable = true; };
   };
 }
