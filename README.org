@@ -16,6 +16,8 @@ The monorepo structure of this repository is its defining characteristic. This r
 
 Because this repository is structured as a monorepo, it is very easy for me to clone everything or grep for keywords and overall keep an oversight of my code. I manually deploy (most of) my code with a single invocation of `nix run`.
 
+The source of this repository is https://gitlab.com/troy.figiel/monorepo.
+
 ** Modules
 
 The modules that are intended for my own use are prefixed with _my_. These are modules that contain my config, so it is easy for me to reproduce this config across different machines.
