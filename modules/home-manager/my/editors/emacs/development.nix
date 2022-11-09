@@ -46,11 +46,5 @@ in {
          "p" #'project-find-file)
       ''];
     };
-
-    evil-nerd-commenter = {
-      enable = true;
-      general =
-        [ ''(:states 'visual "." 'evilnc-comment-or-uncomment-lines)'' ];
-    };
   };
 }

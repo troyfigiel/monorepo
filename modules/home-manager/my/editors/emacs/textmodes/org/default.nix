@@ -1,5 +1,4 @@
-let leaderKey = "C-c";
-in {
+{
   imports = [ ./org-babel.nix ./org-cdlatex.nix ./org-roam.nix ];
 
   programs.emacs.init.usePackage = {
@@ -29,14 +28,6 @@ in {
         org-remark-notes-file-name =
           ''"/home/troy/projects/private/monorepo/org/marginalia.org"'';
       };
-    };
-
-    noccur = {
-      enable = true;
-      general = [''
-        (:prefix "${leaderKey}"
-         "f" #'noccur-project)
-      ''];
     };
 
     # TODO: org-transclusion fails to build, because it is missing an org-transclusion-pkg.el when downloaded from ELPA.

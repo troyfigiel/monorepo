@@ -42,7 +42,9 @@ in {
             config = ''
               ;; evil seems to require customize for all its variables
               (customize-set-variable 'evil-want-C-u-scroll t)
+              (customize-set-variable 'evil-want-minibuffer t)
               (customize-set-variable 'evil-undo-system 'undo-redo)
+              (customize-set-variable 'evil-disable-insert-state-bindings t)
             '';
           };
 

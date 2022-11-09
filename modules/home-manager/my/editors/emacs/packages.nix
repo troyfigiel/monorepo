@@ -69,10 +69,15 @@
     #   hook = [ "(ses-mode . linum-mode)" ];
     # };
 
-    # avy = {
-    #   enable = true;
-    #   # general = [ ''(:states 'motion "f" #'evil-avy-goto-char-2)'' ];
-    # };
+    avy = {
+      enable = true;
+      # TODO: For some mysterious reason, leaving out the keybinding for C-a breaks the keybinding for f. Maybe avy-goto-char-2 is not preloaded, until I actually bind the key explicitly?
+      general = [''
+        ("C-a" #'avy-goto-char-2)
+        (:states 'motion
+         "f" #'evil-avy-goto-char-2)
+      ''];
+    };
 
     super-save = {
       enable = true;
@@ -81,11 +86,5 @@
         "(after-init . super-save-mode)"
       ];
     };
-
-    # zoom = {
-    #   enable = true;
-    #   hook = [ "(after-init . zoom-mode)" ];
-    #   custom = { zoom-size = "'(0.618 . 0.618)"; };
-    # };
   };
 }
