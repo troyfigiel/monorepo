@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       258a0c61-3eb2-47a2-ad2d-29eaba4be502
+:mtime:    20221109151851
+:ctime:    20221109151850
+:END:
+#+title: Single source of truth
+#+filetags: :stub:

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       64c3f706-bee7-4d87-a449-d1597e9386c7
-:mtime:    20221106174536
+:mtime:    20221109151738
 :ctime:    20220329230627
 :END:
 #+title: Software engineering
@@ -24,6 +24,7 @@ Best practices:
 - [[id:28df8744-03ab-4f03-8aa1-fb431d835930][Continuous integration]]
 - [[id:a864d414-5a34-4562-95b8-ea3330da9e42][Continuous delivery]]
 - [[id:d61ea814-0a7c-4145-9ffc-9da4c7879076][Continuous deployment]]
+- [[id:ac7e16a8-b0c0-430c-b936-1849e67ccaba][Trunk-based development]]
 
 Reference for repo forms:
 https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-monorepo/
