@@ -58,40 +58,5 @@ in {
          "rrt" 'org-roam-tag-remove)
       ''];
     };
-
-    org-roam-bibtex = { enable = true; };
-
-    org-roam-ui = {
-      enable = true;
-      after = [ "org-roam" ];
-      hook = [ "(after-init . org-roam-ui-mode)" ];
-      custom = {
-        org-roam-ui-sync-theme = "t";
-        org-roam-ui-follow = "t";
-        org-roam-ui-update-on-save = "t";
-        org-roam-ui-open-on-start = "nil";
-      };
-    };
-
-    org-roam-timestamps = {
-      enable = true;
-      after = [ "org-roam" ];
-      hook = [ "(after-init . org-roam-timestamps-mode)" ];
-      custom = { org-roam-timestamps-remember-timestamps = "nil"; };
-    };
-
-    deft = {
-      enable = true;
-      after = [ "org-roam" ];
-      custom = {
-        deft-recursive = "t";
-        deft-use-filter-string-for-filename = "t";
-        deft-default-extension = ''"org"'';
-        deft-directory = "org-roam-directory";
-      };
-      general = [''
-        (:prefix "${leaderKey}" "rs" 'deft)
-      ''];
-    };
   };
 }

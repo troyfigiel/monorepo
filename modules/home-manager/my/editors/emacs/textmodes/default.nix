@@ -18,6 +18,9 @@
     # Olivetti did not work out. There was too much interference with other packages:
     # - The blue indicator used by treemacs disappeared with olivetti.
     # - The fringe indicator for git changes was stretched out across the entire fringe (quarter of the screen).
+
+    # The great thing about visual-line-mode, is that Emacs can search through an entire paragraph, if I let it be wrapped by visual-line-mode.
+    # This makes searching my notes much easier.
     visual-fill-column = {
       enable = true;
       hook = [
