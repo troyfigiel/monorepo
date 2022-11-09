@@ -10,7 +10,6 @@ in {
         org-ellipsis = ''" …"'';
         org-pretty-entities = "t";
         org-hide-emphasis-markers = "t";
-        org-startup-with-latex-preview = "t";
       };
       # TODO: For some reason the org-level face attributes do get set, but document-title and document-info do not get set immediately.
       # I think this has to do with some part of doom-themes that sets these attributes and because I run a load theme function with the server-after-make-frame-hook, it automatically overwrites these values again.
@@ -28,7 +27,7 @@ in {
       hook = [ "(after-init . org-remark-global-tracking-mode)" ];
       custom = {
         org-remark-notes-file-name =
-          ''"/home/troy/projects/private/nix-builds/org/marginalia.org"'';
+          ''"/home/troy/projects/private/monorepo/org/marginalia.org"'';
       };
     };
 

@@ -7,11 +7,11 @@ in {
       enable = true;
       after = [ "org" ];
       custom = {
-        # TODO: We need to extract the path /home/troy/projects/private/nix-builds to parameters.nix.
+        # TODO: We need to extract the path /home/troy/projects/private/monorepo to parameters.nix.
         # TODO: We should also extract the org/notes directory as a separate parameter.
         # TODO: We should also extract the org/templates directory as a separate parameter.
         org-roam-directory = ''
-          (expand-file-name "/home/troy/projects/private/nix-builds/org/notes")
+          (expand-file-name "/home/troy/projects/private/monorepo/org/notes")
         '';
         org-roam-completion-everywhere = "t";
       };
@@ -36,7 +36,7 @@ in {
             (band-aid-org-roam-capture-template "a" "appendix")))))
 
         (band-aid-org-roam-set-templates
-          (expand-file-name "/home/troy/projects/private/nix-builds/org/templates"))
+          (expand-file-name "/home/troy/projects/private/monorepo/org/templates"))
       '';
       general = [''
         (:prefix "${leaderKey}"

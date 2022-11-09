@@ -1,14 +1,17 @@
 {{.Content}}
 <ul>
-    <!-- TODO: I can use singularize to make the page titles singular. But how exactly? -->
-    {{- range .Pages }}
-    <li>
-        <a href="{{.RelPermalink}}">{{.Title}}</a>
-        {{.Summary}}
-    </li>
-    {{- end }}
+  <!-- TODO: I can use singularize to make the page titles singular. But how exactly? -->
+  {{- range .Pages }}
+  <li>
+    <a href="{{.RelPermalink}}">{{.Title}}</a>
+    {{.Summary}}
+  </li>
+  {{- end }}
 </ul>
 
 <!-- TODO: This should be turned into a footer. -->
 <!-- TODO: This should be moved to my homepage. -->
-<p>Served from <b>{{ getenv "out" }}</b>. Source code <a href="https://gitlab.com/troy.figiel/nix-builds">here</a>.</p>
+<p>
+  Served from <b>{{ getenv "out" }}</b>. Source code
+  <a href="https://gitlab.com/troy.figiel/monorepo">here</a>.
+</p>

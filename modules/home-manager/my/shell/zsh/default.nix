@@ -20,8 +20,8 @@ in {
         do = config.xdg.userDirs.documents;
         dl = config.xdg.userDirs.download;
         pr = config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR;
-        nb =
-          "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/nix-builds";
+        mr =
+          "${config.xdg.userDirs.extraConfig.XDG_PROJECTS_DIR}/private/monorepo";
         # TODO: This brings me to the Nix store. I might want to try it differently.
         sh = config.xdg.userDirs.publicShare;
         vi = config.xdg.userDirs.videos;

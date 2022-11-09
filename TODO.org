@@ -3,10 +3,9 @@
 ** Next up
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
-+ Hostnames should be completely specified by the directory containing the machine configuration.
++ Host names should be completely specified by the directory containing the machine configuration.
 + Modularize my Terraform code.
 + Once the above point is done, let's add my raspberry pi to the network.
-+ Final renaming of my repository? I am not just building with Nix, but also Terraform. Just name it my-builds?
 
 ** Copying Nix store
 
@@ -61,7 +60,7 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 + The message buffer has a different colour in solaire-mode. Can I fix this somehow?
 + It happens regularly that I have a window in a horizontal split and I would prefer a vertical split. Is there a simple evil function I can bind a key to?
 + It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
-+ We need to extract the nix-builds directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
++ We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
 + Clean up the org-roam-template code. It is still a left-over from when I was making band-aid into a separate package.
 + My mode-line seems to be too wide. I don't know why that happened in the first place.
 
