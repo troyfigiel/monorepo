@@ -1,5 +1,4 @@
-let leaderKey = "C-c";
-in {
+{
   programs.emacs.init.usePackage = {
     magit = {
       enable = true;
@@ -8,7 +7,6 @@ in {
         magit-display-buffer-function =
           "#'magit-display-buffer-same-window-except-diff-v1";
       };
-      general = [ ''(:prefix "${leaderKey}" "g" 'magit-status)'' ];
     };
 
     hl-todo = {

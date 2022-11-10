@@ -38,13 +38,5 @@ in {
       enable = true;
       hook = [ "(after-init . direnv-mode)" ];
     };
-
-    project = {
-      enable = true;
-      general = [''
-        (:prefix "${leaderKey}"
-         "p" #'project-find-file)
-      ''];
-    };
   };
 }

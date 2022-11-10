@@ -19,5 +19,11 @@
          "H" 'dired-hide-dotfiles-mode)
       ''];
     };
+
+    peep-dired = {
+      enable = true;
+      # TODO: How do I enable peep-dired mode automatically?
+      # hook = [ "(dired-mode . peep-dired)" ];
+    };
   };
 }

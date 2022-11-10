@@ -9,7 +9,7 @@
         [ "(server-after-make-frame . (lambda () (load-theme 'doom-one t)))" ];
     };
 
-    doom-themes-ext-treemacs = { enable = true; };
+    # doom-themes-ext-treemacs = { enable = true; };
 
     doom-modeline = {
       enable = true;

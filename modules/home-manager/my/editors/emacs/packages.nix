@@ -55,7 +55,6 @@
       enable = true;
       config = ''
         (evil-set-initial-state 'messages-buffer-mode 'normal)
-        ;; (evil-set-initial-state 'dashboard-mode 'normal)
       '';
       general = [''
         (:states 'motion
@@ -72,10 +71,13 @@
     avy = {
       enable = true;
       # TODO: For some mysterious reason, leaving out the keybinding for C-a breaks the keybinding for f. Maybe avy-goto-char-2 is not preloaded, until I actually bind the key explicitly?
+      # TODO: For some reason avy does not act on words, but seems to be looking for the next space. For example, goto-line would be interpreted as a single word by Avy. This is a bit counterintuitive. How do I fix that?
       general = [''
         ("C-a" #'avy-goto-char-2)
+        ("C-b" #'avy-goto-line)
         (:states 'motion
-         "f" #'evil-avy-goto-char-2)
+         "f" #'evil-avy-goto-char-2
+         "F" #'evil-avy-goto-line)
       ''];
     };
 
@@ -85,6 +87,21 @@
         "(find-file . (lambda () (setq buffer-save-without-query t)))"
         "(after-init . super-save-mode)"
       ];
+    };
+
+    helpful = {
+      enable = true;
+      general = [''
+        (:keymaps 'override
+         :prefix "C-h"
+         "C-h" 'helpful-at-point
+         "c" 'helpful-command
+         "f" 'helpful-function
+         "k" 'helpful-key
+         "m" 'helpful-macro
+         "o" 'helpful-symbol
+         "v" 'helpful-variable)
+      ''];
     };
   };
 }
