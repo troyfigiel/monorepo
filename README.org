@@ -28,6 +28,10 @@ The equivalent of what used to be my Makefile has now been moved to flake.nix. A
 
 The default build of my entire network is simply `nix run` and it runs a formatter, checks, Terraform and all Nix builds.
 
+** Binary cache
+
+For complete reproducibility, I (am planning to) host my own binary cache using Minio.
+
 ** TODOs
 
 Since I am working on this project by myself, I am using TODO.org to organize some of my thoughts and possible future directions for my reproducible builds.

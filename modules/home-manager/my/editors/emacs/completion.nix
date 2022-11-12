@@ -105,6 +105,7 @@
       ''];
     };
 
+    # TODO: Add the Citar package? How malleable and fitting is it in the whole Vertico, Embark, Consult, etc. environment?
     # consult-notes = {
     #   enable = true;
     #   after = [ "consult" "denote" ];

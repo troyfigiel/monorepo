@@ -1,0 +1,84 @@
+* README
+:PROPERTIES:
+:org-remark-file: README.org
+:END:
+
+** Binary cache
+:PROPERTIES:
+:org-remark-beg: 1929
+:org-remark-end: 1941
+:org-remark-id: 659af413
+:org-remark-label: nil
+:org-remark-link: [[file:README.org::31]]
+:END:
+
+To copy to the binary cache, I can use
+
+`nix copy --to 's3://nix-binary-cache?profile=minio&endpoint=192.168.178.37:10106&scheme=http' --all`
+
+For Nix to be able to read from the binary cache, I will need to make sure the bucket is publicly readable.
+
+What is the preferred way to clean up my binary cache? Is there a garbage control?
+
+* TODO
+:PROPERTIES:
+:org-remark-file: TODO.org
+:END:
+
+** TODO.org
+:PROPERTIES:
+:org-remark-beg: 3
+:org-remark-end: 11
+:org-remark-id: bb8b87ad
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::1]]
+:END:
+
+*** Nix workings
++ It is actually possible to define the same setting multiple times as long as the values are consistent. Booleans should be the same, lists will be concatenated, etc. However, what is not possible, is to define the same bind mounts multiple times. The options I set regarding persistence can only occur once across my entire configuration. For example, to enable Steam, I need to enable some hardware options, firewall options as well as bind mounts in my user homes. By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module. If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
+*** Gaming
++ I have tried out Proton for Steam (which is simply a setting in the Steam client), but with bad results. For some reason it keeps freezing and messed up my entire Steam install. I had to reinstall to fix the issues. To play games, it might just be better to have a separate HDD with a Windows install.
++ Lutris might still be worth looking at. I only use Steam though, so can it still be useful somehow? It is a simple download with nix shell nixpkgs#lutris.
+
+** Emacs
+:PROPERTIES:
+:org-remark-beg: 2163
+:org-remark-end: 2168
+:org-remark-id: d08868ce
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::37]]
+:END:
+
+*** Combine embark and consult
+The combination of consult and embark is very powerful. With consult I can get a preview of lines and with embark I can export them and act on them. For example, this can be used with consult-(rip)grep. The great thing about consult-grep is that I can use my own searching pattern (orderless) to get all my candidates. This makes it great to search through my notes.
+
+*** Emacs as AppImage
+By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage).
+
+If I turn my Emacs into a stand alone application such that I can run a single executable, I can use Nix bundle to turn the closure into an AppImage.
+
+How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` to load a different init file. However, this means Emacs does not go through initialization and after-init-hooks will not be run and package-initialize is not done.
+
+** My mode-line seems to be too wide. I don't know why that happened in the first place.
+:PROPERTIES:
+:org-remark-beg: 4836
+:org-remark-end: 4921
+:org-remark-id: 0ba7960b
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::53]]
+:END:
+
+This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
+
+** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
+:PROPERTIES:
+:org-remark-beg: 2171
+:org-remark-end: 2283
+:org-remark-id: 75c18ef5
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::38]]
+:END:
+
+The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
+
+I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.

@@ -20,21 +20,25 @@
       '';
     };
 
-    org-remark = {
+    # TODO: For some reason I need to split this off. It has to do with autoloading somehow.
+    # Is there a nicer way?
+    org-remark-global-tracking = {
       enable = true;
-      custom = {
-        org-remark-notes-file-name = "#'org-remark-notes-file-name-function";
-      };
       config = ''
         (org-remark-global-tracking-mode 1)
       '';
+    };
+
+    org-remark = {
+      enable = true;
+      custom = { org-remark-notes-file-name = ''".marginalia.org"''; };
       general = [''
-        (:prefix "C-c k"
-         "m" 'org-remark-mark
-         "o" 'org-remark-open
-         "n" 'org-remark-view-next
-         "p" 'org-remark-view-prev
-         "d" 'org-remark-delete)
+        (:prefix "C-c"
+         "km" 'org-remark-mark
+         "ko" 'org-remark-open
+         "kn" 'org-remark-view-next
+         "kp" 'org-remark-view-prev
+         "kd" 'org-remark-delete)
       ''];
     };
 

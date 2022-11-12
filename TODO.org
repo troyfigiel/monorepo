@@ -1,89 +1,19 @@
 * TODO.org
 
-** Next up
-+ Add LaTeX configuration to Emacs again so I can start adding notes with equations.
+** Code cleaning
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
 + Host names should be completely specified by the directory containing the machine configuration.
 + Modularize my Terraform code.
-+ Once the above point is done, let's add my raspberry pi to the network.
-
-** Copying Nix store
-
-`nix copy --to 's3://nix-binary-cache?profile=minio&endpoint=192.168.178.37:10106&scheme=http' --all`
-
-For Nix to be able to read from the binary cache, I will need to make sure the bucket is publicly readable.
-
-What is the preferred way to clean up my binary cache? Is there a garbage control?
-
-** Important notes
-It is actually possible to define the same setting multiple times as long as the values are consistent. Booleans should be the same, lists will be concatenated, etc. However, what is not possible, is to define the same bind mounts multiple times. The options I set regarding persistence can only occur once across my entire configuration. For example, to enable Steam, I need to enable some hardware options, firewall options as well as bind mounts in my user homes. By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module. If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.
-
-Hosts should be defined per possible host name I can set. If I need two systems that are almost the same, I can define a module that contains all the overlapping options.
-
-** Ideas
-I have tried out Proton for Steam (which is simply a setting in the Steam client), but with bad results. For some reason it keeps freezing and messed up my entire Steam install. I had to reinstall to fix the issues. To play games, it might just be better to have a separate HDD with a Windows install.
-
-Lutris might still be worth looking at. I only use Steam though, so can it still be useful somehow? It is a simple download with nix shell nixpkgs#lutris.
-
-B00merang-Project's Windows themes to make it easier for any guests?
-
-** TODO Emacs
-*** Combine embark and consult
-The combination of consult and embark is very powerful. With consult I can get a preview of lines and with embark I can export them and act on them. For example, this can be used with consult-(rip)grep. The great thing about consult-grep is that I can use my own searching pattern (orderless) to get all my candidates. This makes it great to search through my notes. I do not need deft for that.
-
-*** Clean up emacs-init
-The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
-
-I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.
-
-*** Emacs as AppImage
-By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage).
-
-If I turn my Emacs into a stand alone application such that I can run a single executable, I can use Nix bundle to turn the closure into an AppImage.
-
-How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` to load a different init file. However, this means Emacs does not go through initialization and after-init-hooks will not be run and package-initialize is not done.
-
-*** Others
-+ Would it make sense to switch from org-roam to denote? org-roam has a lot of features, but I do not need most of them, whereas for example a file renaming feature I do miss.
-+ Since I discovered docker-tramp, would it make sense to stick to Eglot? I liked it quite a lot and I do not really see a need to download language servers inside of my Docker container as lsp-docker does. I am not sure why you would even want that, or do I misunderstand the lsp-docker package?
-+ With docker-tramp, it is important to find out which packages are being used for linting and testing. Do these dev packages live inside the Docker container or on my operating system?
-+ It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
-+ It would be nice if there is a simple function I can use that temporarily makes a buffer full-frame size. Like a full-screen button such that when I press it again, it automatically gives me back my original frame layout.
-+ Solaire mode seems to be messing with the message buffer. It rapidly changes colour when I am typing. Why is that happening?
-+ When I am creating my emacs-init, it is best to stick as closely as possible to Lisp configuration. This makes it very easy for me to interactively check code from the Nix file that describes my init file.
-+ It would be very interesting to check out delve if it comes to Melpa: https://github.com/publicimageltd/delve
-+ Replace eglot by lsp-mode (preferred due to lsp-docker)
-+ Set up dap-mode? I'm not sure exactly what the advantage of dap-mode over a normal debugger is to be honest.
-+ The terminal version of Emacs has difficult to read colours for magit. I should fix that.
-+ Sometimes I need to pull in multiple elisp files of the same repository with use-package. Is this how it is supposed to be done?
-+ Set up org-babel for Python so I can start moving over my data-science scratchpad.
-+ The message buffer has a different colour in solaire-mode. Can I fix this somehow?
-+ It happens regularly that I have a window in a horizontal split and I would prefer a vertical split. Is there a simple evil function I can bind a key to?
-+ It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
-+ We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
-+ Clean up the org-roam-template code. It is still a left-over from when I was making band-aid into a separate package.
-+ My mode-line seems to be too wide. I don't know why that happened in the first place.
-
-*** Embark / Avy
-- There is a lot that can be done with these two packages. I need to understand them better.
-
-** TODO General
 + I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
-+ Use disko instead of scripted partitioning.
-+ Make the cloud-server storage impermanent using impermanence.
-+ Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
-+ How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
-+ Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
-+ For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
++ Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
+
+** Data science
 + Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
 + I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
 
-** TODO Bootstrapping
-+ Start using LUKS Disk Encryption
-+ Create my own ISO image. When I run `nix build .#nixosConfigurations.laptop.config.system.build.isoImage`, I run into a `does not provide attribute`-error. Why is that? Shouldn't this work?
-
-** TODO Desktop
-*** General
+** Desktop
++ For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
++ B00merang-Project's Windows themes to make it easier for any guests?
 + Use headphones to start and pause videos / music
 + Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
 + Set up a nice notification theme for increasing / decreasing brightness and volume
@@ -93,29 +23,51 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 + The Nitrokey app icon should appear in the bottom bar upon startup
 + Change my cursor theme
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
-
-*** Polybar and Dunst
 + Add icons to Polybar
-+ Volume
-+ Brightness
-+ Music player
-+ Bluetooth
-+ Networks
-+ VPN
-+ Active window (i3)
-+ Temperature
-+ Hard disk drive remaining and tmpfs size remaining
++ Add volume to Polybar
++ Add brightness to Polybar
++ Add music player to Polybar
++ Add Bluetooth to Polybar
++ Add networks to Polybar
++ Add VPN to Polybar
++ Add active window (i3) to Polybar
++ Add temperature to Polybar
++ Add hard disk drive remaining and tmpfs size remaining to Polybar
 
-** TODO Subprojects
-*** modules
-+ Rename virtualisation to development
-+ Desktop contains everything I would normally put in home-manager and more
+** Emacs
++ Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
++ Add LaTeX configuration to Emacs again so I can start adding notes with equations.
++ Would it make sense to switch from org-roam to denote? org-roam has a lot of features, but I do not need most of them, whereas for example a file renaming feature I do miss.
++ Since I discovered docker-tramp, would it make sense to stick to Eglot? I liked it quite a lot and I do not really see a need to download language servers inside of my Docker container as lsp-docker does. I am not sure why you would even want that, or do I misunderstand the lsp-docker package?
++ With docker-tramp, it is important to find out which packages are being used for linting and testing. Do these dev packages live inside the Docker container or on my operating system?
++ It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
++ It would be nice if there is a simple function I can use that temporarily makes a buffer full-frame size. Like a full-screen button such that when I press it again, it automatically gives me back my original frame layout.
++ Solaire mode seems to be messing with the message buffer. It rapidly changes colour when I am typing. Why is that happening?
++ When I am creating my emacs-init, it is best to stick as closely as possible to Lisp configuration. This makes it very easy for me to interactively check code from the Nix file that describes my init file.
++ The terminal version of Emacs has difficult to read colours for magit. I should fix that.
++ Sometimes I need to pull in multiple elisp files of the same repository with use-package. Is this how it is supposed to be done?
++ Set up org-babel for Python so I can start moving over my data-science scratchpad.
++ The message buffer has a different colour in solaire-mode. Can I fix this somehow?
++ It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
++ We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
++ My mode-line seems to be too wide. I don't know why that happened in the first place.
 
-*** website
+** Hardware
++ Add my Raspberry Pi to my network.
++ Use Disko instead of scripted partitioning.
++ Start using LUKS Disk Encryption
++ Create my own ISO image. When I run `nix build .#nixosConfigurations.laptop.config.system.build.isoImage`, I run into a `does not provide attribute`-error. Why is that? Shouldn't this work?
+
+** License
++ Add license if I continue developing, but I am not sure which one is legally allowed... If there is any Emacs code in there, it should be GPL?
+
+** Virtual machine
++ Fix the compositor issue I have on virtual-devbox. For some reason if picom is turned on, the screen only updates when the compositor has to update, such as when I full-screen a window. Why?
++ How can I ssh into a NixOS VM while setting it up? Should not be so difficult since sshd is enabled by default.
++ Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
+
+** Website
 + Blogs and articles should be different
   - Blogs are more opinion-based and "life lessons"
   - Articles contain more clear-cut information and can often span series
 + Would it make sense to have a cache of websites that people can request when needed?
-
-*** License
-+ Add license if I continue developing, but I am not sure which one is legally allowed... If there is any Emacs code in there, it should be GPL?
