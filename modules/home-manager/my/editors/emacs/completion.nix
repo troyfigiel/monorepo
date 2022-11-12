@@ -27,6 +27,24 @@
       };
     };
 
+    recentf = {
+      enable = true;
+      custom = {
+        # It can be difficult to find what I am looking for with the low default values.
+        # TODO: What does the recentf-max-menu-items option exactly change?
+        # recentf-max-menu-items = "50";
+        recentf-auto-cleanup = "'never";
+        recentf-max-saved-items = "200";
+      };
+      # It is important to turn recentf-auto-cleanup to never *before* setting turning on recentf-mode.
+      # By default recentf will run an auto-cleanup when turning on recentf-mode.
+      config = ''
+        (setq recentf-auto-cleanup 'never)
+        (recentf-mode 1)
+        (run-at-time nil 300 'recentf-save-list)
+      '';
+    };
+
     consult-dir = {
       enable = true;
       hook = [ "(after-init . recentf-mode)" ];
@@ -36,9 +54,6 @@
         (:keymaps 'override
          "C-x C-d" #'consult-dir)
       ''];
-      config = ''
-        (run-at-time nil (* 5 60) 'recentf-save-list)
-      '';
     };
     # TODO: This requires docker-tramp to be installed. How to make the dependency explicit?
     # TODO: To get the same for SSH, I need to create a .ssh/config file containing my hosts.
@@ -78,6 +93,7 @@
         (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
          "C-x b" 'consult-buffer
+         "C-c c" 'consult-recent-file
 
          ;; Override non-project default
          "C-c f" 'consult-find
