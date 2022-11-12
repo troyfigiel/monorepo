@@ -2,18 +2,11 @@
 
 {
   programs.emacs.init.usePackage = {
+    # Cycling through inputs is done with C-n and C-p by default.
     vertico = {
       enable = true;
       hook = [ "(after-init . vertico-mode)" ];
       custom = { vertico-cycle = "t"; };
-      general = [''
-        (:states 'normal
-         :keymaps 'vertico-map
-         "j" #'vertico-next
-         "k" #'vertico-previous
-         "q" #'abort-minibuffers
-         "RET" #'vertico-exit)
-      ''];
     };
 
     vertico-flat = {
@@ -34,62 +27,65 @@
       };
     };
 
-    # TODO: I do not get this yet. Need to figure out how this works.
     consult-dir = {
       enable = true;
-      # TODO: What does recentf do exactly?
       hook = [ "(after-init . recentf-mode)" ];
       after = [ "consult" ];
-      # TODO: C-x C-j a replacement for dired-jump?
+      # I can use Embark for any other action, e.g. jumping to a file, ripgrep or whatever other action I want to take.
       general = [''
         (:keymaps 'override
          "C-x C-d" #'consult-dir)
-        (:states '(insert motion visual)
-         :keymaps 'vertico-map
-         "C-x C-d" #'consult-dir
-         "C-x C-j" #'consult-dir-jump-file)
       ''];
-      # TODO: This requires docker-tramp to be installed. How to make the dependency explicit?
-      # TODO: To get the same for SSH, I need to create a .ssh/config file containing my hosts.
-      #   config = ''
-      #     (defun consult-dir--tramp-docker-hosts ()
-      #       "Get a list of hosts from docker."
-      #       (when (require 'docker-tramp nil t)
-      #         (let ((hosts)
-      #               (docker-tramp-use-names t))
-      #           (dolist (cand (docker-tramp--parse-running-containers))
-      #             (let ((user (unless (string-empty-p (car cand))
-      #                             (concat (car cand) "@")))
-      #                   (host (car (cdr cand))))
-      #               (push (concat "/docker:" user host ":/") hosts)))
-      #           hosts)))
-
-      #     (defvar consult-dir--source-tramp-docker
-      #       `(:name     "Docker"
-      #         :narrow   ?d
-      #         :category file
-      #         :face     consult-file
-      #         :history  file-name-history
-      #         :items    ,#'consult-dir--tramp-docker-hosts)
-      #       "Docker candidate source for `consult-dir'.")
-
-      #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
-      #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t)
-      #   '';
+      config = ''
+        (run-at-time nil (* 5 60) 'recentf-save-list)
+      '';
     };
+    # TODO: This requires docker-tramp to be installed. How to make the dependency explicit?
+    # TODO: To get the same for SSH, I need to create a .ssh/config file containing my hosts.
+    #   config = ''
+    #     (defun consult-dir--tramp-docker-hosts ()
+    #       "Get a list of hosts from docker."
+    #       (when (require 'docker-tramp nil t)
+    #         (let ((hosts)
+    #               (docker-tramp-use-names t))
+    #           (dolist (cand (docker-tramp--parse-running-containers))
+    #             (let ((user (unless (string-empty-p (car cand))
+    #                             (concat (car cand) "@")))
+    #                   (host (car (cdr cand))))
+    #               (push (concat "/docker:" user host ":/") hosts)))
+    #           hosts)))
+
+    #     (defvar consult-dir--source-tramp-docker
+    #       `(:name     "Docker"
+    #         :narrow   ?d
+    #         :category file
+    #         :face     consult-file
+    #         :history  file-name-history
+    #         :items    ,#'consult-dir--tramp-docker-hosts)
+    #       "Docker candidate source for `consult-dir'.")
+
+    #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
+    #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t)
+    #   '';
 
     consult = {
       enable = true;
+      custom = { consult-project-function = "nil"; };
       extraPackages = [ pkgs.ripgrep ];
       # TODO: consult-find and consult-ripgrep default to setting the project if I am in a project. This can be prevented by using the universal modifier, but that is a bit cumbersome. I should be able to use simulated keypresses to e.g. bind C-x C-f to the modified consult-find.
+      # TODO: Marks are useful, but how do I remove them?
       general = [''
-        (:keymaps 'override
+        (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
          "C-x b" 'consult-buffer
 
+         ;; Override non-project default
+         "C-c f" 'consult-find
+         "C-c g" 'consult-ripgrep
+
          ;; Override project.el defaults.
-         "C-x p f" 'consult-find
-         "C-x p g" 'consult-ripgrep)
+         "C-x p f" (lambda () (interactive) (let ((consult-project-function #'consult--default-project-function)) (consult-find)))
+         "C-x p g" (lambda () (interactive) (let ((consult-project-function #'consult--default-project-function)) (consult-ripgrep))))
       ''];
     };
 
@@ -119,7 +115,9 @@
     # Embark replaces evil-nerd-commenter
     embark = {
       enable = true;
+      hook = [ "(embark-collect-mode . hl-line-mode)" ];
       custom = {
+        embark-confirm-act-all = "nil";
         embark-help-key = ''(kbd "?")'';
         embark-indicators =
           "'(embark--vertico-indicator embark-minimal-indicator embark-highlight-indicator embark-isearch-highlight-indicator)";
@@ -138,6 +136,9 @@
          "C-e" #'embark-export)
       ''];
     };
+
+    # This comes by default with the Embark package.
+    # embark-org = { enable = true; };
 
     embark-consult = {
       enable = true;

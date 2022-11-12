@@ -91,6 +91,8 @@
 
     helpful = {
       enable = true;
+      # TODO: If I press RET in an Embark export buffer, this does not bring me to helpful.
+      # How do I override these functions instead? Should probably be done with `helpful-at-point` somehow.
       general = [''
         (:keymaps 'override
          :prefix "C-h"
