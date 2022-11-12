@@ -20,14 +20,22 @@
       '';
     };
 
-    # TODO: Maybe annotate.el is nice? The downside of org-remark is that if I move a file, the annotation gets lost.
     org-remark = {
       enable = true;
-      hook = [ "(after-init . org-remark-global-tracking-mode)" ];
       custom = {
-        org-remark-notes-file-name =
-          ''"/home/troy/projects/private/monorepo/org/marginalia.org"'';
+        org-remark-notes-file-name = "#'org-remark-notes-file-name-function";
       };
+      config = ''
+        (org-remark-global-tracking-mode 1)
+      '';
+      general = [''
+        (:prefix "C-c k"
+         "m" 'org-remark-mark
+         "o" 'org-remark-open
+         "n" 'org-remark-view-next
+         "p" 'org-remark-view-prev
+         "d" 'org-remark-delete)
+      ''];
     };
 
     # TODO: org-transclusion fails to build, because it is missing an org-transclusion-pkg.el when downloaded from ELPA.

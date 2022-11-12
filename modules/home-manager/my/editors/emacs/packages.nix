@@ -2,7 +2,6 @@
 # TODO: Add latex.el from my emacs.d
 {
   imports = [
-    ./treemacs.nix
     ./completion.nix
     ./dired.nix
     ./magit.nix
@@ -44,12 +43,7 @@
 
     # default-text-scale = { enable = true; };
 
-    # page-break-lines = {
-    #   enable = false;
-    #   config = "(global-page-break-lines-mode 1)";
-    # };
-
-    xref = { enable = true; };
+    # xref = { enable = true; };
 
     evil = {
       enable = true;
@@ -83,10 +77,9 @@
 
     super-save = {
       enable = true;
-      hook = [
-        "(find-file . (lambda () (setq buffer-save-without-query t)))"
-        "(after-init . super-save-mode)"
-      ];
+      config = ''
+        (super-save-mode 1)
+      '';
     };
 
     helpful = {

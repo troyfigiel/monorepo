@@ -175,7 +175,9 @@
 
     prescient = {
       enable = true;
-      hook = [ "(after-init . prescient-persist-mode)" ];
+      config = ''
+        (prescient-persist-mode 1)
+      '';
     };
   };
 }
