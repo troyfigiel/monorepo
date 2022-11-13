@@ -75,7 +75,6 @@ in {
           (builtins.attrValues config.programs.emacs.init.usePackage));
       in [ packages ];
 
-    # TODO: Create an expression to find the path of hm-early-init
     home.file.".emacs.d/early-init.el".text = earlyInitFile;
   };
 }

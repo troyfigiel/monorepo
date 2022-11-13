@@ -97,7 +97,6 @@ with lib; {
       '';
     };
 
-    # TODO: It should be relatively easy to turn the 'custom' code into an attribute set.
     custom = mkOption {
       type = types.attrs;
       default = { };

@@ -3,30 +3,14 @@
 with lib;
 let cfg = config.my.git;
 in {
-  options.my.git = {
-    enable = mkEnableOption "git";
-    # userEmail = mkOption {
-    #   type = types.nullOr types.string;
-    #   description = ''
-    #     User email to set for git.
-    #   '';
-    # };
+  options.my.git = { enable = mkEnableOption "git"; };
 
-    # lazygit.enable = mkEnableOption "lazygit";
-  };
-
-  # TODO: Use the includeModule options to create different git configs
-  # for Projects/Private and Projects/Work.
   config = mkIf cfg.enable {
     programs.git = {
       enable = true;
       userName = "Troy Figiel";
-      # userEmail = cfg.userEmail;
       userEmail = "troy.figiel@gmail.com";
-      # signing = {
-      #   key = "E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0";
-      #   signByDefault = true;
-      # };
+      signing = { key = "E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0"; };
       extraConfig = {
         init.defaultBranch = "main";
         rerere.enabled = true;
@@ -40,7 +24,6 @@ in {
     };
 
     programs.lazygit = {
-      # mkIf cfg.lazygit.enable {
       enable = true;
       settings = { disableStartupPopups = true; };
     };

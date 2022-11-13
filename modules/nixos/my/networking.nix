@@ -1,4 +1,3 @@
-# TODO: Networking should be moved to my machines folder.
 { config, lib, ... }:
 
 with lib;

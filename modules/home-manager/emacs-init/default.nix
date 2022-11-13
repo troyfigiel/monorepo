@@ -13,9 +13,8 @@ in {
       config = mkOption {
         type = types.lines;
         default = "";
-        # TODO: Write a better description
         description = ''
-          Configuration lines to add ...
+          Configuration lines to add to evil.
         '';
       };
     };
@@ -27,9 +26,8 @@ in {
       config = mkOption {
         type = types.lines;
         default = "";
-        # TODO: Write a better description
         description = ''
-          Configuration lines to add ...
+          Configuration lines to add no-littering.
         '';
       };
     };

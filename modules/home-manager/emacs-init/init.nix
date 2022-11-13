@@ -78,7 +78,6 @@ in {
       ++ optional cfg.evil.enable [ evil evil-collection ]
       ++ optional cfg.no-littering.enable no-littering ++ packages;
 
-    # TODO: Create an expression to find the path of hm-init
     home.file.".emacs.d/init.el".text = initFile;
   };
 }
