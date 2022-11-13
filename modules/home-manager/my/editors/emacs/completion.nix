@@ -48,6 +48,7 @@
     consult-dir = {
       enable = true;
       hook = [ "(after-init . recentf-mode)" ];
+      custom = { consult-dir-shadow-filenames = "nil"; };
       after = [ "consult" ];
       # I can use Embark for any other action, e.g. jumping to a file, ripgrep or whatever other action I want to take.
       general = [''
@@ -88,7 +89,7 @@
       custom = { consult-project-function = "nil"; };
       extraPackages = [ pkgs.ripgrep ];
       # TODO: consult-find and consult-ripgrep default to setting the project if I am in a project. This can be prevented by using the universal modifier, but that is a bit cumbersome. I should be able to use simulated keypresses to e.g. bind C-x C-f to the modified consult-find.
-      # TODO: Marks are useful, but how do I remove them?
+      # TODO: I do not really use the recent-file option a lot. It is useful to have recentf turned on for consult-dir though. If I do not use this option, remove it.
       general = [''
         (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
@@ -143,6 +144,7 @@
         # prefix-help-command = "#'embark-prefix-help-command";
         # TODO: Set a separate binding for embark-become? C-SPC or so?
       };
+      # TODO: These keymaps do not work in the terminal. Which keys do work in terminal mode?
       general = [''
         (:keymaps 'override
          "C-," #'embark-act

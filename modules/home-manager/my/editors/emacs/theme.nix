@@ -22,6 +22,12 @@
       extraPackages = [ pkgs.emacs-all-the-icons-fonts ];
     };
 
+    all-the-icons-dired = {
+      enable = true;
+      after = [ "all-the-icons" "dired" ];
+      hook = [ "(dired-mode . all-the-icons-dired-mode)" ];
+    };
+
     solaire-mode = {
       enable = true;
       after = [ "doom-themes" ];
