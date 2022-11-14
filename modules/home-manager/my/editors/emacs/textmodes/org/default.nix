@@ -45,7 +45,7 @@
     # TODO: org-transclusion fails to build, because it is missing an org-transclusion-pkg.el when downloaded from ELPA.
     # This file contains metadata. Maybe this gets fixed in the future?
     # I created a ticket for it: https://github.com/nobiot/org-transclusion/issues/154
-    org-transclusion = { enable = false; };
+    org-transclusion = { enable = true; };
 
     org-indent = {
       enable = true;
