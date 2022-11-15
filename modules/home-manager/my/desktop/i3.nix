@@ -89,16 +89,21 @@ in {
             '';
           };
 
-          startup = [
-            # TODO: I should probably add something like this. How can I do that?
-            # mkIf
-            # config.my.bluetooth.enable
-            # {
-            #   command = "${pkgs.blueman}/bin/blueman-applet";
-            #   always = true;
-            #   notification = false;
-            # }
-          ];
+          startup = [{
+            command =
+              "${pkgs.betterlockscreen}/bin/betterlockscreen --update .wallpapers";
+            always = true;
+            notification = false;
+          }
+          # TODO: I should probably add something like this. How can I do that?
+          # mkIf
+          # config.my.bluetooth.enable
+          # {
+          #   command = "${pkgs.blueman}/bin/blueman-applet";
+          #   always = true;
+          #   notification = false;
+          # }
+            ];
           #  # I just want to icon in the tray, not the entire screen on start up.
           #  # TODO: What is the right command to use for this?
           #  command = "${pkgs.nitrokey-app}/bin/nitrokey-app";

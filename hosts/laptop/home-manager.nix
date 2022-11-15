@@ -34,6 +34,7 @@
           alacritty.enable = true;
           background = {
             enable = true;
+            # TODO: I need to think about how I handle my wallpaper directory. Currently it is not reproducible.
             wallpaperDirectory = "/nix/persist/home/troy/.wallpapers";
           };
           dunst.enable = true;
