@@ -19,7 +19,6 @@
 
   emacs = import ./my/editors/emacs;
   nvim = import ./my/editors/nvim.nix;
-  vscode = import ./my/editors/vscode.nix;
 
   gpg = import ./my/security/gpg.nix;
   pass = import ./my/security/pass.nix;

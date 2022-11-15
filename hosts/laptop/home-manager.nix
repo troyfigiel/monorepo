@@ -26,7 +26,6 @@
           hmModules.polybar
           hmModules.rofi
           hmModules.syncthing
-          hmModules.vscode
           hmModules.xdg
           hmModules.zsh
         ];
@@ -54,7 +53,6 @@
           picom.enable = true;
           polybar.enable = true;
           syncthing.enable = true;
-          vscode.enable = true;
           directories =
             [ "documents" "downloads" "projects" "audio" "pictures" "videos" ];
           emacs.enable = true;

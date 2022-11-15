@@ -20,7 +20,6 @@
           #   ../../modules/home-manager/picom.nix
           hmModules.polybar
           hmModules.rofi
-          hmModules.vscode
           hmModules.xdg
           hmModules.zsh
         ];
@@ -29,7 +28,6 @@
           alacritty.enable = true;
           git.enable = true;
           emacs.enable = true;
-          vscode.enable = true;
 
           directories = [ "documents" "downloads" "projects" ];
 

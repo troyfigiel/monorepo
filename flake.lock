@@ -85,21 +85,6 @@
         "type": "github"
       }
     },
-    "flake-utils_3": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -154,27 +139,6 @@
       "original": {
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "type": "github"
-      }
-    },
-    "nix-vscode-marketplace": {
-      "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1665992943,
-        "narHash": "sha256-jg+cLRhxY4zDK1L7VkkeojUoRA/GfTNTcyXtXs6dM/s=",
-        "owner": "AmeerTaweel",
-        "repo": "nix-vscode-marketplace",
-        "rev": "2e9508c0cd2c2daa6323f8443bf123c7112db047",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AmeerTaweel",
-        "repo": "nix-vscode-marketplace",
         "type": "github"
       }
     },
@@ -265,7 +229,6 @@
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nix-pre-commit-hooks": "nix-pre-commit-hooks",
-        "nix-vscode-marketplace": "nix-vscode-marketplace",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
         "simple-nixos-mailserver": "simple-nixos-mailserver",

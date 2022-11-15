@@ -26,11 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-vscode-marketplace = {
-      url = "github:AmeerTaweel/nix-vscode-marketplace";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nur.url = "github:nix-community/nur";
 
     simple-nixos-mailserver = {
