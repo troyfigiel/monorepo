@@ -23,6 +23,7 @@ in {
       };
     };
 
+    # TODO: I should start using Emacs for this once I get the terminal colours for Magit to work nicely.
     programs.lazygit = {
       enable = true;
       settings = { disableStartupPopups = true; };

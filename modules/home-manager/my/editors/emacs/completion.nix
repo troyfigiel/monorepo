@@ -107,21 +107,18 @@
     };
 
     # TODO: Add the Citar package? How malleable and fitting is it in the whole Vertico, Embark, Consult, etc. environment?
-    # consult-notes = {
-    #   enable = true;
-    #   after = [ "consult" "denote" ];
-    # };
+    consult-notes = {
+      enable = true;
+      after = [ "consult" "denote" ];
+    };
 
     wgrep = {
       enable = true;
+      # TODO: Keybindings between wgrep and occur-mode are very different.
+      # It might be good to uniformize them.
       general = [''
-        (:states 'normal
-         :keymaps 'grep-mode-map
-         "i" 'wgrep-change-to-wgrep-mode)
-        ;; For consistency between wgrep and occur mode I change the occur-mode keybinding.
-        (:states 'normal
-         :keymaps '(occur-mode-map occur-edit-mode-map)
-         "g o" 'occur-mode-display-occurrence)
+        (:keymaps 'grep-mode-map
+         "M-RET" 'compilation-display-error)
       ''];
     };
 

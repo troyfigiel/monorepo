@@ -2,7 +2,32 @@ let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
     # TODO: I have to be careful with the diredfl package. It currently does not work nicely together with denote: https://lists.sr.ht/~protesilaos/denote/%3Cm0tu6q6bg0.fsf%40disroot.org%3E
-    denote = { enable = true; };
+    # TODO: The denote filenaming convention is quite useful. I might stick with that for other things as well.
+    denote = {
+      enable = true;
+      custom = {
+        # TODO: Do I use this if I will be using embark?
+        denote-link-backlinks-display-buffer-action = ''
+          '((display-buffer-reuse-window
+             display-buffer-in-side-window)
+            (side . left)
+            (slot . 99)
+            (window-width . 0.3))
+        '';
+      };
+      # TODO: This is a very useful function to split off org subtrees into their own notes.
+      config = ''
+        (defun my-denote-split-org-subtree ()
+          "Create new Denote note as an Org file using current Org subtree."
+          (interactive)
+          (let ((text (org-get-entry))
+                (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
+                (tags (org-get-tags)))
+            (delete-region (org-entry-beginning-position) (org-entry-end-position))
+            (denote heading tags 'org)
+            (insert text)))
+      '';
+    };
 
     org-roam = {
       enable = true;
