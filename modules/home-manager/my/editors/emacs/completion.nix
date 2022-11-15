@@ -97,8 +97,8 @@
          "C-c c" 'consult-recent-file
 
          ;; Override non-project default
-         "C-c C-f" 'consult-find
-         "C-c C-g" 'consult-ripgrep
+         "C-c f" 'consult-find
+         "C-c g" 'consult-ripgrep
 
          ;; Override project.el defaults.
          "C-x p f" (lambda () (interactive) (let ((consult-project-function #'consult--default-project-function)) (consult-find)))

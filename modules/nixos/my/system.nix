@@ -41,6 +41,11 @@ in {
         brightnessctl
         bpytop
       ];
+
+      # For zsh autocomplete.
+      # TODO: Only enable when zsh is enabled?
+      # TODO: Does this work?
+      environment.pathsToLink = [ "/share/zsh" ];
     }
 
     (mkIf cfg.games { programs.steam.enable = true; })

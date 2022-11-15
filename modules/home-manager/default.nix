@@ -6,7 +6,7 @@
   messenger = import ./my/applications/messenger.nix;
 
   alacritty = import ./my/shell/alacritty.nix;
-  zsh = import ./my/shell/zsh;
+  zsh = import ./my/shell/zsh.nix;
 
   background = import ./my/desktop/background.nix;
   dunst = import ./my/desktop/dunst.nix;
