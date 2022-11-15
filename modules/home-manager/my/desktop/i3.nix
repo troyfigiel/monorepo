@@ -3,7 +3,6 @@
 with lib;
 let cfg = config.my.i3;
 in {
-  # TODO: Something changed with the latest flake update. I now have a bar with the name of the window in every i3 mode.
   options.my.i3.enable = mkEnableOption "i3";
 
   config = mkIf cfg.enable {

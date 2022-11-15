@@ -172,11 +172,7 @@ with lib; {
       mkDiminish = vs: optional (vs != [ ]) ":diminish (${toString vs})";
       mkMode = map (v: ":mode ${v}");
       mkFunctions = vs: optional (vs != [ ]) ":functions (${toString vs})";
-      # TODO: General can have the following keywords: prefix, states, keymaps. This is then followed by the keybindings and the function they map to.
-      # For example:
-      # general = [{ states = [ "normal" ]; keymaps = [ "x-keymap" ]; prefix = "<f9>"; bindings = { function1 = "a"; function2 = "b"; };}]
       mkGeneral = vs: optional (vs != [ ]) ":general ${toString vs}";
-      # TODO: Nicer would be { mode = "x-mode"; after = "y-mode"; } instead of "( y-mode . x-mode )" or something of this form.
       mkHook = map (v: ":hook ${v}");
       mkDefer = v: optional v ":defer t";
       mkDemand = v: optional v ":demand t";
