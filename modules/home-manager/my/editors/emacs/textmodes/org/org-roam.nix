@@ -33,11 +33,9 @@ in {
       enable = true;
       after = [ "org" ];
       custom = {
-        # TODO: We need to extract the path /home/troy/projects/private/monorepo to parameters.nix.
-        # TODO: We should also extract the org/notes directory as a separate parameter.
         # TODO: We should also extract the org/templates directory as a separate parameter.
         org-roam-directory = ''
-          (expand-file-name "/home/troy/projects/private/monorepo/org/notes")
+          (expand-file-name "/home/troy/projects/private/monorepo/references/notes")
         '';
         org-roam-completion-everywhere = "t";
       };

@@ -1,7 +1,7 @@
 (require 'ox-hugo)
 (setq org-hugo-base-dir default-directory)
 (setq org-id-locations-file (concat org-hugo-base-dir ".org-id-locations"))
-(setq org-directory (file-name-as-directory (getenv "org")))
+(setq org-directory (file-name-as-directory (getenv "references")))
 
 (defun build-section (section)
  (setq org-hugo-section section)
