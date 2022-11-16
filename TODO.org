@@ -1,6 +1,7 @@
 * TODO.org
 
 ** Code cleaning
++ There are various places where my monorepo file location is hard-coded. Instead, I might want to always assume it is located at ~/monorepo and make a module my/monorepo.nix for it.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
 + Host names should be completely specified by the directory containing the machine configuration.
 + Modularize my Terraform code.
@@ -12,6 +13,7 @@
 + I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
 
 ** Desktop
++ Switch from zsh to fish? It seems like a nicer shell overall with less configuration needed.
 + For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
 + B00merang-Project's Windows themes to make it easier for any guests?
 + Use headphones to start and pause videos / music

@@ -84,6 +84,7 @@
     #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t)
     #   '';
 
+    # TODO: How is affe.el as a fuzzy-finder instead of consult-find and consult-ripgrep?
     consult = {
       enable = true;
       custom = { consult-project-function = "nil"; };

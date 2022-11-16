@@ -5,11 +5,11 @@
 
 ** Binary cache
 :PROPERTIES:
-:org-remark-beg: 1888
-:org-remark-end: 1900
+:org-remark-beg: 1887
+:org-remark-end: 1899
 :org-remark-id: 659af413
 :org-remark-label: nil
-:org-remark-link: [[file:README.org::31]]
+:org-remark-link: [[file:README.org::30]]
 :END:
 
 To copy to the binary cache, I can use
@@ -22,11 +22,11 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 ** Monorepo
 :PROPERTIES:
-:org-remark-beg: 807
-:org-remark-end: 815
+:org-remark-beg: 806
+:org-remark-end: 814
 :org-remark-id: eab9a576
 :org-remark-label: nil
-:org-remark-link: [[file:README.org::14]]
+:org-remark-link: [[file:README.org::13]]
 :END:
 
 Why a monorepo? From a more philosophical perspective, Nix prefers such a structure.
@@ -59,11 +59,11 @@ In principle, this can be done automatically of course, but this in turn makes r
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 2163
-:org-remark-end: 2168
+:org-remark-beg: 2441
+:org-remark-end: 2446
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::37]]
+:org-remark-link: [[file:TODO.org::39]]
 :END:
 
 *** Combine embark and consult
@@ -78,22 +78,22 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 4836
-:org-remark-end: 4921
+:org-remark-beg: 5114
+:org-remark-end: 5199
 :org-remark-id: 0ba7960b
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::53]]
+:org-remark-link: [[file:TODO.org::55]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
 :PROPERTIES:
-:org-remark-beg: 2171
-:org-remark-end: 2283
+:org-remark-beg: 2449
+:org-remark-end: 2561
 :org-remark-id: 75c18ef5
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::38]]
+:org-remark-link: [[file:TODO.org::40]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
