@@ -5,8 +5,8 @@
 
 ** Binary cache
 :PROPERTIES:
-:org-remark-beg: 1929
-:org-remark-end: 1941
+:org-remark-beg: 1888
+:org-remark-end: 1900
 :org-remark-id: 659af413
 :org-remark-label: nil
 :org-remark-link: [[file:README.org::31]]
@@ -19,6 +19,23 @@ To copy to the binary cache, I can use
 For Nix to be able to read from the binary cache, I will need to make sure the bucket is publicly readable.
 
 What is the preferred way to clean up my binary cache? Is there a garbage control?
+
+** Monorepo
+:PROPERTIES:
+:org-remark-beg: 807
+:org-remark-end: 815
+:org-remark-id: eab9a576
+:org-remark-label: nil
+:org-remark-link: [[file:README.org::14]]
+:END:
+
+Why a monorepo? From a more philosophical perspective, Nix prefers such a structure.
+
+Because Nix is reproducible, inputs to a system must either be assimilated into the source or properly versioned.
+
+For example, if I were to separate my website from the monorepo, it would need to be pulled in before I can upload it to my server. This is done by Nix on the basis of a commit hash. Any update to my website will therefore additionally require an update to the inputs of my monorepo.
+
+In principle, this can be done automatically of course, but this in turn makes rolling back more complicated. A huge advantage of Nix is that I can simply reboot into a previous generation if I break something. If there are multiple steps that need to be undone to rollback a change, global state starts playing a role again: Which rollback do I need to do first? In which order?
 
 * TODO
 :PROPERTIES:

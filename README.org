@@ -14,7 +14,7 @@ Since the lack of Nix examples has been a major stumbling block for me initially
 ** Monorepo
 The monorepo structure of this repository is its defining characteristic. This repository contains everything that I work on and is intended to be worked on and deployed by me, from notes to Terraform and Nix packages.
 
-Because this repository is structured as a monorepo, it is very easy for me to clone everything or grep for keywords and overall keep an oversight of my code. I manually deploy (most of) my code with a single invocation of `nix run`.
+Because this repository is structured as a monorepo, it is very easy for me to clone everything or grep for keywords. I manually deploy (most of) my code with a single invocation of `nix run`.
 
 The source of this repository is https://gitlab.com/troy.figiel/monorepo.
 
