@@ -16,7 +16,7 @@ let
     in nixosSystem {
       inherit (parameters) system;
       specialArgs = {
-        inherit inputs hmModules nixosModules;
+        inherit inputs self hmModules nixosModules;
         inherit (parameters) impermanence;
       };
       pkgs = self.legacyPackages.${parameters.system};

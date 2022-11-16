@@ -1,4 +1,4 @@
-{ impermanence, config, lib, pkgs, ... }:
+{ impermanence, config, lib, pkgs, self, ... }:
 
 with lib;
 let cfg = config.my.system;
@@ -13,23 +13,13 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      # This is approximately how I should do an auto-upgrade, but the code here
-      # probably does not work as-is.
-
-      # system.autoUpgrade = {
-      #   enable = true;
-      #   allowReboot = true;
-      #   # What is self.outPath?
-      #   flake = self.outPath;
-      #   # These are the flags going into nixos-rebuild
-      #   flags = [
-      #     "--recreate-lock-file"
-      #     "--no-write-lock-file"
-      #     "-L" # print build logs
-      #   ];
-      #   dates = "daily";
-      #   # I might want to change the rebootWindow parameters.
-      # };
+      # TODO: Check whether auto-upgrade works or I need to adjust some flags.
+      system.autoUpgrade = {
+        enable = true;
+        allowReboot = true;
+        flake = self.outPath;
+        flags = [ "--commit-lock-file" ];
+      };
 
       # TODO: I have to move the packages to the respective modules that use them.
       environment.systemPackages = with pkgs; [
