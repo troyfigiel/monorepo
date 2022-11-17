@@ -6,6 +6,7 @@
   messenger = import ./my/applications/messenger.nix;
 
   alacritty = import ./my/shell/alacritty.nix;
+  fish = import ./my/shell/fish.nix;
   zsh = import ./my/shell/zsh.nix;
 
   background = import ./my/desktop/background.nix;

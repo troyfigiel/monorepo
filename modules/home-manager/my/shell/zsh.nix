@@ -1,7 +1,5 @@
 { config, lib, ... }:
 
-# TODO: How does fish compare to zsh? Maybe it is nicer?
-# Scripting will be done with sh anyway which links to bash on NixOS.
 with lib;
 let cfg = config.my.zsh;
 in {
