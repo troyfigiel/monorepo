@@ -17,6 +17,16 @@
       ''];
     };
 
+    dired-du = {
+      enable = true;
+      custom = { dired-du-size-format = "t"; };
+      general = [''
+        (:states 'normal
+         :keymaps 'dired-mode-map
+         "N" 'dired-du-count-sizes)
+      ''];
+    };
+
     dired-ranger = {
       enable = true;
       general = [''
