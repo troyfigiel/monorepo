@@ -1,8 +1,6 @@
 let leaderKey = "C-c";
 in {
   programs.emacs.init.usePackage = {
-    # TODO: I have to be careful with the diredfl package. It currently does not work nicely together with denote: https://lists.sr.ht/~protesilaos/denote/%3Cm0tu6q6bg0.fsf%40disroot.org%3E
-    # TODO: The denote filenaming convention is quite useful. I might stick with that for other things as well.
     denote = {
       enable = true;
       custom = {

@@ -20,6 +20,7 @@
     dired-du = {
       enable = true;
       custom = { dired-du-size-format = "t"; };
+      # TODO: What is a character mark? By default dired-du-count-sizes is bound to *N.
       general = [''
         (:states 'normal
          :keymaps 'dired-mode-map

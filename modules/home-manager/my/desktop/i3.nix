@@ -91,7 +91,7 @@ in {
 
           startup = [{
             command =
-              "${pkgs.betterlockscreen}/bin/betterlockscreen --update .wallpapers";
+              "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${pkgs.wallpaper}/wallpaper.png";
             always = true;
             notification = false;
           }

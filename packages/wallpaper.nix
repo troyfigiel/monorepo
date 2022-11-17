@@ -1,11 +1,17 @@
-{ runCommand, fetchurl }:
+{ stdenv, fetchurl }:
 
-runCommand "wallpaper" {
+stdenv.mkDerivation {
+  name = "wallpaper";
   src = fetchurl {
-    url = "https://i.imgur.com/eRcHPLw.png";
-    sha256 = "sha256-zwKTby6Etc9oOff5nnBEqoveU79dNDWHkxP1pyVwG6Q=";
+    url =
+      "https://raw.githubusercontent.com/jpotier/nixos-wallpapers/0ef76739f1be240ee3c815442cfddcca0e8280f3/nixos-data-center.png";
+    sha256 = "sha256-PVn0dP4ICkQJVlewJzwIk8Ym4ZqBVrc/hdmx+kQ1gjc=";
   };
-} ''
-  mkdir -p $out
-  cp $src $out/doge.jpg
-''
+  dontUnpack = true;
+  dontBuild = true;
+  dontConfigur = true;
+
+  installPhase = ''
+    install -Dm0644 $src $out/wallpaper.png
+  '';
+}

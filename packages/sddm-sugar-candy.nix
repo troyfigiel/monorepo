@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   themeConfUser = writeText "themeConfUser" ''
     [General]
 
-    Background="doge.jpg"
+    Background="wallpaper.png"
     ## Path relative to the theme root directory. Most standard image file formats are allowed including support for transparency. (e.g. background.jpeg/illustration.GIF/Foto.png/undraw.svgz)
 
     DimBackgroundImage="0.0"
@@ -161,7 +161,7 @@ stdenv.mkDerivation rec {
     dir=$out/share/sddm/themes/sugar-candy;
     mkdir -p $dir;
     cp -r $src/. $dir;
-    cp ${wallpaper}/doge.jpg $dir/doge.jpg;
+    cp ${wallpaper}/wallpaper.png $dir/wallpaper.png;
     cp ${themeConfUser} $dir/theme.conf.user;
   '';
 }

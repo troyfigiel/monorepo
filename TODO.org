@@ -13,6 +13,7 @@
 + I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
 
 ** Desktop
++ Find a nice Nix wallpaper and use that as the default sddm background. If there is no .wallpapers folder, then fall back on this background as the default and otherwise on any of the wallpapers in that folder.
 + Switch from zsh to fish? It seems like a nicer shell overall with less configuration needed.
 + For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
 + B00merang-Project's Windows themes to make it easier for any guests?

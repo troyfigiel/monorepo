@@ -59,11 +59,11 @@ In principle, this can be done automatically of course, but this in turn makes r
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 2441
-:org-remark-end: 2446
+:org-remark-beg: 2653
+:org-remark-end: 2658
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::39]]
+:org-remark-link: [[file:TODO.org::40]]
 :END:
 
 *** Combine embark and consult
@@ -78,22 +78,22 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 5114
-:org-remark-end: 5199
+:org-remark-beg: 5326
+:org-remark-end: 5411
 :org-remark-id: 0ba7960b
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::55]]
+:org-remark-link: [[file:TODO.org::56]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
 :PROPERTIES:
-:org-remark-beg: 2449
-:org-remark-end: 2561
+:org-remark-beg: 2661
+:org-remark-end: 2773
 :org-remark-id: 75c18ef5
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::40]]
+:org-remark-link: [[file:TODO.org::41]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.

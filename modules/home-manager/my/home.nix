@@ -94,7 +94,6 @@ in {
           ".config/rclone"
           ".config/nix"
           ".cache/nix-index"
-          ".wallpapers"
           ".steam"
           ".local/share/DBeaverData"
           ".local/share/direnv"
