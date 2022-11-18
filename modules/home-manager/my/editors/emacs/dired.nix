@@ -2,9 +2,6 @@
 
 {
   programs.emacs.init.usePackage = {
-    # I can combine dired, embark and consult very quickly change a large number of files.
-    # For example, search for files with consult, export with embark, switch to wdired mode
-    # and run a regexp replace. This means I should preferably keep h and l unbound.
     dired = {
       enable = true;
       hook = [ "(dired-mode . dired-hide-details-mode)" ];
@@ -15,8 +12,10 @@
         (:keymaps 'dired-mode-map
          "M-+" 'dired-create-empty-file)
       ''];
+      extraPackages = [ pkgs.imagemagick ];
     };
 
+    # TODO: It seems this does not automatically load functions that I might need.
     dired-du = {
       enable = true;
       custom = { dired-du-size-format = "t"; };
@@ -28,15 +27,16 @@
       ''];
     };
 
-    dired-ranger = {
-      enable = true;
-      general = [''
-        (:keymaps 'dired-mode-map
-         "y" 'dired-ranger-copy
-         "C-p" 'dired-ranger-move
-         "p" 'dired-ranger-paste)
-      ''];
-    };
+    # dired-ranger = {
+    #   enable = true;
+    #   general = [''
+    #     (:states 'normal
+    #      :keymaps 'dired-mode-map
+    #      "y" 'dired-ranger-copy
+    #      "C-p" 'dired-ranger-move
+    #      "p" 'dired-ranger-paste)
+    #   ''];
+    # };
 
     # dired-open = {
     #   enable = true;

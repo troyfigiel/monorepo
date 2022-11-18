@@ -3,6 +3,7 @@ in {
   programs.emacs.init.usePackage = {
     denote = {
       enable = true;
+      hook = [ "(dired-mode . denote-dired-mode)" ];
       custom = {
         # TODO: Do I use this if I will be using embark?
         denote-link-backlinks-display-buffer-action = ''
