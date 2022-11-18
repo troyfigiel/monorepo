@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1e71596e-e4af-4780-bcfa-8f5b49f36eb0
+:ROAM_ALIASES: DRY
+:END:
+#+title: Don't repeat yourself
+#+filetags: :stub:
