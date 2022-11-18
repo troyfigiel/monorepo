@@ -44,7 +44,6 @@ in {
               device = "//nas/shared";
               fsType = "cifs";
               options = [
-                # TODO: These credentials can be set with username= and password= using sops
                 "credentials=/nix/persist/etc/nixos/smb-secrets"
                 "x-systemd.automount"
                 "noauto"

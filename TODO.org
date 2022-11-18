@@ -38,9 +38,17 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
++ Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
++ If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
++ I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
++ Org-transclusion should come with an overlay, but it is not appearing for me. This could have to do with doom, org-modern? How can I indicate that a region is transcluded? Currently it looks exactly like the rest of the buffer.
++ I have to be careful combining org-remark and org-transclusion. If I transclude a file, this will change the locations of my remarks in my .marginalia.org files. However, upon reopening the file, the transclusion will be closed and the remarks at the wrong position. How do I fix this?
++ Narrowing can be very useful in Emacs. What kind of functionality surrounds narrowing? I know about narrowing and widening.
++ Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + Would it make sense to switch from org-roam to denote? org-roam has a lot of features, but I do not need most of them, whereas for example a file renaming feature I do miss.
++ Spelling checkers could be nice to have in Emacs, but currently I am not actively using them. What variables can I set, which commands can I trigger and are there useful third-party packages?
 + Since I discovered docker-tramp, would it make sense to stick to Eglot? I liked it quite a lot and I do not really see a need to download language servers inside of my Docker container as lsp-docker does. I am not sure why you would even want that, or do I misunderstand the lsp-docker package?
 + With docker-tramp, it is important to find out which packages are being used for linting and testing. Do these dev packages live inside the Docker container or on my operating system?
 + It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
@@ -49,11 +57,11 @@
 + When I am creating my emacs-init, it is best to stick as closely as possible to Lisp configuration. This makes it very easy for me to interactively check code from the Nix file that describes my init file.
 + The terminal version of Emacs has difficult to read colours for magit. I should fix that.
 + Sometimes I need to pull in multiple elisp files of the same repository with use-package. Is this how it is supposed to be done?
-+ Set up org-babel for Python so I can start moving over my data-science scratchpad.
++ Set up org-babel for Python so I can start moving over my data-science scratch-pad.
 + The message buffer has a different colour in solaire-mode. Can I fix this somehow?
 + It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
 + We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
-+ My mode-line seems to be too wide. I don't know why that happened in the first place.
++ My mode-line seems to be too wide. I don't know why that happened in the first place. It does not seem to happen all the time though.
 
 ** Hardware
 + Add my Raspberry Pi to my network.

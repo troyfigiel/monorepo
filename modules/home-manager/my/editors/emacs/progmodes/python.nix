@@ -21,7 +21,7 @@ in {
       extraPackages = [
         pkgs.python3Packages.python-lsp-server
         # pkgs.python3Packages.pylsp-rope
-        # pkgs.python3Packages.pylsp-mypy
+        pkgs.python3Packages.pylsp-mypy
         pkgs.python3Packages.flake8
       ];
     };
@@ -30,7 +30,6 @@ in {
 
     python = {
       enable = true;
-      # TODO: Set "python3" using a Nix expression such as config.python3
       custom = {
         python-shell-interpreter = ''"python3"'';
         dap-python-executable = ''"python3"'';
@@ -41,6 +40,7 @@ in {
          "l"  '(:ignore t :which-key "languages")
          "lp" '(:ignore t :which-key "python"))
       ''];
+      extraPackages = [ pkgs.python3 ];
     };
 
     pyvenv = {

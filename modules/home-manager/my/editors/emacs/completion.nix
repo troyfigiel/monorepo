@@ -117,10 +117,11 @@
       enable = true;
       # TODO: Keybindings between wgrep and occur-mode are very different.
       # It might be good to uniformize them.
-      general = [''
-        (:keymaps 'grep-mode-map
-         "M-RET" 'compilation-display-error)
-      ''];
+      # TODO: If general is included, other keybindings do not work anymore. Why is that?
+      # general = [''
+      #   (:keymaps 'grep-mode-map
+      #    "M-RET" 'compilation-display-error)
+      # ''];
     };
 
     marginalia = {

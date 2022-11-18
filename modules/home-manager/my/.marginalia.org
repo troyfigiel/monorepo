@@ -1,0 +1,15 @@
+* xdg
+:PROPERTIES:
+:org-remark-file: xdg.nix
+:END:
+
+** "credentials=/nix/persist/etc/nixos/smb-secrets"
+:PROPERTIES:
+:org-remark-beg: 1213
+:org-remark-end: 1261
+:org-remark-id: 4897769e
+:org-remark-label: nil
+:org-remark-link: [[file:xdg.nix::47]]
+:END:
+
+These credentials can be set with username= and password= using sops

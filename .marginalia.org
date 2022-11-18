@@ -76,24 +76,46 @@ If I turn my Emacs into a stand alone application such that I can run a single e
 
 How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` to load a different init file. However, this means Emacs does not go through initialization and after-init-hooks will not be run and package-initialize is not done.
 
+** How do I link to a region?
+:PROPERTIES:
+:org-remark-beg: 3124
+:org-remark-end: 3150
+:org-remark-id: cebfb535
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::43]]
+:END:
+
+I can link to source code using the src notation and then specify the line numbers absolutely or relatively from a certain point.
+
+** Narrowing can be very useful in Emacs.
+:PROPERTIES:
+:org-remark-beg: 3671
+:org-remark-end: 3709
+:org-remark-id: 1091bac7
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::46]]
+:END:
+
+If I am trying to find a word in a region inside of a long file, e.g. "denote-" inside "denote.el", I can narrow and then perform a search.
+
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 5326
-:org-remark-end: 5411
-:org-remark-id: 0ba7960b
+:org-remark-beg: 6856
+:org-remark-end: 6941
+:org-remark-id: 8335fffd
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::56]]
+:org-remark-link: [[file:TODO.org::64]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
-** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
+** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 2661
-:org-remark-end: 2773
-:org-remark-id: 75c18ef5
+:org-remark-beg: 3996
+:org-remark-end: 4107
+:org-remark-id: c60a02ba
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::41]]
+:org-remark-link: [[file:TODO.org::48]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
