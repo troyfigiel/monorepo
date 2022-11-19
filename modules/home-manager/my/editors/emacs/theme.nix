@@ -4,7 +4,6 @@
   programs.emacs.init.usePackage = {
     doom-themes = {
       enable = true;
-      # TODO: Does this fix things? https://github.com/hlissner/emacs-solaire-mode/issues/46
       hook =
         [ "(server-after-make-frame . (lambda () (load-theme 'doom-one t)))" ];
     };
@@ -26,12 +25,6 @@
       enable = true;
       after = [ "all-the-icons" "dired" ];
       hook = [ "(dired-mode . all-the-icons-dired-mode)" ];
-    };
-
-    solaire-mode = {
-      enable = true;
-      after = [ "doom-themes" ];
-      hook = [ "(after-init . solaire-global-mode)" ];
     };
 
     fontaine = {
