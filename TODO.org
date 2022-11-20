@@ -13,6 +13,7 @@
 + I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
 
 ** Desktop
++ How well does Geeqie work as a way to find duplicate images?
 + Find a nice Nix wallpaper and use that as the default sddm background. If there is no .wallpapers folder, then fall back on this background as the default and otherwise on any of the wallpapers in that folder.
 + Switch from zsh to fish? It seems like a nicer shell overall with less configuration needed.
 + For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
@@ -38,7 +39,6 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
-+ Create bookmarks for my XDG directories (audio, pictures, projects, etc.).
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?

@@ -59,11 +59,11 @@ In principle, this can be done automatically of course, but this in turn makes r
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 2653
-:org-remark-end: 2658
+:org-remark-beg: 2716
+:org-remark-end: 2721
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::40]]
+:org-remark-link: [[file:TODO.org::41]]
 :END:
 
 *** Combine embark and consult
@@ -78,8 +78,8 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** How do I link to a region?
 :PROPERTIES:
-:org-remark-beg: 3201
-:org-remark-end: 3227
+:org-remark-beg: 3187
+:org-remark-end: 3213
 :org-remark-id: cebfb535
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::44]]
@@ -89,8 +89,8 @@ I can link to source code using the src notation and then specify the line numbe
 
 ** Narrowing can be very useful in Emacs.
 :PROPERTIES:
-:org-remark-beg: 3748
-:org-remark-end: 3786
+:org-remark-beg: 3734
+:org-remark-end: 3772
 :org-remark-id: 1091bac7
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::47]]
@@ -100,8 +100,8 @@ If I am trying to find a word in a region inside of a long file, e.g. "denote-" 
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 6721
-:org-remark-end: 6806
+:org-remark-beg: 6707
+:org-remark-end: 6792
 :org-remark-id: 8335fffd
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::63]]
@@ -111,8 +111,8 @@ This seems to have fixed itself. Maybe some configuration I changed? Check if it
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 4073
-:org-remark-end: 4184
+:org-remark-beg: 4059
+:org-remark-end: 4170
 :org-remark-id: c60a02ba
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::49]]
