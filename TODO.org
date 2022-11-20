@@ -38,6 +38,7 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
++ Create bookmarks for my XDG directories (audio, pictures, projects, etc.).
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
