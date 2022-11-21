@@ -121,3 +121,16 @@ This seems to have fixed itself. Maybe some configuration I changed? Check if it
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
 
 I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.
+
+** I removed the notes from my website
+:PROPERTIES:
+:org-remark-beg: 7897
+:org-remark-end: 7932
+:org-remark-id: 79c1b927
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::80]]
+:END:
+
+Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
+
+The advantage of removing my notes, is that I do not need to think about parallelizing the exporter anymore. It took a long time because there were so many notes.

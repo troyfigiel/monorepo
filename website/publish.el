@@ -10,5 +10,4 @@
   (org-hugo-export-wim-to-md)))
 
 (defun build-all ()
- (build-section "notes")
  (build-section "blog"))

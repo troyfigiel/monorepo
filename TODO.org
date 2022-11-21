@@ -77,6 +77,7 @@
 + Modularize the hardware from my VM features. Sometimes I want to the same features on a different hardware (aarch64-linux vs. x86_64-linux). I will need to be able to plug in the right hardware easily. Check how mitchellh does this.
 
 ** Website
++ I removed the notes from my website. Would I still want to mention how I use these notes? In general maybe what my workflow is with Emacs, but also with denote?
 + Blogs and articles should be different
   - Blogs are more opinion-based and "life lessons"
   - Articles contain more clear-cut information and can often span series
