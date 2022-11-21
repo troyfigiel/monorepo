@@ -5,11 +5,11 @@
 
 ** Binary cache
 :PROPERTIES:
-:org-remark-beg: 1887
-:org-remark-end: 1899
+:org-remark-beg: 1884
+:org-remark-end: 1896
 :org-remark-id: 659af413
 :org-remark-label: nil
-:org-remark-link: [[file:README.org::30]]
+:org-remark-link: [[file:README.org::27]]
 :END:
 
 To copy to the binary cache, I can use
@@ -22,11 +22,11 @@ What is the preferred way to clean up my binary cache? Is there a garbage contro
 
 ** Monorepo
 :PROPERTIES:
-:org-remark-beg: 806
-:org-remark-end: 814
+:org-remark-beg: 805
+:org-remark-end: 813
 :org-remark-id: eab9a576
 :org-remark-label: nil
-:org-remark-link: [[file:README.org::13]]
+:org-remark-link: [[file:README.org::12]]
 :END:
 
 Why a monorepo? From a more philosophical perspective, Nix prefers such a structure.
@@ -48,7 +48,7 @@ In principle, this can be done automatically of course, but this in turn makes r
 :org-remark-end: 11
 :org-remark-id: bb8b87ad
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::1]]
+:org-remark-link: [[file:TODO.org::40]]
 :END:
 
 *** Nix workings
@@ -59,11 +59,11 @@ In principle, this can be done automatically of course, but this in turn makes r
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 2716
-:org-remark-end: 2721
+:org-remark-beg: 2715
+:org-remark-end: 2720
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::41]]
+:org-remark-link: [[file:TODO.org::40]]
 :END:
 
 *** Combine embark and consult
@@ -78,8 +78,8 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** How do I link to a region?
 :PROPERTIES:
-:org-remark-beg: 3187
-:org-remark-end: 3213
+:org-remark-beg: 3340
+:org-remark-end: 3366
 :org-remark-id: cebfb535
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::44]]
@@ -89,8 +89,8 @@ I can link to source code using the src notation and then specify the line numbe
 
 ** Narrowing can be very useful in Emacs.
 :PROPERTIES:
-:org-remark-beg: 3734
-:org-remark-end: 3772
+:org-remark-beg: 3887
+:org-remark-end: 3925
 :org-remark-id: 1091bac7
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::47]]
@@ -100,19 +100,19 @@ If I am trying to find a word in a region inside of a long file, e.g. "denote-" 
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 6707
-:org-remark-end: 6792
+:org-remark-beg: 6684
+:org-remark-end: 6769
 :org-remark-id: 8335fffd
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::63]]
+:org-remark-link: [[file:TODO.org::62]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 4059
-:org-remark-end: 4170
+:org-remark-beg: 4212
+:org-remark-end: 4323
 :org-remark-id: c60a02ba
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::49]]
@@ -124,13 +124,26 @@ I can probably start implementing this by first moving all of my config to the e
 
 ** I removed the notes from my website
 :PROPERTIES:
-:org-remark-beg: 7897
-:org-remark-end: 7932
+:org-remark-beg: 7874
+:org-remark-end: 7909
 :org-remark-id: 79c1b927
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::80]]
+:org-remark-link: [[file:TODO.org::63]]
 :END:
 
 Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
 
 The advantage of removing my notes, is that I do not need to think about parallelizing the exporter anymore. It took a long time because there were so many notes.
+
+** What kind of functionality surrounds narrowing?
+:PROPERTIES:
+:org-remark-beg: 3926
+:org-remark-end: 3973
+:org-remark-id: 2a8b0b16
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::47]]
+:END:
+
++ Narrowing to a region with C-x n n
++ Narrowing to a sub-heading in org-mode with C-x n s
++ Widening again with C-x n w

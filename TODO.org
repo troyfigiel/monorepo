@@ -1,5 +1,4 @@
 * TODO.org
-
 ** Code cleaning
 + There are various places where my monorepo file location is hard-coded. Instead, I might want to always assume it is located at ~/monorepo and make a module my/monorepo.nix for it.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
@@ -39,6 +38,7 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
++ Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
@@ -48,7 +48,6 @@
 + Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
-+ Would it make sense to switch from org-roam to denote? org-roam has a lot of features, but I do not need most of them, whereas for example a file renaming feature I do miss.
 + Spelling checkers could be nice to have in Emacs, but currently I am not actively using them. What variables can I set, which commands can I trigger and are there useful third-party packages?
 + Since I discovered docker-tramp, would it make sense to stick to Eglot? I liked it quite a lot and I do not really see a need to download language servers inside of my Docker container as lsp-docker does. I am not sure why you would even want that, or do I misunderstand the lsp-docker package?
 + With docker-tramp, it is important to find out which packages are being used for linting and testing. Do these dev packages live inside the Docker container or on my operating system?

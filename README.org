@@ -1,6 +1,5 @@
 * Troy's monorepo
 ** Disclaimer, be aware!
-
 This is very much a work in progress and (currently) is only intended to be used by me. Although I am cleaning up code along the way and I am aiming to turn the code here into a presentable format, if something works, it is good enough for me at this stage.
 
 Since the lack of Nix examples has been a major stumbling block for me initially, I hope this can pose as an example of what a functioning Nix setup could look like. Some useful references I have been using often (in no particular order):
@@ -18,19 +17,15 @@ Because this repository is structured as a monorepo, it is very easy for me to c
 The source of this repository is https://gitlab.com/troy.figiel/monorepo.
 
 ** Modules
-
 The modules that are intended for my own use are prefixed with _my_. These are modules that contain my config, so it is easy for me to reproduce this config across different machines.
 
 ** Apps
-
 The equivalent of what used to be my Makefile has now been moved to flake.nix. All of these scripts can be run with `nix run .#<app-name>` and have the advantage of being completely self-sufficient. You do not need gnumake as a prerequisite anymore.
 
 The default build of my entire network is simply `nix run` and it runs a formatter, checks, Terraform and all Nix builds.
 
 ** Binary cache
-
 For complete reproducibility, I (am planning to) host my own binary cache using Minio.
 
 ** TODOs
-
 Since I am working on this project by myself, I am using TODO.org to organize some of my thoughts and possible future directions for my reproducible builds.
