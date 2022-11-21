@@ -9,7 +9,6 @@ in {
     # TODO:The tray randomly disappears. Maybe a compositor issue?
     services.picom = {
       enable = true;
-      experimentalBackends = true;
 
       fade = true;
       fadeDelta = 5;

@@ -24,10 +24,11 @@
 
 - Monorepo.
 - Single flake instead of flake per machine.
-    1. The big downside of having multiple flakes, is that my setups are not necessarily consistent anymore across machines! I might have a guarantee that my setup does not break, but that also means I do not have a guarantee anymore that my setups across machines are the same.
-    2. If I have a single flake, it can happen that I updated my lockfile and some packages broke.
+  1. The big downside of having multiple flakes, is that my setups are not necessarily consistent anymore across machines! I might have a guarantee that my setup does not break, but that also means I do not have a guarantee anymore that my setups across machines are the same.
+  2. As an example of this, picom removed the ~--experimental-backend~ option in commit ~7e607bfe81378ac3f07f6e448fd9803f48fddc01~ (https://github.com/yshui/picom/commit/7e607bfe81378ac3f07f6e448fd9803f48fddc01). If my flakes are not in sync, it means some modules will require this option and others do not have it anymore. It can make it difficult / annoying to keep the code in my modules DRY.
+  3. If I have a single flake, it can happen that I updated my lockfile and some packages broke.
 - I decided for consistency across machines, even if that might sometimes mean some modules break after a number of updates. I might want to test this somehow, but I am not sure how yet. A VM?
 - Terraform over NixOps, but Terranix to make parameter sharing with Nix easier -> Decided on using outputs.json instead.
-    - This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
+  - This means I will have a single language to generate all my expressions, but at the same time I can still use the ubiquity of Terraform
 - sops-nix is designed to be scalable, but for safety precautions the secrets can only be unlocked per machine or with my master Nitrokey. Each machine I use serves a different purpose.
 - flake-parts allows me to break up my huge flake into smaller flake modules. This makes the overall design more modular.
