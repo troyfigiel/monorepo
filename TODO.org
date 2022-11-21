@@ -40,10 +40,11 @@
 ** Emacs
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
++ Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
 + Org-transclusion should come with an overlay, but it is not appearing for me. This could have to do with doom, org-modern? How can I indicate that a region is transcluded? Currently it looks exactly like the rest of the buffer.
-+ I have to be careful combining org-remark and org-transclusion. If I transclude a file, this will change the locations of my remarks in my .marginalia.org files. However, upon reopening the file, the transclusion will be closed and the remarks at the wrong position. How do I fix this?
++ I have to be careful combining org-remark and org-transclusion. If I transclude a file, this will change the locations of my remarks in my .marginalia.org files. However, upon reopening the file, the transclusion will be closed and the remarks at the wrong position. How do I fix this? It seems org-remark also has issues when I use narrowing for the exact same reason.
 + Narrowing can be very useful in Emacs. What kind of functionality surrounds narrowing? I know about narrowing and widening.
 + Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo.
