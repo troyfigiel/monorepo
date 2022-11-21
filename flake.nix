@@ -21,13 +21,6 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
-    nix-pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nur.url = "github:nix-community/nur";
-
     simple-nixos-mailserver = {
       url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
