@@ -7,9 +7,12 @@
 + I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 + Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
 
-** Data science
-+ Unfortunately, I have not found that poetry2nix is 100% effective. It often happens that I am missing some module or library and I don't know how to add it. My current workflow is to use a Dockerfile, which also works but is not as reproducible.
-+ I would like to move over my data-science scratchpad and use poetry2nix for it. Maybe give it a try with a single example like the red-wine data?
+** Development
++ eglot works well, but I have not really gotten flymake to work well. I run into some errors such as undefined functions. I will need to fix this before I have a good development experience.
++ Getting into a development container can be slow, because I have to go to the image, set up the volume, start the container, use TRAMP to connect and run ~/bin/bash~ in a shell. This can easily be automated and it makes me wonder if someone already has. Embark also seems like a good choice here.
++ If I use a Docker container for development, I would like to separate my buffers. It can get confusing when I have multiple shells and multiple dired buffers with the same contents since I am using volumes.
++ I need a better shell experience. Currently I have random completions that pop up, interrupt my flow, visual bugs, etc. What is causing all of this?
++ I should start moving over my data-science scratchpad to my reference projects.
 
 ** Desktop
 + How well does Geeqie work as a way to find duplicate images?
@@ -38,6 +41,7 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
++ Combining avy with embark is useful when I am typing somewhere and I quickly need to copy a word or so, for example into the minibuffer. Maybe ace-window is also a nice package to throw in the mix?
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.

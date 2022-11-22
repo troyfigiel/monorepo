@@ -23,6 +23,9 @@ in {
       ''];
     };
 
+    # TODO: This seems nice. It could be the main entrypoint to flymake.
+    consult-flymake = { enable = true; };
+
     flymake = {
       enable = true;
       general = [''

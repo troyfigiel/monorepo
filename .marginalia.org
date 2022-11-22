@@ -5,11 +5,11 @@
 
 ** Binary cache
 :PROPERTIES:
-:org-remark-beg: 1884
-:org-remark-end: 1896
+:org-remark-beg: 2704
+:org-remark-end: 2716
 :org-remark-id: 659af413
 :org-remark-label: nil
-:org-remark-link: [[file:README.org::27]]
+:org-remark-link: [[file:README.org::34]]
 :END:
 
 To copy to the binary cache, I can use
@@ -37,6 +37,16 @@ For example, if I were to separate my website from the monorepo, it would need t
 
 In principle, this can be done automatically of course, but this in turn makes rolling back more complicated. A huge advantage of Nix is that I can simply reboot into a previous generation if I break something. If there are multiple steps that need to be undone to rollback a change, global state starts playing a role again: Which rollback do I need to do first? In which order?
 
+** because reproducibility and containerization are distinct goals
+:PROPERTIES:
+:org-remark-beg: 2306
+:org-remark-end: 2369
+:org-remark-id: b9d957b1
+:org-remark-label: nil
+:org-remark-link: [[file:README.org::30]]
+:END:
+
+For example, a Dockerfile does not make the building process reproducible. If your run ~apt-get install <librar>~ inside your container, you will run into the exact same problems due to the lack of a locking mechanism and reproducible guarantees of the library.
 * TODO
 :PROPERTIES:
 :org-remark-file: TODO.org
@@ -59,11 +69,11 @@ In principle, this can be done automatically of course, but this in turn makes r
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 2715
-:org-remark-end: 2720
+:org-remark-beg: 3251
+:org-remark-end: 3256
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::40]]
+:org-remark-link: [[file:TODO.org::43]]
 :END:
 
 *** Combine embark and consult
@@ -78,44 +88,44 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** How do I link to a region?
 :PROPERTIES:
-:org-remark-beg: 3558
-:org-remark-end: 3584
+:org-remark-beg: 4294
+:org-remark-end: 4320
 :org-remark-id: cebfb535
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::45]]
+:org-remark-link: [[file:TODO.org::49]]
 :END:
 
 I can link to source code using the src notation and then specify the line numbers absolutely or relatively from a certain point.
 
 ** Narrowing can be very useful in Emacs.
 :PROPERTIES:
-:org-remark-beg: 4189
-:org-remark-end: 4227
+:org-remark-beg: 4925
+:org-remark-end: 4963
 :org-remark-id: 1091bac7
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::48]]
+:org-remark-link: [[file:TODO.org::52]]
 :END:
 
 If I am trying to find a word in a region inside of a long file, e.g. "denote-" inside "denote.el", I can narrow and then perform a search.
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 6986
-:org-remark-end: 7071
+:org-remark-beg: 7722
+:org-remark-end: 7807
 :org-remark-id: 8335fffd
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::63]]
+:org-remark-link: [[file:TODO.org::67]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 4514
-:org-remark-end: 4625
+:org-remark-beg: 5250
+:org-remark-end: 5361
 :org-remark-id: c60a02ba
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::50]]
+:org-remark-link: [[file:TODO.org::54]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
@@ -124,11 +134,11 @@ I can probably start implementing this by first moving all of my config to the e
 
 ** I removed the notes from my website
 :PROPERTIES:
-:org-remark-beg: 8176
-:org-remark-end: 8211
+:org-remark-beg: 8912
+:org-remark-end: 8947
 :org-remark-id: 79c1b927
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::80]]
+:org-remark-link: [[file:TODO.org::84]]
 :END:
 
 Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
@@ -137,11 +147,11 @@ The advantage of removing my notes, is that I do not need to think about paralle
 
 ** What kind of functionality surrounds narrowing?
 :PROPERTIES:
-:org-remark-beg: 4228
-:org-remark-end: 4275
+:org-remark-beg: 4964
+:org-remark-end: 5011
 :org-remark-id: 2a8b0b16
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::48]]
+:org-remark-link: [[file:TODO.org::52]]
 :END:
 
 + Narrowing to a region with C-x n n

@@ -6,4 +6,4 @@ def test_add_one():
 
 
 def test_subtract_one():
-    assert subtract_one(5) == 4
+    assert subtract_one(6) == 5

@@ -24,6 +24,13 @@ The equivalent of what used to be my Makefile has now been moved to flake.nix. A
 
 The default build of my entire network is simply `nix run` and it runs a formatter, checks, Terraform and all Nix builds.
 
+** Development
+Since I mostly work with Python in my day-to-day work, local development on Nix can cause some issues. This mainly happens when shared libraries that the package expects to find on the same, are in fact missing. To circumvent this, I currently do all my development in Docker containers.
+
+In principle, it is possible to do my Python development locally. In fact, this is the way development *should* be done, because reproducibility and containerization are distinct goals. However, currently I have not found that either poetry2nix or mach-nix gave me a completely smooth experience and the environment I get from Dockerfiles are usually reproducible enough.
+
+Python is unfortunately notoriously messy to package for. I am however optimistic about the development of the Nix ecosystem in this respect.
+
 ** Binary cache
 For complete reproducibility, I (am planning to) host my own binary cache using Minio.
 

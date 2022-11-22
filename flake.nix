@@ -37,7 +37,7 @@
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
-      imports = [ ./packages ./hosts ./modules ./templates ];
+      imports = [ ./packages ./hosts ./modules ];
 
       # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
       perSystem = { pkgs, ... }: {
