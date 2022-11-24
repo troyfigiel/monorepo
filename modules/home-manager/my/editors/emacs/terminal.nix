@@ -1,9 +1,17 @@
 {
   programs.emacs.init.usePackage = {
-    term = {
+    eshell = {
       enable = true;
-      # TODO: Should I make "zsh" into a Nix variable?
-      custom = { explicit-shell-file-name = ''"zsh"''; };
+      custom = {
+        eshell-banner-message = ''""'';
+        eshell-cp-overwrite-files = "nil";
+        eshell-mv-overwrite-files = "nil";
+      };
+      general = [''
+        (:keymaps 'eshell-mode-map
+         :states 'insert
+         "C-r" 'consult-history)
+      ''];
     };
   };
 }

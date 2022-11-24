@@ -1,5 +1,6 @@
 * TODO.org
 ** Code cleaning
++ I need to structure my Emacs configuration. A reasonable solution is by doing it in such a way that I can smartly debug any issues. Unfortunately, bughunter does not work for me, because I am on Nix, so I will have to do smart bisections by hand.
 + There are various places where my monorepo file location is hard-coded. Instead, I might want to always assume it is located at ~/monorepo and make a module my/monorepo.nix for it.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
 + Host names should be completely specified by the directory containing the machine configuration.
@@ -10,8 +11,10 @@
 ** Development
 + eglot works well, but I have not really gotten flymake to work well. I run into some errors such as undefined functions. I will need to fix this before I have a good development experience.
 + Getting into a development container can be slow, because I have to go to the image, set up the volume, start the container, use TRAMP to connect and run ~/bin/bash~ in a shell. This can easily be automated and it makes me wonder if someone already has. Embark also seems like a good choice here.
++ A Docker workflow also fits quite well with eshell. The commands are usually similar or the same, so I do not feel like I get the full benefit from docker.el.
++ How well would it work to create my own function that sets up a container from a Dockerfile and then opens dired in that container? It might require a bit of waiting for the container to spin up. Or did someone else already wrote something like this?
 + If I use a Docker container for development, I would like to separate my buffers. It can get confusing when I have multiple shells and multiple dired buffers with the same contents since I am using volumes.
-+ I need a better shell experience. Currently I have random completions that pop up, interrupt my flow, visual bugs, etc. What is causing all of this?
++ I need a better shell experience. Eshell has tight TRAMP integration which is perfect for a Docker kind of workflow. I will need to set up some eshell configuration.
 + I should start moving over my data-science scratchpad to my reference projects.
 
 ** Desktop
@@ -41,6 +44,8 @@
 + Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
++ Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
++ Think about a useful eshell workflow. How do I add completion (pcompletion)? The main selling point of eshell is its integration with Emacs including TRAMP.
 + Combining avy with embark is useful when I am typing somewhere and I quickly need to copy a word or so, for example into the minibuffer. Maybe ace-window is also a nice package to throw in the mix?
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
@@ -63,6 +68,7 @@
 + Sometimes I need to pull in multiple elisp files of the same repository with use-package. Is this how it is supposed to be done?
 + Set up org-babel for Python so I can start moving over my data-science scratch-pad.
 + It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
++ Can I not set these below directories relatively? That would remove the pain of having to use the absolute monorepo directory.
 + We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular. The problem currently is that we cannot set them as an environment variable when using emacsclient, since it seems emacsclient starts before the variables are set.
 + My mode-line seems to be too wide. I don't know why that happened in the first place. It does not seem to happen all the time though.
 

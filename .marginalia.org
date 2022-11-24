@@ -69,11 +69,11 @@ For example, a Dockerfile does not make the building process reproducible. If yo
 
 ** Emacs
 :PROPERTIES:
-:org-remark-beg: 3251
-:org-remark-end: 3256
+:org-remark-beg: 3931
+:org-remark-end: 3936
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::43]]
+:org-remark-link: [[file:TODO.org::46]]
 :END:
 
 *** Combine embark and consult
@@ -88,44 +88,44 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** How do I link to a region?
 :PROPERTIES:
-:org-remark-beg: 4294
-:org-remark-end: 4320
+:org-remark-beg: 5222
+:org-remark-end: 5248
 :org-remark-id: cebfb535
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::49]]
+:org-remark-link: [[file:TODO.org::54]]
 :END:
 
 I can link to source code using the src notation and then specify the line numbers absolutely or relatively from a certain point.
 
 ** Narrowing can be very useful in Emacs.
 :PROPERTIES:
-:org-remark-beg: 4925
-:org-remark-end: 4963
+:org-remark-beg: 5853
+:org-remark-end: 5891
 :org-remark-id: 1091bac7
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::52]]
+:org-remark-link: [[file:TODO.org::57]]
 :END:
 
 If I am trying to find a word in a region inside of a long file, e.g. "denote-" inside "denote.el", I can narrow and then perform a search.
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 7722
-:org-remark-end: 7807
+:org-remark-beg: 8779
+:org-remark-end: 8864
 :org-remark-id: 8335fffd
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::67]]
+:org-remark-link: [[file:TODO.org::73]]
 :END:
 
 This seems to have fixed itself. Maybe some configuration I changed? Check if it is still happening in the future, otherwise close the issue.
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 5250
-:org-remark-end: 5361
+:org-remark-beg: 6178
+:org-remark-end: 6289
 :org-remark-id: c60a02ba
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::54]]
+:org-remark-link: [[file:TODO.org::59]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
@@ -134,11 +134,11 @@ I can probably start implementing this by first moving all of my config to the e
 
 ** I removed the notes from my website
 :PROPERTIES:
-:org-remark-beg: 8912
-:org-remark-end: 8947
+:org-remark-beg: 9969
+:org-remark-end: 10004
 :org-remark-id: 79c1b927
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::84]]
+:org-remark-link: [[file:TODO.org::90]]
 :END:
 
 Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
@@ -147,13 +147,24 @@ The advantage of removing my notes, is that I do not need to think about paralle
 
 ** What kind of functionality surrounds narrowing?
 :PROPERTIES:
-:org-remark-beg: 4964
-:org-remark-end: 5011
+:org-remark-beg: 5892
+:org-remark-end: 5939
 :org-remark-id: 2a8b0b16
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::52]]
+:org-remark-link: [[file:TODO.org::57]]
 :END:
 
 + Narrowing to a region with C-x n n
 + Narrowing to a sub-heading in org-mode with C-x n s
 + Widening again with C-x n w
+
+** Unfortunately, bughunter does not work for me, because I am on Nix, so I will have to do smart bisections by hand.
+:PROPERTIES:
+:org-remark-beg: 163
+:org-remark-end: 277
+:org-remark-id: 10252968
+:org-remark-label: nil
+:org-remark-link: [[file:TODO.org::3]]
+:END:
+
+I am not completely sure why. It would be nice to have it, but it fails to find packages.

@@ -16,7 +16,11 @@ in {
       ];
     };
 
-    docker-tramp = { enable = true; };
+    docker-tramp = {
+      enable = true;
+      # TODO: This sets a default higher verbosity for TRAMP. Might be good to have it at this level until I understand when what gets triggered.
+      custom = { tramp-verbose = "6"; };
+    };
 
     git-modes = { mode = [ ''("\\.dockerignore\\'" . 'gitignore-mode)'' ]; };
   };

@@ -4,9 +4,12 @@
   imports = [ ./docker.nix ./nix.nix ./python.nix ./sql.nix ./terraform.nix ];
 
   programs.emacs.init.usePackage = {
-    smartparens = {
+    # This is a built-in package.
+    electric = {
       enable = true;
-      hook = [ "(prog-mode . smartparens-mode)" ];
+      config = ''
+        (electric-pair-mode 1)
+      '';
     };
 
     rainbow-delimiters = {

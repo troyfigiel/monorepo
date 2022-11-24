@@ -29,6 +29,7 @@
 
     recentf = {
       enable = true;
+      # TODO: I should bind a key to recentf-cleanup. Sometimes there are numerous recent files pointing to non-existing paths, such as when happens when Docker containers get removed.
       custom = {
         # It can be difficult to find what I am looking for with the low default values.
         # TODO: What does the recentf-max-menu-items option exactly change?
@@ -55,42 +56,40 @@
         (:keymaps 'override
          "C-x C-d" #'consult-dir)
       ''];
+      # TODO: This requires docker-tramp to be installed. How to make the dependency explicit? See: (require 'docker-tramp nil t)
+      # TODO: To get the same for SSH, I need to create a .ssh/config file containing my hosts.
+      config = ''
+        (defun consult-dir--tramp-docker-hosts ()
+          "Get a list of hosts from docker."
+          (when (require 'docker-tramp nil t)
+            (let ((hosts)
+                  (docker-tramp-use-names t))
+              (dolist (cand (docker-tramp--parse-running-containers))
+                (let ((user (unless (string-empty-p (car cand))
+                                (concat (car cand) "@")))
+                      (host (car (cdr cand))))
+                  (push (concat "/docker:" user host ":/") hosts)))
+              hosts)))
+
+        (defvar consult-dir--source-tramp-docker
+          `(:name     "Docker"
+            :narrow   ?d
+            :category file
+            :face     consult-file
+            :history  file-name-history
+            :items    ,#'consult-dir--tramp-docker-hosts)
+          "Docker candidate source for `consult-dir'.")
+
+        ;; (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
+        (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t)
+      '';
     };
-    # TODO: This requires docker-tramp to be installed. How to make the dependency explicit?
-    # TODO: To get the same for SSH, I need to create a .ssh/config file containing my hosts.
-    #   config = ''
-    #     (defun consult-dir--tramp-docker-hosts ()
-    #       "Get a list of hosts from docker."
-    #       (when (require 'docker-tramp nil t)
-    #         (let ((hosts)
-    #               (docker-tramp-use-names t))
-    #           (dolist (cand (docker-tramp--parse-running-containers))
-    #             (let ((user (unless (string-empty-p (car cand))
-    #                             (concat (car cand) "@")))
-    #                   (host (car (cdr cand))))
-    #               (push (concat "/docker:" user host ":/") hosts)))
-    #           hosts)))
-
-    #     (defvar consult-dir--source-tramp-docker
-    #       `(:name     "Docker"
-    #         :narrow   ?d
-    #         :category file
-    #         :face     consult-file
-    #         :history  file-name-history
-    #         :items    ,#'consult-dir--tramp-docker-hosts)
-    #       "Docker candidate source for `consult-dir'.")
-
-    #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
-    #     (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t)
-    #   '';
 
     # TODO: How is affe.el as a fuzzy-finder instead of consult-find and consult-ripgrep?
     consult = {
       enable = true;
       custom = { consult-project-function = "nil"; };
       extraPackages = [ pkgs.ripgrep ];
-      # TODO: consult-find and consult-ripgrep default to setting the project if I am in a project. This can be prevented by using the universal modifier, but that is a bit cumbersome. I should be able to use simulated keypresses to e.g. bind C-x C-f to the modified consult-find.
-      # TODO: I do not really use the recent-file option a lot. It is useful to have recentf turned on for consult-dir though. If I do not use this option, remove it.
       general = [''
         (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
@@ -164,16 +163,18 @@
       hook = [ "(embark-collect-mode . consult-preview-at-point-mode)" ];
     };
 
-    corfu = {
-      enable = true;
-      hook = [ "(after-init . global-corfu-mode)" ];
-      custom = {
-        corfu-auto = "t";
-        corfu-auto-prefix = "2";
-        corfu-cycle = "t";
-        corfu-auto-delay = "0.1";
-      };
-    };
+    # TODO: My set-up including corfu seems to cause some annoying bugs with the cursor jumping
+    # around in terminals. If I remove corfu, this issue is fixed. Do I need corfu?
+    # corfu = {
+    #   enable = true;
+    #   hook = [ "(after-init . global-corfu-mode)" ];
+    #   custom = {
+    #     corfu-auto = "t";
+    #     corfu-auto-prefix = "2";
+    #     corfu-cycle = "t";
+    #     corfu-auto-delay = "0.1";
+    #   };
+    # };
 
     prescient = {
       enable = true;
