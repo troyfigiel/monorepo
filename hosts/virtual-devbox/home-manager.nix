@@ -11,7 +11,6 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          hmModules.alacritty
           hmModules.background
           hmModules.emacs
           hmModules.git
@@ -21,11 +20,9 @@
           hmModules.polybar
           hmModules.rofi
           hmModules.xdg
-          hmModules.zsh
         ];
 
         my = {
-          alacritty.enable = true;
           git.enable = true;
           emacs.enable = true;
 
@@ -36,7 +33,6 @@
             onLaptop = false;
           };
 
-          zsh.enable = true;
           background.enable = true;
           i3.enable = true;
           #   picom.enable = true;

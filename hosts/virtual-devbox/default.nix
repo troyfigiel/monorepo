@@ -43,7 +43,6 @@
   users.users.troy = {
     initialPassword = "nixos";
     isNormalUser = true;
-    shell = pkgs.zsh;
     extraGroups = [ "wheel" "docker" ];
     packages = with pkgs; [ git gnumake vim ];
   };

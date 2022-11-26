@@ -5,10 +5,6 @@
   firefox = import ./my/applications/firefox.nix;
   messenger = import ./my/applications/messenger.nix;
 
-  alacritty = import ./my/shell/alacritty.nix;
-  fish = import ./my/shell/fish.nix;
-  zsh = import ./my/shell/zsh.nix;
-
   background = import ./my/desktop/background.nix;
   dunst = import ./my/desktop/dunst.nix;
   i3 = import ./my/desktop/i3.nix;

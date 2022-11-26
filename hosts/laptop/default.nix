@@ -68,7 +68,6 @@
       isNormalUser = true;
       home = "/home/troy";
       description = "Troy Figiel";
-      shell = pkgs.zsh;
       extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
       passwordFile = config.sops.secrets.troy-password.path;
       # This is needed to be able to call deploy using my Nitrokey.

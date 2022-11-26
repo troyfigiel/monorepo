@@ -9,12 +9,6 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      services.emacs = {
-        enable = true;
-        startWithUserSession = true;
-        defaultEditor = true;
-      };
-
       # We do not need to set emacsNativeComp, because the default emacs package is already natively compiled.
       programs.emacs = {
         enable = true;

@@ -4,8 +4,9 @@
   programs.emacs.init.usePackage = {
     doom-themes = {
       enable = true;
-      hook =
-        [ "(server-after-make-frame . (lambda () (load-theme 'doom-one t)))" ];
+      config = ''
+        (load-theme 'doom-one t)
+      '';
     };
 
     # doom-themes-ext-treemacs = { enable = true; };
@@ -29,9 +30,9 @@
 
     fontaine = {
       enable = true;
-      hook = [
-        "(server-after-make-frame . (lambda () (fontaine-set-preset 'default)))"
-      ];
+      config = ''
+        (fontaine-set-preset 'default)
+      '';
       custom = {
         fontaine-presets = ''
           '((default

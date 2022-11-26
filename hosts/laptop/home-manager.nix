@@ -10,7 +10,6 @@
       troy = {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          hmModules.alacritty
           hmModules.background
           hmModules.dunst
           hmModules.emacs
@@ -27,11 +26,9 @@
           hmModules.rofi
           hmModules.syncthing
           hmModules.xdg
-          hmModules.zsh
         ];
 
         my = {
-          alacritty.enable = true;
           background = {
             enable = true;
             # TODO: I need to think about how I handle my wallpaper directory. Currently it is not reproducible.
@@ -59,7 +56,6 @@
           emacs.enable = true;
           rofi.enable = true;
           nvim.enable = true;
-          zsh.enable = true;
         };
       };
     };

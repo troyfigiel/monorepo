@@ -13,11 +13,9 @@ in {
         enable = true;
         package = pkgs.i3-gaps;
 
-        config = let
-          modifier = "Mod4";
-          terminal = "${pkgs.alacritty}/bin/alacritty";
+        config = let modifier = "Mod4";
         in {
-          inherit modifier terminal;
+          inherit modifier;
           bars = [ ];
 
           window.border = 2;
