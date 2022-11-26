@@ -19,28 +19,12 @@
 
 ** Desktop
 + How well does Geeqie work as a way to find duplicate images?
-+ Find a nice Nix wallpaper and use that as the default sddm background. If there is no .wallpapers folder, then fall back on this background as the default and otherwise on any of the wallpapers in that folder.
 + For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
 + B00merang-Project's Windows themes to make it easier for any guests?
 + Use headphones to start and pause videos / music
 + Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
 + Set up a nice notification theme for increasing / decreasing brightness and volume
-+ Set up rofi-pass
-+ Set up a consistent Nix color scheme using nix-colors
-+ Save a predefined set of i3 window layouts
-+ The Nitrokey app icon should appear in the bottom bar upon startup
-+ Change my cursor theme
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
-+ Add icons to Polybar
-+ Add volume to Polybar
-+ Add brightness to Polybar
-+ Add music player to Polybar
-+ Add Bluetooth to Polybar
-+ Add networks to Polybar
-+ Add VPN to Polybar
-+ Add active window (i3) to Polybar
-+ Add temperature to Polybar
-+ Add hard disk drive remaining and tmpfs size remaining to Polybar
 
 ** Emacs
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?

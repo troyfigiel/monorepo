@@ -9,12 +9,19 @@
       '';
     };
 
-    # doom-themes-ext-treemacs = { enable = true; };
-
     doom-modeline = {
       enable = true;
       hook = [ "(after-init . doom-modeline-mode)" ];
-      custom = { doom-modeline-vcs-max-length = "24"; };
+      custom = {
+        doom-modeline-hud = "t";
+        display-time-24hr-format = "t";
+        display-time-day-and-date = "t";
+        display-time-default-load-average = "nil";
+      };
+      config = ''
+        (display-time-mode 1)
+        (display-battery-mode 1)
+      '';
     };
 
     all-the-icons = {
