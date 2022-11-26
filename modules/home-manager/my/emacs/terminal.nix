@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.emacs.init.usePackage = {
     eshell = {
@@ -12,6 +14,16 @@
          :states 'insert
          "C-r" 'consult-history)
       ''];
+    };
+
+    vterm = {
+      enable = true;
+      extraPackages = [ pkgs.libvterm ];
+    };
+
+    detached = {
+      enable = true;
+      extraPackages = [ pkgs.dtach ];
     };
   };
 }

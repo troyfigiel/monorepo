@@ -14,8 +14,7 @@
 
   git = import ./my/development/git.nix;
 
-  emacs = import ./my/editors/emacs;
-  nvim = import ./my/editors/nvim.nix;
+  emacs = import ./my/emacs;
 
   gpg = import ./my/security/gpg.nix;
   pass = import ./my/security/pass.nix;

@@ -16,17 +16,11 @@ in {
         rerere.enabled = true;
         commit.verbose = true;
         color.ui = "auto";
-        core.editor = "vim";
+        core.editor = "emacs";
         merge.conflictstyle = "diff3";
         pull.rebase = true;
         push.autoSetupRemote = true;
       };
-    };
-
-    # TODO: I should start using Emacs for this once I get the terminal colours for Magit to work nicely.
-    programs.lazygit = {
-      enable = true;
-      settings = { disableStartupPopups = true; };
     };
   };
 }

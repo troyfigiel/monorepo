@@ -128,7 +128,6 @@
       hook = [ "(after-init . marginalia-mode)" ];
     };
 
-    # Embark replaces evil-nerd-commenter
     embark = {
       enable = true;
       hook = [ "(embark-collect-mode . hl-line-mode)" ];
@@ -140,17 +139,12 @@
         # TODO: I am not sure what this does exactly.
         # I think this is a which-key replacement. I have to check, e.g. if I run C-c C-h or C-C ? this window pops-up.
         # prefix-help-command = "#'embark-prefix-help-command";
-        # TODO: Set a separate binding for embark-become? C-SPC or so?
       };
       # TODO: These keymaps do not work in the terminal. Which keys do work in terminal mode?
       general = [''
         (:keymaps 'override
          "C-," #'embark-act
          "C-h b" #'embark-bindings)
-        (:states '(insert normal visual)
-         :keymaps 'vertico-map
-         "C-b" #'embark-become
-         "C-e" #'embark-export)
       ''];
     };
 

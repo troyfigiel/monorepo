@@ -23,11 +23,6 @@
       extraPackages = [ pkgs.imagemagick ];
     };
 
-    # dired-du = {
-    #   enable = true;
-    #   custom = { dired-du-size-format = "t"; };
-    # };
-
     dired-rsync = {
       enable = true;
       general = [''

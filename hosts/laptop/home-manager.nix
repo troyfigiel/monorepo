@@ -19,7 +19,6 @@
           hmModules.home
           hmModules.i3
           hmModules.messenger
-          hmModules.nvim
           hmModules.pass
           hmModules.picom
           hmModules.polybar
@@ -55,7 +54,6 @@
             [ "documents" "downloads" "projects" "audio" "pictures" "videos" ];
           emacs.enable = true;
           rofi.enable = true;
-          nvim.enable = true;
         };
       };
     };

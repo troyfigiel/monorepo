@@ -19,8 +19,8 @@ in {
         drun-display-format = "{icon} {name}";
         show-icons = true;
         icon-theme = "Papirus";
-        kb-row-up = "Super+k";
-        kb-row-down = "Super+j";
+        kb-row-up = "Ctrl+p";
+        kb-row-down = "Ctrl+n";
       };
 
       # TODO: Add rounded corners

@@ -110,8 +110,8 @@ If I am trying to find a word in a region inside of a long file, e.g. "denote-" 
 
 ** My mode-line seems to be too wide. I don't know why that happened in the first place.
 :PROPERTIES:
-:org-remark-beg: 8684
-:org-remark-end: 8769
+:org-remark-beg: 8520
+:org-remark-end: 8605
 :org-remark-id: 8335fffd
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::72]]
@@ -134,8 +134,8 @@ I can probably start implementing this by first moving all of my config to the e
 
 ** I removed the notes from my website
 :PROPERTIES:
-:org-remark-beg: 9874
-:org-remark-end: 9909
+:org-remark-beg: 9710
+:org-remark-end: 9745
 :org-remark-id: 79c1b927
 :org-remark-label: nil
 :org-remark-link: [[file:TODO.org::89]]

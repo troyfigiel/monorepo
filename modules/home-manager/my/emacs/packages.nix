@@ -3,14 +3,14 @@
 {
   imports = [
     ./completion.nix
+    ./dashboard.nix
+    ./development.nix
     ./dired.nix
     ./magit.nix
-    ./popper.nix
-    ./development.nix
-    ./terminal.nix
-    ./theme.nix
     ./progmodes
+    ./terminal.nix
     ./textmodes
+    ./theme.nix
   ];
 
   programs.emacs.init.usePackage = {

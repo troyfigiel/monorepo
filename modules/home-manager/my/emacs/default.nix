@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.my.emacs;
 in {
-  imports = [ ../../../emacs-init ./packages.nix ];
+  imports = [ ../../emacs-init ./packages.nix ];
 
   options.my.emacs.enable = mkEnableOption "Emacs";
 
