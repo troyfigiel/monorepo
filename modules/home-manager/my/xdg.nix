@@ -5,13 +5,14 @@ let cfg = config.my;
 in {
   options.my.directories = mkOption {
     type = types.listOf (types.enum [
+      "audio"
       "documents"
       "downloads"
-      "audio"
+      "misc"
       "pictures"
+      "projects"
       "share"
       "videos"
-      "projects"
     ]);
     default = [ ];
     description = "Directories to enable.";
@@ -51,6 +52,10 @@ in {
                 "gid=100"
               ];
             };
+          })
+
+          (mkIf (elem "misc" cfg.directories) {
+            extraConfig = { XDG_MISC_DIR = "${homeDir}/misc"; };
           })
 
           (mkIf (elem "projects" cfg.directories) {

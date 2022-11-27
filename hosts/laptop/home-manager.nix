@@ -50,8 +50,15 @@
           picom.enable = true;
           polybar.enable = true;
           syncthing.enable = true;
-          directories =
-            [ "documents" "downloads" "projects" "audio" "pictures" "videos" ];
+          directories = [
+            "audio"
+            "documents"
+            "downloads"
+            "misc"
+            "pictures"
+            "projects"
+            "videos"
+          ];
           emacs.enable = true;
           rofi.enable = true;
         };
