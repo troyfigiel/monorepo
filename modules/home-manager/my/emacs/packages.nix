@@ -7,10 +7,12 @@
     ./development.nix
     ./dired.nix
     ./magit.nix
+    ./popper.nix
     ./progmodes
     ./terminal.nix
     ./textmodes
     ./theme.nix
+    ./window.nix
   ];
 
   programs.emacs.init.usePackage = {

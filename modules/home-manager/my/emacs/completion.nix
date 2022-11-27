@@ -85,24 +85,20 @@
       '';
     };
 
-    # TODO: How is affe.el as a fuzzy-finder instead of consult-find and consult-ripgrep?
     consult = {
       enable = true;
-      custom = { consult-project-function = "nil"; };
+      custom = {
+        consult-project-function = "nil";
+        consult-async-min-input = "2";
+      };
       extraPackages = [ pkgs.ripgrep ];
       general = [''
         (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
          "C-x b" 'consult-buffer
-         "C-c c" 'consult-recent-file
-
-         ;; Override non-project default
-         "C-c f" 'consult-find
-         "C-c g" 'consult-ripgrep
-
-         ;; Override project.el defaults.
-         "C-x p f" (lambda () (interactive) (let ((consult-project-function #'consult--default-project-function)) (consult-find)))
-         "C-x p g" (lambda () (interactive) (let ((consult-project-function #'consult--default-project-function)) (consult-ripgrep))))
+         "C-x C-r" 'consult-recent-file
+         "C-x C-f" 'consult-find
+         "C-x C-g" 'consult-ripgrep)
       ''];
     };
 
