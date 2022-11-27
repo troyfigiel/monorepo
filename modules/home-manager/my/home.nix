@@ -50,8 +50,7 @@ in {
         tldr
         file
         fd
-        # TODO: Libreoffice is not working in the current flake.
-        # libreoffice
+        libreoffice
         lzip
         zip
         unzip

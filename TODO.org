@@ -29,8 +29,10 @@
 ** Emacs
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
 + Think about a useful eshell workflow. How do I add completion (pcompletion)? The main selling point of eshell is its integration with Emacs including TRAMP.
++ Sometimes I want to pull up a shell for a directory, but the shell I pull up is not in the directory belonging to the buffer. Is there a smart way to work with this? I also do not want to end up with too many shell buffers.
 + Combining avy with embark is useful when I am typing somewhere and I quickly need to copy a word or so, for example into the minibuffer. Maybe ace-window is also a nice package to throw in the mix?
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
++ I have been using the denote naming schema for a bit now. Is there a way to extract all the keywords used in a given directory? That would be especially useful for quickly seeing what is in a directory. It will allow me to have a flatter directory structure and rely more on keyword search functionality.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
@@ -53,7 +55,6 @@
 + It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
 + Can I not set these below directories relatively? That would remove the pain of having to use the absolute monorepo directory.
 + We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular.
-+ My mode-line seems to be too wide. I don't know why that happened in the first place. It does not seem to happen all the time though.
 
 ** Hardware
 + Add my Raspberry Pi to my network.
