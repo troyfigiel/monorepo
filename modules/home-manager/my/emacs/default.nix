@@ -1,4 +1,4 @@
-{ impermanence, config, lib, ... }:
+{ impermanence, config, lib, pkgs, ... }:
 
 with lib;
 let cfg = config.my.emacs;
@@ -9,7 +9,6 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      # We do not need to set emacsNativeComp, because the default emacs package is already natively compiled.
       programs.emacs = {
         enable = true;
         init = {
@@ -48,6 +47,10 @@ in {
           };
         };
       };
+
+      # TODO: It works, but is not the right place for adding the package.
+      # Once I move away from home-manager emacs-init, I will need to move this as well.
+      home.packages = [ pkgs.tf-exif ];
     }
 
     (optionalAttrs impermanence {

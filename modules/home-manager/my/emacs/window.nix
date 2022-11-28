@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   programs.emacs.init.usePackage = {
     # ace-window = {

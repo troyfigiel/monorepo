@@ -16,6 +16,8 @@
   ];
 
   programs.emacs.init.usePackage = {
+    tf-exif = { enable = true; };
+
     pdf-tools = {
       enable = true;
       # TODO: This seems to be necessary to open a pdf file with pdf-view-mode automatically. I am not sure if this is specific to the Nix package or also is the case on other operating systems.
@@ -74,15 +76,10 @@
 
     avy = {
       enable = true;
-      # TODO: For some mysterious reason, leaving out the keybinding for C-a breaks the keybinding for f. Maybe avy-goto-char-2 is not preloaded, until I actually bind the key explicitly?
-      # TODO: For some reason avy does not act on words, but seems to be looking for the next space. For example, goto-line would be interpreted as a single word by Avy. This is a bit counterintuitive. How do I fix that?
       custom = { avy-timeout-seconds = "0.25"; };
       general = [''
-        ("C-a" #'avy-goto-char-timer)
-        ("C-b" #'avy-goto-line)
-        (:states 'motion
-         "f" #'evil-avy-goto-char-timer
-         "F" #'evil-avy-goto-line)
+        ("C-<" #'avy-goto-char-timer
+         "C->" #'avy-pop-mark)
       ''];
       config = ''
         (defun avy-action-embark (pt)
@@ -94,7 +91,7 @@
              (cdr (ring-ref avy-ring 0))))
           t)
 
-        (setf (alist-get ?, avy-dispatch-alist) 'avy-action-embark)
+        (setf (alist-get ?\C-, avy-dispatch-alist) 'avy-action-embark)
       '';
     };
 

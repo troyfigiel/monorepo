@@ -1,4 +1,4 @@
-{ inputs, config, nixosModules, pkgs, ... }:
+{ inputs, config, nixosModules, ... }:
 
 {
   imports = [

@@ -26,5 +26,8 @@
     };
     wallpaper = prev.callPackage ./wallpaper.nix { };
     website = prev.callPackage ../website { };
+    tf-exif = prev.callPackage ./tf-exif.nix {
+      inherit (prev.emacs.pkgs) trivialBuild denote;
+    };
   };
 }
