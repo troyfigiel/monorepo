@@ -84,6 +84,18 @@
          "f" #'evil-avy-goto-char-timer
          "F" #'evil-avy-goto-line)
       ''];
+      config = ''
+        (defun avy-action-embark (pt)
+          (unwind-protect
+              (save-excursion
+                (goto-char pt)
+                (embark-act))
+            (select-window
+             (cdr (ring-ref avy-ring 0))))
+          t)
+
+        (setf (alist-get ?, avy-dispatch-alist) 'avy-action-embark)
+      '';
     };
 
     super-save = {
@@ -104,7 +116,7 @@
          "c" 'helpful-command
          "f" 'helpful-function
          "k" 'helpful-key
-         "m" 'helpful-macro
+         "m" 'helpful-mode
          "o" 'helpful-symbol
          "v" 'helpful-variable)
       ''];

@@ -4,6 +4,7 @@
       enable = true;
       custom = {
         vc-follow-symlinks = "t";
+        transient-show-popup = "nil";
         magit-display-buffer-function =
           "#'magit-display-buffer-same-window-except-diff-v1";
       };

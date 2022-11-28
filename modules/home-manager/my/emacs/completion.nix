@@ -96,9 +96,8 @@
         (:keymaps '(override embark-general-map)
          "C-s" 'consult-line
          "C-x b" 'consult-buffer
-         "C-x C-r" 'consult-recent-file
          "C-x C-f" 'consult-find
-         "C-x C-g" 'consult-ripgrep)
+         "C-x C-r" 'consult-ripgrep)
       ''];
     };
 
