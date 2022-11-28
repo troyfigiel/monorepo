@@ -88,22 +88,22 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 
 ** How do I link to a region?
 :PROPERTIES:
-:org-remark-beg: 6186
-:org-remark-end: 6212
+:org-remark-beg: 6619
+:org-remark-end: 6645
 :org-remark-id: cebfb535
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::48]]
+:org-remark-link: [[file:TODO.org::53]]
 :END:
 
 I can link to source code using the src notation and then specify the line numbers absolutely or relatively from a certain point.
 
 ** Narrowing can be very useful in Emacs.
 :PROPERTIES:
-:org-remark-beg: 6817
-:org-remark-end: 6855
+:org-remark-beg: 7250
+:org-remark-end: 7288
 :org-remark-id: 1091bac7
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::51]]
+:org-remark-link: [[file:TODO.org::56]]
 :END:
 
 If I am trying to find a word in a region inside of a long file, e.g. "denote-" inside "denote.el", I can narrow and then perform a search.
@@ -111,11 +111,11 @@ If I am trying to find a word in a region inside of a long file, e.g. "denote-" 
 
 ** Move my config to the extraConfig field so I can prepare for separating out Emacs as a subdirectory of monorepo
 :PROPERTIES:
-:org-remark-beg: 7142
-:org-remark-end: 7253
+:org-remark-beg: 7575
+:org-remark-end: 7686
 :org-remark-id: c60a02ba
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::53]]
+:org-remark-link: [[file:TODO.org::58]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
@@ -124,11 +124,11 @@ I can probably start implementing this by first moving all of my config to the e
 
 ** I removed the notes from my website
 :PROPERTIES:
-:org-remark-beg: 10633
-:org-remark-end: 10668
+:org-remark-beg: 11066
+:org-remark-end: 11101
 :org-remark-id: 79c1b927
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::83]]
+:org-remark-link: [[file:TODO.org::88]]
 :END:
 
 Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
@@ -137,11 +137,11 @@ The advantage of removing my notes, is that I do not need to think about paralle
 
 ** What kind of functionality surrounds narrowing?
 :PROPERTIES:
-:org-remark-beg: 6856
-:org-remark-end: 6903
+:org-remark-beg: 7289
+:org-remark-end: 7336
 :org-remark-id: 2a8b0b16
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::51]]
+:org-remark-link: [[file:TODO.org::56]]
 :END:
 
 + Narrowing to a region with C-x n n

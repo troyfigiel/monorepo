@@ -26,6 +26,10 @@ in {
             (denote heading tags 'org)
             (insert text)))
       '';
+      general = [''
+        (:keymaps 'dired-mode-map
+         "C-c n r" 'denote-dired-rename-marked-files)
+      ''];
     };
 
     org-roam = {

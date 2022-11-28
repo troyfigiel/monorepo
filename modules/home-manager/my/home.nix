@@ -56,6 +56,8 @@ in {
         unzip
         unar
         nitrokey-app
+        # TODO: This should be moved somewhere else. Parquet-tools can very easily read, show and transform parquet files.
+        parquet-tools
         dbeaver
         flameshot
         feh
@@ -65,12 +67,10 @@ in {
 
       programs.jq.enable = true;
       programs.feh.enable = true;
-      programs.zathura.enable = true;
       services.flameshot.enable = true;
 
       # What does this do exactly?
       programs.command-not-found.enable = true;
-      programs.lf.enable = true;
       programs.mpv.enable = true;
       programs.less.enable = true;
       programs.lesspipe.enable = true;

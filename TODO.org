@@ -31,6 +31,7 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
++ Define an apheleia formatter for elisp. This should be as simple as calling (indent-region (point-min) (point-max)). This needs to be run through a separate Emacs instance though.
 + Sometimes I get stuck in the Magit transient interface. I do not know what triggers this exactly. Does it also happen when I set ~transient-show-popup~ to nil?
 + What are the benefits of using vc versus Magit? Where is each one better? Does vc even come with all the git commands I might want to perform? For example, a git bisect?
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
@@ -43,6 +44,10 @@
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + I have been using the denote naming schema for a bit now. Is there a way to extract all the keywords used in a given directory? That would be especially useful for quickly seeing what is in a directory. It will allow me to have a flatter directory structure and rely more on keyword search functionality.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
++ The regexp-replace functionality is not completely smooth yet. Similarly, evil-record-macro is not bound in dired. What kind of commands do I use often for text editing en masse? What could I add?
+  - regexp-replace
+  - macros
+  - multiple-cursors?
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + If I add general key-bindings, my old key-bindings do not seem to work anymore. Why is this happening?
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?

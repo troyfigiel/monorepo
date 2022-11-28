@@ -20,7 +20,7 @@
         (:keymaps 'dired-mode-map
          "M-+" 'dired-create-empty-file)
       ''];
-      extraPackages = [ pkgs.imagemagick ];
+      extraPackages = [ pkgs.imagemagick pkgs.exiftool ];
     };
 
     dired-rsync = {
@@ -32,5 +32,19 @@
       ''];
       extraPackages = [ pkgs.rsync ];
     };
+
+    # TODO: This has the same problem as other packages. Once I use general, the autoloading does not work anymore.
+    # dired-subtree = {
+    #   enable = true;
+    #   custom = {
+    #     dired-subtree-use-backgrounds = "nil";
+    #     dired-subtree-line-prefix = "   ";
+    #   };
+    #   general = [''
+    #     (:states 'normal
+    #      :keymaps 'dired-mode-map
+    #      "* s" 'dired-subtree-mark-subtree)
+    #   ''];
+    # };
   };
 }
