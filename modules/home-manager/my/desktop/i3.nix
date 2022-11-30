@@ -63,7 +63,7 @@ in {
             "${modifier}+q" = "kill";
 
             "${modifier}+Shift+q" =
-              "exec ${pkgs.betterlockscreen}/bin/betterlockscreen --lock blur";
+              "exec ${pkgs.betterlockscreen}/bin/betterlockscreen";
 
             "XF86AudioMute" = ''
               exec ${pkgs.alsa-utils}/bin/amixer set Master toggle; exec ${pkgs.dunst}/bin/dunstify "Toggling mute"

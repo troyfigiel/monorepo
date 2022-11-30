@@ -80,7 +80,6 @@ in {
       # If so, we can turn inactiveInterval down to 10 again.
       services.betterlockscreen = {
         enable = true;
-        arguments = [ "blur" ];
         inactiveInterval = 60;
       };
 
