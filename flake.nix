@@ -37,10 +37,35 @@
     in mkFlake { inherit self; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
-      imports = [ ./packages ./hosts ./modules ];
+      imports = [
+        ./bootstrap/flake-module.nix
+        ./hosts/flake-module.nix
+        ./infrastructure/flake-module.nix
+        ./modules/flake-module.nix
+      ];
 
-      # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
-      perSystem = { pkgs, ... }: {
+      perSystem = { system, pkgs, ... }: {
+        legacyPackages = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfreePredicate = pkg:
+            builtins.elem (inputs.nixpkgs.lib.getName pkg) [
+              "skypeforlinux"
+              "steam"
+              "steam-original"
+              "steam-run"
+            ];
+
+          # Software that is not built for aarch64 does seem to work fine.
+          # TODO: Does it make sense setting this for x86_64 systems as well?
+          config.allowUnsupportedSystem = true;
+          overlays = [
+            inputs.emacs-overlay.overlay
+            (import ./packages/overlay.nix)
+            (import ./website/overlay.nix)
+            (import ./modules/home-manager/my/emacs/tf/overlay.nix)
+          ];
+        };
+
         apps = {
           default = {
             type = "app";
@@ -50,87 +75,55 @@
               text = ''
                 deploy_host () {
                    printf '\e[33m%s\e[0m\n' "Deploying to $1" \
-                   && nix run .#deploy "$1" \
+                   && nix run .#hosts "$1" \
                    && printf '\e[32m%s\e[0m\n' "Successful deployment to $1!" \
                    || printf '\e[31m%s\e[0m\n' "Failed deployment to $1!"
                 }
 
                 nix fmt
                 nix flake check --keep-going || exit 1
-                nix run .#infra
+                nix run .#infrastructure
                 deploy_host laptop
                 deploy_host cloud-server
               '';
             };
           };
-
-          deploy = {
-            type = "app";
-            program = pkgs.callPackage ./deploy.nix { };
-          };
-
-          bootstrap = {
-            type = "app";
-            program = pkgs.callPackage ./bootstrap.nix { };
-          };
-
-          infra = {
-            type = "app";
-            program = pkgs.writeShellApplication {
-              name = "my-infrastructure";
-              runtimeInputs = with pkgs; [ coreutils execline.bin terraform ];
-              text = ''
-                cd infrastructure || exit 1
-                terraform init
-                terraform apply
-                terraform output -json > outputs.json
-              '';
-            };
-          };
         };
-
+        # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
         # TODO: I need to run touch $out for the linters, because builds need to have an output.
         # This feels hacky. Is it the only way? It seems I am not the only one to do so: https://github.com/kira-bruneau/flake-linter/blob/main/lib/make-flake-linter/default.nix
         checks = {
-          deadnix = pkgs.runCommand "check-deadnix" {
+          deadnix = pkgs.runCommand "checks-deadnix" {
             buildInputs = [ pkgs.deadnix ];
           } ''
             deadnix --fail ${./.}
             touch $out
           '';
 
-          statix =
-            pkgs.runCommand "check-statix" { buildInputs = [ pkgs.statix ]; } ''
-              statix check ${./.} 2>/dev/null
-              touch $out
-            '';
-
-          # TODO: Nix-linter can not properly interpret ./${host}, which is why I need to exclude this one file.
-          # TODO: Which linters are good? Try them out for a while to see what I prefer.
-          nix-linter = pkgs.runCommand "check-nix-linter" {
-            buildInputs = [ pkgs.findutils pkgs.nix-linter ];
+          statix = pkgs.runCommand "checks-statix" {
+            buildInputs = [ pkgs.statix ];
           } ''
-            find ${./.} -type f -name '*.nix' \
-                 -not -path ${./.}/hosts/default.nix \
-                 -print0 \
-                 | xargs -0 nix-linter
+            statix check ${./.} 2>/dev/null
             touch $out
           '';
 
-          # TODO: Nix-linter can not properly interpret ./${host}, which is why I need to exclude this one file.
-          # TODO: Which linters are good? Try them out for a while to see what I prefer.
-          nixfmt = pkgs.runCommand "check-nixfmt" {
+          nix-linter = pkgs.runCommand "checks-nix-linter" {
+            buildInputs = [ pkgs.findutils pkgs.nix-linter ];
+          } ''
+            find ${./.} -type f -name '*.nix' -print0 | xargs -0 nix-linter
+            touch $out
+          '';
+
+          nixfmt = pkgs.runCommand "checks-nixfmt" {
             buildInputs = [ pkgs.findutils pkgs.nixfmt ];
           } ''
-            find ${./.} -type f -name '*.nix' \
-                 -print0 \
-                 | xargs -0 nixfmt -c
+            find ${./.} -type f -name '*.nix' -print0 | xargs -0 nixfmt -c
             touch $out
           '';
         };
 
         formatter = pkgs.writeShellApplication {
-          name = "my-formatter";
+          name = "formatter-nixfmt";
           runtimeInputs = [ pkgs.findutils pkgs.nixfmt ];
           text = ''
             find "$@" -type f -name '*.nix' \

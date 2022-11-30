@@ -2,6 +2,6 @@
 
 trivialBuild {
   pname = "tf-exif";
-  src = ../modules/home-manager/my/emacs/extensions/tf-exif.el;
+  src = ./tf-exif.el;
   packageRequires = [ denote ];
 }
