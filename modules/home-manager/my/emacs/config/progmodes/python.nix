@@ -21,7 +21,8 @@ in {
       extraPackages = [
         pkgs.python3Packages.python-lsp-server
         # pkgs.python3Packages.pylsp-rope
-        pkgs.python3Packages.pylsp-mypy
+        # TODO: pylsp-mypy is broken in the current update.
+        # pkgs.python3Packages.pylsp-mypy
         pkgs.python3Packages.flake8
       ];
     };
