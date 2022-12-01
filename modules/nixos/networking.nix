@@ -11,7 +11,7 @@ in {
         192.168.178.31 rpi
         192.168.178.37 nas
         ${
-          (import ../../../hosts/cloud-server/parameters.nix).deploy.ip
+          (import ../../hosts/cloud-server/parameters.nix).deploy.ip
         } cloud-server
       '';
       useDHCP = lib.mkDefault true;

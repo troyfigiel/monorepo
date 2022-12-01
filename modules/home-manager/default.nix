@@ -1,23 +1,23 @@
 {
-  home = import ./my/home.nix;
-  xdg = import ./my/xdg.nix;
+  home = import ./home.nix;
+  xdg = import ./xdg.nix;
 
-  firefox = import ./my/applications/firefox.nix;
-  messenger = import ./my/applications/messenger.nix;
+  firefox = import ./applications/firefox.nix;
+  messenger = import ./applications/messenger.nix;
 
-  background = import ./my/desktop/background.nix;
-  dunst = import ./my/desktop/dunst.nix;
-  i3 = import ./my/desktop/i3.nix;
-  picom = import ./my/desktop/picom.nix;
-  polybar = import ./my/desktop/polybar.nix;
-  rofi = import ./my/desktop/rofi;
+  background = import ./desktop/background.nix;
+  dunst = import ./desktop/dunst.nix;
+  i3 = import ./desktop/i3.nix;
+  picom = import ./desktop/picom.nix;
+  polybar = import ./desktop/polybar.nix;
+  rofi = import ./desktop/rofi;
 
-  git = import ./my/development/git.nix;
+  git = import ./development/git.nix;
 
-  emacs = import ./my/emacs/config;
+  emacs = import ../../emacs;
 
-  gpg = import ./my/security/gpg.nix;
-  pass = import ./my/security/pass.nix;
+  gpg = import ./security/gpg.nix;
+  pass = import ./security/pass.nix;
 
-  syncthing = import ./my/services/syncthing.nix;
+  syncthing = import ./services/syncthing.nix;
 }

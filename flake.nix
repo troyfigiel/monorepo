@@ -62,7 +62,7 @@
             inputs.emacs-overlay.overlay
             (import ./packages/overlay.nix)
             (import ./website/overlay.nix)
-            (import ./modules/home-manager/my/emacs/tf/overlay.nix)
+            (import ./emacs/overlay.nix)
           ];
         };
 
