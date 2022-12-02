@@ -9,12 +9,12 @@ in {
     {
       programs.emacs = {
         enable = true;
-        package = (pkgs.emacsWithPackagesFromUsePackage {
+        package = pkgs.emacsWithPackagesFromUsePackage {
           config = ./init.el;
           defaultInitFile = true;
-          package = pkgs.emacs;
+          package = pkgs.emacsNativeComp;
           alwaysEnsure = false;
-        });
+        };
       };
 
       # TODO: It works, but is not the right place for adding the package.

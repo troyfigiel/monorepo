@@ -47,35 +47,23 @@
 (setq visible-bell t)
 (column-number-mode 1)
 (setq initial-scratch-message "")
+(setq-default cursor-type '(bar . 2))
 
 
 (eval-when-compile
   (require 'use-package)
   (setq use-package-verbose t))
 
-(use-package evil
-  :ensure
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  :custom
-  (evil-want-C-u-scroll t)
-  (evil-want-minibuffer t)
-  (evil-undo-system 'undo-redo)
-  (evil-disable-insert-state-bindings t)
-  :config
-  (evil-mode 1))
-
-(use-package evil-collection
-  :ensure
-  :config
-  (evil-collection-init))
-
 (use-package general
+  :ensure)
+
+(use-package god-mode
   :ensure
-  :config
-  (general-evil-setup t)
-  (general-auto-unbind-keys))
+  :general
+  (:keymaps 'override "C-," 'god-mode-all)
+  (:keymaps 'god-local-mode-map "C-#" 'repeat)
+  :config (setq god-exempt-major-modes nil
+		god-exempt-predicates nil))
 
 (use-package no-littering
   :ensure
@@ -109,13 +97,13 @@
       (select-window
        (cdr (ring-ref avy-ring 0))))
     t)
-  (setf (alist-get ?\C-, avy-dispatch-alist) 'avy-action-embark))
+  (setf (alist-get ?. avy-dispatch-alist) 'avy-action-embark))
 
 (use-package cdlatex
   :ensure
   :after tex
   :general (:keymaps 'cdlatex-mode-map
-		     "C-c e" 'cdlatex-environment
+		     ;; "C-c e" 'cdlatex-environment
 		     "'" 'cdlatex-math-modify
 		     "§" 'cdlatex-math-symbol)
 
@@ -132,8 +120,8 @@
   :general (:keymaps '(override embark-general-map)
 		     "C-s" 'consult-line
 		     "C-x b" 'consult-buffer
-		     "C-x C-f" 'consult-find
-		     "C-x C-r" 'consult-ripgrep)
+		     "C-c C-f" 'consult-find
+		     "C-c C-r" 'consult-ripgrep)
   :custom
   (consult-async-min-input 2)
   (consult-project-function nil))
@@ -181,8 +169,8 @@
 
 (use-package csv-mode
   :ensure
-  :hook (csv-mode . csv-align-mode)
-  :hook (csv-mode . csv-guess-set-separator))
+  :hook ((csv-mode . csv-align-mode)
+	 (csv-mode . csv-guess-set-separator)))
 
 (use-package dashboard
   :ensure
@@ -228,8 +216,8 @@
 
 (use-package diff-hl
   :ensure
-  :hook (prog-mode . diff-hl-mode)
-  :hook (dired-mode . diff-hl-dired-mode)
+  :hook ((prog-mode . diff-hl-mode)
+	 (dired-mode . diff-hl-dired-mode))
   :custom
   (diff-hl-margin-symbols-alist
    '((insert . " ")
@@ -259,19 +247,14 @@
 		    :keymaps 'dired-mode-map
 		    "s" 'dired-rsync))
 
-;; TODO: This has the same problem as other packages. Once I use general, the autoloading does not work anymore.
-;; dired-subtree = {
-;;   enable = true;
-;;   custom = {
-;;     dired-subtree-use-backgrounds = "nil";
-;;     dired-subtree-line-prefix = "   ";
-;;   };
-;;   general = [''
-;;     (:states 'normal
-;;      :keymaps 'dired-mode-map
-;;      "* s" 'dired-subtree-mark-subtree)
-;;   ''];
-;; };
+(use-package dired-subtree
+  :ensure
+  :custom
+  (dired-subtree-use-backgrounds nil)
+  (dired-subtree-line-prefix "   ")
+  :general (:keymaps 'dired-mode-map
+		     "TAB" 'dired-subtree-toggle
+		     "* s" 'dired-subtree-mark-subtree))
 
 (use-package direnv
   :ensure
@@ -307,15 +290,15 @@
 
 (use-package eglot
   :ensure
-  :hook (nix-mode . eglot-ensure)
-  :hook (python-mode . eglot-ensure)
-  :hook (sql-mode . eglot-ensure)
-  :hook (terraform-mode . eglot-ensure)
+  :hook
+  ((nix-mode
+    python-mode
+    sql-mode
+    terraform-mode) . eglot-ensure)
   :general (:prefix "C-c"
 		    "e" '(:ignore t :which-key "IDE")
 		    "ed" #'eglot-find-declaration
 		    "er" #'eglot-rename)
-
   :config
   (setq-default
    eglot-workspace-configuration
@@ -339,7 +322,7 @@
   :ensure
   :hook (embark-collect-mode . hl-line-mode)
   :general (:keymaps 'override
-		     "C-," #'embark-act
+		     "C-." #'embark-act
 		     "C-h b" #'embark-bindings)
   :custom
   (embark-confirm-act-all nil)
@@ -352,30 +335,22 @@
   :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package eshell
-  :general (:keymaps 'eshell-mode-map
-		     :states 'insert
-		     "C-r" 'consult-history)
+  :general
+  ("C-c C-e" 'eshell)
+  (:keymaps 'eshell-mode-map
+	    "C-r" 'consult-history)
   :custom
   (eshell-banner-message "")
   (eshell-cp-overwrite-files nil)
   (eshell-mv-overwrite-files nil))
 
-(use-package evil
-  :ensure
-  :general (:states 'motion
-		    "j" 'evil-next-visual-line
-		    "k" 'evil-previous-visual-line)
-
-  :config
-  (evil-set-initial-state 'messages-buffer-mode 'normal))
-
 (use-package flymake
-  :ensure
-  :general (:prefix "C-c"
-		    "ec" 'consult-flymake
-		    "ef" 'flymake-show-buffer-diagnostics
-		    "en" 'flymake-goto-next-error
-		    "ep" 'flymake-goto-prev-error))
+  :ensure)
+  ;; :general (:prefix "C-c"
+  ;;		    "ec" 'consult-flymake
+  ;;		    "ef" 'flymake-show-buffer-diagnostics
+  ;;		    "en" 'flymake-goto-next-error
+  ;;		    "ep" 'flymake-goto-prev-error))
 
 (use-package flyspell
   :hook (prog-mode . flyspell-prog-mode)
@@ -412,9 +387,8 @@
 
 (use-package hl-todo
   :ensure
-  :hook (after-init . global-hl-todo-mode)
-  :custom
-  (hl-todo-keyword-faces '(("TODO" . "#dd9393"))))
+  :custom (hl-todo-keyword-faces '(("TODO" . "#dd9393")))
+  :config (global-hl-todo-mode 1))
 
 (use-package linum
   :hook (prog-mode . linum-mode))
@@ -428,7 +402,7 @@
 
 (use-package magit-todos
   :ensure
-  :after (hl-todo)
+  :after hl-todo
   :hook (global-hl-todo-mode . magit-todos-mode)
   :custom
   (magit-todos-branch-list nil))
@@ -561,19 +535,13 @@
   ;; the Nix package or also is the case on other operating systems.
   (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode)))
 
-(use-package poetry
-  :ensure
-  :general (:prefix "C-c" "lpp" 'poetry))
-
 (use-package popper
   :ensure
   :hook (after-init . popper-mode)
   :general
-  (:keymaps 'override
-	    :states '(normal insert visual)
-	    "C-c c" 'popper-cycle
-	    "C-c s" 'popper-toggle-latest
-	    "C-c f" 'popper-toggle-type)
+  ("C-c C-s" 'popper-cycle
+   "C-c C-c" 'popper-toggle-latest
+   "C-c C-p" 'popper-toggle-type)
 
   :custom
   (popper-reference-buffers
@@ -593,10 +561,6 @@
 
 (use-package python
   :ensure
-  :general (:prefix "C-c"
-		    "l"  '(:ignore t :which-key "languages")
-		    "lp" '(:ignore t :which-key "python"))
-
   :custom
   (dap-python-debugger 'debugpy)
   (dap-python-executable "python3")
@@ -639,9 +603,10 @@
 (use-package terraform-mode :ensure)
 
 (use-package tex-mode
-  :hook (LaTeX-mode . prettify-symbols-mode)
-  :hook (LaTeX-mode . TeX-fold-mode)
-  :hook (LaTeX-mode . latex-preview-pane-mode)
+  :hook
+  ((LaTeX-mode . prettify-symbols-mode)
+   (LaTeX-mode . TeX-fold-mode)
+   (LaTeX-mode . latex-preview-pane-mode))
   :custom
   (TeX-auto-save t)
   (TeX-parse-self t))
@@ -650,40 +615,40 @@
 
 (use-package toc-org
   :ensure
-  :hook (org-mode . toc-org-mode)
-  :hook (markdown-mode . toc-org-mode)
-  :hook (org-mode . toc-org-mode))
+  :hook ((org-mode markdown-mode) . toc-org-mode))
 
 ;; TODO: Tree-sitter works great for Nix, but for Python I get an
 ;; error that the language ABI is too recent. How do I fix this?
 (use-package tree-sitter
   :ensure
-  :hook (after-init . global-tree-sitter-mode)
-  :hook (tree-sitter-after-on . tree-sitter-hl-mode))
+  :hook (tree-sitter-after-on . tree-sitter-hl-mode)
+  :config (global-tree-sitter-mode 1))
 
 (use-package tree-sitter-langs
   :ensure)
 
 (use-package vertico
   :ensure
-  :hook (after-init . vertico-mode)
-  :custom (vertico-cycle t))
+  :custom (vertico-cycle t)
+  :config (vertico-mode 1))
 
 (use-package vertico-flat
   :ensure vertico
-  :hook (vertico-mode . vertico-flat-mode))
+  :config (vertico-flat-mode 1))
 
 (use-package visual-fill-column
   :ensure
-  :hook (org-mode . visual-line-mode)
-  :hook (markdown-mode . visual-line-mode)
-  :hook (visual-line-mode . visual-fill-column-mode)
+  :hook
+  ((org-mode . visual-line-mode)
+   (markdown-mode . visual-line-mode)
+   (visual-line-mode . visual-fill-column-mode))
   :custom
   (visual-fill-column-center-text t)
   (visual-fill-column-width 99))
 
 (use-package vterm
-  :ensure)
+  :ensure
+  :general ("C-c C-t" 'vterm))
 
 ;; TODO: Keybindings between wgrep and occur-mode are very different.
 ;; It might be good to uniformize them.
@@ -695,8 +660,7 @@
 
 (use-package whitespace-cleanup-mode
   :ensure
-  :hook (prog-mode . whitespace-cleanup-mode)
-  :hook (text-mode . whitespace-cleanup-mode))
+  :hook ((prog-mode text-mode) . whitespace-cleanup-mode))
 
 (use-package yaml-mode
   :ensure)
@@ -704,13 +668,13 @@
 (use-package yaml-pro
   :ensure)
 
-;; ace-window = {
-;;   enable = true;
-;;   custom = { aw-background = "nil"; };
-;;   general = [''
-;;     ("M-o" 'ace-window)
-;;   ''];
-;; };
+(use-package ace-window
+  :ensure
+  :custom
+  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  (aw-background nil)
+  (aw-dispatch-always t)
+  :general ("M-o" 'ace-window))
 
 ;; TODO: Does this interfere with org-modern?
 ;; TODO: Find out how well this works compared to the default.
