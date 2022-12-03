@@ -1,58 +1,21 @@
-(defun hm/reduce-gc ()
-  "Reduce the frequency of garbage collection."
-  (setq gc-cons-threshold most-positive-fixnum
-	gc-cons-percentage 0.6))
-
-(defun hm/restore-gc ()
-  "Restore the frequency of garbage collection."
-  (setq gc-cons-threshold 16777216
-	gc-cons-percentage 0.1))
-
-;; Make GC more rare during init, while minibuffer is active, and
-;; when shutting down. In the latter two cases we try doing the
-;; reduction early in the hook.
-(hm/reduce-gc)
-(add-hook 'minibuffer-setup-hook #'hm/reduce-gc -50)
-(add-hook 'kill-emacs-hook #'hm/reduce-gc -50)
-
-;; But make it more regular after startup and after closing minibuffer.
-(add-hook 'emacs-startup-hook #'hm/restore-gc)
-(add-hook 'minibuffer-exit-hook #'hm/restore-gc)
-
-;; Avoid unnecessary regexp matching while loading .el files.
-(defvar hm/file-name-handler-alist file-name-handler-alist)
-(setq file-name-handler-alist nil)
-
-(defun hm/restore-file-name-handler-alist ()
-  "Restores the file-name-handler-alist variable."
-  (setq file-name-handler-alist hm/file-name-handler-alist)
-  (makunbound 'hm/file-name-handler-alist))
-
-(add-hook 'emacs-startup-hook #'hm/restore-file-name-handler-alist)
-
-(setq package-enable-at-startup nil)
-
-;; Avoid expensive frame resizing. Inspired by Doom Emacs.
-(setq frame-inhibit-implied-resize t)
-
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
-(set-fringe-mode 10)
-(menu-bar-mode -1)
-
-(add-to-list 'default-frame-alist '(alpha 90 . 90))
-(setq custom-file null-device)
-(setq sentence-end-double-space nil)
-(setq visible-bell t)
-(column-number-mode 1)
-(setq initial-scratch-message "")
-(setq-default cursor-type '(bar . 2))
-
-
 (eval-when-compile
   (require 'use-package)
   (setq use-package-verbose t))
+
+(use-package emacs
+  :custom
+  (custom-file null-device)
+  (initial-scratch-message "")
+  (sentence-end-double-space nil)
+  (visible-bell t)
+  :config
+  (add-to-list 'default-frame-alist '(alpha 90 . 90))
+  (column-number-mode 1)
+  (menu-bar-mode -1)
+  (set-fringe-mode 15)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+  (tooltip-mode -1))
 
 (use-package general
   :ensure)
@@ -62,8 +25,9 @@
   :general
   (:keymaps 'override "C-," 'god-mode-all)
   (:keymaps 'god-local-mode-map "C-#" 'repeat)
-  :config (setq god-exempt-major-modes nil
-		god-exempt-predicates nil))
+  :config
+  (setq god-exempt-major-modes nil
+	god-exempt-predicates nil))
 
 (use-package no-littering
   :ensure
@@ -86,6 +50,7 @@
 (use-package avy
   :ensure
   :general ("C-<" #'avy-goto-char-timer
+	    "C->" #'avy-goto-line
 	    "M-<" #'avy-pop-mark)
   :custom (avy-timeout-seconds 0.25)
   :config
