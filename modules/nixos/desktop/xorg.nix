@@ -13,6 +13,7 @@ in {
     services.xserver = {
       enable = true;
       layout = "de";
+      xkbOptions = "ctrl:nocaps";
 
       autoRepeatDelay = 300;
       autoRepeatInterval = 50;
