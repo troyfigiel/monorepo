@@ -1,11 +1,14 @@
 (eval-when-compile
   (require 'use-package)
   (setq use-package-verbose t))
+(require 'bind-key)
 
 (use-package emacs
   :custom
   (custom-file null-device)
-  (initial-scratch-message "")
+  (initial-buffer-choice t)
+  (initial-major-mode 'org-mode)
+  (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
   :config
@@ -17,76 +20,47 @@
   (tool-bar-mode -1)
   (tooltip-mode -1))
 
-(use-package general
-  :ensure)
-
-(use-package god-mode
-  :ensure
-  :general
-  (:keymaps 'override "C-," 'god-mode-all)
-  (:keymaps 'god-local-mode-map "C-#" 'repeat)
-  :config
-  (setq god-exempt-major-modes nil
-	god-exempt-predicates nil))
-
 (use-package no-littering
   :ensure
   :config
   (setq auto-save-file-name-transforms
-	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
+        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
 
 (use-package all-the-icons
   :ensure)
 
 (use-package all-the-icons-dired
   :ensure
-  :after all-the-icons
+  :after (all-the-icons dired)
   :hook (dired-mode . all-the-icons-dired-mode))
 
 (use-package apheleia
   :ensure
-  :hook (after-init . apheleia-global-mode ))
+  :config (apheleia-global-mode 1))
 
 (use-package avy
   :ensure
-  :general ("C-<" #'avy-goto-char-timer
-	    "C->" #'avy-goto-line
-	    "M-<" #'avy-pop-mark)
-  :custom (avy-timeout-seconds 0.25)
-  :config
-  (defun avy-action-embark (pt)
-    (unwind-protect
-	(save-excursion
-	  (goto-char pt)
-	  (embark-act))
-      (select-window
-       (cdr (ring-ref avy-ring 0))))
-    t)
-  (setf (alist-get ?. avy-dispatch-alist) 'avy-action-embark))
+  :bind* (("C-," . avy-goto-char-timer)
+          ("M-," . avy-goto-line))
+  :custom (avy-timeout-seconds 0.25))
 
 (use-package cdlatex
   :ensure
   :after tex
-  :general (:keymaps 'cdlatex-mode-map
-		     ;; "C-c e" 'cdlatex-environment
-		     "'" 'cdlatex-math-modify
-		     "§" 'cdlatex-math-symbol)
-
   :custom
   (cdlatex-command-alist '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil)))
   (cdlatex-env-alist '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil))i
   (cdlatex-math-modify-alist '((?a "\\mathbb" nil t nil nil)))
   (cdlatex-math-modify-prefix ?')))
 
-(use-package company-terraform :ensure)
-
 (use-package consult
   :ensure
-  :general (:keymaps '(override embark-general-map)
-		     "C-s" 'consult-line
-		     "C-x b" 'consult-buffer
-		     "C-c C-f" 'consult-find
-		     "C-c C-r" 'consult-ripgrep)
+  :bind*
+   (("C-x b" . consult-buffer)
+   ("C-c C-l" . consult-line)
+   ("C-c C-f" . consult-find)
+   ("C-c C-r" . consult-ripgrep)
+   ("C-c C-a" . consult-global-mark))
   :custom
   (consult-async-min-input 2)
   (consult-project-function nil))
@@ -94,37 +68,40 @@
 (use-package consult-dir
   :ensure
   :after consult
-  :general (:keymaps 'override
-		     "C-x C-d" #'consult-dir)
+  :bind* ("C-x C-d" . consult-dir)
   :custom (consult-dir-shadow-filenames nil)
   :config
   (defun consult-dir--tramp-docker-hosts ()
     "Get a list of hosts from docker."
     (when (require 'docker-tramp nil t)
       (let ((hosts)
-	    (docker-tramp-use-names t))
-	(dolist (cand (docker-tramp--parse-running-containers))
-	  (let ((user (unless (string-empty-p (car cand))
-			(concat (car cand) "@")))
-		(host (car (cdr cand))))
-	    (push (concat "/docker:" user host ":/") hosts)))
-	hosts)))
+            (docker-tramp-use-names t))
+        (dolist (cand (docker-tramp--parse-running-containers))
+          (let ((user (unless (string-empty-p (car cand))
+                        (concat (car cand) "@")))
+                (host (car (cdr cand))))
+            (push (concat "/docker:" user host ":/") hosts)))
+        hosts)))
 
   (defvar consult-dir--source-tramp-docker
     `(:name     "Docker"
-		:narrow   ?d
-		:category file
-		:face     consult-file
-		:history  file-name-history
-		:items    ,#'consult-dir--tramp-docker-hosts)
+                :narrow   ?d
+                :category file
+                :face     consult-file
+                :history  file-name-history
+                :items    ,#'consult-dir--tramp-docker-hosts)
     "Docker candidate source for `consult-dir'.")
 
   ;; (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
   (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t))
 
-(use-package consult-eglot :ensure)
+(use-package consult-eglot
+  :ensure
+  :after (consult eglot))
 
-(use-package consult-flymake :ensure consult)
+(use-package consult-flymake
+  :ensure consult
+  :after (consult flymake))
 
 ;; TODO: Add the Citar package? How malleable and fitting is it in the
 ;; whole Vertico, Embark, Consult, etc. environment?
@@ -135,44 +112,26 @@
 (use-package csv-mode
   :ensure
   :hook ((csv-mode . csv-align-mode)
-	 (csv-mode . csv-guess-set-separator)))
-
-(use-package dashboard
-  :ensure
-  :custom
-  (dashboard-banner-logo-title nil)
-  (dashboard-bookmarks-show-base nil)
-  (dashboard-center-content t)
-  (dashboard-footer "")
-  (dashboard-footer-icon nil)
-  (dashboard-footer-messages nil)
-  (dashboard-items '((bookmarks . 10)
-		     (projects . 10)))
-  (dashboard-projects-backend 'project-el)
-  (dashboard-set-file-icons nil)
-  (dashboard-set-heading-icons t)
-  (dashboard-set-init-info nil)
-  (dashboard-startup-banner nil)
-  :config (dashboard-setup-startup-hook))
+         (csv-mode . csv-guess-set-separator)))
 
 (use-package denote
   :ensure
   :hook (dired-mode . denote-dired-mode)
-  :general (:keymaps 'dired-mode-map
-		     "C-c n r" 'denote-dired-rename-marked-files)
+  :bind (:map dired-mode-map
+         ("C-c C-n C-r" . denote-dired-rename-marked-files))
   :custom
   (denote-link-backlinks-display-buffer-action '((display-buffer-reuse-window
-						  display-buffer-in-side-window)
-						 (side . left)
-						 (slot . 99)
-						 (window-width . 0.3)))
+                                                  display-buffer-in-side-window)
+                                                 (side . left)
+                                                 (slot . 99)
+                                                 (window-width . 0.3)))
   :config
   (defun my-denote-split-org-subtree ()
     "Create new Denote note as an Org file using current Org subtree."
     (interactive)
     (let ((text (org-get-entry))
-	  (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
-	  (tags (org-get-tags)))
+          (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
+          (tags (org-get-tags)))
       (delete-region (org-entry-beginning-position) (org-entry-end-position))
       (denote heading tags 'org)
       (insert text))))
@@ -182,7 +141,7 @@
 (use-package diff-hl
   :ensure
   :hook ((prog-mode . diff-hl-mode)
-	 (dired-mode . diff-hl-dired-mode))
+         (dired-mode . diff-hl-dired-mode))
   :custom
   (diff-hl-margin-symbols-alist
    '((insert . " ")
@@ -190,44 +149,47 @@
      (change . " ")
      (unknown . "?")
      (ignored . "i")))
-  :config
-  (diff-hl-flydiff-mode 1))
+  :config (diff-hl-flydiff-mode 1))
 
 (use-package dired
-  :hook (dired-mode . dired-hide-details-mode)
-  :hook (dired-mode . dired-omit-mode)
-  :general (:keymaps 'dired-mode-map
-		     "M-+" 'dired-create-empty-file)
+  :hook ((dired-mode . dired-hide-details-mode)
+         (dired-mode . dired-omit-mode))
+  :bind (:map dired-mode-map
+              ("M-+" . dired-create-empty-file)
+              ("C-c C-w" . wdired-change-to-wdired-mode))
   :custom
   (dired-hide-details-hide-symlink-targets nil)
   ;; This hides dotfiles by default.
   (dired-omit-files "^\\.")
   :config
   (setq dired-listing-switches
-	"-Ahl --group-directories-first --time-style=long-iso"))
+        "-Ahl --group-directories-first --time-style=long-iso"))
 
 (use-package dired-rsync
   :ensure
-  :general (:states 'normal
-		    :keymaps 'dired-mode-map
-		    "s" 'dired-rsync))
+  :after dired
+  :bind (:map dired-mode-map
+              ("s" . dired-rsync)))
 
 (use-package dired-subtree
   :ensure
+  :after dired
   :custom
   (dired-subtree-use-backgrounds nil)
   (dired-subtree-line-prefix "   ")
-  :general (:keymaps 'dired-mode-map
-		     "TAB" 'dired-subtree-toggle
-		     "* s" 'dired-subtree-mark-subtree))
+  ;; TODO: Add key bindings for dired-subtree-up and maybe some other
+  ;; convenience functions.
+  :bind (:map dired-mode-map
+              ("<tab>" . dired-subtree-toggle)
+              ("* s" . dired-subtree-mark-subtree)))
 
 (use-package direnv
   :ensure
-  :hook (after-init . direnv-mode))
+  :config (direnv-mode 1))
 
 (use-package docker
   :ensure
-  :general (:prefix "C-c" "d" 'docker))
+  :bind (("C-c C-d" . docker)))
 
 (use-package docker-compose-mode :ensure)
 
@@ -239,13 +201,13 @@
 
 (use-package doom-modeline
   :ensure
-  :hook (after-init . doom-modeline-mode)
   :custom
   (display-time-24hr-format t)
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
   (doom-modeline-hud t)
   :config
+  (doom-modeline-mode 1)
   (display-time-mode 1)
   (display-battery-mode 1))
 
@@ -260,10 +222,6 @@
     python-mode
     sql-mode
     terraform-mode) . eglot-ensure)
-  :general (:prefix "C-c"
-		    "e" '(:ignore t :which-key "IDE")
-		    "ed" #'eglot-find-declaration
-		    "er" #'eglot-rename)
   :config
   (setq-default
    eglot-workspace-configuration
@@ -286,9 +244,8 @@
 (use-package embark
   :ensure
   :hook (embark-collect-mode . hl-line-mode)
-  :general (:keymaps 'override
-		     "C-." #'embark-act
-		     "C-h b" #'embark-bindings)
+  :bind* (("C-." . embark-act)
+          ("C-h b" . embark-bindings))
   :custom
   (embark-confirm-act-all nil)
   (embark-help-key (kbd "?"))
@@ -300,18 +257,22 @@
   :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package eshell
-  :general
-  ("C-c C-e" 'eshell)
-  (:keymaps 'eshell-mode-map
-	    "C-r" 'consult-history)
+  ;; TODO: eshell-mode-map is buggy in eshell. I need to either use
+  ;; :hook or set the binding in a different way.
+  ;; https://github.com/noctuid/general.el/issues/80
+  :bind* (("C-c C-e" . eshell))
+          ;; :map eshell-mode-map
+          ;; ("C-r" . consult-history))
   :custom
   (eshell-banner-message "")
   (eshell-cp-overwrite-files nil)
   (eshell-mv-overwrite-files nil))
 
+;; TODO: The main useful entry point is consult-flymake. Only bind
+;; that one and flymake-show-buffer-diagnostics?
 (use-package flymake
   :ensure)
-  ;; :general (:prefix "C-c"
+  ;; :bind (:prefix "C-c"
   ;;		    "ec" 'consult-flymake
   ;;		    "ef" 'flymake-show-buffer-diagnostics
   ;;		    "en" 'flymake-goto-next-error
@@ -325,9 +286,9 @@
   :ensure
   :custom
   (fontaine-presets '((default
-			:default-family "Inconsolata"
-			:default-height 140
-			:line-spacing 2)))
+                        :default-family "Inconsolata"
+                        :default-height 140
+                        :line-spacing 2)))
   :config
   (fontaine-set-preset 'default))
 
@@ -340,19 +301,17 @@
 ;; Should probably be done with `helpful-at-point` somehow.
 (use-package helpful
   :ensure
-  :general (:keymaps 'override
-		     :prefix "C-h"
-		     "C-h" 'helpful-at-point
-		     "c" 'helpful-command
-		     "f" 'helpful-function
-		     "k" 'helpful-key
-		     "m" 'helpful-mode
-		     "o" 'helpful-symbol
-		     "v" 'helpful-variable))
+  :bind (("C-h C-h" . helpful-at-point)
+         ("C-h c" . helpful-command)
+         ("C-h f" . helpful-function)
+         ("C-h k" . helpful-key)
+         ("C-h m" . helpful-mode)
+         ("C-h o" . helpful-symbol)
+         ("C-h v" . helpful-variable)))
 
 (use-package hl-todo
   :ensure
-  :custom (hl-todo-keyword-faces '(("TODO" . "#dd9393")))
+  :custom (hl-todo-keyword-faces '(("TODO" . "#ff2222")))
   :config (global-hl-todo-mode 1))
 
 (use-package linum
@@ -369,12 +328,11 @@
   :ensure
   :after hl-todo
   :hook (global-hl-todo-mode . magit-todos-mode)
-  :custom
-  (magit-todos-branch-list nil))
+  :custom (magit-todos-branch-list nil))
 
 (use-package marginalia
   :ensure
-  :hook (after-init . marginalia-mode))
+  :config (marginalia-mode 1))
 
 (use-package nix-mode
   :ensure
@@ -405,11 +363,6 @@
   (set-face-attribute 'org-level-2 nil :height 1.2)
   (set-face-attribute 'org-document-title nil :height 1.4)
   (set-face-attribute 'org-document-info nil :height 1.2)
-
-  ;; TODO: Create a simple binding for previewing the entire buffer in
-  ;; LaTeX
-  ;; TODO: This should be org-cdlatex-mode, but can't get it to work.
-  ;; TODO: Does this work as a custom or does it need to be a default?
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
   (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
@@ -426,45 +379,28 @@
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
 (use-package org-indent
+  :after org
   :hook (org-mode . org-indent-mode))
 
 (use-package org-modern
   :ensure
-  :hook (after-init . global-org-modern-mode))
+  :after org
+  :config (global-org-modern-mode 1))
 
 (use-package org-remark
   :ensure
-  :general (:prefix "C-c"
-		    "km" 'org-remark-mark
-		    "ko" 'org-remark-open
-		    "kn" 'org-remark-view-next
-		    "kp" 'org-remark-view-prev
-		    "kd" 'org-remark-delete)
-  :custom
-  (org-remark-notes-file-name ".marginalia.org")
-  :config
-  (org-remark-global-tracking-mode 1))
+  :after org
+  :bind (("C-c C-k C-m" . org-remark-mark)
+         ("C-c C-k C-o" . org-remark-open)
+         ("C-c C-k C-n" . org-remark-view-next)
+         ("C-c C-k C-p" . org-remark-view-prev)
+         ("C-c C-k C-d" . org-remark-delete))
+  :custom (org-remark-notes-file-name ".marginalia.org")
+  :config (org-remark-global-tracking-mode 1))
 
 (use-package org-roam
   :ensure
   :after org
-  :general (:prefix "C-c"
-		    "rb"  'org-roam-buffer-toggle
-		    "rf" 'org-roam-node-find
-		    "ri" 'org-roam-node-insert
-		    "rd"  '(:ignore t :which-key "dailies")
-		    "rdc" 'org-roam-dailies-capture-today
-		    "rdf" 'org-roam-dailies-find-date
-		    ;; "rd" 'org-roam-node-random
-		    "ra"  '(:ignore t :which-key "alias")
-		    "ra"  '(:ignore t :which-key "add")
-		    "raa" 'org-roam-alias-add
-		    "rar" 'org-roam-ref-add
-		    "rat" 'org-roam-tag-add
-		    "rr"  '(:ignore t :which-key "remove")
-		    "rra" 'org-roam-alias-remove
-		    "rrr" 'org-roam-ref-remove
-		    "rrt" 'org-roam-tag-remove)
   :custom
   (org-roam-completion-everywhere t)
   (org-roam-directory (expand-file-name "/home/troy/projects/private/monorepo/references/notes"))
@@ -481,11 +417,11 @@
   (defun band-aid-org-roam-set-templates (template-directory)
     (let ((default-directory template-directory))
       (setq org-roam-capture-templates
-	    (list (band-aid-org-roam-capture-template "d" "default")
-		  (band-aid-org-roam-capture-template "i" "index")
-		  (band-aid-org-roam-capture-template "f" "facts")
-		  (band-aid-org-roam-capture-template "b" "inbox")
-		  (band-aid-org-roam-capture-template "a" "appendix")))))
+            (list (band-aid-org-roam-capture-template "d" "default")
+                  (band-aid-org-roam-capture-template "i" "index")
+                  (band-aid-org-roam-capture-template "f" "facts")
+                  (band-aid-org-roam-capture-template "b" "inbox")
+                  (band-aid-org-roam-capture-template "a" "appendix")))))
 
   (band-aid-org-roam-set-templates
    (expand-file-name "/home/troy/projects/private/monorepo/org/templates")))
@@ -494,31 +430,24 @@
 
 (use-package pdf-tools
   :ensure
-  :config
-  ;; TODO: This seems to be necessary to open a pdf file with
-  ;; pdf-view-mode automatically. I am not sure if this is specific to
-  ;; the Nix package or also is the case on other operating systems.
-  (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode)))
+  :mode ("\\.pdf\\'" . pdf-view-mode))
 
 (use-package popper
   :ensure
-  :hook (after-init . popper-mode)
-  :general
-  ("C-c C-s" 'popper-cycle
-   "C-c C-c" 'popper-toggle-latest
-   "C-c C-p" 'popper-toggle-type)
-
+  :demand t
+  :bind (("C-#" . popper-toggle-latest)
+         ("M-#" . popper-cycle)
+         ("C-M-#" . popper-toggle-type))
   :custom
   (popper-reference-buffers
-   '("^\\*eshell.*\\*$" eshell-mode
+   '("^\\*eshell.*\\*$" eshell-mod
      "^\\*shell.*\\*$" shell-mode
      "^\\*term.*\\*$" term-mode
      "^\\*vterm.*\\*$" vterm-mode))
-  (popper-window-height 15))
-
-(use-package popper-echo
-  :ensure popper
-  :hook (after-init . popper-echo-mode))
+  (popper-window-height 15)
+  :config
+  (popper-mode 1)
+  (popper-echo-mode 1))
 
 (use-package prescient
   :ensure
@@ -531,13 +460,9 @@
   (dap-python-executable "python3")
   (python-shell-interpreter "python3"))
 
-(use-package pyvenv
-  :ensure
-  :general (:prefix "C-c"
-		    "lpv"  '(:ignore t :which-key "pyvenv")
-		    "lpva" 'pyvenv-activate
-		    "lpvd" 'pyvenv-deactivate)
-  :config (pyvenv-mode 1))
+;; (use-package pyvenv
+;;   :ensure
+;;   :config (pyvenv-mode 1))
 
 (use-package rainbow-delimiters
   :ensure
@@ -567,15 +492,6 @@
 
 (use-package terraform-mode :ensure)
 
-(use-package tex-mode
-  :hook
-  ((LaTeX-mode . prettify-symbols-mode)
-   (LaTeX-mode . TeX-fold-mode)
-   (LaTeX-mode . latex-preview-pane-mode))
-  :custom
-  (TeX-auto-save t)
-  (TeX-parse-self t))
-
 (use-package tf-exif)
 
 (use-package toc-org
@@ -592,14 +508,16 @@
 (use-package tree-sitter-langs
   :ensure)
 
+(use-package expand-region
+  :ensure
+  :bind (("C-=" . er/expand-region)))
+
 (use-package vertico
   :ensure
   :custom (vertico-cycle t)
-  :config (vertico-mode 1))
-
-(use-package vertico-flat
-  :ensure vertico
-  :config (vertico-flat-mode 1))
+  :config
+  (vertico-mode 1)
+  (vertico-flat-mode 1))
 
 (use-package visual-fill-column
   :ensure
@@ -613,13 +531,8 @@
 
 (use-package vterm
   :ensure
-  :general ("C-c C-t" 'vterm))
+  :bind* (("C-c C-t" . vterm)))
 
-;; TODO: Keybindings between wgrep and occur-mode are very different.
-;; It might be good to uniformize them.
-;; TODO: If general is included, other keybindings do not work
-;; anymore. Why is that? general = ['' (:keymaps 'grep-mode-map
-;; "M-RET" 'compilation-display-error) ''];
 (use-package wgrep
   :ensure)
 
@@ -639,7 +552,11 @@
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   (aw-background nil)
   (aw-dispatch-always t)
-  :general ("M-o" 'ace-window))
+  :bind (("M-o" . ace-window)))
+
+(use-package which-key
+  :ensure
+  :config (which-key-mode 1))
 
 ;; TODO: Does this interfere with org-modern?
 ;; TODO: Find out how well this works compared to the default.
