@@ -6,6 +6,9 @@
 (use-package emacs
   :custom
   (custom-file null-device)
+  (display-time-24hr-format t)
+  (display-time-day-and-date t)
+  (display-time-default-load-average nil)
   (initial-buffer-choice t)
   (initial-major-mode 'org-mode)
   (initial-scratch-message nil)
@@ -14,11 +17,24 @@
   :config
   (add-to-list 'default-frame-alist '(alpha 90 . 90))
   (column-number-mode 1)
+  (display-battery-mode 1)
+  (display-time-mode 1)
   (menu-bar-mode -1)
-  (set-fringe-mode 15)
   (scroll-bar-mode -1)
+  (set-fringe-mode 15)
   (tool-bar-mode -1)
   (tooltip-mode -1))
+
+(use-package doom-themes
+  :ensure
+  :config (load-theme 'doom-one t))
+
+;; TODO: doom-modeline is quite complicated whereas I do not need so
+;; much functionality for my mode line. It should not be too difficult
+;; to set mode-line-format myself.
+(use-package doom-modeline
+  :ensure
+  :config (doom-modeline-mode 1))
 
 (use-package no-littering
   :ensure
@@ -198,22 +214,6 @@
   :custom (tramp-verbose 6))
 
 (use-package dockerfile-mode :ensure)
-
-(use-package doom-modeline
-  :ensure
-  :custom
-  (display-time-24hr-format t)
-  (display-time-day-and-date t)
-  (display-time-default-load-average nil)
-  (doom-modeline-hud t)
-  :config
-  (doom-modeline-mode 1)
-  (display-time-mode 1)
-  (display-battery-mode 1))
-
-(use-package doom-themes
-  :ensure
-  :config (load-theme 'doom-one t))
 
 (use-package eglot
   :ensure
@@ -510,7 +510,7 @@
 
 (use-package expand-region
   :ensure
-  :bind (("C-=" . er/expand-region)))
+  :bind (("C-+" . er/expand-region)))
 
 (use-package vertico
   :ensure
