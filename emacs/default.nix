@@ -12,7 +12,7 @@ in {
         package = pkgs.emacsWithPackagesFromUsePackage {
           config = ./init.el;
           defaultInitFile = true;
-          package = pkgs.emacsNativeComp;
+          package = pkgs.emacsGit;
           alwaysEnsure = false;
         };
       };

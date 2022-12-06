@@ -4,18 +4,21 @@
 (require 'bind-key)
 
 (use-package emacs
+  :hook (prog-mode . display-line-numbers-mode)
   :custom
   (custom-file null-device)
   (display-time-24hr-format t)
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
   (initial-buffer-choice t)
-  (initial-major-mode 'org-mode)
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
   :config
   (add-to-list 'default-frame-alist '(alpha 90 . 90))
+  ;; TODO: There should be a new alpha-background parameter in Emacs
+  ;; 29. How do I set it? (add-to-list 'default-frame-alist
+  ;; '(alpha-background 90))
   (column-number-mode 1)
   (display-battery-mode 1)
   (display-time-mode 1)
@@ -85,31 +88,7 @@
   :ensure
   :after consult
   :bind* ("C-x C-d" . consult-dir)
-  :custom (consult-dir-shadow-filenames nil)
-  :config
-  (defun consult-dir--tramp-docker-hosts ()
-    "Get a list of hosts from docker."
-    (when (require 'docker-tramp nil t)
-      (let ((hosts)
-            (docker-tramp-use-names t))
-        (dolist (cand (docker-tramp--parse-running-containers))
-          (let ((user (unless (string-empty-p (car cand))
-                        (concat (car cand) "@")))
-                (host (car (cdr cand))))
-            (push (concat "/docker:" user host ":/") hosts)))
-        hosts)))
-
-  (defvar consult-dir--source-tramp-docker
-    `(:name     "Docker"
-                :narrow   ?d
-                :category file
-                :face     consult-file
-                :history  file-name-history
-                :items    ,#'consult-dir--tramp-docker-hosts)
-    "Docker candidate source for `consult-dir'.")
-
-  ;; (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-ssh t)
-  (add-to-list 'consult-dir-sources 'consult-dir--source-tramp-docker t))
+  :custom (consult-dir-shadow-filenames nil))
 
 (use-package consult-eglot
   :ensure
@@ -208,10 +187,6 @@
   :bind (("C-c C-d" . docker)))
 
 (use-package docker-compose-mode :ensure)
-
-(use-package docker-tramp
-  :ensure
-  :custom (tramp-verbose 6))
 
 (use-package dockerfile-mode :ensure)
 
@@ -313,9 +288,6 @@
   :ensure
   :custom (hl-todo-keyword-faces '(("TODO" . "#ff2222")))
   :config (global-hl-todo-mode 1))
-
-(use-package linum
-  :hook (prog-mode . linum-mode))
 
 (use-package magit
   :ensure
@@ -435,9 +407,9 @@
 (use-package popper
   :ensure
   :demand t
-  :bind (("C-#" . popper-toggle-latest)
-         ("M-#" . popper-cycle)
-         ("C-M-#" . popper-toggle-type))
+  :bind* (("C-#" . popper-toggle-latest)
+          ("M-#" . popper-cycle)
+          ("C-M-#" . popper-toggle-type))
   :custom
   (popper-reference-buffers
    '("^\\*eshell.*\\*$" eshell-mod

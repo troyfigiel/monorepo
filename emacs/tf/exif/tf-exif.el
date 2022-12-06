@@ -57,6 +57,10 @@
 (require 'denote)
 (require 'image-dired)
 
+;; TODO: The function `image-dired-get-exif-data' has been obsoleted
+;; in Emacs 29.1. I need to call `exif-parse-file' and `exif-field'
+;; which are now built-in functions to Emacs.
+
 ;; TODO: Extract out a function that reads marked files and applies a
 ;; function on each file.
 ;; (defun tf-exif--act-on-marked-files (fun format files)
