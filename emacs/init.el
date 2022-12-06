@@ -115,11 +115,12 @@
   :bind (:map dired-mode-map
          ("C-c C-n C-r" . denote-dired-rename-marked-files))
   :custom
-  (denote-link-backlinks-display-buffer-action '((display-buffer-reuse-window
-                                                  display-buffer-in-side-window)
-                                                 (side . left)
-                                                 (slot . 99)
-                                                 (window-width . 0.3)))
+  (denote-link-backlinks-display-buffer-action
+   '((display-buffer-reuse-window
+      display-buffer-in-side-window)
+     (side . left)
+     (slot . 99)
+     (window-width . 0.3)))
   :config
   (defun my-denote-split-org-subtree ()
     "Create new Denote note as an Org file using current Org subtree."
@@ -396,7 +397,7 @@
                   (band-aid-org-roam-capture-template "a" "appendix")))))
 
   (band-aid-org-roam-set-templates
-   (expand-file-name "/home/troy/projects/private/monorepo/org/templates")))
+   (expand-file-name "/home/troy/projects/private/monorepo/emacs/org/templates")))
 
 (use-package org-transclusion :ensure)
 
