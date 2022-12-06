@@ -44,8 +44,6 @@
       games = true;
     };
 
-    qemu.enable = true;
-
     xorg = {
       enable = true;
       # TODO: What does this do?
