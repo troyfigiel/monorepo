@@ -10,7 +10,7 @@
   (display-time-24hr-format t)
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
-  (initial-buffer-choice t)
+  (initial-buffer-choice 'eshell)
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
@@ -81,8 +81,7 @@
    ("C-c C-r" . consult-ripgrep)
    ("C-c C-a" . consult-global-mark))
   :custom
-  (consult-async-min-input 2)
-  (consult-project-function nil))
+  (consult-async-min-input 2))
 
 (use-package consult-dir
   :ensure
@@ -404,23 +403,6 @@
 (use-package pdf-tools
   :ensure
   :mode ("\\.pdf\\'" . pdf-view-mode))
-
-(use-package popper
-  :ensure
-  :demand t
-  :bind* (("C-#" . popper-toggle-latest)
-          ("M-#" . popper-cycle)
-          ("C-M-#" . popper-toggle-type))
-  :custom
-  (popper-reference-buffers
-   '("^\\*eshell.*\\*$" eshell-mod
-     "^\\*shell.*\\*$" shell-mode
-     "^\\*term.*\\*$" term-mode
-     "^\\*vterm.*\\*$" vterm-mode))
-  (popper-window-height 15)
-  :config
-  (popper-mode 1)
-  (popper-echo-mode 1))
 
 (use-package prescient
   :ensure
