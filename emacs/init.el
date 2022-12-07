@@ -509,6 +509,12 @@
   (aw-dispatch-always t)
   :bind (("M-o" . ace-window)))
 
+;; `ace-window' is able to dispatch to `transpose-frame', but does not
+;; depend on it by default.
+(use-package transpose-frame
+  :ensure
+  :after ace-window)
+
 (use-package which-key
   :ensure
   :config (which-key-mode 1))
