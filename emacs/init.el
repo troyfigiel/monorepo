@@ -5,6 +5,7 @@
 
 (use-package emacs
   :hook (prog-mode . display-line-numbers-mode)
+  :bind* (("C-x C-b" . ibuffer))
   :custom
   (custom-file null-device)
   (display-time-24hr-format t)
@@ -74,19 +75,34 @@
 
 (use-package consult
   :ensure
+  ;; TODO: Do I want to bind consult-kmacro?
   :bind*
-   (("C-x b" . consult-buffer)
+  (("C-x b" . consult-buffer)
+   ("M-y" . consult-yank-pop)
+   ;; TODO: I do not use this yet, but maybe in the future for
+   ;; debugging with tracebacks?
+   ("M-g g" . consult-goto-line)
+   ("M-g M-g" . consult-goto-line)
    ("C-c C-l" . consult-line)
-   ("C-c C-f" . consult-find)
-   ("C-c C-r" . consult-ripgrep)
-   ("C-c C-a" . consult-global-mark))
+   ("C-x p f" . consult-find)
+   ("C-x p g" . consult-ripgrep)
+   ("C-x p b" . consult-project-buffer)
+   ("C-c C-a" . consult-global-mark)
+   ;; TODO: How often do I use consult-isearch-history anyway? This
+   ;; overwrites the isearch-edit-string functionality.
+   :map isearch-mode-map
+   ("M-e" . consult-isearch-history)
+   ;; TODO: How often do I use consult-history in the minibuffer?
+   :map minibuffer-local-map
+   ("M-r" . consult-history)
+   ("M-s" . consult-history))
   :custom
   (consult-async-min-input 2))
 
 (use-package consult-dir
   :ensure
   :after consult
-  :bind* ("C-x C-d" . consult-dir)
+  :bind* (("C-x C-d" . consult-dir))
   :custom (consult-dir-shadow-filenames nil))
 
 (use-package consult-eglot
@@ -169,14 +185,14 @@
 (use-package dired-subtree
   :ensure
   :after dired
-  :custom
-  (dired-subtree-use-backgrounds nil)
-  (dired-subtree-line-prefix "   ")
   ;; TODO: Add key bindings for dired-subtree-up and maybe some other
   ;; convenience functions.
   :bind (:map dired-mode-map
               ("<tab>" . dired-subtree-toggle)
-              ("* s" . dired-subtree-mark-subtree)))
+              ("* s" . dired-subtree-mark-subtree))
+  :custom
+  (dired-subtree-use-backgrounds nil)
+  (dired-subtree-line-prefix "   "))
 
 (use-package direnv
   :ensure
@@ -415,9 +431,9 @@
   (dap-python-executable "python3")
   (python-shell-interpreter "python3"))
 
-;; (use-package pyvenv
-;;   :ensure
-;;   :config (pyvenv-mode 1))
+(use-package pyvenv
+  :ensure
+  :config (pyvenv-mode 1))
 
 (use-package rainbow-delimiters
   :ensure
@@ -498,16 +514,15 @@
 (use-package yaml-mode
   :ensure)
 
-(use-package yaml-pro
-  :ensure)
-
 (use-package ace-window
   :ensure
+  :bind (("M-o" . ace-window))
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   (aw-background nil)
   (aw-dispatch-always t)
-  :bind (("M-o" . ace-window)))
+  :config
+  (advice-add #'aw--switch-buffer :override #'consult-buffer))
 
 ;; `ace-window' is able to dispatch to `transpose-frame', but does not
 ;; depend on it by default.
@@ -524,8 +539,6 @@
 ;; (use-package valign
 ;;   :custom (valign-fancy-bar t)
 ;;   :hook (org-mode . valign-mode))
-
-;; ox-hugo = { enable = true; };
 
 ;; ses = {
 ;;   enable = true;
