@@ -30,13 +30,9 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
-+ Bind a bunch of consult commands such as consult-yank, consult-global-mark, etc.
-+ Bind consult-find and consult-ripgrep to the project equivalents. They are the drop-in replacements for these functions. Similarly, consult-project-buffer is a replacement for project-switch-to-buffer.
 + Tab-bar-mode can be used to separate different projects. Inside each tab, project can be used to find project-specific files and buffers. I should also look into tab-bar-history-mode.
 + Registers are very useful for window configurations. They can be used to temporarily maximize a buffer to full screen. I am not sure yet what would be a good workflow. This is probably superseded by tab-bar-history-mode.
-+ org-indent-mode and avy-goto-line do not work together. There are some solutions in here that I can try out: https://github.com/abo-abo/avy/issues/231.
 + Define an apheleia formatter for elisp. This should be as simple as calling (indent-region (point-min) (point-max)). This needs to be run through a separate Emacs instance though.
-+ What are the benefits of using vc versus Magit? Where is each one better? Does vc even come with all the git commands I might want to perform? For example, a git bisect?
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
 + What is the fastest way to grep through a large file? How can Emacs handle searching through large files?
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?

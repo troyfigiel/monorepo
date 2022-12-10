@@ -60,8 +60,8 @@
 
 (use-package avy
   :ensure
-  :bind* (("C-," . avy-goto-char-timer)
-          ("M-," . avy-goto-line))
+  :bind* (("C-#" . avy-goto-char-timer)
+          ("M-#" . avy-goto-line))
   :custom (avy-timeout-seconds 0.25))
 
 (use-package cdlatex
@@ -185,11 +185,13 @@
 (use-package dired-subtree
   :ensure
   :after dired
-  ;; TODO: Add key bindings for dired-subtree-up and maybe some other
-  ;; convenience functions.
+  ;; TODO: Should I enable some of these bindings in wdired-mode-map?
   :bind (:map dired-mode-map
               ("<tab>" . dired-subtree-toggle)
-              ("* s" . dired-subtree-mark-subtree))
+              ("* s" . dired-subtree-mark-subtree)
+	      ("C-M-u" . dired-subtree-up)
+	      ("C-M-p" . dired-subtree-previous-sibling)
+	      ("C-M-n" . dired-subtree-next-sibling))
   :custom
   (dired-subtree-use-backgrounds nil)
   (dired-subtree-line-prefix "   "))
@@ -211,7 +213,6 @@
   :hook
   ((nix-mode
     python-mode
-    sql-mode
     terraform-mode) . eglot-ensure)
   :config
   (setq-default
@@ -236,6 +237,7 @@
   :ensure
   :hook (embark-collect-mode . hl-line-mode)
   :bind* (("C-." . embark-act)
+	  ("M-." . embark-dwim)
           ("C-h b" . embark-bindings))
   :custom
   (embark-confirm-act-all nil)
@@ -276,10 +278,11 @@
 (use-package fontaine
   :ensure
   :custom
-  (fontaine-presets '((default
-                        :default-family "Inconsolata"
-                        :default-height 140
-                        :line-spacing 2)))
+  (fontaine-presets
+   '((default
+      :default-family "Inconsolata"
+      :default-height 140
+      :line-spacing 2)))
   :config
   (fontaine-set-preset 'default))
 
@@ -366,9 +369,14 @@
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
-(use-package org-indent
-  :after org
-  :hook (org-mode . org-indent-mode))
+;; Unfortunately, while visually nice, `org-indent' does not play
+;; nicely with various modes, `avy-goto-line' being only one of them.
+;; It used to cause issues with `org-modern' as well
+;; (https://github.com/minad/org-modern/issues/7). It might be better
+;; to simply disable it completely.
+;; (use-package org-indent
+;;   :after org
+;;   :hook (org-mode . org-indent-mode))
 
 (use-package org-modern
   :ensure
@@ -460,6 +468,14 @@
 (use-package super-save
   :ensure
   :config (super-save-mode 1))
+
+(use-package tab-bar
+  :bind (("C-x t s" . tab-bar-select-tab-by-name))
+  :custom
+  (tab-bar-show nil)
+  :config
+  (tab-bar-mode 1)
+  (tab-bar-history-mode 1))
 
 (use-package terraform-mode :ensure)
 
