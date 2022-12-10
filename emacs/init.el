@@ -51,7 +51,7 @@
 
 (use-package all-the-icons-dired
   :ensure
-  :after (all-the-icons dired)
+  :after dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
 (use-package apheleia
@@ -101,23 +101,21 @@
 
 (use-package consult-dir
   :ensure
-  :after consult
   :bind* (("C-x C-d" . consult-dir))
   :custom (consult-dir-shadow-filenames nil))
 
 (use-package consult-eglot
   :ensure
-  :after (consult eglot))
+  :after eglot)
 
 (use-package consult-flymake
   :ensure consult
-  :after (consult flymake))
+  :after flymake)
 
 ;; TODO: Add the Citar package? How malleable and fitting is it in the
 ;; whole Vertico, Embark, Consult, etc. environment?
 (use-package consult-notes
-  :ensure
-  :after (consult denote))
+  :ensure)
 
 (use-package csv-mode
   :ensure
@@ -246,7 +244,7 @@
 
 (use-package embark-consult
   :ensure
-  :after (consult embark)
+  :after embark
   :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package eshell
@@ -396,7 +394,6 @@
 
 (use-package org-roam
   :ensure
-  :after org
   :custom
   (org-roam-completion-everywhere t)
   (org-roam-directory (expand-file-name "/home/troy/projects/private/monorepo/references/notes"))
