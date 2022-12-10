@@ -71,6 +71,10 @@
 ;;	       (expand-file-name f))))
 ;;       (fun ts f))))
 
+;; TODO: Sometimes when I delete a directory, tf-exif keeps failing
+;; because it seems to be stuck in that directory when it is trying to
+;; rename. What is happening exactly and how can I mitigate this?
+
 ;;;###autoload
 (defun tf-exif-set-last-modification-marked-files ()
   (interactive)

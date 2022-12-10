@@ -5,12 +5,13 @@
 
 (use-package emacs
   :hook (prog-mode . display-line-numbers-mode)
-  :bind* (("C-x C-b" . ibuffer))
+  :bind* ("C-x C-b" . ibuffer)
   :custom
   (custom-file null-device)
   (display-time-24hr-format t)
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
+  (fill-column 99)
   (initial-buffer-choice 'eshell)
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
@@ -101,7 +102,7 @@
 
 (use-package consult-dir
   :ensure
-  :bind* (("C-x C-d" . consult-dir))
+  :bind* ("C-x C-d" . consult-dir)
   :custom (consult-dir-shadow-filenames nil))
 
 (use-package consult-eglot
@@ -251,7 +252,7 @@
   ;; TODO: eshell-mode-map is buggy in eshell. I need to either use
   ;; :hook or set the binding in a different way.
   ;; https://github.com/noctuid/general.el/issues/80
-  :bind* (("C-c C-e" . eshell))
+  ;; :bind* (("C-c C-e" . eshell))
           ;; :map eshell-mode-map
           ;; ("C-r" . consult-history))
   :custom
@@ -340,18 +341,8 @@
   (orderless-matching-styles '(orderless-prefixes)))
 
 (use-package org
-  :ensure
-  :custom
-  (org-catch-invisible-edits 'show-and-error)
-  (org-ellipsis " …")
-  (org-hide-emphasis-markers t)
-  (org-pretty-entities t)
-  (org-startup-folded 'content)
+  :hook (org-mode . visual-line-mode)
   :config
-  (set-face-attribute 'org-level-1 nil :height 1.3)
-  (set-face-attribute 'org-level-2 nil :height 1.2)
-  (set-face-attribute 'org-document-title nil :height 1.4)
-  (set-face-attribute 'org-document-info nil :height 1.2)
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
   (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
@@ -367,20 +358,6 @@
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
-;; Unfortunately, while visually nice, `org-indent' does not play
-;; nicely with various modes, `avy-goto-line' being only one of them.
-;; It used to cause issues with `org-modern' as well
-;; (https://github.com/minad/org-modern/issues/7). It might be better
-;; to simply disable it completely.
-;; (use-package org-indent
-;;   :after org
-;;   :hook (org-mode . org-indent-mode))
-
-(use-package org-modern
-  :ensure
-  :after org
-  :config (global-org-modern-mode 1))
-
 (use-package org-remark
   :ensure
   :after org
@@ -391,33 +368,6 @@
          ("C-c C-k C-d" . org-remark-delete))
   :custom (org-remark-notes-file-name ".marginalia.org")
   :config (org-remark-global-tracking-mode 1))
-
-(use-package org-roam
-  :ensure
-  :custom
-  (org-roam-completion-everywhere t)
-  (org-roam-directory (expand-file-name "/home/troy/projects/private/monorepo/references/notes"))
-  :config (org-roam-db-autosync-enable)
-
-  (defun band-aid-org-roam-capture-template (keybinding name)
-    `(,keybinding
-      ,name
-      plain
-      (file ,(expand-file-name (concat name ".org")))
-      :if-new (file "%<%Y%m%d%H%M%S>.org")
-      :unnarrowed t))
-
-  (defun band-aid-org-roam-set-templates (template-directory)
-    (let ((default-directory template-directory))
-      (setq org-roam-capture-templates
-            (list (band-aid-org-roam-capture-template "d" "default")
-                  (band-aid-org-roam-capture-template "i" "index")
-                  (band-aid-org-roam-capture-template "f" "facts")
-                  (band-aid-org-roam-capture-template "b" "inbox")
-                  (band-aid-org-roam-capture-template "a" "appendix")))))
-
-  (band-aid-org-roam-set-templates
-   (expand-file-name "/home/troy/projects/private/monorepo/emacs/org/templates")))
 
 (use-package org-transclusion :ensure)
 
@@ -467,7 +417,7 @@
   :config (super-save-mode 1))
 
 (use-package tab-bar
-  :bind (("C-x t s" . tab-bar-select-tab-by-name))
+  :bind ("C-x t s" . tab-bar-select-tab-by-name)
   :custom
   (tab-bar-show nil)
   :config
@@ -477,10 +427,6 @@
 (use-package terraform-mode :ensure)
 
 (use-package tf-exif)
-
-(use-package toc-org
-  :ensure
-  :hook ((org-mode markdown-mode) . toc-org-mode))
 
 ;; TODO: Tree-sitter works great for Nix, but for Python I get an
 ;; error that the language ABI is too recent. How do I fix this?
@@ -494,7 +440,7 @@
 
 (use-package expand-region
   :ensure
-  :bind (("C-+" . er/expand-region)))
+  :bind ("C-+" . er/expand-region))
 
 (use-package vertico
   :ensure
@@ -505,17 +451,11 @@
 
 (use-package visual-fill-column
   :ensure
-  :hook
-  ((org-mode . visual-line-mode)
-   (markdown-mode . visual-line-mode)
-   (visual-line-mode . visual-fill-column-mode))
-  :custom
-  (visual-fill-column-center-text t)
-  (visual-fill-column-width 99))
+  :hook (visual-line-mode . visual-fill-column-mode))
 
 (use-package vterm
   :ensure
-  :bind* (("C-c C-t" . vterm)))
+  :bind* ("C-c C-t" . vterm))
 
 (use-package wgrep
   :ensure)
@@ -529,7 +469,7 @@
 
 (use-package ace-window
   :ensure
-  :bind (("M-o" . ace-window))
+  :bind ("M-o" . ace-window)
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   (aw-background nil)
@@ -547,16 +487,3 @@
   :ensure
   :config (which-key-mode 1))
 
-;; TODO: Does this interfere with org-modern?
-;; TODO: Find out how well this works compared to the default.
-;; (use-package valign
-;;   :custom (valign-fancy-bar t)
-;;   :hook (org-mode . valign-mode))
-
-;; ses = {
-;;   enable = true;
-;;   hook = [ "(ses-mode . linum-mode)" ];
-;; };
-
-;; default-text-scale = { enable = true; };
-;; xref = { enable = true; };
