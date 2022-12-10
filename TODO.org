@@ -18,6 +18,7 @@
 + I should start moving over my data-science scratchpad to my reference projects.
 
 ** Desktop
++ I forgot to plug in my battery laptop in time and I ran out off power. It would be better to use the ~upower~ module to automatically power down my laptop in time.
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
   - If I remove polybar for some reason my Bluetooth does not work anymore.
   - What is the right way to work with Emacs inside EXWM? Do you run Emacs inside Emacs? What if Emacs crashes, how do I restart my window-manager?
@@ -30,7 +31,6 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
-+ Tab-bar-mode can be used to separate different projects. Inside each tab, project can be used to find project-specific files and buffers. I should also look into tab-bar-history-mode.
 + Registers are very useful for window configurations. They can be used to temporarily maximize a buffer to full screen. I am not sure yet what would be a good workflow. This is probably superseded by tab-bar-history-mode.
 + Define an apheleia formatter for elisp. This should be as simple as calling (indent-region (point-min) (point-max)). This needs to be run through a separate Emacs instance though.
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
@@ -38,7 +38,6 @@
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
 + Think about a useful eshell workflow. How do I add completion (pcompletion)? The main selling point of eshell is its integration with Emacs including TRAMP.
 + Sometimes I want to pull up a shell for a directory, but the shell I pull up is not in the directory belonging to the buffer. Is there a smart way to work with this? I also do not want to end up with too many shell buffers.
-+ Maybe ace-window is also a nice package to throw in the mix? I am not completely sure yet, since I normally don't have that many windows open.
 + Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
 + I have been using the denote naming schema for a bit now. Is there a way to extract all the keywords used in a given directory? That would be especially useful for quickly seeing what is in a directory. It will allow me to have a flatter directory structure and rely more on keyword search functionality.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
@@ -51,10 +50,8 @@
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + Spelling checkers could be nice to have in Emacs, but currently I am not actively using them. What variables can I set, which commands can I trigger and are there useful third-party packages?
 + It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
-+ It would be nice if there is a simple function I can use that temporarily makes a buffer full-frame size. Like a full-screen button such that when I press it again, it automatically gives me back my original frame layout.
 + The terminal version of Emacs has difficult to read colours for magit. I should fix that.
 + Set up org-babel for Python so I can start moving over my data-science scratch-pad.
-+ It might be good to have multiple font sets I can use with fontaine. Sometimes this font is a bit big. What would be nice and why?
 + Can I not set these below directories relatively? That would remove the pain of having to use the absolute monorepo directory.
 + We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular.
 
