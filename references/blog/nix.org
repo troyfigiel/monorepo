@@ -49,8 +49,25 @@ Understanding all of the different ways in which you can configure stuff, shows 
 - Merging settings together automatically, making configuration more modular.
 - Easy to share configuration between different programs, because everything is the Nix language.
 
-** To add
+** Monorepo
+Why a monorepo? From a more philosophical perspective, Nix prefers such a structure.
 
+Because Nix is reproducible, inputs to a system must either be assimilated into the source or properly versioned.
+
+For example, if I were to separate my website from the monorepo, it would need to be pulled in before I can upload it to my server. This is done by Nix on the basis of a commit hash. Any update to my website will therefore additionally require an update to the inputs of my monorepo.
+
+In principle, this can be done automatically of course, but this in turn makes rolling back more complicated. A huge advantage of Nix is that I can simply reboot into a previous generation if I break something. If there are multiple steps that need to be undone to rollback a change, global state starts playing a role again: Which rollback do I need to do first? In which order?
+
+** Binary cache
+To copy to the binary cache, I can use
+
+~nix copy --to 's3://nix-binary-cache?profile=minio&endpoint=192.168.178.37:10106&scheme=http' --all~
+
+For Nix to be able to read from the binary cache, I will need to make sure the bucket is publicly readable.
+
+What is the preferred way to clean up my binary cache? Is there a garbage control?
+
+** To add
 - The great thing about Nix is the reproducibility. If I want a dev environment on my desktop that is the same as the dev environment on my laptop, I just need to set the same options. This reproducibility is a key feature of Nix, meaning that there is a clear incentive to minimize the number of options my own modules have.
 - Nix "rebuilds the world". Where did I see this phrase? For example, if gcc changes, all dependent packages will have to be rebuilt as well.
 - I do not like pre-commit. Commits should be as effortless as possible. Instead, CI/CD should contain any linters and style checkers. Formatters can be added to run automatically on save and should also not interrupt my workflow. For example, apheleia or the automatic formatter in VSCode work nicely. This is why I do linting and formatting through `nix run .#lint` and `nix fmt` instead of with a pre-commit hook.
@@ -58,3 +75,4 @@ Understanding all of the different ways in which you can configure stuff, shows 
 - Even though Nix is completely reproducible, a build passing does not mean the program does not encounter run-time errors. The more code I have, the harder it is to see what breaks over time when I do an upgrade. I would need to test everything simultaneously. Therefore, it is important to reuse as much code as possible and remove dead code from my repo as soon as possible (for example when I move from VSCode to Emacs permanently).
   In the future it might make sense to separate hosts that have very little in common. For example, working stations and servers. I will not be running graphical applications on servers.
 - Because Nix is declarative, you do not expect to have any state left over after a ~nixos-rebuild~. As an example where this was useful, I suddenly noticed a bug for a package that I also saw happening with another package a while back. I originally assumed this was related to the package, but it turns out it was the configuration for general that caused the issue. I went back to a commit that I knew was still working and then ran ~git bisect~, executing the ~nixos-rebuild~ command each time. This made it trivial to find the error.
+- It is actually possible to define the same setting multiple times as long as the values are consistent. Booleans should be the same, lists will be concatenated, etc. However, what is not possible, is to define the same bind mounts multiple times. The options I set regarding persistence can only occur once across my entire configuration. For example, to enable Steam, I need to enable some hardware options, firewall options as well as bind mounts in my user homes. By creating user features (that are NixOS modules), I can keep my code DRY since I can set these persistence options and the necessary hardware options in the same module. If I have multiple users that need the same NixOS features, such as programs.steam.enable = true;, they will be merged together and NixOS will not throw an error.

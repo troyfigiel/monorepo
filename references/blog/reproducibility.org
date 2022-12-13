@@ -1,0 +1,3 @@
+#+title: Reproducibility in software
+
+For example, a Dockerfile does not make the building process reproducible. If you run ~apt-get install <library>~ inside your container, you will run into the exact same problems from the perspective of reproducibility due to the lack of a locking mechanism / guarantee of installing the exact same software upon every build.

@@ -1,0 +1,3 @@
+#+title: Emacs
+
+The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. This is why I prefer to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.

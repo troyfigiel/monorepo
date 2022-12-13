@@ -387,20 +387,6 @@
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
-;; TODO: I like the idea of org-remark, but unfortunately it is bringing me more merge conflicts
-;; than I would like when rebasing. It also does not play well with org-transclusion and narrowing.
-
-;; (use-package org-remark
-;;   :ensure
-;;   :after org
-;;   :bind (("C-c C-k C-m" . org-remark-mark)
-;;          ("C-c C-k C-o" . org-remark-open)
-;;          ("C-c C-k C-n" . org-remark-view-next)
-;;          ("C-c C-k C-p" . org-remark-view-prev)
-;;          ("C-c C-k C-d" . org-remark-delete))
-;;   :custom (org-remark-notes-file-name ".marginalia.org")
-;;   :config (org-remark-global-tracking-mode 1))
-
 (use-package org-transclusion :ensure)
 
 (use-package pdf-tools

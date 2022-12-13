@@ -31,6 +31,7 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
++ By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage). I should try this out for my Emacs configuration.
 + My recentf workflow interferes with my Docker workflow, because there will be quite a few non-existent connections hanging around and they will get triggered when I run consult-dir.
 + Registers are very useful for window configurations. They can be used to temporarily maximize a buffer to full screen. I am not sure yet what would be a good workflow. This is probably superseded by tab-bar-history-mode.
 + Define an apheleia formatter for elisp. This should be as simple as calling (indent-region (point-min) (point-max)). This needs to be run through a separate Emacs instance though.
@@ -45,12 +46,10 @@
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
 + Org-transclusion should come with an overlay, but it is not appearing for me. This could have to do with doom, org-modern? How can I indicate that a region is transcluded? Currently it looks exactly like the rest of the buffer.
-+ I have to be careful combining org-remark and org-transclusion. If I transclude a file, this will change the locations of my remarks in my .marginalia.org files. However, upon reopening the file, the transclusion will be closed and the remarks at the wrong position. How do I fix this? It seems org-remark also has issues when I use narrowing for the exact same reason.
 + Narrowing can be very useful in Emacs. What kind of functionality surrounds narrowing? I know about narrowing and widening.
 + Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
 + Spelling checkers could be nice to have in Emacs, but currently I am not actively using them. What variables can I set, which commands can I trigger and are there useful third-party packages?
-+ It would be great if I manage to get org-transclusion to work. I would also like some sort of annotation package like org-remark or annotate. However, the annoying part is that it couples to my file location. If I change the file location, does it break all the notes?
 + The terminal version of Emacs has difficult to read colours for magit. I should fix that.
 + Set up org-babel for Python so I can start moving over my data-science scratch-pad.
 + Can I not set these below directories relatively? That would remove the pain of having to use the absolute monorepo directory.
