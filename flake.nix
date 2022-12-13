@@ -107,10 +107,15 @@
             touch $out
           '';
 
+          # TODO: nix-linter still has problems with ./${hosts}. Skipping over
+          # hosts/flake-module.nix is a hack for now.
           nix-linter = pkgs.runCommand "checks-nix-linter" {
             buildInputs = [ pkgs.findutils pkgs.nix-linter ];
           } ''
-            find ${./.} -type f -name '*.nix' -print0 | xargs -0 nix-linter
+            find ${./.} -type f -name '*.nix' \
+                 -not -path ${./.}/hosts/flake-module.nix \
+                 -print0 \
+                 | xargs -0 nix-linter
             touch $out
           '';
 
