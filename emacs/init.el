@@ -3,8 +3,16 @@
   (setq use-package-verbose t))
 (require 'bind-key)
 
+(defun tf-isearch-jump-to-match-start ()
+  (when (and isearch-forward
+	     isearch-other-end
+	     ;; Do not jump to the start of the search if the search is quit.
+	     (not isearch-mode-end-hook-quit))
+    (goto-char isearch-other-end)))
+
 (use-package emacs
-  :hook (prog-mode . display-line-numbers-mode)
+  :hook ((prog-mode . display-line-numbers-mode)
+	 (isearch-mode-end . tf-isearch-jump-to-match-start))
   :bind* ("C-x C-b" . ibuffer)
   :custom
   (custom-file null-device)
