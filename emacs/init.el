@@ -20,7 +20,7 @@
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
   (fill-column 99)
-  (initial-buffer-choice 'eshell)
+  (initial-buffer-choice "~")
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
@@ -256,6 +256,10 @@
   :after embark
   :hook (embark-collect-mode . consult-preview-at-point-mode))
 
+;; TODO: Currently there is a bug in tramp-container.el which does not seem to exist in
+;; docker-tramp.el, causing the wrong path to be searched when eshell is in the container. In the
+;; future, I need to update and check if the bug persists or send the bug report to upstream (which
+;; I need to check how to do exactly).
 (use-package eshell
   ;; TODO: eshell-mode-map is buggy in eshell. I need to either use
   ;; :hook or set the binding in a different way.
