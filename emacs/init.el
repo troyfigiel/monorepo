@@ -78,7 +78,9 @@
 
 (use-package apheleia
   :ensure
-  :config (apheleia-global-mode 1))
+  :config
+  (add-to-list 'apheleia-mode-alist '(emacs-lisp-mode . lisp-indent))
+  (apheleia-global-mode 1))
 
 (use-package avy
   :ensure
@@ -91,9 +93,10 @@
   :after tex
   :custom
   (cdlatex-command-alist '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil)))
-  (cdlatex-env-alist '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil))i
+  (cdlatex-env-alist
+   '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil)))
   (cdlatex-math-modify-alist '((?a "\\mathbb" nil t nil nil)))
-  (cdlatex-math-modify-prefix ?')))
+  (cdlatex-math-modify-prefix ?'))
 
 (use-package consult
   :ensure
@@ -148,7 +151,7 @@
   :ensure
   :hook (dired-mode . denote-dired-mode)
   :bind (:map dired-mode-map
-         ("C-c C-n C-r" . denote-dired-rename-marked-files))
+              ("C-c C-n C-r" . denote-dired-rename-marked-files))
   :custom
   (denote-link-backlinks-display-buffer-action
    '((display-buffer-reuse-window
@@ -282,8 +285,8 @@
   ;; :hook or set the binding in a different way.
   ;; https://github.com/noctuid/general.el/issues/80
   ;; :bind* (("C-c C-e" . eshell))
-          ;; :map eshell-mode-map
-          ;; ("C-r" . consult-history))
+  ;; :map eshell-mode-map
+  ;; ("C-r" . consult-history))
   :custom
   (eshell-banner-message "")
   (eshell-cp-overwrite-files nil)
@@ -293,11 +296,11 @@
 ;; that one and flymake-show-buffer-diagnostics?
 (use-package flymake
   :ensure)
-  ;; :bind (:prefix "C-c"
-  ;;		    "ec" 'consult-flymake
-  ;;		    "ef" 'flymake-show-buffer-diagnostics
-  ;;		    "en" 'flymake-goto-next-error
-  ;;		    "ep" 'flymake-goto-prev-error))
+;; :bind (:prefix "C-c"
+;;		    "ec" 'consult-flymake
+;;		    "ef" 'flymake-show-buffer-diagnostics
+;;		    "en" 'flymake-goto-next-error
+;;		    "ep" 'flymake-goto-prev-error))
 
 (use-package flyspell
   :hook (prog-mode . flyspell-prog-mode)
