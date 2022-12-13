@@ -20,6 +20,7 @@ in {
       # TODO: It works, but is not the right place for adding the package.
       # Once I move away from home-manager emacs-init, I will need to move this as well.
       home.packages = with pkgs; [
+        python3Packages.jupytext
         imagemagick
         exiftool
         rsync

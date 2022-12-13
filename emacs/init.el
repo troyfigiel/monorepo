@@ -38,6 +38,19 @@
   (tool-bar-mode -1)
   (tooltip-mode -1))
 
+;; TODO: Workflow? In a team you will probably end up having to use Jupyter notebooks and
+;; JupyterLab. If I just need to make some small changes to notebooks, I can probably get away with
+;; code-cells. When working by myself, org-mode is a great option as well with org-babel.
+(use-package code-cells
+  ;; TODO: Would it make sense to use code-cells for every language with a REPL? I quite like the
+  ;; working style.
+  :hook (python-mode . code-cells-mode-maybe)
+  :ensure)
+
+(use-package jupyter
+  :ensure
+  :custom (jupyter-repl-echo-eval-p t))
+
 (use-package doom-themes
   :ensure
   :config (load-theme 'doom-one t))
@@ -249,7 +262,11 @@
   :custom
   (embark-confirm-act-all nil)
   (embark-help-key (kbd "?"))
-  (embark-indicators '(embark--vertico-indicator embark-minimal-indicator embark-highlight-indicator embark-isearch-highlight-indicator)))
+  (embark-indicators
+   '(embark--vertico-indicator
+     embark-minimal-indicator
+     embark-highlight-indicator
+     embark-isearch-highlight-indicator)))
 
 (use-package embark-consult
   :ensure
