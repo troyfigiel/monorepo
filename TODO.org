@@ -56,6 +56,7 @@
 + We need to extract the monorepo directory as a parameter to parameters.nix. Then we can set the org directory in org/default.nix and carry it through with _modules.args to org-roam, where we use it to set the notes and templates directories as parameters, keeping everything modular.
 
 ** Hardware
++ Sometimes I end up running out of space on my root partition when building a package, since it is a tmpfs and is capped at 4-8G. This can happen when building machine learning libraries which are often quite large. I increased the tmpfs size to 8G which works most of the time, but is there a smarter way to handle this? Can I move the building process to a location not on my tmpfs?
 + Add my Raspberry Pi to my network.
 + Use Disko instead of scripted partitioning.
 + Start using LUKS Disk Encryption
