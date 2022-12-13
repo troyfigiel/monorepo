@@ -396,10 +396,6 @@
   :ensure
   :mode ("\\.pdf\\'" . pdf-view-mode))
 
-(use-package prescient
-  :ensure
-  :config (prescient-persist-mode 1))
-
 (use-package python
   :ensure
   :custom

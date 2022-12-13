@@ -33,7 +33,6 @@
 ** Emacs
 + By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage). I should try this out for my Emacs configuration.
 + My recentf workflow interferes with my Docker workflow, because there will be quite a few non-existent connections hanging around and they will get triggered when I run consult-dir.
-+ Registers are very useful for window configurations. They can be used to temporarily maximize a buffer to full screen. I am not sure yet what would be a good workflow. This is probably superseded by tab-bar-history-mode.
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
 + What is the fastest way to grep through a large file? How can Emacs handle searching through large files?
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
