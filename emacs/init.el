@@ -358,16 +358,19 @@
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
-(use-package org-remark
-  :ensure
-  :after org
-  :bind (("C-c C-k C-m" . org-remark-mark)
-         ("C-c C-k C-o" . org-remark-open)
-         ("C-c C-k C-n" . org-remark-view-next)
-         ("C-c C-k C-p" . org-remark-view-prev)
-         ("C-c C-k C-d" . org-remark-delete))
-  :custom (org-remark-notes-file-name ".marginalia.org")
-  :config (org-remark-global-tracking-mode 1))
+;; TODO: I like the idea of org-remark, but unfortunately it is bringing me more merge conflicts
+;; than I would like when rebasing. It also does not play well with org-transclusion and narrowing.
+
+;; (use-package org-remark
+;;   :ensure
+;;   :after org
+;;   :bind (("C-c C-k C-m" . org-remark-mark)
+;;          ("C-c C-k C-o" . org-remark-open)
+;;          ("C-c C-k C-n" . org-remark-view-next)
+;;          ("C-c C-k C-p" . org-remark-view-prev)
+;;          ("C-c C-k C-d" . org-remark-delete))
+;;   :custom (org-remark-notes-file-name ".marginalia.org")
+;;   :config (org-remark-global-tracking-mode 1))
 
 (use-package org-transclusion :ensure)
 
@@ -397,20 +400,20 @@
 ;; TODO: I should bind a key to recentf-cleanup. Sometimes there are
 ;; numerous recent files pointing to non-existing paths, such as when
 ;; happens when Docker containers get removed.
-(use-package recentf
-  :init
-  ;; It is important to turn recentf-auto-cleanup to never *before*
-  ;; setting turning on recentf-mode. By default recentf will run an
-  ;; auto-cleanup when turning on recentf-mode.
-  (setq recentf-auto-cleanup 'never)
-  :custom
-  ;; TODO: What does the recentf-max-menu-items option exactly change?
-  ;; (recentf-max-menu-items 50)
-  (recentf-auto-cleanup 'never)
-  (recentf-max-saved-items 200)
-  :config
-  (recentf-mode 1)
-  (run-at-time nil 300 'recentf-save-list))
+;; (use-package recentf
+;;   :init
+;;   ;; It is important to turn recentf-auto-cleanup to never *before*
+;;   ;; setting turning on recentf-mode. By default recentf will run an
+;;   ;; auto-cleanup when turning on recentf-mode.
+;;   (setq recentf-auto-cleanup 'never)
+;;   :custom
+;;   ;; TODO: What does the recentf-max-menu-items option exactly change?
+;;   ;; (recentf-max-menu-items 50)
+;;   (recentf-auto-cleanup 'never)
+;;   (recentf-max-saved-items 200)
+;;   :config
+;;   (recentf-mode 1)
+;;   (run-at-time nil 300 'recentf-save-list))
 
 (use-package super-save
   :ensure

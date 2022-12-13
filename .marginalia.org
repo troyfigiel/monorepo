@@ -73,7 +73,7 @@ For example, a Dockerfile does not make the building process reproducible. If yo
 :org-remark-end: 3530
 :org-remark-id: d08868ce
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::33]]
+:org-remark-link: [[file:TODO.org::31]]
 :END:
 
 *** Combine embark and consult
@@ -92,7 +92,7 @@ How do I turn my Emacs into a portable app? I can run `emacs -q -l <init-file>` 
 :org-remark-end: 6645
 :org-remark-id: cebfb535
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::53]]
+:org-remark-link: [[file:TODO.org::49]]
 :END:
 
 I can link to source code using the src notation and then specify the line numbers absolutely or relatively from a certain point.
@@ -103,7 +103,7 @@ I can link to source code using the src notation and then specify the line numbe
 :org-remark-end: 7288
 :org-remark-id: 1091bac7
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::56]]
+:org-remark-link: [[file:TODO.org::53]]
 :END:
 
 If I am trying to find a word in a region inside of a long file, e.g. "denote-" inside "denote.el", I can narrow and then perform a search.
@@ -115,7 +115,7 @@ If I am trying to find a word in a region inside of a long file, e.g. "denote-" 
 :org-remark-end: 7686
 :org-remark-id: c60a02ba
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::58]]
+:org-remark-link: [[file:TODO.org::55]]
 :END:
 
 The great thing about Emacs, is the instant feedback when I evaluate an Elisp code block. Currently, with the emacs-init module, I cannot do that. It would be better to have a separate config file which contains the full use-package Elisp code for a package and a default.nix which contains the extraPackages that need to be downloaded.
@@ -123,13 +123,6 @@ The great thing about Emacs, is the instant feedback when I evaluate an Elisp co
 I can probably start implementing this by first moving all of my config to the extraConfig field in the current emacs-init module.
 
 ** I removed the notes from my website
-:PROPERTIES:
-:org-remark-beg: 11066
-:org-remark-end: 11101
-:org-remark-id: 79c1b927
-:org-remark-label: nil
-:org-remark-link: [[file:TODO.org::88]]
-:END:
 
 Notes are more for my own use. Besides, if I start using denote, everything is a text file and links can easily be traversed even without denote, for example by using any file manager to search for the identifying prefix.
 
@@ -141,7 +134,7 @@ The advantage of removing my notes, is that I do not need to think about paralle
 :org-remark-end: 7336
 :org-remark-id: 2a8b0b16
 :org-remark-label: nil
-:org-remark-link: [[file:TODO.org::56]]
+:org-remark-link: [[file:TODO.org::53]]
 :END:
 
 + Narrowing to a region with C-x n n
