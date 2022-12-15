@@ -1,17 +1,16 @@
-{ stdenv, fetchurl }:
+{ stdenv }:
 
 stdenv.mkDerivation {
   name = "wallpaper";
-  src = fetchurl {
-    url =
-      "https://raw.githubusercontent.com/jpotier/nixos-wallpapers/0ef76739f1be240ee3c815442cfddcca0e8280f3/nixos-data-center.png";
-    sha256 = "sha256-PVn0dP4ICkQJVlewJzwIk8Ym4ZqBVrc/hdmx+kQ1gjc=";
+  src = builtins.path {
+    path = ./nixos.jpg;
+    name = "wallpaper";
   };
   dontUnpack = true;
   dontBuild = true;
-  dontConfigur = true;
+  dontConfigure = true;
 
   installPhase = ''
-    install -Dm0644 $src $out/wallpaper.png
+    install -Dm0644 $src $out/wallpaper.jpg
   '';
 }
