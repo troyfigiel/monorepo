@@ -18,6 +18,7 @@
 + I should start moving over my data-science scratchpad to my reference projects.
 
 ** Desktop
++ It could be a good exercise to package IceCat for Nix. There is no binary for it and the [[https://git.savannah.gnu.org/cgit/gnuzilla.git/tree/data/README.IceCat][packaging instructions]] are clear. I do not mind building it from source.
 + I forgot to plug in my battery laptop in time and I ran out off power. It would be better to use the ~upower~ module to automatically power down my laptop in time.
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
   - If I remove polybar for some reason my Bluetooth does not work anymore.
@@ -31,8 +32,7 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
-+ By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example (https://github.com/ralismark/nix-appimage). I should try this out for my Emacs configuration.
-+ My recentf workflow interferes with my Docker workflow, because there will be quite a few non-existent connections hanging around and they will get triggered when I run consult-dir.
++ By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage [[https://github.com/ralismark/nix-appimage][for example]]. I should try this out for my Emacs configuration.
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
 + What is the fastest way to grep through a large file? How can Emacs handle searching through large files?
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
@@ -43,7 +43,6 @@
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?
-+ Org-transclusion should come with an overlay, but it is not appearing for me. This could have to do with doom, org-modern? How can I indicate that a region is transcluded? Currently it looks exactly like the rest of the buffer.
 + Narrowing can be very useful in Emacs. What kind of functionality surrounds narrowing? I know about narrowing and widening.
 + Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.

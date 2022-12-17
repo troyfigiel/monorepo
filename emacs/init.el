@@ -228,12 +228,13 @@
   :ensure
   :bind (("C-c C-d" . docker)))
 
-(use-package docker-compose-mode :ensure)
+(use-package docker-compose-mode
+  :ensure)
 
-(use-package dockerfile-mode :ensure)
+(use-package dockerfile-mode
+  :ensure)
 
 (use-package eglot
-  :ensure
   :hook (python-mode . eglot-ensure))
 
 (use-package electric
@@ -262,14 +263,16 @@
   :after embark
   :hook (embark-collect-mode . consult-preview-at-point-mode))
 
-;; TODO: Currently there is a bug in tramp-container.el which does not seem to exist in
-;; docker-tramp.el, causing the wrong path to be searched when eshell is in the container. In the
-;; future, I need to update and check if the bug persists or send the bug report to upstream (which
-;; I need to check how to do exactly).
+;; TODO: Currently there is a bug in tramp-container.el which does
+;; not seem to exist in docker-tramp.el, causing the wrong path to
+;; be searched when eshell is in the container. In the future, I
+;; need to update and check if the bug persists or send the bug
+;; report to upstream (which I need to check how to do exactly).
 (use-package eshell
   ;; TODO: eshell-mode-map is buggy in eshell. I need to either use
   ;; :hook or set the binding in a different way.
   ;; https://github.com/noctuid/general.el/issues/80
+
   ;; :bind* (("C-c C-e" . eshell))
   ;; :map eshell-mode-map
   ;; ("C-r" . consult-history))
@@ -352,8 +355,8 @@
   (completion-category-defaults nil)
   (completion-category-overrides '((file (styles . (partial-completion)))))
   (completion-styles '(orderless))
-  ;; TODO: The completion style is a bit harsh. If I type "con grep" I
-  ;; also want to match consult-ripgrep. But "con con" should not
+  ;; TODO: The completion style is a bit harsh. If I type "con grep"
+  ;; I also want to match consult-ripgrep. But "con con" should not
   ;; match anything consult-related. The second part should match a
   ;; different word. How do I achieve this?
   (orderless-matching-styles '(orderless-prefixes)))

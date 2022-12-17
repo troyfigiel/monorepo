@@ -15,24 +15,24 @@ in {
       # TODO: It works, but is not the right place for adding the package.
       # Once I move away from home-manager emacs-init, I will need to move this as well
       home.packages = with pkgs; [
-        python3Packages.jupytext
-        imagemagick
-        exiftool
-        rsync
-        emacs-all-the-icons-fonts
-        inconsolata
-        libvterm
-        dtach
-        ripgrep
-        ispell
         black
-        python3
-        nixfmt
+        dtach
+        emacs-all-the-icons-fonts
+        exiftool
+        imagemagick
+        inconsolata
         ispell
-        texlive.combined.scheme-full
+        ispell
+        libvterm
+        nixfmt
         nodePackages.prettier
-        python3Packages.python-lsp-server
+        python3
         python3Packages.flake8
+        python3Packages.jupytext
+        python3Packages.python-lsp-server
+        ripgrep
+        rsync
+        texlive.combined.scheme-full
       ];
     }
 
