@@ -234,22 +234,7 @@
 
 (use-package eglot
   :ensure
-  :hook
-  ((nix-mode
-    python-mode
-    terraform-mode) . eglot-ensure)
-  :config
-  (setq-default
-   eglot-workspace-configuration
-   ;; TODO: It would be nice to have refactoring capabilities with pylsp-rope.
-   ;; Unfortunately, it is not packaged for Nix yet.
-   '((pylsp
-      (plugins
-       ;; I use apheleia + black for formatting so do not need autopep8.
-       (autopep8 (enabled . nil))
-       (pycodestyle (enabled . nil))
-       (flake8 (enabled . t))
-       (jedi_completion (fuzzy . t)))))))
+  :hook (python-mode . eglot-ensure))
 
 (use-package electric
   :config (electric-pair-mode 1))
@@ -450,7 +435,6 @@
 ;; TODO: Tree-sitter works great for Nix, but for Python I get an
 ;; error that the language ABI is too recent. How do I fix this?
 (use-package tree-sitter
-  :ensure
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
   :config (global-tree-sitter-mode 1))
 

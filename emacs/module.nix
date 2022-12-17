@@ -25,7 +25,6 @@ in {
         dtach
         ripgrep
         ispell
-        tree-sitter
         black
         python3
         nixfmt
