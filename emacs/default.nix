@@ -9,16 +9,11 @@ in {
     {
       programs.emacs = {
         enable = true;
-        package = pkgs.emacsWithPackagesFromUsePackage {
-          config = ./init.el;
-          defaultInitFile = true;
-          package = pkgs.emacsGit;
-          alwaysEnsure = false;
-        };
+        package = pkgs.callPackage ./tf-emacs.nix { };
       };
 
       # TODO: It works, but is not the right place for adding the package.
-      # Once I move away from home-manager emacs-init, I will need to move this as well.
+      # Once I move away from home-manager emacs-init, I will need to move this as well
       home.packages = with pkgs; [
         python3Packages.jupytext
         imagemagick
@@ -31,23 +26,14 @@ in {
         ripgrep
         ispell
         tree-sitter
-        sqls
-        terraform-ls
         black
         python3
         nixfmt
-        rnix-lsp
         ispell
         texlive.combined.scheme-full
         nodePackages.prettier
         python3Packages.python-lsp-server
-        # python3Packages.pylsp-rope
-        # TODO: pylsp-mypy is broken in the current update.
-        # python3Packages.pylsp-mypy
         python3Packages.flake8
-        # docker-langserver
-        tf-exif
-
       ];
     }
 

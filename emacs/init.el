@@ -44,8 +44,8 @@
 (use-package code-cells
   ;; TODO: Would it make sense to use code-cells for every language with a REPL? I quite like the
   ;; working style.
-  :hook (python-mode . code-cells-mode-maybe)
-  :ensure)
+  :ensure
+  :hook (python-mode . code-cells-mode-maybe))
 
 (use-package jupyter
   :ensure
@@ -170,7 +170,8 @@
       (denote heading tags 'org)
       (insert text))))
 
-(use-package detached :ensure)
+(use-package detached
+  :ensure)
 
 (use-package diff-hl
   :ensure
@@ -443,7 +444,8 @@
 
 (use-package terraform-mode :ensure)
 
-(use-package tf-exif)
+(use-package tf-exif
+  :ensure tf-lisp)
 
 ;; TODO: Tree-sitter works great for Nix, but for Python I get an
 ;; error that the language ABI is too recent. How do I fix this?
