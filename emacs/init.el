@@ -291,10 +291,6 @@
 ;;		    "en" 'flymake-goto-next-error
 ;;		    "ep" 'flymake-goto-prev-error))
 
-(use-package flyspell
-  :hook (prog-mode . flyspell-prog-mode)
-  :hook (text-mode . flyspell-mode))
-
 (use-package fontaine
   :ensure
   :custom
