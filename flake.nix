@@ -60,6 +60,7 @@
           config.allowUnsupportedSystem = true;
           overlays = [
             inputs.emacs-overlay.overlay
+            (import ./emacs/overlay.nix)
             (import ./packages/overlay.nix)
             (import ./website/overlay.nix)
           ];

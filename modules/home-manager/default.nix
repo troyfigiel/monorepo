@@ -14,7 +14,7 @@
 
   git = import ./development/git.nix;
 
-  emacs = import ../../emacs;
+  emacs = import ../../emacs/module.nix;
 
   gpg = import ./security/gpg.nix;
   pass = import ./security/pass.nix;
