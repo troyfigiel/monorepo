@@ -24,6 +24,7 @@ in {
         ispell
         ispell
         libvterm
+        nil
         nixfmt
         nodePackages.prettier
         python3

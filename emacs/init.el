@@ -235,7 +235,8 @@
   :ensure)
 
 (use-package eglot
-  :hook (python-mode . eglot-ensure))
+  :hook ((python-mode nix-mode) . eglot-ensure)
+  :config (add-to-list 'eglot-server-programs '(nix-mode . ("nil"))))
 
 (use-package electric
   :config (electric-pair-mode 1))
