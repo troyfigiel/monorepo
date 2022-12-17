@@ -396,23 +396,16 @@
   :ensure
   :hook (prog-mode . rainbow-delimiters-mode))
 
-;; TODO: I should bind a key to recentf-cleanup. Sometimes there are
-;; numerous recent files pointing to non-existing paths, such as when
-;; happens when Docker containers get removed.
-;; (use-package recentf
-;;   :init
-;;   ;; It is important to turn recentf-auto-cleanup to never *before*
-;;   ;; setting turning on recentf-mode. By default recentf will run an
-;;   ;; auto-cleanup when turning on recentf-mode.
-;;   (setq recentf-auto-cleanup 'never)
-;;   :custom
-;;   ;; TODO: What does the recentf-max-menu-items option exactly change?
-;;   ;; (recentf-max-menu-items 50)
-;;   (recentf-auto-cleanup 'never)
-;;   (recentf-max-saved-items 200)
-;;   :config
-;;   (recentf-mode 1)
-;;   (run-at-time nil 300 'recentf-save-list))
+;; TODO: Check if I still run into issues with recentf and tramp. If
+;; I do, I can set recentf-keep to '(file-remote-p file-readable-p).
+(use-package recentf
+  ;; It is important to turn recentf-auto-cleanup to never *before*
+  ;; turning on recentf-mode. By default recentf will run an
+  ;; auto-cleanup when turning on recentf-mode.
+  :init (setq recentf-auto-cleanup 'never)
+  :config
+  (recentf-mode 1)
+  (run-at-time nil 300 'recentf-save-list))
 
 (use-package super-save
   :ensure
