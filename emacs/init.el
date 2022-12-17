@@ -121,8 +121,8 @@
    :map minibuffer-local-map
    ("M-r" . consult-history)
    ("M-s" . consult-history))
-  :custom
-  (consult-async-min-input 2))
+  :custom (consult-async-min-input 2)
+  :config (setq completion-in-region-function 'consult-completion-in-region))
 
 (use-package consult-dir
   :ensure
