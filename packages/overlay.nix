@@ -3,5 +3,8 @@ final: prev: {
     inherit (prev.libsForQt5) qtgraphicaleffects;
     inherit (final) wallpaper;
   };
+  tdda = prev.callPackage ./tdda {
+    inherit (prev.python3Packages) buildPythonPackage pandas;
+  };
   wallpaper = prev.callPackage ./wallpaper { };
 }
