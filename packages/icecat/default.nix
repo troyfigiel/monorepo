@@ -10,6 +10,7 @@ stdenv.mkDerivation rec {
       rev = version;
       sha256 = "sha256-ZCX0GVhiHcXeS00JZw+QRMMTlbOi0FlqomzJQfggZKc=";
     })
+    # TODO: Add the Firefox source and do I need the lang-packs as well?
     #   (fetchurl {
     #     url = "";
     #     sha256 = "";
@@ -30,4 +31,7 @@ stdenv.mkDerivation rec {
   preCheck = ''
     sed -i makeicecat -e 's|\(/bin/sed|sed\)|${gnused}/bin/sed|'
   '';
+
+  # TODO: I first need to call makeicecat which modifies the Firefox tarball. After that is done, I
+  # will need to run the standard make-config steps.
 }
