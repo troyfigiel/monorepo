@@ -19,16 +19,21 @@
     };
   };
 
-  outputs = { flake-utils, jupyterWith, ... }:
-    flake-utils.lib.eachSystem [ flake-utils.lib.system.x86_64-linux ] (system:
-      let
-        inherit (jupyterWith.lib.${system}) mkJupyterlabFromPath;
-        jupyterlab = mkJupyterlabFromPath ./kernels { inherit system; };
-      in {
-        packages.default = jupyterlab;
-        apps.default = {
-          program = "${jupyterlab}/bin/jupyter-lab";
-          type = "app";
+  outputs = inputs:
+    inputs.flake-utils.lib.eachSystem
+    [ inputs.flake-utils.lib.system.x86_64-linux ] (system: rec {
+      pkgs = import inputs.nixpkgs { inherit system; };
+
+      packages.default =
+        inputs.jupyterWith.lib.${system}.mkJupyterlabFromPath ./kernels {
+          inherit system;
         };
-      });
+
+      apps.default = {
+        program = "${packages.default}/bin/jupyter-server";
+        type = "app";
+      };
+
+      devShells.default = pkgs.mkShell { packages = [ pkgs.dvc ]; };
+    });
 }
