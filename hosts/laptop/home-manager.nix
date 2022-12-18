@@ -21,7 +21,6 @@
           hmModules.messenger
           hmModules.pass
           hmModules.picom
-          hmModules.polybar
           hmModules.rofi
           hmModules.syncthing
           hmModules.xdg
@@ -48,7 +47,6 @@
           messenger.enable = true;
           pass.enable = true;
           picom.enable = true;
-          polybar.enable = true;
           syncthing.enable = true;
           directories = [
             "audio"

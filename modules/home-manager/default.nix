@@ -9,7 +9,6 @@
   dunst = import ./desktop/dunst.nix;
   i3 = import ./desktop/i3.nix;
   picom = import ./desktop/picom.nix;
-  polybar = import ./desktop/polybar.nix;
   rofi = import ./desktop/rofi;
 
   git = import ./development/git.nix;

@@ -17,7 +17,6 @@
           hmModules.home
           hmModules.i3
           #   ../../modules/home-manager/picom.nix
-          hmModules.polybar
           hmModules.rofi
           hmModules.xdg
         ];
@@ -36,7 +35,6 @@
           background.enable = true;
           i3.enable = true;
           #   picom.enable = true;
-          polybar.enable = true;
           rofi.enable = true;
         };
 

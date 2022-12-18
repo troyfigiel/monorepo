@@ -21,7 +21,6 @@
 + It could be a good exercise to package IceCat for Nix. There is no binary for it and the [[https://git.savannah.gnu.org/cgit/gnuzilla.git/tree/data/README.IceCat][packaging instructions]] are clear. I do not mind building it from source.
 + I forgot to plug in my battery laptop in time and I ran out off power. It would be better to use the ~upower~ module to automatically power down my laptop in time.
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
-  - If I remove polybar for some reason my Bluetooth does not work anymore.
   - What is the right way to work with Emacs inside EXWM? Do you run Emacs inside Emacs? What if Emacs crashes, how do I restart my window-manager?
 + How well does Geeqie work as a way to find duplicate images?
 + For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
