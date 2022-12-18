@@ -13,7 +13,11 @@
 (use-package emacs
   :hook ((prog-mode . display-line-numbers-mode)
 	 (isearch-mode-end . tf-isearch-jump-to-match-start))
-  :bind* ("C-x C-b" . ibuffer)
+  :bind* (("C-x C-b" . ibuffer)
+	  ;; When I try to kill all text up to an uncommon character such as a quote, I have to use
+	  ;; the character before the quote which could appear several times. This makes it a bit
+	  ;; annoying to use `zap-to-char' as the default.
+	  ("M-z" . zap-up-to-char))
   :custom
   (custom-file null-device)
   (display-time-24hr-format t)
