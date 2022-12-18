@@ -41,6 +41,7 @@
         ./hosts/flake-module.nix
         ./infrastructure/flake-module.nix
         ./modules/flake-module.nix
+        ./templates/flake-module.nix
       ];
 
       perSystem = { system, pkgs, ... }: {
@@ -107,12 +108,14 @@
           '';
 
           # TODO: nix-linter still has problems with ./${hosts}. Skipping over
-          # hosts/flake-module.nix is a hack for now.
+          # hosts/flake-module.nix is a hack for now. TODO: nix-linter also gives me a false
+          # positive for the Jupyter template, so I will have to remove that file for now.
           nix-linter = pkgs.runCommand "checks-nix-linter" {
             buildInputs = [ pkgs.findutils pkgs.nix-linter ];
           } ''
             find ${./.} -type f -name '*.nix' \
                  -not -path ${./.}/hosts/flake-module.nix \
+                 -not -path ${./.}/templates/jupyter/flake.nix \
                  -print0 \
                  | xargs -0 nix-linter
             touch $out
