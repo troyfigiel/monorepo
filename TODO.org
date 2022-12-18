@@ -9,7 +9,6 @@
 + Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
 
 ** Development
-+ eglot works well, but I have not really gotten flymake to work well. I run into some errors such as undefined functions. I will need to fix this before I have a good development experience.
 + Getting into a development container can be slow, because I have to go to the image, set up the volume, start the container, use TRAMP to connect and run ~/bin/bash~ in a shell. This can easily be automated and it makes me wonder if someone already has. Embark also seems like a good choice here.
 + A Docker workflow also fits quite well with eshell. The commands are usually similar or the same, so I do not feel like I get the full benefit from docker.el.
 + How well would it work to create my own function that sets up a container from a Dockerfile and then opens dired in that container? It might require a bit of waiting for the container to spin up. Or did someone else already wrote something like this?
@@ -18,6 +17,7 @@
 + I should start moving over my data-science scratchpad to my reference projects.
 
 ** Desktop
++ What is the right way to handle reproducibility when it comes to Jupyter? I can run it as a service and add new kernels when I need to, but in principle I would need to spin up a Jupyter instance from the ground up. What about using tdda or dvc for reproducibility concerns of analyses?
 + It could be a good exercise to package IceCat for Nix. There is no binary for it and the [[https://git.savannah.gnu.org/cgit/gnuzilla.git/tree/data/README.IceCat][packaging instructions]] are clear. I do not mind building it from source.
 + I forgot to plug in my battery laptop in time and I ran out off power. It would be better to use the ~upower~ module to automatically power down my laptop in time.
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
