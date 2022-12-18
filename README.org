@@ -14,22 +14,10 @@ The monorepo structure of this repository is its defining characteristic. This r
 
 Because this repository is structured as a monorepo, it is very easy for me to clone everything or grep for keywords. I manually deploy (most of) my code with a single invocation of `nix run`.
 
-The source of this repository is https://gitlab.com/troy.figiel/monorepo.
-
-** Modules
-The modules that are intended for my own use are prefixed with _my_. These are modules that contain my config, so it is easy for me to reproduce this config across different machines.
-
 ** Apps
 The equivalent of what used to be my Makefile has now been moved to flake.nix. All of these scripts can be run with `nix run .#<app-name>` and have the advantage of being completely self-sufficient. You do not need gnumake as a prerequisite anymore.
 
 The default build of my entire network is simply `nix run` and it runs a formatter, checks, Terraform and all Nix builds.
-
-** Development
-Since I mostly work with Python in my day-to-day work, local development on Nix can cause some issues. This mainly happens when shared libraries that the package expects to find on the same, are in fact missing. To circumvent this, I currently do all my development in Docker containers.
-
-In principle, it is possible to do my Python development locally. In fact, this is the way development *should* be done, because reproducibility and containerization are distinct goals. However, currently I have not found that either poetry2nix or mach-nix gave me a completely smooth experience and the environment I get from Dockerfiles are usually reproducible enough.
-
-Python is unfortunately notoriously messy to package for. I am however optimistic about the development of the Nix ecosystem in this respect.
 
 ** Binary cache
 For complete reproducibility, I (am planning to) host my own binary cache using Minio.

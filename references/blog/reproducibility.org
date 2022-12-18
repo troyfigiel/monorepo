@@ -1,3 +1,9 @@
 #+title: Reproducibility in software
 
 For example, a Dockerfile does not make the building process reproducible. If you run ~apt-get install <library>~ inside your container, you will run into the exact same problems from the perspective of reproducibility due to the lack of a locking mechanism / guarantee of installing the exact same software upon every build.
+
+In principle, it is possible to do my Python development locally. In fact, this is the way development *should* be done, because reproducibility and containerization are distinct goals. Since I have been using Poetry in my day-to-day Python work, poetry2nix is a great fit for me.
+
+Unfortunately, Python is messy to package for because dependencies are sometimes implicitly assumed, not documented (such as when it comes to C libraries) or the build process cannot be automated in a simple way. This can cause breakage for poetry2nix when using not so well-known libraries.
+
+* TODO Mention jupyterWith
