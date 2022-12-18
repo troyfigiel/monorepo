@@ -336,12 +336,6 @@
   (transient-show-popup nil)
   (vc-follow-symlinks t))
 
-(use-package magit-todos
-  :ensure
-  :after hl-todo
-  :hook (global-hl-todo-mode . magit-todos-mode)
-  :custom (magit-todos-branch-list nil))
-
 (use-package marginalia
   :ensure
   :config (marginalia-mode 1))
