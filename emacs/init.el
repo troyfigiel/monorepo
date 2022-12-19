@@ -70,7 +70,7 @@
   :ensure
   :config
   (setq auto-save-file-name-transforms
-        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
+	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
 
 (use-package all-the-icons
   :ensure)
@@ -89,7 +89,7 @@
 (use-package avy
   :ensure
   :bind* (("C-#" . avy-goto-char-timer)
-          ("M-#" . avy-goto-line))
+	  ("M-#" . avy-goto-line))
   :custom (avy-timeout-seconds 0.25))
 
 (use-package cdlatex
@@ -105,27 +105,28 @@
 (use-package consult
   :ensure
   ;; TODO: Do I want to bind consult-kmacro?
-  :bind*
+  :bind
   (("C-x b" . consult-buffer)
+   ("C-x p b" . consult-project-buffer)
    ("M-y" . consult-yank-pop)
-   ;; TODO: I do not use this yet, but maybe in the future for
-   ;; debugging with tracebacks?
+   ("M-g f" . consult-flymake)
    ("M-g g" . consult-goto-line)
    ("M-g M-g" . consult-goto-line)
-   ("C-c C-l" . consult-line)
-   ("C-x p f" . consult-find)
-   ("C-x p g" . consult-ripgrep)
-   ("C-x p b" . consult-project-buffer)
-   ("C-c C-a" . consult-global-mark)
-   ;; TODO: How often do I use consult-isearch-history anyway? This
-   ;; overwrites the isearch-edit-string functionality.
+   ("M-g o" . consult-outline)
+   ("M-s e" . consult-isearch-history)
+   ("M-s d" . consult-find)
+   ("M-s r" . consult-ripgrep)
+   ("M-s l" . consult-line)
+   ("M-s m" . consult-line-multi)
    :map isearch-mode-map
    ("M-e" . consult-isearch-history)
-   ;; TODO: How often do I use consult-history in the minibuffer?
-   :map minibuffer-local-map
-   ("M-r" . consult-history)
-   ("M-s" . consult-history))
-  :custom (consult-async-min-input 2)
+   ("M-s e" . consult-isearch-history)
+   ("M-s l" . consult-line)
+   ("M-s m" . consult-line-multi))
+  :custom
+  (consult-async-min-input 2)
+  (xref-show-xrefs-function #'consult-xref)
+  (xref-show-definitions-function #'consult-xref)
   :config (setq completion-in-region-function 'consult-completion-in-region))
 
 (use-package consult-dir
@@ -149,13 +150,13 @@
 (use-package csv-mode
   :ensure
   :hook ((csv-mode . csv-align-mode)
-         (csv-mode . csv-guess-set-separator)))
+	 (csv-mode . csv-guess-set-separator)))
 
 (use-package denote
   :ensure
   :hook (dired-mode . denote-dired-mode)
   :bind (:map dired-mode-map
-              ("C-c C-n C-r" . denote-dired-rename-marked-files))
+	      ("C-c C-n C-r" . denote-dired-rename-marked-files))
   :custom
   (denote-link-backlinks-display-buffer-action
    '((display-buffer-reuse-window
@@ -168,8 +169,8 @@
     "Create new Denote note as an Org file using current Org subtree."
     (interactive)
     (let ((text (org-get-entry))
-          (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
-          (tags (org-get-tags)))
+	  (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
+	  (tags (org-get-tags)))
       (delete-region (org-entry-beginning-position) (org-entry-end-position))
       (denote heading tags 'org)
       (insert text))))
@@ -180,7 +181,7 @@
 (use-package diff-hl
   :ensure
   :hook ((prog-mode . diff-hl-mode)
-         (dired-mode . diff-hl-dired-mode))
+	 (dired-mode . diff-hl-dired-mode))
   :custom
   (diff-hl-margin-symbols-alist
    '((insert . " ")
@@ -192,31 +193,31 @@
 
 (use-package dired
   :hook ((dired-mode . dired-hide-details-mode)
-         (dired-mode . dired-omit-mode))
+	 (dired-mode . dired-omit-mode))
   :bind (:map dired-mode-map
-              ("M-+" . dired-create-empty-file)
-              ("C-c C-w" . wdired-change-to-wdired-mode))
+	      ("M-+" . dired-create-empty-file)
+	      ("C-c C-w" . wdired-change-to-wdired-mode))
   :custom
   (dired-hide-details-hide-symlink-targets nil)
   ;; This hides dotfiles by default.
   (dired-omit-files "^\\.")
   :config
   (setq dired-listing-switches
-        "-Ahl --group-directories-first --time-style=long-iso"))
+	"-Ahl --group-directories-first --time-style=long-iso"))
 
 (use-package dired-rsync
   :ensure
   :after dired
   :bind (:map dired-mode-map
-              ("s" . dired-rsync)))
+	      ("s" . dired-rsync)))
 
 (use-package dired-subtree
   :ensure
   :after dired
   ;; TODO: Should I enable some of these bindings in wdired-mode-map?
   :bind (:map dired-mode-map
-              ("<tab>" . dired-subtree-toggle)
-              ("* s" . dired-subtree-mark-subtree)
+	      ("<tab>" . dired-subtree-toggle)
+	      ("* s" . dired-subtree-mark-subtree)
 	      ("C-M-u" . dired-subtree-up)
 	      ("C-M-p" . dired-subtree-previous-sibling)
 	      ("C-M-n" . dired-subtree-next-sibling))
@@ -228,9 +229,9 @@
   :ensure
   :config (direnv-mode 1))
 
-(use-package docker
-  :ensure
-  :bind (("C-c C-d" . docker)))
+;; (use-package docker
+;;   :ensure
+;;   :bind (("C-c C-d" . docker)))
 
 (use-package docker-compose-mode
   :ensure)
@@ -253,7 +254,7 @@
   :hook (embark-collect-mode . hl-line-mode)
   :bind* (("C-." . embark-act)
 	  ("M-." . embark-dwim)
-          ("C-h b" . embark-bindings))
+	  ("C-h b" . embark-bindings))
   :custom
   (embark-confirm-act-all nil)
   (embark-help-key (kbd "?"))
@@ -278,7 +279,7 @@
   ;; :hook or set the binding in a different way.
   ;; https://github.com/noctuid/general.el/issues/80
 
-  ;; :bind* (("C-c C-e" . eshell))
+  :bind ("<f9>" . eshell)
   ;; :map eshell-mode-map
   ;; ("C-r" . consult-history))
   :custom
@@ -317,12 +318,12 @@
 (use-package helpful
   :ensure
   :bind (("C-h C-h" . helpful-at-point)
-         ("C-h c" . helpful-command)
-         ("C-h f" . helpful-function)
-         ("C-h k" . helpful-key)
-         ("C-h m" . helpful-mode)
-         ("C-h o" . helpful-symbol)
-         ("C-h v" . helpful-variable)))
+	 ("C-h c" . helpful-command)
+	 ("C-h f" . helpful-function)
+	 ("C-h k" . helpful-key)
+	 ("C-h m" . helpful-mode)
+	 ("C-h o" . helpful-symbol)
+	 ("C-h v" . helpful-variable)))
 
 (use-package hl-todo
   :ensure
@@ -449,7 +450,7 @@
 
 (use-package vterm
   :ensure
-  :bind* ("C-c C-t" . vterm))
+  :bind ("<f8>" . vterm))
 
 (use-package wgrep
   :ensure)
@@ -480,4 +481,3 @@
 (use-package which-key
   :ensure
   :config (which-key-mode 1))
-
