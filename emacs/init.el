@@ -19,6 +19,7 @@
 	  ;; annoying to use `zap-to-char' as the default.
 	  ("M-z" . zap-up-to-char))
   :custom
+  (calendar-week-start-day 1)
   (custom-file null-device)
   (display-time-24hr-format t)
   (display-time-day-and-date t)
@@ -89,7 +90,8 @@
 (use-package avy
   :ensure
   :bind* (("C-#" . avy-goto-char-timer)
-	  ("M-#" . avy-goto-line))
+	  ("M-#" . avy-goto-line)
+	  ("C-M-#" . avy-pop-mark))
   :custom (avy-timeout-seconds 0.25))
 
 (use-package cdlatex
@@ -358,7 +360,9 @@
   (orderless-matching-styles '(orderless-prefixes)))
 
 (use-package org
+  :after xdg
   :hook (org-mode . visual-line-mode)
+  :bind ("C-c a" . org-agenda)
   :config
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
@@ -373,7 +377,10 @@
      (shell . t)
      (R . t)
      (sql . t)))
-  (push '("conf-unix" . conf-unix) org-src-lang-modes))
+  (push '("conf-unix" . conf-unix) org-src-lang-modes)
+  :custom
+  (org-directory (file-name-concat (xdg-user-dir "DOCUMENTS") "org"))
+  (org-agenda-files (list (file-name-concat org-directory "agenda.org"))))
 
 (use-package org-transclusion :ensure)
 
