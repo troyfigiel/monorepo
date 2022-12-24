@@ -92,14 +92,9 @@ in {
           ".config/rclone"
           ".config/nix"
           ".cache/nix-index"
-          ".steam"
           ".local/share/DBeaverData"
           ".local/share/direnv"
-          ".local/share/godot"
-          ".local/share/gvfs-metadata"
           ".local/share/nix"
-          ".local/share/Steam"
-          ".local/share/vulkan"
         ];
         files = [ ".ssh/known_hosts" ];
         allowOther = true;

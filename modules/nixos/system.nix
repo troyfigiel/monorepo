@@ -3,13 +3,7 @@
 with lib;
 let cfg = config.my.system;
 in {
-  options.my.system = {
-    enable = mkEnableOption "system";
-    games = mkOption {
-      default = false;
-      type = types.bool;
-    };
-  };
+  options.my.system = { enable = mkEnableOption "system"; };
 
   config = mkIf cfg.enable (mkMerge [
     {
@@ -32,8 +26,6 @@ in {
         bpytop
       ];
     }
-
-    (mkIf cfg.games { programs.steam.enable = true; })
 
     (optionalAttrs impermanence {
       environment.persistence."/nix/persist" = {

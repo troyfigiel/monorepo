@@ -48,12 +48,7 @@
         legacyPackages = import inputs.nixpkgs {
           inherit system;
           config.allowUnfreePredicate = pkg:
-            builtins.elem (inputs.nixpkgs.lib.getName pkg) [
-              "skypeforlinux"
-              "steam"
-              "steam-original"
-              "steam-run"
-            ];
+            builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "skypeforlinux" ];
 
           # Software that is not built for aarch64 does seem to work fine.
           # TODO: Does it make sense setting this for x86_64 systems as well?

@@ -39,10 +39,7 @@
     nix.enable = true;
     restic.enable = true;
     sound.enable = true;
-    system = {
-      enable = true;
-      games = true;
-    };
+    system.enable = true;
 
     xorg = {
       enable = true;
