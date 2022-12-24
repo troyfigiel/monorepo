@@ -23,7 +23,6 @@ in {
         inxi
         vim
         brightnessctl
-        bpytop
       ];
     }
 

@@ -16,7 +16,7 @@
           hmModules.git
           hmModules.home
           hmModules.i3
-          #   ../../modules/home-manager/picom.nix
+          # hmModules.picom
           hmModules.rofi
           hmModules.xdg
         ];

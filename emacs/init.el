@@ -25,15 +25,11 @@
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
   (fill-column 99)
-  (initial-buffer-choice "~")
+  (initial-buffer-choice 'eshell)
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
   :config
-  (add-to-list 'default-frame-alist '(alpha 90 . 90))
-  ;; TODO: There should be a new alpha-background parameter in Emacs
-  ;; 29. How do I set it? (add-to-list 'default-frame-alist
-  ;; '(alpha-background 90))
   (column-number-mode 1)
   (display-battery-mode 1)
   (display-time-mode 1)
@@ -226,6 +222,9 @@
   :custom
   (dired-subtree-use-backgrounds nil)
   (dired-subtree-line-prefix "   "))
+
+(use-package dired-du
+  :ensure)
 
 (use-package direnv
   :ensure

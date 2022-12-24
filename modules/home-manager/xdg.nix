@@ -4,16 +4,7 @@ with lib;
 let cfg = config.my;
 in {
   options.my.directories = mkOption {
-    type = types.listOf (types.enum [
-      "audio"
-      "documents"
-      "downloads"
-      "misc"
-      "pictures"
-      "projects"
-      "share"
-      "videos"
-    ]);
+    type = types.listOf (types.enum [ "documents" "downloads" "projects" ]);
     default = [ ];
     description = "Directories to enable.";
   };
@@ -34,29 +25,11 @@ in {
             desktop = homeDir;
             documents = setXDGUserDir "documents";
             download = setXDGUserDir "downloads";
-            music = setXDGUserDir "audio";
-            pictures = setXDGUserDir "pictures";
+            music = homeDir;
+            pictures = homeDir;
             templates = homeDir;
-            videos = setXDGUserDir "videos";
+            videos = homeDir;
           }
-
-          (mkIf (elem "shared" cfg.directories) {
-            publicShare = {
-              device = "//nas/shared";
-              fsType = "cifs";
-              options = [
-                "credentials=/nix/persist/etc/nixos/smb-secrets"
-                "x-systemd.automount"
-                "noauto"
-                "uid=1000"
-                "gid=100"
-              ];
-            };
-          })
-
-          (mkIf (elem "misc" cfg.directories) {
-            extraConfig = { XDG_MISC_DIR = "${homeDir}/misc"; };
-          })
 
           (mkIf (elem "projects" cfg.directories) {
             extraConfig = { XDG_PROJECTS_DIR = "${homeDir}/projects"; };

@@ -1,7 +1,5 @@
 { inputs, self, ... }:
 
-# TODO: It would be simpler to just import all my hmModules and nixosModules here.
-# All modules should be hidden behind an enable option anyway.
 let
   inherit (inputs.nixpkgs.lib)
     filterAttrs mapAttrsToList nameValuePair nixosSystem;

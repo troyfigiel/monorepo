@@ -34,22 +34,15 @@ in {
     (mkIf cfg.onLaptop {
       home.packages = with pkgs; [
         nmap
-        restic
         sops
-        rclone
         fdupes
         hugo
-        # TODO: For now I will need to symlink a config in place
-        # However, it would make more sense to create my own module for it.
-        minio-client
         # TODO: Rofi-pass could be really nice, but needs some set up.
         # For example, it does not take my German keyboard into account.
         rofi-pass
         papirus-icon-theme
         font-awesome
-        tldr
         file
-        fd
         libreoffice
         lzip
         zip
@@ -58,14 +51,8 @@ in {
         nitrokey-app
         # TODO: This should be moved somewhere else. Parquet-tools can very easily read, show and transform parquet files.
         parquet-tools
-        dbeaver
-        flameshot
-        feh
-        neofetch
-        wireshark
       ];
 
-      programs.jq.enable = true;
       programs.feh.enable = true;
       services.flameshot.enable = true;
 
@@ -85,14 +72,8 @@ in {
 
       home.persistence."/nix/persist/${config.home.homeDirectory}" = {
         directories = [
-          # TODO: Which directories do I even need here?
-          ".mc"
-          # Signal stores its data in the .config directory.
-          # See: https://github.com/signalapp/Signal-Desktop/issues/4975
-          ".config/rclone"
           ".config/nix"
           ".cache/nix-index"
-          ".local/share/DBeaverData"
           ".local/share/direnv"
           ".local/share/nix"
         ];

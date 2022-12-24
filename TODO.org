@@ -1,11 +1,7 @@
 * TODO.org
 ** Code cleaning
-+ I need to structure my Emacs configuration. A reasonable solution is by doing it in such a way that I can smartly debug any issues. Unfortunately, bughunter does not work for me, because I am on Nix, so I will have to do smart bisections by hand.
-+ There are various places where my monorepo file location is hard-coded. Instead, I might want to always assume it is located at ~/monorepo and make a module my/monorepo.nix for it.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
-+ Host names should be completely specified by the directory containing the machine configuration.
 + Modularize my Terraform code.
-+ I should keep the machine names short, i.e. to a single word: cloud-server -> cloud, virtual-devbox -> devbox.
 + Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
 
 ** Development
@@ -23,7 +19,6 @@
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
   - What is the right way to work with Emacs inside EXWM? Do you run Emacs inside Emacs? What if Emacs crashes, how do I restart my window-manager?
 + How well does Geeqie work as a way to find duplicate images?
-+ B00merang-Project's Windows themes to make it easier for any guests?
 + Use headphones to start and pause videos / music
 + Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
 + Set up a nice notification theme for increasing / decreasing brightness and volume

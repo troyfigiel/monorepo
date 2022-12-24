@@ -15,9 +15,6 @@ in {
         init.defaultBranch = "main";
         rerere.enabled = true;
         commit.verbose = true;
-        color.ui = "auto";
-        core.editor = "emacs";
-        merge.conflictstyle = "diff3";
         pull.rebase = true;
         push.autoSetupRemote = true;
       };

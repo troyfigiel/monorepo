@@ -26,11 +26,7 @@
         ];
 
         my = {
-          background = {
-            enable = true;
-            # TODO: I need to think about how I handle my wallpaper directory. Currently it is not reproducible.
-            wallpaperDirectory = "/nix/persist/home/troy/pictures/wallpapers";
-          };
+          background.enable = true;
           dunst.enable = true;
           firefox = {
             enable = true;
@@ -46,16 +42,7 @@
           messenger.enable = true;
           pass.enable = true;
           picom.enable = true;
-          syncthing.enable = true;
-          directories = [
-            "audio"
-            "documents"
-            "downloads"
-            "misc"
-            "pictures"
-            "projects"
-            "videos"
-          ];
+          directories = [ "documents" "downloads" "projects" ];
           emacs.enable = true;
           rofi.enable = true;
         };
