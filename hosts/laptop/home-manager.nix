@@ -22,7 +22,6 @@
           hmModules.pass
           hmModules.picom
           hmModules.rofi
-          hmModules.syncthing
           hmModules.xdg
         ];
 

@@ -17,6 +17,4 @@
 
   gpg = import ./security/gpg.nix;
   pass = import ./security/pass.nix;
-
-  syncthing = import ./services/syncthing.nix;
 }

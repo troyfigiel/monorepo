@@ -23,7 +23,6 @@
 + I want to switch my window-manager to EXWM, however there seem to be some problems.
   - What is the right way to work with Emacs inside EXWM? Do you run Emacs inside Emacs? What if Emacs crashes, how do I restart my window-manager?
 + How well does Geeqie work as a way to find duplicate images?
-+ For my use case, maybe Syncthing is not the best solution. I sometimes end up with sync-conflicts where I do not think there should be. This has me worried that Syncthing might accidentally delete files I do not want to have deleted. Maybe Unison is a better tool for me?
 + B00merang-Project's Windows themes to make it easier for any guests?
 + Use headphones to start and pause videos / music
 + Receive a notification when the battery is low (at 20% and at 10%). That should be easy with Dunst.
