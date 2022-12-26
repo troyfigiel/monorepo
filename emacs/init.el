@@ -145,6 +145,8 @@
 (use-package citar
   :ensure)
 
+;; TODO: How do I search for tags specifically? I am currently using the regexp matching that
+;; orderless provides. It works though.
 (use-package consult-notes
   :ensure
   :bind ("M-g D" . consult-notes)
@@ -352,14 +354,10 @@
 (use-package orderless
   :ensure
   :custom
-  (completion-category-defaults nil)
-  (completion-category-overrides '((file (styles . (partial-completion)))))
   (completion-styles '(orderless))
-  ;; TODO: The completion style is a bit harsh. If I type "con grep"
-  ;; I also want to match consult-ripgrep. But "con con" should not
-  ;; match anything consult-related. The second part should match a
-  ;; different word. How do I achieve this?
-  (orderless-matching-styles '(orderless-prefixes)))
+  (completion-category-overrides nil)
+  :config
+  (setq completion-category-defaults nil))
 
 (use-package org
   :after xdg
