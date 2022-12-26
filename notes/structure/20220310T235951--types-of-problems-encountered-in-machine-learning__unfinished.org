@@ -1,0 +1,13 @@
+#+title:      Types of problems encountered in machine learning
+#+date:       [2022-03-10 Thu 23:59]
+#+filetags:   :unfinished:
+#+identifier: 20220310T235951
+
+There are various machine learning problems:
+- [[denote:20220310T133922][Regression]]
+- [[denote:20220310T192635][Conditional probability estimation]]
+- [[denote:20220310T194320][Classification]]
+- [[denote:20220310T142314][Clustering]]
+- [[denote:20220310T142350][Ranking]]
+- [[denote:20220310T142518][Density estimation]]
+- [[denote:20220310T193019][Association rule learning]]

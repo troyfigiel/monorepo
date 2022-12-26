@@ -1,0 +1,5 @@
+:ctime:    20220215212954
+:END:
+#+title: ?The beta distribution belongs to the exponential family
+#+filetags: :appendix:stub:
+

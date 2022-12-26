@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b7dbdf68-4ed3-4f2d-a792-7a825ca2794a
-:mtime:    20220307165756
-:ctime:    20220304142721
-:END:
-#+title: ?Variance of the Poisson distribution
-#+filetags: :appendix:stub:
-
-

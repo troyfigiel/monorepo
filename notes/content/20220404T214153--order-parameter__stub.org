@@ -1,0 +1,6 @@
+:ctime:    20220404214153
+:END:
+#+title: Order parameter
+#+filetags: :stub:
+
+For example, in the [[denote:20220329T210550][Ising model]] the magnetization can be used as an order parameter.

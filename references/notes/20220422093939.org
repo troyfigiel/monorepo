@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       905c83da-f4be-419b-85a8-275666faaa8f
-:mtime:    20220422093944
-:ctime:    20220422093939
-:END:
-#+title: Jsonnet
-#+filetags: :stub:

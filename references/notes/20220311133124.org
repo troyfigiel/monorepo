@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       bb28b6ab-6391-4753-8452-ccb510ae1f3a
-:mtime:    20220311133125
-:ctime:    20220311133124
-:END:
-#+title: Recall
-#+filetags: :stub:
-
-

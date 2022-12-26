@@ -1,0 +1,6 @@
+:ctime:    20220414235932
+:END:
+#+title: Routhian
+#+filetags: :stub:
+
+This function is used in [[denote:20220414T235953][Routhian mechanics]].

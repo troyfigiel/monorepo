@@ -1,0 +1,5 @@
+:ctime:    20220415005843
+:END:
+#+title: Schrödinger equation
+#+filetags: :stub:
+

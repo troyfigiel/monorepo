@@ -1,0 +1,6 @@
+:ctime:    20220320153934
+:END:
+#+title: Euler's reflection formula
+#+filetags: :stub:
+
+

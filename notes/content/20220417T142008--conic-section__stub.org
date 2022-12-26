@@ -1,0 +1,11 @@
+:mtime:    20220417142250
+:ctime:    20220417142008
+:END:
+#+title: Conic section
+#+filetags: :stub:
+
+- [[denote:20220417T142036][Hyperbola]]
+- [[denote:20220417T142044][Parabola]]
+- [[denote:20220417T142053][Ellipse]]
+
+- [[denote:20220417T142234][Conic sections are equidistant sets]]

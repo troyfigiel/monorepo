@@ -1,0 +1,6 @@
+:ctime:    20220329233017
+:END:
+#+title: Semi-group
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220310142518
+:END:
+#+title: Density estimation
+#+filetags: :stub:
+
+For example, anomaly detection. This is an example of [[denote:20220310T125611][Unsupervised learning]].

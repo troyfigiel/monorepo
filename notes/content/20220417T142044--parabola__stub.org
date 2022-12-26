@@ -1,0 +1,5 @@
+:ctime:    20220417142044
+:END:
+#+title: Parabola
+#+filetags: :stub:
+

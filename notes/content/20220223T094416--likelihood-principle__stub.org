@@ -1,0 +1,7 @@
+:ctime:    20220223094416
+:END:
+#+title: likelihood principle
+#+filetags: :stub:
+
+The likelihood principle is the proposition all the evidence relevant to a model's parameters,
+contained in a sample, is contained in the likelihood function.

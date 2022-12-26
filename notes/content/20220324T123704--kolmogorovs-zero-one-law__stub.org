@@ -1,0 +1,6 @@
+:ctime:    20220324123704
+:END:
+#+title: Kolmogorov's zero-one law
+#+filetags: :stub:
+
+

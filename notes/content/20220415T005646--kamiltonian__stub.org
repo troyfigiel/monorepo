@@ -1,0 +1,5 @@
+:ctime:    20220415005646
+:END:
+#+title: Kamiltonian
+#+filetags: :stub:
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b4891449-950f-4096-94df-068523f0f90a
-:mtime:    20220322105833
-:ctime:    20220322105832
-:END:
-#+title: Renormalization group equation
-#+filetags: :stub:
-
-

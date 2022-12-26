@@ -1,0 +1,6 @@
+:ctime:    20220302210028
+:END:
+#+title: Adding more regressors can never decrease R^2
+#+filetags: :stub:
+
+

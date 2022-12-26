@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       33b4ed57-781f-4d35-9f29-99023794cded
-:mtime:    20220310201735
-:ctime:    20220211090044
-:END:
-#+title: 0-1 loss function
-
-It is computationally difficult to minimize the 0-1 loss function directly.

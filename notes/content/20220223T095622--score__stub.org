@@ -1,0 +1,7 @@
+:ctime:    20220223095622
+:END:
+#+title: Score
+#+filetags: :stub:
+
+Score is useful due to the [[denote:20220223T101007][Scoring algorithm]], allowing us to solve maximum likelihood equations
+numerically (see: [[denote:20220211T094312][Maximum likelihood estimate]]).

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f4ba54fa-652e-4191-8973-1a364e638fbe
-:mtime:    20220225223638
-:ctime:    20220221233852
-:END:
-#+title: Jupyter Notebook
-#+filetags: :stub:
-
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       cf1f3faf-071f-4675-8c50-8320dbfeeaa1
-:mtime:    20220411180451
-:ctime:    20220411180321
-:END:
-#+title: Exogenous variable
-#+filetags: :stub:
-
-Opposite of [[id:c30bfac6-38c3-4741-bd7f-bd1cf173e336][Endogenous variable]].

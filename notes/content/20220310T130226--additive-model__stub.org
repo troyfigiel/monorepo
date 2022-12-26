@@ -1,0 +1,6 @@
+:ctime:    20220310130226
+:END:
+#+title: Additive model
+#+filetags: :stub:
+
+Additives models are interpretable to humans. See [[denote:20220303T134927][Interpretable machine learning]].

@@ -1,0 +1,22 @@
+:ctime:    20220322094641
+:END:
+#+title: Uniqueness of asymptotic series
+#+filetags: :stub:
+
+One function can be expanded in terms of many different asymptotic series. However, once we fix an
+asymptotic series, the coefficients are unique.
+
+This follows from a simple calculation and the [[denote:20220319T102229][?Uniqueness of limits]]:
+
+\[
+\lim_{x \rightarrow x_0} \frac{f(x) - \sum\limits_{j=1}^n a_j \phi_j(x)}{\phi_{n+1}(x)} = a_{n+1}
+\]
+
+A "natural choice" of choice of asymptotic series is in powers (like a [[denote:20220319T102559][Taylor series]]). When we are
+using Taylor series to approximate things, we are using their asymptotic character more than their
+convergent character.
+
+Indeed, [[denote:20220319T104305][Every convergent Taylor series is an asymptotic series]].
+
+[[denote:20220322T091620][Transcendentally small terms are invisible to asymptotic series]]
+[[denote:20220322T091707][The asymptotic expansion of a function is determined by the choice of an asymptotic sequence]]

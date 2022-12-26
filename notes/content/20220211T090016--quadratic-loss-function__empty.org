@@ -1,0 +1,5 @@
+#+title:      Quadratic loss function
+#+date:       [2022-02-11 Fri 09:00]
+#+filetags:   :empty:
+#+identifier: 20220211T090016
+

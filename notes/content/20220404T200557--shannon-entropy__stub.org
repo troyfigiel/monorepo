@@ -1,0 +1,12 @@
+:ctime:    20220404200557
+:END:
+#+title: Shannon entropy
+#+filetags: :stub:
+
+[[denote:20220406T211120][Shannon index]]
+
+Related to [[denote:20220328T201817][Log-odds]] by
+
+\[
+\text{log-odds}(x) = I(\neg x) - I(x)
+\]

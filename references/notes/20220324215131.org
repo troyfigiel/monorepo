@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a57b0cf2-f86b-4b56-b333-9be91a77ae3c
-:mtime:    20220324215133
-:ctime:    20220324215131
-:END:
-#+title: Hydrodynamics
-#+filetags: :stub:
-
-

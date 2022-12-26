@@ -1,0 +1,6 @@
+:ctime:    20220302235456
+:END:
+#+title: Cox proportional hazards model
+#+filetags: :stub:
+
+

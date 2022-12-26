@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f1180a3e-77b0-4b5e-9a1b-68e117d8e2fa
-:mtime:    20220315123403
-:ctime:    20220315123402
-:END:
-#+title: Dotfile
-#+filetags: :stub:
-
-

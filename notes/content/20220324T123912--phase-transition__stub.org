@@ -1,0 +1,19 @@
+:ctime:    20220324123912
+:END:
+#+title: Phase transition
+#+filetags: :stub:
+
+A phase transition is a point in parameter space where the thermodynamic potential becomes
+non-analytical.
+
+This non-analyticity can only happen in the [[denote:20220326T114020][Thermodynamic limit]], because in a finite system the
+partition function is a finite sum of analytical functions of its parameters, hence also analytical.
+
+We normally differentiate phase transitions that are discontinuous ([[denote:20220404T213838][First-order phase transition]])
+from phase transitions that are continuous ([[denote:20220404T213845][Second-order phase transition]]).
+
+Normally, an [[denote:20220404T214153][Order parameter]] is used to define the different phases.
+
+At a phase transition, the system is scale-invariant. Completely different systems with many
+different degrees of freedom and complex interactions show quantitatively identical behaviour. This
+is the idea of [[denote:20220404T214710][Universality]].

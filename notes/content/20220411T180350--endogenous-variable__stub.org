@@ -1,0 +1,6 @@
+:ctime:    20220411180350
+:END:
+#+title: Endogenous variable
+#+filetags: :stub:
+
+Opposite of [[denote:20220411T180321][Exogenous variable]].

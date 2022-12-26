@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       27ba21b2-c4b7-4d6b-b69a-806ac993b451
-:mtime:    20220301192942
-:ctime:    20220223233802
-:END:
-#+title: A declarative system is bit-for-bit reproducible
-#+filetags: :stub:
-
-In practice this is not so easy though, because [[id:18daa4da-583a-4593-b001-8b227d489a8e][Compilation is not always a deterministic process]].

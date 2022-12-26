@@ -1,0 +1,6 @@
+:ctime:    20220225083338
+:END:
+#+title: Dependent variable
+#+filetags: :stub:
+
+

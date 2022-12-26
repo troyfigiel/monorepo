@@ -1,0 +1,6 @@
+:ctime:    20220403174009
+:END:
+#+title: Boltzmann factor
+#+filetags: :stub:
+
+

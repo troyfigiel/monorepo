@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       05fa18e7-6511-49a2-8f81-c447a95b6f78
-:mtime:    20220327162935
-:ctime:    20220327135701
-:END:
-#+title: Symplectic geometry
-#+filetags: :stub:

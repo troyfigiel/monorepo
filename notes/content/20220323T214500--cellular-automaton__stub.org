@@ -1,0 +1,6 @@
+:ctime:    20220323214500
+:END:
+#+title: Cellular automaton
+#+filetags: :stub:
+
+

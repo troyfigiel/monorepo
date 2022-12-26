@@ -1,0 +1,6 @@
+:ctime:    20220302210143
+:END:
+#+title: Adjusted R^2
+#+filetags: :stub:
+
+

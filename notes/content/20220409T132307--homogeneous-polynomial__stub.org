@@ -1,0 +1,6 @@
+:ctime:    20220409132307
+:END:
+#+title: Homogeneous polynomial
+#+filetags: :stub:
+
+

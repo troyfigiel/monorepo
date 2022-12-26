@@ -1,0 +1,6 @@
+:ctime:    20220320154600
+:END:
+#+title: Logit function
+#+filetags: :stub:
+
+

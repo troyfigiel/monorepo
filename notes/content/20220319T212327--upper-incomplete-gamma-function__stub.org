@@ -1,0 +1,6 @@
+:ctime:    20220319212327
+:END:
+#+title: Upper incomplete gamma function
+#+filetags: :stub:
+
+

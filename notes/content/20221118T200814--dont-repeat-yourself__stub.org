@@ -1,0 +1,3 @@
+:END:
+#+title: Don't repeat yourself
+#+filetags: :stub:

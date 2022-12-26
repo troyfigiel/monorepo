@@ -1,0 +1,10 @@
+:ctime:    20220303201035
+:END:
+#+title: Least squares regression
+#+filetags: :stub:
+
+There is both [[denote:20220216T090727][Linear least squares]] regression as well as [[denote:20220303T195546][Non-linear least squares]] regression.
+
+For linear least squares, we assume the [[denote:20220225T083338][Dependent variable]] linearly depends on the parameters of
+the model. [[denote:20220303T195827][Linear regression does not mean the dependent variable depends linearly on the
+independent variable]].

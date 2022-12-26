@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       cdd6f3d1-16fd-4cd9-935e-0d4d5d98f5b2
-:mtime:    20220401204827
-:ctime:    20220401204827
-:END:
-#+title: Envelope theorem
-#+filetags: :stub:
-
-

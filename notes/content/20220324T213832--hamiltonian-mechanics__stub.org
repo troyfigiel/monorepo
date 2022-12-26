@@ -1,0 +1,6 @@
+:ctime:    20220324213832
+:END:
+#+title: Hamiltonian mechanics
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e00e1ae4-d048-468f-9b2f-e88b6c9caa31
-:mtime:    20220328222016
-:ctime:    20220323230017
-:END:
-#+title: Periodic Markov chain
-#+filetags: :stub:
-
-

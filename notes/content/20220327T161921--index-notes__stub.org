@@ -1,0 +1,14 @@
+:ctime:    20220327161921
+:END:
+#+title: Index notes
+#+filetags: :stub:
+
+The purpose of index notes is to quickly move to a note as well as have a single page view of all
+the important ideas in a specific context.
+
+- [[denote:20220323T181020][Index notes are more flexible than tags]]
+- Index notes should go down two levels of abstraction. One level is too shallow, but three or more
+  gives too much information in a single index note.
+- Indices are used as a "save point" for our thoughts. We often continue a train of thought from a
+  while back from a specific important point / principle / idea / major concept we remember.
+  Indices should capture this so we can quickly get to where we need to be.

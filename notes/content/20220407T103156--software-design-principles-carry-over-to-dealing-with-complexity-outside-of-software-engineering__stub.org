@@ -1,0 +1,6 @@
+:ctime:    20220407103156
+:END:
+#+title: Software design principles carry over to dealing with complexity outside of software engineering
+#+filetags: :stub:
+
+

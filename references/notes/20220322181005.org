@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c1111378-c07f-4c62-a54e-8834b34e5d23
-:mtime:    20220322181006
-:ctime:    20220322181005
-:END:
-#+title: Soft clustering
-#+filetags: :stub:
-
-

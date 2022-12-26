@@ -1,0 +1,43 @@
+#+title:      Sum of consecutive numbers
+#+date:       [2022-02-23 Wed 19:06]
+#+filetags:   :unfinished:
+#+identifier: 20220223T190631
+
+* Intuition
+If we have an even number \( n \), we can pair the smallest integer in the sum with the largest integer, the second smallest with the second largest integer, etc.
+
+All of these pairs add up to \( n + 1 \) and we have \( n / 2 \) pairs, so the sum is \( \frac{1}{2}n(n+1) \).
+
+If \( n \) is odd, we can play the same game, but are left with the middle element \( \frac{n+1}{2}
+\). In total we have \( \frac{n-1}{2} \) pairs, each adding up to \( n + 1 \). Hence, we find
+
+\[
+\frac{n-1}{2}(n+1) + \frac{n+1}{2} = \frac{1}{2}n(n+1)
+\]
+
+once again.
+
+* As a corollary
+This formula is a special case of [[denote:20220223T205238][Faulhaber's formula]].
+
+* Formal statement
+For any natural number \( n \), the following equality holds:
+
+\[
+1 + ... + n = \frac{1}{2}n(n+1)
+\]
+
+* Proof
+We can use induction for this result. It clearly holds for \( n = 1 \).
+
+Now assume it holds for a natural number \( n \), then
+
+\begin{equation*}
+\begin{align}
+1 + ... + n + n+1 & = \frac{1}{2}n(n+1) + (n+1) \\
+& = \frac{1}{2}(n+1)((n+1) + 1)
+\end{align}
+\end{equation*}
+
+Hence, it must hold for all natural numbers. \( \blacksquare \)
+

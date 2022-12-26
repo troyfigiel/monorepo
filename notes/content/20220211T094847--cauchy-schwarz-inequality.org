@@ -1,0 +1,11 @@
+:ctime:    20220211094847
+:END:
+#+title: Cauchy-Schwarz inequality
+
+For two vectors \( \bold{u} \) and \( \bold{v} \) in an inner product space, the Cauchy-Schwarz inequality states
+
+\[ \left| \langle \bold{u}, \bold{v} \rangle \right|^2 \leq \langle \bold{u}, \bold{u} \rangle \cdot \langle \bold{v}, \bold{v} \rangle \]
+
+This inequality has a myriad of consequences such as
+- [[denote:20220211T095924][triangle inequality follows from Cauchy-Schwary inequality]]
+- [[denote:20220211T100400][correlation coefficient is bounded by 1]]

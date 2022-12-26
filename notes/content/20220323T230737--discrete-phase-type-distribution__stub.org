@@ -1,0 +1,52 @@
+:ctime:    20220323230737
+:END:
+#+title: Discrete phase-type distribution
+#+filetags: :stub:
+
+The discrete phase-type distribution models the time until absorption for a [[denote:20220323T230039][Terminating Markov
+chain]].
+
+If we describe this Markov chain by the [[denote:20220323T225426][Stochastic matrix]]
+
+\begin{equation*}
+P =
+\begin{pmatrix}
+T & \mathbf{T}^0 \\
+\mathbf{0}^{\intercal} & 1
+\end{pmatrix}
+\end{equation*}
+
+and the initial probability distribution over the states (also called phases) by a vector \( \boldsymbol{\tau} \) (assuming no
+probability is at the absorbing state), the discrete phase-type distribution is denoted by \(
+\mathrm{DHP}(\boldsymbol{\tau}, T) \) and has cumulative distribution function
+
+\[
+F(k) = 1 - \boldsymbol{\tau} T^k \mathbf{1}
+\]
+
+The density function is given by
+
+\[
+f(k) = \boldsymbol{\tau} T^{k-1} \mathbf{T}^0
+\]
+
+and can be shown to sum to 1 through the relation \( \mathbf{T}^0 + T \mathbf{1} = \mathbf{1} \):
+
+\[
+\sum\limits_{k=1}^{\infty} \boldsymbol{\tau} T^{k-1} \mathrm{T}^0 + \sum\limits_{k=1}^{\infty}
+\boldsymbol{\tau} T^k \mathbf{1} = \sum\limits_{k=1}^{\infty} \boldsymbol{\tau} T^{k-1} \mathbf{1}
+\]
+
+But now
+
+\[
+\sum\limits_{k=1}^{\infty} \boldsymbol{\tau} T^{k-1} \mathbf{1} = \boldsymbol{\tau} \mathbf{1} +
+\sum\limits_{k=1}^{\infty} \boldsymbol{\tau} T^k \mathbf{1}
+\]
+
+Finally noting that \( \boldsymbol{\tau} \) is a probability distribution over all states, we must
+have \( \boldsymbol{\tau} \mathbf{1} = 1 \), proving the result.
+
+Note that the discrete-phase type distribution generalizes many discrete distributions:
+- [[denote:20220323T232600][The geometric distribution is a discrete phase-type distribution with a single state]]
+- [[denote:20220323T232625][The negative binomial distribution is a discrete phase-type distribution with multiple identical states]]

@@ -1,0 +1,4 @@
+:ctime:    20220215232406
+:END:
+#+title: type I error
+

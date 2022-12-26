@@ -1,0 +1,6 @@
+:ctime:    20220403191652
+:END:
+#+title: Microcanonical partition function
+#+filetags: :stub:
+
+

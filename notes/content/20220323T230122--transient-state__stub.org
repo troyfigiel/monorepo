@@ -1,0 +1,6 @@
+:ctime:    20220323230122
+:END:
+#+title: Transient state
+#+filetags: :stub:
+
+

@@ -1,0 +1,10 @@
+:ctime:    20220324214223
+:END:
+#+title: Ideal gas law
+#+filetags: :stub:
+
+\[
+pV = nRT
+\]
+
+relating the [[denote:20220324T214056][Pressure]], [[denote:20220324T214147][Volume]], number of moles of gas, the [[denote:20220324T214724][Gas constant]] and the [[denote:20220324T214107][Temperature]].

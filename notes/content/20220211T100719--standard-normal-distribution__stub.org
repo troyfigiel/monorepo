@@ -1,0 +1,5 @@
+:ctime:    20220211100719
+:END:
+#+title: standard normal distribution
+#+filetags: :stub:
+

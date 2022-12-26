@@ -1,0 +1,4 @@
+:ctime:    20220215213748
+:END:
+#+title: chi-squared distribution is a gamma distribution
+

@@ -1,0 +1,10 @@
+:ctime:    20220401230955
+:END:
+#+title: Interpretation of Lagrange multipliers
+#+filetags: :stub:
+
+In [[denote:20220210T210151][Statistical mechanics]], the inverse temperature, denoted by \( \beta \), is the [[denote:20220326T235451][Lagrange
+multiplier]] appearing if we maximize the entropy (according to the [[denote:20220215T230625][Principle of maximum entropy]])
+with the constraint that the total energy is fixed.
+
+Why exactly?

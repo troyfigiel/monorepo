@@ -1,0 +1,8 @@
+:ctime:    20220306182828
+:END:
+#+title: For raw data only neural networks really work well
+#+filetags: :stub:
+
+[[denote:20220306T182240][Neural network]]
+
+This makes it especially difficult to apply [[denote:20220303T134927][Interpretable machine learning]] on these cases.

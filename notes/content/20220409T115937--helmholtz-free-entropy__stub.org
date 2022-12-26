@@ -1,0 +1,6 @@
+:ctime:    20220409115937
+:END:
+#+title: Helmholtz free entropy
+#+filetags: :stub:
+
+Closely related to the [[denote:20220402T213320][Helmholtz free energy]] by a factor of \( \beta \).

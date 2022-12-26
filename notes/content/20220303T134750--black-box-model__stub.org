@@ -1,0 +1,10 @@
+:ctime:    20220303134750
+:END:
+#+title: Black box model
+#+filetags: :stub:
+
+A black box model is a [[denote:20220305T112921][Machine learning]] model consisting of a function or formula that is either
+too complicated to understand for a human or which is proprietary so that we cannot verify what is
+happening under the hood. See also [[denote:20220305T112135][Proprietary software is unethical]].
+
+[[denote:20220305T111929][Black box models lead to serious societal harm]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6c09d81f-296e-4d62-913b-94b2b0885a1d
-:mtime:    20220329232750
-:ctime:    20220329232750
-:END:
-#+title: Jordan-Hölder theorem
-#+filetags: :stub:
-
-

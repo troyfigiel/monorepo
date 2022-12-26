@@ -1,0 +1,5 @@
+#+title: User story
+#+filetags: :stub:
+
+A user story is a description of a feature to be implemented.
+Usually this is done using an [[denote:20221027T155905][As a, I want, So that]] approach.

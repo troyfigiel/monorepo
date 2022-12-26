@@ -1,0 +1,6 @@
+:ctime:    20220325143015
+:END:
+#+title: Vapnik-Chervonenkis theory
+#+filetags: :stub:
+
+

@@ -1,0 +1,7 @@
+:ctime:    20220415150336
+:END:
+#+title: Differential equation
+#+filetags: :stub:
+
+- [[denote:20220415T150344][Green's function]]
+- [[denote:20220415T150722][Boundary value condition]]

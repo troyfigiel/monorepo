@@ -1,0 +1,6 @@
+#+title:      Newton's method
+#+date:       [2022-02-23 Wed 10:23]
+#+filetags:   :empty:
+#+identifier: 20220223T102324
+
+

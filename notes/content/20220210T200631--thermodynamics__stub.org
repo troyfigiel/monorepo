@@ -1,0 +1,11 @@
+:ctime:    20220210200631
+:END:
+#+title: Thermodynamics
+#+filetags: :stub:
+
+- [[denote:20220324T214254][Laws of thermodynamics]]
+- [[denote:20220324T214217][Ideal gas]]
+- [[denote:20220326T114020][Thermodynamic limit]]
+
+We can derive the [[denote:20220304T131934][Heat equation]] as a [[denote:20220304T132713][Random walk]] of particles, i.e. [[denote:20220327T193032][Brownian motion]]. This requires
+the [[denote:20220327T193132][Fokker-Planck equation]].

@@ -1,0 +1,6 @@
+#+title: Speed layer
+#+filetags: :stub:
+
+The speed layer is part of the [[denote:20221028T145644][Lambda architecture]].
+Whenever we receive data from a [[denote:20221028T150050][Data stream]], the speed layer is responsible for creating predictions
+of any already deployed [[denote:20221028T152143][Machine learning models]]. This is done in real-time unlike the model training in the [[denote:20221028T151542][Batch layer]].

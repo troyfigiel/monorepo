@@ -1,0 +1,7 @@
+:mtime:    20220328134126
+:ctime:    20220328134051
+:END:
+#+title: Compound probability distribution
+#+filetags: :stub:
+
+Used in [[denote:20220303T210545][Mixture models]].

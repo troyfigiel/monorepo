@@ -1,0 +1,6 @@
+:ctime:    20220323230017
+:END:
+#+title: Periodic Markov chain
+#+filetags: :stub:
+
+

@@ -1,0 +1,19 @@
+:ctime:    20220210210826
+:END:
+#+title: Characteristic function
+
+The characteristic function \( \varphi_X(t) \) of a probability distribution of a random variable \( X \)
+is defined as the expectation value
+
+\[
+\varphi_{X}(t) = \mathbb{E}[e^{itX}]
+\]
+
+This can be understood as the [[denote:20220224T223654][Fourier transform]] of the [[denote:20220210T091919][Probability density]] when the latter exists.
+
+Nonetheless, [[denote:20220224T220317][Every probability distribution has a characteristic function]] which makes it well
+suited for formal appendixs as well as many applications.
+
+Because of its simple definition, [[denote:20220224T224802][Linear relations of random variables lead to simple relations between characteristic functions]].
+
+For various characteristic functions, see [[denote:20220304T093552][!Characteristic function]].

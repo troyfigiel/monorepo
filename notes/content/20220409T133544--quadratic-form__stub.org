@@ -1,0 +1,7 @@
+:ctime:    20220409133544
+:END:
+#+title: Quadratic form
+#+filetags: :stub:
+
+There is a one-to-one correspondence between quadratic forms and [[denote:20220409T133625][Symmetric matrices]]. In particular,
+this means we can always diagonalize a quadratic form.

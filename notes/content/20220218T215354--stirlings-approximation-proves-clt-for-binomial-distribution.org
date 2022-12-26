@@ -1,0 +1,3 @@
+:ctime:    20220218215354
+:END:
+#+title: Stirling's approximation proves CLT for binomial distribution

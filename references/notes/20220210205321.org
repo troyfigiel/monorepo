@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0c2cc166-7d28-494f-9d7b-bc3fcf393a7f
-:mtime:    20220225223625
-:ctime:    20220210205321
-:END:
-#+title: normal approximation of the binomial
-
-

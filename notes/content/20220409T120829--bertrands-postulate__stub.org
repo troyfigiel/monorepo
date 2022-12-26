@@ -1,0 +1,6 @@
+:ctime:    20220409120829
+:END:
+#+title: Bertrand's postulate
+#+filetags: :stub:
+
+

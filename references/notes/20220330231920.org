@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       805517eb-f8e8-4828-b64a-a5610f296382
-:mtime:    20220330231921
-:ctime:    20220330231920
-:END:
-#+title: Maxwell's equations
-#+filetags: :stub:
-
-

@@ -1,0 +1,7 @@
+:ctime:    20220403153320
+:ROAM_ALIASES: "Bernoulli-Laplace chain"
+:END:
+#+title: Bernoulli-Laplace model
+#+filetags: :stub:
+
+

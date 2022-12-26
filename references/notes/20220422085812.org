@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       47e0cf5d-3964-4d3d-a525-626f0310b31f
-:mtime:    20220422085813
-:ctime:    20220422085812
-:END:
-#+title: Cohesion
-#+filetags: :stub:
-

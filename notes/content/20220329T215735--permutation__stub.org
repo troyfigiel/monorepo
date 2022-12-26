@@ -1,0 +1,6 @@
+:ctime:    20220329215735
+:END:
+#+title: Permutation
+#+filetags: :stub:
+
+[[denote:20220329T215801][Sign of a permutation]]

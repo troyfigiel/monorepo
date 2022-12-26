@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4e286df5-6837-4584-9b3c-1e85ab1a8848
-:mtime:    20220404221044
-:ctime:    20220404213838
-:END:
-#+title: First-order phase transition
-#+filetags: :stub:
-
-This kind of phase transition involves [[id:ca32cd08-e5bf-4658-8348-eb1235f3b9cf][Latent heat]]. For example, freezing of water.

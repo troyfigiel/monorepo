@@ -1,0 +1,10 @@
+:ctime:    20220224210530
+:END:
+#+title: Use CTEs abundantly
+#+filetags: :stub:
+
+When writing SQL code, queries can quickly become unreadable due to excessive nesting. This makes
+SQL code often difficult to debug.
+
+CTEs not only resolve the amount of nesting, they also make debugging queries much easier since a
+query can be checked step by step instead of only as a whole.

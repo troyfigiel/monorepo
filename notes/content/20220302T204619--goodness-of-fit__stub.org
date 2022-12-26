@@ -1,0 +1,6 @@
+:ctime:    20220302204619
+:END:
+#+title: Goodness-of-fit
+#+filetags: :stub:
+
+

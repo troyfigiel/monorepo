@@ -1,0 +1,6 @@
+:ctime:    20220224113006
+:END:
+#+title: Method chaining
+#+filetags: :stub:
+
+

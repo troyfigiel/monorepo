@@ -1,0 +1,13 @@
+:ctime:    20220325143615
+:END:
+#+title: ?The discs in the plane do not shatter all sets of four points on the unit circle
+#+filetags: :appendix:stub:
+
+Consider
+
+\[
+A = \{ (1, 0), (-1, 0), (0, 1), (0, -1) \}
+\]
+
+Now two opposite points can never be separated by a disc without also containing at least one other
+point. Therefore, the set of discs does not shatter the set of these four points.

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       12d0ae5f-3587-4832-a0ea-7d4364d39926
-:mtime:    20220313180435
-:ctime:    20220313180433
-:END:
-#+title: Positive likelihood ratio
-#+filetags: :stub:
-
-

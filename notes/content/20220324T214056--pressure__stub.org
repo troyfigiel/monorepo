@@ -1,0 +1,7 @@
+:ctime:    20220324214056
+:END:
+#+title: Pressure
+#+filetags: :stub:
+
+- [[denote:20220324T214223][Ideal gas law]]
+- [[denote:20220324T214956][Bernoulli's equation]]

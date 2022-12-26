@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       3ff4bad6-99ea-47ce-8e71-a805878b7372
-:mtime:    20220225223628
-:ctime:    20220210094412
-:END:
-#+title: geometric distribution
-

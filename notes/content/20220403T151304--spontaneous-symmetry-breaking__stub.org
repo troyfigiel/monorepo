@@ -1,0 +1,6 @@
+:ctime:    20220403151304
+:END:
+#+title: Spontaneous symmetry breaking
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220312093531
+:END:
+#+title: Darcs
+#+filetags: :stub:
+
+Relies on the idea of [[denote:20220312T093606][Patch theory]]

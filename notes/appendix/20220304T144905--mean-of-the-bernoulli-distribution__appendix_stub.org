@@ -1,0 +1,6 @@
+:ctime:    20220304144905
+:END:
+#+title: ?Mean of the Bernoulli distribution
+#+filetags: :appendix:stub:
+
+

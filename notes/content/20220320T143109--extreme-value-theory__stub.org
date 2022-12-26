@@ -1,0 +1,9 @@
+:ctime:    20220320143109
+:END:
+#+title: Extreme value theory
+#+filetags: :stub:
+
+Extreme value theory deals with the distribution of extremes in a sample such as the minimum,
+maximum or any point far away from the medians.
+
+A key result in extreme value theory is the [[denote:20220320T143303][Fisher-Tippett-Gnedenko theorem]].

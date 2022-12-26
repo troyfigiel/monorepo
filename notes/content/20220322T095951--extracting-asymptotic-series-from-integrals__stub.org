@@ -1,0 +1,14 @@
+:ctime:    20220322095951
+:END:
+#+title: Extracting asymptotic series from integrals
+#+filetags: :stub:
+
+When we have an integral that we cannot solve exactly, we might still be able to (at least
+formally) expand the integrand in a power series. [[denote:20220322T090441][Asymptotic series of integrals]] can then be
+constructed by basically exchanging the sum and the integral.
+
+This cannot always be done exactly, since this often involves taking a power series outside of its
+domain of definition. However, when we look at the partial sums we can obtain exact results that
+approximate the original integral quite well.
+
+One of the most basic examples is the [[denote:20220318T233342][?Asymptotic series of the exponential integral]].

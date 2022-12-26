@@ -1,0 +1,13 @@
+:mtime:    20220424214119
+:ctime:    20220424213645
+:END:
+#+title: Semantic versioning
+#+filetags: :stub:
+
+A semantic version number consists of a major version, minor version and patch number.
+
+- Patches are used for bug fixes and do not change the functionality of the code
+- Minor changes are used for functionality changes without breaking the current [[denote:20220424T213813][API]]
+- Major changes are changes that do break the current [[denote:20220424T213813][API]].
+
+The first version starts at 0.1.0 and the first [[denote:20220424T213903][Stable version]] is version 1.0.0.

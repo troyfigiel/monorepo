@@ -1,0 +1,23 @@
+#+title:      Programming language
+#+date:       [2022-02-20 Sun 09:46]
+#+filetags:   :unfinished:
+#+identifier: 20220220T094616
+
+Some key notions:
+- [[denote:20220317T082905][Type system]]
+
+Some examples are:
+- [[denote:20220220T094628][Lisp]]
+- [[denote:20220220T094641][Python]]
+- [[denote:20220220T094657][C]]
+- [[denote:20220220T094716][Haskell]]
+- [[denote:20220220T094729][R]]
+- [[denote:20220220T094741][Julia]]
+- [[denote:20220220T094753][SQL]]
+- [[denote:20220220T094827][Bash]]
+- [[denote:20220220T094901][C++]]
+- [[denote:20220220T094955][Java]]
+- [[denote:20220220T095003][JavaScript]]
+
+Also:
+- [[denote:20220324T220124][Statistical programming language]]

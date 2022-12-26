@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       82823592-9d4c-4a7d-948a-cb1e7a4b5f58
-:mtime:    20220225223631
-:ctime:    20220215233133
-:END:
-#+title: Kolmogorov-Smirnov test
-

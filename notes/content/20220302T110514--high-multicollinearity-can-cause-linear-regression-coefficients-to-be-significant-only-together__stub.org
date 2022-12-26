@@ -1,0 +1,6 @@
+:ctime:    20220302110514
+:END:
+#+title: High multicollinearity can cause linear regression coefficients to be significant only together
+#+filetags: :stub:
+
+

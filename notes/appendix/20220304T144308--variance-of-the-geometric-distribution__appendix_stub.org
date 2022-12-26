@@ -1,0 +1,6 @@
+:ctime:    20220304144308
+:END:
+#+title: ?Variance of the geometric distribution
+#+filetags: :appendix:stub:
+
+

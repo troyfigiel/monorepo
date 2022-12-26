@@ -1,0 +1,14 @@
+:ctime:    20221109151355
+:END:
+#+title: Trunk-based development
+#+filetags: :stub:
+
+Instead of having multiple long-lived feature branches that get merged with a development branch, trunk-based development encourages short-lived branches and merges directly into a main branch.
+
+[[denote:20221109T151535][Feature branches]] can still be long-lived, but they at the very least need to merge or rebase the main branch on a daily basis.
+
+The idea of trunk-based development falls under [[denote:20221106T171732][Continuous delivery]].
+
+The advantage of trunk-based development is that it saves developers from large [[denote:20221109T151821][Merge conflicts]]. Instead, the main branch is the [[denote:20221109T151850][Single source of truth]] for the code base.
+
+However, implementing trunk-based development requires setting up tools that enable effective development in this way. For example, two [[denote:20221109T151535][Feature branches]] pushing to the same development environment can cause interference between developers. At least, an environment should be claimed temporarily until the feature branch has been rounded off and can be merged into the main branch.

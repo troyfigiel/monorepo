@@ -1,0 +1,5 @@
+#+title: Scrum team
+#+filetags: :stub:
+
+The Scrum team consists of developers, testers, writers and anyone else.
+Usually members will fulfill several roles.

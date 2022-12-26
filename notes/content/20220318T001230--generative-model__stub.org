@@ -1,0 +1,12 @@
+:ctime:    20220318001230
+:END:
+#+title: Generative model
+#+filetags: :stub:
+
+A generative model learns a [[denote:20220318T113052][Joint probability distribution]].
+
+Examples:
+- [[denote:20220318T001406][Naive Bayes classifier]]
+- [[denote:20220318T001417][Linear discriminant analysis]]
+
+# TODO: Is the Buy 'till you die model an example of a generative model?

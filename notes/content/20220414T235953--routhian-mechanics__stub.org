@@ -1,0 +1,7 @@
+:ctime:    20220414235953
+:END:
+#+title: Routhian mechanics
+#+filetags: :stub:
+
+This is a reformulation of [[denote:20220324T213920][Classical mechanics]]. It is especially useful to remove [[denote:20220415T000038][Cyclic
+coordinates]] from the equations.

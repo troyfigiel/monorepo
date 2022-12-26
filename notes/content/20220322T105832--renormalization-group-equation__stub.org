@@ -1,0 +1,6 @@
+:ctime:    20220322105832
+:END:
+#+title: Renormalization group equation
+#+filetags: :stub:
+
+

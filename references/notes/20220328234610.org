@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       69df7ba6-d13b-439b-a246-a691a97129e1
-:mtime:    20220328234611
-:ctime:    20220328234610
-:END:
-#+title: Gibbs entropy
-#+filetags: :stub:
-
-

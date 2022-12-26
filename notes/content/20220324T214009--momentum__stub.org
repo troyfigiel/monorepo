@@ -1,0 +1,6 @@
+:ctime:    20220324214009
+:END:
+#+title: Momentum
+#+filetags: :stub:
+
+[[denote:20220324T214020][Noether's theorem]]

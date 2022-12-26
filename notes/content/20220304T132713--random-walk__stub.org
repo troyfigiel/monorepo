@@ -1,0 +1,6 @@
+:ctime:    20220304132713
+:END:
+#+title: Random walk
+#+filetags: :stub:
+
+Random walks are a good model for statistical mechanical phenomena.

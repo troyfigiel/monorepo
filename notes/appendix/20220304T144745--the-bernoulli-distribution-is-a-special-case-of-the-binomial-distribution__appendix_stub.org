@@ -1,0 +1,6 @@
+:ctime:    20220304144745
+:END:
+#+title: ?The Bernoulli distribution is a special case of the binomial distribution
+#+filetags: :appendix:stub:
+
+

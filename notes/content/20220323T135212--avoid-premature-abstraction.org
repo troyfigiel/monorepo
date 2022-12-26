@@ -1,0 +1,11 @@
+:ctime:    20220323135212
+:END:
+#+title: Avoid premature abstraction
+
+The more components are added to a system, the more complex it becomes. [[denote:20220323T135449][Abstraction is a powerful
+tool to fight increasing complexity]], however, care should be taken that simple things are not made
+complex by an abstraction.
+
+This can often happen when a programmer or designer introduces an abstraction in anticipation of a
+complexity. Instead, you should [[denote:20220323T140245][Refactor when necessary]], keeping principles such as [[denote:20220323T135849][KISS]] and [[denote:20220323T135924][YAGNI]]
+in mind.

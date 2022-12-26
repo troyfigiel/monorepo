@@ -1,0 +1,12 @@
+:mtime:    20220310232009
+:ctime:    20220310201832
+:END:
+#+title: Ockham's razor
+#+filetags: :stub:
+
+See: [[denote:20220310T202014][Duck test]].
+
+In [[denote:20220310T230301][Statistical learning theory]]: The best models are simple models that fit the data well. This
+forces machine learning engineers to define what simplicity means.
+
+This can be achieved, for example, by using [[denote:20220218T233454][Regularization]].

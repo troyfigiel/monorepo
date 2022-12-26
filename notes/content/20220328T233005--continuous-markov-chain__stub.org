@@ -1,0 +1,6 @@
+:ctime:    20220328233005
+:END:
+#+title: Continuous Markov chain
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220318113052
+:END:
+#+title: Joint probability distribution
+#+filetags: :stub:
+
+

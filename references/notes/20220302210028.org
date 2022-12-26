@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b9c0714a-c88b-467c-a7f3-70092432673a
-:mtime:    20220302210029
-:ctime:    20220302210028
-:END:
-#+title: Adding more regressors can never decrease R^2
-#+filetags: :stub:
-
-

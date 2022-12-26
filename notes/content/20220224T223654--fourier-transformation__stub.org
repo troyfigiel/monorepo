@@ -1,0 +1,6 @@
+:ctime:    20220224223654
+:END:
+#+title: Fourier transformation
+#+filetags: :stub:
+
+

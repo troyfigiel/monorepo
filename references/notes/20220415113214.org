@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       80cbdb65-b1a1-4228-8b5d-c0b9c39b97a6
-:mtime:    20220415113215
-:ctime:    20220415113214
-:END:
-#+title: Binet equation
-#+filetags: :stub:
-

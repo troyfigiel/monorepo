@@ -1,0 +1,10 @@
+:ctime:    20220306183434
+:END:
+#+title: Experts can decide whether to trust an interpretable machine learning model
+#+filetags: :stub:
+
+For example, the [[denote:20220306T183214][2HELPS2B]] model is extremely simple, which allows doctors to decide for themselves
+whether to trust the model and possibly even calibrate the score with data that is not directly in
+the database.
+
+https://www.youtube.com/watch?v=sl78EgrT4TY

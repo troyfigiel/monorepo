@@ -1,0 +1,6 @@
+:ctime:    20220329215305
+:END:
+#+title: Krohn-Rhodes theorem
+#+filetags: :stub:
+
+

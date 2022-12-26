@@ -1,0 +1,11 @@
+:ctime:    20220324214724
+:END:
+#+title: Gas constant
+#+filetags: :stub:
+
+Molar equivalent of the [[denote:20220326T114528][Boltzmann constant]].
+
+\[
+R = N_A k_B = 8.31446261815324 \, \mathrm{J} \cdot \mathrm{K}^{-1} \cdot \mathrm{mol}^{-1}
+\]
+

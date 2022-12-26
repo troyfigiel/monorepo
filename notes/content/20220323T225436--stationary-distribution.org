@@ -1,0 +1,6 @@
+:ctime:    20220323225436
+:ROAM_ALIASES: "Steady state distribution"
+:END:
+#+title: Stationary distribution
+
+

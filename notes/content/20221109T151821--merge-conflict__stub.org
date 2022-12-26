@@ -1,0 +1,6 @@
+:ctime:    20221109151821
+:END:
+#+title: Merge conflict
+#+filetags: :stub:
+
+[[denote:20220218T230824][Git]]

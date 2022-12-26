@@ -1,0 +1,9 @@
+:ctime:    20220422143442
+:ROAM_ALIASES: "Coding by convention"
+:END:
+#+title: Convention over configuration
+#+filetags: :stub:
+
+- [[denote:20220422T143525][Ruby on Rails]]
+- [[denote:20220422T143538][Sensible defaults]]
+- [[denote:20220422T143559][Principle of least astonishment]]

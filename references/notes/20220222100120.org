@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2981dd20-424a-4e9e-a0ce-8517ae6c8986
-:mtime:    20220225223627
-:ctime:    20220222100120
-:END:
-#+title: paired t-test is more powerful than unpaired t-test
-#+filetags: :stub:
-
-

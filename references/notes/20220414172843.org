@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       5ff43e35-103c-49a9-a7d7-d0b5dfd56250
-:mtime:    20220414172847
-:ctime:    20220414172843
-:END:
-#+title: Clean code
-#+filetags: :stub:
-

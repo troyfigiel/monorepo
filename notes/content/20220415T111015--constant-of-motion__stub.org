@@ -1,0 +1,10 @@
+:ctime:    20220415111015
+:END:
+#+title: Constant of motion
+#+filetags: :stub:
+
+Examples:
+- [[denote:20220415T111025][Energy]]
+- [[denote:20220415T111040][Linear momentum]]
+- [[denote:20220415T111047][Angular momentum]]
+- [[denote:20220415T111107][Laplace-Runge-Lenz vector]]

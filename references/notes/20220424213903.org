@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       4a2f8a39-9750-445b-b450-2b4964895913
-:mtime:    20220424214057
-:ctime:    20220424213903
-:END:
-#+title: Stable version
-#+filetags: :stub:
-

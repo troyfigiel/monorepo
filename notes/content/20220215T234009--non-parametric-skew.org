@@ -1,0 +1,13 @@
+:ctime:    20220215234009
+:END:
+#+title: Non-parametric skew
+
+The nonparametric skew of a probability distribution is defined as the quotient \( (\mu - \nu) / \sigma \) with \( \mu \) the mean, \( \nu \) the median and \( \sigma \) the standard deviation of the probability distribution.
+
+This definition of skew has some desirable properties:
+- The [[denote:20220215T234422][Non-parametric skew vanishes for symmetric distribution]].
+
+The absolute value of the nonparametric skew is bounded from above by 1, because for any
+distribution [[denote:20220215T234724][?The mean lies within a standard deviation from the median]].
+
+# TODO: Add some more desirable properties of the non-parametric skew.

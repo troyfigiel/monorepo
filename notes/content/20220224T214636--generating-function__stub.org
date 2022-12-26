@@ -1,0 +1,19 @@
+:ctime:    20220224214636
+:END:
+#+title: Generating function
+#+filetags: :stub:
+
+A generating function provides a link between a formal power series and a sequence of numbers.
+
+Two common forms of generating functions are the [[denote:20220224T214954][Ordinary generating function]] and the [[denote:20220224T215014][Exponential
+generating function]].
+
+Many operations that can be performed on formal power series, can be used to describe properties of
+the sequence of numbers.
+
+* Probability theory
+Generating functions can be used to calculate the moments of a probability distribution. In this
+context, the generating function is known as the [[denote:20220224T220044][Moment generating function]].
+
+Because [[denote:20220224T220122][The moment generating function does not always exist]], the [[denote:20220210T210826][Characteristic function]] is often
+used as a replacement because [[denote:20220224T220317][Every probability distribution has a characteristic function]].

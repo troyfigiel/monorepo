@@ -1,0 +1,6 @@
+:ctime:    20220322104641
+:END:
+#+title: Regular perturbation problem
+#+filetags: :stub:
+
+

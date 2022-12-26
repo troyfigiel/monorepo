@@ -1,0 +1,5 @@
+:ctime:    20220215215210
+:END:
+#+title: Pearson's chi-squared test
+
+Pearson's chi-squared test tests the null hypothesis that the observed frequency distribution of certain events is consistent with a theoretical distribution.

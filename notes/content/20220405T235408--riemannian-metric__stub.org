@@ -1,0 +1,6 @@
+:ctime:    20220405235408
+:END:
+#+title: Riemannian metric
+#+filetags: :stub:
+
+

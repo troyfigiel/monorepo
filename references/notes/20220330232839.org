@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7fa402b1-fb55-4326-96a2-3c1bc6a7d71c
-:mtime:    20220330232839
-:ctime:    20220330232839
-:END:
-#+title: Debye length
-#+filetags: :stub:
-
-

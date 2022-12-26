@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       591fefe2-02b1-489a-aa90-2cdb60482073
-:mtime:    20220317223614
-:ctime:    20220317223612
-:END:
-#+title: ERT
-#+filetags: :stub:
-
-

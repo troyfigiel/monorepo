@@ -1,0 +1,93 @@
+#+title:      Large deviations theory and statistical physics
+#+date:       [2022-04-09 Sat 14:55]
+#+filetags:
+#+identifier: 20220409T145515
+
+- [[denote:20220323T084835][Large deviations theory]]
+- [[denote:20220210T210151][Statistical physics]]
+
+* Philosophically
+More broadly, there is a deep disanalogy between the situation faced by the statistical data analyst and that faced by the statistical mechanic. The data analyst has all the data --- measurements on each sample; also, generally, some idea of the dependence structure between samples. Assuming independence for simplicity, the data analyst can always reduce the data by taking the empirical distribution (= order statistics or histogram, as applicable), but no more. Constrain the expected empirical distribution and maximize the entropy, and in general you get --- the empirical distribution. Any further reduction of the data, beyond the empirical distribution, imposes assumptions about what the true distribution is --- it's saying that certain statistics alone are sufficient, which is implicitly ruling out all the models in which those are not sufficient. This may be a good idea, and it might even be a good idea to use an exponential family, but dictated by the fundamental logic of inductive inference it is not.
+
+The situation facing us in statistical mechanics is very different. Rather than having lots of observations on comparable units or samples, we have only measurements of the macroscopic observables, which are a small number of coarse-grained and collective degrees of freedom. To be in the same situation as the data analyst, we would have to have lots of measurements of individual molecules. Or rather, to be in the same position as the statistical mechanic, the data analyst would have to be forbidden from looking at individual samples, and allowed to see only certain more-or-less complicated functionals of the empirical distribution.
+
+This last point is in fact the clue to why, mathematically, maximum entropy often works as an approximate method. (What follows is shamelessly ripped off from writers like Richard Ellis and Imre Csiszar.) One of the fundamental results in large deviations theory is something called Sanov's Theorem, which concerns the deviations of the empirical distribution away from the true distribution.
+
+* Video
+Large deviations theory started with Boltzmann in 1877:
+
+Multinomial distribution:
+
+\[
+\log \frac{N!}{\prod\limits_j w_j!} \approx -N \sum\limits_j w_j \log w_j = N s(\mathbf{w})
+\]
+
+where \( s(\mathbf{w}) \) is the entropy of the system.
+
+So
+
+\[
+P(\mathbf{w}) \approx e^{Ns(\mathbf{w})}
+\]
+
+This can be done for a perfect gas, no interactions between particles.
+
+Einstein in 1910 tried to generalize Boltzmann. He postulated:
+
+\[
+W(m) = e^{Ns(m)}
+\]
+
+so
+
+\[
+P(m) = e^{N \left[ s(m) - s(m^{*}) \right]}
+\]
+
+where \( s(m^{*}) \) is maximal.
+
+Cramer (1938) was interested in extending the [[denote:20220210T091048][Central limit theorem]]. The [[denote:20220210T091048][Central limit theorem]] does
+not tell you anything about the tail behaviour.
+
+For the sample mean
+
+\[
+S_n = \frac{1}{n} \sum\limits_{i=1}^n X_i
+\]
+
+with [[denote:20220303T233535][Cumulant generating function]]
+
+\[
+\lambda(k) = \log \mathbb{E} \left[ e^{kX} \right] = \int\limits_{\mathbb{R}} p(x) e^{kx} \, dx
+\]
+we find
+
+\[
+P(S_n = s) = e^{-nI(s)} \frac{1}{\sqrt{n}} \left( b_0 + \frac{b_1}{n} + ... \right)
+\]
+
+\[
+I(s) = \max_{k \in \mathbb{R}} \left[ k s - \lambda(k) \right]
+\]
+
+Then [[denote:20220323T090134][Sanov's theorem]] came. We can relate the [[denote:20220410T145404][Empirical measure]]
+
+\[
+L_n(x) = \frac{1}{n} \sum\limits_{i=1}^n \delta_{X_i, x}
+\]
+
+to the relative entropy by
+
+\[
+P(L_n = \rho) \approx e^{-n D(\rho || p)}
+\]
+
+This is really the same result as Boltzmann had, but in a more abstract mathematical context.
+
+# TODO: Can we derive Boltzmann's multinomial expansion from this result?
+
+* References
+- https://arxiv.org/pdf/0804.0327.pdf
+- http://bactra.org/notebooks/max-ent.html
+- https://www.wias-berlin.de/people/koenig/www/LDPMinicourse.pdf
+- https://www.youtube.com/watch?v=r92tarBtmxw

@@ -1,0 +1,24 @@
+:ctime:    20220310125857
+:ROAM_ALIASES: "Decision forest"
+:END:
+#+title: Random forest
+#+filetags: :stub:
+
+Random forest allow us to determine [[denote:20220310T130103][Feature importance]] which can be useful for other algorithms as well.
+
+A random forest is an example of a [[denote:20220303T134750][Black box model]]. The idea is to average the votes of diverse
+[[denote:20220310T125652][Decision trees]]. If you average many different, but accurate and even overfitted models, it will
+reduce variance in the predictions. This is similar to [[denote:20220318T150056][Bagging]].
+
+The algorithm works as follows:
+
+We pick \( T \) trees (where \( T \) is odd so we can calculate a majority) and we have \( m \) and
+\( n_{\mathrm{min}} \) parameters. As we would do with [[denote:20220318T152919][Bootstrapping]], we pick a sample of size \( n
+\) (with replacement) from our training data of size \( n \).
+
+We build a tree by picking \( m \) features at random, split nodes based on the best feature and
+stop if any node has less than \( n_{min} \) points.
+
+Prediction on a new observation is done using the majority vote.
+
+# TODO: Majority vote only works for classification. What about regression?

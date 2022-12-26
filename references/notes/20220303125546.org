@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       fa9e775f-96c5-47d7-b2aa-b5096e313c27
-:mtime:    20220303125548
-:ctime:    20220303125546
-:END:
-#+title: Pure function
-#+filetags: :stub:
-
-

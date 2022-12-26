@@ -1,0 +1,7 @@
+:ctime:    20220324214306
+:END:
+#+title: First law of thermodynamics
+#+filetags: :stub:
+
+Energy conservation. In most circumstances the energy of two systems can be added. The interaction
+energies are negligible.

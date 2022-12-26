@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4b070be7-49a4-4506-bad4-973482ef43a3
-:mtime:    20220302090445
-:ctime:    20220302090443
-:END:
-#+title: Unix
-#+filetags: :stub:
-
-

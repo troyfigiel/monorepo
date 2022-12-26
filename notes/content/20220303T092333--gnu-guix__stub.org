@@ -1,0 +1,29 @@
+:ctime:    20220303092333
+:END:
+#+title: GNU Guix
+#+filetags: :stub:
+
+This is the package manager on which [[denote:20220221T223907][Guix System]] is based. It is written in [[denote:20220221T235650][Guile Scheme]].
+
+Guix works a lot with symlinks. If we reconfigure the system or the home environment, under the
+hood Guix is just changing symlinks to different files. The user experience is to receive a
+completely new configuration, but if only a couple of packages need to be downloaded and symlinked,
+Guix can be much faster due to this idea.
+
+Since [[denote:20220303T124900][Timestamps are meaningless for reproducible builds]], Guix does not store time stamps in the
+[[denote:20220303T124922][GNU store]]. For [[denote:20220307T144637][Reproducibility]], Guix makes use of [[denote:20220315T133759][Guix channels]].
+
+[[denote:20220303T125417][Guix has transactional upgrades]].
+
+Guix also embraces the idea of [[denote:20220303T125546][Pure functions]].
+- [[denote:20220303T125637][Package builds in Guix are pure functions]].
+- [[denote:20220315T122916][An operating system is the result of a function]] (See [[denote:20220221T223907][Guix System]])
+- [[denote:20220315T123339][A home environment is the result of a function]] (See [[denote:20220309T181124][Guix Home]])
+
+For Guix on the user level, see [[denote:20220309T181124][Guix Home]].
+
+# TODO: Guix can also be used as a development tool for setting up isolated development
+# environments
+[[denote:20220315T133911][Guix as a development tool]].
+
+https://www.youtube.com/watch?v=chKc_YsvXKU

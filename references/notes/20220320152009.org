@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6a7ab0e7-d600-4bcf-9398-ec7ea8f0ea23
-:mtime:    20220320152010
-:ctime:    20220320152009
-:END:
-#+title: Logistic distribution
-#+filetags: :stub:
-
-

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       4cdecb3a-6924-4f34-a08c-8ac3364642cf
-:mtime:    20220225223629
-:ctime:    20220220095733
-:END:
-#+title: abstract factory pattern
-#+filetags: :stub:
-

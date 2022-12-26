@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       baf50824-361e-4687-9d64-27bb3f2509ff
-:mtime:    20220303173639
-:ctime:    20220301170959
-:END:
-#+title: The t-test is a special case of linear regression
-#+filetags: :stub:
-
-The paired t-test also has an equivalent linear regression: [[id:c783e709-ff87-48d9-8498-1a35c3e2ae8c][The paired t-test is a linear mixed model]]

@@ -1,0 +1,30 @@
+:ctime:    20220218202620
+:ROAM_ALIASES: R^2 "R squared"
+:END:
+#+title: Coefficient of determination
+
+The coefficient of determination is often used as a measure of [[denote:20220302T204619][Goodness-of-fit]]. The most general
+definition of \( R^2 \) for a data set \( (y_1, ..., y_n) \) together with predicted values \(
+(\hat{y}_1, ..., \hat{y}_n) \) is as
+
+\[
+R^2 = 1 - \frac{\sum\limits_{i=1}^n (y_i - \hat{y}_i)^2}{\sum\limits_{i=1}^n (y_i - \bar{y})^2}
+\]
+
+with \( \bar{y} \) the sample mean.
+
+The numerator can be understood as the sum of squares of residuals whereas the denominator is the
+total sum of squares.
+
+* OLS
+Although \( R^2 \) could theoretically become negative if a model performs worse than estimating
+the mean for every point in the sample, [[denote:20220302T205734][R^2 is always non-negative for OLS with an intercept]].
+
+[[denote:20220302T211217][In OLS the value of R^2 is the amount of explained variance]].
+
+* Generalizations
+Since [[denote:20220302T210028][Adding more regressors can never decrease R^2]], often an [[denote:20220302T210143][Adjusted R^2]] is defined to avoid a
+[[denote:20220302T210317][Kitchen sink regression]].
+
+* References
+https://en.wikipedia.org/wiki/Coefficient_of_determination

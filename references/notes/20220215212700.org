@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       d2bea082-0b58-40a4-bfe9-59e9d6473649
-:mtime:    20220310134720
-:ctime:    20220215212700
-:END:
-#+title: ?The Bernoulli distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

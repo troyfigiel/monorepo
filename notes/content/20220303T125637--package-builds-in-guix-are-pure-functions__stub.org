@@ -1,0 +1,9 @@
+:ctime:    20220303125637
+:END:
+#+title: Package builds in Guix are pure functions
+#+filetags: :stub:
+
+The inputs of these functions are the compilers, build scripts, libraries, etc. and the output is
+the built package.
+
+https://signalshore.github.io/blog/GUIX-Part-1.html

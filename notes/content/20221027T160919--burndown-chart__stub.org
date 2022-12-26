@@ -1,0 +1,7 @@
+#+title: Burndown chart
+#+filetags: :stub:
+
+A burndown chart shows the completed work against the projected rate of completion.
+This chart will approach zero when work is being done.
+
+The rate of progress is called [[denote:20221027T161203][Velocity]].

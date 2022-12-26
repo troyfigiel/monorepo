@@ -1,0 +1,7 @@
+:ctime:    20220324232040
+:END:
+#+title: Clean notes
+#+filetags: :stub:
+
+- [[denote:20220324T231822][Clean notes are easier to find back]]
+- [[denote:20220324T232100][It is easier to connect ideas to clean notes]]

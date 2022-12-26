@@ -1,0 +1,5 @@
+:ctime:    20220417142053
+:END:
+#+title: Ellipse
+#+filetags: :stub:
+

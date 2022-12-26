@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       fc196ea6-1b05-4e16-95ae-7f0b8a052193
-:mtime:    20220327012853
-:ctime:    20220327012853
-:END:
-#+title: Kinetic theory of gases
-#+filetags: :stub:
-
-

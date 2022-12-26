@@ -1,0 +1,15 @@
+:ctime:    20220314132329
+:END:
+#+title: Closures and objects are equivalent
+#+filetags: :stub:
+
+Closures and objects can be considered as the same kind of construction but in different paradigms.
+Closures are more common in [[denote:20220314T132424][Functional programming]] and at the very least require the notion of
+[[denote:20220314T131316][First-class functions]]. Objects on the other hand appear in [[denote:20220314T132317][Object-oriented programming]].
+
+The unidirectional implications of this equivalence are often states as:
+- Closures are a poor man's object
+- Objects are a poor man's closure
+
+# TODO: Show that closures and objects are really equivalent.
+https://blog.ploeh.dk/2018/01/22/function-isomorphisms/

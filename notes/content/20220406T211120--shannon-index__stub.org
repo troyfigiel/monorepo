@@ -1,0 +1,6 @@
+:ctime:    20220406211120
+:END:
+#+title: Shannon index
+#+filetags: :stub:
+
+[[denote:20220406T211126][Diversity index]]

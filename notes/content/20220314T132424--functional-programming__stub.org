@@ -1,0 +1,6 @@
+:ctime:    20220314132424
+:END:
+#+title: Functional programming
+#+filetags: :stub:
+
+

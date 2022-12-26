@@ -1,0 +1,6 @@
+:ctime:    20220304151205
+:END:
+#+title: De Moivre-Laplace theorem
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ddb31305-d703-45c7-8e5e-df361c9df07b
-:mtime:    20220306174816
-:ctime:    20220306174814
-:END:
-#+title: Convolution of generating functions
-#+filetags: :stub:
-
-

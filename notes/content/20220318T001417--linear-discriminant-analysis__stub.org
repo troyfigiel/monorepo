@@ -1,0 +1,6 @@
+:ctime:    20220318001417
+:END:
+#+title: Linear discriminant analysis
+#+filetags: :stub:
+
+

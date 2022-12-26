@@ -1,0 +1,6 @@
+:ctime:    20220314131014
+:END:
+#+title: Emergent phenomenon
+#+filetags: :stub:
+
+

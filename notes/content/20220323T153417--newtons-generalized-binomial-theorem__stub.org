@@ -1,0 +1,7 @@
+:ctime:    20220323153417
+:END:
+#+title: Newton's generalized binomial theorem
+#+filetags: :stub:
+
+This is a generalization of the [[denote:20220223T205208][Binomial theorem]] allowing real exponents instead of only
+nonnegative integers.

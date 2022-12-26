@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       87fb8d8c-c174-4a52-ab30-b92717f3fa54
-:END:
-#+title: Machine learning model
-#+filetags: :stub:

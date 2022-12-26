@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       af2992e5-49f4-486e-aafe-2c7d5b7f9acb
-:mtime:    20220314212642
-:ctime:    20220314212640
-:END:
-#+title: Information geometry
-#+filetags: :stub:
-
-

@@ -1,0 +1,7 @@
+:ctime:    20220320161925
+:END:
+#+title: Probit regression is a discrete choice model
+#+filetags: :stub:
+
+This is the same as [[denote:20220320T161819][Logistic regression is a discrete choice model]], but instead of the [[denote:20220320T143640][Gumbel
+distribution]] we use the [[denote:20220210T091147][Normal distribution]].

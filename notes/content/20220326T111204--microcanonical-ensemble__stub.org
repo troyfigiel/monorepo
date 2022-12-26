@@ -1,0 +1,6 @@
+:ctime:    20220326111204
+:END:
+#+title: Microcanonical ensemble
+#+filetags: :stub:
+
+

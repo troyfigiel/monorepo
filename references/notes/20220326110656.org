@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       93999a9d-6503-43f6-97c1-9c79dd7dd77e
-:mtime:    20220326110657
-:ctime:    20220326110656
-:END:
-#+title: Fluctuation theorem
-#+filetags: :stub:
-
-

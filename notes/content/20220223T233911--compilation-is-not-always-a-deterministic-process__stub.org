@@ -1,0 +1,7 @@
+:ctime:    20220223233911
+:END:
+#+title: Compilation is not always a deterministic process
+#+filetags: :stub:
+
+It can happen for example that the software depends on time of installation or some random numbers
+that are not reproducible.

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       03e4fed5-fb2c-40a2-b93a-627b202bc906
-:mtime:    20220409133625
-:ctime:    20220409133625
-:END:
-#+title: Symmetric matrix
-#+filetags: :stub:
-
-

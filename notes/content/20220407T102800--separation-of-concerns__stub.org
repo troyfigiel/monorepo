@@ -1,0 +1,6 @@
+:ctime:    20220407102800
+:END:
+#+title: Separation of concerns
+#+filetags: :stub:
+
+

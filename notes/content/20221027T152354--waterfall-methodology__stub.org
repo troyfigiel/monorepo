@@ -1,0 +1,15 @@
+#+title: Waterfall methodology
+#+filetags: :stub:
+
+The waterfall methodology goes through several distinct stages, one after another.
+For example, we could have the following stages:
+- Plan
+- Build
+- Test
+- Review
+- Deploy
+
+The problem with this methodology is that often when problems are encountered, you move back to a previous stage.
+This means that with inevitable delays, a product might only be delivered after months or years.
+
+This is often compared to the [[denote:20221027T152420][Scrum methodology]] when describing how not to do software development.

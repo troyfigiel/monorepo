@@ -1,0 +1,6 @@
+:ctime:    20220302085815
+:END:
+#+title: Linux is a multi user OS
+#+filetags: :stub:
+
+The server allows multiple users to access the same OS and share the hardware and the kernel, performing tasks for each user concurrently.

@@ -1,0 +1,14 @@
+:ctime:    20220223223855
+:END:
+#+title: characteristic function of compound Poisson distribution
+#+filetags: :stub:
+
+* Formal statement
+Let \( Y \) follow a compound Poisson distribution with respect to the random variable \( X \).
+
+By definition of the characteristic function, \( \varphi_{Y}(t) = \mathbb{E}[e^{itY}] \).
+
+Now by the [[denote:20220223T223732][law of total expectation]] ..
+
+* TODO
+Finish

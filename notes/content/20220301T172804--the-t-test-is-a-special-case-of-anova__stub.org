@@ -1,0 +1,6 @@
+:ctime:    20220301172804
+:END:
+#+title: The t-test is a special case of ANOVA
+#+filetags: :stub:
+
+

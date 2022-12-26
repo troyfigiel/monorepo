@@ -1,0 +1,7 @@
+:ctime:    20220420214828
+:END:
+#+title: Greedy wrapper method
+#+filetags: :stub:
+
+- [[denote:20220420T214855][Greedy algorithm]]
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c58c0663-8600-49b9-9349-732cd7f4ce86
-:mtime:    20220324222857
-:ctime:    20220324222856
-:END:
-#+title: Code smell
-#+filetags: :stub:
-
-

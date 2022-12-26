@@ -1,0 +1,6 @@
+:ctime:    20220302215941
+:END:
+#+title: Type I censoring
+#+filetags: :stub:
+
+

@@ -1,0 +1,15 @@
+:ctime:    20220322090441
+:END:
+#+title: Asymptotic series of integrals
+#+filetags: :stub:
+
+Asymptotic series of integrals appear very often when we solve [[denote:20220210T125727][Differential equations]] using
+techniques like the [[denote:20220322T095706][Laplace transformation]] or the [[denote:20220224T223654][Fourier transformation]].
+
+Asymptotics will be able to tell us the long-time or the far-field behaviour of these integrals
+when we cannot solve them in closed form, allowing us to still extract interesting behaviour of the
+solutions.
+
+For a list of examples, see [[denote:20220319T103406][!Asymptotic series of integrals]].
+
+There are several well-known [[denote:20220322T110319][!Techniques for constructing asymptotic series of integrals]].

@@ -1,0 +1,6 @@
+:ctime:    20220415111047
+:END:
+#+title: Angular momentum
+#+filetags:   :stub:
+
+[[denote:20220415T111945][Casimir invariant]]

@@ -1,0 +1,12 @@
+:ctime:    20220324215108
+:END:
+#+title: Fluid dynamics
+#+filetags: :stub:
+
+Two subdisciplines:
+- [[denote:20220324T215124][Aerodynamics]]
+- [[denote:20220324T215131][Hydrodynamics]]
+
+Important equations:
+- [[denote:20220324T215540][Navier-Stokes equation]]
+- [[denote:20220324T214956][Bernoulli's equation]]

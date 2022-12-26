@@ -1,0 +1,22 @@
+:ctime:    20220317082905
+:END:
+#+title: Type system
+#+filetags: :stub:
+
+Advantages of typing:
+- [[denote:20220317T083536][Types are a form of self-documentation of code]]
+- [[denote:20220317T083748][Typing catches a large class of errors early in development]]
+- [[denote:20220317T084730][Types help machines infer programming intent]]
+
+How much typing is there?
+- [[denote:20220317T083149][Weak typing]]
+- [[denote:20220317T083155][Strong typing]]
+
+When are types determined:
+- [[denote:20220317T082929][Dynamic typing]] (run-time)
+- [[denote:20220317T082936][Static typing]] (compile time)
+
+Applying types:
+- [[denote:20220317T082958][Structural typing]]
+- [[denote:20220317T083007][Nominal typing]]
+- [[denote:20220310T202111][Duck typing]]

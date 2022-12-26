@@ -1,0 +1,11 @@
+:ctime:    20220422093429
+:END:
+#+title: Generate your configuration instead of templating it
+#+filetags: :stub:
+
+Templating is a slippery slope. It starts with some variables, but in the end you might be have
+for-loops, if-statements and everything you would expect of a [[denote:20220422T094328][Turing complete language]].
+
+- [[denote:20220422T093939][Jsonnet]]
+
+https://www.leebriggs.co.uk/blog/2019/02/07/why-are-we-templating-yaml.html

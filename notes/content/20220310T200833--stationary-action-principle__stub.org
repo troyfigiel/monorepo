@@ -1,0 +1,11 @@
+:ctime:    20220310200833
+:ROAM_ALIASES: "Principle of stationary action" "Principle of least action"
+:END:
+#+title: Stationary-action principle
+#+filetags: :stub:
+
+Sometimes called the principle of least action, but we are often only considering extremization of
+the [[denote:20220310T200840][Action]].
+
+- [[denote:20220412T201834][Euler-Lagrange equation]]
+- [[denote:20220412T201747][Calculus of variations]]

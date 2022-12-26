@@ -1,0 +1,6 @@
+:ctime:    20220424213636
+:END:
+#+title: Software versioning
+#+filetags: :stub:
+
+- [[denote:20220424T213645][Semantic versioning]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8bf7d68a-7fda-45d1-912d-aeec8f619b5a
-:mtime:    20220324125549
-:ctime:    20220324125518
-:END:
-#+title: Erdős–Rényi model
-#+filetags: :stub:
-
-

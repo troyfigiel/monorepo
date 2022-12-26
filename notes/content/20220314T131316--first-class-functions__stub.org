@@ -1,0 +1,6 @@
+:ctime:    20220314131316
+:END:
+#+title: First-class functions
+#+filetags: :stub:
+
+

@@ -1,0 +1,7 @@
+:ctime:    20220322180932
+:END:
+#+title: Hard clustering
+#+filetags: :stub:
+
+If we group data such that each point in the dataset can only be assigned to a single cluster. This
+is in contrast to [[denote:20220322T181005][Soft clustering]].

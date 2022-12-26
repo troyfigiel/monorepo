@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       899e57aa-8f20-4753-a972-4fe401b9c4b7
-:mtime:    20220318113822
-:ctime:    20220318113821
-:END:
-#+title: Beta-Geometric/NBD model
-#+filetags: :stub:
-
-

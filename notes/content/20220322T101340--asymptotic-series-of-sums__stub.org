@@ -1,0 +1,7 @@
+:ctime:    20220322101340
+:END:
+#+title: Asymptotic series of sums
+#+filetags: :stub:
+
+- [[denote:20220320T121203][Euler-Maclaurin formula]]
+- [[denote:20220322T101856][Abel-Plana formula]]

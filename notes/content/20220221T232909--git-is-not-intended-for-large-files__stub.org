@@ -1,0 +1,9 @@
+:ctime:    20220221232909
+:END:
+#+title: Git is not intended for large files
+#+filetags: :stub:
+
+For larger files, Git stores the entire history and every change to the file as a new file. This is
+due to its contant-addressable nature.
+
+Instead, in these cases other tools like [[denote:20220221T232959][Git LFS]] or [[denote:20220221T233008][dvc]] can be used.

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       0f8f1193-72fb-488b-a2e5-1fa48a2a4309
-:mtime:    20220314131318
-:ctime:    20220314131316
-:END:
-#+title: First-class functions
-#+filetags: :stub:
-
-

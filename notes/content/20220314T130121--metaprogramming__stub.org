@@ -1,0 +1,6 @@
+:ctime:    20220314130121
+:END:
+#+title: Metaprogramming
+#+filetags: :stub:
+
+

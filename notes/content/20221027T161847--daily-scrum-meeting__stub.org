@@ -1,0 +1,4 @@
+#+title: Daily Scrum meeting
+#+filetags: :stub:
+
+The daily Scrum is a [[denote:20221027T162449][Stand-up meeting]] where the [[denote:20221027T162906][Scrum team]] discusses what they have completed, what they are working on and any [[denote:20221027T162539][Blockers]].

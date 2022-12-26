@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       3cc7bced-7d12-4917-ba0c-6d6e97b26b22
-:mtime:    20220303175415
-:ctime:    20220303175408
-:END:
-#+title: Example - paired dichotomous disease risk
-#+filetags: :stub:
-
-https://www.graphpad.com/quickcalcs/McNemarEx.cfm

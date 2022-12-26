@@ -1,0 +1,6 @@
+#+title: Sprint backlog
+#+filetags: :stub:
+
+The sprint backlog contains individual tasks from the [[denote:20221027T155544][Product backlog]] that need to be finished during a [[denote:20221027T154550][Sprint]].
+
+It is important that the entire [[denote:20221027T162906][Scrum team]] and the [[denote:20221027T155224][Product owner]] have a clear understanding of what each [[denote:20221027T155728][User story]] involves.

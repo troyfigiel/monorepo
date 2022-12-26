@@ -1,0 +1,8 @@
+:ctime:    20220306182109
+:END:
+#+title: Raw data
+#+filetags: :stub:
+
+Examples: Pixels, words, sound waves, etc.
+
+[[denote:20220306T182828][For raw data only neural networks really work well]].

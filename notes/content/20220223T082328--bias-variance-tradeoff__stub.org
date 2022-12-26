@@ -1,0 +1,16 @@
+:ctime:    20220223082328
+:mtime:    20220310231315
+:END:
+#+title: Bias-variance tradeoff
+#+filetags: :stub:
+
+The bias-variance tradeoff is the idea that the variance of an estimated parameter is in tension
+with the bias in the estimated parameter.
+
+This means that [[denote:20220223T082948][Higher model complexity decreases bias, but increases variance]].
+In other words, we need to find a balance between [[denote:20220310T193752][Overfitting]] and [[denote:20220310T230548][Underfitting]].
+
+
+Example
+- [[denote:20220223T083106][bias-variance tradeoff for mean squared error]]
+- [[denote:20220223T092119][bias-variance tradeoff for k-nearest neighbours]]

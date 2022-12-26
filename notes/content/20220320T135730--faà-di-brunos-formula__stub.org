@@ -1,0 +1,7 @@
+:ctime:    20220320135730
+:END:
+#+title: Faà di Bruno's formula
+#+filetags: :stub:
+
+- This formula can be used to relate the [[denote:20220303T233535][Cumulant generating function]] to the [[denote:20220224T220044][Moment generating
+  function]] through the use of [[denote:20220320T140056][Bell polynomials]].

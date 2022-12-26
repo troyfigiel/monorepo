@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       ac68a10a-c01d-490a-889b-6b19009c87f2
-:mtime:    20220411182535
-:ctime:    20220411182534
-:END:
-#+title: Causal inference
-#+filetags: :stub:
-

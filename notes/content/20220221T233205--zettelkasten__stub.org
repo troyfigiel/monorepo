@@ -1,0 +1,10 @@
+:ctime:    20220221233205
+:END:
+#+title: Zettelkasten
+#+filetags: :stub:
+
+A Zettelkasten is a method of note-taking intended to be scalable.
+
+It works through linking different thoughts together instead of linearly writing a set of notes.
+
+- [[denote:20220314T213913][Non-linear note taking]]

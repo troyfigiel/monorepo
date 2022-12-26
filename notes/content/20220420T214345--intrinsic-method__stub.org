@@ -1,0 +1,6 @@
+:ctime:    20220420214345
+:END:
+#+title: Intrinsic method
+#+filetags: :stub:
+
+

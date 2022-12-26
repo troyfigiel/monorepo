@@ -1,0 +1,6 @@
+:ctime:    20220409000324
+:END:
+#+title: Replicator equation
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       59705d90-13fb-40dc-b1f0-6cf9da254206
-:mtime:    20220404214357
-:ctime:    20220404214153
-:END:
-#+title: Order parameter
-#+filetags: :stub:
-
-For example, in the [[id:f20fe09c-6435-4730-bc0a-2529c2029d4d][Ising model]] the magnetization can be used as an order parameter.

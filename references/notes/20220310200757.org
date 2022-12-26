@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       64f8614c-d414-42f8-98d5-e3fe0a08cdeb
-:mtime:    20220415203230
-:ctime:    20220310200757
-:END:
-#+title: Mathematics
-#+filetags: :stub:

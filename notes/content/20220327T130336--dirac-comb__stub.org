@@ -1,0 +1,6 @@
+:ctime:    20220327130336
+:END:
+#+title: Dirac comb
+#+filetags: :stub:
+
+This is the [[denote:20220327T123142][Wrapped distribution]] of the [[denote:20220303T222830][Dirac delta distribution]].

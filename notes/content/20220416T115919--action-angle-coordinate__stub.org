@@ -1,0 +1,6 @@
+:ctime:    20220416115919
+:END:
+#+title: Action-angle coordinate
+#+filetags: :stub:
+
+The action coordinates are [[denote:20220416T120019][Adiabatic invariants]].

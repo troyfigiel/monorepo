@@ -1,0 +1,6 @@
+:ctime:    20220322091707
+:END:
+#+title: The asymptotic expansion of a function is determined by the choice of an asymptotic sequence
+#+filetags: :stub:
+
+Once we fix an [[denote:20220322T091317][Asymptotic sequence]], the asymptotic series of a function is uniquely determined.

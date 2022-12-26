@@ -1,0 +1,6 @@
+:ctime:    20220324220547
+:END:
+#+title: Differential geometry
+#+filetags: :stub:
+
+[[denote:20220324T220521][Manifold]]

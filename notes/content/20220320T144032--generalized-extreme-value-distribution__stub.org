@@ -1,0 +1,7 @@
+:ctime:    20220320144032
+:ROAM_ALIASES: "GEV distribution"
+:END:
+#+title: Generalized extreme value distribution
+#+filetags: :stub:
+
+

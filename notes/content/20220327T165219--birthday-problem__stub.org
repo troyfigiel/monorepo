@@ -1,0 +1,6 @@
+:ctime:    20220327165219
+:END:
+#+title: Birthday problem
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ba62fa12-02b4-47cc-b2f8-95964e3d5e34
-:mtime:    20220328201818
-:ctime:    20220328201817
-:END:
-#+title: Log-odds
-#+filetags: :stub:
-
-

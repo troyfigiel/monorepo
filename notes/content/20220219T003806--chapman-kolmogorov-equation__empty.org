@@ -1,0 +1,5 @@
+#+title:      Chapman-Kolmogorov equation
+#+date:       [2022-02-19 Sat 00:38]
+#+filetags:   :empty:
+#+identifier: 20220219T003806
+

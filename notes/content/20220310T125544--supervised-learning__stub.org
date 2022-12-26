@@ -1,0 +1,10 @@
+:ctime:    20220310125544
+:END:
+#+title: Supervised learning
+#+filetags: :stub:
+
+Examples include:
+- [[denote:20220310T125652][Decision tree]]
+
+  Supervised learning is much easier to determine the quality of a prediction. This is in contrast
+  to [[denote:20220310T125611][Unsupervised learning]].

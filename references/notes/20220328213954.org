@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f255deb6-9194-457a-8657-5d5c06f51048
-:mtime:    20220328213955
-:ctime:    20220328213954
-:END:
-#+title: Recurrent Markov chain
-#+filetags: :stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220320140134
+:END:
+#+title: Laplace-type integral
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220224112750
+:END:
+#+title: Pandas
+#+filetags: :stub:
+
+[[denote:20220224T112658][Both Pandas and the Tidyverse allow for pipelining data transformations]].

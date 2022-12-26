@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8e845680-740d-4f7c-97fd-f4385dda9bf9
-:mtime:    20220316134415
-:ctime:    20220316134414
-:END:
-#+title: Self-documenting code
-#+filetags: :stub:
-
-

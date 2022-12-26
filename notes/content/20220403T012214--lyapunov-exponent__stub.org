@@ -1,0 +1,6 @@
+:ctime:    20220403012214
+:END:
+#+title: Lyapunov exponent
+#+filetags: :stub:
+
+

@@ -1,0 +1,14 @@
+:ctime:    20220323141106
+:END:
+#+title: Requirements for my system of notes
+
+The two main requirements I have for my notes are the following:
+- Finding back notes (possibly from a long time ago) is relatively painless
+- It is clear how to connect new notes to my older notes
+
+To fulfills these requirements, I find that it is important to keep what I would call [[denote:20220324T232040][Clean notes]]
+and remember that [[denote:20220324T222310][Connecting ideas requires a different form of note taking from communicating
+ideas]].
+
+[[denote:20220326T093602][The structure of my notes is modeled after the Zettelkasten principle]] and I have taken significant
+inspiration from [[denote:20220326T093803][Evergreen note-taking]] throughout many of the concepts I use to write my notes.

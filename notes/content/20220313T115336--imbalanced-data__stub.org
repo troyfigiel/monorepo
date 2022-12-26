@@ -1,0 +1,16 @@
+:ctime:    20220313115336
+:END:
+#+title: Imbalanced data
+#+filetags: :stub:
+
+"One of the most annoying and most difficult problems in ML."
+
+Normally, a misclassified positive counts the same as a misclassified negative. If we weigh
+positive counts differently from negative counts in the [[denote:20220211T085528][Loss function]], we can off-set the effect of
+imbalanced data.
+
+Always look at the [[denote:20220301T193147][Configuration drift]] to check the [[denote:20220311T131803][False positive rate]] and the [[denote:20220313T132557][False negative rate]].
+
+# TODO: Extend this beyong binary classification
+
+https://www.youtube.com/watch?v=k8AW4Zfq3U8

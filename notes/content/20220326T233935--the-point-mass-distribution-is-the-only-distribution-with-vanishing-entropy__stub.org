@@ -1,0 +1,19 @@
+:ctime:    20220326233935
+:END:
+#+title: The point mass distribution is the only distribution with vanishing entropy
+#+filetags: :stub:
+
+\[
+S = - \sum\limits_i p_i \log p_i = 0
+\]
+
+Then for each state \( p_i \log p_i = 0 \) , which can only happen if \( p_i = 0 \) or \( p_i = 1
+\).
+
+Since
+
+\[
+\sum\limits_i p_i = 1
+\]
+
+we must have the [[denote:20220303T222830][Point mass distribution]].

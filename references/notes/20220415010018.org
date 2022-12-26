@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       34f3f3ad-3ded-4885-9f5e-79e94e37b77a
-:mtime:    20220415010040
-:ctime:    20220415010018
-:END:
-#+title: Classical limit
-#+filetags: :stub:
-
-Closely related to the [[id:6e12566d-9909-4870-9837-a983dc605852][Semi-classical limit]].

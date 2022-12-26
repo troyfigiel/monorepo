@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       c04fba73-d874-473a-8f22-dfc39b749342
-:END:
-#+title: Metamorphic properties
-#+filetags: :stub:
-

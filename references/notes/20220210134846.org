@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       3b492b25-7d6f-4283-8899-1f0a201cb7f6
-:mtime:    20220225223628
-:ctime:    20220210134846
-:END:
-#+title: Cubic mean
-

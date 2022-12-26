@@ -1,0 +1,7 @@
+:ctime:    20220223094742
+:END:
+#+title: likelihood ratio
+#+filetags: :stub:
+
+* TODO
+Refer to [[denote:20220223T095727][likelihood-ratio test]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e6e3d556-bab7-432f-9f06-c001c1668bc2
-:mtime:    20220317083155
-:ctime:    20220317083155
-:END:
-#+title: Strong typing
-#+filetags: :stub:
-
-

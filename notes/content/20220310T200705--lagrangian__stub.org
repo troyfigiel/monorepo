@@ -1,0 +1,7 @@
+:ctime:    20220310200705
+:END:
+#+title: Lagrangian
+#+filetags: :stub:
+
+Used in many fields of [[denote:20220310T200725][Physics]] and [[denote:20220310T200757][Mathematics]]. It is derived from [[denote:20220310T200833][The principle of least action]].
+It leads to [[denote:20220324T213901][Lagrangian mechanics]] as a reformulation of [[denote:20220324T213920][Classical mechanics]].

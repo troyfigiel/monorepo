@@ -1,0 +1,9 @@
+:ctime:    20220310132043
+:END:
+#+title: Feature
+#+filetags: :stub:
+
+- [[denote:20220310T130103][Feature importance]]
+- [[denote:20220218T233518][Feature selection]]
+- [[denote:20220218T233133][Feature engineering]]
+- [[denote:20220310T132601][Feature vector]]

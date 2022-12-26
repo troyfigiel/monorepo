@@ -1,0 +1,10 @@
+:ctime:    20220327131111
+:END:
+#+title: Wrapped exponential distribution
+#+filetags: :stub:
+
+The wrapped exponential distribution is the [[denote:20220327T123142][Wrapped distribution]] obtained by wrapping the
+[[denote:20220210T094351][Exponential distribution]].
+
+It turns out that this is identical to the [[denote:20220304T135045][Truncated distribution]] of the [[denote:20220210T094351][Exponential distribution]]
+to the range \( 0 \leq \theta < 2 \pi \).

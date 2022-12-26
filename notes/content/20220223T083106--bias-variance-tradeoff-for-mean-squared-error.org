@@ -1,0 +1,40 @@
+:ctime:    20220223083106
+:END:
+#+title: bias-variance tradeoff for mean squared error
+
+Suppose we have a true function \( f(x) \) and we can observe the random variable \( y = f(x) + \epsilon
+\).
+
+Let \( \hat{f}(x; D) \) approximate the true function \( f(x) \) as well as possible by training a
+machine learning algorithm on some set of data \( D = \left\{ (x_{1}, y_{1}), ..., (x_{n}, y_{n}) \right\} \).
+
+This is achieved by minimizing \( \left( y - \hat{f}(x; D) \right)^{2} \) in our training set, but we
+also want this to be minimal on points outside of our training set.
+
+Using the following facts
+
+\begin{eqnarray*}
+\mathrm{Var}[X] & = & \mathbb{E}[X^{2}] - \mathbb{E}[X]^{²} \\
+\mathbb{E}[y] & = & f
+\end{eqnarray*}
+
+and the fact that \( \epsilon \) is noise, meaning that it is uncorrelated with
+
+we can rewrite
+
+\begin{equation*}
+\begin{align*}
+\mathbb{E}\left[ (y - \hat{f})^{²} \right] & = \mathbb{E}\left[ (f + \epsilon - \hat{f})^2^{} \right] \\
+& = f^{2} - 2 f \mathbb{E}[\hat{f}] + \mathbb{E}[\hat{f}^{²}] + \mathrm{Var}[\epsilon] \\
+& = \left( f - \mathbb{E}[\hat{f}] \right)^{2} + \mathbb{E}[\hat{f}^{2}] - \mathbb{E}[\hat{f}]^{2} + \mathrm{Var}[\epsilon] \\
+& = \mathrm{Bias}[\hat{f}]^{2} + \mathrm{Var}[\hat{f}] + \mathrm{Var}[\epsilon]
+\end{align*}
+\end{equation*}
+
+where all three terms are non-negative, meaning \( \mathrm{Var}[\epsilon] \) forms a lower bound on the
+quality of predictions.
+
+* TODO
+I don't really understand what \( \mathrm{Var}[\hat{f}] \) means. How should I interpret the
+bias-variance tradeoff? It is possible to have high bias and high variance obviously, but how does
+model complexity factor in? Maybe try linear regression for polynomials?

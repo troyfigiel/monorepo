@@ -1,0 +1,6 @@
+:ctime:    20220319115706
+:END:
+#+title: Zsh
+#+filetags: :stub:
+
+

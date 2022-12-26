@@ -1,0 +1,23 @@
+:ctime:    20220304150628
+:END:
+#+title: !Entropy per distribution
+#+filetags: :facts:stub:
+
+* Definition
+In the discrete case, the entropy of a random variable \( X \) is defined as
+
+\[
+H(X) = \mathbb{E}[- \log \mathbb{P}(X)]
+\]
+
+* Bernoulli distribution
+
+\[
+H(X) = - p \log p - (1-p) \log (1-p)
+\]
+
+* Binomial distribution
+
+\[
+H(X) = ...
+\]

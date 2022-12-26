@@ -1,0 +1,7 @@
+:mtime:    20220409001101
+:ctime:    20220409001053
+:END:
+#+title: Evolutionary game theory
+#+filetags: :stub:
+
+

@@ -1,0 +1,10 @@
+:ctime:    20220326093602
+:END:
+#+title: The structure of my notes is modeled after the Zettelkasten principle
+#+filetags: :stub:
+
+The structure of my notes is reminiscent of the [[denote:20220221T233205][Zettelkasten]] principle. because is do believe that
+[[denote:20220324T222310][Connecting ideas requires a different form of note taking from communicating ideas]].
+
+However, I also believe that notes should develop organically and that the Zettelkasten terminology has a more restrictive meaning that I would like.
+

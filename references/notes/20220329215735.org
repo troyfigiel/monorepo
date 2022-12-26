@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       fd78bc3a-bd24-48cc-87bc-7f5d22e92fa6
-:mtime:    20220329215813
-:ctime:    20220329215735
-:END:
-#+title: Permutation
-#+filetags: :stub:
-
-[[id:04782578-6681-47d0-a2b3-6c064f757673][Sign of a permutation]]

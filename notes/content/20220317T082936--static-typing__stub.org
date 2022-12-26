@@ -1,0 +1,6 @@
+:ctime:    20220317082936
+:END:
+#+title: Static typing
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220324125518
+:END:
+#+title: Erdős–Rényi model
+#+filetags: :stub:
+
+

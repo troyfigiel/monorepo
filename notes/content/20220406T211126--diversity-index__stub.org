@@ -1,0 +1,13 @@
+:ctime:    20220406211126
+:END:
+#+title: Diversity index
+#+filetags: :stub:
+
+The diversity index is defined in terms of the [[denote:20220210T133429][Generalized mean]]. More precisely, if \( M_p \) is
+the generalized mean,
+
+\[
+{}^{q}D = \frac{1}{M_{q-1}} = \left( \sum\limits_{i=1}^n x_i^q \right)^{\frac{1}{1-q}}
+\]
+
+In the limit \( q \rightarrow 1 \), this leads to the [[denote:20220406T210435][Perplexity]].

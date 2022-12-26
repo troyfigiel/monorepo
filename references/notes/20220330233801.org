@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d4f2cc57-3908-4530-a07c-dbbee3011ab4
-:mtime:    20220330233802
-:ctime:    20220330233801
-:END:
-#+title: Non-renormalizable theory
-#+filetags: :stub:
-
-

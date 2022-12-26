@@ -1,0 +1,15 @@
+:ctime:    20220316221649
+:END:
+#+title: Matplotlib
+#+filetags: :stub:
+
+Is an example of [[denote:20220316T221930][Imperative programming]].
+
+Advantages:
+- Many rendering backends
+- Very flexible, can produce basically any plot
+- Well-tested and standard tool
+
+Disadvantages:
+- API is imperative and verbose
+- Weak support for interactive charts

@@ -1,0 +1,21 @@
+:ctime:    20220223215901
+:END:
+#+title: Bell numbers are moments of Poisson distribution with unit rate parameter
+
+* Formal statement
+Let \( X \sim \mathrm{Pois}(1) \), then \( \mathbb{E}[X^{n}] = B_{n} \) where \( B_{n} \)  is the n-th [[denote:20220223T215421][Bell number]].
+
+* Proof
+This follows immediately from [[denote:20220223T214643][Dobiński's formula]]. Since \( X \sim \mathrm{Pois}(1) \), we have
+
+\[
+\mathbb{P}(X = k) = \frac{1}{k!e}
+\]
+
+Therefore,
+
+\[
+\mathbb{E}[X^{n}] = \frac{1}{e}\sum\limits_{k=0}^{\infty}\frac{k^{n}}{k!} = B_{n}
+\]
+
+where the second equality is Dobiński's formula.

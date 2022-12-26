@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       622bb467-39cf-4839-bcce-cbd7bfec5be5
-:mtime:    20220424213813
-:ctime:    20220424213813
-:END:
-#+title: API
-#+filetags: :stub:
-

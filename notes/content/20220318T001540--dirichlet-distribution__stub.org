@@ -1,0 +1,6 @@
+:ctime:    20220318001540
+:END:
+#+title: Dirichlet distribution
+#+filetags: :stub:
+
+The Dirichlet distribution is a multivariate generalization of the [[denote:20220314T181253][Beta distribution]].

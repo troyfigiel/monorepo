@@ -1,0 +1,9 @@
+:ctime:    20220303133811
+:END:
+#+title: Nested cross-validation
+#+filetags: :stub:
+
+Nested cross-validation is an example of a [[denote:20220303T132200][Model validation technique]]. It allows you to test
+how good an algorithm is.
+
+# TODO: What is really the difference between why we use nested CV vs. normal CV?

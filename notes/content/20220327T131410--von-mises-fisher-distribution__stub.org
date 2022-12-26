@@ -1,0 +1,6 @@
+:ctime:    20220327131410
+:END:
+#+title: Von Mises-Fisher distribution
+#+filetags: :stub:
+
+

@@ -1,0 +1,8 @@
+:ctime:    20220312093505
+:END:
+#+title: Version control system
+#+filetags: :stub:
+
+For example:
+- [[denote:20220218T230824][Git]]
+- [[denote:20220312T093531][Darcs]]

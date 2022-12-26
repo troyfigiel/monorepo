@@ -1,0 +1,8 @@
+:ctime:    20220314131430
+:END:
+#+title: Declarative programming
+#+filetags: :stub:
+
+[[denote:20220221T224049][Declarative operating system configuration]]
+[[denote:20220223T233802][A declarative system is bit-for-bit reproducible]]
+[[denote:20220301T192931][Rolling back to a previous configuration is trivial with a declarative system]]

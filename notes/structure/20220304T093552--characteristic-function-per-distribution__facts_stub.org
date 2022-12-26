@@ -1,0 +1,10 @@
+:ctime:    20220304093552
+:END:
+#+title: !Characteristic function per distribution
+#+filetags: :facts:stub:
+
+* Binomial distribution
+# TODO: Add characteristic function of the binomial distribution
+
+See:
+- [[denote:20220304T093244][?Characteristic function of the binomial distribution]]

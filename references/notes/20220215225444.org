@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       cb309f5a-c65c-4c56-8ea0-f5a5e86da157
-:mtime:    20220320162653
-:ctime:    20220215225444
-:END:
-#+title: Logistic regression
-

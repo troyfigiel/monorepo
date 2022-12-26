@@ -1,0 +1,7 @@
+:ctime:    20220303210545
+:END:
+#+title: Mixture model
+#+filetags: :stub:
+
+See:
+- [[denote:20220304T133117][Zero-inflated models are mixture models]]

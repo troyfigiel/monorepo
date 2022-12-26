@@ -1,0 +1,6 @@
+:ctime:    20220324215124
+:END:
+#+title: Aerodynamics
+#+filetags: :stub:
+
+

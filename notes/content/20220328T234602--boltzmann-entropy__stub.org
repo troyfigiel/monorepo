@@ -1,0 +1,6 @@
+:ctime:    20220328234602
+:END:
+#+title: Boltzmann entropy
+#+filetags: :stub:
+
+

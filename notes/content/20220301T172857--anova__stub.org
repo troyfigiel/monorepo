@@ -1,0 +1,6 @@
+:ctime:    20220301172857
+:END:
+#+title: ANOVA
+#+filetags: :stub:
+
+[[denote:20220301T172919][ANOVA is a special case of linear regression]]

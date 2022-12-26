@@ -1,0 +1,8 @@
+:ctime:    20220317083748
+:END:
+#+title: Typing catches a large class of errors early in development
+#+filetags: :stub:
+
+[[denote:20220317T083210][Type safety]]
+
+This makes it less bug-prone and makes [[denote:20220317T084112][Refactoring]] easier.

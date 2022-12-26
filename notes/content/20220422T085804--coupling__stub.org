@@ -1,0 +1,5 @@
+:ctime:    20220422085804
+:END:
+#+title: Coupling
+#+filetags: :stub:
+

@@ -1,0 +1,6 @@
+:ctime:    20220329232750
+:END:
+#+title: Jordan-Hölder theorem
+#+filetags: :stub:
+
+

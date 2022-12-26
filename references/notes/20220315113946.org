@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2b8ee7a6-a7d8-4e6d-8244-c441c8e98780
-:mtime:    20220315113947
-:ctime:    20220315113946
-:END:
-#+title: Chef
-#+filetags: :stub:
-
-

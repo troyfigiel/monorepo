@@ -1,0 +1,5 @@
+#+title:      Uniform distribution
+#+date:       [2022-02-11 Fri 09:44]
+#+filetags:   :empty:uniformdistribution:
+#+identifier: 20220211T094412
+

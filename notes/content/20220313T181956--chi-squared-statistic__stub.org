@@ -1,0 +1,6 @@
+:ctime:    20220313181956
+:END:
+#+title: Chi-squared statistic
+#+filetags: :stub:
+
+

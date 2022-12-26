@@ -1,0 +1,15 @@
+:ctime:    20220322143408
+:END:
+#+title: Argument principle
+#+filetags: :stub:
+
+Consider the problem of counting the difference in some contour \( \mathcal{C} \) between the
+number of zeros \( Z(f, \mathcal{C}) \) and the number of poles \( P(f, \mathcal{C}) \) of a
+meromorphic function \( f(z) \).
+
+The argument principle relates this number to the logarithmic derivative of \( f(z) \) through
+
+\[ \frac{1}{2 \pi i} \oint\limits_{\mathcal{C}} \frac{f^{\prime}(z)}{f(z)} = Z(f, \mathcal{C}) -
+P(f, \mathcal{C}) \]
+
+

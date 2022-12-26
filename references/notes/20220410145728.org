@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       88153cab-d821-4319-b2de-c1d49b847dae
-:mtime:    20220410145729
-:ctime:    20220410145728
-:END:
-#+title: Indicator function
-#+filetags: :stub:
-
-

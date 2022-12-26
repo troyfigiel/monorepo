@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       2dd52702-f2ce-4343-8e05-0936246a961a
-:mtime:    20220225223627
-:ctime:    20220216091152
-:END:
-#+title: Gauss-Markov theorem
-

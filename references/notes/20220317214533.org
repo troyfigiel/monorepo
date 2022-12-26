@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7b734547-3e22-4eb9-b82b-0b0ac9541080
-:mtime:    20220317214534
-:ctime:    20220317214533
-:END:
-#+title: Seaborn
-#+filetags: :stub:
-
-

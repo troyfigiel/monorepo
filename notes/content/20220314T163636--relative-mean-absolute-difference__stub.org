@@ -1,0 +1,7 @@
+:ctime:    20220314163636
+:ROAM_ALIASES: RMD
+:END:
+#+title: Relative mean absolute difference
+#+filetags: :stub:
+
+

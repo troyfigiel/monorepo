@@ -1,0 +1,6 @@
+:ctime:    20220313180502
+:END:
+#+title: Negative likelihood ratio
+#+filetags: :stub:
+
+

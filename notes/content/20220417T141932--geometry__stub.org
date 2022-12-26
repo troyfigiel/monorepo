@@ -1,0 +1,7 @@
+:ctime:    20220417141932
+:END:
+#+title: Geometry
+#+filetags: :stub:
+
+- [[denote:20220324T220547][Differential geometry]]
+- [[denote:20220417T142008][Conic section]]

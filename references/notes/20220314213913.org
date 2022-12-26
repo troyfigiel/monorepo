@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d3eb14c2-46b0-4ada-8551-a3b050eb6195
-:mtime:    20220314213914
-:ctime:    20220314213913
-:END:
-#+title: Non-linear note taking
-#+filetags: :stub:
-
-

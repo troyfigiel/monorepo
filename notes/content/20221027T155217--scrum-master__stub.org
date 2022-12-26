@@ -1,0 +1,4 @@
+#+title: Scrum master
+#+filetags: :stub:
+
+The Scrum master is responsible for keeping the Scrum process going and running the meetings.

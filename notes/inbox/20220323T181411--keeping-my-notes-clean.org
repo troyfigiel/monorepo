@@ -1,0 +1,94 @@
+#+title:      Keeping my notes clean
+#+date:       [2022-03-23 Wed 18:14]
+#+filetags:
+#+identifier: 20220323T181411
+
+* Stages in note-taking
+** Small notes
+If there are already notes on similar topics or if there are enough connections between high-level notes,
+it is often easy to link a couple of new notes on similar topics. In this case I tend to
+file my notes directly, adding a link with a slight amount of context to these hub notes.
+
+** Project notes
+If I do not have high-level notes yet, filing notes requires first creating the context. With this I mean I will often first dump information into a project related inbox and then slowly start extracting out the big ideas. This happens by creating links from the inbox to these high-level ideas and then moving the lower-level ideas out of the inbox and connecting them to the higher-level ideas. Finally, I have to place the entire project in a context so I can easily find it through for example indices. At that point I can delete the inbox note and most new notes will happen is in *Small notes*.
+
+* Tags
+I use tags only for meta data. This makes filtering by this meta data much easier. Together with the last maintenance time, it allows me to come back to notes at a later point in time. [[denote:20220323T180929][Tags are useful for metadata]] and [[denote:20220323T181020][Index notes are more flexible than tags]]. See also: [[denote:20220323T181950][Types of tags I use]]
+
+* Types of notes
+** Index notes
+** INBOX notes
+I try to create an INBOX note that is as close to what I am studying as possible. This ensures I can already start making connections and afterwards add in the meat of the notes that is coming from the INBOX. [[denote:20220323T180845][Empty notes with a succinct title clarify context]].
+
+** Appendix notes
+Sometimes, especially in mathematics, there are some topics that do not have a conceptual gold nugget in them that would make for a good story. [[denote:20220323T180659][Importance of story-telling]].
+
+** Fact notes
+For fact notes and index notes, org-transclusion is great. Most of the time you want to just get a fact and quickly check where it comes from. Proofs and appendices in general are great candidates for org-transclusion, because you might need them, but they're not that interesting in and by themselves.
+
+Transclusion also works well for writing blog posts, because I can transclude some paragraphs to build a first draft, since they're nothing but links put together. It is also great for software, because you can keep documentation up-to-date as the code evolves with a transclusion.
+
+* Random walks through notes
+
+* Randomly picking a note (or group of notes)
+Sometime notes have been duplicated by accident. This can happen in the early stages when the connections are not fully-fledged yet. In this case, some older notes might refer to one version while newer notes refer to another. It is important to spot these mistakes and randomly following connections might not bring your attention to this.
+
+* Random stuff from the README
+** How does it work?
+Follow links, use tags and see where you end up.
+
+** Tags
+3 types of tags:
+- Meta data
+- Thematic
+- Search tags
+
+*** Meta tags
+Such as "seedling", "theorem", etc.
+
+*** Thematic tags
+For example, everything related to "quantum". These would be interesting for finding relations between different fields. If one quantum topic relates to ML, maybe more do? That kind of thing.
+
+*** Search tags
+These tags lead to keyword notes. Different from index notes in the sense that an index note gives
+a ToC to closely related topics whereas keyword notes are more general.
+
+** Table of contents
+2 types of ToC notes:
+
+- Keyword note
+- Index note
+
+Compare to
+
+ToC of a book = keyword note
+ToC of a chapter = index note
+
+*** Keyword note
+To search for keyword notes, I could use double hashtag ##probability?
+Have to try it out.
+
+*** Index note
+TODO
+
+** Curation
+Each form of curation has advantages and disadvantages.
+
+Open random notes might allow you to think completely out of the box for a topic.
+Last maintenance time is great if you had more thoughts about a topic lately.
+
+*** Random local walk through graph
+Clean up whatever you see is wrong
+*** Topic-related clean up
+Think about a topic and clean up whatever relates to it
+*** Last maintenance time
+Look at when the note was last maintained and if it is longer than a set time, look at it again.
+*** Open random notes
+*** Checking seedlings and write them out
+
+** Search
+*** Regular expressions
+*** Tags
+*** Full-text search
+*** Dates
+Maybe a "last maintained at"-search, checking which notes in a cluster are too old?

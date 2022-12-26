@@ -1,0 +1,15 @@
+:ctime:    20220328143621
+:END:
+#+title: Multinomial coefficient
+#+filetags: :stub:
+
+The multinomial coefficients count the number of states in which we distribute \( n_1, n_2, ...,
+n_m \) over a total of \( N = n_1 + ... + n_m \).
+
+We can prove this by induction from the [[denote:20220306T173746][Binomial coefficients]] and the fact that these count the
+number of states in which we distribute \( n \) over \( N \). Indeed, we first distribute \( n_1 \)
+over \( N \), then \( n_2 \) over \( N - n_1 \), etc.
+
+\[
+\frac{N!}{(N-n_1)! n_1!} \frac{(N-n_1)!}{(N-n_1-n_2)! n_2!} ... = \frac{N!}{n_1! ... n_m!}
+\]

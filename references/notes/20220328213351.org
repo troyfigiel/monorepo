@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4f4d03fb-f463-4a9d-822b-8f8feae223d2
-:mtime:    20220328213351
-:ctime:    20220328213351
-:END:
-#+title: Induction
-#+filetags: :stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220311133137
+:END:
+#+title: F1-score
+#+filetags: :stub:
+
+The F1-score is the [[denote:20220210T132205][Harmonic mean]] of the [[denote:20220311T133119][Precision]] and the [[denote:20220311T131817][Sensitivity]].

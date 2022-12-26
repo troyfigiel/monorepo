@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c6c42715-28f5-4eba-97f8-1824ef47b788
-:mtime:    20220320010350
-:ctime:    20220320010349
-:END:
-#+title: Path integral formulation of quantum mechanics
-#+filetags: :stub:
-
-

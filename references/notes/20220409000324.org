@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ba1bac70-ca8a-4f54-a98e-c2deef2f4e20
-:mtime:    20220409000324
-:ctime:    20220409000324
-:END:
-#+title: Replicator equation
-#+filetags: :stub:
-
-

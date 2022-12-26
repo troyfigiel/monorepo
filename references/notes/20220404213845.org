@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       41d5eb3f-7ab4-4acc-b1d1-1343e6562964
-:mtime:    20220404221023
-:ctime:    20220404213845
-:END:
-#+title: Second-order phase transition
-#+filetags: :stub:
-
-This kind of phase transition does not involve [[id:ca32cd08-e5bf-4658-8348-eb1235f3b9cf][Latent heat]].

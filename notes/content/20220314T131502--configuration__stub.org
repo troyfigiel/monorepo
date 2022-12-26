@@ -1,0 +1,36 @@
+:ctime:    20220314131502
+:END:
+#+title: Configuration
+#+filetags: :stub:
+
+[[denote:20220314T130517][Configuration as code]]
+[[denote:20220301T193147][Configuration drift]]
+[[denote:20220221T234140][Literate programming fits to configuration files]]
+[[denote:20220221T235737][Lisp is a good configuration language]]
+
+Configuration is needed in many different places of your code. On the other hand, you want a single
+place to define them as otherwise it is hard to keep track of where it is used.
+
+This leads to a problem: You either have to pass the configuration around everywhere, leading to
+low [[denote:20220422T085812][Cohesion]] when you have to pass the configuration to all kinds of lower-level functions, or you
+can pass it around as a global variable leading to high [[denote:20220422T085804][Coupling]].
+
+Possible solutions:
+- Modularize and put settings only where they are needed. However, this makes it hard to find the
+  configuration.
+- Environment variables: Easy to change, but hard to structure, clutters your [[denote:20220422T090732][Environment]], you
+  don't know which variable is used where and moreover, from the code you don't even know which variables there are.
+
+
+https://www.youtube.com/watch?v=tEsPyYnzt8s
+
+- [[denote:20220422T091058][Parse, don't validate]]
+
+Because you can understand [[denote:20220314T130517][Configuration as code]], it makes sense to keep the configuration in a
+file of the same language. This means the parameters in your configuration are immediately
+type-safe. The downside is that it couples you to a single language and certain tools might need
+configuration files in [[denote:20220422T092447][YAML]], [[denote:20220316T224152][JSON]] or [[denote:20220422T092454][XML]] for example. In this case though, you can think about
+generating your configuration from your code. [[denote:20220422T093429][Generate your configuration instead of templating it]].
+
+If you have to be able to change the program from the outside, you will always need a layer in your
+code to sanitize the input.

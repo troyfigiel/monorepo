@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       acdfabca-d565-412a-bf99-58ae991b4104
-:END:
-#+title: Once the trust in numbers is gone, it is hard to earn it back
-#+filetags: :stub:
-
-You should not make too many mistakes in your numbers as a data scientist, because it will cause your business to not trust your work in the future.

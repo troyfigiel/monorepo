@@ -1,0 +1,18 @@
+:ctime:    20220403010117
+:END:
+#+title: Coarse-graining
+#+filetags: :stub:
+
+There are many different forms of coarse-graining, for example
+
+- [[denote:20220406T205311][Downsampling]]
+- Majority vote
+- Fourier-space (Like for a [[denote:20220322T175512][JPEG compression]])
+
+# TODO: Which one exactly?
+One of the [[denote:20220406T212635][Fundamental properties of information]] is a coarse-graining requirement.
+
+Sum of coarse-grained system plus a weighted sum over the microsystems that have been
+coarse-grained out.
+
+This shows that coarse-graining always decreases the entropy.

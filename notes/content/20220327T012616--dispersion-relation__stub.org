@@ -1,0 +1,6 @@
+:ctime:    20220327012616
+:END:
+#+title: Dispersion relation
+#+filetags: :stub:
+
+

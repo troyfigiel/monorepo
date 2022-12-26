@@ -1,0 +1,11 @@
+:ctime:    20220417142234
+:END:
+#+title: Conic sections are equidistant sets
+#+filetags: :stub:
+
+- [[denote:20220417T142008][Conic section]]
+- [[denote:20220417T142313][Equidistant set]]
+
+- [[denote:20220417T142400][?A parabola is the equidistant set of a line and a point]]
+- [[denote:20220417T145017][?An ellipse is the equidistant set of two nested circles]]
+- [[denote:20220417T152332][?A hyperbola is the equidistant set of two non-nested and non-intersecting circles]]

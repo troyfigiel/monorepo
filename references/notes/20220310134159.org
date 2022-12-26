@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d7d41df2-d755-49a1-8bfe-2e71a7a4d490
-:mtime:    20220310134201
-:ctime:    20220310134159
-:END:
-#+title: Gamma regression
-#+filetags: :stub:
-
-

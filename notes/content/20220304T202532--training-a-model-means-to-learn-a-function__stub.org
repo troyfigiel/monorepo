@@ -1,0 +1,13 @@
+:ctime:    20220304202532
+:END:
+#+title: Training a model means to learn a function
+#+filetags: :stub:
+
+When we train a model, we are doing nothing more and nothing less than building (a possibly highly
+complicated) function which takes data of a pre-determined form and and gives back a
+prediction. This implies that after training, the function should be considered as fixed until
+retraining happens.
+
+This has several subtle, but very important implications. For example
+- [[denote:20220304T182013][Normalization should be done only on the training set]]
+- [[denote:20220304T201608][Choices for variables to eliminate should be made using the training set]]

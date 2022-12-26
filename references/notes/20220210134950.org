@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       72679659-f19d-44b1-8d30-b697aca3cc53
-:mtime:    20220225223631
-:ctime:    20220210134950
-:END:
-#+title: Root mean square
-

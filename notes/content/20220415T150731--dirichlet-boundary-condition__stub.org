@@ -1,0 +1,6 @@
+:ctime:    20220415150731
+:END:
+#+title: Dirichlet boundary condition
+#+filetags: :stub:
+
+- [[denote:20220415T151008][Harmonic function]]

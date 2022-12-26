@@ -1,0 +1,8 @@
+:ctime:    20220304200835
+:END:
+#+title: The training and test sets must be properly randomized
+#+filetags: :stub:
+
+When doing a [[denote:20220303T132609][Train-test split]], the train and test sets must be correctly randomized. If the
+randomization technique in some way depends on the data itself, it is likely that a model picks up
+features it should not know about.

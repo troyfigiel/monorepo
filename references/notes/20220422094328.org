@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       e49723da-587f-4dc2-ab74-457dfeb52597
-:mtime:    20220422094329
-:ctime:    20220422094328
-:END:
-#+title: Turing complete language
-#+filetags: :stub:
-

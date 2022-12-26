@@ -1,0 +1,6 @@
+:ctime:    20220319103852
+:END:
+#+title: Geometric series
+#+filetags: :stub:
+
+

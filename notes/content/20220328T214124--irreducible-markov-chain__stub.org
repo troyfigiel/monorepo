@@ -1,0 +1,6 @@
+:ctime:    20220328214124
+:END:
+#+title: Irreducible Markov chain
+#+filetags: :stub:
+
+

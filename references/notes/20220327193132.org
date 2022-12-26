@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1f2fab28-54c0-4029-a801-f17774f278a1
-:mtime:    20220327193133
-:ctime:    20220327193132
-:END:
-#+title: Fokker-Planck equation
-#+filetags: :stub:
-
-

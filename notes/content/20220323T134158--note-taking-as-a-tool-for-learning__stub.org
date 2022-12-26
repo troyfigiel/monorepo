@@ -1,0 +1,10 @@
+:ctime:    20220323134158
+:END:
+#+title: Note taking as a tool for learning
+#+filetags: :stub:
+
+By writing down while thinking, I can make the boundaries of my understanding precise which in turn
+helps me focus on the minimal amount of information I am still lacking to make my thoughts
+concrete.
+
+Sometimes ideas sound good until you write them down.

@@ -1,0 +1,24 @@
+#+title:      Generalized mean
+#+date:       [2022-02-10 Thu 13:34]
+#+filetags:   :unfinished:
+#+identifier: 20220210T133429
+
+The generalized mean, also known as Hölder mean or power mean, is defined as
+
+\[ M_p (x_1, ..., x_n) = \left( \sum_{i = 1}^n x_i^p \right)^{1 / p} \]
+
+For some special values, this leads to
+
+- [[denote:20220210T133813][Maximum]] \( p \rightarrow \infty \)
+- [[denote:20220210T134846][Cubic mean]] \( p = 3 \)
+- [[denote:20220210T134950][Root mean square]] \( p = 2 \)
+- [[denote:20220210T131937][Arithmetic mean]] \( p = 1 \)
+- [[denote:20220210T132154][Geometric mean]] \( p \rightarrow 0 \)
+- [[denote:20220210T132205][Harmonic mean]] \( p = -1 \)
+- [[denote:20220210T135108][Minimum]] \( p \rightarrow - \infty \)
+
+Moreover, using [[denote:20220210T135234][Jensen's inequality]] we may prove that
+
+\[ M_p (x_1, ..., x_n) \leq M_q (x_1, ..., x_n) \]
+
+when \( p < q \) with strict equality only for \( x_1 = x_2 = ... = x_n \).

@@ -1,0 +1,7 @@
+:ctime:    20220303175618
+:END:
+#+title: Power function
+#+filetags: :stub:
+
+Although often the case, the power function is not always monotonically increasing, leading to the
+phenomenon of a [[denote:20220303T175451][Sawtooth power function]].

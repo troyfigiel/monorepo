@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       f20fe09c-6435-4730-bc0a-2529c2029d4d
-:mtime:    20220330124441
-:ctime:    20220329210550
-:END:
-#+title: Ising model
-#+filetags: :stub:
-

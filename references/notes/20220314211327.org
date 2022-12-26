@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e5c77c9a-6d8e-4ea0-8997-9e4a79db3117
-:mtime:    20220405094133
-:ctime:    20220314211327
-:END:
-#+title: Graph theory
-#+filetags: :stub:
-
-[[id:7313940d-ef08-4dac-85e6-273427ad7e92][Network theory]]

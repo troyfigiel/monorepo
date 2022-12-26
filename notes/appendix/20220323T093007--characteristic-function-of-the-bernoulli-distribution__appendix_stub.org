@@ -1,0 +1,6 @@
+:ctime:    20220323093007
+:END:
+#+title: ?Characteristic function of the Bernoulli distribution
+#+filetags: :appendix:stub:
+
+

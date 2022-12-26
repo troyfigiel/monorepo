@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       6eda8baf-2d53-4f90-836e-6bb298ac2c55
-:mtime:    20220225223630
-:ctime:    20220215232257
-:END:
-#+title: confidence interval
-

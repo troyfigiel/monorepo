@@ -1,0 +1,3 @@
+:END:
+#+title: Star network topology
+#+filetags: :stub:

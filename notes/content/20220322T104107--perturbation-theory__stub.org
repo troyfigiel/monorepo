@@ -1,0 +1,19 @@
+:ctime:    20220322104107
+:END:
+#+title: Perturbation theory
+#+filetags: :stub:
+
+Perturbation theory consists of a general set of methods used to approximate a complicated problem
+by treating it as a perturbation, i.e. small deviation, of an exactly solvable problem. This is
+often done order by order in a small parameter.
+
+In the best case scenario, the generated approximate solution smoothly approaches the exact
+solution. These are the cases of [[denote:20220322T104641][Regular perturbation problems]]. Sometimes the perturbative solution
+diverges, but we may still find a descent approximation by using [[denote:20220318T231524][Asymptotic series]].
+
+However, it can also happen that the behaviour is severe enough that we cannot even find such an
+expansion. For example, \( \epsilon \dot{x}(t) = x(t) \) has solutions of the form \( x(t) = x(0)
+\exp(t/\epsilon) \)  which become meaningless in the limit \( \epsilon \rightarrow 0 \). These are [[denote:20220322T105228][Singular perturbation problems]].
+
+There are many techniques to deal with perturbative problems. For example:
+- [[denote:20220322T105321][Renormalization]]

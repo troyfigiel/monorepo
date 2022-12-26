@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       94577d1c-a827-4ba7-8923-d34e77ef0259
-:mtime:    20220415111027
-:ctime:    20220415111025
-:END:
-#+title: Energy
-#+filetags: :stub:
-

@@ -1,0 +1,18 @@
+:ctime:    20220216090941
+:ROAM_ALIASES: OLS
+:END:
+#+title: ordinary least squares
+
+Ordinary least squares is a linear regression model \( y_i = \mathbf{x}_i^{\intercal} \mathbf{\beta}+ \epsilon_i \) where we aim to optimize the loss function
+
+\[
+S(\beta) = \left\Vert \mathbf{y} - \mathrm{X} \mathbf{\beta} \right\Vert
+\]
+
+It is well-known that [[denote:20220218T202913][OLS optimization is convex]]. When \( X \) is full-rank, it is even strictly convex implying that the [[denote:20220218T201759][OLS optimization has a unique solution]].
+
+Additionally, [[denote:20220218T202249][The OLS estimator is the maximum likelihood estimate for normally distributed errors]].
+
+Goodness-of-fit is commonly measured with the [[denote:20220218T202620][coefficient of determination]] denoted by \( R^2 \).
+
+

@@ -1,0 +1,12 @@
+:ctime:    20220223094325
+:mtime:    20220225223635
+:END:
+#+title: likelihood
+#+filetags: :stub:
+
+* TODO
+Refer to
+- [[denote:20220223T094013][log-likelihood]]
+- [[denote:20220223T094416][likelihood principle]]
+- [[denote:20220223T094742][likelihood ratio]]
+- [[denote:20220211T094619][Fisher information]]

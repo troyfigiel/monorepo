@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       a6c57baa-f4ff-490a-8ad3-cec129dc5833
-:mtime:    20220314184140
-:ctime:    20220314184028
-:END:
-#+title: ?The point mass distribution is the only distribution with vanishing Gini coefficient
-#+filetags: :appendix:stub:

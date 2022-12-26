@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       94a74114-4e0b-45e5-9661-465a8399d6ce
-:mtime:    20220322104642
-:ctime:    20220322104641
-:END:
-#+title: Regular perturbation problem
-#+filetags: :stub:
-
-

@@ -1,0 +1,9 @@
+:ctime:    20220326100631
+:END:
+#+title: Take small steps and reevaluate
+#+filetags: :stub:
+
+- [[denote:20220307T173055][CI/CD]]
+- Requirements change over time. High-level at the beginning, but the details cannot be filled in until you have a working prototype
+- Overwhelming from a psychological point of view to have to build everything at the same time.
+- [[denote:20220326T100849][Systems should remain functional in intermediate clean-up states]]

@@ -1,0 +1,7 @@
+:ctime:    20220302154115
+:END:
+#+title: Kendall rank correlation coefficient
+#+filetags: :stub:
+
+The Kendall rank coefficient is often used as a hypothesis test to check whether two parameters
+have a statistical dependence between each other.

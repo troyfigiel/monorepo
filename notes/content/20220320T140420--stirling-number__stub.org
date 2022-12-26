@@ -1,0 +1,6 @@
+:ctime:    20220320140420
+:END:
+#+title: Stirling number
+#+filetags: :stub:
+
+

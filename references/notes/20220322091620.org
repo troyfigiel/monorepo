@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       39de3457-be94-4f97-8551-26df2743240f
-:mtime:    20220322094517
-:ctime:    20220322091620
-:END:
-#+title: Transcendentally small terms are invisible to asymptotic series
-#+filetags: :stub:
-
-[[id:7af08f43-cef3-4387-b23d-7a4cdc18844f][Transcendentally small terms]]

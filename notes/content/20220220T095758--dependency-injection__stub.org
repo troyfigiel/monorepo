@@ -1,0 +1,5 @@
+:ctime:    20220220095758
+:END:
+#+title: dependency injection
+#+filetags: :stub:
+

@@ -1,0 +1,6 @@
+:ctime:    20220302214407
+:END:
+#+title: GNU Screen
+#+filetags: :stub:
+
+GNU Screen is an example of a [[denote:20220302T214519][Terminal multiplexer]]

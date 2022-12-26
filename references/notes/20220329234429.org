@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       aa7c348b-b8ae-47b3-8de5-cf4600ac8a49
-:mtime:    20220329234430
-:ctime:    20220329234429
-:END:
-#+title: Thermal equilibrium
-#+filetags: :stub:
-
-

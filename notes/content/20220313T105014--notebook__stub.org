@@ -1,0 +1,12 @@
+:ctime:    20220313105014
+:END:
+#+title: Notebook
+#+filetags: :stub:
+
+Examples:
+- [[denote:20220221T233852][Jupyter Notebook]]
+- [[denote:20220313T105053][R Notebook]]
+
+Some notes regarding notebooks:
+- [[denote:20220224T112337][Notebooks and spreadsheets are appropriate in different situations]]
+- [[denote:20220313T105215][Notebooks versus REPLs]]

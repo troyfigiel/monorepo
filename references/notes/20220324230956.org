@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0832bb79-4908-4f5c-8a9d-19427ea2191f
-:mtime:    20220324231033
-:ctime:    20220324230956
-:END:
-#+title: Tag a container with a commit hash
-#+filetags: :stub:
-

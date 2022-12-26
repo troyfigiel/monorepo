@@ -1,0 +1,6 @@
+:ctime:    20220408203227
+:END:
+#+title: Inner product
+#+filetags: :stub:
+
+[[denote:20220408T220155][Triangle inequality]]

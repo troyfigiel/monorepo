@@ -1,0 +1,9 @@
+:ctime:    20220309134118
+:END:
+#+title: Ignoring files in git
+#+filetags: :stub:
+
+The standard way of ignoring a file using git is by setting it in `.gitignore`. However, there are
+more ways to do so:
+- Add the file to `.git/info/exclude` for project-level ignoring
+- Add the file to `~/.config/git/ignore` for user-level ignoring

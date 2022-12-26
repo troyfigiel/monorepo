@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       c8791002-0d56-45e6-994f-1fa4c991cd00
-:mtime:    20220326224439
-:ctime:    20220211094412
-:END:
-#+title: Uniform distribution
-

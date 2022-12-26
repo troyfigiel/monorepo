@@ -1,0 +1,38 @@
+:ctime:    20220328135830
+:END:
+#+title: Motivating the functional form of entropy
+#+filetags: :stub:
+
+If we consider [[denote:20220328T143343][?Stirling's approximation applied to the multinomial coefficients]], we see that the
+entropy appears naturally through the application of [[denote:20220218T213931][Stirling's approximation]] to the [[denote:20220328T143621][Multinomial
+coefficients]].
+
+The logarithm of the multinomial coefficients have some desirable properties that carry over after
+the approximation:
+
+1. The maximum value is attained for \( k_1 = ... = k_m \) (or as close to equal as possible).
+2. The values are symmetric under an arbitrary permutation of \( (k_1, ..., k_m) \).
+3. The logarithm is non-negative and only vanishes when some \( k_i = n \).
+# TODO: Fourth property is the additivity of the logarithm for non-interacting systems
+
+Consider the case where we start with a system in a specific state and it is free to evolve by
+every time step increasing some \( k_i \) by 1 and decreasing some \( k_j \) by 1, possibly the
+same state.
+
+# TODO: Move this Markov chain to the second law of thermodynamics.
+# TODO: Take the two gas bottle example of the Markov chain and calculate the steady state.
+# TODO: Should we have a separate note type for illuminating examples that connect different fields?
+This defines a [[denote:20220210T195925][Markov chain]] with \( n^2 \) possible state transitions and [[denote:20220323T225426][Transition probability
+matrix]] given by:
+
+\[
+\mathbb{P}(k_i \rightarrow k_j)
+&= \mathbb{P}_{ij} \\
+&= \frac{k_i k_j}{n^2}
+\]
+
+In the long-time limit, this Markov chain reaches the [[denote:20220323T225436][Steady state distribution]] defined by
+
+\[
+p(k_1, ..., k_m) = \frac{n!}{k_1! ... k_m!}
+\]

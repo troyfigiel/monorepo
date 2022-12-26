@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d13000c6-4b5b-4e51-9fe4-59ec76e66164
-:mtime:    20220225223636
-:ctime:    20220224112708
-:END:
-#+title: Tidyverse
-#+filetags: :stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220310201345
+:END:
+#+title: Hinge loss function
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6b106fba-651c-469c-a1e2-30652bb6cca9
-:mtime:    20220329000405
-:ctime:    20220329000405
-:END:
-#+title: Cauchy-Riemann equations
-#+filetags: :stub:
-
-

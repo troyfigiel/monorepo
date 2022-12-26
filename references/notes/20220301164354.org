@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       beba6f9c-e267-4314-90a5-71f150defc1f
-:mtime:    20220301164356
-:ctime:    20220301164354
-:END:
-#+title: Total order
-#+filetags: :stub:
-
-

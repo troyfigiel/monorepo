@@ -1,0 +1,8 @@
+:ctime:    20220306182059
+:END:
+#+title: Tabular data
+#+filetags: :stub:
+
+Variables are counts, categories, numbers, etc.
+
+[[denote:20220306T182632][Most models built on tabular data have similar performance]]

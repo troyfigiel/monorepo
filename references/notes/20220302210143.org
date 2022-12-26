@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1334aadb-9a6c-47aa-9afb-72a8ecee65a3
-:mtime:    20220302210143
-:ctime:    20220302210143
-:END:
-#+title: Adjusted R^2
-#+filetags: :stub:
-
-

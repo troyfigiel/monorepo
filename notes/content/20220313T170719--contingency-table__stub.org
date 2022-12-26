@@ -1,0 +1,6 @@
+:ctime:    20220313170719
+:END:
+#+title: Contingency table
+#+filetags: :stub:
+
+

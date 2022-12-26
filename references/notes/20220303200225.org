@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       eb3bf387-4c70-4e6e-afdc-7d649765e0be
-:mtime:    20220303200227
-:ctime:    20220303200225
-:END:
-#+title: Polynomial regression
-#+filetags: :stub:
-
-

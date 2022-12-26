@@ -1,0 +1,11 @@
+:mtime:    20220318001618
+:ctime:    20220318001205
+:END:
+#+title: Latent Dirichlet allocation
+#+filetags: :stub:
+
+The LDA model is a [[denote:20220318T001230][Generative model]].
+
+# TODO: It is used in NLP, but when exactly and can we use it outside of NLP?
+
+Related: [[denote:20220318T001540][Dirichlet distribution]].

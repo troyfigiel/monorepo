@@ -1,0 +1,6 @@
+:ctime:    20220329215709
+:END:
+#+title: Normal subgroup
+#+filetags: :stub:
+
+

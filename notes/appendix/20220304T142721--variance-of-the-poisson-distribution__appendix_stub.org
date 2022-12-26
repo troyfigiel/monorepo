@@ -1,0 +1,6 @@
+:ctime:    20220304142721
+:END:
+#+title: ?Variance of the Poisson distribution
+#+filetags: :appendix:stub:
+
+

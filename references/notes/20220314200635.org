@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f60c5302-be0d-4abb-abcc-dcba8bad0ac2
-:mtime:    20220314200636
-:ctime:    20220314200635
-:END:
-#+title: Fuzzy union operation
-#+filetags: :stub:
-
-

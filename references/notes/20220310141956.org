@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2abd73b1-b9c9-4a8b-84bb-fde3fe43c448
-:mtime:    20220310141957
-:ctime:    20220310141956
-:END:
-#+title: Perceptron
-#+filetags: :stub:
-
-

@@ -1,0 +1,8 @@
+:ctime:    20220314130302
+:END:
+#+title: Code as data
+#+filetags: :stub:
+
+If we are doing [[denote:20220314T130121][Metaprogramming]], we are making use of the fact that code can be considered as data.
+
+[[denote:20220314T130431][Abstract syntax tree]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       680cbce3-7675-400d-951a-84826187ad21
-:mtime:    20220302091856
-:ctime:    20220302091855
-:END:
-#+title: GPL license
-#+filetags: :stub:
-
-

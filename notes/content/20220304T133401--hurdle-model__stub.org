@@ -1,0 +1,6 @@
+:ctime:    20220304133401
+:END:
+#+title: Hurdle model
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220304142841
+:END:
+#+title: ?Mean of the binomial distribution
+#+filetags: :appendix:stub:
+
+

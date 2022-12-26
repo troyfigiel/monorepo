@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       2ba59e71-71d2-45ed-b543-dd701757bde0
-:mtime:    20220406212052
-:ctime:    20220210132154
-:END:
-#+title: Geometric mean
-#+filetags: :stub:
-

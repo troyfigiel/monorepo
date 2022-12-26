@@ -1,0 +1,6 @@
+:ctime:    20220225083408
+:END:
+#+title: Independent variable
+#+filetags: :stub:
+
+

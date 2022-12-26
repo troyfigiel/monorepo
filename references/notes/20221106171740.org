@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       d61ea814-0a7c-4145-9ffc-9da4c7879076
-:mtime:    20221106171741
-:ctime:    20221106171740
-:END:
-#+title: Continuous deployment
-#+filetags: :stub:

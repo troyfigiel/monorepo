@@ -1,0 +1,7 @@
+:ctime:    20220319115600
+:ROAM_ALIASES: "First-class entity"
+:END:
+#+title: First-class citizen
+#+filetags: :stub:
+
+For example: [[denote:20220314T131316][First-class functions]].

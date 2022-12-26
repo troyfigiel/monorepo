@@ -1,0 +1,6 @@
+:ctime:    20220320152349
+:END:
+#+title: ?Characteristic function of the logistic distribution
+#+filetags: :stub:
+
+

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       ca9dc6f4-50cc-4b75-8121-bf2ac9672af2
-:END:
-#+title: QuickCheck
-#+filetags: :stub:
-
-A Haskell library designed for [[id:4f921a7a-517c-403f-965b-d988c4caecd1][Property-based testing]].

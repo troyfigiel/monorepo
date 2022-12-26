@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e1701e68-43e8-4a57-8f7a-efd9e5a9a0ff
-:mtime:    20220404200549
-:ctime:    20220404200549
-:END:
-#+title: Von Neumann entropy
-#+filetags: :stub:
-
-

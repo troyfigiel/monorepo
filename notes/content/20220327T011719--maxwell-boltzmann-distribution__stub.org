@@ -1,0 +1,6 @@
+:ctime:    20220327011719
+:END:
+#+title: Maxwell-Boltzmann distribution
+#+filetags: :stub:
+
+

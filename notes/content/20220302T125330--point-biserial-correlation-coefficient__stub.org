@@ -1,0 +1,12 @@
+:ctime:    20220302125330
+:END:
+#+title: Point-biserial correlation coefficient
+#+filetags: :stub:
+
+The point-biserial correlation coefficient is a [[denote:20220302T125352][Correlation coefficient]] that is used when one
+variable is dichotomous and another is continuous.
+
+# TODO: This is mathematically equivalent to the Pearson correlation? How?
+[[denote:20220211T100443][Pearson correlation coefficient]]
+
+https://en.wikipedia.org/wiki/Point-biserial_correlation_coefficient

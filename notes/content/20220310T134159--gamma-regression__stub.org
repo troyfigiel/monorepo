@@ -1,0 +1,6 @@
+:ctime:    20220310134159
+:END:
+#+title: Gamma regression
+#+filetags: :stub:
+
+

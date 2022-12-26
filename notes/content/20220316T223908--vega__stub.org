@@ -1,0 +1,7 @@
+:ctime:    20220316223908
+:END:
+#+title: Vega
+#+filetags: :stub:
+
+Used for [[denote:20220316T220449][Visualization]]. This is a more detailed output than [[denote:20220316T220552][Vega-Lite]], but is still an example of
+[[denote:20220314T131430][Declarative programming]]. It is built on top of [[denote:20220316T224120][D3]] and is a [[denote:20220316T224152][JSON]]-specification.

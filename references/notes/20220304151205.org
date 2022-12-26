@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5483563d-c9a0-4565-b5c8-873995b6db24
-:mtime:    20220304151206
-:ctime:    20220304151205
-:END:
-#+title: De Moivre-Laplace theorem
-#+filetags: :stub:
-
-

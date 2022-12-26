@@ -1,0 +1,6 @@
+:ctime:    20220224220044
+:END:
+#+title: Moment generating function
+#+filetags: :stub:
+
+

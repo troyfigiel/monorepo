@@ -1,0 +1,12 @@
+:ctime:    20220218201759
+:END:
+#+title: OLS optimization has unique solution
+
+The solution is given by
+
+\[
+\hat{\beta} = \left( X^{\intercal}X \right)^{-1} X^{\intercal}Y
+\]
+
+# TODO: Expand on why this is the case
+Due to the inversion, it can be seen that [[denote:20220302T105730][Multicollinearity]] can prove problematic.

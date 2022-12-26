@@ -1,0 +1,9 @@
+:ctime:    20220223215421
+:END:
+#+title: Bell number
+#+filetags: :stub:
+
+# TODO: Finish this sentence
+The Bell numbers count the
+
+They can be calculated using [[denote:20220223T214643][Dobiński's formula]].

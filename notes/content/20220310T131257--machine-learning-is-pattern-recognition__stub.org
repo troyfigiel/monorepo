@@ -1,0 +1,13 @@
+:ctime:    20220310131257
+:END:
+#+title: Machine learning is pattern recognition
+#+filetags: :stub:
+
+Machine learning is pattern recognition. We give the computer numerous examples and aim for it to
+pick up on the pattern hidden inside the data.
+
+This also means the data does not have to be perfect. It could be that there are some mislabeled
+datapoints, but the computer can still pick up on the underlying pattern.
+
+# TODO: Relates to overfitting and underfitting (capturing too much noise into the pattern
+# vs. capturing too little of the pattern)

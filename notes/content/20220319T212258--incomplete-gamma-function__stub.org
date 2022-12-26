@@ -1,0 +1,12 @@
+:ctime:    20220319212258
+:END:
+#+title: Incomplete gamma function
+#+filetags: :stub:
+
+- [[denote:20220319T212306][Gamma function]]
+- [[denote:20220319T212327][Upper incomplete gamma function]]
+- [[denote:20220319T212348][Lower incomplete gamma function]]
+
+Special cases:
+- [[denote:20220318T233351][Exponential integral]]
+- [[denote:20220319T212416][Error function]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       3fcb4f6e-420d-46d5-af95-f4f56eb1e339
-:mtime:    20220302091913
-:ctime:    20220302090424
-:END:
-#+title: Linux
-#+filetags: :stub:
-
-Linux is a family of open-source operating systems based on [[id:4b070be7-49a4-4506-bad4-973482ef43a3][Unix]]. It is distributed under the [[id:680cbce3-7675-400d-951a-84826187ad21][GPL license]].

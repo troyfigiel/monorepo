@@ -1,0 +1,6 @@
+:ctime:    20220405214050
+:END:
+#+title: Microstate
+#+filetags: :stub:
+
+Microstates: [[denote:20220324T214009][Momenta]], positions, [[denote:20220324T213756][Hamiltonian]], [[denote:20220324T213832][Hamiltonian mechanics]]

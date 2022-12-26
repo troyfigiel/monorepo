@@ -1,0 +1,17 @@
+:ctime:    20220316150204
+:END:
+#+title: Attribution model
+#+filetags: :stub:
+
+Splits into:
+- [[denote:20220316T150431][Single-touch attribution]]
+- [[denote:20220316T150440][Multi-touch attribution]]
+
+Examples of single-touch:
+- [[denote:20220316T150458][First-touch attribution]]
+- [[denote:20220316T150509][Last-touch attribution]]
+
+Examples of multi-touch:
+- Using [[denote:20220210T195925][Markov chain]] and calculating the [[denote:20220316T150239][Removal effect]].
+- Using the [[denote:20220316T150250][Shapley value]] and [[denote:20220316T150256][Game theory]].
+- [[denote:20220316T150309][Linear attribution]]

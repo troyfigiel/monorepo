@@ -1,0 +1,6 @@
+:ctime:    20220401234433
+:END:
+#+title: Density of states
+#+filetags: :stub:
+
+The density of states is understood as a probability distribution for the energy of a system.

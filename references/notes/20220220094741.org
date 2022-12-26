@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       1b0f0cbf-5ed8-4e1b-85f7-09b011c293fb
-:mtime:    20220225223626
-:ctime:    20220220094741
-:END:
-#+title: Julia
-#+filetags: :stub:
-

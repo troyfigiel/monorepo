@@ -1,0 +1,9 @@
+:ctime:    20220324214254
+:END:
+#+title: Laws of thermodynamics
+#+filetags: :stub:
+
+- [[denote:20220326T000600][Zeroth law of thermodynamics]]
+- [[denote:20220324T214306][First law of thermodynamics]]
+- [[denote:20220324T214316][Second law of thermodynamics]]
+- [[denote:20220324T214325][Third law of thermodynamics]]

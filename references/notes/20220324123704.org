@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1db92312-2449-4365-b12c-daa40608e117
-:mtime:    20220324123705
-:ctime:    20220324123704
-:END:
-#+title: Kolmogorov's zero-one law
-#+filetags: :stub:
-
-

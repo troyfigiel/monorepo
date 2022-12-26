@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5610c235-edd5-4506-9835-0959b45d9bf4
-:mtime:    20220316224137
-:ctime:    20220316224120
-:END:
-#+title: D3
-#+filetags: :stub:
-
-D3 is a [[id:9d2e5fe4-39f5-4428-9248-1da52876d168][JavaScript]] package aimed at [[id:5aa3405a-5785-424a-ae15-f7d0ec5124ea][Visualization]].

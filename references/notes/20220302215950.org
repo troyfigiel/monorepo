@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       86e9ae17-1491-4957-89b7-6b080e9913bf
-:mtime:    20220302215951
-:ctime:    20220302215950
-:END:
-#+title: Type II censoring
-#+filetags: :stub:
-
-

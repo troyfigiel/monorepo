@@ -1,0 +1,6 @@
+:ctime:    20220322175531
+:END:
+#+title: Lossy compression
+#+filetags: :stub:
+
+Loses information in contrast to a [[denote:20220322T175547][Lossless compression]] algorithm.

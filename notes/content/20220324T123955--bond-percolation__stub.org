@@ -1,0 +1,6 @@
+:ctime:    20220324123955
+:END:
+#+title: Bond percolation
+#+filetags: :stub:
+
+

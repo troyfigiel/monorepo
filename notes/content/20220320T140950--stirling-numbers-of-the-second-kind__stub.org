@@ -1,0 +1,6 @@
+:ctime:    20220320140950
+:END:
+#+title: Stirling numbers of the second kind
+#+filetags: :stub:
+
+

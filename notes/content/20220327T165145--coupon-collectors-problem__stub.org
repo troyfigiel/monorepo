@@ -1,0 +1,6 @@
+:ctime:    20220327165145
+:END:
+#+title: Coupon collector's problem
+#+filetags: :stub:
+
+

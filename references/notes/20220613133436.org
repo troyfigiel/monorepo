@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       2da2e3f2-84af-4aa8-b45a-616364568304
-:END:
-#+title: Data analysis
-#+filetags: :stub:
-

@@ -1,0 +1,12 @@
+:ctime:    20220304195624
+:END:
+#+title: Create a train-test split before any preprocessing, normalization or training
+#+filetags: :stub:
+
+If we use a [[denote:20220303T132609][Train-test split]], the intended purpose of the test set is to allow us to determine how
+good our algorithm performs. In other words, we split the data as soon as we receive it and only
+use it once we have to check our model performance.
+
+For this to work
+- [[denote:20220304T200642][Both the training and test sets must be representative of the whole population]]
+- [[denote:20220304T200835][The training and test sets must be properly randomized]]

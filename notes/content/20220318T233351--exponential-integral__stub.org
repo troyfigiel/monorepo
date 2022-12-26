@@ -1,0 +1,11 @@
+:ctime:    20220318233351
+:END:
+#+title: Exponential integral
+#+filetags: :stub:
+
+Can be related to the [[denote:20220319T212258][Incomplete gamma function]]
+\[
+E_1(x) = \int\limits_1^{\infty} \frac{e^{-tx}}{t} \, dt
+\]
+
+See [[denote:20220318T233342][?Asymptotic series of the exponential integral]].

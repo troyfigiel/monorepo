@@ -1,0 +1,5 @@
+:ctime:    20220220094827
+:END:
+#+title: Bash
+#+filetags: :stub:
+

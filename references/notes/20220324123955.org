@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       dc456871-827b-4ea2-b704-1df68694f0b2
-:mtime:    20220324124120
-:ctime:    20220324123955
-:END:
-#+title: Bond percolation
-#+filetags: :stub:
-
-

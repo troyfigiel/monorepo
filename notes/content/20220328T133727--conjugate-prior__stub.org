@@ -1,0 +1,6 @@
+:ctime:    20220328133727
+:END:
+#+title: Conjugate prior
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220302110819
+:END:
+#+title: Moment matrix
+#+filetags: :stub:
+
+[[denote:20220302T112600][The moment matrix is not invertible in the presence of perfect multicollinearity]].

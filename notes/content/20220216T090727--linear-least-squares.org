@@ -1,0 +1,17 @@
+:ctime:    20220216090727
+:END:
+#+title: Linear least squares
+
+Linear least squares is a form of [[denote:20220215T221824][Linear regression]] with a loss function that loosely takes the form of the
+squares of residuals.
+
+There are several different implementations of linear least squares regression, valid for different scenarios
+
+- [[denote:20220216T090941][ordinary least squares]]
+- [[denote:20220216T090952][weighted least squares]]
+- [[denote:20220216T091004][generalized least squares]]
+
+# TODO: Make into a separate note
+This regression has a closed-form solution.
+
+# TODO: Does the linear least squares always have an exact solution?

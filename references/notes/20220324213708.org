@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1fc2c8b6-75e1-45a5-b085-ad23b5b1ba6c
-:mtime:    20220324213710
-:ctime:    20220324213708
-:END:
-#+title: Phonon
-#+filetags: :stub:
-
-

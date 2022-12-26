@@ -1,0 +1,8 @@
+:ctime:    20220218234855
+:END:
+#+title: topological data analysis
+
+Topological data analysis (TDA) uses techniques from topology to study datasets.
+
+* TODO
+TDA provides tools to detect recurrent motion such as in the [[denote:20220218T235052][Lotka-Volterra equations]].

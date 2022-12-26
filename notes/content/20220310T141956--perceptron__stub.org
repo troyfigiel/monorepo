@@ -1,0 +1,6 @@
+:ctime:    20220310141956
+:END:
+#+title: Perceptron
+#+filetags: :stub:
+
+

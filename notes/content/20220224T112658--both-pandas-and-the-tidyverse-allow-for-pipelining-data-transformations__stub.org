@@ -1,0 +1,10 @@
+:ctime:    20220224112658
+:END:
+#+title: Both Pandas and the Tidyverse allow for pipelining data transformations
+#+filetags: :stub:
+
+In the [[denote:20220224T112708][Tidyverse]] this is embedded in the syntax with the `%>%` operator, but the [[denote:20220224T112750][Pandas]] library in
+Python allows for a similar pipeline syntax by using [[denote:20220224T113006][method chaining]].
+
+Ultimately, this means both tools are just as capable of transforming data since [[denote:20220224T113221][Data
+transformations naturally form a pipeline]].

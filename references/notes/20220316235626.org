@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5b0a20ee-3263-4dab-bd0e-386db1dbe761
-:mtime:    20220316235627
-:ctime:    20220316235626
-:END:
-#+title: ggplot2
-#+filetags: :stub:
-
-

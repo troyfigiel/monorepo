@@ -1,0 +1,11 @@
+:ctime:    20220215233710
+:END:
+#+title: skewness
+
+Skewness is a measure of the asymmetry of a probability distribution about its mean.
+
+Although skewness sometimes refers to [[denote:20220215T234009][nonparametric skew]], the standard definition uses the third standardized moment, defined as
+
+\[
+\tilde{\mu}_3 = \mathbb{E} \left[ \left( \frac{X - \mu}{\sigma} \right)^3 \right]
+\]

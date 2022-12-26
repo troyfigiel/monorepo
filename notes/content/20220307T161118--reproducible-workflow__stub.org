@@ -1,0 +1,8 @@
+:ctime:    20220307161118
+:END:
+#+title: Reproducible workflow
+#+filetags: :stub:
+
+See
+- [[denote:20220221T233008][dvc]]
+- [[denote:20220307T161333][Guix, CWL, IPFS]]

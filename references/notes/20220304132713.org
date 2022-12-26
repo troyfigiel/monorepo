@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       3e6ed4fc-8d04-4e28-880a-09511262e563
-:mtime:    20220329003941
-:ctime:    20220304132713
-:END:
-#+title: Random walk
-#+filetags: :stub:
-
-Random walks are a good model for statistical mechanical phenomena.

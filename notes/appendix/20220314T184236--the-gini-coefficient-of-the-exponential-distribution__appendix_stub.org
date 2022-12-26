@@ -1,0 +1,21 @@
+:ctime:    20220314184236
+:END:
+#+title: ?The Gini coefficient of the exponential distribution
+#+filetags: :appendix:stub:
+
+For the exponential distribution we have \( f(x) = \lambda e^{-\lambda x} \) and \( x \geq 0 \).
+Therefore,
+
+\begin{equation*}
+\begin{align}
+G
+&= \frac{1}{2 \mathbb{E}[X]} \int\limits_0^{\infty} \int\limits_0^{\infty} |s-t| f(s) f(t) \, ds \, dt \\
+&= \frac{\lambda^3}{2} \int\limits_0^{\infty} \int\limits_0^{\infty} |s-t| e^{-\lambda (s + t)} \, ds \, dt \\
+&= \frac{1}{2} \int\limits_0^{\infty} \int\limits_0^{\infty} |u-v| e^{-u-v} \, du \, dv \\
+&= \int\limits_0^{\infty} \int\limits_v^{\infty} (u-v) e^{-u-v} \, du \, dv \\
+&= \int\limits_0^{\infty} e^{-2v} \, dv \\
+&= \frac{1}{2}
+\end{align}
+\end{equation*}
+
+See also: [[denote:20220314T184955][?The mean of the exponential distribution]].

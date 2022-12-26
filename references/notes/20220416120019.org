@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0e7cee73-72e6-4c18-9173-592cd8f90582
-:mtime:    20220416120021
-:ctime:    20220416120019
-:END:
-#+title: Adiabatic invariant
-#+filetags: :stub:
-

@@ -1,0 +1,5 @@
+:ctime:    20220414172843
+:END:
+#+title: Clean code
+#+filetags: :stub:
+

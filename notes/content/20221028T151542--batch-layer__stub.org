@@ -1,0 +1,8 @@
+#+title: Batch layer
+#+filetags: :stub:
+
+The batch layer is a part of the [[denote:20221028T145644][Lambda architecture]].
+
+When we are receiving new data from [[denote:20221028T150050][Data stream]], the batch layer records it in a [[denote:20221028T151932][Master dataset]].
+Once we have enough data, we retrain, build and test any downstream [[denote:20221028T152143][Machine learning models]].
+The new model is then deployed in the [[denote:20221028T151552][Speed layer]].

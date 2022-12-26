@@ -1,0 +1,8 @@
+:mtime:    20220329233648
+:ctime:    20220326092708
+:END:
+#+title: Quantum field theory
+#+filetags: :stub:
+
+[[denote:20220322T105321][Renormalization]]
+[[denote:20220329T233621][Quantum electrodynamics]]

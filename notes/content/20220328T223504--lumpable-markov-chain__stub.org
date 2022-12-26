@@ -1,0 +1,6 @@
+:ctime:    20220328223504
+:END:
+#+title: Lumpable Markov chain
+#+filetags: :stub:
+
+

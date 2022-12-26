@@ -1,0 +1,25 @@
+:ctime:    20220304104814
+:END:
+#+title: ?Factorial moments of the geometric distribution
+#+filetags: :appendix:stub:
+
+The PMF of the geometric distribution is
+
+\[
+f(k) = (1-p)^{k-1}p
+\]
+
+for \( k \in \{ 1, 2, ... \} \).
+
+Therefore,
+
+\begin{equation*}
+\begin{align}
+M_X(t)
+&= \sum\limits_{k=1}^{\infty} t^k(1-p)^{k-1}p \\
+&= tp \sum\limits_{k=1}^{\infty} (t(1-p))^{k-1} \\
+&= \frac{tp}{1 - t(1 - p)}
+\end{align}
+\end{equation*}
+
+# TODO: Use this to calculate the factorial moments themselves

@@ -1,0 +1,6 @@
+:ctime:    20220306174814
+:END:
+#+title: Convolution of generating functions
+#+filetags: :stub:
+
+

@@ -1,0 +1,12 @@
+:ctime:    20220324220124
+:END:
+#+title: Statistical programming language
+#+filetags: :stub:
+
+Examples:
+- [[denote:20220220T094729][R]]
+- [[denote:20220220T094741][Julia]]
+
+But also packages such as [[denote:20220224T112750][Pandas]] allow for statistical programming in [[denote:20220220T094641][Python]].
+
+Note that [[denote:20220224T112658][Both Pandas and the Tidyverse allow for pipelining data transformations]].

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       fceb7d8e-1749-4b86-bb83-6c4468e1e23e
-:mtime:    20220402214439
-:ctime:    20220402214438
-:END:
-#+title: Enthalpy
-#+filetags: :stub:
-
-

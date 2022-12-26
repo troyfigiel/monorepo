@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       47c2b9e9-180d-47c9-a5df-4c2d6adee941
-:mtime:    20220325231542
-:ctime:    20220325164228
-:END:
-#+title: Rademacher distribution
-#+filetags: :stub:
-

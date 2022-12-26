@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       10ba91a9-2308-472a-b8be-e9c23453efd4
-:mtime:    20220319092716
-:ctime:    20220319092709
-:END:
-#+title: Little o notation
-#+filetags: :stub:
-
-

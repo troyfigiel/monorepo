@@ -1,0 +1,6 @@
+:ctime:    20220304143043
+:END:
+#+title: ?Mean of the negative binomial distribution
+#+filetags: :appendix:stub:
+
+

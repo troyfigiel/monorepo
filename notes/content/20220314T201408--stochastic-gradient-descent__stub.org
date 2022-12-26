@@ -1,0 +1,6 @@
+:ctime:    20220314201408
+:END:
+#+title: Stochastic gradient descent
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220328220553
+:END:
+#+title: Collision time
+#+filetags: :stub:
+
+

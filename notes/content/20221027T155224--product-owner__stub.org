@@ -1,0 +1,4 @@
+#+title: Product owner
+#+filetags: :stub:
+
+The product owner is responsible for defining the features that are needed in the product.

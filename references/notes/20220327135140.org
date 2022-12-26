@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       cc15831c-7b85-4635-a40d-8ccc7e20f6d8
-:mtime:    20220327154827
-:ctime:    20220327135140
-:END:
-#+title: Bayesian probability
-#+filetags: :stub:
-
-[[id:612fb5bd-ba94-4df0-a5b5-6ae4215399b7][Bayes' theorem]]

@@ -1,0 +1,7 @@
+:ctime:    20220324213756
+:END:
+#+title: Hamiltonian
+#+filetags: :stub:
+
+Also related [[denote:20220310T200705][Lagrangian]] and [[denote:20220414T235932][Routhian]].
+

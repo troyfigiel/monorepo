@@ -1,0 +1,6 @@
+:ctime:    20220304143100
+:END:
+#+title: ?Variance of the negative binomial distribution
+#+filetags: :appendix:stub:
+
+

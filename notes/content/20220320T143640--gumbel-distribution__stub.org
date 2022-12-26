@@ -1,0 +1,42 @@
+:ctime:    20220320143640
+:END:
+#+title: Gumbel distribution
+#+filetags: :stub:
+
+With
+
+\[
+f(x) = \frac{1}{\beta} \exp \left( -\frac{x-\mu}{\beta} - e^{-\frac{x-\mu}{\beta}} \right)
+\]
+
+It is defined for \( x \in \mathbb{R} \). The [[denote:20220320T151714][Standard Gumbel distribution]] is obtained by setting
+\( \mu = 0 \) and \( \beta = 1 \).
+
+We have
+
+\begin{equation*}
+\begin{align}
+\mathbb{E}[X]
+&= \int\limits_{-\infty}^{\infty} \frac{x}{\beta} \exp \left( -\frac{x-\mu}{\beta} - e^{-\frac{x-\mu}{\beta}} \right) \, dx \\
+&= \int\limits_{-\infty}^{\infty} \left( t + \frac{\mu}{\beta} \right) \exp \left( -t - e^{-t} \right) \, \beta dt \\
+&= \int\limits_{-\infty}^{\infty} \left( \beta t + \mu \right) \exp \left( -t - e^{-t} \right) \, dt \\
+&= \mu + \beta \int\limits_{-\infty}^{\infty} t  \exp \left( -t - e^{-t} \right) \, dt \\
+\end{align}
+\end{equation*}
+
+
+\begin{equation*}
+\begin{align}
+\int\limits_{-\infty}^{\infty} t \exp \left( -t-e^{-t} \right) \, dt
+&= \int\limits_0^{\infty} t \exp \left(-e^{-t} \right) \, de^{-t} \\
+&= -\int\limits_0^{\infty} e^{-v} \log v \, dv \\
+&= \gamma
+\end{align}
+\end{equation*}
+
+# TODO: How to derive the third equality?
+where \( \gamma \) is the [[denote:20220320T131858][Euler-Mascheroni constant]]. The third equality is a well-known equality.
+
+This implies \( \mathbb{E}[X] = \mu + \beta \gamma \).
+
+Moreover, [[denote:20220320T151935][?The difference of two Gumbel distributions is the logistic distribution]].

@@ -1,0 +1,6 @@
+:ctime:    20220323144234
+:END:
+#+title: Bernoulli random walk
+#+filetags: :stub:
+
+

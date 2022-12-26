@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       9b29d717-da49-4923-bcd7-fc55156f63ad
-:mtime:    20220311133120
-:ctime:    20220311133119
-:END:
-#+title: Precision
-#+filetags: :stub:
-
-

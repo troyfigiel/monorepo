@@ -1,0 +1,6 @@
+:ctime:    20220303233535
+:END:
+#+title: Cumulant generating function
+#+filetags: :math:stub:
+
+

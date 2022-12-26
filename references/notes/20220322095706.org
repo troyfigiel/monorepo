@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e74cd422-0192-4377-9a1c-d957660764f0
-:mtime:    20220322095707
-:ctime:    20220322095706
-:END:
-#+title: Laplace transformation
-#+filetags: :stub:
-
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       00f47f95-e7df-4fc2-9787-f1c7022faee7
-:mtime:    20220317082936
-:ctime:    20220317082936
-:END:
-#+title: Static typing
-#+filetags: :stub:
-
-

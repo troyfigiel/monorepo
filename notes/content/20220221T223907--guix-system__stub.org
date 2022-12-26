@@ -1,0 +1,10 @@
+:mtime:    20220225224256
+:ctime:    20220221223907
+:END:
+#+title: Guix System
+#+filetags: :stub:
+
+Guix System is a rolling-release distribution by GNU. It is built around the GNU Guix package
+manager.
+
+It enables a [[denote:20220221T224049][declarative operating system configuration]].

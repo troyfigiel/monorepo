@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e690c99c-6e63-480d-80db-559879477423
-:mtime:    20220320143722
-:ctime:    20220320143652
-:END:
-#+title: Fréchet distribution
-#+filetags: :stub:
-
-

@@ -1,0 +1,12 @@
+:mtime:    20220314130843
+:ctime:    20220314125800
+:END:
+#+title: Homoiconicity
+#+filetags: :stub:
+
+A [[denote:20220220T094616][Programming language]] is called homoiconic if a program written in that language, can be
+manipulated as if it were data by that same language. In other words, there exists a [[denote:20220314T125954][Duality
+between code and data]].
+
+A famous example of homoiconic languages are the [[denote:20220220T094628][Lisp]] languages. However, also [[denote:20220220T094741][Julia]] is considered
+to be a homoiconic language.

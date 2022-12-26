@@ -1,0 +1,26 @@
+:ctime:    20220224224802
+:END:
+#+title: Linear relations of random variables lead to simple relations between characteristic functions
+#+filetags: :stub:
+
+If we have a sequence of numbers \( a_1, ..., a_n \) and independent random variables
+\( X_1, ..., X_n \), the characteristic function of the sum
+
+\[
+S_{n} = \sum\limits_{m=1}^n a_m X_m
+\]
+
+satisfies
+
+\[
+\varphi_{S_n}(t) = \prod\limits_{m=1}^n \varphi_{X_m}(a_m t)
+\]
+
+This is especially useful in two special cases, namely to
+
+- [[denote:20220224T232111][Calculating the sum distribution using characteristic functions]]
+
+And to prove the central limit theorem using characteristic functions. See: [[denote:20220224T231155][!Central limit theorem]].
+
+* TODO
+Reference to [[denote:20220224T232326][Proposition - characteristic function of linear sum of random variables]]

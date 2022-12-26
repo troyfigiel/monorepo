@@ -1,0 +1,6 @@
+:ctime:    20220306193749
+:END:
+#+title: Chaos theory
+#+filetags: :stub:
+
+

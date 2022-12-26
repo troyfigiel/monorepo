@@ -1,0 +1,12 @@
+:ctime:    20220314193141
+:END:
+#+title: Generalized harmonic number
+#+filetags: :stub:
+
+The generalized harmonic numbers are defined as
+
+\[
+H_{n, m} = \sum\limits_{k=1}^n \frac{1}{k^m}
+\]
+
+The special case \( m = 1 \) gives rise to the [[denote:20220314T193000][Harmonic numbers]].

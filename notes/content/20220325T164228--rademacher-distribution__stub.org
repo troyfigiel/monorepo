@@ -1,0 +1,5 @@
+:ctime:    20220325164228
+:END:
+#+title: Rademacher distribution
+#+filetags: :stub:
+

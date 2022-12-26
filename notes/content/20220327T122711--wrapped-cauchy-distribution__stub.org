@@ -1,0 +1,6 @@
+:ctime:    20220327122711
+:END:
+#+title: Wrapped Cauchy distribution
+#+filetags: :stub:
+
+Obtained by wrapping the [[denote:20220218T225024][Cauchy distribution]] around the unit circle.

@@ -1,0 +1,7 @@
+:mtime:    20220318113352
+:ctime:    20220318113344
+:END:
+#+title: Customer lifetime value
+#+filetags: :stub:
+
+

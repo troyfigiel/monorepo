@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       ea2ba7ed-361a-4c18-aab6-c2fda34dcef7
-:mtime:    20220417152234
-:ctime:    20220417145017
-:END:
-#+title: ?An ellipse is the equidistant set of two nested circles
-#+filetags: :stub:

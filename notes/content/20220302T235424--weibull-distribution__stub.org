@@ -1,0 +1,6 @@
+:ctime:    20220302235424
+:END:
+#+title: Weibull distribution
+#+filetags: :stub:
+
+

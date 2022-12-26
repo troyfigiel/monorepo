@@ -1,0 +1,12 @@
+#+title:      Linear regression is linear in the model parameters
+#+date:       [2022-03-03 Thu 19:58]
+#+filetags:   :unfinished:
+#+identifier: 20220303T195827
+
+This can easily be a point of confusion: The linearity of a [[denote:20220215T221824][Linear regression]] model refers to
+the dependence of the dependent variable on the parameters of the model.
+
+As the most basic example, [[denote:20220303T200225][Polynomial regression]] is in fact a subset of [[denote:20220215T221824][Linear regression]].
+
+# TODO: Refer to kernel methods, because linear least squares is actually a very broad way of
+# fitting data.

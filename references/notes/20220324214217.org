@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c7b0c55b-5785-4df7-9207-95b1da0a46ad
-:mtime:    20220324214239
-:ctime:    20220324214217
-:END:
-#+title: Ideal gas
-#+filetags: :stub:
-
-[[id:96962a21-b199-4a3a-bf45-ae4d7ac69143][Ideal gas law]]

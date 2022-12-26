@@ -1,0 +1,6 @@
+:ctime:    20220221235737
+:END:
+#+title: Lisp is a good configuration language
+#+filetags: :stub:
+
+Due to its homoiconicity, malleability as well as resemblance to languages like YAML, XML, JSON, etc.

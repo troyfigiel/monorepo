@@ -1,0 +1,6 @@
+:ctime:    20220311134146
+:END:
+#+title: Gradient descent
+#+filetags: :stub:
+
+

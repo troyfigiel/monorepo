@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1aeadf16-e33b-41b9-87ab-c23e1c71c47b
-:mtime:    20220318113053
-:ctime:    20220318113052
-:END:
-#+title: Joint probability distribution
-#+filetags: :stub:
-
-

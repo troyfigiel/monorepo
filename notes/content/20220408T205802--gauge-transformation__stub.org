@@ -1,0 +1,6 @@
+:ctime:    20220408205802
+:END:
+#+title: Gauge transformation
+#+filetags: :stub:
+
+

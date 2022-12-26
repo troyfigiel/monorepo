@@ -1,0 +1,6 @@
+:ctime:    20220402115115
+:END:
+#+title: Probability measure
+#+filetags: :stub:
+
+

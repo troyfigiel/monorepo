@@ -1,0 +1,12 @@
+:ctime:    20220221233645
+:END:
+#+title: Literate programming fits to scientific computation
+#+filetags: :stub:
+
+Due to the amount of explanation required to explain code and algorithms, literate programming is
+often used in data science and other scientific computation.
+
+Tools that are often used in these fields are
+- [[denote:20220221T233800][Emacs]]
+- [[denote:20220221T233852][Jupyter Notebook]]
+- [[denote:20220221T233910][R Markdown]]

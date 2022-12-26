@@ -1,0 +1,4 @@
+:ctime:    20220215234422
+:END:
+#+title: Non-parametric skew vanishes for symmetric distribution
+

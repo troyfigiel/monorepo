@@ -1,0 +1,32 @@
+:ctime:    20220322105321
+:END:
+#+title: Renormalization
+#+filetags: :unclean:
+
+[[denote:20220322T170906][@Renormalization]]
+
+If we have a model of a system at a microscopic level, we may apply a [[denote:20220403T010117][Coarse-graining]] method to
+describe the model at a more macroscopic level. Renormalization is a general term for any set of
+techniques used to connect the description of the model on the fine-grained level to the description
+on the more coarse-grained level, by essentially throwing out information that is irrelevant.
+
+In some cases, we know what problem we want to solve and invent an algorithm, for example when
+working with [[denote:20220322T175512][JPEG compression]]. Other times, we do not know what the coarse-graining should be when
+we begin, such as when considering [[denote:20220406T210008][Clustering as a form of coarse-graining]].
+
+Although we are coarse-graining our models, renormalization does not always simplify the models.
+
+# TODO: How does the method in physics work exactly?
+How to: [[denote:20220322T113540][Applying the envelope method to differential equations]]
+
+Some behaviour that signals possible divergences in a standard perturbative approach, can now
+conspire to form non-trivial modification of behaviour of the global solution as a function of the
+approximation parameter \( \epsilon \).
+
+For example, we can calibrate our method when [[denote:20220322T115730][?Renormalizing the damped harmonic oscillator]]
+
+For a very simple showcasing of the technique: [[denote:20220323T205949][?Renormalizing the exponential]]
+
+[[denote:20220325T212350][Using renormalization to derive the CLT]]
+
+https://arxiv.org/pdf/hep-th/9505166.pdf

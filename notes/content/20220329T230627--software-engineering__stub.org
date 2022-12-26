@@ -1,0 +1,38 @@
+:ctime:    20220329230627
+:END:
+#+title: Software engineering
+#+filetags: :stub:
+
+- [[denote:20220329T230635][The only way to go fast is to go well]]
+- [[denote:20220220T095531][Software design pattern]]
+- [[denote:20220305T112135][Proprietary software is unethical]]
+- [[denote:20220407T102800][Separation of concerns]]
+- [[denote:20220407T103156][Software design principles carry over to dealing with complexity outside of software engineering]]
+- [[denote:20220415T203225][Cargo cult programming]]
+- [[denote:20220422T143442][Convention over configuration]]
+- [[denote:20220424T213636][Software versioning]]
+
+- [[denote:20220422T085804][Coupling]]
+- [[denote:20220422T085812][Cohesion]]
+- [[denote:20220314T131502][Configuration]]
+
+Best practices:
+- [[denote:20220307T173055][CI/CD]]
+- [[denote:20221106T171723][Continuous integration]]
+- [[denote:20221106T171732][Continuous delivery]]
+- [[denote:20221106T171740][Continuous deployment]]
+- [[denote:20221109T151355][Trunk-based development]]
+
+Reference for repo forms:
+https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-monorepo/
+
+- [[denote:20220425T122814][Monorepo]]
+- [[denote:20220425T123118][Multirepo]]
+
+- [[denote:20220501T191318][Scope]]
+
+Data related:
+- [[denote:20220310T124612][Data science]]
+- [[denote:20221028T145309][Data engineering]]
+
+Software should work first and foremost. Testing only comes into play when it comes to changing the software. It is therefore important to know where you are most likely to make changes and hence what you should test.

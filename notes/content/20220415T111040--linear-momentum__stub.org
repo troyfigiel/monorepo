@@ -1,0 +1,5 @@
+:ctime:    20220415111040
+:END:
+#+title: Linear momentum
+#+filetags: :stub:
+

@@ -1,0 +1,6 @@
+:ctime:    20220404201738
+:END:
+#+title: Kolmogorov's criterion
+#+filetags: :stub:
+
+

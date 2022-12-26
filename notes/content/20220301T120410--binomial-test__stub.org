@@ -1,0 +1,6 @@
+:ctime:    20220301120410
+:END:
+#+title: Binomial test
+#+filetags: :stub:
+
+

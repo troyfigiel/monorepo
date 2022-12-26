@@ -1,0 +1,6 @@
+:ctime:    20220402191522
+:END:
+#+title: Equation of state
+#+filetags: :stub:
+
+

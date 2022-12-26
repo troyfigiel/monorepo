@@ -1,0 +1,5 @@
+:ctime:    20220329210550
+:END:
+#+title: Ising model
+#+filetags: :stub:
+

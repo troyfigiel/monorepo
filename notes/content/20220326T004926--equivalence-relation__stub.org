@@ -1,0 +1,6 @@
+:ctime:    20220326004926
+:END:
+#+title: Equivalence relation
+#+filetags: :stub:
+
+

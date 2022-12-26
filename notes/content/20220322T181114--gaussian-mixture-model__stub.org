@@ -1,0 +1,8 @@
+:ctime:    20220322181114
+:ROAM_ALIASES: GMM
+:END:
+#+title: Gaussian mixture model
+#+filetags: :stub:
+
+This is an example of a [[denote:20220322T181005][Soft clustering]] algorithm. It tries to cluster the data by assuming the
+data comes from a [[denote:20220303T210545][Mixture model]] of all [[denote:20220210T091147][Gaussian distributions]].

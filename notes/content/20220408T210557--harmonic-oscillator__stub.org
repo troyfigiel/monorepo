@@ -1,0 +1,6 @@
+:ctime:    20220408210557
+:END:
+#+title: Harmonic oscillator
+#+filetags: :stub:
+
+

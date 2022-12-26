@@ -1,0 +1,10 @@
+:ctime:    20220224210149
+:mtime:    20220302112820
+:END:
+#+title: Common table expression
+#+filetags: :stub:
+
+A common table expression (CTE) is the result set of a query which only exists in the context of a parent
+query. In most SQL dialects a CTE is created using the `WITH` keyword.
+
+[[denote:20220224T210530][Use CTEs abundantly]].

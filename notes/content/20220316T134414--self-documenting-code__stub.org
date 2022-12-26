@@ -1,0 +1,6 @@
+:ctime:    20220316134414
+:END:
+#+title: Self-documenting code
+#+filetags: :stub:
+
+

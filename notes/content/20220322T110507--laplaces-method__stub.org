@@ -1,0 +1,10 @@
+:ctime:    20220322110507
+:END:
+#+title: Laplace's method
+#+filetags: :stub:
+
+Example: [[denote:20220218T214915][?Asymptotic series of the gamma function]]
+
+If there is a zero derivative in the interval from \( a \) to \( b \) and the function is concave,
+the integral is dominated by the global maximum. The rigourous statement is given through [[denote:20220320T004042][Watson's lemma]].
+

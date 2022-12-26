@@ -1,0 +1,15 @@
+:ctime:    20220220095531
+:END:
+#+title: Software design pattern
+#+filetags: :stub:
+
+A design pattern is an abstract solution to common problems in software engineering intended to be reusable across different problems.
+
+Examples include:
+- [[denote:20220220T095733][abstract factory pattern]]
+- [[denote:20220220T095758][dependency injection]]
+- [[denote:20220220T095745][builder pattern]]
+- [[denote:20220220T095826][factory method pattern]]
+
+* TODO
+Add many more...

@@ -1,0 +1,57 @@
+:ctime:    20220305112921
+:END:
+#+title: Machine learning
+#+filetags: :unclean:
+
+[[denote:20220310T131257][Machine learning is pattern recognition]].
+
+[[denote:20220306T182041][Machine learning broadly speaking covers only two types of problems]]
+
+[[denote:20220310T133706][Binary classification is the core problem of machine learning]].
+
+Important is also [[denote:20220310T201832][Ockham's razor]]. We try to thwart the [[denote:20220310T231759][Curse of dimensionality]].
+
+[[denote:20220313T115336][Imbalanced data]]
+
+Broadly speaking, the workflow goes like this
+- Split train and test set
+- Perform any needed data preprocessing and cleaning
+- Extract useful features
+- Train model
+- Evaluate on test set
+
+Potentially we might need a small engineering step before everything, to transform filetypes to a csv or tsv file for example.
+
+See [[denote:20220311T000557][§Types of machine learning]].
+
+Machine learning is used in many different fields:
+- [[denote:20220310T133058][Computer vision]]
+- [[denote:20220310T133110][Natural language processing]]
+
+There are also important [[denote:20220310T133301][Ethical concerns in machine learning]].
+
+Some examples of [[denote:20221028T152143][Machine learning models]]:
+- [[denote:20220215T225444][Logistic regression]]
+- [[denote:20220310T125652][Decision tree]]
+- [[denote:20220310T125913][Boosting]]
+- [[denote:20220310T133824][Support vector machine]]
+- [[denote:20220310T125857][Random forest]]
+- [[denote:20220306T182240][Neural network]]
+- [[denote:20220310T141956][Perceptron]]
+- [[denote:20220310T142122][K-nearest neighbours]]
+- [[denote:20220322T175742][K-means clustering]]
+
+See [[denote:20220310T235951][§Types of problems encountered in machine learning]].
+
+
+Some techniques for data transformation commonly used:
+- [[denote:20220310T193721][Mapping to higher-dimensional spaces]]
+
+See [[denote:20220311T000230][§Loss functions in machine learning]].
+
+See [[denote:20220311T132845][§Evaluation metrics for machine learning models]].
+
+Besides single algorithms, we can also use [[denote:20220318T150206][Ensemble learning]] techniques.
+
+See:
+https://www.youtube.com/playlist?list=PLNeXFnYrCJneoY_rKtWJy833YiMrCRi5f

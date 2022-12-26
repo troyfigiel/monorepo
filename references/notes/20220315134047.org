@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e2bf3c9d-aeab-4f26-8a0d-fe2ea62203fd
-:mtime:    20220315134048
-:ctime:    20220315134047
-:END:
-#+title: Docker
-#+filetags: :stub:
-
-

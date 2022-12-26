@@ -1,0 +1,6 @@
+:ctime:    20220330233801
+:END:
+#+title: Non-renormalizable theory
+#+filetags: :stub:
+
+

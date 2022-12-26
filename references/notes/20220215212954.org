@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       3a4cd3b6-a2ef-434b-91c1-8979ccd40e65
-:mtime:    20220309182541
-:ctime:    20220215212954
-:END:
-#+title: ?The beta distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

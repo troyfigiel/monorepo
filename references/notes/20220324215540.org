@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8b257c84-d0ac-4644-9937-acf565145079
-:mtime:    20220324215541
-:ctime:    20220324215540
-:END:
-#+title: Navier-Stokes equation
-#+filetags: :stub:
-
-

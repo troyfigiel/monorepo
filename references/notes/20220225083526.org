@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       511eb98f-ef12-4cf5-b3f2-6d7cbffea3ad
-:mtime:    20220225223629
-:ctime:    20220225083526
-:END:
-#+title: Correlation does not imply causation
-#+filetags: :stub:
-
-

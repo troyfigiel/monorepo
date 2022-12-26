@@ -1,0 +1,6 @@
+:ctime:    20220312093606
+:END:
+#+title: Patch theory
+#+filetags: :stub:
+
+

@@ -1,0 +1,21 @@
+:mtime:    20220315094957
+:ctime:    20220314125954
+:END:
+#+title: Duality between code and data
+#+filetags: :stub:
+
+What is meant with the duality of code and data, is that there is no clear separation between what
+is considered code and what is considered data. Ultimately, for a computer there are only bits and
+the ideas of code and data as separate entities are an [[denote:20220314T131014][Emergent phenomenon]].
+
+The phrases [[denote:20220314T130302][Code as data]] and [[denote:20220314T130308][Data as code]] refer to unidirectional instances of this duality. However,
+sometimes such a distinct separation is not appropriate.
+
+Examples:
+- [[denote:20220314T131316][First-class functions]] (because a function is both a piece of code executing a series of steps as
+  well as data that can be passed around as an entity)
+- [[denote:20220314T130121][Metaprogramming]]
+- [[denote:20220314T131358][Self-modifying code]]
+- [[denote:20220314T131430][Declarative programming]]
+- [[denote:20220314T131502][Configuration script]]
+

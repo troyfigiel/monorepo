@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       9ef17c85-8899-4478-be98-f199c74bb2cc
-:mtime:    20220225223633
-:ctime:    20220223100555
-:END:
-#+title: likelihood-ratio test statistic is the area under the score function
-#+filetags: :stub:
-
-

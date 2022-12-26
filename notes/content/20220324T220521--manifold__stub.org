@@ -1,0 +1,6 @@
+:ctime:    20220324220521
+:END:
+#+title: Manifold
+#+filetags: :stub:
+
+[[denote:20220408T203054][Tangent space]]

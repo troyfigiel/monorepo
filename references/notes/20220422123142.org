@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       6fc3864e-2008-46f1-96cf-6619e5c183b7
-:mtime:    20220422123143
-:ctime:    20220422123142
-:END:
-#+title: Cookiecutter Data Science
-#+filetags: :stub:
-

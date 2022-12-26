@@ -1,0 +1,9 @@
+:ctime:    20220304151124
+:END:
+#+title: ?Entropy of the binomial distribution
+#+filetags: :appendix:stub:
+
+This is non-trivial and requires the [[denote:20220304T151205][De Moivre-Laplace theorem]].
+
+# TODO: Calculate the entropy of the binomial distribution
+https://math.stackexchange.com/questions/244455/entropy-of-a-binomial-distribution

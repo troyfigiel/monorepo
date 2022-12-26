@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       68b55e53-6a20-4707-ab4d-04f6eaf467c2
-:mtime:    20220309182539
-:ctime:    20220215212942
-:END:
-#+title: ?The gamma distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

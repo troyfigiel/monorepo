@@ -1,0 +1,10 @@
+:mtime:    20220325144157
+:ctime:    20220325142442
+:END:
+#+title: Vapnik-Chervonenkis dimension
+#+filetags: :stub:
+
+For a set of indicator functions. Let \( \{ \theta(f(x)) \} \), then VC dimension of the set of
+indicator functions is equal to h if h is the maximal number of vectors \( x_1, ..., x_h \) that
+can be shattered (see [[denote:20220325T142935][Shattered set]]) using indicator functions from \( \{ \theta(f(x)) \} \). If such vectors
+exist for any number h, the VC dimension of the set is infinite.

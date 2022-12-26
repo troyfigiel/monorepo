@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       20562ab6-c37a-4b2e-9f7c-71e5e43dd144
-:mtime:    20220313174854
-:ctime:    20220313174836
-:END:
-#+title: Type I error
-#+filetags: :stub:
-
-

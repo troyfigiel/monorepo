@@ -1,0 +1,10 @@
+:ctime:    20220420215240
+:END:
+#+title: Rastrigin function
+#+filetags: :stub:
+
+\[
+f(\mathbf{x}) = A n + \sum\limits_{i=1}^n \left[ x_i^2 - A \cos(2 \pi x_i) \right]
+\]
+
+for \( A = 10 \).

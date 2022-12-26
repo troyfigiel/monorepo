@@ -1,0 +1,24 @@
+:mtime:    20220318114007
+:ctime:    20220318113222
+:END:
+#+title: Buy Till You Die
+#+filetags: :stub:
+
+The Buy Till You Die (BTYD) models are a class of statistical models that capture the behaviour of
+non-contractual customers. They can be used to determine [[denote:20220318T113344][Customer lifetime value]] or as a form of [[denote:20220318T113417][Churn prediction]].
+
+Customers are assumed to either be in an alive or a dead state. While they are alive, they will
+make purchases according to a specific statistical model. The BTYD models therefore combine two
+separate statistical processes:
+- Behaviour of customers while they are alive.
+- Dropout process from alive to dead.
+
+Two well-known versions of BTYD are:
+- [[denote:20220318T113809][Pareto/NBD model]]
+- [[denote:20220318T113821][Beta-Geometric/NBD model]]
+
+The BTYD models are examples of [[denote:20220303T210545][Mixture models]].
+
+# TODO: Be more specific about how they are examples of mixture models.
+# TODO: Are BTYD models generative models?
+Possible link: [[denote:20220318T001230][Generative model]].

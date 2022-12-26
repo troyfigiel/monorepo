@@ -1,0 +1,21 @@
+:ctime:    20220227101314
+:END:
+#+title: Non-negative probability distribution
+#+filetags: :stub:
+
+# TODO: Give some examples of non-negative probability distributions
+# Gamma (exponential, chi-squared), log-normal, geometric, Poisson, ...?
+
+# TODO: Probability distributions that square to well-known non-negative distribution?
+# For example, normal and chi-squared?
+
+# TODO: Make relation to Markov's inequality clear. What are the implications?
+
+A non-negative probability distribution is a one-dimensional probability distribution of a random
+variable that cannot be negative.
+
+There are many such distributions, because one can always square a generic probability distribution
+to obtain a non-negative probability distribution.
+
+[[denote:20220218T222722][Markov's inequality]]
+

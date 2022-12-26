@@ -1,0 +1,15 @@
+:ctime:    20220210141248
+:END:
+#+title: Law of rare events
+
+The law of rare events is also known as the Poisson limit theorem.
+
+This theorem states that for a sequence \( n p_n \) satisfying \( \lim_{n \rightarrow \infty} n p_n = \lambda \), the following holds:
+
+\[ \lim_{n \rightarrow \infty} \binom{n}{k} p_n^k (1 - p_n)^{n - k} = \frac{\lambda^k e^{- \lambda}}{k!} \]
+
+In other words, if we have a large number of independent events that all have a small probability of happening, we may approximate this behaviour with a Poisson distribution.
+
+Hence, we find the limiting distribution [[denote:20220210T142527]].
+
+\[ \lim_{n \rightarrow \infty} \mathrm{B}(n, p_n) = \mathrm{Pois}(\lambda) \]

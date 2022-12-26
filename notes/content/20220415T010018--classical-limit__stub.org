@@ -1,0 +1,6 @@
+:ctime:    20220415010018
+:END:
+#+title: Classical limit
+#+filetags: :stub:
+
+Closely related to the [[denote:20220323T084254][Semi-classical limit]].

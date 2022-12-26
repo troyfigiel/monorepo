@@ -1,0 +1,17 @@
+:ctime:    20220301115136
+:END:
+#+title: McNemar's test
+#+filetags: :stub:
+
+McNemar's test is used for paired [[denote:20220301T115513][Bernoulli trial]] test whether paired nominal data come from the same Bernoulli distribution.
+
+This is similar to the [[denote:20220222T095858][Paired t-test]], but for outcomes that follow a [[denote:20220210T094457][Bernoulli distribution]].
+
+Under the assumption that there are enough pairs with different outcomes, the test statistic
+follows a [[denote:20220211T100838][Chi-squared distribution]].
+
+McNemar's test is the paired variant of the [[denote:20220301T120410][Binomial test]].
+
+[[denote:20220303T175408][Example - paired dichotomous disease risk]]
+
+https://en.wikipedia.org/wiki/McNemar%27s_test

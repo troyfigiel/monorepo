@@ -1,0 +1,30 @@
+:ctime:    20220409125024
+:END:
+#+title: The equipartition theorem for quadratic Hamiltonians
+#+filetags: :stub:
+
+[[denote:20220409T133544][Quadratic form]]
+
+If a degree of freedom \( x_n \) appears quadratically, such as for a classical freely moving
+particle, rotational kinetic energy or potential energy in a [[denote:20220408T210557][Harmonic oscillator]]. In that case,
+each degree of freedom contributes a total of \( k_B T / 2 \) to the total energy. In particular,
+the total energy is independent of the precise microscopic values of any coefficients appearing in
+the [[denote:20220324T213756][Hamiltonian]]!
+
+In fact, if we are dealing with a real quadratic form,
+
+\[
+H = x^{\intercal} A x = x^{\intercal} S^{\intercal} D S x
+\]
+
+where \( D \) is diagonal. In this case, we have
+
+\[
+H(y_1, ..., y_n) = \sum\limits_{i=1}^n d_i y_i^2
+\]
+
+where \( y = Sx \). This means that we can apply the equipartition theorem for each term \( d_i
+y_i^2 \), showing that every independent degree of freedom \( y_i \) adds a total of \( k_B T / 2
+\) of energy to the total average energy.
+
+However, [[denote:20220409T125147][In general the equipartition theorem depends on microscopic parameters]].

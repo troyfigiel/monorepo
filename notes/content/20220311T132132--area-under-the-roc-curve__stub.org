@@ -1,0 +1,9 @@
+:mtime:    20220311133010
+:ctime:    20220311132132
+:END:
+#+title: Area under the ROC curve
+#+filetags: :stub:
+
+This is the area under the [[denote:20220311T131506][ROC curve]]. It is directly related to the [[denote:20220311T132322][Mann Whitney U statistic]].
+
+https://blog.revolutionanalytics.com/2017/03/auc-meets-u-stat.html

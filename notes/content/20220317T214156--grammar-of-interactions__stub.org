@@ -1,0 +1,11 @@
+:ctime:    20220317214156
+:END:
+#+title: Grammar of interactions
+#+filetags: :stub:
+
+Specific to [[denote:20220316T220540][Altair]] and based on the idea of a [[denote:20220316T220530][Grammar of graphics]].
+
+Not only static, but also dynamic graphics can be very easily created with a similar approach as
+the [[denote:20220316T220530][Grammar of graphics]] except applied to interactive elements.
+
+https://github.com/altair-viz/altair/blob/master/paper/paper.md

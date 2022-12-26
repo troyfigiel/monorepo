@@ -1,0 +1,20 @@
+:ctime:    20220311131506
+:ROAM_ALIASES: "ROC curve"
+:END:
+#+title: Receiver operator characteristic curve
+#+filetags: :stub:
+
+The ROC curve can be used both to evaluate a [[denote:20220310T194320][Classification]] algorithm as well as a specific classifier.
+
+Originally used during the second World War. It was necessary to tune radio equipment to get the
+right trade-off between true positives and false positives.
+
+For a particular [[denote:20220311T131803][False positive rate]] what is the [[denote:20220311T131817][True positive rate]]?
+
+The area under the ROC curve ([[denote:20220311T132132][AUC]]) tells you about the quality of the classifier as a whole.
+
+- Random classifier: Straight line, [[denote:20220311T131817][TPR]] increases at the same speed as the [[denote:20220311T131803][FPR]].
+- Good classifier: [[denote:20220311T131817][TPR]] increases faster than the [[denote:20220311T131803][FPR]].
+- Worse than random: [[denote:20220311T131803][FPR]] increases faster than the [[denote:20220311T131817][TPR]]. But! In that case just switch the
+  classified points in your [[denote:20220311T132614][Binary classification]] and you get a good classifier again. However,
+  this should not happen. Something must have gone horribly wrong in this case.

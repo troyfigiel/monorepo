@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       81b9fff6-fe0c-479a-8424-97ea361f9468
-:mtime:    20220225223631
-:ctime:    20220215225651
-:END:
-#+title: Wald statistic
-
-
-

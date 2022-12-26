@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7fb9079c-7485-4a0e-a1a7-dea306afa992
-:mtime:    20220404201920
-:ctime:    20220323225436
-:ROAM_ALIASES: "Steady state distribution"
-:END:
-#+title: Stationary distribution
-
-

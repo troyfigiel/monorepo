@@ -1,0 +1,6 @@
+:ctime:    20220302110128
+:END:
+#+title: High multicollinearity can cause erratic changes in linear regression coefficients
+#+filetags: :stub:
+
+

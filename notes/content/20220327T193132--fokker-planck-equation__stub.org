@@ -1,0 +1,6 @@
+:ctime:    20220327193132
+:END:
+#+title: Fokker-Planck equation
+#+filetags: :stub:
+
+

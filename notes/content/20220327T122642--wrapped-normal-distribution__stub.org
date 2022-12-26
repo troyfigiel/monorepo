@@ -1,0 +1,6 @@
+:ctime:    20220327122642
+:END:
+#+title: Wrapped normal distribution
+#+filetags: :stub:
+
+Obtained by wrapping the [[denote:20220210T091147][Normal distribution]] around the unit circle.

@@ -1,0 +1,6 @@
+:ctime:    20220403011207
+:END:
+#+title: Poincaré recurrence time
+#+filetags: :stub:
+
+

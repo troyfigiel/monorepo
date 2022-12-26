@@ -1,0 +1,6 @@
+:ctime:    20220324213721
+:END:
+#+title: Elasticity
+#+filetags: :stub:
+
+

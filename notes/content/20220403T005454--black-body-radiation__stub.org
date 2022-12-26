@@ -1,0 +1,6 @@
+:ctime:    20220403005454
+:END:
+#+title: Black-body radiation
+#+filetags: :stub:
+
+

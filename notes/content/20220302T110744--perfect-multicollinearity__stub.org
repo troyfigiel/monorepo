@@ -1,0 +1,8 @@
+:ctime:    20220302110744
+:END:
+#+title: Perfect multicollinearity
+#+filetags: :stub:
+
+Perfect multicollinearity refers to the case when a set of [[denote:20220225T083408][Independent variables]] is precisely
+linearly dependent. This can lead to several issues, such as:
+- [[denote:20220302T112600][The moment matrix is not invertible in the presence of perfect multicollinearity]].

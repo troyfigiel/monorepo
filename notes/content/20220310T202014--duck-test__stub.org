@@ -1,0 +1,6 @@
+:ctime:    20220310202014
+:END:
+#+title: Duck test
+#+filetags: :stub:
+
+As an application of [[denote:20220310T201832][Ockham's razor]]. It is applied as [[denote:20220310T202111][Duck typing]], for example in [[denote:20220220T094641][Python]].

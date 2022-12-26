@@ -1,0 +1,6 @@
+:ctime:    20220302102238
+:END:
+#+title: Heron's formula is a special case of Bretschneider's formula
+#+filetags: :stub:
+
+Simply set \( d = 0 \).

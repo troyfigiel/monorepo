@@ -1,0 +1,6 @@
+:ctime:    20220304133117
+:END:
+#+title: Zero-inflated models are mixture models
+#+filetags: :stub:
+
+They are mixtures of the [[denote:20220210T094457][Bernoulli distribution]] and another distribution.

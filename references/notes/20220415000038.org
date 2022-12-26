@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       a37ae82e-6754-437e-ad0b-ea866130b742
-:mtime:    20220415000040
-:ctime:    20220415000038
-:END:
-#+title: Cyclic coordinate
-#+filetags: :stub:
-

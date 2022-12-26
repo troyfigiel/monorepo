@@ -1,0 +1,13 @@
+#+title: Property-based testing
+#+filetags: :stub:
+
+- [[denote:20220613T094314][Validity testing]]
+- [[denote:20220613T094337][Metamorphic properties]]
+- [[denote:20220613T094354][Inductive testing]]
+- [[denote:20220613T094407][Model-based properties]]
+
+In terms of implementation:
+- [[denote:20220613T094454][Hypothesis]]
+- [[denote:20220613T094757][QuickCheck]]
+
+https://johanneslink.net/how-to-specify-it/

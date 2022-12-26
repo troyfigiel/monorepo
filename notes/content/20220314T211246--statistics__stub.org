@@ -1,0 +1,12 @@
+:ctime:    20220314211246
+:END:
+#+title: Statistics
+#+filetags: :stub:
+
+[[denote:20220314T210747][Probability theory]] and statistics are closely related, but there is a [[denote:20220320T143847][Distinction between
+probability theory and statistics]].
+
+For extreme values in samples:
+- [[denote:20220320T143109][Extreme value theory]]
+
+- [[denote:20220408T230754][All models are wrong]]

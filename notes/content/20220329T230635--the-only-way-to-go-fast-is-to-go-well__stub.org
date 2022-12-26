@@ -1,0 +1,6 @@
+:ctime:    20220329230635
+:END:
+#+title: The only way to go fast is to go well
+#+filetags: :stub:
+
+

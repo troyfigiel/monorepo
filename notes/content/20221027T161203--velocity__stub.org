@@ -1,0 +1,4 @@
+#+title: Velocity
+#+filetags: :stub:
+
+The velocity in Scrum expresses the amount of [[denote:20221027T161257][Story points]] completed per iteration.

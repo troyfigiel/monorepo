@@ -1,0 +1,6 @@
+:ctime:    20220301172919
+:END:
+#+title: ANOVA is a special case of linear regression
+#+filetags: :stub:
+
+

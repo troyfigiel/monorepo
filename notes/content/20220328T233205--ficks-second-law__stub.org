@@ -1,0 +1,6 @@
+:ctime:    20220328233205
+:END:
+#+title: Fick's second law
+#+filetags: :stub:
+
+

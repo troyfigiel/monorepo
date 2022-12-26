@@ -1,0 +1,6 @@
+:ctime:    20220403011124
+:END:
+#+title: Poincaré recurrence theorem
+#+filetags: :stub:
+
+

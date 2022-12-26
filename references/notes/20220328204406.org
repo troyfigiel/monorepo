@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       dc2c08c0-c932-428d-bbda-9cb134f60191
-:mtime:    20220328204406
-:ctime:    20220328204406
-:END:
-#+title: Birth-death process
-#+filetags: :stub:
-
-

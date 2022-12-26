@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4fa9d5c5-9295-4c38-a2e5-d8d166ade150
-:mtime:    20220310193419
-:ctime:    20220310142518
-:END:
-#+title: Density estimation
-#+filetags: :stub:
-
-For example, anomaly detection. This is an example of [[id:962ca45b-3e27-464e-9ebf-2f531f1e6c76][Unsupervised learning]].

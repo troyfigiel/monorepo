@@ -1,0 +1,6 @@
+:ctime:    20220317082929
+:END:
+#+title: Dynamic typing
+#+filetags: :stub:
+
+

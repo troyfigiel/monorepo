@@ -1,0 +1,7 @@
+:mtime:    20220320161505
+:ctime:    20220320161457
+:END:
+#+title: Standard logistic function
+#+filetags: :stub:
+
+

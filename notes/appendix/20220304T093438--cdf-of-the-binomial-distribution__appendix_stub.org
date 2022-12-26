@@ -1,0 +1,6 @@
+:ctime:    20220304093438
+:END:
+#+title: ?CDF of the binomial distribution
+#+filetags: :appendix:stub:
+
+

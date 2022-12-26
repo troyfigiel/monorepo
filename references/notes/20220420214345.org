@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       0a2751e9-c78a-42fe-b7eb-476621b1b33b
-:mtime:    20220420214718
-:ctime:    20220420214345
-:END:
-#+title: Intrinsic method
-#+filetags: :stub:
-
-

@@ -1,0 +1,13 @@
+:ctime:    20220314192146
+:END:
+#+title: Zeta distribution
+#+filetags: :stub:
+
+The zeta distribution is a discrete probability distribution with probability mass function
+
+\[
+f_s(k) = \frac{k^{-s}}{\zeta(s)}
+\]
+
+and \( k \in \{1, 2, ... \} \). It gets its name from the fact that the [[denote:20220223T213833][Riemann zeta function]] is
+used as the normalization constant.

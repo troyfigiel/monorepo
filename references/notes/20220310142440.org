@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       44f89fce-45b8-4c19-ade5-3854abc7524d
-:mtime:    20220310142441
-:ctime:    20220310142440
-:END:
-#+title: Semi-supervised learning
-#+filetags: :stub:
-
-

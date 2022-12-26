@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c1b03548-1360-4c64-bd0e-554477587697
-:mtime:    20220307165802
-:ctime:    20220304142841
-:END:
-#+title: ?Mean of the binomial distribution
-#+filetags: :appendix:stub:
-
-

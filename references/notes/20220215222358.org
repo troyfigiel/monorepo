@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b23396a7-a01c-4521-8a7e-9dc64a555fce
-:mtime:    20220310232155
-:ctime:    20220215222358
-:END:
-#+title: Lasso regression
-#+filetags: :stub:
-
-Lasso is an acronym of "Least absolute shrinkage and selection operator".

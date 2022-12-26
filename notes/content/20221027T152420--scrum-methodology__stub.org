@@ -1,0 +1,36 @@
+:END:
+#+title: Scrum methodology
+#+filetags: :stub:
+
+The Scrum methodology is a methodology for building software. It is a particular implementation of [[denote:20221027T153125][Agile development]].
+
+* Process
+
+Unlike the [[denote:20221027T152354][Waterfall methodology]], in Scrum the entire process is broken up into smaller pieces:
+First the bare minimum amount of planning is done to get started, which developers then build into a minimal feature set.
+# TODO: Is this the same as an [[denote:20221027T154113][Minimal viable product]]
+After the build phase, testing and review of that small set of features is done.
+
+Such an incremental release takes place in a time span of approximately one to three weeks and is called a [[denote:20221027T154550][Sprint]].
+After each [[denote:20221027T154550][Sprint]] we have a [[denote:20221027T154320][Potentially shippable product]] and this process is repeated until the product is [[denote:20221027T154649][Feature complete]].
+
+* Roles
+
+Scrum has three key roles for the methodology to succeed:
+- [[denote:20221027T155224][Product owner]]
+- [[denote:20221027T155217][Scrum master]]
+- [[denote:20221027T162906][Scrum team]]
+
+* Tools
+
+Scrum uses three different tools for the process:
+- [[denote:20221027T155544][Product backlog]]
+- [[denote:20221027T155951][Sprint backlog]]
+- [[denote:20221027T160919][Burndown chart]]
+
+* Meetings
+
+Scrum has three types of meetings:
+- [[denote:20221027T161839][Sprint planning]]
+- [[denote:20221027T161847][Daily Scrum]]
+- [[denote:20221027T161857][Sprint review]]

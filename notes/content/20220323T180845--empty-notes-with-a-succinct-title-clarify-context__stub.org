@@ -1,0 +1,4 @@
+:ctime:    20220323180845
+:END:
+#+title: Empty notes with a succinct title clarify context
+#+filetags: :stub:

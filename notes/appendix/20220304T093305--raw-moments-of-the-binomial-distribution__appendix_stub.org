@@ -1,0 +1,6 @@
+:ctime:    20220304093305
+:END:
+#+title: ?Raw moments of the binomial distribution
+#+filetags: :appendix:stub:
+
+

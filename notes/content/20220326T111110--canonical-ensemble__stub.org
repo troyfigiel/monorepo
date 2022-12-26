@@ -1,0 +1,6 @@
+:ctime:    20220326111110
+:END:
+#+title: Canonical ensemble
+#+filetags: :stub:
+
+

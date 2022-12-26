@@ -1,0 +1,6 @@
+:ctime:    20220314212640
+:END:
+#+title: Information geometry
+#+filetags: :stub:
+
+

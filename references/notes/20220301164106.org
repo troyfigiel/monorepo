@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d6ab1e2f-f79e-42a4-a05c-b91c13a3c862
-:mtime:    20220301164107
-:ctime:    20220301164106
-:END:
-#+title: Paired data
-#+filetags: :stub:
-
-

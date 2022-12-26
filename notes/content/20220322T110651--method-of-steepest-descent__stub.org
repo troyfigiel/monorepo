@@ -1,0 +1,8 @@
+:ctime:    20220322110651
+:END:
+#+title: Method of steepest descent
+#+filetags: :stub:
+
+In physics this is used for the [[denote:20220323T084254][Semi-classical limit]]. It allows us to calculate the orders of an
+expected value as as [[denote:20220318T231524][Asymptotic series]] in \( \hbar \). The [[denote:20220322T110550][Stationary phase approximation]] recovers
+only the classical limit, i.e. the [[denote:20220310T200833][Principle of least action]].

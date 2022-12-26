@@ -1,0 +1,7 @@
+:mtime:    20220327165351
+:ctime:    20220327165312
+:END:
+#+title: Balanced allocations problem
+#+filetags: :stub:
+
+Useful to determine the efficiency of a [[denote:20220218T231301][Hash function]].

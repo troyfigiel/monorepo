@@ -1,0 +1,10 @@
+:ctime:    20220323225426
+:ROAM_ALIASES: "Transition probability matrix"
+:END:
+#+title: Stochastic matrix
+#+filetags: :stub:
+
+Stochastic matrices are matrices for which either the rows or the columns sum to one.
+
+A stochastic matrix always has an eigenvalue of value 1 and all other eigenvalues have absolute
+value less than or equal to 1.

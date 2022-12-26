@@ -1,0 +1,6 @@
+:ctime:    20220327135409
+:END:
+#+title: Bertrand's paradox
+#+filetags: :stub:
+
+[[denote:20220327T135417][Principle of indifference]]

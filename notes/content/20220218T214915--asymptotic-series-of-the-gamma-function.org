@@ -1,0 +1,60 @@
+:ctime:    20220218214915
+:END:
+#+title: ?Asymptotic series of the gamma function
+
+\begin{equation*}
+\begin{align}
+\Gamma(x+1)
+&= \int\limits_0^{\infty} t^x e^{-t} \, dt \\
+&= \int\limits_0^{\infty} e^{x \log t - t} \, dt \\
+&= \int\limits_0^{\infty} e^{x \log (sx) - sx} \, d(sx) \\
+&= x^{x+1} \int\limits_0^{\infty} e^{x (\log s - s)} \, ds
+\end{align}
+\end{equation*}
+
+If we do a coordinate transformation \( s - \log s = 1 + \tau^2 \)  (we can express \( s \) in
+terms of a [[denote:20220319T224718][Lambert W function]])
+
+\[
+s = -W \left( -e^{-1-\tau^2} \right)
+\]
+
+To extract the power series of \( s \) depending on \( \tau \), we can use the [[denote:20220320T134304][Lagrange inversion
+theorem]].
+
+Applying this theorem leads to a power series of the form
+
+\[
+s = 1 + \sqrt{2} \tau + \frac{2}{3} \tau^2 + \frac{\sqrt{2}}{18} \tau^3 - \frac{2}{135} \tau^4 +
+\frac{\sqrt{2}}{1080} \tau^5 + O(\tau^6)
+\]
+
+We find
+
+\[
+\frac{ds}{d\tau} = \sqrt{2} + \frac{4}{3} \tau + \frac{\sqrt{2}}{6} \tau^2 - \frac{8}{135}
+\tau^3 + \frac{\sqrt{2}}{216} \tau^4 + O(\tau^5)
+\]
+
+This makes the integral equal to
+
+\[
+x^{x+1} e^{-x} \int\limits_0^{\infty} e^{-x \tau^2} \left( \sqrt{2} + \frac{4}{3} \tau +
+\frac{\sqrt{2}}{6} \tau^2 - \frac{8}{135} \tau^3 + \frac{\sqrt{2}}{216} \tau^4 + O(\tau^5) \right)
+\, d\tau
+\]
+
+If we add [[denote:20220319T234922][Transcendentally small terms]], we may extend the domain of integration all the way to \(
+-\infty \) and drop the terms of odd power in \( \tau \).
+
+We end up with the integral
+
+\[
+\sqrt{2} x^{x+1} e^{-x} \int\limits_{-\infty}^{\infty} e^{-x \tau^2} \left( 1 + \frac{1}{6}
+\tau^2 + \frac{1}{216} \tau^4 + O(\tau^6) \right) = \sqrt{2 \pi x} \left( \frac{x}{e} \right)^x
+\left( 1 + \frac{1}{12 x} + \frac{1}{288 x^2} + O(x^{-3}) \right)
+\]
+
+More terms are given in [[denote:20220320T000613][The On-Line Encyclopedia of Integer Sequences]] as series A001164.
+
+https://oeis.org/A001164

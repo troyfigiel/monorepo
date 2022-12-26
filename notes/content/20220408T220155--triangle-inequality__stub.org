@@ -1,0 +1,6 @@
+:ctime:    20220408220155
+:END:
+#+title: Triangle inequality
+#+filetags: :stub:
+
+

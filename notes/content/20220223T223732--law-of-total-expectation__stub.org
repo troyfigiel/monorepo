@@ -1,0 +1,6 @@
+:ctime:    20220223223732
+:END:
+#+title: Law of total expectation
+#+filetags: :stub:
+
+

@@ -1,0 +1,19 @@
+:mtime:    20220405095501
+:ctime:    20220323085704
+:END:
+#+title: Legendre-Fenchel transformation
+#+filetags: :math:stub:
+
+Duality relationship between points and lines. How?
+
+Related to [[denote:20220322T110349][Integration by parts]].
+
+The Legrende transform of the [[denote:20220303T233535][Cumulant generating function]] is the [[denote:20220323T085535][Rate function]], which is used in [[denote:20220323T084835][Large deviations theory]].
+
+Two differentiable functions \( f \) and \( g \) are Legendre transforms of each other if
+
+\[
+g' = (f')^{-1}
+\]
+
+In other words, the derivatives are inverse functions of each other. The transformation is an involution.

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ca22081e-af54-4990-87b3-ce04331cb3c6
-:mtime:    20220225223636
-:ctime:    20220224214954
-:END:
-#+title: Ordinary generating function
-#+filetags: :stub:
-
-

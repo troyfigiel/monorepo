@@ -1,0 +1,6 @@
+:ctime:    20220302215649
+:END:
+#+title: Left censoring
+#+filetags: :stub:
+
+

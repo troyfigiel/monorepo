@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       2643d899-688f-486e-89e9-33a704189cae
-:mtime:    20220310142142
-:ctime:    20220223092119
-:END:
-#+title: Bias-variance tradeoff for k-nearest neighbours
-#+filetags: :stub:
-

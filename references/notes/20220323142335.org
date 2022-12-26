@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       72eeab42-23bb-44d2-afcb-f2b59aea0746
-:mtime:    20220326092842
-:ctime:    20220323142335
-:END:
-#+title: Number theory
-#+filetags: :stub:
-
-[[id:c1d777cd-16de-4546-8621-cbd9222cf34c][!Reoccurring number sequences]]

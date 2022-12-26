@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       76de247c-a9ac-4e8b-a31c-e0e30f519ea6
-:mtime:    20220320160855
-:ctime:    20220320160854
-:END:
-#+title: Standard logistic distribution
-#+filetags: :stub:
-
-

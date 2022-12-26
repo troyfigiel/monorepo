@@ -1,0 +1,13 @@
+:ctime:    20220303230845
+:END:
+#+title: Factorial moment
+#+filetags: :stub:
+
+The factorial moments are expectation values of [[denote:20220303T230907][Falling factorials]]. They are useful for studying
+the moments of non-negative integer valued random variables.
+
+[[denote:20220303T231108][Factorial moments are related to raw moments through Stirling numbers of the second kind]].
+
+They can be calculated through the [[denote:20220303T231317][Factorial moment generating function]].
+
+https://en.wikipedia.org/wiki/Factorial_moment

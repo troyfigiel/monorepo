@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8ccf8fd2-ff06-4e91-8660-e611b8b5bba9
-:mtime:    20220302205847
-:ctime:    20220302205838
-:END:
-#+title: R^2 can be negative for OLS without an intercept
-#+filetags: :stub:
-
-

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       8f0c6651-b460-4338-9ad3-d6f2d7de3705
-:mtime:    20220225223632
-:ctime:    20220221214048
-:END:
-#+title: multiple comparisons
-#+filetags: :stub:
-

@@ -1,0 +1,7 @@
+:ctime:    20220420214651
+:END:
+#+title: Wrapper method
+#+filetags: :stub:
+
+- [[denote:20220420T214828][Greedy wrapper method]]
+- [[denote:20220420T214835][Non-greedy wrapper method]]

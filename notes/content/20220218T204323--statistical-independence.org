@@ -1,0 +1,19 @@
+:ctime:    20220218204323
+:END:
+#+title: Statistical independence
+
+Two events \( A \) and \( B \) are independent if and only if
+
+\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
+\]
+
+In terms of conditional probability, this means \( \mathbb{P}(A | B) = \mathbb{P}(A) \) and \( \mathbb{P}(B|A) = \mathbb{P}(B) \).
+
+Two random variables \( X \) and \( Y \) are independent if and only if the joint cumulative distribution function satisfies
+
+\[
+F_{X, Y}(x, y) = F_X(x) F_Y(y)
+\]
+
+This is closely related to the notion of uncorrelated random variables, but it should be noted that there is a [[denote:20220218T210147][difference between independent and uncorrelated random variables]].

@@ -1,0 +1,9 @@
+:ctime:    20220303222830
+:END:
+#+title: Point mass distribution
+#+filetags: :stub:
+
+The point mass distribution is a [[denote:20220303T223003][Discrete probability distribution]] where all the probability mass
+is concentrated at a single point. In other words, if \( X \sim \delta_a \) then \( \mathbb{P}(X = a) = 1 \).
+
+[[denote:20220303T220832][The point mass distribution is the only distribution with vanishing standard deviation]].

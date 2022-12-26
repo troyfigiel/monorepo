@@ -1,0 +1,11 @@
+#+title:      Reproducibility
+#+date:       [2022-03-07 Mon 15:12]
+#+filetags:   :unfinished:
+#+identifier: 20220307T151255
+
+Software / programming
+- [[denote:20220307T145320][Reproducible build]]
+- [[denote:20220307T161118][Reproducible workflow]]
+
+Experimental
+- [[denote:20220307T145617][Reproducibility crisis]]

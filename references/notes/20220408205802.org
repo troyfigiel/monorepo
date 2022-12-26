@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       156ed55e-61e3-4eab-9dfc-314fbc36978a
-:mtime:    20220408205804
-:ctime:    20220408205802
-:END:
-#+title: Gauge transformation
-#+filetags: :stub:
-
-

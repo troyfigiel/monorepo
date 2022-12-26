@@ -1,0 +1,17 @@
+:ctime:    20220313152933
+:ROAM_ALIASES: "Uniform manifold approximation and projection"
+:END:
+#+title: UMAP
+#+filetags: :unclean:
+
+UMAP has a number of nearest neighbours parameter \( \#NN \), which is arguably the most important parameter
+to adjust.
+
+# TODO: We need to extract a lot of details from the UMAP versus t-SNE to here
+See [[denote:20220314T200130][UMAP versus t-SNE]] for many more details.
+
+UMAP runs [[denote:20220314T201408][Stochastic gradient descent]] to minimize the cost function.
+
+# TODO: Which cost function does UMAP use?
+
+https://www.youtube.com/watch?v=eN0wFzBA4Sc

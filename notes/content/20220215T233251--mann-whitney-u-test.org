@@ -1,0 +1,6 @@
+:ctime:    20220215233251
+:mtime:    20220225223625
+:END:
+#+title: Mann Whitney U test
+
+Tests whether the probability \( \mathbb{P}(X > Y) = \mathbb{P}(Y > X) \).

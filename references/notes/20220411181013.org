@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       bcf0203c-c072-4865-acf6-21d1511cb137
-:mtime:    20220411181013
-:ctime:    20220411181013
-:END:
-#+title: Experimental study
-#+filetags: :stub:
-

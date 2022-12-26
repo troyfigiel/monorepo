@@ -1,0 +1,31 @@
+:ctime:    20220221233452
+:END:
+#+title: Literate programming
+#+filetags: :stub:
+
+Literate programming is a programming paradigm where the code of a program is intertwined with
+natural language.
+
+# TODO: Fix this! Jupyter is not literate programming. The stress is on the report, not on the
+# code. This is not the intent of literate programming.
+Due to its explanative power, [[denote:20220221T233645][Literate programming fits to scientific computation]].
+
+# TODO: Does it really? Sometimes config is pretty straightforward.
+Due to the lack of coherency in configurations, [[denote:20220221T234140][Literate programming also fits to configuration
+files]].
+
+Literate programming is very useful if intent cannot be clearly read from the code and comments are
+insufficient to explain what is happening. This is especially the case when [[denote:20220326T205014][LaTeX]] is needed or some
+form of [[denote:20220316T220449][Visualization]].
+
+Literate programming captures the "why" behind a piece of code. You do not want to communicate to
+the machine, the main purpose is to communicate to other humans that will read your code. This is
+not a technique, this is a mindset change.
+
+# TODO: When should you use literate programming over clean code practices?
+[[denote:20220414T172843][Clean code]]
+
+https://www.youtube.com/watch?v=Av0PQDVTP4A
+
+# TODO: Create a modular programming node
+- Is not very modular. It is hard to extract parts of the system for reuse. This makes programming like an art, not an engineering problem.

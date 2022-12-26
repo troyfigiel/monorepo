@@ -1,0 +1,8 @@
+:ctime:    20220315132511
+:END:
+#+title: Files in the GNU store can only be changed by the Guix build daemon
+#+filetags: :stub:
+
+Moreover, you cannot edit any file in the store directly (which includes configurations from [[denote:20220309T181124][Guix
+Home]] or [[denote:20220221T223907][Guix System]]), because the store is mounted as a read-only filesystem that only the [[denote:20220315T132419][Guix
+build daemon]] can change.

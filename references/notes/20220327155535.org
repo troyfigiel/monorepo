@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       2658d0d8-16bb-471c-ba12-405a767d52c6
-:mtime:    20220327163010
-:ctime:    20220327155535
-:END:
-#+title: Negative binomial distribution
-#+filetags: :stub:

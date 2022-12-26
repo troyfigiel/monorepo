@@ -1,0 +1,6 @@
+:ctime:    20220307152415
+:END:
+#+title: Gamma distribution
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:ctime:    20220326000600
+:END:
+#+title: Zeroth law of thermodynamics
+#+filetags: :stub:
+
+[[denote:20220324T214503][Thermodynamic equilibrium]] is transitive, hence defining it as an [[denote:20220326T004926][Equivalence relation]]. If system A
+is in equilibrium with B and B in equilibrium with C, then A is in equilibrium with C.
+
+In other words, there is only one kind of temperature.

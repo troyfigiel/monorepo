@@ -1,0 +1,8 @@
+#+title:      Lisp
+#+date:       [2022-02-20 Sun 09:46]
+#+filetags:   :unfinished:
+#+identifier: 20220220T094628
+
+There are many different types of Lisps. One of them is [[denote:20220221T235650][Guile Scheme]]. This is the language GNU uses
+to configure a lot of their programs with, because [[denote:20220221T235737][Lisp is a good configuration language]].
+

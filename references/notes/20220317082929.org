@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       00647e05-946d-49a9-a2b2-b4c122f94a82
-:mtime:    20220317082929
-:ctime:    20220317082929
-:END:
-#+title: Dynamic typing
-#+filetags: :stub:
-
-

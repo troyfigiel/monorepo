@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       681a5526-2185-4150-87ef-6370cfae3c3f
-:mtime:    20220316150432
-:ctime:    20220316150431
-:END:
-#+title: Single-touch attribution
-#+filetags: :stub:
-
-

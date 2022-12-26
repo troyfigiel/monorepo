@@ -1,0 +1,6 @@
+:ctime:    20220329232721
+:END:
+#+title: Symmetric group
+#+filetags: :stub:
+
+

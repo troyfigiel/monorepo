@@ -1,0 +1,6 @@
+:ctime:    20220323230138
+:END:
+#+title: Absorbing state
+#+filetags: :stub:
+
+

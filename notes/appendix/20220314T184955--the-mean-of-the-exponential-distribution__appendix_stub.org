@@ -1,0 +1,6 @@
+:ctime:    20220314184955
+:END:
+#+title: ?The mean of the exponential distribution
+#+filetags: :appendix:stub:
+
+

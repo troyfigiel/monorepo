@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7ca91bb4-6cd8-4e6b-8c9d-323f1604b3e8
-:mtime:    20220408215811
-:ctime:    20220408215810
-:END:
-#+title: Radon-Nikodym derivative
-#+filetags: :stub:
-
-

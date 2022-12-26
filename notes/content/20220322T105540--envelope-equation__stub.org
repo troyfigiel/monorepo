@@ -1,0 +1,8 @@
+:ctime:    20220322105540
+:END:
+#+title: Envelope equation
+#+filetags: :stub:
+
+Example:
+- [[denote:20220417T224423][?The envelope curve of equiareal triangles is a hyperbola]]
+

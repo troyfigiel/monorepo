@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       46cb9653-3d15-44c0-8bfe-d8b8c1fa8e8d
-:mtime:    20220403120252
-:ctime:    20220403120239
-:END:
-#+title: Intensive property
-#+filetags: :stub:
-
-Opposite of [[id:ba9ca222-7783-498f-b6e5-944db5aa5e93][Extensive property]].

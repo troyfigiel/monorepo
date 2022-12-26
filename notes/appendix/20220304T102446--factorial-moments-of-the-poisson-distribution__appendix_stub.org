@@ -1,0 +1,16 @@
+:ctime:    20220304102446
+:END:
+#+title: ?Factorial moments of the Poisson distribution
+#+filetags: :appendix:stub:
+
+With \( \mathbb{P}(X=k) = e^{- \lambda} \frac{\lambda^k}{k!} \) we find
+
+\begin{equation*}
+\begin{align}
+M_X(t)
+&= e^{- \lambda} \sum\limits_{k=0}^{\infty} \frac{(t \lambda)^k}{k!} \\
+&= e^{\lambda (t - 1)}
+\end{align}
+\end{equation*}
+
+Hence, \( \mathbb{E}[(X)_r] = \lambda^r \).

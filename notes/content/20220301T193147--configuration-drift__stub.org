@@ -1,0 +1,9 @@
+:ctime:    20220301193147
+:END:
+#+title: Configuration drift
+#+filetags: :stub:
+
+See also
+- [[denote:20220315T112939][Divergent system]]
+- [[denote:20220315T113105][Convergent system]]
+- [[denote:20220315T114141][Congruent system]]

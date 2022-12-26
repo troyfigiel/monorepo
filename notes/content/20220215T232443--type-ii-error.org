@@ -1,0 +1,4 @@
+:ctime:    20220215232443
+:END:
+#+title: Type II error
+

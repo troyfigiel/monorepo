@@ -1,0 +1,10 @@
+:ctime:    20220221233800
+:END:
+#+title: Emacs
+#+filetags: :stub:
+
+[[denote:20220315T094740][Users becoming programmers]]
+
+To enhance an Emacs package, look for a [[denote:20220317T222331][Hook]] that you can use to run your own code.
+
+Emacs comes with its own testing library [[denote:20220317T223612][ERT]].

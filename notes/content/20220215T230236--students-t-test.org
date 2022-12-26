@@ -1,0 +1,6 @@
+:ctime:    20220215230236
+:END:
+#+title: Student's t-test
+
+[[denote:20220301T170959][The t-test is a special case of linear regression]].
+[[denote:20220301T172804][The t-test is a special case of ANOVA]].

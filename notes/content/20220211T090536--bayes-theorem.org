@@ -1,0 +1,9 @@
+:ctime:    20220211090536
+:END:
+#+title: Bayes' theorem
+
+Bayes' theorem is used to reverse the dependencies in conditional probabilities. More precisely, if we have events \( A \) and \( B \), the theorem states
+
+\[ \mathrm{Pr}(A | B)\mathrm{Pr}(B) = \mathrm{Pr}(B | A)\mathrm{Pr}(A) \]
+
+The results can be counterintuitive. A standard example is [[denote:20220211T091008][Bayes' theorem in drug testing]].

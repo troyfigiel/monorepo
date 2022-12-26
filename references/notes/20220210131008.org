@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       b777691a-9c39-48db-b8e7-10b5164dfc86
-:mtime:    20220225223635
-:ctime:    20220210131008
-:END:
-#+title: Continuous function
-

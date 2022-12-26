@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       8e2f769f-810d-4703-bf60-fcf0949275a6
-:mtime:    20220415150428
-:ctime:    20220415150426
-:END:
-#+title: Dirac delta function
-#+filetags: :stub:
-

@@ -1,0 +1,5 @@
+#+title: Potentially shippable product
+#+filetags: :stub:
+
+After each [[denote:20221027T154550][Sprint]], the [[denote:20221027T155224][Product owner]] can decide whether the product is ready to be shipped
+or whether new features still need to be added in additional [[denote:20221027T154550][Sprints]].

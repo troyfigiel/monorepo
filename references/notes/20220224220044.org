@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       da99be38-e43b-44ba-8eaf-9fe61ad05105
-:mtime:    20220225223636
-:ctime:    20220224220044
-:END:
-#+title: Moment generating function
-#+filetags: :stub:
-
-

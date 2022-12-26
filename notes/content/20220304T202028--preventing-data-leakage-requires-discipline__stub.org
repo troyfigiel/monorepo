@@ -1,0 +1,12 @@
+:ctime:    20220304202028
+:END:
+#+title: Preventing data leakage requires discipline
+#+filetags: :stub:
+
+It is easy to fall into the trap of using some forms of information that the test set provides in
+your model training. When you need to build a model to predict an outcome, [[denote:20220304T195624][Create a train-test
+split before any preprocessing, normalization or training]].
+
+It is also important to remember that [[denote:20220304T202532][Training a model means to learn a function]]: Data goes in, a
+prediction comes out. In particular, this means that after training the learned function should be
+considered fixed.

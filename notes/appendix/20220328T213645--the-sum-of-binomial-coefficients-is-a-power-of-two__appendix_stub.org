@@ -1,0 +1,8 @@
+:ctime:    20220328213645
+:END:
+#+title: ?The sum of binomial coefficients is a power of two
+#+filetags: :appendix:stub:
+
+\[
+\sum\limits_{k=0}^n \binom{n}{k} = 2^n
+\]

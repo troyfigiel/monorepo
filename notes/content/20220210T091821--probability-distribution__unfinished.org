@@ -1,0 +1,23 @@
+#+title:      Probability distribution
+#+date:       [2022-02-10 Thu 09:18]
+#+filetags:   :unfinished:
+#+identifier: 20220210T091821
+
+* Important cases of distributions
+- [[denote:20220325T223446][Stable distribution]] for the [[denote:20220210T091048][Central limit theorem]] and [[denote:20220325T230304][Generalized central limit theorem]].
+- [[denote:20220215T212034][Exponential family]]
+- [[denote:20220211T094412][Uniform distribution]]
+
+*  Distribution classes
+- [[denote:20220303T223003][Discrete probability distribution]]
+- [[denote:20220327T135342][Continuous probability distribution]]
+- [[denote:20220327T122240][Circular probability distribution]]
+
+* Calculational tools
+- [[denote:20220327T155052][Law of total cumulance]]
+
+A key result for probability distributions is the [[denote:20220210T091048][Central limit theorem]].
+
+# TODO: Clean up these indices. What is the point of these exactly?
+- [[denote:20220307T152654][§Examples of probability distributions]]
+- [[denote:20220307T152814][§Properties of probability distributions]]

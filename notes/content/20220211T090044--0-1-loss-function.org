@@ -1,0 +1,5 @@
+:ctime:    20220211090044
+:END:
+#+title: 0-1 loss function
+
+It is computationally difficult to minimize the 0-1 loss function directly.

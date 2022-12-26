@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       27c2a906-1f2c-4d6d-b3ea-8feb4bfeb4e2
-:mtime:    20220409001153
-:ctime:    20220409001152
-:END:
-#+title: Payoff matrix
-#+filetags: :stub:
-
-

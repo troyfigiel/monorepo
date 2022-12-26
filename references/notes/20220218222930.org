@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       89ef3b96-7b5a-4f92-9249-8a771ca47951
-:mtime:    20220225223632
-:ctime:    20220218222930
-:END:
-#+title: appendix of Chebyshev's inequality from Markov's inequality
-

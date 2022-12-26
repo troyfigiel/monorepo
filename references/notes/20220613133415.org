@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       f597eeb0-dbd5-4a12-9704-a4a244203a3f
-:END:
-#+title: TDDA
-#+filetags: :stub:
-
-A tool created to bring [[id:3d6f2f10-7b62-4628-a65d-c16b37b991fd][Test-driven development]] to [[id:2da2e3f2-84af-4aa8-b45a-616364568304][Data analysis]].

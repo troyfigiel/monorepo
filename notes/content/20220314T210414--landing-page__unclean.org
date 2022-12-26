@@ -1,0 +1,18 @@
+:ctime:    20220314210414
+:END:
+#+title: Landing page
+#+filetags: :unclean:
+
+You have arrived at the landing page of my notes. You can move around these notes by clicking on
+the links.
+
+At the moment I am mainly using [[denote:20220323T134158][Note taking as a tool for learning]] and as an experiment to see how
+I could go about [[denote:20220326T093116][Maintaining an increasingly complex system of notes]]. In the future, this will form
+the backbone for writing material.
+
+To get started, you can have look at the canonical starting point [[denote:20220314T210557][§Index]]. From there you can browse
+from note to note by clicking on the links. [[denote:20220323T132538][§In progress]] keeps track of the bigger topics I am
+currently working on, although I also tend to add shorter notes here and there.
+
+# TODO: Put this in the right context
+[[denote:20220326T130225][What I would tell myself just starting out with this system of notes]].

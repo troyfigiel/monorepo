@@ -1,0 +1,6 @@
+:ctime:    20220310133058
+:END:
+#+title: Computer vision
+#+filetags: :stub:
+
+

@@ -1,0 +1,9 @@
+:ctime:    20220218220520
+:END:
+#+title: Law of large numbers
+#+filetags: :stub:
+
+There are two different versions of the law of large numbers called the [[denote:20220218T220632][Weak law of large numbers]] and the [[denote:20220218T220643][Strong law of large numbers]].
+
+The law of large numbers states that the sample average approaches the mean of the distribution
+when the number of samples approaches infinity.

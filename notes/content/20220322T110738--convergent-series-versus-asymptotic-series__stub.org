@@ -1,0 +1,23 @@
+:ctime:    20220322110738
+:END:
+#+title: Convergent series versus asymptotic series
+#+filetags: :stub:
+
+This means that although the series might formally be divergent, its partial sums still give
+excellent results up to a certain order. This is especially true of integrals and far-field limits.
+
+It can even be the case that the numerical results are better than for convergent series, which might
+take a long time to be numerically useful.
+
+Difference between convergent and asymptotic:
+- Convergent: \( S_n(x) \rightarrow f(x) \text{ as } n \rightarrow \infty \text{, for each fixed
+  $x$} \)
+- Asymptotic: \( S_n(x) \sim f(x) \text{ as } x \rightarrow x_0 \text{, for each fixed $n$} \)
+
+Distinction is in what we keep fixed. A series is only asymptotic around a certain point, since
+\( \phi_j(x) \gg \phi_{j+1}(x) \) is only a valid definition as we move towards a certain point
+\( x_0 \).
+
+Asymptoticity is a local behaviour, only near a certain point.
+
+Note also that [[denote:20220319T104305][Every convergent Taylor series is an asymptotic series]].

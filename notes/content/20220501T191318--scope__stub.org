@@ -1,0 +1,6 @@
+#+title: Scope
+#+filetags: :stub:
+
+Example:
+- [[denote:20220501T191332][Dynamic scope]]
+- [[denote:20220501T191339][Lexical scope]]

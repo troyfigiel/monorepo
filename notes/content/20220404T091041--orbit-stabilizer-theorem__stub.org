@@ -1,0 +1,6 @@
+:ctime:    20220404091041
+:END:
+#+title: Orbit-stabilizer theorem
+#+filetags: :stub:
+
+

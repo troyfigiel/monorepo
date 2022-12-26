@@ -1,0 +1,11 @@
+:ctime:    20220326102147
+:END:
+#+title: All abstractions are leaky
+#+filetags: :stub:
+
+This does not mean abstractions are useless. It simply means that abstractions are not infallible.
+An abstraction can work fine in a majority of cases, but break down in more specialized
+circumstances.
+
+For example, [[denote:20220220T094753][SQL]] is a layer of abstraction on top of databases, but a database engineer will still
+need to know exactly what the query is going to do to perform optimizations.

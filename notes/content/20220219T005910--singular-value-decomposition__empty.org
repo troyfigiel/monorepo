@@ -1,0 +1,6 @@
+#+title:      Singular value decomposition
+#+date:       [2022-02-19 Sat 00:59]
+#+filetags:   :empty:
+#+identifier: 20220219T005910
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       eed11f9b-70c8-44ec-ad40-71091cec5bf2
-:mtime:    20220410153417
-:ctime:    20220410145404
-:END:
-#+title: Empirical measure
-#+filetags: :stub:
-
-The measure corresponding to the [[id:627a8a03-e3f0-43ff-8965-680913f3bfc9][Empirical distribution function]].

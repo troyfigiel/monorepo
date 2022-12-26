@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       9b6d9563-61ed-44e9-b229-66b66a75cfe8
-:mtime:    20220415005647
-:ctime:    20220415005646
-:END:
-#+title: Kamiltonian
-#+filetags: :stub:
-

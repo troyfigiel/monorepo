@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       2e2634e1-3cc3-4e35-a6d1-4cbc404bb004
-:END:
-#+title: Serving layer
-#+filetags: :stub:

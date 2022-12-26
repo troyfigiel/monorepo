@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       eb264088-f6a7-44a5-8a67-a82ef13fbb73
-:mtime:    20220328220554
-:ctime:    20220328220553
-:END:
-#+title: Collision time
-#+filetags: :stub:
-
-

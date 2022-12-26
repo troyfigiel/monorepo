@@ -1,0 +1,13 @@
+:mtime:    20220320154821
+:ctime:    20220320143303
+:END:
+#+title: Fisher-Tippett-Gnedenko theorem
+#+filetags: :stub:
+
+This theorem states that the maximum of a sample will follow a distribution of one of these three
+forms:
+- [[denote:20220320T143640][Gumbel distribution]]
+- [[denote:20220320T143652][Fréchet distribution]]
+- [[denote:20220302T235424][Weibull distribution]]
+
+These three distributions are combined in the [[denote:20220320T144032][Generalized extreme value distribution]].

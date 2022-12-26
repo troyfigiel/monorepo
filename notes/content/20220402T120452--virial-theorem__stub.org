@@ -1,0 +1,11 @@
+:ctime:    20220402120452
+:END:
+#+title: Virial theorem
+#+filetags: :stub:
+
+Mechanical, stable system averaged over time:
+
+\[
+\langle K \rangle = - \frac{1}{2} \sum\limits_{k=1}^N \langle \mathbf{F}_k \cdot \mathbf{r}_k
+\rangle
+\]

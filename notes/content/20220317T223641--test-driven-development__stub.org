@@ -1,0 +1,9 @@
+:mtime:    20220427091824
+:ctime:    20220317223641
+:END:
+#+title: Test-driven development
+#+filetags: :stub:
+
+- [[denote:20220427T091817][Behaviour-driven development]]
+- [[denote:20220317T223612][ERT]]
+- [[denote:20220613T094234][Property-based testing]]

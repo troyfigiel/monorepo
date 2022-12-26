@@ -1,0 +1,3 @@
+#+title: Lexical scope
+#+filetags: :stub:
+

@@ -1,0 +1,6 @@
+:ctime:    20220405214025
+:END:
+#+title: Macrostate
+#+filetags: :stub:
+
+Macrostates: [[denote:20220324T214056][Pressure]], [[denote:20220324T214147][Volume]], [[denote:20220324T214107][Temperature]], [[denote:20220210T200631][Thermodynamics]]

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       9e573b4b-bd57-41c6-9cad-3f28a281150d
-:mtime:    20220415111600
-:ctime:    20220415111559
-:END:
-#+title: Apsidal precession
-#+filetags: :stub:
-

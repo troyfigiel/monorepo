@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       210d719e-febc-439a-bd81-a96a58fbe06b
-:mtime:    20220302104905
-:ctime:    20220215222053
-:END:
-#+title: Simple linear regression
-

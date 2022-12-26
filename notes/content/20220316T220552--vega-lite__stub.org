@@ -1,0 +1,7 @@
+:ctime:    20220316220552
+:END:
+#+title: Vega-Lite
+#+filetags: :stub:
+
+Vega-Lite is a simpler declarative specification aimed at statistical [[denote:20220316T220449][Visualization]]. The output of
+Vega-Lite is [[denote:20220316T223908][Vega]]. It is an example of [[denote:20220314T131430][Declarative programming]]. It is a [[denote:20220316T224152][JSON]]-specification.

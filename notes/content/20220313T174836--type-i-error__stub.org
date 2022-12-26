@@ -1,0 +1,6 @@
+:ctime:    20220313174836
+:END:
+#+title: Type I error
+#+filetags: :stub:
+
+

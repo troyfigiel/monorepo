@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       f16ab982-752c-40c2-bf0d-8f674f00ba58
-:mtime:    20220324094956
-:ctime:    20220219005731
-:END:
-#+title: Covariance matrix
-#+filetags: :stub:
-

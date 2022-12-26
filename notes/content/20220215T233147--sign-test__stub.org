@@ -1,0 +1,16 @@
+:ctime:    20220215233147
+:END:
+#+title: Sign test
+#+filetags: :stub:
+
+The sign test is a [[denote:20220301T163947][Non-parametric test]] which is used for [[denote:20220301T164106][Paired data]] with a [[denote:20220301T164354][Total order]].
+
+For paired observations of random variables \( X \) and \( Y \), the sign test allows us to test the null
+hypothesis \( X = Y \). [[denote:20220301T171954][The sign test is a special case of the binomial test]].
+
+# TODO: Paired tests often have unpaired equivalents. How to write this out?
+The unpaired equivalent of this test is [[denote:20220301T171134][Mood's median test]].
+
+Although the sign test is broadly applicable, [[denote:20220301T172420][When other tests can be applied, the sign test is often the least powerful]]
+
+https://en.wikipedia.org/wiki/Sign_test

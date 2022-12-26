@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6fb57ed9-3f7d-456c-8704-9662cc19fb8e
-:mtime:    20220405094856
-:ctime:    20220302090225
-:END:
-#+title: Group
-#+filetags: :compsci:stub:
-
-

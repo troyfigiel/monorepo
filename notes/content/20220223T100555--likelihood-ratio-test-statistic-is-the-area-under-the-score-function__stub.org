@@ -1,0 +1,6 @@
+:ctime:    20220223100555
+:END:
+#+title: likelihood-ratio test statistic is the area under the score function
+#+filetags: :stub:
+
+

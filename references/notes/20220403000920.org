@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6e548867-19d4-4ead-b886-89266200365f
-:mtime:    20220403000934
-:ctime:    20220403000920
-:END:
-#+title: Poincaré lemma
-#+filetags: :stub:
-
-

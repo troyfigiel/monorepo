@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       bca7fabd-8b89-433d-97ec-7e70e7be42be
-:mtime:    20220318113418
-:ctime:    20220318113417
-:END:
-#+title: Churn prediction
-#+filetags: :stub:
-
-

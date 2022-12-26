@@ -1,0 +1,6 @@
+:ctime:    20220327012853
+:END:
+#+title: Kinetic theory of gases
+#+filetags: :stub:
+
+

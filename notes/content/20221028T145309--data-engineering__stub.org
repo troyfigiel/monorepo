@@ -1,0 +1,17 @@
+:ctime:    20221028145309
+:END:
+#+title: Data engineering
+#+filetags: :stub:
+
+Architectural patterns:
+- [[denote:20221028T145621][Star network topology]]
+- [[denote:20221028T145644][Lambda architecture]]
+
+Data processing:
+- Processing of [[denote:20221028T150050][Data streams]]
+- [[denote:20221028T150511][Batch processing]]
+
+Data storage:
+- [[denote:20221102T084743][Data warehouse]]
+- [[denote:20221102T084809][Data lake]]
+- [[denote:20221102T084835][Data lakehouse]]

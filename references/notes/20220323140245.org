@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       46004645-fc20-4e76-bfd4-55596d405219
-:mtime:    20220324093803
-:ctime:    20220323140245
-:END:
-#+title: Refactor when necessary
-#+filetags: :stub:
-
-

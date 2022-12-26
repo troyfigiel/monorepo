@@ -1,0 +1,6 @@
+:ctime:    20220410145404
+:END:
+#+title: Empirical measure
+#+filetags: :stub:
+
+The measure corresponding to the [[denote:20220410T145432][Empirical distribution function]].

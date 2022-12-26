@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       59bb7c0a-6ee7-42be-8dfa-55d356abfef1
-:mtime:    20220318203342
-:ctime:    20220318203341
-:END:
-#+title: One-hot encoding
-#+filetags: :stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220302090424
+:END:
+#+title: Linux
+#+filetags: :stub:
+
+Linux is a family of open-source operating systems based on [[denote:20220302T090443][Unix]]. It is distributed under the [[denote:20220302T091855][GPL license]].

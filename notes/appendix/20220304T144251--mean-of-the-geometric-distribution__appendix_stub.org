@@ -1,0 +1,6 @@
+:ctime:    20220304144251
+:END:
+#+title: ?Mean of the geometric distribution
+#+filetags: :appendix:stub:
+
+

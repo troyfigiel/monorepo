@@ -1,0 +1,6 @@
+:ctime:    20220227200014
+:ROAM_REFS:
+:END:
+#+title: Cumulative hazard function
+#+filetags: :stub:
+

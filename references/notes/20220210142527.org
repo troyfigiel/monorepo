@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       f3c34da4-ceb1-4fe0-8bc0-37f47f5c5821
-:mtime:    20220225223638
-:ctime:    20220210142527
-:END:
-#+title: Limiting distribution
-

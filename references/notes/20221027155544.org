@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       4cbd3611-9c56-492c-b3f8-e0f4d54d0b3f
-:END:
-#+title: Product backlog
-#+filetags: :stub:
-
-The product backlog is where a [[id:7027bb9d-cacb-49b4-ba35-ccd38058e548][Product owner]] creates a list of product features using [[id:2b9aa9df-4a48-4611-b947-a3bb75d2ffaa][User stories]].
-The [[id:7027bb9d-cacb-49b4-ba35-ccd38058e548][Product owner]] is also responsible for prioritizing the list so the top priorities can be communicated to the team.

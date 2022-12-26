@@ -1,0 +1,13 @@
+:ctime:    20220327135241
+:END:
+#+title: Measure-theoretic basis of probability theory
+#+filetags: :stub:
+
+- [[denote:20220327T140506][Measure theory]]
+- Unification of [[denote:20220303T223003][Discrete probability distribution]] and [[denote:20220327T135342][Continuous probability distribution]]
+- This avoids [[denote:20220327T135409][Bertrand's paradox]] because you specify a measure to integrate against instead of
+  assuming one
+- It also allows us to describe more exotic distributions that are neither discrete nor continuous.
+  ([[denote:20220223T093148][Zero-inflated model]])
+- And more exotic distributions such as the [[denote:20220327T140643][Cantor distribution]], which showcases the power of the
+  measure-theoretic approach.

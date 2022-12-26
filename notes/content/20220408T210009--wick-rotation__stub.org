@@ -1,0 +1,6 @@
+:ctime:    20220408210009
+:END:
+#+title: Wick rotation
+#+filetags: :stub:
+
+

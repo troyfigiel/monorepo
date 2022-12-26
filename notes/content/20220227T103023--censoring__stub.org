@@ -1,0 +1,17 @@
+:ctime:    20220227103023
+:END:
+#+title: Censoring
+#+filetags: :stub:
+
+For example, because we only observe the early deaths in the study and not the deaths that happen after the
+study has concluded.
+
+There are different types of censoring, such as:
+- [[denote:20220302T215649][Left censoring]]
+- [[denote:20220302T215659][Right censoring]]
+- [[denote:20220302T215926][Interval censoring]]
+- [[denote:20220302T215738][Random censoring]]
+- [[denote:20220302T215941][Type I censoring]]
+- [[denote:20220302T215950][Type II censoring]]
+
+https://en.wikipedia.org/wiki/Censoring_(statistics)

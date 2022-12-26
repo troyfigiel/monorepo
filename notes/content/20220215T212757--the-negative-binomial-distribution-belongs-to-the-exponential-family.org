@@ -1,0 +1,4 @@
+:ctime:    20220215212757
+:END:
+#+title: ?The negative binomial distribution belongs to the exponential family
+

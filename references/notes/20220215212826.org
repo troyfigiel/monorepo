@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       16fb9c8c-ccb1-4416-b052-fd0c48e77d9e
-:mtime:    20220310134813
-:ctime:    20220215212826
-:END:
-#+title: ?The Pareto distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

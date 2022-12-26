@@ -1,0 +1,6 @@
+:ctime:    20220404214710
+:END:
+#+title: Universality
+#+filetags: :stub:
+
+Different dynamical systems behave similarly at phase transitions.

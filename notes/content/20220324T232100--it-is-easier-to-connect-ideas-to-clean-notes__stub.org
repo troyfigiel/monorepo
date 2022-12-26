@@ -1,0 +1,6 @@
+:ctime:    20220324232100
+:END:
+#+title: It is easier to connect ideas to clean notes
+#+filetags: :stub:
+
+

@@ -1,0 +1,7 @@
+:ctime:    20220409120819
+:END:
+#+title: The harmonic numbers are never integers
+#+filetags: :stub:
+
+This fact follows from [[denote:20220409T120829][Bertrand's postulate]]. However, it can easily be proved through induction
+(see [[denote:20220409T120955][?Direct proof that the harmonic numbers are never integer]])

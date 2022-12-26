@@ -1,0 +1,244 @@
+#+title:      Information geometry
+#+date:       [2022-04-06 Wed 00:15]
+#+filetags:
+#+identifier: 20220406T001539
+
+[[denote:20220314T212640][Information geometry]]
+https://math.ucr.edu/home/baez/information/information_geometry_1.html
+
+* Part 1
+Starting from the [[denote:20220327T003018][Gibbs distribution]]:
+
+We can derive the [[denote:20220219T005731][Covariance matrix]] from the logarithm of the [[denote:20220218T233605][Partition function]] by
+
+\[
+\frac{\partial^2 \log Z}{\partial \lambda_i \partial \lambda_j} = \langle X_i X_j \rangle - \langle
+X_i \rangle \langle X_j \rangle
+\]
+
+if
+
+\[
+Z = \mathrm{tr} \left( e^{-\lambda_1 X_1 - ... - \lambda_n X_n} \right)
+\]
+
+Unfortunately, in [[denote:20220314T211526][Quantum mechanics]], the operators do not commute.
+
+Therefore, we need to define
+
+\[
+g_{ij} = \mathrm{Re} \langle (X_i - \langle X_i \rangle)(X_j - \langle X_j \rangle) \rangle
+\]
+
+to end up with an object satisfying \( g_{ij} = g_{ji} \).
+
+# TODO: Understand this statementj
+If \( x_i = \langle X_i \rangle \), the points \( x = (x_1, ..., x_n) \in \mathbb{R}^n \) form a
+[[denote:20220324T220521][Manifold]].
+
+The metric \( g_{ij} \) is also positive and when it is positive-definite, it is an [[denote:20220408T203227][Inner product]]
+on the [[denote:20220408T203054][Tangent space]] at the point \( x \), hence defining a [[denote:20220405T235408][Riemannian metric]] on \( \mathbb{R}^n \).
+
+Now it turns out that this is the [[denote:20220405T235954][Fisher information metric]].
+
+* Part 2
+Consider the [[denote:20220327T003018][Gibbs distribution]] (the unique entropy maximizing distribution given constraints on
+the average)
+
+\[
+P = \frac{\exp \left( -\sum\limits_{i=1}^n \lambda_i X_i \right)}{Z}
+\]
+
+Now we do not actually need to take the derivatives of the partition function, but we can take
+
+\[
+\frac{\partial \log P}{\partial \lambda_i} = -X_i + \langle X_i \rangle
+\]
+
+So now we can rewrite
+
+\begin{equation*}
+\begin{align}
+g_{ij}
+&= \mathrm{Re} \langle (X_i - \langle X_i \rangle)(X_j - \langle X_j \rangle) \rangle \\
+&= \mathrm{Re} \left\langle \frac{\partial \log P}{\partial \lambda_i} \frac{\partial \log P}{\partial \lambda_j} \right\rangle
+\end{align}
+\end{equation*}
+
+This is precisely the [[denote:20220405T235954][Fisher information metric]].
+
+* Part 3
+Consider the converse where we start with \( P \), some function from a [[denote:20220324T220521][Manifold]] to the space of
+[[denote:20220402T115115][Probability measures]] (these are [[denote:20220408T204804][Statistical manifolds]]).
+
+Now write
+
+\[
+P = \frac{e^{-A}}{Z}
+\]
+
+Then
+
+\[
+\frac{1}{Z} \frac{\partial Z}{\partial \lambda_i} = -\frac{1}{Z} \mathrm{tr} \left( e^{-A}
+\frac{\partial A}{\partial \lambda_i} \right) = - \left\langle \frac{\partial A}{\partial \lambda_i} \right\rangle
+\]
+
+If we now set
+
+\[
+X_i = \frac{\partial A}{\partial \lambda_i}
+\]
+
+we recover once again the definition
+
+\[
+\frac{\partial \log P}{\partial \lambda_i} = -X_i + \langle X_i \rangle
+\]
+
+There is actually a [[denote:20220408T205802][Gauge transformation]] we can do: \( A \mapsto A + f \) for \( f: M \mapsto
+\mathbb{R} \) a smooth function doesn't change the physics of what we are doing, although it does
+change \( Z \). This leaves the metric invariant.
+
+Because of the ability to do a [[denote:20220408T210009][Wick rotation]], this [[denote:20220408T205802][Gauge transformation]] is closely related to the
+[[denote:20220408T205802][Gauge transformation]] to phases in [[denote:20220314T211526][Quantum mechanics]].
+
+* Part 4
+* Part 5
+Working out the example of a [[denote:20220408T210557][Harmonic oscillator]].
+
+In this case \( H = \frac{1}{2} (p^2 + q^2) \) and the [[denote:20220327T003018][Gibbs distribution]] becomes
+
+\[
+P = \frac{\exp \left( - \frac{1}{2} (p^2 + q^2) \right)}{Z}
+\]
+
+So
+
+\begin{equation*}
+\begin{align}
+\frac{\partial \log P}{\partial p} &= -p \\
+\frac{\partial \log P}{\partial q} &= -q
+\end{align}
+\end{equation*}
+
+Now clearly the cross-terms vanish because the [[denote:20220210T091147][Normal distribution]] is symmetric.
+
+Hence we are left with
+
+\[
+g_{pp} = \frac{1}{Z} \int\limits_{-\infty}^{\infty} p^2 e^{-\frac{1}{2} p^2} \, dp = 1
+\]
+
+Similary for \( g_{qq} \), so we end up with the standard metric
+
+\( g = dp^2 + dq^2 \)
+
+If we have some Gaussian with covariance, we probably get some rotated metric? Should be really
+easy to check.
+
+* Part 6
+Information gain is given by
+
+\[
+S(p, q) = \int\limits_{\Omega} p(\omega) \log \frac{p(\omega)}{q(\omega)} \, d\omega
+\]
+
+This is also known as the [[denote:20220323T090123][Kullback-Leibler divergence]].
+
+It tells you how much information you have learned by updating from distribution \( q \rightarrow p
+\). This is not necessarily symmetric. For example, learning that a fair coin always comes up heads
+leads you to learn one bit of information. The converse however, leads to an information gain of
+infinite bits, because you assumed a priori that coming up tails was completely impossible.
+
+In terms of the [[denote:20220408T215810][Radon-Nikodym derivative]], we have
+
+\[
+S(\mu, \nu) = \int\limits_{\Omega} \log \frac{d\mu}{d\nu} \, d\mu
+\]
+
+This is not exactly a metric:
+- \( S(\mu, \nu) \geq 0 \)
+- \( S(\mu, \nu) = 0 \) if and only if \( \mu = \nu \)
+
+but \( S(\mu, \nu) \neq S(\nu, \mu) \). On top of that, it also fails the [[denote:20220408T220155][Triangle inequality]].
+
+* Part 7
+A [[denote:20220408T204804][Statistical manifold]] is a manifold whose points are hypotheses about some situation. For example,
+for a [[denote:20220210T094457][Bernoulli distribution]], we could take \( [0, 1] \) as our [[denote:20220408T204804][Statistical manifold]]. The manifold
+parametrizes these hypotheses. This is fundamental to the subject of [[denote:20220408T230624][Parametric statistics]].
+
+Consider the [[denote:20220323T090123][Kullback-Leibler divergence]] \( S(p, q) \).
+
+Let \( p = q + h \)
+
+Then
+
+\[
+p \log \frac{p}{q} = (q + h) \log \left( 1 + \frac{h}{q} \right) = h + \frac{h^2}{q}
+\]
+
+Since both
+
+\[
+\int\limits_{\Omega} p \, d\omega = \int\limits_{\Omega} q \, d\omega = 1
+\]
+
+it must be true that
+
+\[
+\int\limits_{\Omega} h \, d\omega = 0
+\]
+
+\[
+\int\limits_{\Omega} p \log \frac{p}{q} \, d\omega = \int\limits_{\Omega} \left( h + \frac{h^2}{q}
+\right) \, d\omega = \int\limits_{\Omega} \frac{h^2}{q} \, d\omega
+\]
+
+Hence \( S(q + h, q) \approx \int\limits_{\Omega} \frac{h^2}{q} \, d\omega \) and the first-order
+variation vanishes.
+
+# TODO: Finish the calculation with a fresh mind. Don't even need the polarization trick?
+
+I would need to calculate something like
+
+\[
+\lim_{h_1, h_2 \rightarrow 0} \frac{f(x + h_1) - 2f(x) + f(x - h_2)}{h_1 h_2}
+\]
+
+* Part 8
+If we assume we have a number of species of animals that increase in size based on an exponential
+equation
+
+\[
+\frac{dP_i}{dt} = f_i P_i
+\]
+
+with \( f_i \) the fitness of the i-th genotype, we may rewrite this to the [[denote:20220409T000324][Replicator equation]]
+using
+
+\[
+p_i = \frac{P_i}{\sum\limits_i P_i}
+\]
+
+This gives
+
+\[
+\frac{dp_i}{dt} = \left( f_i - \langle f \rangle \right) p_i
+\]
+
+where \( \langle f \rangle = \sum\limits_i f_i p_i \) is the mean of the [[denote:20220409T001558][Fitness function]]. The functions \( f_i \)
+may be functions of all other \( P_j \) as well.
+
+# TODO: How does this connect exactly to the KL divergence?
+
+To connect to [[denote:20220409T001053][Evolutionary game theory]], we can take
+
+\[
+f_i = \sum\limits_{i, j} A_{ij} p_j
+\]
+
+where \( A_{ij} \) is the [[denote:20220409T001152][Payoff matrix]].
+
+# TODO: How exactly does this relate to network theory?
+This also relates to [[denote:20220405T094131][Network theory]] somehow.

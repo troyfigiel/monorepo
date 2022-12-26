@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c929ef8a-c461-40df-961e-04c93548c04b
-:mtime:    20220331000153
-:ctime:    20220331000152
-:END:
-#+title: Mutual information
-#+filetags: :stub:
-
-

@@ -1,0 +1,67 @@
+#+title:      Generating function per distribution
+#+date:       [2022-03-03 Thu 23:18]
+#+filetags:   :unfinished:
+#+identifier: 20220303T231816
+
+* Poisson distribution
+
+*Factorial moment generating function*
+
+\[
+M_X(t) = e^{\lambda (t-1)}
+\]
+
+*Factorial moments*
+
+\[
+\mathbb{E}[(X)_r] = \lambda^r
+\]
+
+See:
+- [[denote:20220304T102446][?Factorial moments of the Poisson distribution]]
+
+* Binomial distribution
+
+*Factorial moment generating function*
+
+\[
+M_X(t) = (1 + (t-1)p)^n
+\]
+
+*Factorial moments*
+
+\[
+\mathbb{E}[(X)_r] = (n)_r p^r
+\]
+
+See:
+- [[denote:20220304T102000][?Factorial moments of the binomial distribution]]
+
+* Geometric distribution
+
+*Factorial moment generating function*
+
+\[
+...
+\]
+
+*Factorial moments*
+
+\[
+...
+\]
+
+See:
+- [[denote:20220304T104814][?Factorial moments of the geometric distribution]]
+
+* Exponential distribution
+
+*Moment generating function*
+
+\[
+M_X(t) = \frac{\lambda}{\lambda - t}
+\]
+
+*Moments*
+
+

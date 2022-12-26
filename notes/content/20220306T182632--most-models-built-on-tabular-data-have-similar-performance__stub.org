@@ -1,0 +1,10 @@
+:ctime:    20220306182632
+:END:
+#+title: Most models built on tabular data have similar performance
+#+filetags: :stub:
+
+Some minor pre-processing could be involved.
+
+This means we can end up with simple models that have good performance. See: [[denote:20220303T134927][Interpretable machine learning]].
+
+https://www.youtube.com/watch?v=Eokq35hm3mM

@@ -1,0 +1,6 @@
+:ctime:    20220322095706
+:END:
+#+title: Laplace transformation
+#+filetags: :stub:
+
+

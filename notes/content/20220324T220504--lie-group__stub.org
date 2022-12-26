@@ -1,0 +1,6 @@
+:ctime:    20220324220504
+:END:
+#+title: Lie group
+#+filetags: :stub:
+
+An object that is both a [[denote:20220218T232930][Group]] and a [[denote:20220324T220521][Manifold]].

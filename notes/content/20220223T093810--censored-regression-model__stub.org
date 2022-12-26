@@ -1,0 +1,7 @@
+:ctime:    20220223093810
+:END:
+#+title: censored regression model
+#+filetags: :stub:
+
+A censored regression model is a model in which the dependent variable is censored above or below a
+certain threshold. A standard example is the [[denote:20220223T093906][tobit model]].

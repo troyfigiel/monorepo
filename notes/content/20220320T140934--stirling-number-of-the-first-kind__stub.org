@@ -1,0 +1,6 @@
+:ctime:    20220320140934
+:END:
+#+title: Stirling number of the first kind
+#+filetags: :stub:
+
+

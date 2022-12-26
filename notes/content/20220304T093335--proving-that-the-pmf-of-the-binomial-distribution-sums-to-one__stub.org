@@ -1,0 +1,6 @@
+:ctime:    20220304093335
+:END:
+#+title: Proving that the PMF of the binomial distribution sums to one
+#+filetags: :stub:
+
+

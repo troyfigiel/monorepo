@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1f2fe34d-c304-4047-9d59-e5382f85c66f
-:mtime:    20220328234603
-:ctime:    20220328234602
-:END:
-#+title: Boltzmann entropy
-#+filetags: :stub:
-
-

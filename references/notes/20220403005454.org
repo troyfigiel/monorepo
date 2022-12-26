@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1cdfba14-5b2e-4d74-a538-120f7117dbaf
-:mtime:    20220403005456
-:ctime:    20220403005454
-:END:
-#+title: Black-body radiation
-#+filetags: :stub:
-
-

@@ -1,0 +1,7 @@
+:ctime:    20220320134304
+:END:
+#+title: Lagrange inversion theorem
+#+filetags: :stub:
+
+- We can use this theorem to calculate the series expansion of the [[denote:20220319T224718][Lambert W function]].
+- This theorem can be used to prove [[denote:20220320T135730][Faà di Bruno's formula]].

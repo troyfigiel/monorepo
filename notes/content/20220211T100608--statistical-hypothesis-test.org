@@ -1,0 +1,15 @@
+:ctime:    20220211100608
+:ROAM_ALIASES: "Hypothesis test"
+:END:
+#+title: Statistical hypothesis test
+
+A statistical hypothesis test is a way to determine a possible conclusion from two different hypotheses.
+
+In a hypothesis test, a null hypothesis and an alternate hypothesis are proposed for the underlying probability distribution of a sample of data. If the probability of occurrence is less than the [[denote:20220215T232018][significance level]] given that the null hypothesis is true, the null hypothesis is rejected and the alternate hypothesis accepted.
+
+A mistaken rejection of the null hypothesis is known as a [[denote:20220215T232406][Type I error]], whereas the mistaken acceptance of an actually false null hypothesis is known as a [[denote:20220215T232443][Type II error]].
+
+Tests based on the significance level, are another way of expressing [[denote:20220215T232257][Confidence intervals]].
+
+There are many well-known hypothesis tests. For a list and description of when to use them, see
+[[denote:20220307T104528][!When to apply which hypothesis test]].

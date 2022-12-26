@@ -1,0 +1,12 @@
+:ctime:    20220324222310
+:END:
+#+title: Connecting ideas requires a different form of note taking from communicating ideas
+#+filetags: :stub:
+
+Taking notes for yourself is different from reading or communicating ideas. Interpretation and
+communication works better in a more linear form. However, in its linear form a set of ideas is not
+well-suited for scaling. This requires a form of [[denote:20220314T213913][Non-linear note taking]].
+
+It is also important to
+- keep notes to the point (atomic)
+- write them for yourself first, that is the main goal of your notes

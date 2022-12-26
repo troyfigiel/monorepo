@@ -1,0 +1,17 @@
+:ctime:    20220310125652
+:END:
+#+title: Decision tree
+#+filetags: :stub:
+
+These are
+- Logical models
+- Reasons models are similar to how humans reason (if-then) so very interpretable (see: [[denote:20220303T134927][Interpretable machine learning]])
+- Building blocks of many other algorithms
+
+[[denote:20220210T200903][Information theory]] is used to build decision trees.
+
+Othe algorithms building forth on decision trees:
+- [[denote:20220310T125857][Random forest]]
+- [[denote:20220310T125913][Boosting]]
+
+They normally do not perform well with [[denote:20220318T203341][One-hot encoding]].

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c48fa819-3084-4985-8dde-1a6b268a8cb2
-:mtime:    20220403122047
-:ctime:    20220403122027
-:END:
-#+title: Multinomial theorem
-#+filetags: :stub:
-
-Generalization of the [[id:97f3ca80-62e8-4387-82c6-39bb019c513f][Binomial theorem]] for [[id:972139ed-384d-4f29-a609-60d87cf1d23a][Binomial coefficients]] to [[id:2d056106-74f8-484b-997a-3f9c270b5570][Multinomial coefficients]].

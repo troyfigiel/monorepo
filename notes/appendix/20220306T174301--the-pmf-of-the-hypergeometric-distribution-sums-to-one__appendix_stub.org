@@ -1,0 +1,6 @@
+:ctime:    20220306174301
+:END:
+#+title: ?The PMF of the hypergeometric distribution sums to one
+#+filetags: :appendix:stub:
+
+

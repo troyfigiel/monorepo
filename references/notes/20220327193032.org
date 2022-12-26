@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       307122f8-a360-4c46-b467-4f18a724372a
-:mtime:    20220327193033
-:ctime:    20220327193032
-:END:
-#+title: Brownian motion
-#+filetags: :stub:
-
-

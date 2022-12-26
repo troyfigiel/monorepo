@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e41964a2-5042-48d1-9a25-27a8317e6599
-:mtime:    20220314131359
-:ctime:    20220314131358
-:END:
-#+title: Self-modifying code
-#+filetags: :stub:
-
-

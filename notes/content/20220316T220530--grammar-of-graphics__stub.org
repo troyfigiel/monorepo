@@ -1,0 +1,18 @@
+:ctime:    20220316220530
+:END:
+#+title: Grammar of graphics
+#+filetags: :stub:
+
+Building blocks of visualization:
+1. Data
+2. Transformations
+3. Marks
+4. Encoding (mapping from fields to mark properties)
+5. Scale (functions that map data to visual scales)
+6. Guides (axes, legends, etc.)
+
+Visualization concepts should map directly to implementation. Good implementation can influence
+good conceptualization. This is extremely powerful for [[denote:20220316T222147][Exploratory data analysis]].
+
+Example:
+- [[denote:20220316T220540][Altair]]

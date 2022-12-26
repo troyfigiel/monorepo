@@ -1,0 +1,7 @@
+:ctime:    20220318001331
+:END:
+#+title: Discriminative model
+#+filetags: :stub:
+
+Examples:
+- [[denote:20220215T225444][Logistic regression]]

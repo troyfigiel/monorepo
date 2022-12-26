@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f029d0a5-2391-4459-8d80-13d4b5c5e0db
-:mtime:    20220303211621
-:ctime:    20220223223732
-:END:
-#+title: Law of total expectation
-#+filetags: :stub:
-
-

@@ -1,0 +1,13 @@
+:ctime:    20220224231155
+:END:
+#+title: ?Central limit theorem
+#+filetags: :appendix:stub:
+
+For the sample mean \( \overline{X} \) the above formula leads to
+
+\[
+\varphi_{\overline{X}}(t) = \varphi_X \left( \frac{t}{n} \right)^n
+\]
+
+* TODO
+Prove the CLT from this

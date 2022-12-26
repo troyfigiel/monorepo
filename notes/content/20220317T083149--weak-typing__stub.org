@@ -1,0 +1,6 @@
+:ctime:    20220317083149
+:END:
+#+title: Weak typing
+#+filetags: :stub:
+
+

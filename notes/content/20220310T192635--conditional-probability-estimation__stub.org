@@ -1,0 +1,6 @@
+:ctime:    20220310192635
+:END:
+#+title: Conditional probability estimation
+#+filetags: :stub:
+
+Estimate [[denote:20220210T124459][Conditional probability]] of something happening based on a set of data.

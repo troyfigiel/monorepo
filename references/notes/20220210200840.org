@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       dcf532f4-7c3d-4997-9391-8ae3613bcb12
-:mtime:    20220225223637
-:ctime:    20220210200840
-:END:
-#+title: natural language processing
-

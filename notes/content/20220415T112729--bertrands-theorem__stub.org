@@ -1,0 +1,13 @@
+:ctime:    20220415112729
+:END:
+#+title: Bertrand's theorem
+#+filetags: :stub:
+
+Betrand's theorem states that there are only two central-force, scalar potentials such that all of
+its bound orbits are closed orbits.
+
+These two types of potentials either derive from the inverse-square central force with \( V(r) = -k
+/ r \) or from the
+radial [[denote:20220408T210557][Harmonic oscillator]] with \( V(r) = k r^2 / 2 \).
+
+See also: [[denote:20220415T113214][Binet equation]]

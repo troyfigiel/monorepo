@@ -1,0 +1,3 @@
+#+title: Inductive testing
+#+filetags: :stub:
+

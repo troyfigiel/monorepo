@@ -1,0 +1,6 @@
+:ctime:    20220402213320
+:END:
+#+title: Helmholtz free energy
+#+filetags: :stub:
+
+

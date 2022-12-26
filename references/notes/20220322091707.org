@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       47c3c0ca-c75d-422f-ba34-045a075050f0
-:mtime:    20220322094735
-:ctime:    20220322091707
-:END:
-#+title: The asymptotic expansion of a function is determined by the choice of an asymptotic sequence
-#+filetags: :stub:
-
-Once we fix an [[id:96e15259-b935-45f4-acdc-5d99d4d159eb][Asymptotic sequence]], the asymptotic series of a function is uniquely determined.

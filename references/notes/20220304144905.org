@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ab80dd4f-4270-4eb3-8f25-d524e3d98241
-:mtime:    20220307165808
-:ctime:    20220304144905
-:END:
-#+title: ?Mean of the Bernoulli distribution
-#+filetags: :appendix:stub:
-
-

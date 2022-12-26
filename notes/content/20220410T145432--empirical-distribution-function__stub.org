@@ -1,0 +1,21 @@
+:ctime:    20220410145432
+:END:
+#+title: Empirical distribution function
+#+filetags: :stub:
+
+If we have random variables \( X_1, ..., X_n \)  all independent, identically distributed the
+empirical distribution function is defined as
+
+\[
+\hat{F}_n(t) = \frac{1}{n} \sum\limits_{i=1}^n \mathbf{1}_{X_i \leq t}
+\]
+
+where \( \mathbf{1}_A \) is the [[denote:20220410T145728][Indicator function]] for an event \( A \). The indicator \(
+\mathbf{1}_{X_i \leq t} \) is a random variable distributed according to the [[denote:20220210T094457][Bernoulli distribution]]
+as
+
+\[
+\mathbf{1}_{X_i \leq t} \sim \mathrm{Bernoulli}(F(t))
+\]
+
+where \( F(t) \) denotes the cumulative distribution function of each \( X_i \).

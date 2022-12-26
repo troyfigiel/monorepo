@@ -1,0 +1,8 @@
+:ctime:    20220317084730
+:END:
+#+title: Types help machines infer programming intent
+#+filetags: :stub:
+
+- [[denote:20220317T084816][IDEs]] can use types to show programmers helpful documentation.
+- Large parts of code can be inferred from types, since there is only one way the pieces of the
+  puzzle can fit together.

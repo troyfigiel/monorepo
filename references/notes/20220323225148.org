@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       34e88da2-9935-4d9e-9cc1-a873e86de7fa
-:mtime:    20220323225149
-:ctime:    20220323225148
-:END:
-#+title: Markov property
-#+filetags: :stub:
-
-

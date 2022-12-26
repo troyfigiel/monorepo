@@ -1,0 +1,8 @@
+:ctime:    20220324214956
+:END:
+#+title: Bernoulli's equation
+#+filetags: :stub:
+
+\[
+\frac{v^2}{2} + gz + \frac{p}{\rho} = \text{constant}
+\]

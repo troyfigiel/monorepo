@@ -1,0 +1,7 @@
+#+title: Sprint planning
+#+filetags: :stub:
+
+The sprint planning is a meeting where the [[denote:20221027T155224][Product owner]], the [[denote:20221027T155217][Scrum master]] and the [[denote:20221027T162906][Scrum team]] meet to discuss [[denote:20221027T155728][User stories]]
+and estimate their relative sizes.
+
+The top priorities are discussed and it is decided which [[denote:20221027T155728][User stories]] can go into the [[denote:20221027T155951][Sprint backlog]].

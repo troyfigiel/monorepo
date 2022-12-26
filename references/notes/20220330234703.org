@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       cf840c7f-1aa7-48fe-abe7-36bb6beebfc3
-:mtime:    20220330234704
-:ctime:    20220330234703
-:END:
-#+title: Rate-distortion theory
-#+filetags: :stub:
-
-

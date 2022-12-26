@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b258c443-ae40-4ab4-a79e-771d404c5234
-:mtime:    20220408220156
-:ctime:    20220408220155
-:END:
-#+title: Triangle inequality
-#+filetags: :stub:
-
-

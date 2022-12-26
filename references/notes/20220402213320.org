@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       b0f1e8ae-b370-4266-bc9e-8cffcffda856
-:mtime:    20220402213321
-:ctime:    20220402213320
-:END:
-#+title: Helmholtz free energy
-#+filetags: :stub:
-
-

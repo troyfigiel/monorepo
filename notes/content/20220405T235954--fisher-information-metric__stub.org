@@ -1,0 +1,6 @@
+:ctime:    20220405235954
+:END:
+#+title: Fisher information metric
+#+filetags: :stub:
+
+[[denote:20220408T204841][Chentsov's theorem]]

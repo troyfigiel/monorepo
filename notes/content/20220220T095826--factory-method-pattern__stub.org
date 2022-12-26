@@ -1,0 +1,5 @@
+:ctime:    20220220095826
+:END:
+#+title: factory method pattern
+#+filetags: :stub:
+

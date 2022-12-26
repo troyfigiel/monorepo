@@ -1,0 +1,7 @@
+:ctime:    20220328201613
+:ROAM_ALIASES: Surprisal
+:END:
+#+title: Information content
+#+filetags: :stub:
+
+This is a way of transforming probabilities, similar to how we would define the [[denote:20220328T201812][Odds]] or the [[denote:20220328T201817][Log-odds]]

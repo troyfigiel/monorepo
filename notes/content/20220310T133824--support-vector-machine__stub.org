@@ -1,0 +1,7 @@
+:mtime:    20220310200909
+:ctime:    20220310133824
+:END:
+#+title: Support vector machine
+#+filetags: :stub:
+
+It has a Lagrangian formulation (see: [[denote:20220310T200705][Lagrangian]]).

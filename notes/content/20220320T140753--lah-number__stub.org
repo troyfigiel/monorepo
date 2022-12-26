@@ -1,0 +1,7 @@
+:ctime:    20220320140753
+:ROAM_ALIASES: "Stirling number of the third kind"
+:END:
+#+title: Lah number
+#+filetags: :stub:
+
+

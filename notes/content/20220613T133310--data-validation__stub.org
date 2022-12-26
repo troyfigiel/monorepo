@@ -1,0 +1,7 @@
+#+title: Data validation
+#+filetags: :stub:
+
+For example
+- [[denote:20220613T133319][Great Expectations]]
+- [[denote:20220613T133328][Pandera]]
+- Or a subset of the tools provided by [[denote:20220613T133415][TDDA]]

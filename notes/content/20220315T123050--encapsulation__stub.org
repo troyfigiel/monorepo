@@ -1,0 +1,6 @@
+:ctime:    20220315123050
+:END:
+#+title: Encapsulation
+#+filetags: :stub:
+
+

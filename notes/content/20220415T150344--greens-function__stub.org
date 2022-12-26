@@ -1,0 +1,6 @@
+:ctime:    20220415150344
+:END:
+#+title: Green's function
+#+filetags: :stub:
+
+- [[denote:20220415T150426][Dirac delta function]]

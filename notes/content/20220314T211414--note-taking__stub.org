@@ -1,0 +1,9 @@
+:ctime:    20220314211414
+:END:
+#+title: Note taking
+#+filetags: :stub:
+
+- Communication
+
+- [[denote:20220326T205014][LaTeX]]
+- [[denote:20220326T205047][MathML]]

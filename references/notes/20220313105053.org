@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       fcf1774f-4e9f-4b0a-9fcb-0057679b74ff
-:mtime:    20220313105054
-:ctime:    20220313105053
-:END:
-#+title: R Notebook
-#+filetags: :stub:
-
-

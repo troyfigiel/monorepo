@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       60518a2f-d8bf-494d-a8cc-1b30c936fd80
-:mtime:    20220326111213
-:ctime:    20220326111212
-:END:
-#+title: Grand canonical ensemble
-#+filetags: :stub:
-
-

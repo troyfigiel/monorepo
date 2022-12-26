@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       a864d414-5a34-4562-95b8-ea3330da9e42
-:mtime:    20221106171733
-:ctime:    20221106171732
-:END:
-#+title: Continuous delivery
-#+filetags: :stub:

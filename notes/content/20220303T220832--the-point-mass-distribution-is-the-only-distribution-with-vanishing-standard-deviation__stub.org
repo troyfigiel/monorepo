@@ -1,0 +1,12 @@
+:ctime:    20220303220832
+:END:
+#+title: The point mass distribution is the only distribution with vanishing standard deviation
+#+filetags: :stub:
+
+If for a random variable \( X \) we have a vanishing standard deviation, the equality \(
+\mathbb{E} \left[ (X - \mathbb{E}[X])^2 \right] = 0 \) must hold.
+
+Since the expectation value of a non-negative random variable can only vanish if the random
+variable is zero everywhere, we know that \( X = \mathbb{E}[X] \) with probability one.
+
+Hence \( X \) must be a [[denote:20220303T222830][Point mass distribution]].

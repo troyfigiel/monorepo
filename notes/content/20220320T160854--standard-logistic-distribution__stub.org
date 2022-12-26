@@ -1,0 +1,6 @@
+:ctime:    20220320160854
+:END:
+#+title: Standard logistic distribution
+#+filetags: :stub:
+
+

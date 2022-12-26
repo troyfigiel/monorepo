@@ -1,0 +1,23 @@
+:ctime:    20220326095643
+:END:
+#+title: Abstraction should emerge naturally
+#+filetags: :unclean:
+
+- You can fall into the trap of abstracting in anticipations of complexity, not when you actually
+  need to abstract
+  - This is also why it is important to [[denote:20220326T100535][Just get started]]
+- It is relatively easy to introduce abstractions, but difficult to remove them if they turn out
+  wrong
+  - Because not only do you need to understand all the lower-levels, now you also need to
+    understand how the higher-levels connect together.
+
+- [[denote:20220326T102147][All abstractions are leaky]]
+
+*From previous incarnation of this note*
+The more components are added to a system, the more complex it becomes. [[denote:20220323T135449][Abstraction is a powerful
+tool to fight increasing complexity]], however, care should be taken that simple things are not made
+complex by an abstraction.
+
+This can often happen when a programmer or designer introduces an abstraction in anticipation of a
+complexity. Instead, you should [[denote:20220323T140245][Refactor when necessary]], keeping principles such as [[denote:20220323T135849][KISS]] and [[denote:20220323T135924][YAGNI]]
+in mind.

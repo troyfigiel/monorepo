@@ -1,0 +1,6 @@
+:ctime:    20220311132322
+:END:
+#+title: Mann Whitney U statistic
+#+filetags: :stub:
+
+Used in the [[denote:20220215T233251][Mann Whitney U test]].

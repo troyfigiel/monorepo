@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       26f35efa-10c6-49ae-aade-cccc6784a63a
-:mtime:    20220225223627
-:ctime:    20220224101425
-:END:
-#+title: dvc mirrors the way Git works internally
-#+filetags: :stub:
-
-

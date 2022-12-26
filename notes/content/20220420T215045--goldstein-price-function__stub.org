@@ -1,0 +1,5 @@
+:ctime:    20220420215045
+:END:
+#+title: Goldstein-Price function
+#+filetags: :stub:
+

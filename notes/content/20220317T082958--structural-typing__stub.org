@@ -1,0 +1,6 @@
+:ctime:    20220317082958
+:END:
+#+title: Structural typing
+#+filetags: :stub:
+
+

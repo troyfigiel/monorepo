@@ -1,0 +1,9 @@
+:ctime:    20220306182041
+:END:
+#+title: Machine learning broadly speaking covers only two types of problems
+#+filetags: :stub:
+
+These types of problems are related to
+- [[denote:20220306T182059][Tabular data]]
+- [[denote:20220306T182109][Raw data]]
+

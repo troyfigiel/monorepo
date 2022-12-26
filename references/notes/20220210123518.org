@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       8d3b88a5-fed6-426e-9f11-d89b05547d05
-:mtime:    20220303233638
-:ctime:    20220210123518
-:END:
-#+title: Variance
-

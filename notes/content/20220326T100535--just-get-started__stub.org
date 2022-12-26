@@ -1,0 +1,12 @@
+:ctime:    20220326100535
+:END:
+#+title: Just get started
+#+filetags: :stub:
+
+- Just starting is important, because [[denote:20220323T135212][Avoid premature abstraction]] and note-taking is especially
+  personal. In other words, you will not know what works best until you start. It is also a very
+  organic process.
+- In the beginning it is important to get as many notes in the system as possible. At this point,
+  adding new notes does not make it very difficult to maintain and the additional context that
+  making links brings you, makes it easier to anticipate and adapt to future changes.
+- Related to just getting started, [[denote:20220326T100631][Take small steps and reevaluate]].

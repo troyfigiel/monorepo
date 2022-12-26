@@ -1,0 +1,7 @@
+:ctime:    20220305233751
+:END:
+#+title: Interpretable models should be used for high-stake decisions
+#+filetags: :stub:
+
+For a high-stake decision, it is important that we know why a model comes to a certain decision. It
+is important to use [[denote:20220303T134927][Interpretable machine learning]] in such cases.

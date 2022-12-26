@@ -1,0 +1,12 @@
+:ctime:    20220314180656
+:END:
+#+title: ?The order statistics of a uniform distribution follow a beta distribution
+#+filetags: :appendix:stub:
+
+For the uniform distribution \( F_X(x) = x \) and we have
+
+\[
+f_{X_{(k)}}(x) = \frac{x^{k-1} \left( 1 - x \right)^{n-k}}{\mathrm{B}(k, n-k+1)}
+\]
+
+This can be immediately recognized as the [[denote:20220314T181253][Beta distribution]] \( X_{(k)} \sim \mathrm{Beta}(k, n-k+1) \).

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       fe8a3f8c-dd6e-4577-9368-9d9095d2d424
-:mtime:    20220225223639
-:ctime:    20220215215102
-:END:
-#+title: Wilks' theorem
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       432ba18c-4398-4a70-a250-a2f63235308e
-:mtime:    20220311134147
-:ctime:    20220311134146
-:END:
-#+title: Gradient descent
-#+filetags: :stub:
-
-

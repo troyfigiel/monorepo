@@ -1,0 +1,13 @@
+:ctime:    20220313110635
+:END:
+#+title: Caching is hard
+#+filetags: :stub:
+
+[[denote:20220309T105534][Cache]]
+
+1. You have to guess when the data is not likely to be needed in memory. It can't be too short that
+   the cache is useless, and too long that you'll get a memory leak.
+2. The underlying data might get changed by another process and then your process that uses the
+   cache will be working with incorrect data
+
+https://www.reddit.com/r/compsci/comments/96hbx9/what_is_hard_about_cache_invalidation/

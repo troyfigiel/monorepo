@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7aed3beb-0422-48e2-96dd-c246479cecef
-:mtime:    20220318001417
-:ctime:    20220318001417
-:END:
-#+title: Linear discriminant analysis
-#+filetags: :stub:
-
-

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       837b8f7d-221e-440e-80c1-ff96bd095f7c
-:mtime:    20220225223632
-:ctime:    20220218230731
-:END:
-#+title: Ansible
-

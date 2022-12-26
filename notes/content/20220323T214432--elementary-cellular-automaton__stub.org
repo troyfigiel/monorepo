@@ -1,0 +1,16 @@
+:ctime:    20220323214432
+:END:
+#+title: Elementary cellular automaton
+#+filetags: :stub:
+
+An elementary cellular automaton is an example of a one-dimensional [[denote:20220323T214500][Cellular automaton]] with two
+conditions:
+
+1. Each cell can only be in the state 0 or the state 1
+2. The state of the next generation of a cell only depends on its current state and that of its
+   immediate neighbours.
+
+Elementary cellular automata are usually named and classified using the [[denote:20220323T215112][Wolfram code]].
+
+Although the rules of these automata are very simple, they can still give rise to extremely complex
+behaviour. For example, it is known that [[denote:20220323T220229][Rule 110 is Turing complete]].

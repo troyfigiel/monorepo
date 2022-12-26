@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c2b6da93-961a-4db5-b3ea-96fbe3530635
-:mtime:    20220327135954
-:ctime:    20220327135409
-:END:
-#+title: Bertrand's paradox
-#+filetags: :stub:
-
-[[id:04ab0066-129b-478f-a530-227ac1ce6fe9][Principle of indifference]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ea43df53-5465-45a7-ae88-6c6a7b7a151c
-:mtime:    20220328233758
-:ctime:    20220328233754
-:END:
-#+title: Diffusion
-#+filetags: :stub:
-
-[[id:b4917646-0f0e-4275-a5b6-adcef81c78a7][Fick's second law]]

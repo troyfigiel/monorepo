@@ -1,0 +1,5 @@
+:ctime:    20220215212735
+:END:
+#+title: ?The Poisson distribution belongs to the exponential family
+#+filetags: :appendix:stub:
+

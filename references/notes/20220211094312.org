@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       7186f362-2b90-4438-bf99-dcce57121834
-:mtime:    20220227103524
-:ctime:    20220211094312
-:END:
-#+title: Maximum likelihood estimate

@@ -1,0 +1,10 @@
+:ctime:    20220218233133
+:END:
+#+title: Feature engineering
+
+Feature engineering is the process of using domain knowledge to extract features from raw data that can be used to improve the quality of models.
+
+When the number of features grows too much, techniques like [[denote:20220218T233454][Regularization]] and [[denote:20220218T233518][Feature selection]] can be used.
+
+Building features often means creating numerical features that can be used for classification or
+prediction. See [[denote:20220310T132601][Feature vector]]. Anything can be interpreted as a vector.

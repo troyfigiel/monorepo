@@ -1,0 +1,4 @@
+#+title: Sprint review
+#+filetags: :stub:
+
+The sprint review is where the [[denote:20221027T162906][Scrum team]] shows the completed work from the previous [[denote:20221027T154550][Sprint]] to the [[denote:20221027T155224][Product owner]].

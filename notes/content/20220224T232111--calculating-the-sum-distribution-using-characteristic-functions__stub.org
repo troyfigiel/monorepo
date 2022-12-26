@@ -1,0 +1,20 @@
+:ctime:    20220224232111
+:END:
+#+title: Calculating the sum distribution using characteristic functions
+#+filetags: :stub:
+
+The [[denote:20220210T210826][Characteristic function]] of the sum of two independent random variables \( X \) and \( Y \)
+satisfies
+
+\[
+\varphi_{X + Y}(t) = \varphi_X(t) \varphi_Y(t)
+\]
+
+This follows directly from the fact that [[denote:20220224T224802][Linear relations of random variables lead to simple
+relations between characteristic functions]].
+
+Because [[denote:20220224T230543][The characteristic function uniquely determines the probability distribution]], this can
+often be useful to determine the sum distribution of two independent random variables.
+
+* TODO
+Add some examples

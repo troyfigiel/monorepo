@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4deb5413-a437-4498-a63f-8c0bfdd4e184
-:mtime:    20220316150240
-:ctime:    20220316150239
-:END:
-#+title: Removal effect
-#+filetags: :stub:
-
-

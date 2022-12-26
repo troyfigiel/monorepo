@@ -1,0 +1,7 @@
+:ctime:    20220221225022
+:mtime:    20220225223639
+:END:
+#+title: Portable Operating System Interface
+#+filetags: :stub:
+
+The Portable Operating System Interface (POSIX) is a family of standards set to maintain compatibility between operating systems.

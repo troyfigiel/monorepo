@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e00bb8ee-b864-4f33-adca-b53a3ce1cef1
-:mtime:    20220310134305
-:ctime:    20220310134304
-:END:
-#+title: Elastic net regression
-#+filetags: :stub:
-
-

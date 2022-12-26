@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       72bb2548-6c83-417b-b9a0-9bedc10e40a6
-:mtime:    20220327123002
-:ctime:    20220327122642
-:END:
-#+title: Wrapped normal distribution
-#+filetags: :stub:
-
-Obtained by wrapping the [[id:d59f2d74-dbe3-46e3-8a5e-9849350d24bc][Normal distribution]] around the unit circle.

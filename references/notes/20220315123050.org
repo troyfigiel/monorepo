@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6544a12a-f814-48ba-a692-b3c67a716055
-:mtime:    20220315123050
-:ctime:    20220315123050
-:END:
-#+title: Encapsulation
-#+filetags: :stub:
-
-

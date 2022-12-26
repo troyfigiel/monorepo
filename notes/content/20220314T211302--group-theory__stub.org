@@ -1,0 +1,7 @@
+:ctime:    20220314211302
+:END:
+#+title: Group theory
+#+filetags: :stub:
+
+- [[denote:20220218T232930][Group]]
+- [[denote:20220324T220504][Lie group]]

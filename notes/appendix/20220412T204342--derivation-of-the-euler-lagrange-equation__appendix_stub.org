@@ -1,0 +1,39 @@
+:ctime:    20220412204342
+:END:
+#+title: ?Derivation of the Euler-Lagrange equation
+#+filetags: :appendix:stub:
+
+We want to extremize
+
+\[
+S(y, \dot{y}, t) = \int\limits_{t_0}^{t_1} L(y, \dot{y}, t) \, dt
+\]
+
+Consider a small variation \( \tilde{y} = y + \epsilon \eta \). Then
+
+\[
+L(\tilde{y}, \dot{\tilde{y}}, t) = L(y, \dot{y}, t) + \epsilon \left( \eta \frac{\partial
+L}{\partial y} + \dot{\eta} \frac{\partial L}{\partial \dot{y}} \right)
+\]
+
+so that
+
+\[
+S(\tilde{y}, \dot{\tilde{y}}, t) - S(y, \dot{y}, t) = \epsilon \int\limits_ {t_0}^{t_1} \left( \eta
+\frac{\partial L}{\partial y} + \dot{\eta} \frac{\partial L}{\partial \dot{y}} \right) dt
+\]
+
+Applying integration by parts and constraining the endpoints such that \( \eta(t_0) = \eta(t_1)
+= 0 \), we find
+
+\[
+\left[ \eta \frac{\partial L}{\partial \dot{y}} \right]_{t_0}^{t_1} = \int\limits_{t_0}^{t_1} \eta
+\left( \frac{d}{dt} \frac{\partial L}{\partial \dot{y}} - \frac{\partial L}{\partial y} \right) \,
+dt = 0
+\]
+
+Since this has to be true for any variation \( \eta \), we must find the [[denote:20220412T201834][Euler-Lagrange equation]]
+
+\[
+\frac{d}{dt} \frac{\partial L}{\partial \dot{y}} - \frac{\partial L}{\partial y} = 0
+\]

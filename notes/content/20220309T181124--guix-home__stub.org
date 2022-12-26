@@ -1,0 +1,16 @@
+:ctime:    20220309181124
+:END:
+#+title: Guix Home
+#+filetags: :stub:
+
+A user's home environment normally consists of three parts:
+- Software
+- Configuration
+- State
+
+In other Linux distros, configuration is a form of global state, which makes it unreliable, because [[denote:20220309T180541][Global state is evil]].
+
+Because [[denote:20220315T132511][Files in the GNU store can only be changed by the Guix build daemon]] we cannot change the
+generated configurations by Guix Home directly. We can remove a symlink manually and create our own
+config file, but then if we call the home activation script again, all of this manual configuration will
+be backed-up and the symlinks restored.

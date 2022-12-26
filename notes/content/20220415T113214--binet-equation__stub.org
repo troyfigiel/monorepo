@@ -1,0 +1,5 @@
+:ctime:    20220415113214
+:END:
+#+title: Binet equation
+#+filetags: :stub:
+

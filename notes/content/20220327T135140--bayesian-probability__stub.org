@@ -1,0 +1,6 @@
+:ctime:    20220327135140
+:END:
+#+title: Bayesian probability
+#+filetags: :stub:
+
+[[denote:20220211T090536][Bayes' theorem]]

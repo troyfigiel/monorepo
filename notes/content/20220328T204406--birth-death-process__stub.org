@@ -1,0 +1,6 @@
+:ctime:    20220328204406
+:END:
+#+title: Birth-death process
+#+filetags: :stub:
+
+

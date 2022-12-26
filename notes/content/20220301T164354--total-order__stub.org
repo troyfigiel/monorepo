@@ -1,0 +1,6 @@
+:ctime:    20220301164354
+:END:
+#+title: Total order
+#+filetags: :stub:
+
+

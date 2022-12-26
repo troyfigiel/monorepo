@@ -1,0 +1,11 @@
+:ctime:    20220310130103
+:ROAM_ALIASES: "Variable importance"
+:END:
+#+title: Feature importance
+#+filetags: :stub:
+
+We can use for example:
+- [[denote:20220310T125857][Random forest]]
+- [[denote:20220310T133922][Regression]]
+- [[denote:20220302T125352][Correlation coefficient]]
+- [[denote:20220219T005637][Principal component analysis]] or [[denote:20220313T153303][Dimensionality reduction]]

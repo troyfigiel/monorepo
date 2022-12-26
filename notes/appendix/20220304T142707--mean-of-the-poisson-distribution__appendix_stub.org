@@ -1,0 +1,6 @@
+:ctime:    20220304142707
+:END:
+#+title: ?Mean of the Poisson distribution
+#+filetags: :appendix:stub:
+
+

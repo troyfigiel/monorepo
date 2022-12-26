@@ -1,0 +1,6 @@
+:ctime:    20220303125546
+:END:
+#+title: Pure function
+#+filetags: :stub:
+
+

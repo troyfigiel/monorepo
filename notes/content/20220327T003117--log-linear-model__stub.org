@@ -1,0 +1,6 @@
+:ctime:    20220327003117
+:END:
+#+title: Log-linear model
+#+filetags: :stub:
+
+

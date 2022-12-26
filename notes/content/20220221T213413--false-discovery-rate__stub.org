@@ -1,0 +1,13 @@
+:ctime:    20220221213413
+:mtime:    20220313180301
+:END:
+#+title: False discovery rate
+#+filetags: :stub:
+
+The false discovery rate (FDR) is a conceptualization of the false positive rate when conducting
+[[denote:20220221T214048][multiple comparisons]].
+
+These procedures have less strict control over false positives compared to [[denote:20220221T213948][familywise error rate]]
+controlling procedures.
+
+One example of a method is the [[denote:20220221T214303][Benjamini-Hochberg method]].

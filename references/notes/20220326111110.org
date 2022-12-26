@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       96028615-0685-4eb2-9491-f065cec8d2a5
-:mtime:    20220326111110
-:ctime:    20220326111110
-:END:
-#+title: Canonical ensemble
-#+filetags: :stub:
-
-

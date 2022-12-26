@@ -1,0 +1,6 @@
+:ctime:    20220420214855
+:END:
+#+title: Greedy algorithm
+#+filetags: :stub:
+
+- [[denote:20220420T215012][Test function for optimization]]

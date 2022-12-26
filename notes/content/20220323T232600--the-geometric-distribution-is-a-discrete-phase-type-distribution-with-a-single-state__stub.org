@@ -1,0 +1,6 @@
+:ctime:    20220323232600
+:END:
+#+title: The geometric distribution is a discrete phase-type distribution with a single state
+#+filetags: :stub:
+
+

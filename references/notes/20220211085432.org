@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       108a427d-6e46-42f1-ba5f-838c482ccf4b
-:mtime:    20220225223626
-:ctime:    20220211085432
-:END:
-#+title: risk function
-
-The risk function is the expected value of the loss function.

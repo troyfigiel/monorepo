@@ -1,0 +1,5 @@
+:ctime:    20220415111945
+:END:
+#+title: Casimir invariant
+#+filetags: :stub:
+

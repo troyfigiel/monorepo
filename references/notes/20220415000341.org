@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7cc2beed-fc0e-45a1-ac37-699d94be11dd
-:mtime:    20220415000540
-:ctime:    20220415000341
-:END:
-#+title: Hamilton-Jacobi-Bellman equation
-#+filetags: :stub:
-
-An equation used in [[id:682e6037-e344-4406-a1b4-971e37078f42][Dynamic programming]].

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8d8a873f-244f-4278-b6e8-6a24ef9278a3
-:ROAM_ALIASES: "Principle of least surprise"
-:mtime:    20220422143607
-:ctime:    20220422143559
-:END:
-#+title: Principle of least astonishment
-#+filetags: :stub:
-

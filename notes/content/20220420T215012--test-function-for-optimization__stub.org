@@ -1,0 +1,9 @@
+:mtime:    20220420220104
+:ctime:    20220420215012
+:END:
+#+title: Test function for optimization
+#+filetags: :stub:
+
+- [[denote:20220420T215045][Goldstein-Price function]]
+- [[denote:20220420T215226][Rosenbrock function]]
+- [[denote:20220420T215240][Rastrigin function]]

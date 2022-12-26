@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8a6701f1-38e6-418f-bdee-da2dcf320ce6
-:mtime:    20220319102245
-:ctime:    20220319102229
-:END:
-#+title: ?Uniqueness of limits
-#+filetags: :appendix:stub:
-
-

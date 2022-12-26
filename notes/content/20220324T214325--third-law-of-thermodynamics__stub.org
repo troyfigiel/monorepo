@@ -1,0 +1,6 @@
+:ctime:    20220324214325
+:END:
+#+title: Third law of thermodynamics
+#+filetags: :stub:
+
+

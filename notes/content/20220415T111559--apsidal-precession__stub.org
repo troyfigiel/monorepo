@@ -1,0 +1,5 @@
+:ctime:    20220415111559
+:END:
+#+title: Apsidal precession
+#+filetags: :stub:
+

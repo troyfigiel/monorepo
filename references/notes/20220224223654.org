@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f8bb0f89-e50b-46f7-898b-40d02b818fc9
-:mtime:    20220322095718
-:ctime:    20220224223654
-:END:
-#+title: Fourier transformation
-#+filetags: :stub:
-
-

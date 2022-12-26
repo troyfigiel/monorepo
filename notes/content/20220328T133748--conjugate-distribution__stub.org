@@ -1,0 +1,6 @@
+:ctime:    20220328133748
+:END:
+#+title: Conjugate distribution
+#+filetags: :stub:
+
+

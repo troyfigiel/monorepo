@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2e192e6c-468f-4f6e-ba31-012c1c454251
-:mtime:    20220327122806
-:ctime:    20220327122721
-:END:
-#+title: Wrapped Lévy distribution
-#+filetags: :stub:
-
-Obtained by wrapping the [[id:4ec68f86-9801-4464-9114-5c9a2704cc42][Lévy distribution]] around the unit circle.

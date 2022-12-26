@@ -1,0 +1,6 @@
+:ctime:    20220301170959
+:END:
+#+title: The t-test is a special case of linear regression
+#+filetags: :stub:
+
+The paired t-test also has an equivalent linear regression: [[denote:20220303T173435][The paired t-test is a linear mixed model]]

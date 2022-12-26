@@ -1,0 +1,24 @@
+:ctime:    20220218213931
+:END:
+#+title: Stirling's approximation
+
+Stirling's approximation is an approximation for factorials of the form
+
+\[
+n! \sim \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n
+\]
+
+Sometimes it is also written as
+
+\[
+\log n! \sim n \log n - n
+\]
+
+[[denote:20220218T214915][Stirling's approximation can be proved by Laplace's method]].
+
+We can use [[denote:20220218T215354][Stirling's approximation to prove the CLT for the binomial distribution]].
+
+This is an example of an [[denote:20220318T231524][Asymptotic series]]. (See: [[denote:20220218T214915][?Asymptotic series of the gamma function]])
+
+# TODO: Often we need to approximate binomials with the Stirling approximation. Maybe separate note?
+Also [[denote:20220323T101536][Stirling's approximation recovers the rate function of the Bernoulli distribution]].

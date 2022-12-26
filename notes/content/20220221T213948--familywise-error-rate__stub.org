@@ -1,0 +1,6 @@
+:ctime:    20220221213948
+:mtime:    20220225223636
+:END:
+#+title: familywise error rate
+#+filetags: :stub:
+

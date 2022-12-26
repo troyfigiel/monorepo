@@ -1,0 +1,6 @@
+:ctime:    20220327193032
+:END:
+#+title: Brownian motion
+#+filetags: :stub:
+
+

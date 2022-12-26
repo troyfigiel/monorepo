@@ -1,0 +1,8 @@
+:ctime:    20220223094013
+:mtime:    20220225223625
+:END:
+#+title: log-likelihood
+#+filetags: :stub:
+
+Often used because the likelihood calculations can lead to overflow and underflow and since the log
+is strictly increasing, we can maximize either the likelihood or the log-likelihood.

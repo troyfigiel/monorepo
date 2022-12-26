@@ -1,0 +1,5 @@
+:ctime:    20220218230243
+:END:
+#+title: Terraform
+
+Terraform is open-source software used to provision infrastructure as code.

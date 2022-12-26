@@ -1,0 +1,7 @@
+:ctime:    20220327003018
+:ROAM_ALIASES: "Gibbs distribution"
+:END:
+#+title: Boltzmann distribution
+#+filetags: :stub:
+
+[[denote:20220327T003117][Log-linear models]]

@@ -1,0 +1,5 @@
+#+title: Product backlog
+#+filetags: :stub:
+
+The product backlog is where a [[denote:20221027T155224][Product owner]] creates a list of product features using [[denote:20221027T155728][User stories]].
+The [[denote:20221027T155224][Product owner]] is also responsible for prioritizing the list so the top priorities can be communicated to the team.

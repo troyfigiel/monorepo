@@ -1,0 +1,6 @@
+:ctime:    20220310200725
+:END:
+#+title: Physics
+#+filetags: :stub:
+
+

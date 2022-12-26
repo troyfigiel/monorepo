@@ -1,0 +1,9 @@
+:ctime:    20220215214844
+:END:
+#+title: Chi-squared test
+
+There are many versions of chi-squared tests due to [[denote:20220215T215102][Wilks' theorem]].
+
+It may also refer to [[denote:20220215T215210][Pearson's chi-squared test]].
+
+# TODO: Is Pearson's chi-squared test an example of a likelihood-ratio test due to Wilks' theorem?

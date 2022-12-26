@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e4359b92-a4da-4531-b41a-1bc05fb94070
-:mtime:    20220408204842
-:ctime:    20220408204841
-:END:
-#+title: Chentsov's theorem
-#+filetags: :stub:
-
-

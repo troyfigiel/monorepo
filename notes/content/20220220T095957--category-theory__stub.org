@@ -1,0 +1,6 @@
+:ctime:    20220220095957
+:END:
+#+title: Category theory
+#+filetags: :stub:
+
+Category theory abstracts a lot of mathematical structures.

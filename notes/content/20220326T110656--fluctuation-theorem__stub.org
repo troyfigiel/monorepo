@@ -1,0 +1,6 @@
+:ctime:    20220326110656
+:END:
+#+title: Fluctuation theorem
+#+filetags: :stub:
+
+

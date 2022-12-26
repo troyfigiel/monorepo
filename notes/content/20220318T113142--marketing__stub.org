@@ -1,0 +1,7 @@
+:ctime:    20220318113142
+:END:
+#+title: Marketing
+#+filetags: :stub:
+
+- [[denote:20220316T150204][Attribution model]]
+- [[denote:20220318T113222][Buy Till You Die]]

@@ -1,0 +1,14 @@
+:ctime:    20220223095727
+:END:
+#+title: likelihood-ratio test
+#+filetags: :stub:
+
+Note that the likelihood-ratio test statistic can be rewritten as
+
+\[
+-2 \left[ \log \mathcal{L}(\theta_{0}) - \log \mathcal{L}(\hat{\theta}) \right] = 2
+\int\limits_{\theta_0}^{\hat{\theta}}\frac{\mathrm{d} \log \mathcal{L}(\theta)}{\mathrm{d} \theta} = 2
+\int\limits_{\theta_0}^{\hat{\theta}}s(\theta) \mathrm{d} \theta
+\]
+
+So the [[denote:20220223T100555][likelihood-ratio test statistic is the area under the score function]].

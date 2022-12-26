@@ -1,0 +1,6 @@
+:ctime:    20220310125913
+:END:
+#+title: Boosting
+#+filetags: :stub:
+
+Boosting can be used to build [[denote:20220310T130226][Additive models]].

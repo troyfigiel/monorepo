@@ -1,0 +1,6 @@
+:ctime:    20220408204804
+:END:
+#+title: Statistical manifold
+#+filetags: :stub:
+
+

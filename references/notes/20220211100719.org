@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       5bcb8ba4-6c5e-460b-abc6-d9990b2b8061
-:mtime:    20220225223629
-:ctime:    20220211100719
-:END:
-#+title: standard normal distribution
-#+filetags: :stub:
-

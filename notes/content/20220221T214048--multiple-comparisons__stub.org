@@ -1,0 +1,5 @@
+:ctime:    20220221214048
+:END:
+#+title: multiple comparisons
+#+filetags: :stub:
+

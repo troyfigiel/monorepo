@@ -1,0 +1,6 @@
+:ctime:    20220220094753
+:END:
+#+title: SQL
+#+filetags: :stub:
+
+[[denote:20220309T181531][The SQL join is a categorical pullback]]

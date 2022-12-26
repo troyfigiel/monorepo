@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       8fd38676-1174-402c-bbf4-581ec5b5fc56
-:mtime:    20220415005844
-:ctime:    20220415005843
-:END:
-#+title: Schrödinger equation
-#+filetags: :stub:
-

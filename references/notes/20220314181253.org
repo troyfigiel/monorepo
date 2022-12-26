@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       17bb1860-bdbf-4dc5-a981-1aff7f6086bd
-:mtime:    20220314181254
-:ctime:    20220314181253
-:END:
-#+title: Beta distribution
-#+filetags: :stub:
-
-

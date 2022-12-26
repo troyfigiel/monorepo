@@ -1,0 +1,8 @@
+:ctime:    20220302214519
+:END:
+#+title: Terminal multiplexer
+#+filetags: :stub:
+
+Examples are:
+- [[denote:20220302T214407][GNU Screen]]
+- [[denote:20220302T214643][tmux]]

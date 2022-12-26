@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       90b731c5-40f0-4ee1-913a-c4f13597dfc0
-:mtime:    20220409002305
-:ctime:    20220409001558
-:END:
-#+title: Fitness function
-#+filetags: :stub:
-
-

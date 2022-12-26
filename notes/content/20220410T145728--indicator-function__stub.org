@@ -1,0 +1,6 @@
+:ctime:    20220410145728
+:END:
+#+title: Indicator function
+#+filetags: :stub:
+
+

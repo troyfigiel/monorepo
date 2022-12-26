@@ -1,0 +1,6 @@
+:ctime:    20220320131858
+:END:
+#+title: Euler-Mascheroni constant
+#+filetags: :stub:
+
+

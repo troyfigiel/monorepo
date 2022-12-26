@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       0cba9394-34f1-4132-91ba-819d8e013445
-:mtime:    20220323093358
-:ctime:    20220323093007
-:END:
-#+title: ?Characteristic function of the Bernoulli distribution
-#+filetags: :appendix:stub:
-
-

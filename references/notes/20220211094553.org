@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       cb45f0bc-3abc-4e6a-adc6-2c15ba6af7fe
-:mtime:    20220225223636
-:ctime:    20220211094553
-:END:
-#+title: Jeffreys prior
-#+filetags: :stub:
-

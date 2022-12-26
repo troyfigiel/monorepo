@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       735a4981-a480-438a-a2b2-0d4db83c39e9
-:mtime:    20220327162900
-:ctime:    20220327135132
-:END:
-#+title: Frequentist probability
-#+filetags: :stub:

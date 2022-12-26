@@ -1,0 +1,25 @@
+:ctime:    20220218233605
+:END:
+#+title: Partition function
+#+filetags: :unclean:
+
+The partition function is a normalization constant that appears naturally when ensuring the
+probabilities in the [[denote:20220327T003018][Boltzmann distribution]] sum to one. This means the partition function has a
+functional dependence on the [[denote:20220326T235451][Lagrange multiplier]] \( \beta \) which appears in the definition of the
+distribution and is therefore often denoted as \( Z(\beta) \).
+
+Because the partition function is defined as a sum or integral over each state, exponentially
+weighted by the energy of that state, it can be interpreted as the [[denote:20220322T095706][Laplace transformation]] of the
+[[denote:20220401T234433][Density of states]]. This in particular shows why the partition function plays a role similar to the
+[[denote:20220224T220044][Moment generating function]]. In fact, the [[denote:20220409T113225][?Moment generating function of the Bolztmann distribution]]
+is proportional to a shifted partition function.
+
+# TODO: Which entropy are we talking about exactly? The Gibbs entropy?
+Because the partition function is a proportionality constant with dependence on [[denote:20220326T235451][Lagrange
+multipliers]], it is often more natural to consider its logarithm. This function is known as the
+[[denote:20220409T115937][Helmholtz free entropy]] and can be interpreted as the [[denote:20220323T085704][Legendre transformation]] of the [[denote:20220210T210007][Entropy]].
+
+The [[denote:20220409T115329][Hessian]] of the logarithm of the partition function gives rise to the [[denote:20220219T005731][Covariance matrix]], which
+is known to be positive semi-definite. This is key in making the connection to [[denote:20220314T212640][Information geometry]]
+apparent, because in the special case of the [[denote:20220327T003018][Boltzmann distribution]] this is precisely the [[denote:20220405T235954][Fisher
+information metric]]. This endows the space of [[denote:20220326T235451][Lagrange multipliers]] with a [[denote:20220405T235408][Riemannian metric]].

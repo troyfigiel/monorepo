@@ -1,0 +1,8 @@
+:ctime:    20220323135449
+:END:
+#+title: Abstraction is a powerful tool to fight increasing complexity
+#+filetags: :stub:
+
+- Separate different levels of abstraction
+- Hide complexity
+- Bootstrapping to higher levels of abstraction

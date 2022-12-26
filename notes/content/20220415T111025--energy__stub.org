@@ -1,0 +1,5 @@
+:ctime:    20220415111025
+:END:
+#+title: Energy
+#+filetags: :stub:
+

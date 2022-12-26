@@ -1,0 +1,13 @@
+:mtime:    20220416121709
+:ctime:    20220412201747
+:END:
+#+title: Calculus of variations
+#+filetags: :stub:
+
+- [[denote:20220412T201834][Euler-Lagrange equation]]
+- [[denote:20220412T204342][?Derivation of the Euler-Lagrange equation]]
+- [[denote:20220324T214020][Noether's theorem]]
+
+Problems solved by the calculus of variations:
+- [[denote:20220412T202029][?Dido's problem]]
+- [[denote:20220415T001220][?Brachistochrone problem]]

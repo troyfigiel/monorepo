@@ -1,0 +1,13 @@
+:ctime:    20220311132614
+:END:
+#+title: Binary classification
+#+filetags: :stub:
+
+[[denote:20220310T133706][Binary classification is the core problem of machine learning]]
+[[denote:20220310T194320][Classification]]
+
+Evaluation metrics:
+- [[denote:20220311T131506][Receiver operator characteristic curve]]
+- [[denote:20220311T132132][Area under the ROC curve]]
+- [[denote:20220302T203704][Confusion matrix]]
+- [[denote:20220311T133119][Precision]], [[denote:20220311T133124][Recall]], [[denote:20220311T133137][F1-score]], [[denote:20220311T133210][Accuracy]]

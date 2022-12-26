@@ -1,0 +1,5 @@
+:ctime:    20220417142313
+:END:
+#+title: Equidistant set
+#+filetags: :stub:
+

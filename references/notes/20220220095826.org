@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       51605bd1-e02b-4f0d-baf2-376dfb6cd8d2
-:mtime:    20220225223629
-:ctime:    20220220095826
-:END:
-#+title: factory method pattern
-#+filetags: :stub:
-

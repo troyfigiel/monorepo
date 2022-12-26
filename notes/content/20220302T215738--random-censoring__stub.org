@@ -1,0 +1,7 @@
+:mtime:    20220302215913
+:ctime:    20220302215738
+:END:
+#+title: Random censoring
+#+filetags: :stub:
+
+

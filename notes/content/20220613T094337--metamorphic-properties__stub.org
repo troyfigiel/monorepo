@@ -1,0 +1,3 @@
+#+title: Metamorphic properties
+#+filetags: :stub:
+

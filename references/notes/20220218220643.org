@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       bcf1f800-2c3a-4b30-87a3-e3fa92b42cd2
-:mtime:    20220324215958
-:ctime:    20220218220643
-:END:
-#+title: Strong law of large numbers
-#+filetags: :stub:
-

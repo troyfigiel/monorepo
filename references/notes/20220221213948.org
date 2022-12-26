@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       d221a181-8ae8-40d0-836f-844b5185f8c9
-:ROAM_ALIASES: FWER
-:ctime:    20220221213948
-:mtime:    20220225223636
-:END:
-#+title: familywise error rate
-#+filetags: :stub:
-

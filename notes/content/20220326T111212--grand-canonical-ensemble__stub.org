@@ -1,0 +1,6 @@
+:ctime:    20220326111212
+:END:
+#+title: Grand canonical ensemble
+#+filetags: :stub:
+
+

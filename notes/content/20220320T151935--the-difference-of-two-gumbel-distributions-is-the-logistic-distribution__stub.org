@@ -1,0 +1,25 @@
+:ctime:    20220320151935
+:END:
+#+title: ?The difference of two Gumbel distributions is the logistic distribution
+#+filetags: :stub:
+
+This is most easily seen by using the [[denote:20220320T152334][?Characteristic function of the Gumbel distribution]] and the [[denote:20220320T152349][?Characteristic function of the logistic distribution]].
+
+Let \( X \sim \mathrm{Gumbel}(\mu_X, \beta) \) and \( Y \sim \mathrm{Gumbel}(\mu_Y, \beta) \) and
+\( Z = X - Y \), then
+
+\begin{equation*}
+\begin{align}
+\varphi_X(t) &= \Gamma(1 - i \beta t) e^{i \mu_X t} \\
+\varphi_Y(t) &= \Gamma(1 - i \beta t) e^{i \mu_Y t} \\
+\varphi_Z(t) &= \varphi_X(t) \varphi_Y(-t) \\
+&= \Gamma(1 - i \beta t) \Gamma(1 + i \beta t) e^{i (\mu_X - \mu_Y) t} \\
+&= i \beta t \Gamma(1 - i \beta t) \Gamma(i \beta t) e^{i (\mu_X - \mu_Y) t} \\
+&=  \frac{i \pi \beta t}{\sin (i \pi \beta t)} e^{i (\mu_X - \mu_Y) t} \\
+&=  \frac{\pi \beta t}{\sinh (\pi \beta t)} e^{i (\mu_X - \mu_Y) t}
+\end{align}
+\end{equation*}
+
+The fourth equality for \( \varphi_Z(t) \) uses the well-known [[denote:20220320T153934][Euler's reflection formula]].
+
+This is precisely the characteristic function of \( Z \sim \mathrm{Logistic}(\mu_X - \mu_Y, \beta) \).

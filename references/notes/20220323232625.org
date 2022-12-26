@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6c19c009-3c75-4c42-a833-7cd89d1a09df
-:mtime:    20220323232626
-:ctime:    20220323232625
-:END:
-#+title: The negative binomial distribution is a discrete phase-type distribution with multiple identical states
-#+filetags: :stub:
-
-

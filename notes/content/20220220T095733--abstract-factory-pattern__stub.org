@@ -1,0 +1,5 @@
+:ctime:    20220220095733
+:END:
+#+title: abstract factory pattern
+#+filetags: :stub:
+

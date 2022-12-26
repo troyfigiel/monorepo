@@ -1,0 +1,7 @@
+:ctime:    20220303124900
+:END:
+#+title: Timestamps are meaningless for reproducible builds
+#+filetags: :stub:
+
+# TODO: Read the link and write out some ideas here
+https://reproducible-builds.org/docs/timestamps/

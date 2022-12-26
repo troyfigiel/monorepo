@@ -1,0 +1,7 @@
+:ctime:    20220326130225
+:END:
+#+title: What I would tell myself just starting out with this system of notes
+#+filetags: :stub:
+
+- [[denote:20220326T100535][Just get started]]
+- [[denote:20220326T095643][Abstraction should emerge naturally]]

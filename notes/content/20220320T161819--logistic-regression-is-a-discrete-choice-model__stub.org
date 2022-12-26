@@ -1,0 +1,35 @@
+:ctime:    20220320161819
+:END:
+#+title: Logistic regression is a discrete choice model
+#+filetags: :stub:
+
+Logistic regression can be derived as a [[denote:20220320T155830][Discrete choice model]] where the error terms follow a [[denote:20220320T143640][Gumbel
+distribution]].
+
+Indeed, if
+
+\[
+U_i = \beta_i X + \epsilon_i
+\]
+
+then
+
+\[
+\mathbb{P}(U_1 > U_0 | X = x) = \mathbb{P}((\beta_1 - \beta_0) x > \epsilon_0 - \epsilon_1)
+\]
+
+Since \( \epsilon_i \sim \mathrm{Gumbel}(\mu_i, \alpha) \), we have \( \Delta = \epsilon_0 - \epsilon_1 \sim
+\mathrm{Logistic}(\mu_0 - \mu_1,  \alpha) \).
+
+We simplify and let \( \beta_0 = 0 \) and \( \beta_1 = 1 \) as well as let \( \mu_0 = \mu_1 \)
+and \( \alpha = 1 \), i.e. if we use the [[denote:20220320T151714][Standard Gumbel distribution]], we find the [[denote:20220320T160854][Standard
+logistic distribution]].
+
+Then we end up with
+
+\[
+\mathbb{P}(U_1 > U_0 | X = x) = \mathbb{P}(\Delta < x) = \frac{e^x}{1 + e^x}
+\]
+
+which is the [[denote:20220320T161457][Standard logistic function]]. If we had used the [[denote:20220320T143640][Gumbel distribution]] instead, we would
+end up with the [[denote:20220219T003626][Logistic function]].

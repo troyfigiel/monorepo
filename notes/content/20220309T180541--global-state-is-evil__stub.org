@@ -1,0 +1,13 @@
+:ctime:    20220309180541
+:END:
+#+title: Global state is evil
+#+filetags: :stub:
+
+- Anything can change it, so you can never be completely sure it will behave as expected, unless
+  you know everything about what can possibly change the state.
+- If you have to change global state, it will have to be changed everywhere it is used. There is no
+  [[denote:20220315T123050][Encapsulation]] and no API used to access the state.
+- With global state, many [[denote:20220303T125546][Pure functions]] become impure. This means it becomes hard for the compiler
+  to optimize these functions.
+
+https://stackoverflow.com/questions/19209468/why-is-global-state-bad

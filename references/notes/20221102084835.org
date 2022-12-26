@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       eceb633a-83ac-49a1-a5b6-f38b1acec107
-:mtime:    20221102084835
-:ctime:    20221102084835
-:END:
-#+title: Data lakehouse
-#+filetags: :stub:

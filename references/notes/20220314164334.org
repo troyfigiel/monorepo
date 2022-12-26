@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       3294ce6f-aca8-4ec7-a532-369a56f12ff7
-:mtime:    20220314164335
-:ctime:    20220314164334
-:END:
-#+title: L-moment
-#+filetags: :stub:
-
-

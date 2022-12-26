@@ -1,0 +1,6 @@
+:ctime:    20220324124131
+:END:
+#+title: Site percolation
+#+filetags: :stub:
+
+

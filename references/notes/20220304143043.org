@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       58276028-b215-4efe-bc9e-8a0dfe160e9c
-:mtime:    20220307165744
-:ctime:    20220304143043
-:END:
-#+title: ?Mean of the negative binomial distribution
-#+filetags: :appendix:stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220320152334
+:END:
+#+title: ?Characteristic function of the Gumbel distribution
+#+filetags: :stub:
+
+

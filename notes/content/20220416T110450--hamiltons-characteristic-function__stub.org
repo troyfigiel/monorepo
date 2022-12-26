@@ -1,0 +1,10 @@
+:ctime:    20220416110450
+:END:
+#+title: Hamilton's characteristic function
+#+filetags: :stub:
+
+Hamilton's characteristic function \( W(\mathbf{q}) \) is defined in terms of the [[denote:20220310T200840][Action]] \(
+S(\mathbf{q}, t) = W(\mathbf{q}) - Et \).
+
+If we use Hamilton's characteristic function as a generating function for a [[denote:20220415T005541][Canonical
+transformation]], we end up with the [[denote:20220416T115919][Action-angle coordinates]].

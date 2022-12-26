@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ec31f9f2-0a23-425c-9cee-537b86cf812c
-:mtime:    20220310193302
-:ctime:    20220310193019
-:END:
-#+title: Association rule learning
-#+filetags: :stub:
-
-For example, the learn which items are usually bought together such as when online shopping.

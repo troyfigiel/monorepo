@@ -1,0 +1,6 @@
+:ctime:    20220317083210
+:END:
+#+title: Type safety
+#+filetags: :stub:
+
+

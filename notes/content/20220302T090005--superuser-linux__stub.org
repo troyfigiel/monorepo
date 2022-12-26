@@ -1,0 +1,6 @@
+:ctime:    20220302090005
+:END:
+#+title: Superuser (Linux)
+#+filetags: :stub:
+
+

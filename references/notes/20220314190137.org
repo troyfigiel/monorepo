@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4eb924cc-81a0-4cb8-9820-80e4238f1bff
-:mtime:    20220314212503
-:ctime:    20220314190137
-:END:
-#+title: ?The mean of the uniform distribution
-#+filetags: :appendix:stub:
-
-

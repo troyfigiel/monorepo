@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       76c20f0e-7b45-4046-8490-d6da42f2ac99
-:mtime:    20220420215027
-:ctime:    20220420214855
-:END:
-#+title: Greedy algorithm
-#+filetags: :stub:
-
-- [[id:1aac55a3-ca42-4e93-bd93-7d53bb1524ee][Test function for optimization]]

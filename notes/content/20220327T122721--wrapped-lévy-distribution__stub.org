@@ -1,0 +1,6 @@
+:ctime:    20220327122721
+:END:
+#+title: Wrapped Lévy distribution
+#+filetags: :stub:
+
+Obtained by wrapping the [[denote:20220325T225006][Lévy distribution]] around the unit circle.

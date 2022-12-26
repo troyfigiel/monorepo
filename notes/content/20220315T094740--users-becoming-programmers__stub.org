@@ -1,0 +1,23 @@
+:ctime:    20220315094740
+:END:
+#+title: Users becoming programmers
+#+filetags: :stub:
+
+Where it happens:
+- [[denote:20220221T233800][Emacs]]
+- [[denote:20220303T092333][GNU Guix]]
+
+It does not mean it is necessarily difficult to get started, but that there is a clear development
+from user to programmer the more you get to know about configuring the program. This especially
+happens when there is no clear distinction between code and data (see: [[denote:20220314T125954][Duality between code and
+data]]). For example, this can happen with languages in the [[denote:20220220T094628][Lisp]] family.
+
+This is also reflected in the documentation. Documentation to get started might happen on a general
+level, but at some point to continue improving configurations, users are redirected to
+[[denote:20220316T134414][Self-documenting code]] and [[denote:20220316T134909][Software tests]].
+
+This allows for:
+- a very high skill-cap
+- recruiting new software maintainers from advanced users
+
+The latter making this type of development especially helpful in the case of [[denote:20220316T135047][Open source software]].

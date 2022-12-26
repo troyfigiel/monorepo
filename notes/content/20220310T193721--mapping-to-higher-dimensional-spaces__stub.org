@@ -1,0 +1,7 @@
+:ctime:    20220310193721
+:END:
+#+title: Mapping to higher-dimensional spaces
+#+filetags: :stub:
+
+This can be extremely helpful if a mapping makes your data linearly separable. However, you should
+also be careful about [[denote:20220310T193752][Overfitting]].

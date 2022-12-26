@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       8599863e-13c6-45db-8239-6d50e4230975
-:mtime:    20220327162915
-:ctime:    20220327135342
-:END:
-#+title: Continuous probability distribution
-#+filetags: :stub:

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       aeb194cb-58ec-4d67-b755-8cf7f790ab8d
-:END:
-#+title: Sprint retrospective
-#+filetags: :stub:
-
-The sprint retrospective is when the [[id:5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e][Scrum team]] discusses how the process can be improved in the future.

@@ -1,0 +1,6 @@
+:ctime:    20220310193019
+:END:
+#+title: Association rule learning
+#+filetags: :stub:
+
+For example, the learn which items are usually bought together such as when online shopping.

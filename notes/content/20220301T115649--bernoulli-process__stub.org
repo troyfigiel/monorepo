@@ -1,0 +1,6 @@
+:ctime:    20220301115649
+:END:
+#+title: Bernoulli process
+#+filetags: :stub:
+
+

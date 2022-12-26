@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       49445fea-945f-4dc8-bb5e-ce22fe589efd
-:mtime:    20220327165220
-:ctime:    20220327165219
-:END:
-#+title: Birthday problem
-#+filetags: :stub:
-
-

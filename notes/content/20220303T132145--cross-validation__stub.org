@@ -1,0 +1,12 @@
+:ctime:    20220303132145
+:END:
+#+title: Cross-validation
+#+filetags: :stub:
+
+Cross-validation is an example of a [[denote:20220303T132200][Model validation technique]].
+
+A k-fold cross-validation means we split our data into k equally large sets. We can now build k
+[[denote:20220303T132609][Train-test splits]] by picking one fold to be our test data and the rest to be our training data for
+a specific model. Parameter tuning is part of the algorithm.
+
+A more advanced approach is [[denote:20220303T133811][Nested cross-validation]]

@@ -1,0 +1,6 @@
+:ctime:    20220301192931
+:END:
+#+title: Rolling back to a previous configuration is trivial with a declarative system
+#+filetags: :stub:
+
+

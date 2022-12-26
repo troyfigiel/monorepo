@@ -1,0 +1,15 @@
+:ctime:    20220323090123
+:ROAM_ALIASES: "Relative entropy" "KL divergence"
+:END:
+#+title: Kullback-Leibler divergence
+#+filetags: :math:stub:
+
+The KL divergence is not necessarily symmetric.
+
+The fact that
+
+\begin{equation*}
+D_{\mathrm{KL}}(P || Q) \geq 0
+\end{equation*}
+
+follows from [[denote:20220326T224300][Gibbs' inequality]].

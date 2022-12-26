@@ -1,0 +1,6 @@
+:ctime:    20220408230624
+:END:
+#+title: Parametric statistics
+#+filetags: :stub:
+
+

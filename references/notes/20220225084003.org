@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       45613f3d-8a6c-45ba-a984-da7a5b50c91a
-:mtime:    20220225223628
-:ctime:    20220225084003
-:END:
-#+title: do-calculus
-#+filetags: :stub:
-
-

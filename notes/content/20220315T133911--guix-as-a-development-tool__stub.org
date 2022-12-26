@@ -1,0 +1,10 @@
+:ctime:    20220315133911
+:END:
+#+title: Guix as a development tool
+#+filetags: :stub:
+
+# TODO: Write out how it relates to Python's virtualenv or Docker
+- [[denote:20220315T133946][Python virtual environment]]
+- [[denote:20220315T133959][Docker container]]
+
+Docker containers built with Guix are actually build-reproducible, whereas normally [[denote:20220301T212917][Only running a container image can be done reproducibly]].

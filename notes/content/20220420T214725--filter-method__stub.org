@@ -1,0 +1,5 @@
+:ctime:    20220420214725
+:END:
+#+title: Filter method
+#+filetags: :stub:
+

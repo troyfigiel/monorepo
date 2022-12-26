@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       8c74b054-da01-4ba3-913f-448a18cfa570
-:mtime:    20220422090733
-:ctime:    20220422090732
-:END:
-#+title: Environment
-#+filetags: :stub:
-

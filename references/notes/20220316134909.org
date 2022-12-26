@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c853992b-d0b6-4858-a037-54d2e86c1cd0
-:mtime:    20220316134909
-:ctime:    20220316134909
-:END:
-#+title: Software test
-#+filetags: :stub:
-
-

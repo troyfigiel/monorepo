@@ -1,0 +1,6 @@
+:ctime:    20220314200635
+:END:
+#+title: Fuzzy union operation
+#+filetags: :stub:
+
+

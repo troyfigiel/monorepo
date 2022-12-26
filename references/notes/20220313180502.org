@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a20cf9e1-c810-41f2-9795-19af3d88823e
-:mtime:    20220313180503
-:ctime:    20220313180502
-:END:
-#+title: Negative likelihood ratio
-#+filetags: :stub:
-
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ad99ecdd-c9cf-465b-ae5b-9801a9293a31
-:mtime:    20220323142635
-:ctime:    20220223213428
-:END:
-#+title: Bernoulli number
-#+filetags: :stub:
-
-

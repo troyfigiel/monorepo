@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       3ec7855e-14b6-4f4b-962e-fa14b35f5a04
-:mtime:    20220304133128
-:ctime:    20220304133117
-:END:
-#+title: Zero-inflated models are mixture models
-#+filetags: :stub:
-
-They are mixtures of the [[id:a52537ca-6373-4385-a4fd-0a0777e95dd7][Bernoulli distribution]] and another distribution.

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       09ea6533-7613-4979-9efc-88e0f99bd5f0
-:mtime:    20220310125827
-:ctime:    20220210200903
-:END:
-#+title: Information theory
-

@@ -1,0 +1,6 @@
+:ctime:    20220401204827
+:END:
+#+title: Envelope theorem
+#+filetags: :stub:
+
+

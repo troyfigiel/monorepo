@@ -1,0 +1,16 @@
+:ctime:    20220306173918
+:END:
+#+title: Vandermonde's identity
+#+filetags: :stub:
+
+Vandermonde's identity states that
+
+\[
+\binom{m+n}{r} = \sum\limits_{k=0}^r \binom{m}{k} \binom{n}{r-k}
+\]
+
+for non-negative integers \( r, m, n \).
+
+This identity is used to prove that [[denote:20220306T174301][?The PMF of the hypergeometric distribution sums to one]].
+
+For appendixs, see: [[denote:20220306T174334][?Proof of Vandermonde's identity using generating functions]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       0c3d9aff-1b25-4ce0-9904-df240810b8dc
-:mtime:    20220323221351
-:ctime:    20220323221333
-:END:
-#+title: Turing complete system
-#+filetags: :stub:
-
-

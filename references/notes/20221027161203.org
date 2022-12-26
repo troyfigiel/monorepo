@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       7e07feec-b1cf-46e9-bf17-7612140ca4b9
-:END:
-#+title: Velocity
-#+filetags: :stub:
-
-The velocity in Scrum expresses the amount of [[id:e6efa71c-968a-4c19-80d1-3c7c6e04b0b8][Story points]] completed per iteration.

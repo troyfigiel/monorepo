@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1a150921-3ed7-4661-98b2-1a18b4f852a8
-:mtime:    20220316150509
-:ctime:    20220316150509
-:END:
-#+title: Last-touch attribution
-#+filetags: :stub:
-
-

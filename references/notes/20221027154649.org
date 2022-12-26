@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       dbb16562-e671-4ddd-ae44-052f2b5da1a5
-:END:
-#+title: Feature complete
-#+filetags: :stub:

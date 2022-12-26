@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       348ffc2e-4800-49da-9ea2-2c1b0bb7d0dc
-:mtime:    20220303202240
-:ctime:    20220215234422
-:END:
-#+title: Non-parametric skew vanishes for symmetric distribution
-

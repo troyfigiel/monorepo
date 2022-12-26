@@ -1,0 +1,8 @@
+:ctime:    20220323090134
+:END:
+#+title: Sanov's theorem
+#+filetags: :stub:
+
+Sanov's theorem is the bridge between [[denote:20220210T210151][Statistical mechanics]] and [[denote:20220215T230625][Principle of maximum entropy]].
+
+[[denote:20220409T145515][@Large deviations theory and statistical physics]].

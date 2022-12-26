@@ -1,0 +1,7 @@
+:ctime:    20220402183105
+:END:
+#+title: Ergodic hypothesis
+#+filetags: :stub:
+
+In statistical mechanics, we often assume that the statistical average is the same as the time
+average. This is the ergodic hypothesis, but it is not always correct.

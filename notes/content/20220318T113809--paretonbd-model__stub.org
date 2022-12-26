@@ -1,0 +1,6 @@
+:ctime:    20220318113809
+:END:
+#+title: Pareto/NBD model
+#+filetags: :stub:
+
+

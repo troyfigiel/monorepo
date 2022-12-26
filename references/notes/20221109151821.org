@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f5e6eeae-100a-4dee-af5a-aa236bbfe2f5
-:mtime:    20221109151826
-:ctime:    20221109151821
-:END:
-#+title: Merge conflict
-#+filetags: :stub:
-
-[[id:51561c84-6bb9-456f-9b06-dfa47cb1060c][Git]]

@@ -1,0 +1,6 @@
+:ctime:    20220316150239
+:END:
+#+title: Removal effect
+#+filetags: :stub:
+
+

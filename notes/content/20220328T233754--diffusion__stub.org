@@ -1,0 +1,6 @@
+:ctime:    20220328233754
+:END:
+#+title: Diffusion
+#+filetags: :stub:
+
+[[denote:20220328T233205][Fick's second law]]

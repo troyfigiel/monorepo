@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       20c3f318-e49f-4ed1-878c-95627cc4713a
-:mtime:    20220326111205
-:ctime:    20220326111204
-:END:
-#+title: Microcanonical ensemble
-#+filetags: :stub:
-
-

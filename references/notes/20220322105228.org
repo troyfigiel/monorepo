@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7f731f53-bd0e-4b1f-8a89-1eb868688d88
-:mtime:    20220322105230
-:ctime:    20220322105228
-:END:
-#+title: Singular perturbation problem
-#+filetags: :stub:
-
-

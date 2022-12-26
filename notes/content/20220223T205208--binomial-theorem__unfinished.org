@@ -1,0 +1,12 @@
+#+title:      Binomial theorem
+#+date:       [2022-02-23 Wed 20:52]
+#+filetags:   :unfinished:
+#+identifier: 20220223T205208
+
+The binomial theorem states that we can expand
+
+\[
+(x + y)^n = \sum\limits_{k=0}^{n} \binom{n}{k} x^k y^{n-k}
+\]
+
+in terms of [[denote:20220306T173746][Binomial coefficients]].

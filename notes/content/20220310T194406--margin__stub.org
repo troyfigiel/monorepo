@@ -1,0 +1,6 @@
+:ctime:    20220310194406
+:END:
+#+title: Margin
+#+filetags: :stub:
+
+In a [[denote:20220310T194320][Classification]] problem, the margin of a data point is the distance from the data point to the [[denote:20220310T194337][Decision boundary]].

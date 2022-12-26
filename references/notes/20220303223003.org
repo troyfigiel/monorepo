@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       ebbac5a1-47e3-4112-bd8a-a1511f50add0
-:mtime:    20220303223005
-:ctime:    20220303223003
-:END:
-#+title: Discrete probability distribution
-#+filetags: :stub:
-
-

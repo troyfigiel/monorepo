@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e
-:END:
-#+title: Scrum team
-#+filetags: :stub:
-
-The Scrum team consists of developers, testers, writers and anyone else.
-Usually members will fulfill several roles.

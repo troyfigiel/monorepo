@@ -1,0 +1,3 @@
+:ctime:    20220211095924
+:END:
+#+title: triangle inequality follows from Cauchy-Schwary inequality

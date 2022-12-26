@@ -1,0 +1,7 @@
+:mtime:    20220310134129
+:ctime:    20220310134126
+:END:
+#+title: Generalized linear model
+#+filetags: :stub:
+
+

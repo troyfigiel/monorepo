@@ -1,0 +1,9 @@
+:ctime:    20220310142122
+:END:
+#+title: K-nearest neighbours
+#+filetags: :stub:
+
+[[denote:20220223T092119][Bias-variance tradeoff for k-nearest neighbours]]
+
+If we have a lot of feature dimensions, we first have to apply [[denote:20220313T153303][Dimensionality reduction]] before it
+makes sense to start classifying data in order to avoid the [[denote:20220310T231759][Curse of dimensionality]].

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       ceeec877-7353-414e-bb59-60d530429184
-:mtime:    20220225223636
-:ctime:    20220215233033
-:END:
-#+title: F-test
-

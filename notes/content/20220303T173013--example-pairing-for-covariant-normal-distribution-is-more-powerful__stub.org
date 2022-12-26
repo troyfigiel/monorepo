@@ -1,0 +1,6 @@
+:ctime:    20220303173013
+:END:
+#+title: Example - pairing for covariant normal distribution is more powerful
+#+filetags: :stub:
+
+# TODO: Randomly generate some data and show that pairing does give significance, but unpaired not

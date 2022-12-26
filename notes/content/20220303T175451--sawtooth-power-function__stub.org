@@ -1,0 +1,7 @@
+:ctime:    20220303175451
+:END:
+#+title: Sawtooth power function
+#+filetags: :stub:
+
+Although in many cases the [[denote:20220303T175618][Power function]] is monotonically increasing with the number of samples,
+with discrete data it can happen that the power curve is not monotonic.

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       c5720817-eda5-49d8-a3bc-3d22e3b29227
-:mtime:    20220415111946
-:ctime:    20220415111945
-:END:
-#+title: Casimir invariant
-#+filetags: :stub:
-

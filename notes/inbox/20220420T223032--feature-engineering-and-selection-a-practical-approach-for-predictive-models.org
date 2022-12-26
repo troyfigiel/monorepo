@@ -1,0 +1,6 @@
+#+title:      Feature engineering and selection: A practical approach for predictive models
+#+date:       [2022-04-20 Wed 22:30]
+#+filetags:
+#+identifier: 20220420T223032
+
+http://www.feat.engineering/index.html

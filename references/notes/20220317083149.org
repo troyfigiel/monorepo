@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       72f81726-b5ae-459b-ba34-a8a3f6971167
-:mtime:    20220317083150
-:ctime:    20220317083149
-:END:
-#+title: Weak typing
-#+filetags: :stub:
-
-

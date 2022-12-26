@@ -1,0 +1,5 @@
+:ctime:    20220220095745
+:END:
+#+title: builder pattern
+#+filetags: :stub:
+

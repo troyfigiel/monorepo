@@ -1,0 +1,16 @@
+:ctime:    20220323085535
+:ROAM_ALIASES: "Cramér function"
+:END:
+#+title: Rate function
+#+filetags: :math:stub:
+
+The rate function (also known as the Cramér function) is defined as the [[denote:20220323T085704][Legendre-Fenchel
+transformation]] of the [[denote:20220303T233535][Cumulant generating function]].
+
+# TODO: What does Sanov's theorem state exactly?
+It is related to the [[denote:20220323T090123][Kullback-Leibler divergence]] through [[denote:20220323T090134][Sanov's theorem]].
+
+# TODO: How is the rate function related to the entropy?
+[[denote:20220210T210007][Entropy]]
+
+Example: [[denote:20220323T092735][?Rate function of the Bernoulli distribution]]

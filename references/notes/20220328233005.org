@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       20e6a772-314a-49bf-9714-3a7af9c65cf5
-:mtime:    20220328233006
-:ctime:    20220328233005
-:END:
-#+title: Continuous Markov chain
-#+filetags: :stub:
-
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7f04d024-7284-4dfa-8bcb-444155951a4c
-:mtime:    20220324214148
-:ctime:    20220324214147
-:END:
-#+title: Volume
-#+filetags: :stub:
-
-

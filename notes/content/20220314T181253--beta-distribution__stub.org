@@ -1,0 +1,6 @@
+:ctime:    20220314181253
+:END:
+#+title: Beta distribution
+#+filetags: :stub:
+
+

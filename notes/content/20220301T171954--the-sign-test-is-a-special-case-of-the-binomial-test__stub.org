@@ -1,0 +1,11 @@
+:ctime:    20220301171954
+:END:
+#+title: The sign test is a special case of the binomial test
+#+filetags: :stub:
+
+The [[denote:20220215T233147][Sign test]] is a special case of the [[denote:20220301T120410][Binomial test]].
+
+For a given sample \( \left\{ (x_1, y_1), ..., (x_n, y_n) \right\} \), we remove the pairs \( (x_i,
+y_i) \) where \( x_i = y_i \). This leaves us with \( m \) pairs, so that the number of pairs \( 0
+\leq W \leq m \) where \( x_j > y_j \) should be distributed according to the [[denote:20220210T094431][Binomial distribution]]
+as \( W \sim \mathrm{Bin}(m, 0.5) \).

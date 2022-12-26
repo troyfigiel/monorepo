@@ -1,0 +1,8 @@
+:ctime:    20220415150722
+:END:
+#+title: Boundary value condition
+#+filetags: :stub:
+
+- [[denote:20220415T150731][Dirichlet boundary condition]]
+- [[denote:20220415T150740][Neumann boundary condition]]
+- [[denote:20220415T150749][Cauchy boundary condition]]

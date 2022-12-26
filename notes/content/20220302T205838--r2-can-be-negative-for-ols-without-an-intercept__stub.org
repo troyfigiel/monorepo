@@ -1,0 +1,6 @@
+:ctime:    20220302205838
+:END:
+#+title: R^2 can be negative for OLS without an intercept
+#+filetags: :stub:
+
+

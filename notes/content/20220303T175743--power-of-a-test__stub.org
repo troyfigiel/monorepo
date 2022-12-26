@@ -1,0 +1,14 @@
+:mtime:    20220303223958
+:ctime:    20220303175743
+:END:
+#+title: Power of a test
+#+filetags: :stub:
+
+The power of a test is the probability that the null hypothesis is correctly rejected when an
+alternative is true.
+
+The power is often denoted by \( 1 - \beta \) where \( \beta \) denotes the probability of a [[denote:20220215T232443][Type
+II error]].
+
+Often the power of a test depends on paramaters such as the number of samples or parameters of the
+distributions involved. In these cases we talk about the [[denote:20220303T175618][Power function]].

@@ -1,0 +1,13 @@
+:ctime:    20220310124612
+:END:
+#+title: Data science
+#+filetags: :stub:
+
+[[denote:20220310T124420][Data science process]]
+[[denote:20220316T220449][Visualization]]
+[[denote:20220510T120132][Once the trust in numbers is gone, it is hard to earn it back]]
+
+It makes sense to use a default project template, because what is unique about a data science
+project is the data used and the models built. The steps are often the same, i.e. running pipelines
+to transform data and then apply a model. This makes a tool like [[denote:20220422T123142][Cookiecutter Data Science]]
+particularly useful.

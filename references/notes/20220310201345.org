@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a67254ea-8b7e-4500-a9ee-0c6f3156241a
-:mtime:    20220310201346
-:ctime:    20220310201345
-:END:
-#+title: Hinge loss function
-#+filetags: :stub:
-
-

@@ -1,0 +1,7 @@
+:mtime:    20220406205318
+:ctime:    20220406205311
+:END:
+#+title: Downsampling
+#+filetags: :stub:
+
+

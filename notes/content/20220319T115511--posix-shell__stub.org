@@ -1,0 +1,17 @@
+:ctime:    20220319115511
+:END:
+#+title: POSIX shell
+#+filetags: :stub:
+
+The two main strengths of the POSIX shell are
+- Piping commands
+- External command execution as a [[denote:20220319T115600][First-class citizen]]
+
+- [[denote:20220319T115627][Dash]]
+
+Close to, but not completely POSIX-compliant:
+- [[denote:20220220T094827][Bash]]
+- [[denote:20220319T115706][Zsh]]
+
+Other shells:
+- [[denote:20220319T115649][Fish]]

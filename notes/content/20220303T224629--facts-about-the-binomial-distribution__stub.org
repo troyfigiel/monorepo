@@ -1,0 +1,48 @@
+:ctime:    20220303224629
+:END:
+#+title: Facts about the binomial distribution
+#+filetags: :stub:
+
+* Probability mass function
+
+\[
+f(k) = \binom{n}{k} p^k (1 - p)^{n - k}
+\]
+
+See:
+- [[denote:20220304T093335][!PMF of the binomial distribution sums to one]]
+
+* Cumulative distribution function
+
+# TODO: CDF of the binomial distribution
+
+See:
+- [[denote:20220304T093438][!CDF of the binomial distribution]]
+
+* Characteristic function
+
+\[
+\varphi_X(t) = (1 - p + pe^{it})^n
+\]
+
+See:
+- [[denote:20220304T093244][!Characteristic function of the binomial distribution]]
+
+* Cumulants
+# TODO: Calculate the cumulants for the binomial distribution
+
+See:
+- [[denote:20220304T095713][!Cumulants of the binomial distribution]]
+* Raw moments
+
+\begin{equation*}
+\begin{align}
+\mathbb{E}[X^k]
+&= (it)^{-k} \varphi_X^{(k)}(t) \bigr|_{t=0}
+\end{align}
+\end{equation*}
+
+See:
+- [[denote:20220304T093305][!Raw moments of the binomial distribution]]
+
+* Factorial moments

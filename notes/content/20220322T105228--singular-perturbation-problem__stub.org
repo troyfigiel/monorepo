@@ -1,0 +1,6 @@
+:ctime:    20220322105228
+:END:
+#+title: Singular perturbation problem
+#+filetags: :stub:
+
+

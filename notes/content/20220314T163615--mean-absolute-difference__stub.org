@@ -1,0 +1,20 @@
+:ctime:    20220314163615
+:ROAM_ALIASES: L-scale MD
+:END:
+#+title: Mean absolute difference
+#+filetags: :stub:
+
+Defined as
+
+\[
+\mathrm{MD}(X) = \mathbb{E} \left[ \left| X_1 - X_2 \right| \right]
+\]
+
+where \( X_1, X_2 \) are random variables, independently and identically distributed as \( X \).
+
+Some nice properties:
+- \( \mathrm{MD}(X + c) = \mathrm{MD}(X) \)
+- \( \mathrm{MD}(c X) = |c| \mathrm{MD}(X) \)
+
+The mean absolute difference is the L-scale of the [[denote:20220314T164334][L-moment]].
+# TODO: Show this? Is trivial though.

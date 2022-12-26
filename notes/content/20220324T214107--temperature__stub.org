@@ -1,0 +1,6 @@
+:ctime:    20220324214107
+:END:
+#+title: Temperature
+#+filetags: :stub:
+
+

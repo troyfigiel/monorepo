@@ -1,0 +1,7 @@
+:ctime:    20220404090338
+:END:
+#+title: H-stable
+#+filetags: :stub:
+
+A system is H-stable if the potential energy per particle is bounded from below by a constant
+independent of the number of particles.

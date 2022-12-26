@@ -1,0 +1,6 @@
+#+title: Batch processing
+#+filetags: :stub:
+
+Batch processing of data is a technique where multiple data rows or transactions are processed as a single group.
+
+This is in opposition to the processing of [[denote:20221028T150050][Data streams]].

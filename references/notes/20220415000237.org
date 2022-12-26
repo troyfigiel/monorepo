@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       9adbdff3-fa63-4230-a7a5-eb0e3981e145
-:mtime:    20220415000249
-:ctime:    20220415000237
-:END:
-#+title: Newton's laws of motion
-#+filetags: :stub:
-
-

@@ -1,0 +1,12 @@
+:ctime:    20220303231317
+:END:
+#+title: Factorial moment generating function
+#+filetags: :stub:
+
+The factorial moment generating function of a distribution is defined as \( M_X(t) =
+\mathbb{E}[t^X] \).
+
+Since [[denote:20220224T220317][Every probability distribution has a characteristic function]], we know that the moment
+generating function is defined at least for \( |t| = 1 \).
+
+For various calculations of generating functions, see: [[denote:20220303T231816][?Factorial moment generating function]].

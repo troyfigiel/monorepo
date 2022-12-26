@@ -1,0 +1,50 @@
+:ctime:    20220415001220
+:END:
+#+title: ?Brachistochrone problem
+#+filetags: :appendix:stub:
+
+We want to find the curve \( y(x) \) that minimizes the time spent traveling for an object moving
+without friction due to the influence of gravity.
+
+The total time spent traveling is given by
+
+\[
+T = \int\limits_0^a \frac{1}{v(x)} \frac{ds}{dx} \, dx
+\]
+
+Because the curve length can be described in terms of the coordinate \( x \) as
+
+\[
+\frac{ds}{dx} = \sqrt{1 + (y^{\prime}(x))^2}
+\]
+
+and the velocity is given by
+
+\[
+v(x) = \sqrt{2 g y(x)}
+\]
+
+the brachistochrone problem is solved by extremizing
+
+\[
+T[y] = \frac{1}{\sqrt{2g}} \int\limits_0^a \sqrt{\frac{1 + (y^{\prime}(x))^2}{y(x)}} \, dx
+\]
+
+subject to \( y(0) = 0 \) and \( y(a) = b \).
+
+Now the [[denote:20220412T201834][Euler-Lagrange equation]] leads to
+
+\[
+1 + 2 y y^{\prime \prime} + y^{\prime}^2 = 0
+\]
+
+This equation can be solved by
+
+\begin{equation*}
+\begin{align}
+x(t) &= t - \sin(t) \\
+y(t) &= 1 - \cos(t)
+\end{align}
+\end{equation*}
+
+up to a multiplicative constant multiplying both \( x \) and \( y \).

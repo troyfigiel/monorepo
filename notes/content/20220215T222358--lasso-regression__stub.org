@@ -1,0 +1,6 @@
+:ctime:    20220215222358
+:END:
+#+title: Lasso regression
+#+filetags: :stub:
+
+Lasso is an acronym of "Least absolute shrinkage and selection operator".

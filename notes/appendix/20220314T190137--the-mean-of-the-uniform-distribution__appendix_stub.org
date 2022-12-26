@@ -1,0 +1,6 @@
+:ctime:    20220314190137
+:END:
+#+title: ?The mean of the uniform distribution
+#+filetags: :appendix:stub:
+
+

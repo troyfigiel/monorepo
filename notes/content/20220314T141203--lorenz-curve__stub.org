@@ -1,0 +1,6 @@
+:ctime:    20220314141203
+:END:
+#+title: Lorenz curve
+#+filetags: :stub:
+
+

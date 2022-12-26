@@ -1,0 +1,5 @@
+:ctime:    20220211085432
+:END:
+#+title: risk function
+
+The risk function is the expected value of the loss function.

@@ -1,0 +1,6 @@
+:ctime:    20220322175742
+:END:
+#+title: K-means clustering
+#+filetags: :stub:
+
+K-means clustering is an example of a [[denote:20220322T180932][Hard clustering]] algorithm.

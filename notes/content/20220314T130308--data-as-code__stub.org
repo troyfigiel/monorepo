@@ -1,0 +1,8 @@
+:ctime:    20220314130308
+:END:
+#+title: Data as code
+#+filetags: :stub:
+
+When we work with [[denote:20220218T230332][Infrastructure as code]] and [[denote:20220314T130517][Configuration as code]], we are explicitly treating the
+infrastructure and configuration data as code for an interpreter. The interpreter will make sure
+that the infrastructure or configuration we specify, will be created.

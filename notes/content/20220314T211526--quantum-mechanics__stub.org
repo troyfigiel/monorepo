@@ -1,0 +1,6 @@
+:ctime:    20220314211526
+:END:
+#+title: Quantum mechanics
+#+filetags: :stub:
+
+

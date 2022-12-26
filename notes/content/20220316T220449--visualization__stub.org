@@ -1,0 +1,15 @@
+:ctime:    20220316220449
+:END:
+#+title: Visualization
+#+filetags: :stub:
+
+[[denote:20220316T220530][Grammar of graphics]]
+
+Examples in [[denote:20220220T094641][Python]]:
+- [[denote:20220316T220540][Altair]]
+- [[denote:20220316T221649][Matplotlib]]
+- [[denote:20220317T214522][plotnine]]
+- [[denote:20220317T214533][Seaborn]]
+
+Examples in [[denote:20220220T094729][R]]:
+- [[denote:20220316T235626][ggplot2]]

@@ -1,0 +1,6 @@
+:ctime:    20220319224718
+:END:
+#+title: Lambert W function
+#+filetags: :stub:
+
+

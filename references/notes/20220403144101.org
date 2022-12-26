@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       032110db-3690-48cf-a374-1354fc7f656a
-:mtime:    20220403144101
-:ctime:    20220403144101
-:END:
-#+title: Mean field theory
-#+filetags: :stub:
-
-

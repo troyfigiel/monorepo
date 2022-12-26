@@ -1,0 +1,8 @@
+:ctime:    20220420214235
+:END:
+#+title: Supervised feature selection
+#+filetags: :stub:
+
+- [[denote:20220420T214345][Intrinsic method]]
+- [[denote:20220420T214651][Wrapper method]]
+- [[denote:20220420T214725][Filter method]]

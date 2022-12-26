@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       456215fe-7115-4fab-a4dd-81caef674fa5
-:mtime:    20220322181018
-:ctime:    20220322175742
-:END:
-#+title: K-means clustering
-#+filetags: :stub:
-
-K-means clustering is an example of a [[id:35293bf3-ec59-461e-bd50-2cf4c33dcede][Hard clustering]] algorithm.

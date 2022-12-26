@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c40ccc4d-aa32-431e-ad04-60f120b6f858
-:mtime:    20220314195552
-:ctime:    20220314195551
-:END:
-#+title: Similarity measure
-#+filetags: :stub:
-
-

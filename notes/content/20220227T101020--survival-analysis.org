@@ -1,0 +1,18 @@
+:ctime:    20220227101020
+:END:
+#+title: Survival analysis
+
+In survival analysis we are modelling a [[denote:20220227T101314][Non-negative probability distribution]]. A key feature of
+survival analysis is dealing with [[denote:20220227T103023][Censoring]].
+
+This means that the standard method of fitting models based on the [[denote:20220211T094312][Maximum likelihood estimate]],
+does not work anymore.
+
+Instead of the standard cumulative probability distributions, in survival analysis often the
+[[denote:20220210T124323][Survival function]] and the [[denote:20220227T162750][Hazard function]] are used.
+
+Some well-known models that are used in survival analysis are:
+- The [[denote:20220302T235314][Kaplan-Meier estimator]]
+- The [[denote:20220210T094351][Exponential distribution]] or more generally the [[denote:20220302T235424][Weibull distribution]]
+- The [[denote:20220302T235456][Cox proportional hazards model]]
+

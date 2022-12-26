@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4eaa3fa4-8af9-4769-a978-e987bc80db5e
-:mtime:    20220403011251
-:ctime:    20220403011207
-:END:
-#+title: Poincaré recurrence time
-#+filetags: :stub:
-
-

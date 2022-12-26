@@ -1,0 +1,6 @@
+:ctime:    20220320151714
+:END:
+#+title: Standard Gumbel distribution
+#+filetags: :stub:
+
+

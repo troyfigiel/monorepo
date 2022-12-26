@@ -1,0 +1,11 @@
+:ctime:    20220215213909
+:END:
+#+title: chi-squared distribution as sum of squares of normal distributions
+
+\begin{theorem}
+If \( X_i \sim \mathcal{N}(0, 1) \) are independent random variables, the random variable \( \sum\limits_{i = 1}^k X_i^2 \sim \chi^2(k).
+\end{theorem}
+
+\begin{appendix}
+To do.
+\end{appendix}

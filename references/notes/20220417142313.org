@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       723fbb3a-ea34-4665-a6fa-52b64700e0b7
-:mtime:    20220417142313
-:ctime:    20220417142313
-:END:
-#+title: Equidistant set
-#+filetags: :stub:
-

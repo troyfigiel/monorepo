@@ -1,0 +1,6 @@
+:ctime:    20220215233218
+:ROAM_ALIASES: "Wilcoxon test of ranks"
+:END:
+#+title: Wilcoxon signed-rank test
+
+Tests whether the difference in median of two samples is likely to be zero or not.

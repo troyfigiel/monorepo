@@ -1,0 +1,6 @@
+:ctime:    20220310134040
+:END:
+#+title: Non-linear regression
+#+filetags: :stub:
+
+For example, [[denote:20220303T195546][Non-linear least squares]].

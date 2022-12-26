@@ -1,0 +1,10 @@
+:mtime:    20220427091823
+:ctime:    20220427091817
+:END:
+#+title: Behaviour-driven development
+#+filetags: :stub:
+
+Behaviour-driven development (BDD) is a subset of [[denote:20220317T223641][Test-driven development]] (TDD).
+
+Start from requirements and turn these into tests. Ultimately, requirements are what need to be
+satisfied, so this structure for example keeps tests decoupled from the underlying design.

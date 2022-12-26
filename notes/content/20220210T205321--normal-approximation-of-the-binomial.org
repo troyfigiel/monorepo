@@ -1,0 +1,5 @@
+:ctime:    20220210205321
+:END:
+#+title: normal approximation of the binomial
+
+

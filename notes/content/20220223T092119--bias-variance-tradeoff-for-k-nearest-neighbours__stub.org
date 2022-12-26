@@ -1,0 +1,5 @@
+:ctime:    20220223092119
+:END:
+#+title: Bias-variance tradeoff for k-nearest neighbours
+#+filetags: :stub:
+

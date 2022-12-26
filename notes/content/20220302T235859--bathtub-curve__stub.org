@@ -1,0 +1,12 @@
+:ctime:    20220302235859
+:END:
+#+title: Bathtub curve
+#+filetags: :stub:
+
+The bathtub curve is a widely used model to describe the [[denote:20220227T162750][Failure rate]] of products. It consists of
+three phases:
+1. Initially the failure rate decreases due to early failures.
+2. At some point the failure rate is dominated by random failures and is approximately constant.
+3. In the final phase, the failure rate starts increasing due to wear-out failures.
+
+https://en.wikipedia.org/wiki/Bathtub_curve

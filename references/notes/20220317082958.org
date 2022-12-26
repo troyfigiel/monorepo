@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       dea20b9b-4650-47cf-aef6-c6ac3670406c
-:mtime:    20220317082959
-:ctime:    20220317082958
-:END:
-#+title: Structural typing
-#+filetags: :stub:
-
-

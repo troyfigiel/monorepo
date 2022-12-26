@@ -1,0 +1,6 @@
+:ctime:    20220402214449
+:END:
+#+title: Gibbs free energy
+#+filetags: :stub:
+
+

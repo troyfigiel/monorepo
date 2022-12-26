@@ -1,0 +1,6 @@
+:ctime:    20220303173435
+:END:
+#+title: The paired t-test is a linear mixed model
+#+filetags: :stub:
+
+https://vasishth.github.io/Freq_CogSci/from-the-paired-t-test-to-the-linear-mixed-model.html

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       065bc86e-25c6-41ba-84a6-0c634a3df240
-:mtime:    20220328214125
-:ctime:    20220328214124
-:END:
-#+title: Irreducible Markov chain
-#+filetags: :stub:
-
-

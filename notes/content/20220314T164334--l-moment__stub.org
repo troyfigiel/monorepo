@@ -1,0 +1,6 @@
+:ctime:    20220314164334
+:END:
+#+title: L-moment
+#+filetags: :stub:
+
+

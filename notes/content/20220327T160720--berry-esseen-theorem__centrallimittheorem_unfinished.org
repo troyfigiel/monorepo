@@ -1,0 +1,18 @@
+#+title:      Berry-Esseen theorem
+#+date:       [2022-03-27 Sun 16:07]
+#+filetags:   :centrallimittheorem:unfinished:
+#+identifier: 20220327T160720
+
+If we have \( \mathbb{E}(X^2) = \sigma^2 > 0 \) and \( \mathbb{E}(X^3) = \rho < \infty \), then the
+Berry-Esseen theorem states that we can bound the cumulative distribution \( F_n \) of \(
+\frac{1}{\sqrt{n} \sigma} \sum\limits_{i=1}^n X_i \)  by
+
+\begin{equation*}
+| F_n(x) - \Phi(x) | \leq \frac{C \rho}{\sigma^3 \sqrt{n}}
+\end{equation*}
+
+where \( X_1, ..., X_n \) are i.i.d. random variables. Moreover, it has been shown that
+
+\[
+\frac{\sqrt{10} + 3}{6 \sqrt{2 \pi}}\approx 0.40973 \leq C < 0.4748
+\]

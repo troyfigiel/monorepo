@@ -1,0 +1,7 @@
+:ctime:    20220324213901
+:END:
+#+title: Lagrangian mechanics
+#+filetags: :stub:
+
+Lagrangian mechanics is defined through the [[denote:20220412T201834][Euler-Lagrange equation]]. By applying a [[denote:20220323T085704][Legendre
+transformation]] to the [[denote:20220310T200705][Lagrangian]], we find the [[denote:20220324T213756][Hamiltonian]] and [[denote:20220324T213832][Hamiltonian mechanics]].

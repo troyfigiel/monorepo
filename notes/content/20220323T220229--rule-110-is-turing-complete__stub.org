@@ -1,0 +1,9 @@
+:ctime:    20220323220229
+:END:
+#+title: Rule 110 is Turing complete
+#+filetags: :stub:
+
+[[denote:20220323T221333][Turing complete system]]
+
+It was shown using A4 gliders, Ebar gliders, conversion of Ebar into C2, etc. These are all kinds
+of patterns that have been named and classified. These are called Turing tapes.

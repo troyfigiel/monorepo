@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       0052577c-a666-4e9a-ab60-3a4f8c992a96
-:mtime:    20220307145617
-:ctime:    20220307145617
-:END:
-#+title: Reproducibility crisis
-#+filetags: :stub:
-
-

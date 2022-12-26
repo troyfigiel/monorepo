@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       ebc3296e-9784-48f9-a3c7-512be9929b10
-:mtime:    20220415203226
-:ctime:    20220415203225
-:END:
-#+title: Cargo cult programming
-#+filetags: :stub:
-

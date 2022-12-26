@@ -1,0 +1,4 @@
+:ctime:    20220327135342
+:END:
+#+title: Continuous probability distribution
+#+filetags: :stub:

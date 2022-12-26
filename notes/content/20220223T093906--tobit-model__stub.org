@@ -1,0 +1,6 @@
+:ctime:    20220223093906
+:END:
+#+title: tobit model
+#+filetags: :stub:
+
+

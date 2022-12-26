@@ -1,0 +1,6 @@
+:ctime:    20220304142930
+:END:
+#+title: ?Variance of the binomial distribution
+#+filetags: :appendix:stub:
+
+

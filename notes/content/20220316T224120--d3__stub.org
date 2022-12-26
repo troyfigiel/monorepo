@@ -1,0 +1,6 @@
+:ctime:    20220316224120
+:END:
+#+title: D3
+#+filetags: :stub:
+
+D3 is a [[denote:20220220T095003][JavaScript]] package aimed at [[denote:20220316T220449][Visualization]].

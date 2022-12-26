@@ -1,0 +1,6 @@
+:ctime:    20220404213845
+:END:
+#+title: Second-order phase transition
+#+filetags: :stub:
+
+This kind of phase transition does not involve [[denote:20220404T221001][Latent heat]].

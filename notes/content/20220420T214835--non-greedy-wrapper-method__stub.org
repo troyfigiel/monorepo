@@ -1,0 +1,5 @@
+:ctime:    20220420214835
+:END:
+#+title: Non-greedy wrapper method
+#+filetags: :stub:
+

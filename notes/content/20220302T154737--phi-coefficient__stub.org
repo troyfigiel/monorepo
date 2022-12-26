@@ -1,0 +1,17 @@
+:mtime:    20220302204245
+:ctime:    20220302154737
+:END:
+#+title: Phi coefficient
+#+filetags: :stub:
+
+The phi coefficient is a [[denote:20220302T125352][Correlation coefficient]] used to measure association between two binary variables.
+
+# TODO: Is this true?
+When restricted to binary variables, [[denote:20220211T100443][Pearson correlation coefficient]], [[denote:20220302T154115][Kendall rank correlation
+coefficient]] and [[denote:20220302T154133][Spearman's rank correlation coefficient]] all agree with the phi coefficient.
+
+The phi coefficient can be calculated from a [[denote:20220302T203704][Confusion matrix]] as
+
+\[
+\phi = \frac{TP \times TN - FP \times FN}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}}
+\]

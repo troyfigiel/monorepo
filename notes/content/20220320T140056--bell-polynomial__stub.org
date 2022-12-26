@@ -1,0 +1,8 @@
+:ctime:    20220320140056
+:END:
+#+title: Bell polynomial
+#+filetags: :stub:
+
+- These polynomials are used in [[denote:20220320T135730][Faà di Bruno's formula]].
+- They appear in the [[denote:20220318T231524][Asymptotic series]] of [[denote:20220320T140134][Laplace-type integrals]].
+- These polynomials evaluated for special values give rise to the [[denote:20220223T215421][Bell numbers]] as well as the [[denote:20220320T140420][Stirling numbers]].

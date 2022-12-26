@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       37a9a6e0-897a-47e4-bfd3-c96d69a73839
-:mtime:    20220327162955
-:ctime:    20220327155024
-:END:
-#+title: Law of total variance
-#+filetags: :stub:

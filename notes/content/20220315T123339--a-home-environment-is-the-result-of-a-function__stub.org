@@ -1,0 +1,7 @@
+:ctime:    20220315123339
+:END:
+#+title: A home environment is the result of a function
+#+filetags: :stub:
+
+Similar to [[denote:20220315T122916][An operating system is the result of a function]]. The input are [[denote:20220315T123402][Dotfiles]] and a set of
+user-level packages.

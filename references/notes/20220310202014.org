@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       93c064f3-ae17-4cd7-9fb0-415b477ac69e
-:mtime:    20220310202136
-:ctime:    20220310202014
-:END:
-#+title: Duck test
-#+filetags: :stub:
-
-As an application of [[id:7b34185e-75dd-4f27-bd22-e058357053ac][Ockham's razor]]. It is applied as [[id:15de9d54-21e1-4352-864e-69c40cd904fd][Duck typing]], for example in [[id:346f7291-3184-4730-acd2-734c2155b4fb][Python]].

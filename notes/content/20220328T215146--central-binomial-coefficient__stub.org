@@ -1,0 +1,6 @@
+:ctime:    20220328215146
+:END:
+#+title: Central binomial coefficient
+#+filetags: :stub:
+
+

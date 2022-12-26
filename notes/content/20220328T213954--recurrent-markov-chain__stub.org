@@ -1,0 +1,6 @@
+:ctime:    20220328213954
+:END:
+#+title: Recurrent Markov chain
+#+filetags: :stub:
+
+

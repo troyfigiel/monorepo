@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       02f213c2-c8c2-4d4f-9551-b956100cb09e
-:mtime:    20220415005542
-:ctime:    20220415005541
-:END:
-#+title: Canonical transformation
-#+filetags: :stub:
-

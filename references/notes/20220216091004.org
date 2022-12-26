@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       045d80b4-addc-4912-8cd0-35002c10d925
-:mtime:    20220225223625
-:ctime:    20220216091004
-:END:
-#+title: generalized least squares
-

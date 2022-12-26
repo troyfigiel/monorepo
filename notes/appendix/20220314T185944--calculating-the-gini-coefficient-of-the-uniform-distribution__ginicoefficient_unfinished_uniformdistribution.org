@@ -1,0 +1,23 @@
+#+title:      Calculating the Gini coefficient of the uniform distribution
+#+date:       [2022-03-14 Mon 18:59]
+#+filetags:   :ginicoefficient:unfinished:uniformdistribution:
+#+identifier: 20220314T185944
+
+For the uniform distribution we have \( f(x) = \frac{1}{b-a} \) and \( a \leq x \leq b \).
+
+Therefore,
+
+\begin{equation*}
+\begin{align}
+G
+&= \frac{1}{2 \mathbb{E}[X]} \int\limits_0^{\infty} \int\limits_0^{\infty} |s-t| f(s) f(t) \, ds \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \int\limits_a^b |s-t| f(s) f(t) \, ds \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \int\limits_a^b \frac{|s-t|}{(b-a)^2} \, ds \, dt \\
+&= \frac{2}{(b+a)} \int\limits_a^b \int\limits_t^b \frac{s-t}{(b-a)^2} \, ds \, dt \\
+&= \frac{2}{(b+a)} \int\limits_a^b \int\limits_0^{b-t} \frac{u}{(b-a)^2} \, du \, dt \\
+&= \frac{1}{(b+a)} \int\limits_a^b \frac{(b-t)^2}{(b-a)^2} \, dt \\
+&= \frac{b-a}{3(b+a)}
+\end{align}
+\end{equation*}
+
+See also: [[denote:20220314T190137][?Mean of the uniform distribution]].

@@ -1,0 +1,20 @@
+:ctime:    20220323084835
+:END:
+#+title: Large deviations theory
+#+filetags: :stub:
+
+Whereas the [[denote:20220210T091048][Central limit theorem]] tells us that the probability distribution of the mean approaches
+the [[denote:20220210T091147][Normal distribution]] for large sample sizes, large deviations theory concerns itself with giving
+a better approximation for the tail behaviour. In other words, it allows us to more accurately
+describe \( \mathbb{P}(\bar{X} > x) \).
+
+The main result in large deviations theory, is the rather sharp bound
+
+# TODO: What is the name of this statement?
+\[
+\mathbb{P}(\bar{X} > x) = e^{-N I(x)}
+\]
+
+See also:  [[denote:20220323T101536][Stirling's approximation recovers the rate function of the Bernoulli distribution]]
+
+where \( N \) is the sample size and \( I(x) \) is known as the [[denote:20220323T085535][Rate function]].

@@ -1,0 +1,7 @@
+:ctime:    20220211100443
+:END:
+#+title: Pearson correlation coefficient
+
+* TODO
+Write up some notes about the Pearson correlation coefficient. Link to [[denote:20220211T100400][correlation coefficient is bounded by 1]].
+

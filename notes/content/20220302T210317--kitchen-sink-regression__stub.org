@@ -1,0 +1,7 @@
+:ctime:    20220302210317
+:END:
+#+title: Kitchen sink regression
+#+filetags: :stub:
+
+https://en.wikipedia.org/wiki/Kitchen_sink_regression
+

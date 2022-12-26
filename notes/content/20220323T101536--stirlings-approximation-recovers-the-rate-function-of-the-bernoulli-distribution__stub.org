@@ -1,0 +1,55 @@
+:ctime:    20220323101536
+:END:
+#+title: Stirling's approximation recovers the rate function of the Bernoulli distribution
+#+filetags: :stub:
+
+# TODO: This can form the basis for a connection between statistical physics and large deviations
+# theory. It shows precisely why the entropy appears.
+
+Let us set \( p = \frac{1}{2} \). Let \( S_n = \sum\limits_{j=1}^n X_j \) where \( X_j \sim
+\mathrm{Bernoulli}(1/2) \) are independent random variables.
+
+Now our aim is to calculate
+
+\[
+\mathbb{P}(S_n \geq x n) = \frac{1}{2^n} \sum\limits_{k \geq x n} \binom{n}{k}
+\]
+
+We can bound this probability by
+
+# TODO: Where does this inequality come from? Left hand side is assuming max is the only non-zero
+# element, but right hand side?
+
+\[
+\frac{1}{2^n} \max_{k \geq xn} \binom{n}{k} \leq \mathbb{P}(S_n \geq xn) \leq \frac{n+1}{2^n}
+\max_{k \geq xn} \binom{n}{k}
+\]
+
+The maximum is attained at \( l = \lceil xn \rceil \), the smallest integer larger than \( xn \).
+Let us also set \( n \xi = l \).
+
+Then using [[denote:20220218T213931][Stirling's approximation]] up to lowest order, we can rewrite
+
+\begin{equation*}
+\begin{align}
+\lim_{n \rightarrow \infty} \frac{1}{n} \log \max_{k \geq kn} \binom{n}{k}
+&= \lim_{n \rightarrow \infty} \frac{1}{n} \log \binom{n}{l} \\
+&= \lim_{n \rightarrow \infty} \frac{1}{n} \left( \log n! - \log (n-l)! - \log l! \right) \\
+&= \lim_{n \rightarrow \infty} \frac{1}{n} \left( n \log n - (n-l) \log (n-l) - l \log l \right) \\
+&= \lim_{n \rightarrow \infty} \left( - \xi \log \xi - (1-\xi) \log (1-\xi) \right) \\
+&= -x \log x - (1-x) \log (1-x) \\
+&= S(x)
+\end{align}
+\end{equation*}
+
+where \( S(x) \) is the [[denote:20220304T150924][?Entropy of the Bernoulli distribution]].
+
+Therefore,
+
+\[
+\lim_{n \rightarrow \infty} \frac{1}{n} \log \mathbb{P}(S_n \geq xn) = S(x) - \log 2
+\]
+
+and we identify \( I(x) = -S(x) + \log 2 \).
+
+Page 3: http://www.math.uni-leipzig.de/~konarovskyi/teaching/2019/LDP/pdf/LDP.pdf

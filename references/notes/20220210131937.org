@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       de880bd6-4759-41c6-84d5-9baeccd85fb1
-:mtime:    20220225223637
-:ctime:    20220210131937
-:END:
-#+title: Arithmetic mean
-

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       9a6525a6-f10a-4064-a3a8-b6bfad9c8093
-:mtime:    20220314130518
-:ctime:    20220314130517
-:END:
-#+title: Configuration as code
-#+filetags: :stub:
-
-

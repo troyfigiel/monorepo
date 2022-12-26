@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       c7c31f73-abef-4437-824b-f1f1f5c8793e
-:mtime:    20221109151536
-:ctime:    20221109151535
-:END:
-#+title: Feature branch
-#+filetags: :stub:

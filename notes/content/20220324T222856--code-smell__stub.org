@@ -1,0 +1,6 @@
+:ctime:    20220324222856
+:END:
+#+title: Code smell
+#+filetags: :stub:
+
+

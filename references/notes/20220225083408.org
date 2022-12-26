@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       883ce7c1-a74e-4993-9f9d-78674d99411b
-:mtime:    20220225223632
-:ctime:    20220225083408
-:END:
-#+title: Independent variable
-#+filetags: :stub:
-
-

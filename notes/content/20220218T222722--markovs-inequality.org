@@ -1,0 +1,13 @@
+:ctime:    20220218222722
+:END:
+#+title: Markov's inequality
+
+Markov's inequality states that for a non-negative random variable \( X \),
+
+\[
+\mathbb{P}(X \geq a) \leq \frac{\mathbb{E}[X]}{a}
+\]
+
+This inequality appears in a number of appendixs:
+- [[denote:20220218T222930][Markov's inequality can be used to prove Chebyshev's inequality]]
+- [[denote:20220218T223505][appendix of generic Chernoff bound from Markov's inequality]]

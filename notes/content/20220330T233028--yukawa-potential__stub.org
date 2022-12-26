@@ -1,0 +1,6 @@
+:ctime:    20220330233028
+:END:
+#+title: Yukawa potential
+#+filetags: :stub:
+
+

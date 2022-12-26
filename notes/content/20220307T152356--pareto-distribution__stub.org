@@ -1,0 +1,6 @@
+:ctime:    20220307152356
+:END:
+#+title: Pareto distribution
+#+filetags: :stub:
+
+

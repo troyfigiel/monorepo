@@ -1,0 +1,6 @@
+:ctime:    20220315113939
+:END:
+#+title: Puppet
+#+filetags: :stub:
+
+

@@ -1,0 +1,13 @@
+:ctime:    20220215212034
+:END:
+#+title: Exponential family
+
+The single-parameter exponential family is the family of distributions that can be written as
+
+\[
+f_X(\mathbf{x} | \mathbf{\theta}) = h(\mathbf{x}) \exp \left[ \sum\limits_{i = 1}^{s} \eta_{i}(\mathbf{\theta}) \cdot T_i(\mathbf{x}) - A(\mathbf{\theta}) \right]
+\]
+
+The vector \( \mathbf{T}(\mathbf{x}) \) is a [[denote:20220215T213507][sufficient statistic for the exponential family]].
+
+Many well-known distributions are examples of the exponential family: [[denote:20220309T181806][!Exponential family]].

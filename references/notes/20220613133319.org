@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       2d43d7d5-5a62-4978-90d7-a364c7c15ab8
-:END:
-#+title: Great Expectations
-#+filetags: :stub:
-

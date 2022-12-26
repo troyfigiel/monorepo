@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f3f133a7-8654-472d-81ac-59bb54a1959c
-:mtime:    20220324214325
-:ctime:    20220324214325
-:END:
-#+title: Third law of thermodynamics
-#+filetags: :stub:
-
-

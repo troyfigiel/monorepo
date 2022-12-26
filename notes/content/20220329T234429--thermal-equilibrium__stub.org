@@ -1,0 +1,6 @@
+:ctime:    20220329234429
+:END:
+#+title: Thermal equilibrium
+#+filetags: :stub:
+
+

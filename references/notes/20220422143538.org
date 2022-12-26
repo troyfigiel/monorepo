@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       b185f4e5-0696-41e7-9ad8-5ba46365d834
-:mtime:    20220422143539
-:ctime:    20220422143538
-:END:
-#+title: Sensible defaults
-#+filetags: :stub:
-

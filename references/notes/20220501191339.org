@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       9e0428ae-34a9-4dc7-9a25-dd16e1426589
-:END:
-#+title: Lexical scope
-#+filetags: :stub:
-

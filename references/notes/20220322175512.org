@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6315b5b4-fba3-41c1-9d98-3cab2075d4b7
-:mtime:    20220322175848
-:ctime:    20220322175512
-:END:
-#+title: JPEG compression
-#+filetags: :stub:
-
-An example of [[id:9339a1e6-7b28-4b07-b6a2-63eb5c88cb19][Lossy compression]].

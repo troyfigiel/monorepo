@@ -1,0 +1,7 @@
+:ctime:    20220415151008
+:END:
+#+title: Harmonic function
+#+filetags: :stub:
+
+# TODO: Finish what a harmonic function is
+A harmonic function is a function on

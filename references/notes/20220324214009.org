@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       25964f41-1d24-49cd-9a0a-d302913ffd85
-:mtime:    20220324214022
-:ctime:    20220324214009
-:END:
-#+title: Momentum
-#+filetags: :stub:
-
-[[id:c8fc9e20-7792-4f30-b233-c0e0357efb24][Noether's theorem]]

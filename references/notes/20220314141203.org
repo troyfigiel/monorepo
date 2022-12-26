@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       c3643789-a23f-4aea-9c8b-f69e75871b40
-:mtime:    20220314141204
-:ctime:    20220314141203
-:END:
-#+title: Lorenz curve
-#+filetags: :stub:
-
-

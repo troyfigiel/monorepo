@@ -1,0 +1,12 @@
+:ctime:    20220316220540
+:END:
+#+title: Altair
+#+filetags: :stub:
+
+As a [[denote:20220220T094641][Python]] wrapper around [[denote:20220316T220552][Vega-Lite]]. It is an example of [[denote:20220314T131430][Declarative programming]].
+
+Altair embeds all data in the front-end so it is not well-suited for larger datasets.
+
+Not only comes with [[denote:20220316T220530][Grammar of graphics]], but also has its own idea of [[denote:20220317T214156][Grammar of interactions]].
+
+https://www.youtube.com/watch?v=ms29ZPUKxbU

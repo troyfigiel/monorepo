@@ -1,0 +1,30 @@
+:ctime:    20220227200208
+:END:
+#+title: The survival function is the exponential of the cumulative hazard function
+#+filetags: :stub:
+
+[[denote:20220227T162750][Hazard function]], [[denote:20220227T200014][Cumulative hazard function]]
+# TODO: Express relation between survival function and hazard function
+
+\begin{equation*}
+\begin{align}
+\mathbb{P}(t \leq T < t + h | T \geq t) &= \frac{\mathbb{P}(t \leq T < t + h)}{\mathbb{P}(T \geq t)} \\
+&= \frac{\mathbb{P}(T \geq t) - \mathbb{P}(T \geq t + h)}{\mathbb{P}(T \ geq t)} \\
+&= \frac{S(t) - S(t+h)}{S(t)}
+\end{align}
+\end{equation*}
+
+Hence
+
+\begin{equation*}
+\begin{align}
+\lambda(t) &= -\frac{1}{S(t)} \lim_{h \rightarrow 0^+} \frac{S(t+h) - S(t)}{h} \\
+&= -\frac{\mathrm{d}}{\mathrm{d}t} \log S(t)
+\end{align}
+\end{equation*}
+
+Hence
+
+\[
+S(t) = e^{-\int_0^t \lambda(u) \mathrm{d}u}
+\]

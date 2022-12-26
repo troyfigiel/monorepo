@@ -1,0 +1,12 @@
+:ctime:    20220315094626
+:END:
+#+title: Text editor
+#+filetags: :stub:
+
+Examples:
+- [[denote:20220221T224738][Vim]]
+- [[denote:20220221T233800][Emacs]]
+
+Text editors like Vim and Emacs will always be around when we need to do administration from the
+command line and we need to quickly pop in and out of files, for example when a desktop environment
+broke or if we are changing configurations through [[denote:20220316T133518][SSH]].

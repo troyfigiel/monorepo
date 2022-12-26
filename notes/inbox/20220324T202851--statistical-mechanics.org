@@ -1,0 +1,831 @@
+#+title:      Statistical mechanics
+#+date:       [2022-03-24 Thu 20:28]
+#+filetags:
+#+identifier: 20220324T202851
+
+[[denote:20220210T210151][Statistical mechanics]]
+
+* MIT lectures
+** Intro
+
+** [[denote:20220324T213708][Phonons]] and [[denote:20220324T213721][Elasticity]]
+Solids if I go to zero temperature, would be perfect crystals. \( \vec{q} = l \vec{a} + m \vec{b} +
+n \vec{c} \), Small deformations can be described by \( \vec{q}_{\vec{r}} = \vec{q}_{\vec{r}}^{*} +
+\vec{u}(\vec{r}) \).
+
+Hamiltonian \( H = \sum\limits_r \frac{p_r^2}{2m} + U(q_1, q_2, ..., q_N) \). For small
+deformations, if we are close to the minimum, we can expand
+
+\[
+U(q_1, ..., q_N) = U_0 + \frac{1}{2} \sum\limits_{r, r^{\prime}} \frac{\partial^2 U}{\partial q_r
+\partial q_{r^{\prime}}}
+\]
+
+possibly needing some indices for the dimensions. Because of translational invariance, we can
+expand this deformation as \( K_{\alpha \beta} (r - r^{\prime}) \). We find the normal modes by
+Fourier transform.
+
+\[
+\frac{1}{2}\sum\limits_{r, r^{\prime}, \alpha, \beta} K_{\alpha \beta}(r - r^{\prime})
+u_{\alpha}(r) u_{\beta}(r^{\prime}) \rightarrow \frac{1}{2} \sum\limits_{k, \alpha, \beta}
+\tilde{K}_{\alpha \beta}(k)
+\tilde{u}_{\alpha}(k) \tilde{u}_{\beta}(k)^{*}
+\]
+
+Now we can diagonalize and find the eigenfrequencies.
+
+** Reference
+https://ocw.mit.edu/courses/physics/8-334-statistical-mechanics-ii-statistical-physics-of-fields-spring-2014/video-lectures/lecture-1-collective-behavior-from-particles-to-fields-part-1/
+
+* Stanford lectures
+** General notes
+Also [[denote:20220324T214223][Ideal gas law]]. This holds independent of whether the gas is relativistic, non-relativistic,
+etc. A general law.
+
+[[denote:20220210T210007][Entropy]] depends not only on the system but also on your state of knowledge.
+
+When we use the [[denote:20220215T230625][Principle of maximum entropy]], we should pick the [[denote:20220211T094412][Uniform distribution]]. If we
+have a discrete probability distribution, this then means that \( S = \log \left( \text{\# of
+microstates} \right) \). For a continuous [[denote:20220211T094412][Uniform distribution]], we would find \( \log \left(
+\text{Volume in phase space} \right) \).
+
+With complete ignorance, there is no [[denote:20220326T234832][Correlation]]. If we have a fixed system and the energy is fixed
+due to the [[denote:20220324T214306][First law of thermodynamics]], we do not have complete ignorance. Instead, the [[denote:20220215T230625][Principle
+of maximum entropy]] tells us to maximize the entropy given \( \sum\limits_i p_i \epsilon_i = E \).
+
+We need to use [[denote:20220326T235451][Lagrange multipliers]]. Without energy constraints we would need to maximize \(
+\tilde{S} = S + \lambda \left( \sum\limits_{i=1}^n p_i - 1 \right) \) if we have \( n \) states. This leads to
+
+\[
+\frac{\partial \tilde{S}}{\partial p_i} = - \log p_i - 1 + \lambda = 0
+\]
+
+In other words,
+
+\[
+\log p_i = \lambda - 1
+\]
+
+and so \( p_1 = p_2 = ... = p_n = \frac{1}{n} \).
+
+Now if also the energy is fixed, we have to maximize
+
+\[
+\tilde{S} = S + \lambda \left( \sum\limits_{i=1}^n p_i - 1 \right) - \beta \left(
+\sum\limits_{i=1}^n p_i \epsilon_i - E \right)
+\]
+
+This leads to
+
+\[
+\log p_i = -1 + \lambda - \beta \epsilon_i
+\]
+
+Hence,
+
+\[
+p_i = e^{\lambda - 1} e^{-\beta \epsilon_i}
+\]
+
+So the probability of a state is proportional to its energy. Solving for the constraints:
+
+\[
+\sum\limits_{i=1}^n p_i = e^{\lambda - 1} \sum\limits_{i=1}^n e^{-\beta \epsilon_i} = e^{\lambda -
+1} Z(\beta) = 1
+\]
+
+where \( Z(\beta) = \sum\limits_{i=1}^n e^{-\beta \epsilon_i} \).
+
+Hence
+
+\[
+p_i = \frac{e^{-\beta \epsilon_i}}{Z(\beta)}
+\]
+
+Moreover, \( \sum\limits_{i=1}^n p_i \epsilon_i = - \frac{\partial \log Z}{\partial \beta} = E \)
+
+Keeping different variables fixed, gives rise to different [[denote:20220218T233605][Partition functions]] and ensembles such
+as
+- [[denote:20220326T111204][Microcanonical ensemble]]
+- [[denote:20220326T111110][Canonical ensemble]]
+- [[denote:20220326T111212][Grand canonical ensemble]]
+- [[denote:20220327T003302][Isothermal-isobaric ensemble]]
+
+This is the [[denote:20220327T003018][Boltzmann distribution]]. When applied to the kinetics of gases, we derive the
+[[denote:20220327T011719][Maxwell-Boltzmann distribution]].
+
+** Entropy for coin tosses
+Entropy is additive if the systems consists of [[denote:20220326T230104][Distinguishable particles]]. If we are dealing with
+[[denote:20220326T233353][Indistinguishable particles]] we would run into the Bose-Einstein or Fermi distribution.
+
+With minus sign, it is called entropy, without minus sign it is called information.
+
+** Law of thermodynamics
+- [[denote:20220326T000600][Zeroth law of thermodynamics]]
+- [[denote:20220324T214306][First law of thermodynamics]]
+
+** Energy of molecule
+\( E = \frac{3}{2} k_B T \). This can be shown from the [[denote:20220327T003018][Boltzmann distribution]]. We do not need the
+the specifics of the [[denote:20220327T011719][Maxwell-Boltzmann distribution]].
+
+** Deriving the ideal gas law
+Either for a classical or a relativistic gas where \( p = \gamma m v \)m we get the [[denote:20220324T214223][Ideal gas law]].
+Again shows that the macroscopic behaviour is independent of the precise microscopic relations.
+This would work for any [[denote:20220327T012616][Dispersion relation]]? Indeed, we only need the result
+
+\[
+E = \frac{D}{2} k_B T
+\]
+
+with \( D \) the degrees of freedom of a particle. This is the idea of the [[denote:20220327T193222][Equipartition theorem]].
+Heat is shared among each degree of freedom equally.
+
+Connecting this result to \( PV \) requires the [[denote:20220327T012853][Kinetic theory of gases]].
+
+https://physics.stackexchange.com/questions/665525/recovering-maxwell-boltzmann-distribution-from-ideal-gas-law
+
+** Definitions
+The definition of \( T \) is
+
+\[
+T = \frac{\partial E}{\partial S}
+\]
+
+For "normal" thermodynamical systems the energy is a monotonically increasing function of the
+entropy. This means that \( T > 0 \).
+
+With the laws of thermodynamics, this allows us to prove that heat flows from a high temperature
+system to a low temperature system. How exactly?
+
+\begin{equation*}
+\begin{align}
+dE_A + dE_B &= 0 \qquad \text{first law} \\
+T_A dS_A + T_B dS_B &= 0 \\
+dS_A + dS_B &> 0 \qquad \text{second law} \\
+(T_B - T_A) dS_A &> 0
+\end{align}
+\end{equation*}
+
+Now if \( T_B > T_A \), we have \( dS_A > 0 \) and so \( dE_A = T_A dS_A > 0 \). Hence heat energy flows
+from high temperature to low temperature.
+
+The zeroth law can be proved from the first and second law of thermodynamics?
+
+Higher entropy is "broader" distribution?
+
+** Ground state of a system
+The ground state of a system is the state of lowest energy of a system.
+
+** Number of arrangements
+
+If we divide \( N \) over \( k \) systems and distribute according to \( n_1, ..., n_k \), the
+total number of arrangements is as follows:
+
+\[
+\frac{N!}{n_1! ... n_k!}
+\]
+
+The [[denote:20220215T230625][Principle of maximum entropy]] comes down to finding the distributions \( n_1, ..., n_k \)
+maximizing the number of arrangements. This is due to [[denote:20220218T213931][Stirling's approximation]] which allows us to
+express
+
+\begin{equation*}
+\begin{align}
+\log \frac{N!}{n_1!...n_k!}
+&= N \log N - \sum\limits_{i=1}^k n_i \log n_i \\
+&= N \log N - N \sum\limits_{i=1}^k \frac{n_i}{N} \log \frac{n_i}{N} - \sum\limits_{i=1}^k n_i \log N \\
+&= - N \sum\limits_{i=1}^k p_i \log p_i \\
+&= - N \sum\limits_{i=1}^k S_i
+\end{align}
+\end{equation*}
+
+where \( p_i = \frac{n_i}{N} \) and \( S_i \) is the entropy of subsystem \( i \). Why does this
+happen? Maximizing number of arrangements is the same as maximizing entropy?
+
+** Reference
+https://www.youtube.com/watch?v=D1RzvXDXyqA
+
+** [[denote:20220326T235451][Lagrange multiplier]]
+Maximize entropy with respect to total electric charge, energy, something else having some value, etc.
+
+To move from [[denote:20220326T111204][Microcanonical ensemble]] to the [[denote:20220326T111110][Canonical ensemble]], we loosen the requirement that the
+energy is fixed. Instead, we require that the average energy is fixed to some value determined by a
+heat bath. (This is an equilibrium requirement.) Find an example that explains the difference
+between these two ensembles clearly. One case where the energy is exactly fixed and one where the
+average is fixed. Ideal gas?
+
+There are two ways to determine the [[denote:20220327T003018][Boltzmann distribution]]: Constrained maximization of the entropy
+or by deriving the [[denote:20220326T111110][Canonical ensemble]] from the [[denote:20220326T111204][Microcanonical ensemble]] by counting microstates and
+using the fundamental postulate of an isolated system: Each possible state is equally likely.
+
+Also the microcanonical distribution is an example of the maximization of entropy.
+
+The microcanonical partition function relates most closely to the partition function defined in
+mathematics, because the [[denote:20220403T191652][Microcanonical partition function]] \( \Omega \) is simply the count of accessible states
+to the system. And the entropy is simply
+
+\[
+S = - \sum\limits_{\text{microstates}} \frac{1}{\Omega} \log \frac{1}{\Omega} = \log \Omega
+\]
+
+This looks very much like the definition of the [[denote:20220406T210435][Perplexity]] of a probability distribution. How
+exactly is this related?
+
+This makes the relationship to the mathematical partition function (used in number theory) clearer.
+Is there a nice example for this?
+
+Yes, see https://arxiv.org/pdf/1603.01049.pdf
+
+** Unphysical properties of the microcanonical ensemble
+- Sometimes we can have negative temperatures. What else?
+
+** [[denote:20220218T233605][Partition function]]
+If we try to maximize
+
+\[
+S - \alpha \left( \sum\limits_i p_i - 1 \right) - \beta \left( \sum\limits_i p_i E_i - E \right)
+\]
+
+we get equations for \( p_i \) from which we derive an equation for \( S \).
+
+I need to figure out how the [[denote:20220323T085704][Legendre transformation]] works exactly.
+
+Interesting relations can be found in here: https://arxiv.org/pdf/0908.3562.pdf.
+
+Also note that the relation from statistical mechanics to a wide variety of other problems, is
+accompanied by the [[denote:20220402T115047][Gibbs measure]].
+
+And for a realistic model of atoms, consider the [[denote:20220402T115544][Lennard-Jones potential]].
+
+** Interesting facts
+- [[denote:20220402T120452][Virial theorem]]
+- [[denote:20220402T183105][Ergodic hypothesis]]
+- [[denote:20220402T191829][Phase rule]]
+
+** Examples
+- Box of ideal gas
+- Box of ideal gas with gravitational potential
+- Box of relativistic gas
+- Bose-einstein condensate, quantum ideal gas
+- Here the [[denote:20220402T120452][Virial theorem]] and [[denote:20220327T193222][Equipartition theorem]] kick in.
+- Fluctuations of the energy: double derivative of logarithm of energy
+
+** Generality of thermodynamics
+We want a set of rules that can take into account for example collisions between molecules. We want
+a set of rules that is more general than the simple ideal gas. The rules of thermodynamics are more general.
+
+** [[denote:20220402T191522][Equation of state]]
+
+\[
+S = \beta E + \log Z
+\]
+
+so
+
+\[
+E - T S = - T \log Z
+\]
+
+We call \( F = E - T S \) the [[denote:20220402T213320][Helmholtz free energy]]. This equation relates the microscopic world
+(partition function) to the macroscopic world of an assembly. It is the [[denote:20220323T085704][Legendre transformation]] of
+the energy, switching dependence on \( S \) for dependence on \( T \).
+
+Similarly, we have
+
+The [[denote:20220402T214438][Enthalpy]]
+\[
+H = E + PV
+\]
+
+The [[denote:20220402T214449][Gibbs free energy]]
+\[
+G = E - TS + PV
+\]
+
+This is not the Helmholtz free energy:
+
+\[
+\mathcal{L} = S + \alpha \left( \sum\limits_i p_i - 1 \right) + \beta \left( \sum\limits_i p_i E_i - E \right)
+\]
+
+Things are given names when they occur over and over again. Thermodynamics: We have a general set
+of rules, valid generally, where we can just plug and churn the calculations. We don't need to
+think about the specifics of a system and whether certain assumptions hold. All we need is the
+partition function.
+
+** Playing with Legendre transforms
+
+\[
+\frac{\partial E}{\partial V} \Big|_S = \frac{\partial E}{\partial V} \Big|_T - \frac{\partial
+E}{\partial S} \Big|_V \frac{\partial S}{\partial V} \Big|_T
+\]
+
+Now \( E(S, V, N) \) satisfies
+
+\[
+\frac{\partial E}{\partial S} = T
+\]
+
+And
+
+\[
+\frac{\partial E}{\partial V} = -p
+\]
+
+Adiabatically: Slowly, not heat coming into the system. The entropy stays the same.
+
+So we find
+
+\[
+p = - \frac{\partial (E - TS)}{\partial V} \Big|_T = - \frac{\partial F}{\partial V} \Big|_T
+\]
+
+Is this not true for Legendre transformations in general though? Just exchange the variables.
+
+This allows us to find the [[denote:20220324T214223][Ideal gas law]] again. We don't need the kinetic theory necessarily?
+
+\[
+p = \rho k_B T
+\]
+
+where \( \rho \) is the particle density.
+
+** Fluctuations
+It can be shown fluctuations in the energy are proportional to the heat capacity and the
+temperature. Does this not mean somewhere in here the CLT is hidden?
+
+Interesting relations to information theory: https://www.math-berlin.de/images/stories/berlin.pdf
+
+** [[denote:20220402T234204][Virial expansion]]
+We may calculate the next orders of the ideal gas law by calculating
+
+\[
+p = - \frac{\partial F}{\partial V} \Big|_T
+\]
+
+for a partition function that has some potential interaction between particles. This leads to the [[denote:20220402T234204][Virial expansion]].
+
+** Exact differentials
+- [[denote:20220403T000920][Poincaré lemma]]
+- Heat and work done on a system are not exact differentials: Only the sum is energy which is
+  exact.
+
+\begin{equation*}
+\begin{align}
+dW &= -p \, dV \\
+dQ &= T \, dS \\
+dE &= dW + dQ
+\end{align}
+\end{equation*}
+
+** Speed of sound
+
+\[
+c^2 = \frac{1}{m} \frac{\partial p}{\partial \rho}
+\]
+
+So for ideal gas, \( c^2 = \frac{k_B T}{m} \). Why do we even have a specific heat though? Is the
+energy not a constant? No, with the [[denote:20220326T235451][Lagrange multiplier]] method, we are fixing the average energy of
+the system, not its precise energy.
+
+Moreover, we can find the standard deviation of the energy in terms of the specific heat and
+temperature. Due to the [[denote:20220210T091048][Central limit theorem]], we know that the energy must fluctuate like a [[denote:20220210T091147][Normal
+distribution]]. This could also hold in the case when particles are interacting, i.e. breaking the
+assumptions of the [[denote:20220210T091048][Central limit theorem]]. Do we need a more general statement?
+
+** States in microcanonical ensemble of combined system
+We should consider the example of a single system, work out the microcanonical ensemble for that
+and then derive the canonical ensemble for any subsystem by viewing the rest of the system as a
+heat bath.
+
+Let us divide a system in two subsystems \( (A_1, A_2) \). We need to assume the subsystem can be
+considered as non-interacting with the environment, i.e. \( H = H_1 + H_2 \).
+
+Now the number of microstates satisfies
+
+\begin{equation*}
+\begin{align}
+\log \Omega_2(E_2)
+&= \log \Omega_2(E - H_1) \\
+&= \log \Omega_2(E) - \frac{\partial \log \Omega_2}{\partial E_2} \Big|_{E_2=E} H_1 + ...
+\end{align}
+\end{equation*}
+
+and we find
+
+\[
+\Omega_2 (E_2) = \Omega_2(E) \exp \left[ - \frac{\partial \log \Omega_2(E)}{\partial E} H_1
+\right]
+\]
+
+By definition
+
+\[
+\frac{\partial S}{\partial E} = \beta = \frac{1}{k_B T}
+\]
+
+hence,
+
+\[
+\Omega_2 (E_2) = \Omega_2(E) e^{- \beta H_1}
+\]
+
+and the [[denote:20220403T174009][Boltzmann factor]] rolls out. However, some physical assumptions underlie this result and the
+canonical ensemble description is not applicable for all systems!
+
+For example, Ehrenfest urn model with a potential difference. N particles in total, m in up, N - m
+in down. Every timestep two particles switch energy levels.
+
+Subsystem is a single particle. It has two energy states: down and up. In state up we have energy
+\( \epsilon \) more than in down. Then the Boltzmann factor tells us we should expect the probability to be in state
+up to be proportional to \( e^{-\beta \epsilon} \).
+
+The total system has
+
+\[
+\Omega(m) = \frac{N!}{(N-m)!m!}
+\]
+
+microstates.
+
+If we consider a single particle as a subsystem, we have two possibilities:
+
+The particle is in up and the remaining system has a total of
+
+\[
+\Omega_2(m-1) = \frac{(N-1)!}{(N-m)!(m-1)!}
+\]
+
+states, or the particle is in down, in which case the remaining system has
+
+\[
+\Omega_2(m) = \frac{(N-1)!}{(N-m-1)!m!}
+\]
+
+states.
+
+Now taking logarithms, we have
+
+\[
+\log \Omega_2(m-1) = (m-1) \log \frac{m-1}{N-1} + (N-m) \log \frac{N-m}{N-1}
+\]
+
+and
+
+\[
+\log \Omega_2(m) = m \log \frac{m}{N-1} + (N-m-1) \log \frac{N-m-1}{N-1}
+\]
+
+For \( m \gg 1 \) we can approximate
+
+\[
+\log \Omega_2(m-1) = \log \Omega_2(m) - \frac{\partial \log \Omega_2(m)}{\partial m}
+\]
+
+and we find
+
+\[
+\frac{\partial \log \Omega_2(m)}{\partial m} = \log m - \log (N - m - 1) + \frac{N - 1}{N - m - 1}
+\]
+
+This system will get to negative temperatures at some point.
+
+** Harmonic oscillator
+Calculate partition function and [[denote:20220327T193222][Equipartition theorem]]. How does this relate to the [[denote:20220402T120452][Virial theorem]] exactly?
+
+Energy is independent of spring constant, even if the spring constant is essentially infinite.
+But this was a problem for diatomic molecules, because
+that energy was not there. It worked well with the ideal gas law.
+
+This was really easy to see experimentally.
+
+The solution comes in via [[denote:20220314T211526][Quantum mechanics]]. Quantum systems become classical when the temperature
+becomes high.
+
+For harmonic oscillator, cross-over happens at \( \beta \hbar \omega \approx 1 \). So it is only at
+a certain temperature that a degree of freedom kicks in for the [[denote:20220327T193222][Equipartition theorem]].
+
+This has a lot to do with [[denote:20220403T005454][Black-body radiation]].
+
+** Second law of thermodynamics
+Irreversibility of properties of complicated systems and reversibility of Newton's laws of physics.
+
+Entropy is proportional to the volume of phase space. \( S = - \log V \). [[denote:20220325T231553][Liouville's theorem]] says
+that the volume stays the same, so the entropy stays the same.
+
+This is true for micro entropy (?). But another idea has to do with [[denote:20220403T010117][Coarse-graining]]. There is a
+maximum resolution we can see phase space at.
+
+Entropy is not just a property of the system, but also a property of what the observer knows about
+the system. If you had perfect knowledge, you could in principle extract all the kinetic energy for example.
+
+This is closely related to [[denote:20220306T193749][Chaos theory]], because tiny differences in phase space will often end up
+creating a huge difference in outcomes (exponentially fast departing trajectories [[denote:20220403T012214][Lyapunov
+exponent]]). This mean predictability effectively breaks down, because you need to specify better and
+better what your initial conditions as well as laws are. The weather is chaotic, the harmonic
+oscillator is not. Another example: Single pendulum is non-chaotic, but the double pendulum is
+chaotic.
+
+Now also the [[denote:20220403T011124][Poincaré recurrence theorem]] tells us that eventually the system will return to a state
+arbitrarily close to the starting state. Closely related to the time this will take, being the
+[[denote:20220403T011207][Poincaré recurrence time]]. Also closely related to the [[denote:20220328T204017][Ehrenfest model]].
+
+** [[denote:20220403T011124][Poincaré recurrence theorem]]
+
+\[
+\frac{v^N}{V^N}
+\]
+
+if \( v \) is a subpart of phase space with whole volume \( V \). So all particles on one side of
+the room is \( 2^{10^23} \), extremely unlikely.
+
+Entropy of subsystems can decrease, but the system as a whole still increases in entropy. For
+example, water flowing through a pipe might created vortices, eddies, with interesting structures.
+
+** Magnetization
+
+*** Simple one-dimensional chain
+One-dimensional chain of spins up or down in a magnetic field pointing in a single direction (say
+up).
+
+\[
+E = (N - 2m) \mu H
+\]
+
+if \( m \) particles are pointing in the same direction as the magnetic field and \( N - m \) opposite.
+
+So
+
+\[
+Z = \sum\limits_{m=0}^N \frac{N!}{m! (N-m)!} e^{-\beta \mu H m} e^{\beta \mu H (N - m)} = \left(  2
+\cosh(\beta \mu H) \right)^N
+\]
+
+What is the average magnetization? \( M = \frac{N - 2m}{N} \), so the fraction of spins pointing in one
+direction.
+
+\[
+E = N M \mu H
+\]
+
+So
+
+\[
+E = - \frac{\partial \log Z}{\partial \beta} = -N \mu H \tanh (\beta \mu H)
+\]
+
+so
+
+\[
+M = - \tanh(\beta \mu H)
+\]
+
+What is the size of fluctuations? Differentiate with respect to \( \beta \) again.
+
+This system does not have a phase transition.
+
+Also note that we could have just calculated the partition function of a single particle and seen
+that \( Z = Z_1^N \). This looks like an almost trivial [[denote:20220322T105321][Renormalization]] problem.
+
+If a system can be in a finite set of states, the [[denote:20220403T122027][Multinomial theorem]] is what makes sure that
+either way we calculate the result, we get the same result: Either calculate the partition function
+for a single particle and use the extensiveness of the energy, or immediately calculate the
+partition function for all particles at once using the [[denote:20220403T122027][Multinomial theorem]].
+
+When subsystems are independent, the partition function splits in this way.
+
+\[
+S = \sum\limits_{x, y} p(x) p(y) \log p(x) p(y) = \sum\limits_x p(x) \log p(x) +
+\sum\limits_y p(y) \log p(y) = S_X + S_Y
+\]
+
+This is the idea of [[denote:20220331T000152][Mutual information]] and the fact that it vanishes if the probabilities are
+independent. In that case
+
+\[
+S(X, Y) = S(X) + S(Y) - I(X; Y)
+\]
+
+where \( I \) is the mutual information. So in particular, since \( p_i \sim e^{-\beta E_i} \),
+this means that if the energy is the sum of energies of subsystems, the entropies of the subsystems
+can be added. Moreover, all quantities derived from the partition function and the entropy will
+also split.
+
+This can also be seen from the number of microstates: If \( \Omega_N = \Omega_1^N \) as happens
+when the states are independent of each other, the entropy defined as
+
+\[
+S = \log \Omega_N = N \log \Omega_1
+\]
+
+is an [[denote:20220403T120226][Extensive property]].
+
+*** 1D Ising model
+
+\[
+E = - \sum\limits_{i, j=1}^N J_{ij} \sigma_i \sigma_j
+\]
+
+where \( J_{ij} \) is the [[denote:20220329T211310][Adjacency matrix]]. There is a symmetry \( \sigma_i \rightarrow - \sigma_i
+\) for all \( \sigma_i \). This is a \( \mathbb{Z}_2 \)-symmetry.
+
+We also have some correlation between spins at very far separatino, because the correlation is
+propagated through the pair-wise interaction terms.
+
+So what is \( \mathbb{E}[\sigma_i \sigma_{i+n}] \).
+
+Solving the 1D Ising model:
+- [[denote:20220403T141418][Transfer-matrix method]]
+- Simple change of coordinates \( \mu_i = \sigma_i \sigma_{i+1} \) and noting that \( \mu_i \) are
+  not correlated with each other
+- [[denote:20220329T211310][Adjacency matrix]] and [[denote:20220322T105321][Renormalization]]. We need to sum over the even spins, because this is an
+  example of a [[denote:20220403T142323][Bipartite graph]].
+
+Using \( \mu_i = \sigma_i \sigma_{i+1} \), the energy decomposes and we find
+
+\[
+\mathbb{E}[\sigma_i \sigma_{i+n}] = \mathbb{E}[\sigma_i \sigma_{i+1} \sigma_{i+1} ... \sigma_{i+n}]
+= \mathbb{E}[\mu_i] ... \mathbb{E}[\mu_{i+n}] = \mathbb{E}[\mu_i]^n
+\]
+
+We already knew \( \mathbb{E}[\mu_i] = \tanh(\beta \mu J) \).
+
+It is like a time series with [[denote:20220210T094457][Bernoulli distribution]]? Over time errors might come in and they propagate.
+
+If we have a 2D Ising model, we have 4 neighbours and we can do some form of error correction.
+
+** [[denote:20220403T144101][Mean field theory]] for Ising model in d dimensions
+
+\begin{equation*}
+\begin{align}
+E
+&= -J \sigma_i \sum\limits_{\text{neighbours}} \sigma_j \\
+&= -2 d J \bar{\sigma} \sigma_i + O(\text{fluctuations in }\sigma)
+\end{align}
+\end{equation*}
+
+Now we can get the average spin as
+
+\[
+\bar{\sigma} = \tanh(2 \beta d J \bar{\sigma})
+\]
+
+because no single spin can be special, translation invariance. We get a self-consistency equation.
+
+Once \( 2 \beta d J < 1 \) we get additional solutions (3 in total) besides the obvious solution \(
+\bar{\sigma} = 0 \). The solution at 0 is unstable and adding a tiny magnetic field leads to [[denote:20220403T151304][Spontaneous symmetry breaking]].
+
+** [[denote:20220324T120224][Percolation theory]]? What does this have to say about the 2D Ising model for example?
+https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-51/issue-3/Percolation-and-phase-transitions-in-the-Ising-model/cmp/1103900393.pdf
+
+** Examples of statistical systems that could come up in probability theory
+- Coin flips and constrained coin flips (average value equal to something, we get the geometric distribution)
+- [[denote:20220403T153320][Bernoulli-Laplace model]]
+- [[denote:20220328T204017][Ehrenfest model]], especially if we have more than two urns?
+https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.246.9129&rep=rep1&type=pdf
+
+How about the following:
+- We have in total n particles in a high energy state and N - n in a low energy state. Every time
+  step in the Markov chain two particles from the low and high energy state are exchanged. What is
+  the fraction of time that a given molecule spends in the low energy state vs the high energy
+  state?
+
+  We should recover \( p_i \sim e^{-\beta E_i} \) in the limit of a large heat bath.
+
+** [[denote:20220403T160043][Chemical potential]]
+
+We assume the number of particles is not fixed. Then we get the [[denote:20220326T111212][Grand canonical ensemble]]. So we
+need to maximize now not only the entropy, but with the constraints that both the environment +
+system has constant energy and constant number of particles.
+
+** Systems with negative temperature?
+When does the monotonicity of energy as a function of entropy break down?
+
+Example: Noninteracting two-level particles. Spin up and spin down, \( \sigma_i = \pm 1 \).
+
+\[
+E = \epsilon \sum\limits_{i=1}^N \sigma_i = \epsilon j
+\]
+
+Total number of microstates is
+
+\[
+\Omega(E) = \binom{N}{\frac{N+j}{2}}
+\]
+
+Now
+
+\[
+\beta = \frac{1}{2\epsilon} \left[ \log \Omega(E + \epsilon) - \log \Omega(E - \epsilon) \right] =
+\frac{1}{2\epsilon} \log \frac{N - j + 1}{N + j + 1}
+\]
+
+So
+
+\[
+T = \frac{2\epsilon}{k_B} \left[ \log \frac{(N+1)\epsilon - E}{(N+1)\epsilon + E} \right]^{-1}
+\]
+
+In this case temperature is the emergent phenomenon and energy is fixed. This is the case for the [[denote:20220326T111204][Microcanonical ensemble]].
+
+However, if we consider a [[denote:20220326T111110][Canonical ensemble]], we find
+
+\[
+Z(\beta) = Z_1(\beta)^N = 2^N \cosh (\beta \epsilon)^N
+\]
+
+This is the same as the magnetization example and the 1D Ising model.
+
+Now
+
+\[
+S = \log Z - \beta \frac{\partial \log Z}{\partial \beta} = N S_1
+\]
+
+Now
+
+\[
+S_1 = \log \cosh(\beta \epsilon) - \beta \epsilon \tanh(\beta \epsilon)
+\]
+
+There is no negative temperature here, right?
+
+The canonical ensemble applies only when
+
+\[
+\frac{\partial \log \Omega(E)}{\partial E} > 0
+\]
+
+(or minus sign?)
+
+** Central limit theorem
+- Only applicable when \( \beta \) is finite and not going to infinity
+- In general, how are maximal entropic distributions with Lagrange multipliers related to moment
+  generating functions?
+- The two-state system gives rise to energy as a [[denote:20220219T003626][Logistic function]]. The reason for this is that the
+  probability we will find the particle in the high-energy state, is proportional to \( \beta \Delta E
+  \) where \( \Delta E \) is the energy difference between the levels. Work out this example.
+
+* More references:
+https://www.youtube.com/watch?v=Xh8qDDGbEAs&list=PLcDlpDIJWDzgDpOZdjLcw1c7BdVkH_CkP
+
+* [[denote:20220210T195925][Markov chain]]
+If we have a [[denote:20220404T201404][Reversible Markov chain]] and the probabilities \( P_{ij} = P_{ji}\) for the [[denote:20220323T225426][Transition
+probability matrix]], then the steady state is given by \( \pi_i = 1 \) for all \( i \). This is the
+idea behind the [[denote:20220327T135417][Principle of indifference]] and more generally [[denote:20220215T230625][Principle of maximum entropy]].
+
+This is the idea behind renormalization, looking over longer and longer time scales. We will move
+to the fixed point, being the Markov chain where each transition is equally probably.
+
+Philosophically speaking, all transitions are reversible at the microstate level, but at the
+macrostate level it is very unlikely this happens. For example, the [[denote:20220328T204017][Ehrenfest model]] shows that the
+average number of particles in one box exponentially decreases to half of the particles whereas the
+Markov chain itself is completely reversible. The magnetization can be measured and is seemingly
+irreversible, whereas we know that the microstates are all reversible.
+
+So even though each microstate is equally accessible, the 0 value is much more likely. We can make
+this example clearly into an example for a magnetic chain of non-interacting particles in a
+magnetic field. Then \( \frac{1}{2} \rightarrow p \) more generally and the average magnetization
+is nothing but the sum, which we can bound by the [[denote:20220210T091048][Central limit theorem]].
+* Free entropy
+How are the free entropies related to the free energies?
+
+* Legendre transform
+I should learn a bit more about the Legendre transform. It is still quite mysterious to me.
+
+* Pressure
+A key result is the equation
+
+\[
+p = -\frac{\partial F}{\partial V}
+\]
+
+relating the pressure to the Helmholtz free energy. This allows us to easily derive the ideal gas
+law. Indeed, if there is no position dependence,
+
+\[
+Z \sim V^N
+\]
+
+so \( F = - \frac{1}{\beta} \log Z \)
+
+leads to
+
+\[
+p =  \frac{N}{V \beta}
+\]
+
+which is the ideal gas law.
+
+Where there is a dependence on the position in the box, this leads to the [[denote:20220402T234204][Virial expansion]].
+
+The equipartition theorem only holds for ergodic systems in thermal equilibrium.
+
+* General notes
+How to connect these exactly?
+- [[denote:20220325T231553][Liouville's theorem]]
+- [[denote:20220326T110656][Fluctuation theorem]]
+- [[denote:20220326T111057][Statistical ensemble]]
+
+What about [[denote:20220314T211526][Quantum mechanics]]? How to describe the quantum mechanical ensemble, quantum partition
+function, etc.?

@@ -1,0 +1,5 @@
+:ctime:    20220415005712
+:END:
+#+title: Hamilton's principal function
+#+filetags: :stub:
+

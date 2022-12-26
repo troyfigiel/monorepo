@@ -1,0 +1,6 @@
+:ctime:    20220404201404
+:END:
+#+title: Reversible Markov chain
+#+filetags: :stub:
+
+[[denote:20220404T201738][Kolmogorov's criterion]]

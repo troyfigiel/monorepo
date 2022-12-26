@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       bfad7134-ea06-4636-8782-b42695648dc0
-:mtime:    20220301175827
-:ctime:    20220215230236
-:END:
-#+title: Student's t-test
-
-[[id:baf50824-361e-4687-9d64-27bb3f2509ff][The t-test is a special case of linear regression]].
-[[id:fc80fa05-0e87-4ed1-bcf2-e636c59b0f10][The t-test is a special case of ANOVA]].

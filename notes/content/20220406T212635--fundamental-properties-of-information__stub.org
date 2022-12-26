@@ -1,0 +1,47 @@
+:ctime:    20220406212635
+:END:
+#+title: Fundamental properties of information
+#+filetags: :stub:
+
+[[denote:20220328T201613][Information content]] \( I(p) \) should satisfy the following properties:
+
+1. \( I(p) \) is monotonically decreasing in \( p \). The higher the probability of an event
+   occurring, the lower its information content.
+2. \( I(p) \geq 0 \). Information content is a non-negative quantity.
+3. \( I(1) = 0 \). Events that always occur should carry no information content.
+4. \( I(p_1 p_2) = I(p_1) + I(p_2) \). Information learned from independent events should be additive.
+
+This leads to the unique value
+
+\[
+I(p) = - \log(p)
+\]
+
+# TODO: This is easy to prove with differential equations, but we do not require differentiability.
+
+Indeed, let \( f(p_1, p_2) = I(p_1, p_2) \). Then
+
+\[
+\frac{\partial^2 f}{\partial p_1 \partial p_2} = I^{\prime} (p_1 p_2) + p_1 p_2 I^{\prime
+\prime}(p_1 p_2)
+\]
+
+On the other hand, \( I(p_1 p_2) = I(p_1) + I(p_2) \) so that
+
+\[
+\frac{\partial^2 f}{\partial p_1 \partial p_2} = 0
+\]
+
+Setting \( u = p_1 p_2 \), we obtain the differential equation
+
+\[
+I^{\prime}(u) + u I^{\prime \prime}(u) = 0
+\]
+
+which using \( I(1) = 0 \) is uniquely solved by
+
+\[
+I(u) = -k \log u
+\]
+
+for \( k > 0 \). The value of \( k \) determines the base of the logarithm.

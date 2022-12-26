@@ -1,0 +1,12 @@
+:ctime:    20220402115047
+:END:
+#+title: Gibbs measure
+#+filetags: :stub:
+
+The Gibbs measure is a [[denote:20220402T115115][Probability measure]]. It is a generalization of the [[denote:20220326T111110][Canonical ensemble]].
+
+For a specific microstate \( x \), the Gibbs measure is given by
+
+\[
+\mathbb{P}(X = x) = \frac{1}{Z(\beta)} e^{-\beta E(x)}
+\]

@@ -1,0 +1,6 @@
+:ctime:    20220322175512
+:END:
+#+title: JPEG compression
+#+filetags: :stub:
+
+An example of [[denote:20220322T175531][Lossy compression]].

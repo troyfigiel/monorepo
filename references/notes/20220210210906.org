@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       5146c3ff-85ed-4c9b-8111-1ccf6fe6a099
-:mtime:    20220313132911
-:ctime:    20220210210906
-:END:
-#+title: Linear approximation of the characteristic function
-#+filetags: :stub:

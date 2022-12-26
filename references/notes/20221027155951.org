@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2b4cdf9e-e3fc-443c-9013-de7b5173ef98
-:END:
-#+title: Sprint backlog
-#+filetags: :stub:
-
-The sprint backlog contains individual tasks from the [[id:4cbd3611-9c56-492c-b3f8-e0f4d54d0b3f][Product backlog]] that need to be finished during a [[id:0fc2466c-df40-4b26-8eb1-67dcf858f465][Sprint]].
-
-It is important that the entire [[id:5ea5a00b-0cf2-44fd-a574-dc8cb4662d1e][Scrum team]] and the [[id:7027bb9d-cacb-49b4-ba35-ccd38058e548][Product owner]] have a clear understanding of what each [[id:2b9aa9df-4a48-4611-b947-a3bb75d2ffaa][User story]] involves.

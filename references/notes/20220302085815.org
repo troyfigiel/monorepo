@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5fc0081a-b490-48c2-a314-ad7aaacdfd08
-:mtime:    20220302085834
-:ctime:    20220302085815
-:END:
-#+title: Linux is a multi user OS
-#+filetags: :stub:
-
-The server allows multiple users to access the same OS and share the hardware and the kernel, performing tasks for each user concurrently.

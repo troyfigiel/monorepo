@@ -1,0 +1,6 @@
+:ctime:    20220224215014
+:END:
+#+title: Exponential generating function
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220403122027
+:END:
+#+title: Multinomial theorem
+#+filetags: :stub:
+
+Generalization of the [[denote:20220223T205208][Binomial theorem]] for [[denote:20220306T173746][Binomial coefficients]] to [[denote:20220328T143621][Multinomial coefficients]].

@@ -1,0 +1,9 @@
+:ctime:    20220324214316
+:END:
+#+title: Second law of thermodynamics
+#+filetags: :stub:
+
+The [[denote:20220210T210007][Entropy]] of an isolated system cannot decrease. They always arrive at a state of [[denote:20220324T214503][Thermodynamic
+equilibrium]] where the entropy is maximal for the given internal energy.
+
+[[denote:20220328T204017][Ehrenfest model]]

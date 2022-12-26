@@ -1,0 +1,6 @@
+:ctime:    20220324120224
+:END:
+#+title: Percolation theory
+#+filetags: :stub:
+
+

@@ -1,0 +1,6 @@
+:ctime:    20220224214954
+:END:
+#+title: Ordinary generating function
+#+filetags: :stub:
+
+

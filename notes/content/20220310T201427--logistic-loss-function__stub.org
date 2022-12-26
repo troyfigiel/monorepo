@@ -1,0 +1,6 @@
+:ctime:    20220310201427
+:END:
+#+title: Logistic loss function
+#+filetags: :stub:
+
+

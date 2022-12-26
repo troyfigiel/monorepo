@@ -1,0 +1,17 @@
+:ctime:    20220302203704
+:END:
+#+title: Confusion matrix
+#+filetags: :stub:
+
+The confusion matrix is a 2x2-dimensional table that visualizes the performance of a [[denote:20220310T194320][Classification]]
+algorithm, most commonly a [[denote:20220311T132614][Binary classification]] algorithm. It is an example of a [[denote:20220313T170719][Contingency table]].
+
+| True positives                  | False positives ([[denote:20220313T174836][Type I error]]) |
+| False negatives ([[denote:20220215T232443][Type II error]]) | True negatives                 |
+
+[[denote:20220313T174945][!Derived from confusion matrix]]
+
+- [[denote:20220311T131817][True positive rate]]
+- [[denote:20220311T131803][False positive rate]]
+- [[denote:20220313T165414][True negative rate]]
+- [[denote:20220313T132557][False negative rate]]

@@ -1,0 +1,7 @@
+:ctime:    20220222135307
+:END:
+#+title: Blocking
+#+filetags: :stub:
+
+In an experimental design, blocking means to pair samples in groups that are similar. The big
+advantage of blocking is that [[denote:20220222T135435][Blocking reduces unexplained variance]].

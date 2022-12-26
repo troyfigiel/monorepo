@@ -1,0 +1,6 @@
+:ctime:    20220324214217
+:END:
+#+title: Ideal gas
+#+filetags: :stub:
+
+[[denote:20220324T214223][Ideal gas law]]

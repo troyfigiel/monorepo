@@ -1,0 +1,6 @@
+:ctime:    20220317083007
+:END:
+#+title: Nominal typing
+#+filetags: :stub:
+
+

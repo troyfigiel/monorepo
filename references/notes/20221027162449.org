@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       5191466a-a842-4d57-9b62-cad7c6310956
-:END:
-#+title: Stand-up meeting
-#+filetags: :stub:

@@ -1,0 +1,14 @@
+:ctime:    20220303134736
+:END:
+#+title: Explainable machine learning
+#+filetags: :stub:
+
+When you use a [[denote:20220303T134750][Black box model]] and explain it afterwards.
+Start with a black box, then:
+- Create another model that approximates it
+- Compute derivatives of it
+- Visualize what part of the input the model is paying attention to
+
+This is in contrast to [[denote:20220303T134927][Interpretable machine learning]].
+
+https://www.youtube.com/watch?v=sl78EgrT4TY

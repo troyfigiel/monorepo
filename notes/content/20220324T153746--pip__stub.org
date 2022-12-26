@@ -1,0 +1,14 @@
+:ctime:    20220324153746
+:END:
+#+title: Pip
+#+filetags: :stub:
+
+Although pip can be used to install Python packages, it does not automatically check for transitive
+dependencies nor writes a lock-file by default.
+
+Using hashes and locking transitive dependencies becomes very unwieldy using pip. It is possible to
+use `pip freeze`, but the downside of this, is that all of the requirements are written to the same file
+and it becomes incredibly hard to figure out which package you need pulled in a specific
+requirement. This is especially difficult if you need to remove a package and all of its dependencies.
+
+Therefore, tools like [[denote:20220324T153938][Pip-tools]] and [[denote:20220324T153944][Poetry]] aim to make installing Python packages easier and reproducible.

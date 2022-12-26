@@ -1,0 +1,6 @@
+:ctime:    20220223233802
+:END:
+#+title: A declarative system is bit-for-bit reproducible
+#+filetags: :stub:
+
+In practice this is not so easy though, because [[denote:20220223T233911][Compilation is not always a deterministic process]].

@@ -1,0 +1,13 @@
+:ctime:    20220311133959
+:END:
+#+title: Loss function versus evaluation metric
+#+filetags: :stub:
+
+The [[denote:20220211T085528][Loss function]] is what a machine learning model will minimize during the training phase whereas
+an [[denote:20220311T134207][Evaluation metric]] gives you a better, more intuitive understanding of the performance of your
+model.
+
+When we are doing [[denote:20220311T134146][Gradient descent]], differentiability of the loss function will make optimization
+much easier whereas many evaluation metrics might not be differentiable at all.
+
+https://stats.stackexchange.com/questions/379264/loss-function-and-evaluation-metric

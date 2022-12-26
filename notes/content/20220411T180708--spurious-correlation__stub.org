@@ -1,0 +1,6 @@
+:ctime:    20220411180708
+:END:
+#+title: Spurious correlation
+#+filetags: :stub:
+
+- [[denote:20220223T133002][Confounding variable]]

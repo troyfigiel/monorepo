@@ -1,0 +1,26 @@
+:ctime:    20220314210747
+:END:
+#+title: Probability theory
+#+filetags: :stub:
+
+- Connection to [[denote:20220314T211246][Statistics]], [[denote:20220210T210151][Statistical mechanics]], [[denote:20220314T211526][Quantum mechanics]]
+- Big results: [[denote:20220210T091048][Central limit theorem]], [[denote:20220218T220520][Law of large numbers]]
+- [[denote:20220327T135132][Frequentist probability]] versus [[denote:20220327T135140][Bayesian probability]]
+- Originally purely [[denote:20220327T135215][Combinatorics]], but modern is the [[denote:20220327T135241][Measure-theoretic basis of probability theory]]
+- [[denote:20220210T091821][Probability distribution]] / [[denote:20220210T092705][Random variable]]
+
+*Difference between probability theory and statistics*
+- Deduction versus induction
+- In statistics we start with data and ask ourselves what kind of process could have generated
+  the data.
+- In probability theory we start with a process and ask ourselves what kind of predictions will
+  follow from this.
+https://stats.stackexchange.com/questions/665/whats-the-difference-between-probability-and-statistics
+
+# TODO: Find a good place for these topics
+- [[denote:20220218T204323][Statistical independence]]
+
+This fits better in combinatorics?
+- [[denote:20220327T165145][Coupon collector's problem]]
+- [[denote:20220327T165219][Birthday problem]]
+- [[denote:20220327T165312][Balanced allocations problem]]

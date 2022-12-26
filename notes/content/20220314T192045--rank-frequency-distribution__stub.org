@@ -1,0 +1,6 @@
+:ctime:    20220314192045
+:END:
+#+title: Rank-frequency distribution
+#+filetags: :stub:
+
+https://en.wikipedia.org/wiki/Rank%E2%80%93size_distribution

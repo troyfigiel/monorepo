@@ -1,0 +1,14 @@
+:ctime:    20220211091008
+:END:
+#+title: Bayes' theorem in drug testing
+
+In drug testing often the true positive and negative rate can be high, but the prevalence might be very low. If the prevalence is very low, the probability of most positive results being the result of false positives, increases.
+
+If we use a drug test and find that it is positive, Bayes' theorem tells us that
+
+\[ \mathrm{Pr}(\mathrm{User} | \mathrm{Positive}) = \frac{\mathrm{Pr}(\mathrm{Positive} | \mathrm{User})\mathrm{Pr}(\mathrm{User})}{\mathrm{Pr}(\mathrm{Positive} | \mathrm{User})\mathrm{Pr}(\mathrm{User}) + \mathrm{Pr}(\mathrm{Positive} | \neg \mathrm{User})\mathrm{Pr}(\neg \mathrm{User})} \]
+
+For example, if the true positive rate is \( 90\% \), the false positive rate \( 20\% \) and the fraction of users in the entire population is only \( 5\% \), we find that the probability of a positive test indicating a drug user, is only \( 19.15\% \).
+
+* TODO
+Add some notes about the likelihood ratio. When the positive likelihood ratio (TPR / FPR) is very small or very big, we can simplify things. This is sometimes done in epidemiology.

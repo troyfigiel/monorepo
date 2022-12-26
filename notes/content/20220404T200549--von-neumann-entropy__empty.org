@@ -1,0 +1,6 @@
+#+title:      Von Neumann entropy
+#+date:       [2022-04-04 Mon 20:05]
+#+filetags:   :empty:
+#+identifier: 20220404T200549
+
+

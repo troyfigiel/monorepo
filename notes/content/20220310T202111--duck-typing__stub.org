@@ -1,0 +1,6 @@
+:ctime:    20220310202111
+:END:
+#+title: Duck typing
+#+filetags: :stub:
+
+

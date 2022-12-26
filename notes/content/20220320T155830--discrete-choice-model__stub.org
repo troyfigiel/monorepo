@@ -1,0 +1,9 @@
+:ctime:    20220320155830
+:END:
+#+title: Discrete choice model
+#+filetags: :stub:
+
+- [[denote:20220320T161819][Logistic regression is a discrete choice model]]
+- [[denote:20220320T161925][Probit regression is a discrete choice model]]
+
+https://austinrochford.com/posts/2015-01-12-utility-theory-logistic-regression.html

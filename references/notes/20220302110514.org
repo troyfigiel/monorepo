@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4dae0284-260a-4548-bb67-2d2524f4e9e2
-:mtime:    20220302110519
-:ctime:    20220302110514
-:END:
-#+title: In the presence of high multicollinearity, linear regression coefficients may be significant together but not individually
-#+filetags: :stub:
-
-

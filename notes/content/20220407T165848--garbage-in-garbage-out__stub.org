@@ -1,0 +1,7 @@
+:mtime:    20220407165854
+:ctime:    20220407165848
+:END:
+#+title: Garbage in, garbage out
+#+filetags: :stub:
+
+This can be alleviated by using [[denote:20220613T133310][Data validation]].

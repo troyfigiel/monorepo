@@ -1,0 +1,6 @@
+:ctime:    20220320143652
+:END:
+#+title: Fréchet distribution
+#+filetags: :stub:
+
+

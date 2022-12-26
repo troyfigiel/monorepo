@@ -1,0 +1,5 @@
+:ctime:    20220415111624
+:END:
+#+title: General relativity
+#+filetags: :stub:
+

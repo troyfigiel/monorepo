@@ -1,0 +1,40 @@
+:ctime:    20220323092735
+:END:
+#+title: ?Rate function of the Bernoulli distribution
+#+filetags: :appendix:stub:
+
+The the Bernoulli distribution, it is known that the cumulant generating function is given by the
+following expression:
+
+\[
+K(t) = \log \left( 1 + p(e^t - 1)) \right)
+\]
+
+This arises by replacing \( i t \) by \( t \) in the [[denote:20220323T093007][?Characteristic function of the Bernoulli
+distribution]] and then taking the logarithm of the expression.
+
+Now
+
+\[
+I(x) = \sup_{t>0} \left[ tx - K(t) \right]
+\]
+
+and the maximum of \( tx - K(t) \) is reached for \( K' (t) = x \) so that
+
+\[
+t = \log \frac{x(1-p)}{p(1-x)}
+\]
+
+Plugging this back into the definitions, we find
+
+\begin{equation*}
+\begin{align}
+I(x)
+&= x \log \frac{x(1-p)}{p(1-x)} - \log \left[ 1 + p \left( \frac{x(1-p)}{p(1-x)} - 1 \right) \right] \\
+&= x \log \frac{x(1-p)}{p(1-x)} - \log \left[ \frac{1-p}{1-x} \right] \\
+&= x \log x + (1-x) \log(1-x) - (1-x) \log(1-p) - x \log p \\
+&= -S(x) - (1-x) \log(1-p) - x \log p \\
+\end{align}
+\end{equation*}
+
+where \( S(x) \) is the [[denote:20220304T150924][?Entropy of the Bernoulli distribution]].

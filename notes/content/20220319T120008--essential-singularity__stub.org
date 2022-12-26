@@ -1,0 +1,6 @@
+:ctime:    20220319120008
+:END:
+#+title: Essential singularity
+#+filetags: :stub:
+
+

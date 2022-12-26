@@ -1,0 +1,28 @@
+:ctime:    20220415000214
+:END:
+#+title: Hamilton-Jacobi equation
+#+filetags: :stub:
+
+This equation describes an alternative formulation of [[denote:20220324T213920][Classical mechanics]]. It can be understood as
+a special case of the [[denote:20220415T000341][Hamilton-Jacobi-Bellman equation]].
+
+\[
+-\frac{\partial S}{\partial t} = H \left( \mathbf{q}, \frac{\partial S}{\partial \mathbf{q}}, t \right)
+\]
+
+The aim of this formulation of [[denote:20220324T213920][Classical mechanics]] is to find a generating function for a [[denote:20220415T005541][Canonical
+transformation]] such that the transformed [[denote:20220324T213756][Hamiltonian]] (also called the [[denote:20220415T005646][Kamiltonian]]) is identically
+zero.
+
+This formulation of [[denote:20220324T213920][Classical mechanics]] is especially interesting for two reasons:
+1. The generating function ([[denote:20220415T005712][Hamilton's principal function]]) can be identified with the classical
+   [[denote:20220310T200840][Action]].
+2. This formulation treats waves and particles on equal footing and it is this equation that is
+   recovered from the [[denote:20220415T010018][Classical limit]] of the [[denote:20220415T005843][Schrödinger equation]].
+
+If the [[denote:20220324T213756][Hamiltonian]] is time-independent, we can express a solution \( S \) in terms of [[denote:20220416T110450][Hamilton's
+characteristic function]] \( W(\mathbf{q}) \) as \( S(\mathbf{q}, t) = W(\mathbf{q}) - E t \) where
+
+\[
+H \left( \mathbf{q}, \frac{\partial S}{\partial \mathbf{q}} \right) = E
+\]

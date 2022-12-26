@@ -1,0 +1,6 @@
+:ctime:    20220325144122
+:END:
+#+title: ?The convex sets in the plane shatter any set of finite points on a circle
+#+filetags: :appendix:stub:
+
+Similar to [[denote:20220325T143615][?The discs in the plane do not shatter all sets of four points on the unit circle]].

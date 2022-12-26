@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6e6b1431-ad32-4dcb-96d5-e20bce1748cc
-:mtime:    20220324214504
-:ctime:    20220324214503
-:END:
-#+title: Thermodynamic equilibrium
-#+filetags: :stub:
-
-

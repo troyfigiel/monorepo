@@ -1,0 +1,8 @@
+:ctime:    20220324214020
+:END:
+#+title: Noether's theorem
+#+filetags: :stub:
+
+# TODO: Finish proof of Noether's theorem
+Assume there exists some local symmetry \( Q \) of the [[denote:20220310T200840][Action]] satsifying \( QS \approx 0 \), i.e.
+the symmetry exists on-shell.

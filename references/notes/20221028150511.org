@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7a6ba049-a1cd-43f0-af52-b915f8540759
-:END:
-#+title: Batch processing
-#+filetags: :stub:
-
-Batch processing of data is a technique where multiple data rows or transactions are processed as a single group.
-
-This is in opposition to the processing of [[id:8f45a23a-3f0b-4125-8701-fda7ba356b52][Data streams]].

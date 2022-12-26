@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       a3251fd8-8fa7-4b06-83c0-b84e0eb6466f
-:END:
-#+title: Pandera
-#+filetags: :stub:
-

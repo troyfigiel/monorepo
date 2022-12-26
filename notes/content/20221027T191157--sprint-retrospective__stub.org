@@ -1,0 +1,4 @@
+#+title: Sprint retrospective
+#+filetags: :stub:
+
+The sprint retrospective is when the [[denote:20221027T162906][Scrum team]] discusses how the process can be improved in the future.

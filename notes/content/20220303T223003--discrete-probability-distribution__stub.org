@@ -1,0 +1,6 @@
+:ctime:    20220303223003
+:END:
+#+title: Discrete probability distribution
+#+filetags: :stub:
+
+

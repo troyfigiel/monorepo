@@ -1,0 +1,7 @@
+:ctime:    20220223101007
+:mtime:    20220310134508
+:END:
+#+title: Scoring algorithm
+#+filetags: :stub:
+
+The scoring algorithm is a form of [[denote:20220223T102324][Newton's method]] used to solve maximum likelihood equations numerically.

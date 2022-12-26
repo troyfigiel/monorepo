@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       a7b5671a-b7ce-44c0-b7a4-edf767650b79
-:mtime:    20220310134754
-:ctime:    20220215212717
-:END:
-#+title: ?The binomial distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

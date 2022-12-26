@@ -1,0 +1,7 @@
+:ctime:    20220409115329
+:ROAM_ALIASES: "Hessian matrix"
+:END:
+#+title: Hessian
+#+filetags: :stub:
+
+

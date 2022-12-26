@@ -1,0 +1,11 @@
+:ctime:    20220223093148
+:END:
+#+title: Zero-inflated model
+#+filetags: :stub:
+
+A zero-inflated model is a statistical model based on a distribution that allows for frequent
+zero-valued observations.
+
+[[denote:20220304T133117][Zero-inflated models are mixture models]].
+
+Zero-inflated models are similar to [[denote:20220304T133401][Hurdle models]] but not the same.

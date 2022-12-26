@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       24270070-d7ad-4cc1-be28-0ac2b231daae
-:mtime:    20220309182538
-:ctime:    20220215212910
-:END:
-#+title: ?The normal distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

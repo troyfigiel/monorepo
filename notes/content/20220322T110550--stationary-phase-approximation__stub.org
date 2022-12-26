@@ -1,0 +1,60 @@
+:ctime:    20220322110550
+:END:
+#+title: Stationary phase approximation
+#+filetags: :stub:
+
+First intuition
+
+\[
+I(\omega) = \int\limits_a^b \cos(\omega t) \, dt = \frac{\sin(\omega b) - \sin(\omega a)}{\omega}
+\]
+
+so for \( \omega \rightarrow \infty \) we have \( I(\omega) = O \left( \frac{1}{\omega} \right) \).
+
+When the integral is rapidly varying, your integration is off by at most a term proportional to \(
+\frac{1}{\omega} \), since that is the time in which the positive part cancels out the negative
+part again.
+
+If we have an envelope,
+
+\[
+I(\omega) = \int\limits_a^b f(t) \cos(\omega t) \, dt = \frac{1}{\omega} \sin(\omega t) f(t)
+\big|_a^b - \frac{1}{\omega} \int\limits_a^b f^{\prime}(t) \sin(\omega t) \, dt
+\]
+
+But now by the same reasoning and for well-behaved \( f^{\prime}(t) \), the right term must go as
+\( O \left( \frac{1}{\omega^2} \right) \). Hence, also with an envelope the same reasoning holds.
+
+This can be made precise through the [[denote:20220320T005336][Riemann-Lebesgue lemma]]
+
+The points of stationary phase are precisely the points where this argument does not hold anymore.
+This will give the major contributions to the integral.
+
+The idea of stationary phase is also key to derive the [[denote:20220310T200833][Principle of least action]] from the [[denote:20220320T010349][Path
+integral formulation of quantum mechanics]].
+
+Bessel function:
+
+\[
+J_0(x) = \frac{1}{\pi} \int\limits_0^{\pi} \cos \left( x \sin t \right)
+\]
+
+Observe,
+
+\[
+J_0(x) = \mathcal{Re} \left[ \frac{1}{\pi} \int\limits_0^{\pi} e^{i x \sin t} \right]
+\]
+
+We have a point of stationary phase precisely at \( t = \frac{\pi}{2} \). So, expand
+
+\[
+\sin t = 1 - \frac{1}{2} \left( t - \frac{\pi}{2} \right)^2 + ...
+\]
+
+Doing all the integrals, we find
+
+\[
+J_0(x) \sim \sqrt{\frac{2}{\pi x}} \cos \left( x - \frac{\pi}{4} \right)
+\]
+
+But with stationary phase we cannot get any further correction terms!

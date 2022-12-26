@@ -1,0 +1,14 @@
+:ctime:    20220314193000
+:END:
+#+title: Harmonic number
+#+filetags: :stub:
+
+The harmonic numbers are related to the [[denote:20220210T132205][Harmonic mean]] due to the fact that
+
+\[
+H_n = \frac{n}{\mathrm{HM}(1, 2, ..., n)}
+\]
+
+[[denote:20220320T131858][Euler-Mascheroni constant]]
+
+[[denote:20220409T120819][The harmonic numbers are never integers]]

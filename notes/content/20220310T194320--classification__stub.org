@@ -1,0 +1,13 @@
+:ctime:    20220310194320
+:END:
+#+title: Classification
+#+filetags: :stub:
+
+See [[denote:20220310T194337][Decision boundary]], [[denote:20220310T194406][Margin]].
+
+Useful way to evaluation a classifier is through [[denote:20220311T131506][ROC curves]].
+
+Three types of classification models:
+- [[denote:20220318T001230][Generative model]]
+- [[denote:20220318T001331][Discriminative model]]
+- Classifiers trained without using a probability model

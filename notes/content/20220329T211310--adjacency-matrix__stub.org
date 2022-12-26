@@ -1,0 +1,6 @@
+:ctime:    20220329211310
+:END:
+#+title: Adjacency matrix
+#+filetags: :stub:
+
+

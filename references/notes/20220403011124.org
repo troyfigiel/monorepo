@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       550bc1e7-d248-4452-9961-de4904b96f1e
-:mtime:    20220403011225
-:ctime:    20220403011124
-:END:
-#+title: Poincaré recurrence theorem
-#+filetags: :stub:
-
-

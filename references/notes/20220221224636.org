@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1a102303-3340-4553-a664-8655a66a8051
-:mtime:    20220225223626
-:ctime:    20220221224636
-:END:
-#+title: NixOS
-#+filetags: :stub:
-
-

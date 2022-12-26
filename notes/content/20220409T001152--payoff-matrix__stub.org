@@ -1,0 +1,6 @@
+:ctime:    20220409001152
+:END:
+#+title: Payoff matrix
+#+filetags: :stub:
+
+

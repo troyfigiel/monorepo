@@ -1,0 +1,7 @@
+:ctime:    20220316150256
+:END:
+#+title: Game theory
+#+filetags: :stub:
+
+[[denote:20220409T001053][Evolutionary game theory]]
+[[denote:20220409T001152][Payoff matrix]]

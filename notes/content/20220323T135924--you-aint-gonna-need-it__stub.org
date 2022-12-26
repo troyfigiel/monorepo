@@ -1,0 +1,7 @@
+:ctime:    20220323135924
+:ROAM_ALIASES: YAGNI
+:END:
+#+title: You ain't gonna need it
+#+filetags: :stub:
+
+

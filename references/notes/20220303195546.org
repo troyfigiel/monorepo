@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       2d9b74f6-74bf-4273-a049-b82e036fc32b
-:mtime:    20220303195547
-:ctime:    20220303195546
-:END:
-#+title: Non-linear least squares
-#+filetags: :stub:
-
-

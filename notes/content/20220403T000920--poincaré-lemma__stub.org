@@ -1,0 +1,6 @@
+:ctime:    20220403000920
+:END:
+#+title: Poincaré lemma
+#+filetags: :stub:
+
+

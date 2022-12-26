@@ -1,0 +1,14 @@
+#+title:      Confounding variable
+#+date:       [2022-02-23 Wed 13:30]
+#+filetags:   :unfinished:
+#+identifier: 20220223T133002
+
+* What is a confounder?
+A confounder is a variable that influences both the [[denote:20220225T083338][Dependent variable]] and the [[denote:20220225T083408][Independent
+variable]]. The existence of confounders makes the phrase [[denote:20220225T083526][Correlation does not imply causation]]
+quantitative. To calculate the effect of confounders, we use [[denote:20220225T084003][Do-calculus]].
+
+* Confounders and predictions
+Confounders play a large role in statistics since we will only be able to observe correlation
+directly. However, [[denote:20220225T084455][Confounders do not impact predictions in a single dataset]] making them less of a direct
+problem. Nonetheless, [[denote:20220225T084945][Confounders lead to poorly generalizable models]].

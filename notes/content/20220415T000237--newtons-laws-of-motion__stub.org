@@ -1,0 +1,6 @@
+:ctime:    20220415000237
+:END:
+#+title: Newton's laws of motion
+#+filetags: :stub:
+
+

@@ -1,0 +1,7 @@
+:ctime:    20220422094315
+:END:
+#+title: Turing completeness
+#+filetags: :stub:
+
+- [[denote:20220323T221333][Turing complete system]]
+- [[denote:20220422T094328][Turing complete language]]

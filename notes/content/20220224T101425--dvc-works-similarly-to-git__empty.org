@@ -1,0 +1,6 @@
+#+title:      DVC works similarly to Git
+#+date:       [2022-02-24 Thu 10:14]
+#+filetags:   :empty:
+#+identifier: 20220224T101425
+
+

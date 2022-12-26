@@ -1,0 +1,13 @@
+:ctime:    20220215230350
+:ROAM_ALIASES: "Maximum entropy distribution"
+:END:
+#+title: Maximum entropy probability distribution
+
+A maximum entropy probability distribution is a probability distribution that maximizes the entropy within a class of distribution. The [[denote:20220215T230625][Principle of maximum entropy]] states that with nothing else known, we should pick this distribution as the least-informative default.
+
+Relevant classes are often those for which measurable quantitaties (such as moments) are constrained to be constants.
+
+There are many examples of maximum entropy distributions:
+
+* TODO
+Create a table with constraints and the maximum entropy distributions

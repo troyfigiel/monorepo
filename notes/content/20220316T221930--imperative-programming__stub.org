@@ -1,0 +1,6 @@
+:ctime:    20220316221930
+:END:
+#+title: Imperative programming
+#+filetags: :stub:
+
+

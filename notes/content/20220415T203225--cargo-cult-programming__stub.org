@@ -1,0 +1,5 @@
+:ctime:    20220415203225
+:END:
+#+title: Cargo cult programming
+#+filetags: :stub:
+

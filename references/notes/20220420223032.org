@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       8dab481a-29d3-4d9a-8bfb-b21a2265968e
-:mtime:    20220420223038
-:ctime:    20220420223032
-:END:
-#+title: @Feature engineering and selection: A practical approach for predictive models
-#+filetags: :inbox:
-
-http://www.feat.engineering/index.html

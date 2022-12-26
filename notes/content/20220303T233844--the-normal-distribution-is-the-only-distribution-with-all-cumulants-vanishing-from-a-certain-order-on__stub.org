@@ -1,0 +1,13 @@
+:ctime:    20220303233844
+:END:
+#+title: The normal distribution is the only distribution with all cumulants vanishing from a certain order on
+#+filetags: :stub:
+
+# TODO: Calculate the cumulant generating function of the normal distribution
+Because the cumulant generating function of the normal distribution is \( K(t) = \mu t +
+\frac{1}{2} \sigma^2 t^2 \), we know that all cumulants \( \kappa_{m>2} = 0 \).
+
+Remarkably, an even stronger converse statement holds. If \( \kappa_{m>k} = 0 \) for some \( k \),
+then the probability distribution is normal and the minimal \( k = 2 \).
+
+# TODO: Find this appendix again. It was difficult to find.

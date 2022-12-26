@@ -1,0 +1,6 @@
+:ctime:    20220327122619
+:END:
+#+title: Von Mises distribution
+#+filetags: :stub:
+
+Special case of the [[denote:20220327T131410][Von Mises-Fisher distribution]].

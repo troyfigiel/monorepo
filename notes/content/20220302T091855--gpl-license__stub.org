@@ -1,0 +1,6 @@
+:ctime:    20220302091855
+:END:
+#+title: GPL license
+#+filetags: :stub:
+
+

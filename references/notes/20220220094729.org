@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       450c7a92-8da9-4ff1-9e01-168f6c83ffbe
-:mtime:    20220225223628
-:ctime:    20220220094729
-:END:
-#+title: R
-#+filetags: :stub:
-

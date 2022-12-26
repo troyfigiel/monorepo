@@ -1,0 +1,6 @@
+:ctime:    20220403144101
+:END:
+#+title: Mean field theory
+#+filetags: :stub:
+
+

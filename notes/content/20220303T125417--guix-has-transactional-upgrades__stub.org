@@ -1,0 +1,7 @@
+:ctime:    20220303125417
+:END:
+#+title: Guix has transactional upgrades
+#+filetags: :stub:
+
+This is one of the features that makes [[denote:20220303T092333][GNU Guix]] so nice to work with. A failed upgrade can
+never break the system.

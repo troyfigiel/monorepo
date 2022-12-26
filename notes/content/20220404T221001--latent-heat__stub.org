@@ -1,0 +1,6 @@
+:ctime:    20220404221001
+:END:
+#+title: Latent heat
+#+filetags: :stub:
+
+

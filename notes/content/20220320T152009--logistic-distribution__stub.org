@@ -1,0 +1,6 @@
+:ctime:    20220320152009
+:END:
+#+title: Logistic distribution
+#+filetags: :stub:
+
+

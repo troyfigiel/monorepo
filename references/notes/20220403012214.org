@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       dd395964-9f5d-44e7-8a41-084576ec8503
-:mtime:    20220403012214
-:ctime:    20220403012214
-:END:
-#+title: Lyapunov exponent
-#+filetags: :stub:
-
-

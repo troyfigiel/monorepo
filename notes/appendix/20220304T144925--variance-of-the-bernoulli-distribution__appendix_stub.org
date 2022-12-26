@@ -1,0 +1,6 @@
+:ctime:    20220304144925
+:END:
+#+title: ?Variance of the Bernoulli distribution
+#+filetags: :appendix:stub:
+
+

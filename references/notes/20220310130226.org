@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       66dc6851-7186-4940-84fa-f97a2bf70690
-:mtime:    20220310130244
-:ctime:    20220310130226
-:END:
-#+title: Additive model
-#+filetags: :stub:
-
-Additives models are interpretable to humans. See [[id:64287899-3f32-4593-a327-b06fdf7d9f1d][Interpretable machine learning]].

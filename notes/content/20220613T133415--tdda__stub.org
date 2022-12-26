@@ -1,0 +1,4 @@
+#+title: TDDA
+#+filetags: :stub:
+
+A tool created to bring [[denote:20220317T223641][Test-driven development]] to [[denote:20220613T133436][Data analysis]].

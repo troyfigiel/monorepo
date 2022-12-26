@@ -1,0 +1,6 @@
+:ctime:    20220408204841
+:END:
+#+title: Chentsov's theorem
+#+filetags: :stub:
+
+

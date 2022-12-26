@@ -1,0 +1,6 @@
+:ctime:    20220301164106
+:END:
+#+title: Paired data
+#+filetags: :stub:
+
+

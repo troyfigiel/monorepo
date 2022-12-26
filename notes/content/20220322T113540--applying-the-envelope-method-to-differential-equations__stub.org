@@ -1,0 +1,74 @@
+:ctime:    20220322113540
+:END:
+#+title: Applying the envelope method to differential equations
+#+filetags: :stub:
+
+* Naive perturbation theory
+We perturb the differential equation for
+
+\[
+x(t) = \sum\limits_{j=0}^{\infty} \epsilon^j x_j(t)
+\]
+
+in the small parameter \( \epsilon \).
+
+# TODO: Do we also require derivatives of \( x_j(t_0) \) to not have any initial conditions?
+We use arbitrary intitial conditions at a time \( t_0 \), but do require \( x_j(t_0) = 0 \) for \(
+j > 0 \).
+
+The perturbation theory might show problematic terms at this point, but that is fine for now.
+
+* Solving the RG equations
+Now that we have a perturbative solution, we assume the integration parameters themselves have an
+implicit dependence on the parameter \( t_0 \).
+
+The RG equations are now obtained by finding the envelope equation for \( x(t, t_0) \), where the
+dependence on \( t_0 \) has been made explicit.
+
+This comes down to calculating:
+
+\[
+\frac{\partial x(t, t_0)}{\partial t_0} \big|_{t_0 = t} = 0
+\]
+
+Note that this is slightly different from the original [[denote:20220322T105540][Envelope equations]], where the envelope does
+not require setting \( t_0 = t \). In this case though, we know that the perturbative solutions are
+only correct near \( t_0 = t \), so we require the envelope solution to only be valid at this point.
+
+In other words, we calculate the dependence on \( t_0 \), set \( t_0 = t \) and solve the resulting
+differential equations in \( t \). These are precisely the RG equations. We will see that the
+constants of integration end up varying slowly as a function of \( \epsilon \).
+
+* Plugging in the solution again
+Finally, we plug in the slowly varying solutions of the parameters of integration in the found
+pertubative solution to find a /globally/ valid, but still approximate solution.
+
+* Approximate, but global
+If we have the envelope solution \( x_E(t) \), we have an approximate but global solution. In other
+words, the perturbation does not break down as it would for fixed parameters of integration.
+
+Indeed, for exposition consider an ODE of the form
+
+\[
+\frac{dX}{dt} = F(X, t, \epsilon)
+\]
+
+where \( X \) is vector-valued. The perturbative solution \( \tilde{X}(t; t_0, W(t_0) \) satisfies
+the original differential equation up to \( O(\epsilon^p) \) when \( t_0 \sim t \).
+
+\begin{equation*}
+\begin{align}
+\frac{dX_E(t, W(t))}{dt}
+&= \frac{d \tilde{X}(t; t, W(t)}{dt} \\
+&= \frac{\partial \tilde{X}(t; t_0, W(t_0)}{\partial t} \big|_{t_0=t} + \frac{\partial \tilde{X}(t; t_0, W(t_0)}{\partial t_0} \big|_{t_0=t} \\
+&= \frac{\partial \tilde{X}(t; t_0, W(t_0)}{\partial t} \big|_{t_0=t} \\
+&= F(\tilde{X}(t; t_0, W(t_0)) \big|_{t_0=t} + O(\epsilon^p) \\
+&= F(\tilde{X}(t; t, W(t)) + O(\epsilon^p) \\
+&= F(X_E(t, W(t)); t, W(t)) + O(\epsilon^p)
+\end{align}
+\end{equation*}
+
+Here the third equality follows from the RG equations and the fourth equality from the fact that \(
+\tilde{X} \) satisfies the original equation up to \( O(\epsilon^p) \).
+
+# TODO: Does a general theorem for this statement exist?

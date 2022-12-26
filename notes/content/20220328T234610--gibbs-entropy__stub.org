@@ -1,0 +1,6 @@
+:ctime:    20220328234610
+:END:
+#+title: Gibbs entropy
+#+filetags: :stub:
+
+

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5506e270-9938-4fe9-9cf4-4740991b4c64
-:mtime:    20220329215306
-:ctime:    20220329215305
-:END:
-#+title: Krohn-Rhodes theorem
-#+filetags: :stub:
-
-

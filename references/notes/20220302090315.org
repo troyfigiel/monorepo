@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       862f62c9-2ddf-4176-86c4-aecfb358f355
-:mtime:    20220405094328
-:ctime:    20220302090315
-:END:
-#+title: Secondary user group
-#+filetags: :stub:
-
-

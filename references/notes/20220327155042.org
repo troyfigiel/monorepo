@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       951ad4de-3f7a-4991-8fad-9519709dd555
-:mtime:    20220327163000
-:ctime:    20220327155042
-:END:
-#+title: Law of total probability
-#+filetags: :stub:

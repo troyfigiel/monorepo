@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0215ff0c-a225-4488-8e56-d5050d101aea
-:mtime:    20220303202041
-:ctime:    20220301163947
-:END:
-#+title: Non-parametric test
-#+filetags: :stub:
-

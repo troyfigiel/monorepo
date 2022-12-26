@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       e9b783ae-9bdf-418d-a024-499e634d5782
-:mtime:    20220320154602
-:ctime:    20220320154600
-:END:
-#+title: Logit function
-#+filetags: :stub:
-
-

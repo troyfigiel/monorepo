@@ -1,0 +1,9 @@
+:ctime:    20220315122916
+:END:
+#+title: An operating system is the result of a function
+#+filetags: :stub:
+
+This function takes the configuration and the package tree and builds an operating system. This is
+used for [[denote:20220221T224049][Declarative operating system configuration]].
+
+When global state is involved though, this function is not a [[denote:20220303T125546][Pure function]] (see [[denote:20220309T180541][Global state is evil]]).

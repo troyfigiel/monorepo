@@ -1,0 +1,6 @@
+:ctime:    20220403120226
+:END:
+#+title: Extensive property
+#+filetags: :stub:
+
+Opposite of [[denote:20220403T120239][Intensive property]].

@@ -1,0 +1,7 @@
+:ctime:    20220322101856
+:END:
+#+title: Abel-Plana formula
+#+filetags: :stub:
+
+Example:
+- Creating an asymptotic series for the [[denote:20220223T213833][Riemann zeta function]].

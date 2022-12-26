@@ -1,0 +1,11 @@
+:ctime:    20220317083536
+:END:
+#+title: Types are a form of self-documentation of code
+#+filetags: :stub:
+
+- [[denote:20220316T134414][Self-documenting code]]
+- [[denote:20220317T082905][Type system]]
+
+This also eases the mental pressure on developers. Types can only fit together in one way. This
+also has an advantage on machine-level, because [[denote:20220317T084730][Types help machines infer programming intent]] and
+can in turn help developers, easing the mental burden even further.

@@ -1,0 +1,11 @@
+:mtime:    20220301115713
+:ctime:    20220301115513
+:END:
+#+title: Bernoulli trial
+#+filetags: :stub:
+
+A Bernoulli trial is a random experiment with exactly two outcomes (a success or a failure).
+
+See also [[denote:20220210T094457][Bernoulli distribution]] and [[denote:20220301T115649][Bernoulli process]] .
+
+https://en.wikipedia.org/wiki/Bernoulli_trial

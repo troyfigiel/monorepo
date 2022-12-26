@@ -1,0 +1,8 @@
+:ctime:    20220315114141
+:END:
+#+title: Congruent system
+#+filetags: :stub:
+
+A congruent system is a system in which the reality of the state on disk evolves in the same way as the expectation of administrators. Keeping a system congruent can be done using tools like [[denote:20220315T113939][Puppet]] and [[denote:20220315T113946][Chef]].
+
+Note though that [[denote:20220218T230731][Ansible]] does not work with a daemon, so there is no guarantee of a congruent system after [[denote:20220301T193147][Configuration drift]] has been addressed.

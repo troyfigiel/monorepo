@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6b10742a-eb01-491c-871b-26265c002f93
-:mtime:    20220313111356
-:ctime:    20220313111355
-:END:
-#+title: Jupytext
-#+filetags: :stub:
-
-

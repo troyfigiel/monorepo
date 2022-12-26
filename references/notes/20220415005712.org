@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       4cdbc355-3e13-404d-9cb3-81f37e78bee3
-:mtime:    20220415005713
-:ctime:    20220415005712
-:END:
-#+title: Hamilton's principal function
-#+filetags: :stub:
-

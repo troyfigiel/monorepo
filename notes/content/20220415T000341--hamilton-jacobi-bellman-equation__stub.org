@@ -1,0 +1,6 @@
+:ctime:    20220415000341
+:END:
+#+title: Hamilton-Jacobi-Bellman equation
+#+filetags: :stub:
+
+An equation used in [[denote:20220415T000537][Dynamic programming]].

@@ -1,0 +1,6 @@
+:ctime:    20220309181531
+:END:
+#+title: The SQL join is a categorical pullback
+#+filetags: :stub:
+
+https://en.wikipedia.org/wiki/Join_(SQL)

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       bf8a596a-3b42-44ef-8872-4eb48a48d703
-:mtime:    20220327131411
-:ctime:    20220327131410
-:END:
-#+title: Von Mises-Fisher distribution
-#+filetags: :stub:
-
-

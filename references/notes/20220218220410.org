@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       e5840612-6843-450f-9e05-2f0f09d6aef2
-:mtime:    20220225223638
-:ctime:    20220218220410
-:END:
-#+title: gambler's fallacy
-#+filetags: :stub:
-

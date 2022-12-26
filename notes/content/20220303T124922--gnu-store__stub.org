@@ -1,0 +1,16 @@
+:ctime:    20220303124922
+:END:
+#+title: GNU store
+#+filetags: :stub:
+
+Named the GNU store after the location it stores its builds `/gnu/store`. It is an example of [[denote:20220218T231036][Content-addressable storage]].
+
+Packages are built all separately in the GNU store and after that, [[denote:20220303T092333][GNU Guix]] simply points to the
+files in the store. This cannot break the operating system or home environment, because every
+result of a package build has a hash prefix. Any change will create a new hash.
+
+This also allows for example installing different versions of the same package.
+
+Note also that [[denote:20220315T132511][Files in the GNU store can only be changed by the Guix build daemon]].
+
+https://guix.gnu.org/manual/en/html_node/The-Store.html

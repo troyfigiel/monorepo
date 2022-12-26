@@ -1,0 +1,7 @@
+:ctime:    20220218234418
+:END:
+#+title: Fubini-Study metric
+#+filetags: :stub:
+
+* TODO
+Work out relation to [[denote:20220211T094619][Fisher information]] metric

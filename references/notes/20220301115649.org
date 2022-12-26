@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       f76121f7-264b-4a7f-8c53-4aa1a59d6fad
-:mtime:    20220301115650
-:ctime:    20220301115649
-:END:
-#+title: Bernoulli process
-#+filetags: :stub:
-
-

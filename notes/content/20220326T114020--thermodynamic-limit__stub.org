@@ -1,0 +1,29 @@
+:mtime:    20220405234907
+:ctime:    20220326114020
+:END:
+#+title: Thermodynamic limit
+#+filetags: :stub:
+
+We let
+
+\[
+N \rightarrow \infty, V \rightarrow \infty, \frac{N}{V} = \text{constant}
+\]
+
+This means fluctuations are negligible. It follows from the [[denote:20220210T091048][Central limit theorem]], because
+fluctuations of the mean are of the order \( 1 / \sqrt{N} \) and are thus negligible with a
+macroscopic amount of particles (of the order of the [[denote:20220326T114335][Avogadro number]]).
+
+In small scale systems the macroscopic quantity of interest is a random variable, but when we go to the
+thermodynamic limit, the macroscopic quantity takes a definite value. (For example, limit of
+Gaussian \( \sigma \rightarrow 0 \) is a \( \delta \)-distribution.)
+
+# TODO: Make the H-stability statement into a note
+It is not always possible to take this limit. For example, systems that are not [[denote:20220404T090338][H-stable]] do not
+have a thermodynamic limit.
+
+
+- nonzero average charge density, because for periodic boundary conditions there is no consistent
+  value for the electric flux and in a box regularization matter will move towards the boundaries
+- some quantum mechanical systems near absolute zero, like [[denote:20220404T090230][Bose-Einstein condensation]],
+  superconductivity and superfluidity

@@ -1,0 +1,6 @@
+:ctime:    20220320010349
+:END:
+#+title: Path integral formulation of quantum mechanics
+#+filetags: :stub:
+
+

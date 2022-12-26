@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1e728ae3-609f-4c78-bf6c-ec3c6440e9c4
-:mtime:    20220316135047
-:ctime:    20220316135047
-:END:
-#+title: Open source software
-#+filetags: :stub:
-
-

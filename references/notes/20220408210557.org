@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a7071b80-7c24-407a-a488-5a0dcf048935
-:mtime:    20220408210557
-:ctime:    20220408210557
-:END:
-#+title: Harmonic oscillator
-#+filetags: :stub:
-
-

@@ -1,0 +1,7 @@
+:mtime:    20220325230309
+:ctime:    20220325230304
+:END:
+#+title: Generalized central limit theorem
+#+filetags: :stub:
+
+

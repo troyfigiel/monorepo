@@ -1,0 +1,12 @@
+:ctime:    20220222095858
+:END:
+#+title: Paired t-test
+#+filetags: :stub:
+
+The paired t-test is an example of a t-test where we compare to samples by pairing each observation
+in another sample based on a second variable. For example, day on which they were measured.
+
+If there is a true difference between the pairs, the [[denote:20220222T100120][paired t-test is more powerful than unpaired
+t-test]]. However, this only works if we have a natural pairing in our data.
+
+Pairing is an example of the more general notion of [[denote:20220222T135307][blocking]].

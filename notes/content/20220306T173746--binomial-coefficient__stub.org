@@ -1,0 +1,41 @@
+:ctime:    20220306173746
+:END:
+#+title: Binomial coefficient
+#+filetags: :stub:
+
+The binomial coefficients are the positive integers that occur as the coefficients of the [[denote:20220223T205208][Binomial
+theorem]].
+
+Important in the [[denote:20220210T094431][Binomial distribution]].
+
+There are several identities relating them together. For example
+- [[denote:20220306T173918][Vandermonde's identity]]
+
+# TODO: Prove that the binomial coefficient \binom{n}{k} is the number of ways we can distribute k
+# balls in n bins.
+
+Binomial coefficients can be used to denote the number of ways we can divide \( n \) objects into
+two groups of size \( k \) and \( n - k \). Indeed, number all objects \( o_1, ..., o_n \) and
+place them in any order. Now the first \( k \) objects will go into the first group and the
+remaining objects into the second.
+
+There are a total of \( n! \) possible orderings of \( n \) objects. However, we are free to
+reorder the first \( k \) as well as the last \( n - k \) objects without ultimately changing the
+solution. Objects in the same bin are indistuingishable from each other.
+
+Therefore, we end up finding
+
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\]
+
+ways to distribute these objects over the two bins.
+
+# TODO: Does the binomial coefficients follow from the orbit-stabilizer theorem?
+# For example: 5 balls, 3 boxes: Number 1, 2, 3, 4, 5 then there are 5! ways in total to arrange 5
+# balls, but if equivalence is "balls is in first 3 or ball is in last 2", should divide by 2!3!?
+[[denote:20220404T091041][Orbit-stabilizer theorem]]
+
+# TODO: Arranging n indistuingishable objects into k groups. This uses the stars and bars method to
+# find \binom{n+k-1}{k-1}
+[[denote:20220404T092238][Stars and bars method]]

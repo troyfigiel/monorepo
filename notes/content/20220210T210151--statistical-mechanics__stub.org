@@ -1,0 +1,33 @@
+:ctime:    20220210210151
+:ROAM_ALIASES: "Statistical physics"
+:END:
+#+title: Statistical mechanics
+#+filetags: :stub:
+
+When a system has a large number of possible [[denote:20220405T214050][Microstates]], it is often impossible to follow its
+evolution exactly. In this case, we resort to describing the [[denote:20220405T214025][Macrostate]] of the
+system.
+
+Statistical physics is precisely the set of tools used to form this bridge between the
+microscopic world and the macroscopic world.
+
+Although there system often behave completely differently on a microscopic level, their macroscopic
+behaviour is often very similar (e.g. [[denote:20220404T214710][Universality]], [[denote:20220324T214223][Ideal gas law]] for very different gases, ...)
+
+A key aspect of statistical mechanics is that the microscopic world can have fully reversible laws
+of motion, but the macroscopic world is irreversible (see [[denote:20220324T214316][Second law of thermodynamics]]). This is
+also closely related to [[denote:20220306T193749][Chaos theory]].
+
+Many concepts in [[denote:20220314T210747][Probability theory]] play a central role in statistical mechanics. Especially the
+[[denote:20220210T091048][Central limit theorem]], which is the underlying reason why macroscopic quantities can often be seen
+as pure numbers.
+
+The [[denote:20220405T225120][Fundamental postulate of statistical mechanics]] motivates the definition of the [[denote:20220326T111204][Microcanonical
+ensemble]] and allows us to derive other [[denote:20220326T111057][Statistical ensembles]]. Alternative derivations of these
+ensembles follow from the [[denote:20220215T230625][Principle of maximum entropy]]. This has close ties to [[denote:20220210T200903][Information theory]],
+
+- [[denote:20220326T114020][Thermodynamic limit]]
+- [[denote:20220218T233605][Partition function]]
+
+Some famous models:
+- [[denote:20220329T210550][Ising model]]

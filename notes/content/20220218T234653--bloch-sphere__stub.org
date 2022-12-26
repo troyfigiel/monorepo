@@ -1,0 +1,7 @@
+:ctime:    20220218234653
+:END:
+#+title: Bloch sphere
+#+filetags: :stub:
+
+* TODO
+Work out relation to [[denote:20220218T234418][Fubini-Study metric]]

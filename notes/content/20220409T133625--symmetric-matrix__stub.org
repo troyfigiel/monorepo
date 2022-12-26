@@ -1,0 +1,6 @@
+:ctime:    20220409133625
+:END:
+#+title: Symmetric matrix
+#+filetags: :stub:
+
+

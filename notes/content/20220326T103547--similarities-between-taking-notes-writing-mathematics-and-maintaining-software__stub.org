@@ -1,0 +1,9 @@
+:ctime:    20220326103547
+:END:
+#+title: Similarities between taking notes, writing mathematics and maintaining software
+#+filetags: :stub:
+
+- There should be a clear story in both: [[denote:20220323T180659][Importance of story-telling]].
+- Proofs fill the role of "low-level algorithms" which should be encompassed in functions (i.e.
+  theorems or lemmas) to be called when needed.
+- Curry-Howard isomorphism makes this a bit more precise.

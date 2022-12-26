@@ -1,0 +1,8 @@
+:ctime:    20220320121203
+:END:
+#+title: Euler-Maclaurin formula
+#+filetags: :stub:
+
+- It can be used to calculate an asymptotic expansion of \( \log n! = \sum\limits_{k=1}^n \log k \) and find [[denote:20220218T213931][Stirling's approximation]]
+- It gives an exact result for [[denote:20220223T205238][Faulhaber's formula]], since we have a finite number of correction terms
+- It can be used to find the asymptotic expansion for the [[denote:20220314T193000][Harmonic numbers]]

@@ -1,0 +1,6 @@
+:ctime:    20220303200225
+:END:
+#+title: Polynomial regression
+#+filetags: :stub:
+
+

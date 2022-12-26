@@ -1,0 +1,7 @@
+:ctime:    20220223082948
+:END:
+#+title: Higher model complexity decreases bias, but increases variance
+#+filetags: :stub:
+
+
+

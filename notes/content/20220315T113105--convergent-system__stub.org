@@ -1,0 +1,14 @@
+:ctime:    20220315113105
+:END:
+#+title: Convergent system
+#+filetags: :stub:
+
+Once [[denote:20220301T193147][Configuration drift]] has been observed, a system for which state has diverged from expectations
+will be made into a convergent system, i.e. a system where the state changes over time in such a
+way as to close the gap between reality and expectations of administrators.
+
+This is usually done through tools like:
+- [[denote:20220315T113939][Puppet]]
+- [[denote:20220315T113946][Chef]]
+- [[denote:20220218T230731][Ansible]]
+

@@ -1,0 +1,4 @@
+#+title: QuickCheck
+#+filetags: :stub:
+
+A Haskell library designed for [[denote:20220613T094234][Property-based testing]].

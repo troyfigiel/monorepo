@@ -1,0 +1,13 @@
+#+title: Lambda architecture
+#+filetags: :stub:
+
+The lambda architecture is a generic architecture that lets us handle [[denote:20221028T150050][Data streams]].
+
+Incoming data is sent to both a [[denote:20221028T151542][Batch layer]] and a [[denote:20221028T151552][Speed layer]].
+
+Predictions created from the [[denote:20221028T151552][Speed layer]] are then sent to the [[denote:20221028T152813][Serving layer]].
+
+The name of this architecture comes from its topology, which resembles the Greek letter lambda.
+
+Reference:
+- http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html

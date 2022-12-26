@@ -1,0 +1,30 @@
+:ctime:    20220325223446
+:END:
+#+title: Stable distribution
+#+filetags: :stub:
+
+A distribution is stable if a linear combination of two independent random variables with this
+distribution has the same distribution up to location and scaling.
+
+This defines a four-parameter family of distributions with characteristic function
+
+\begin{equation*}
+\varphi(t; \alpha, \beta, c, \mu) = \exp \left( it \mu - |ct|^{\alpha} (1 - i \beta \text{sgn}(t) \Phi) \right)
+\end{equation*}
+
+where
+
+\begin{equation*}
+\Phi =
+\begin{cases}
+\tan \left( \frac{\pi \alpha}{2} \right) & \alpha \neq 1 \\
+-\frac{2}{\pi} \log |ct| & \alpha = 1
+\end{cases}
+\end{equation*}
+
+Examples are:
+- [[denote:20220218T225024][Cauchy distribution]] for \( (\alpha, \beta, c, \mu) = (1, 0, 1, 0) \)
+- [[denote:20220325T225006][Lévy distribution]] for \( (\alpha, \beta, c, \mu) = (1/2, 1, 1, 0) \)
+- [[denote:20220210T091147][Normal distribution]] for \( (\alpha, \beta, c, \mu) = (2, 0, 1, 0) \)
+
+The stable distribution plays an important role in the [[denote:20220325T230304][Generalized central limit theorem]].

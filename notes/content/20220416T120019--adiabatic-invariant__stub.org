@@ -1,0 +1,5 @@
+:ctime:    20220416120019
+:END:
+#+title: Adiabatic invariant
+#+filetags: :stub:
+

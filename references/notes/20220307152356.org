@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       96bf43fa-e9ce-4019-9c9b-b80693a1b951
-:mtime:    20220307152402
-:ctime:    20220307152356
-:END:
-#+title: Pareto distribution
-#+filetags: :stub:
-
-

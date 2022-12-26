@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       74a7749f-1fcd-445c-92bf-06a85e4fa1d2
-:mtime:    20220320143848
-:ctime:    20220320143847
-:END:
-#+title: Distinction between probability theory and statistics
-#+filetags: :stub:
-
-

@@ -1,0 +1,6 @@
+:ctime:    20220403160043
+:END:
+#+title: Chemical potential
+#+filetags: :stub:
+
+

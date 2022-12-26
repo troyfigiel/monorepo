@@ -1,0 +1,6 @@
+:ctime:    20220301171134
+:END:
+#+title: Mood's median test
+#+filetags: :stub:
+
+

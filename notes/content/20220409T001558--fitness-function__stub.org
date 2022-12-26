@@ -1,0 +1,6 @@
+:ctime:    20220409001558
+:END:
+#+title: Fitness function
+#+filetags: :stub:
+
+

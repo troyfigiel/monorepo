@@ -1,0 +1,10 @@
+#+title: Data stream
+#+filetags: :stub:
+
+A data stream collects data in a continuous fashion.
+
+This does not have the [[denote:20221028T150802][Latency]] that [[denote:20221028T150511][Batch processing]] has, so we can deploy models continuously.
+
+# TODO: Why exactly? Explain in more detail
+Due to the [[denote:20221028T151112][CAP theorem]], data streaming runs into problems regarding consistency of data.
+These problems are alleviated through architectural choices such as through the [[denote:20221028T145644][Lambda architecture]].
