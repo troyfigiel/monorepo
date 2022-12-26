@@ -25,14 +25,12 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
-+ By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage [[https://github.com/ralismark/nix-appimage][for example]]. I should try this out for my Emacs configuration.
++ By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example [[https://github.com/ralismark/nix-appimage]]. I should try this out for my Emacs configuration.
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
 + What is the fastest way to grep through a large file? How can Emacs handle searching through large files?
 + Move my eshell aliases into a version-controlled file. Which aliases are nice to have?
 + Think about a useful eshell workflow. How do I add completion (pcompletion)? The main selling point of eshell is its integration with Emacs including TRAMP.
 + Sometimes I want to pull up a shell for a directory, but the shell I pull up is not in the directory belonging to the buffer. Is there a smart way to work with this? I also do not want to end up with too many shell buffers.
-+ Switch to denote. A good way to start is by first setting up the inbox. This will allow me to get a feeling over a couple of days for how denote works.
-+ I have been using the denote naming schema for a bit now. Is there a way to extract all the keywords used in a given directory? That would be especially useful for quickly seeing what is in a directory. It will allow me to have a flatter directory structure and rely more on keyword search functionality.
 + Use Emacs for a while and then start documenting in a README what kind of functionality I tend to use and like. For example, grep across a project, export the results with embark-export, enable wgrep mode and then run a regexp-replace.
 + Using org-agenda and syncing it with Nextcloud could be an interesting workflow. It should be possible, but I am not sure how much benefit it would bring me at this point in time. In any case, it is worth exploring.
 + I need to learn how org links work. This is useful for transclusions. Which functionality do these org links come with? How do I link to a region?

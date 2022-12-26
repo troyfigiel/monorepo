@@ -13,11 +13,11 @@
 (use-package emacs
   :hook ((prog-mode . display-line-numbers-mode)
 	 (isearch-mode-end . tf-isearch-jump-to-match-start))
-  :bind* (("C-x C-b" . ibuffer)
-	  ;; When I try to kill all text up to an uncommon character such as a quote, I have to use
-	  ;; the character before the quote which could appear several times. This makes it a bit
-	  ;; annoying to use `zap-to-char' as the default.
-	  ("M-z" . zap-up-to-char))
+  :bind (("C-x C-b" . ibuffer)
+	 ;; When I try to kill all text up to an uncommon character such as a quote, I have to use
+	 ;; the character before the quote which could appear several times. This makes it a bit
+	 ;; annoying to use `zap-to-char' as the default.
+	 ("M-z" . zap-up-to-char))
   :custom
   (calendar-week-start-day 1)
   (custom-file null-device)
@@ -25,7 +25,7 @@
   (display-time-day-and-date t)
   (display-time-default-load-average nil)
   (fill-column 99)
-  (initial-buffer-choice 'eshell)
+  (initial-buffer-choice "~/projects/monorepo")
   (initial-scratch-message nil)
   (sentence-end-double-space nil)
   (visible-bell t)
@@ -140,38 +140,41 @@
   :ensure consult
   :after flymake)
 
-;; TODO: Add the Citar package? How malleable and fitting is it in the
-;; whole Vertico, Embark, Consult, etc. environment?
-(use-package consult-notes
+;; TODO: Create a bib file
+;; TODO: Connect a library using `citar-library-paths'
+(use-package citar
   :ensure)
+
+(use-package consult-notes
+  :ensure
+  :bind ("M-g D" . consult-notes)
+  :custom (consult-notes-denote-display-id nil)
+  :config (consult-notes-denote-mode 1))
+
+;; TODO: Instead of the bindings, it would be better if I could use Embark acting on consult-notes
+;; for everything. I ran into some bugs trying this out though. For example, in
+;; `consult-notes-denote--source' the category keyword is hard-coded to `'consult-notes-category',
+;; not to its value of `consult-note'.
+(use-package denote
+  :ensure
+  :hook (dired-mode . denote-dired-mode)
+  :bind
+  (("C-c n a" . denote-keywords-add)
+   ("C-c n b" . denote-link-find-backlink)
+   ("C-c n f" . denote-link-find-file)
+   ("C-c n i" . denote-link-or-create)
+   ("C-c n r" . denote-keywords-remove))
+  :custom
+  (denote-prompts '(title subdirectory keywords))
+  (denote-known-keywords nil)
+  (denote-directory "~/projects/monorepo/references/notes")
+  :config
+  (setq denote-org-link-format denote-id-only-link-format))
 
 (use-package csv-mode
   :ensure
   :hook ((csv-mode . csv-align-mode)
 	 (csv-mode . csv-guess-set-separator)))
-
-(use-package denote
-  :ensure
-  :hook (dired-mode . denote-dired-mode)
-  :bind (:map dired-mode-map
-	      ("C-c C-n C-r" . denote-dired-rename-marked-files))
-  :custom
-  (denote-link-backlinks-display-buffer-action
-   '((display-buffer-reuse-window
-      display-buffer-in-side-window)
-     (side . left)
-     (slot . 99)
-     (window-width . 0.3)))
-  :config
-  (defun my-denote-split-org-subtree ()
-    "Create new Denote note as an Org file using current Org subtree."
-    (interactive)
-    (let ((text (org-get-entry))
-	  (heading (org-get-heading :no-tags :no-todo :no-priority :no-comment))
-	  (tags (org-get-tags)))
-      (delete-region (org-entry-beginning-position) (org-entry-end-position))
-      (denote heading tags 'org)
-      (insert text))))
 
 (use-package detached
   :ensure)
@@ -378,6 +381,7 @@
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes)
   :custom
+  (org-descriptive-links nil)
   (org-directory (file-name-concat (xdg-user-dir "DOCUMENTS") "org"))
   (org-agenda-files (list (file-name-concat org-directory "agenda.org"))))
 
@@ -446,9 +450,7 @@
 (use-package vertico
   :ensure
   :custom (vertico-cycle t)
-  :config
-  (vertico-mode 1)
-  (vertico-flat-mode 1))
+  :config (vertico-mode 1))
 
 (use-package visual-fill-column
   :ensure

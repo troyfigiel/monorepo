@@ -27,6 +27,7 @@ in {
             download = setXDGUserDir "downloads";
             music = homeDir;
             pictures = homeDir;
+            publicShare = homeDir;
             templates = homeDir;
             videos = homeDir;
           }
