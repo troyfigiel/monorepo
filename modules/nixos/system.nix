@@ -7,14 +7,6 @@ in {
 
   config = mkIf cfg.enable (mkMerge [
     {
-      # TODO: Check whether auto-upgrade works or I need to adjust some flags.
-      system.autoUpgrade = {
-        enable = true;
-        allowReboot = true;
-        flake = self.outPath;
-        flags = [ "--commit-lock-file" ];
-      };
-
       # TODO: I have to move the packages to the respective modules that use them.
       environment.systemPackages = with pkgs; [
         nix-index
