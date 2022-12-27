@@ -7,7 +7,6 @@
   pass = import ./pass.nix;
   xdg = import ./xdg.nix;
 
-  background = import ./desktop/background.nix;
   dunst = import ./desktop/dunst.nix;
   i3 = import ./desktop/i3.nix;
   picom = import ./desktop/picom.nix;

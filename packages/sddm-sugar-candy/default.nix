@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitLab, writeText, qtgraphicaleffects, wallpaper }:
+{ stdenv, fetchFromGitLab, writeText, qtgraphicaleffects, background }:
 
 stdenv.mkDerivation rec {
   version = "2b72ef6c6f720fe0ffde5ea5c7c48152e02f6c4f";
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   themeConfUser = writeText "themeConfUser" ''
     [General]
 
-    Background="wallpaper.jpg"
+    Background="background"
     ## Path relative to the theme root directory. Most standard image file formats are allowed including support for transparency. (e.g. background.jpeg/illustration.GIF/Foto.png/undraw.svgz)
 
     DimBackgroundImage="0.0"
@@ -161,7 +161,7 @@ stdenv.mkDerivation rec {
     dir=$out/share/sddm/themes/sugar-candy;
     mkdir -p $dir;
     cp -r $src/. $dir;
-    cp ${wallpaper}/wallpaper.jpg $dir/wallpaper.jpg;
+    cp ${background} $dir/background;
     cp ${themeConfUser} $dir/theme.conf.user;
   '';
 }

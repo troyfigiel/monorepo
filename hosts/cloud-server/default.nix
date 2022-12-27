@@ -18,7 +18,7 @@
   users.users = {
     root = {
       openssh.authorizedKeys.keys =
-        [ (builtins.readFile ../../keys/troy.pub.ssh) ];
+        [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
     };
 
     nixos = {

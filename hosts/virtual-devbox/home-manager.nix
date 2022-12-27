@@ -11,7 +11,6 @@
       in {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          hmModules.background
           hmModules.emacs
           hmModules.git
           hmModules.home
@@ -32,7 +31,6 @@
             onLaptop = false;
           };
 
-          background.enable = true;
           i3.enable = true;
           #   picom.enable = true;
           rofi.enable = true;

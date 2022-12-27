@@ -10,7 +10,6 @@
       troy = {
         imports = [
           inputs.impermanence.nixosModules.home-manager.impermanence
-          hmModules.background
           hmModules.dunst
           hmModules.emacs
           hmModules.firefox
@@ -26,7 +25,6 @@
         ];
 
         my = {
-          background.enable = true;
           dunst.enable = true;
           firefox = {
             enable = true;

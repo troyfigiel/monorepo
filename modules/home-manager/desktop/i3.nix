@@ -87,12 +87,22 @@ in {
             '';
           };
 
-          startup = [{
-            command =
-              "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${pkgs.wallpaper}/wallpaper.jpg";
-            always = true;
-            notification = false;
-          }];
+          startup = [
+            {
+              command =
+                "${pkgs.feh}/bin/feh --bg-fill ${../../../assets/nixos.jpg}";
+              always = true;
+              notification = false;
+            }
+            {
+              command =
+                "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${
+                  ../../../assets/nixos.jpg
+                }";
+              always = true;
+              notification = false;
+            }
+          ];
         };
       };
     };

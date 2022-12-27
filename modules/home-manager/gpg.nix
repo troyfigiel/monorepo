@@ -22,7 +22,7 @@ in {
       # TODO: This is currently stopping me from completely defining my host name in terms of the directory name.
       publicKeys = [
         {
-          source = ../../keys/troy.pub.asc;
+          source = ../../assets/keys/troy.pub.asc;
           trust = 5;
         }
         {
