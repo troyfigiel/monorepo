@@ -1,9 +1,11 @@
 {
   home = import ./home.nix;
+  firefox = import ./firefox.nix;
+  git = import ./git.nix;
+  gpg = import ./gpg.nix;
+  messenger = import ./messenger.nix;
+  pass = import ./pass.nix;
   xdg = import ./xdg.nix;
-
-  firefox = import ./applications/firefox.nix;
-  messenger = import ./applications/messenger.nix;
 
   background = import ./desktop/background.nix;
   dunst = import ./desktop/dunst.nix;
@@ -11,10 +13,5 @@
   picom = import ./desktop/picom.nix;
   rofi = import ./desktop/rofi;
 
-  git = import ./development/git.nix;
-
   emacs = import ../../emacs/module.nix;
-
-  gpg = import ./security/gpg.nix;
-  pass = import ./security/pass.nix;
 }
