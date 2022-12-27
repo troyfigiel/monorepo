@@ -102,13 +102,14 @@
 
 (use-package consult
   :ensure
-  ;; TODO: Do I want to bind consult-kmacro?
-  :bind
+  ;; In eshell and vterm M-s is already taken as a binding, so I need to override these bindings.
+  :bind*
   (("C-x b" . consult-buffer)
    ("C-x p b" . consult-project-buffer)
    ("M-y" . consult-yank-pop)
    ("M-g f" . consult-flymake)
    ("M-g g" . consult-goto-line)
+   ("M-g k" . consult-kmacro)
    ("M-g M-g" . consult-goto-line)
    ("M-g o" . consult-outline)
    ("M-s e" . consult-isearch-history)
@@ -169,7 +170,7 @@
   :custom
   (denote-prompts '(title subdirectory keywords))
   (denote-known-keywords nil)
-  (denote-directory "~/projects/monorepo/references/notes")
+  (denote-directory "~/projects/monorepo/notes")
   :config
   (setq denote-org-link-format denote-id-only-link-format))
 

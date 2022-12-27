@@ -1,16 +1,20 @@
-{ inputs, self, ... }:
+{ inputs, lib, self, ... }:
 
 let
-  mkSystem = { host, system, impermanence, ... }: {
+  mkSystem = { host, system, impermanence, secrets }: {
     name = host;
     value = inputs.nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {
-        inherit inputs self impermanence;
-        inherit (self) hmModules nixosModules;
-      };
+      specialArgs = { inherit inputs self impermanence; };
       pkgs = self.legacyPackages.${system};
-      modules = [ { networking.hostName = host; } ./${host} ];
+      modules = [ { networking.hostName = host; } ./${host} ]
+        ++ lib.optionals secrets [
+          # TODO: Add secrets to all systems (at least a login password)
+          inputs.sops-nix.nixosModules.sops
+          { sops.defaultSopsFile = ./${host}/secrets.yaml; }
+        ] ++ lib.optional impermanence
+        # TODO: Make all systems impermanent
+        inputs.impermanence.nixosModules.impermanence;
     };
   };
   mkDeploy = { host, ipAddress }:
@@ -33,16 +37,19 @@ let
       host = "laptop";
       system = "x86_64-linux";
       impermanence = true;
+      secrets = true;
     }
     {
       host = "cloud-server";
       system = "x86_64-linux";
       impermanence = false;
+      secrets = true;
     }
     {
       host = "virtual-devbox";
       system = "aarch64-linux";
       impermanence = true;
+      secrets = false;
     }
   ];
   deployAttrs = [{

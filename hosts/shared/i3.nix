@@ -1,11 +1,7 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
-with lib;
-let cfg = config.my.i3;
-in {
-  options.my.i3.enable = mkEnableOption "i3";
-
-  config = mkIf cfg.enable {
+{
+  home-manager.users.troy = {
     xsession = {
       enable = true;
 
@@ -90,14 +86,14 @@ in {
           startup = [
             {
               command =
-                "${pkgs.feh}/bin/feh --bg-fill ${../../../assets/nixos.jpg}";
+                "${pkgs.feh}/bin/feh --bg-fill ${../../assets/nixos.jpg}";
               always = true;
               notification = false;
             }
             {
               command =
                 "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${
-                  ../../../assets/nixos.jpg
+                  ../../assets/nixos.jpg
                 }";
               always = true;
               notification = false;

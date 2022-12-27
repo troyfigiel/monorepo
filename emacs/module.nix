@@ -1,11 +1,8 @@
 { impermanence, config, lib, pkgs, ... }:
 
-with lib;
-let cfg = config.my.emacs;
+let inherit (lib) mkMerge optionalAttrs;
 in {
-  options.my.emacs.enable = mkEnableOption "Emacs";
-
-  config = mkIf cfg.enable (mkMerge [
+  home-manager.users.troy = mkMerge [
     {
       programs.emacs = {
         enable = true;
@@ -38,8 +35,8 @@ in {
     }
 
     (optionalAttrs impermanence {
-      home.persistence."/nix/persist/${config.home.homeDirectory}".directories =
+      home.persistence."/nix/persist/${config.home-manager.users.troy.home.homeDirectory}".directories =
         [ ".emacs.d/eln-cache" ".emacs.d/var" ".emacs.d/etc" ];
     })
-  ]);
+  ];
 }

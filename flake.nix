@@ -45,7 +45,6 @@
         ./bootstrap/flake-module.nix
         ./hosts/flake-module.nix
         ./infrastructure/flake-module.nix
-        ./modules/flake-module.nix
         ./templates/flake-module.nix
       ];
 

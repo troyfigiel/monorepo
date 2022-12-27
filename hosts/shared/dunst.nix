@@ -1,11 +1,7 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
-with lib;
-let cfg = config.my.dunst;
-in {
-  options.my.dunst.enable = mkEnableOption "dunst";
-
-  config = mkIf cfg.enable {
+{
+  home-manager.users.troy = {
     # TODO: Create a systemd service that checks the battery every minute
     # and sends a notification if the battery is low.
     services.dunst = {

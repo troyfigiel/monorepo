@@ -1,11 +1,5 @@
-{ config, lib, ... }:
-
-with lib;
-let cfg = config.my.rofi;
-in {
-  options.my.rofi.enable = mkEnableOption "Rofi";
-
-  config = mkIf cfg.enable {
+{
+  home-manager.users.troy = {
     programs.rofi = {
       enable = true;
 
