@@ -1,6 +1,6 @@
 * TODO.org
 ** Code cleaning
-+ I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that?
++ I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that? Can [[https://github.com/jtojnar/nixpkgs-hammering][nixpkgs-hammering]] do something like this?
 + Modularize my Terraform code.
 + Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
 

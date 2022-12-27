@@ -5,7 +5,10 @@
   # will bloat the build process quite a bit.
   # Not following inputs might be better if you want full compatibility?
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
@@ -20,6 +23,8 @@
     };
 
     impermanence.url = "github:nix-community/impermanence";
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     simple-nixos-mailserver = {
       url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-22.05";
@@ -50,10 +55,11 @@
           config.allowUnfreePredicate = pkg:
             builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "skypeforlinux" ];
 
-          # Software that is not built for aarch64 does seem to work fine.
-          # TODO: Does it make sense setting this for x86_64 systems as well?
+          # TODO: Does it make sense setting this for x86_64 systems as well? Software that is not
+          # built for aarch64 does seem to work fine.
           config.allowUnsupportedSystem = true;
           overlays = [
+            inputs.deploy-rs.overlay
             inputs.emacs-overlay.overlay
             (import ./emacs/overlay.nix)
             (import ./packages/overlay.nix)
@@ -65,28 +71,25 @@
           default = {
             type = "app";
             program = pkgs.writeShellApplication {
-              name = "deploy-my-network";
-              # TODO: I should not hard code laptop and cloud-server here. How should I determine which hosts to deploy?
+              name = "monorepo";
               text = ''
-                deploy_host () {
-                   printf '\e[33m%s\e[0m\n' "Deploying to $1" \
-                   && nix run .#hosts "$1" \
-                   && printf '\e[32m%s\e[0m\n' "Successful deployment to $1!" \
-                   || printf '\e[31m%s\e[0m\n' "Failed deployment to $1!"
-                }
-
+                if [[ "$EUID" != 0 ]]; then
+                   echo 'Root privileges are needed to activate the local NixOS configuration.'
+                   exit 1
+                fi
                 nix fmt
                 nix flake check --keep-going || exit 1
                 nix run .#infrastructure
-                deploy_host laptop
-                deploy_host cloud-server
+                nix run .#local
+                nix run .#remote
               '';
             };
           };
         };
-        # TODO: This is a basic working config. I will need to figure out how to leverage the perSystem functionality better.
+
         # TODO: I need to run touch $out for the linters, because builds need to have an output.
-        # This feels hacky. Is it the only way? It seems I am not the only one to do so: https://github.com/kira-bruneau/flake-linter/blob/main/lib/make-flake-linter/default.nix
+        # This feels hacky. Is it the only way? It seems I am not the only one to do so:
+        # https://github.com/kira-bruneau/flake-linter/blob/main/lib/make-flake-linter/default.nix
         checks = {
           deadnix = pkgs.runCommand "checks-deadnix" {
             buildInputs = [ pkgs.deadnix ];
@@ -99,20 +102,6 @@
             buildInputs = [ pkgs.statix ];
           } ''
             statix check ${./.} 2>/dev/null
-            touch $out
-          '';
-
-          # TODO: nix-linter still has problems with ./${hosts}. Skipping over
-          # hosts/flake-module.nix is a hack for now. TODO: nix-linter also gives me a false
-          # positive for the Jupyter template, so I will have to remove that file for now.
-          nix-linter = pkgs.runCommand "checks-nix-linter" {
-            buildInputs = [ pkgs.findutils pkgs.nix-linter ];
-          } ''
-            find ${./.} -type f -name '*.nix' \
-                 -not -path ${./.}/hosts/flake-module.nix \
-                 -not -path ${./.}/templates/jupyter/flake.nix \
-                 -print0 \
-                 | xargs -0 nix-linter
             touch $out
           '';
 
