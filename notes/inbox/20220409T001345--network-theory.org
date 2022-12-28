@@ -1,7 +1,0 @@
-#+title:      Network theory
-#+date:       [2022-04-09 Sat 00:13]
-#+filetags:
-#+identifier: 20220409T001345
-
-[[denote:20220405T094131][Network theory]]
-https://math.ucr.edu/home/baez/networks/networks_1.html
