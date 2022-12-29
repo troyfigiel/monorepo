@@ -1,0 +1,4 @@
+#+title:      Smooth manifold
+#+date:       [2022-12-29 Thu 10:48]
+#+filetags:   :empty:unlinked:
+#+identifier: 20221229T104823

@@ -1,0 +1,14 @@
+#+title:      Asymptotic series of integrals
+#+date:       [2022-03-19 Sat 10:34]
+#+filetags:
+#+identifier: 20220319T103406
+
+* [[denote:20220322T095140][Airy function]]
+* [[denote:20220322T095001][Bessel function]]
+* [[denote:20220322T095415][Elliptic integral]]
+* [[denote:20220319T212416][Error function]]
+* [[denote:20220318T233351][Exponential integral]]
+[[denote:20220318T233342][?Asymptotic series of the exponential integral]]
+
+* [[denote:20220319T212306][Gamma function]]
+[[denote:20220218T214915][?Asymptotic series of the gamma function]]

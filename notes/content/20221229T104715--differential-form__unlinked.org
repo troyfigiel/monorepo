@@ -1,0 +1,10 @@
+#+title:      Differential form
+#+date:       [2022-12-29 Thu 10:47]
+#+filetags:   :unlinked:
+#+identifier: 20221229T104715
+
+Differential forms are used to to define integrands over differentiable manifolds. Formally, differential forms can be defined in terms of (the exterior power of) the cotangent bundle over a manifold [[denote:20221229T120513]].
+
+The volume of the space a differential form can be integrated over defines the degree of the differential form [[denote:20221229T121153]]. Forms of the same degree define a vector space [[denote:20221229T121402]].
+
+The space of differential forms is often embellished with various other structures such as the exterior product ([[denote:20221229T114236]]), the exterior derivative ([[denote:20221229T110004]]), or the interior derivative ([[denote:20221229T115413]]).

@@ -1,0 +1,6 @@
+#+title:      Degree of a differential form
+#+date:       [2022-12-29 Thu 12:11]
+#+filetags:
+#+identifier: 20221229T121153
+
+A form that can be integrated over a k-dimensional space, is called a k-form. The value of k is bounded between 0 and n, with 0-forms understood as differentiable functions. The n-forms (also called top-dimensional forms) are called volume forms [[denote:20221229T115021]].

@@ -1,8 +1,0 @@
-#+title:      Random variable
-#+date:       [2022-02-10 Thu 09:27]
-#+filetags:   :unfinished:
-#+identifier: 20220210T092705
-
-- [[denote:20220327T160204][Convergence of random variables]]
-- We often look at independent and identically distributed random variables. We shorten this as
-  i.i.d. random variables.

@@ -1,0 +1,4 @@
+#+title:      Definition of a differential form
+#+date:       [2022-12-29 Thu 12:05]
+#+filetags:   :empty:
+#+identifier: 20221229T120513

@@ -1,0 +1,19 @@
+#+title:      Examples of probability distributions
+#+date:       [2022-03-07 Mon 15:26]
+#+filetags:
+#+identifier: 20220307T152654
+
+* Discrete distributions
+- [[denote:20220210T094457][Bernoulli distribution]]
+- [[denote:20220210T094431][Binomial distribution]]
+- [[denote:20220303T222830][Point mass distribution]]
+- [[denote:20220210T094330][Poisson distribution]]
+
+* Continuous distributions
+- [[denote:20220211T100838][Chi-squared distribution]]
+- [[denote:20220210T094351][Exponential distribution]]
+- [[denote:20220307T152415][Gamma distribution]]
+- [[denote:20220210T091147][Normal distribution]]
+- [[denote:20220307T152356][Pareto distribution]]
+- [[denote:20220211T100816][Student's t-distribution]]
+- [[denote:20220302T235424][Weibull distribution]]

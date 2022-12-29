@@ -1,5 +1,0 @@
-:ctime:    20220215212717
-:END:
-#+title: ?The binomial distribution belongs to the exponential family
-#+filetags: :appendix:stub:
-

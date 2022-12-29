@@ -1,0 +1,24 @@
+#+title:      When to apply which hypothesis test
+#+date:       [2022-03-07 Mon 10:45]
+#+filetags:
+#+identifier: 20220307T104528
+
+# TODO: Add when to use which tests
+
+- [[denote:20220215T230236][Student's t-test]]
+- [[denote:20220215T232749][Z-test]]
+- [[denote:20220215T233033][F-test]]
+- [[denote:20220215T214844][Chi-squared test]]
+- [[denote:20220215T215210][Pearson's chi-squared test]]
+- [[denote:20220215T233118][G-test]]
+- [[denote:20220215T233133][Kolmogorov-Smirnov test]]
+- [[denote:20220215T233147][Sign test]]
+- [[denote:20220215T233218][Wilcoxon signed-rank test]]
+- [[denote:20220215T233251][Wilcoxon rank-sum test]]
+- [[denote:20220215T233251][Mann Whitney U test]]
+- [[denote:20220221T234336][Granger causality test]]
+- [[denote:20220301T120410][Binomial test]]
+- [[denote:20220301T170523][Fisher's exact test]]
+- [[denote:20220222T095858][Paired t-test]]
+- [[denote:20220301T115136][McNemar's test]]
+- [[denote:20220301T171134][Mood's median test]]

@@ -1,9 +1,0 @@
-#+title:      Principal component analysis
-#+date:       [2022-02-19 Sat 00:56]
-#+filetags:   :unfinished:
-#+identifier: 20220219T005637
-
-Works really well for plotting if the first two principal components form the majority of the
-variance.
-
-# TODO: Principal components are eigenvectors of the data's [[denote:20220219T005731][Covariance matrix]]

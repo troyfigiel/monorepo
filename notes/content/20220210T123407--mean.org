@@ -1,0 +1,15 @@
+#+title:      Mean
+#+date:       [2022-02-10 Thu 12:34]
+#+filetags:
+#+identifier: 20220210T123407
+
+There are many different notions of mean. The most common notion is the [[denote:20220210T131937][Arithmetic mean]] which for a set of numbers \( x_1, ..., x_n \) is defined as
+
+\[ \bar{x}_{\mathrm{AM}} = \frac{1}{n} \sum_{i = 1}^{n} x_i \]
+
+Two other well-known notions of mean are the [[denote:20220210T132154][Geometric mean]] and the [[denote:20220210T132205][Harmonic mean]] defined as
+
+\[ \bar{x}_{\mathrm{GM}} = \left( \prod_{i = 1}^{n} x_i \right)^{1 / n} \]
+\[ \bar{x}_{\mathrm{HM}} = \frac{n}{\sum_{i = 1}^{n} 1 / x_i} \]
+
+All these notions of means can be combined into a single [[denote:20220210T133429][Generalized mean]].

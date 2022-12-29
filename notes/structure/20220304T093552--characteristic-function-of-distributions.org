@@ -1,0 +1,10 @@
+#+title:      Characteristic function of distributions
+#+date:       [2022-03-04 Fri 09:35]
+#+filetags:
+#+identifier: 20220304T093552
+
+* Binomial distribution
+# TODO: Add characteristic function of the binomial distribution
+
+See:
+- [[denote:20220304T093244][?Characteristic function of the binomial distribution]]

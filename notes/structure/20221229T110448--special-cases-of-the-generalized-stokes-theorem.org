@@ -1,0 +1,9 @@
+#+title:      Special cases of the generalized Stokes theorem
+#+date:       [2022-12-29 Thu 11:04]
+#+filetags:
+#+identifier: 20221229T110448
+
+# TODO Work out the relation to the fundamental theorem of calculus [[denote:20221229T110559]].
+# TODO Work out the relation to the divergence theorem [[denote:20221229T110647]].
+# TODO Work out the relation to Green's theorem [[denote:20221229T110732]].
+# TODO Work out the relation to Stokes' theorem [[denote:20221229T110818]].

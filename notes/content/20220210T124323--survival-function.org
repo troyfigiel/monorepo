@@ -1,0 +1,28 @@
+#+title:      Survival function
+#+date:       [2022-02-10 Thu 12:43]
+#+filetags:
+#+identifier: 20220210T124323
+
+If the random variable for a one-dimensional probability distribution is interpreted as a time, the
+survival function \( S(t) = \mathrm{Pr}(T > t) \) can be interpreted as the probability of
+surviving past a certain time.
+
+The survival function is the complement of the [[denote:20220210T125006][Cumulative distribution]] and hence is monotonically
+decreasing.
+
+It can be defined as
+
+\begin{equation*}
+\begin{align}
+S_X(x) &= \int\limits_{x}^{\infty} f_X(u) \mathrm{d}u \\
+S_X(x) &= \sum\limits_{u > x} \mathbb{P}(X = u) \\
+\end{align}
+\end{equation*}
+
+for continuous and discrete data respectively.
+
+Some examples can be found in [[denote:20220227T170923][!Survival function]].
+
+[[denote:20220227T200208][The survival function is the exponential of the cumulative hazard function]]
+
+https://en.wikipedia.org/wiki/Survival_function

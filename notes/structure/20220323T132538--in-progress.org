@@ -1,0 +1,25 @@
+#+title:      In progress
+#+date:       [2022-03-23 Wed 13:25]
+#+filetags:
+#+identifier: 20220323T132538
+
+* [[denote:20220326T103700][@All]]
+* [[denote:20220322T170906][@Renormalization]]
+Inspired by the final video of Strogatz, I started looking at more high-level connections between
+renormalization and other fields.
+
+* Analogies between 0D QFT and probability theory
+* Category theory
+I should make a start with this so I can learn how to work with Tikz.
+
+
+* [[denote:20220324T120211][@Percolation theory]]
+* [[denote:20220324T202851][@Statistical mechanics]]
+* [[denote:20220406T001539][@Information geometry]]
+* [[denote:20220411T175849][@Study design]]
+* [[denote:20220416T191904][@Talk with Arpan 2022-04-16]]
+* [[denote:20220419T212854][@Building a computer]]
+* [[denote:20220420T223032][@Feature engineering and selection: A practical approach for predictive models]]
+* [[denote:20220409T145515][@Large deviations theory and statistical physics]]
+* [[denote:20220409T001345][@Network theory]]
+* [[denote:20220323T181411][@Keeping my notes clean]]

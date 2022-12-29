@@ -1,0 +1,11 @@
+#+title:      Group
+#+date:       [2022-02-18 Fri 23:29]
+#+filetags:
+#+identifier: 20220218T232930
+
+A group is a set equipped with an operation that can combine two elements to form a third element, such that
+   1. the operation is associative
+   2. an identity element exists
+   3. every element has an inverse
+
+

@@ -1,0 +1,4 @@
+#+title:      Divergence theorem
+#+date:       [2022-12-29 Thu 11:06]
+#+filetags:   :empty:
+#+identifier: 20221229T110647

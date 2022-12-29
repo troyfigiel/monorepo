@@ -1,0 +1,30 @@
+#+title:      DVC
+#+date:       [2022-02-21 Mon 23:30]
+#+filetags:
+#+identifier: 20220221T233008
+
+# TODO: Write a note about the workflow with DVC vs. the workflow with git
+DVC (data-version control) is a tool created to bring [[denote:20220307T144637][Reproducibility]] to the data science and machine learning workflow.
+
+Internally, it works by saving files as [[denote:20220218T231036][content-addressable storage]]. This allows dvc to version
+control large files. It is easy to get started with the commands, because [[denote:20220224T101425][dvc mirrors the way Git
+works internally]].
+
+Unlike [[denote:20220221T232959][Git LFS]], dvc does not need a server to work and can be run locally with some commands.
+
+However, it is not enough to version the files. We also need a [[denote:20220307T161118][Reproducible workflow]], which dvc
+allows us to do with a YAML-file. This is a big advantage compared to [[denote:20220221T232959][Git LFS]].
+
+The [[denote:20220307T161118][Reproducible workflow]] that dvc enables, makes it a good fit for [[denote:20220307T173055][CI/CD]]. dvc uses [[denote:20220309T105534][Cache]] to store
+all intermediate results and the [[denote:20220309T105801][MD5 hash function]] to check which parts of the workflow need to be
+rerun. For the reproducible workflow, it should be noted that there are two options:
+
+1. dvc pulls the output files that have been saved remotely down to your local machine
+2. dvc reproduces all the steps according to the locked workflow
+
+These results can be different! If one of the steps in the workflow is not deterministic, the
+output might be different from the output saved remotely.
+
+A big difference between dvc and standard [[denote:20220309T163807][Makefiles]] is that dvc relies on the [[denote:20220309T105801][MD5 hash function]] to
+detect changes and which files to rerun where [[denote:20220309T163807][Makefiles]] look at modification times and rerun all of
+the changes downstream.

@@ -1,0 +1,8 @@
+#+title:      Git
+#+date:       [2022-02-18 Fri 23:08]
+#+filetags:
+#+identifier: 20220218T230824
+
+Git is an example of a version-control system. Internally, it uses content-addressable storage [[denote:20220218T231036]] to distinguish different files. This means Git is not well-suited for large or binary files. [[denote:20220221T232909]]
+
+To ignore files in Git, see [[denote:20220309T134118]].

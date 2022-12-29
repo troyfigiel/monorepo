@@ -1,0 +1,16 @@
+#+title:      Techniques for constructing asymptotic series of integrals
+#+date:       [2022-03-22 Tue 11:03]
+#+filetags:
+#+identifier: 20220322T110319
+
+* Integration by parts
+See [[denote:20220322T110349][Integration by parts]]
+
+* Laplace's method
+See [[denote:20220322T110507][Laplace's method]]
+
+* Stationary phase approximation
+See [[denote:20220322T110550][Stationary phase approximation]]
+
+* Method of steepest descent
+See [[denote:20220322T110651][Method of steepest descent]]

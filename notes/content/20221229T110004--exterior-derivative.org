@@ -1,0 +1,6 @@
+#+title:      Exterior derivative
+#+date:       [2022-12-29 Thu 11:00]
+#+filetags:
+#+identifier: 20221229T110004
+
+The exterior derivative allows rephrasing many well-known calculus theorems in a coordinate-independent fashion in terms of the generalized Stokes' theorem [[denote:20221229T110448]].

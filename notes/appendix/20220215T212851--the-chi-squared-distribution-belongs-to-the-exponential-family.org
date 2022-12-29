@@ -1,0 +1,4 @@
+#+title:      The chi-squared distribution belongs to the exponential family
+#+date:       [2022-02-15 Tue 21:28]
+#+filetags:
+#+identifier: 20220215T212851

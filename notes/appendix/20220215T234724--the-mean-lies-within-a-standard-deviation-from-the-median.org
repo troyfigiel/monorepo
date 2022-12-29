@@ -1,0 +1,58 @@
+#+title:      The mean lies within a standard deviation from the median
+#+date:       [2022-02-15 Tue 23:47]
+#+filetags:
+#+identifier: 20220215T234724
+
+# TODO: Finish off the argument for any percentile instead of only the median. It requires a
+# Bernoulli(p) distribution.
+
+Let us be given a random variable \( X \). We denote the median of the distribution of \( X \) by
+\( \nu \).
+
+We may describe \( X \) as a [[denote:20220303T210545][Mixture model]] of two random variables \( X_1 \) and \( X_2 \) nonzero for \(
+x \leq \nu \) and \( x \geq \nu \) respectively. Precisely at the median, each \( X_i \)
+carries half the mass of \( X \).
+
+Let \( W \sim \mathrm{Bernoulli}(1/2) \) be a [[denote:20220210T094457][Bernoulli distribution]] describing whether we pick a
+value below or above the median, such that \( X = WX_1 + (1-W)X_2 \).
+
+We can use the [[denote:20220223T223732][Law of total expectation]] to calculate
+
+\begin{equation*}
+\begin{align}
+\mathbb{E}[X] &= \mathbb{E} \left[ \mathbb{E}[X | W] \right] \\
+&= \mathbb{E}[W] \mathbb{E}[X_1] + \left( 1 - \mathbb{E}[W] \right) \mathbb{E}[X_2] \\
+&= \frac{1}{2} \mathbb{E}[X_1] + \frac{1}{2} \mathbb{E}[X_2] \\
+\mathbb{E}[X^2] &= \mathbb{E} \left[ \mathbb{E}[X^2 | W] \right] \\
+&= \mathbb{E}[W^2] \mathbb{E}[X_1^2] + \mathbb{E}[(1 - W)^2] \mathbb{E}[X_2^2] + 2 \mathbb{E}[W(1-W)] \mathbb{E}[X_1 X_2] \\
+&= \frac{1}{2} \mathbb{E}[X_1^2] + \frac{1}{2} \mathbb{E}[X_2^2]
+\end{align}
+\end{equation*}
+
+If we let \( \mu \) and \( \sigma \) be the mean and standard deviation of \( X \), and \( \mu_i \)
+and \( \sigma_i \) the mean and standard deviation of \( X_i \), we may write
+
+\begin{equation*}
+\begin{align}
+\sigma^2 &= \frac{1}{2} \sigma_1^2 + \frac{1}{2} \sigma_2^{2} + \frac{1}{4} (\mu_2 - \mu_1)^2 \\
+&\geq \left( \frac{\mu_2 - \mu_1}{2} \right)^2 \\
+&= \left( \frac{\mu_2 + \mu_1}{2} - \mu_1 \right)^2 \\
+&= \left( \mu - \mu_1 \right)^2
+\end{align}
+\end{equation*}
+
+Without loss of generality we may assume \( \mu \geq \nu \). This, in combination with the fact
+that \( \nu \geq \mu_1 \) allows us to simplify the above to the sought-after inequality
+
+\[
+\left| \frac{\mu - \nu}{\sigma} \right| \leq 1
+\]
+
+Equality can only happen when \( \sigma_1 = \sigma_2 = 0 \). However, since [[denote:20220303T220832][The point mass
+distribution is the only distribution with vanishing standard deviation]], we know that both \( X_1
+\) and \( X_2 \) must be point-mass distributions. This in turn implies that \( \mu = \nu \) and \(
+\sigma = 0 \), proving that \( X \) is a point mass distribution.
+
+* Reference
+The Mean Is Within One Standard Deviation of Any Median - Colm Art O'Cinneide
+https://www.gwern.net/docs/statistics/1990-ocinneide.pdf

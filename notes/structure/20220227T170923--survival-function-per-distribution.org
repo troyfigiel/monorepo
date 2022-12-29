@@ -1,0 +1,8 @@
+#+title:      Survival function per distribution
+#+date:       [2022-02-27 Sun 17:09]
+#+filetags:
+#+identifier: 20220227T170923
+
+* Exponential distribution
+For the exponential distribution, the cumulative distribution is given by \( F_{X}(x) = 1 - e^{-\lambda
+x} \). This means the survival function is simply \( S_{X}(x) = e^{-\lambda x} \).

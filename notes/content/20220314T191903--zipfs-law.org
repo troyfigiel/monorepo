@@ -1,0 +1,10 @@
+#+title:      Zipf's law
+#+date:       [2022-03-14 Mon 19:19]
+#+filetags:
+#+identifier: 20220314T191903
+
+Zipf's law is an empirical law stating that in many cases the rank-frequency distribution [[denote:20220314T192045]] is an inverse relation.
+
+[[denote:20220314T191914][Zipfian distribution]]
+
+https://en.wikipedia.org/wiki/Zipf%27s_law

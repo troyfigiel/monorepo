@@ -1,0 +1,4 @@
+#+title:      Stokes' theorem
+#+date:       [2022-12-29 Thu 11:08]
+#+filetags:   :empty:
+#+identifier: 20221229T110818
