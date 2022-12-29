@@ -1,0 +1,8 @@
+#+title:      Stories should clarify the human aspect behind an idea
+#+date:       [2022-12-29 Thu 22:55]
+#+filetags:   :storytelling:
+#+identifier: 20221229T225515
+
+In certain cases, an idea cannot be clearly expanded upon without explaining the route you took to tackling the problem. In other words, the details cannot be fully left out without impacting the coherence of the story and a longer, meandering route is necessary to clarify the motivation behind an idea.
+
+# TODO: I do not have clear examples of his phenomenon. That would help in explaining when this can happen.

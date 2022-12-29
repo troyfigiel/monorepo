@@ -1,0 +1,6 @@
+#+title:      Proof by exhaustion
+#+date:       [2022-12-30 Fri 01:07]
+#+filetags:
+#+identifier: 20221230T010713
+
+Some proofs by exhaustion are larger than any human can reasonably provide. Computer-assisted proofs ([[denote:20221230T011711]]) are a relatively new development and can alleviate these problems.

@@ -1,0 +1,14 @@
+#+title:      User on a Linux system
+#+date:       [2022-03-02 Wed 08:56]
+#+filetags:
+#+identifier: 20220302T085648
+
+A user on a Linux system is anyone who uses the computer. [[denote:20220302T085815][Linux is a multi user OS]].
+
+The [[denote:20220302T090005][Superuser]] has full access to the operating system. This is intended for administration
+purposes.
+
+Current users can normally be found under `/etc/passwd`.
+
+Users always belong to at least one [[denote:20220302T090225][User group]]. When the user is created, a [[denote:20220302T090251][Primary user group]] is
+automatically created and the user can belong to several other groups ([[denote:20220302T090315][Secondary user group]]).

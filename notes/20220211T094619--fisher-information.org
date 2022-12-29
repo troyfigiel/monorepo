@@ -1,0 +1,4 @@
+#+title:      Fisher information
+#+date:       [2022-02-11 Fri 09:46]
+#+filetags:   
+#+identifier: 20220211T094619

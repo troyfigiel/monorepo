@@ -1,0 +1,4 @@
+#+title:      Definition of the Lie derivative in terms of flows
+#+date:       [2022-12-30 Fri 15:31]
+#+filetags:   :liederivative:
+#+identifier: 20221230T153146

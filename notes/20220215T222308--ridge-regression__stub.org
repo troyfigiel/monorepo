@@ -1,5 +1,0 @@
-:ctime:    20220215222308
-:END:
-#+title: Ridge regression
-#+filetags: :stub:
-

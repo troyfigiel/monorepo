@@ -1,5 +1,0 @@
-:ctime:    20220218225651
-:END:
-#+title: Cauchy distribution as ratio of normal distributions
-#+filetags: :stub:
-

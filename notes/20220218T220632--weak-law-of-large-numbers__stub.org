@@ -1,5 +1,0 @@
-:ctime:    20220218220632
-:END:
-#+title: Weak law of large numbers
-#+filetags: :stub:
-

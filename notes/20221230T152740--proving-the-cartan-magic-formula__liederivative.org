@@ -1,0 +1,25 @@
+#+title:      Proving the Cartan magic formula
+#+date:       [2022-12-30 Fri 15:27]
+#+filetags:   :liederivative:
+#+identifier: 20221230T152740
+
+# TODO: If I create a link to the proof that the Lie derivative can be uniquely defined in terms of its axioms, I should use that link instead.
+The Lie derivative can be uniquely defined in terms of its axioms [[denote:20221230T153105]]. To prove the Cartan magic formula, i.e. to prove that
+
+\[ \mathcal{L}_X = d i_X + i_X d \]
+
+for a vector field \( X \), it therefore suffices to show that the right-hand side satisfies all four axioms.
+
+First of all, the Lie derivative acting on a function \( f \) must satisfy \( \mathcal{L}_X f = X(f) \). Since \( i_X f = 0 \), the right-hand side reduces to
+
+\[ i_X d f = df(X) = X(f) \]
+
+where the second equality follows from the definition of the exterior derivative acting on a function.
+
+# TODO: Prove the second and third axioms.
+
+Finally, the Lie derivative must commute with the exterior derivative. Indeed, since \( d^2 = 0 \), we find
+
+\[ d (d i_X + i_X d) = d i_X d = (d i_X + i_X d) d \]
+
+as desired.

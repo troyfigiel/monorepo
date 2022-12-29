@@ -1,0 +1,7 @@
+#+title:      The uniform distribution is a maximum entropy distribution
+#+date:       [2022-02-18 Fri 23:19]
+#+filetags:
+#+identifier: 20220218T231903
+
+- [[denote:20220211T094412][Uniform distribution]]
+- [[denote:20220215T230350][Maximum entropy probability distribution]]

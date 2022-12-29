@@ -1,0 +1,25 @@
+#+title:      Only two distributions are memoryless
+#+date:       [2022-02-10 Thu 20:21]
+#+filetags:   
+#+identifier: 20220210T202139
+
+The only memoryless distributions are
+- [[denote:20220210T094412][geometric distribution]]
+- [[denote:20220210T094351][exponential distribution]]
+
+By definition of conditional probability, we have
+
+\[ \mathrm{Pr(X > t + s)} = \mathrm{Pr(X > t + s | X > t)} \mathrm{Pr(X > t)} \]
+
+By definition of memorylessness, we have
+
+\[ \mathrm{Pr(X > t + s | X > t)} = \mathrm{Pr(X > s)} \]
+
+Rewriting these two equations in terms of the [[denote:20220210T124323][survival function]], we find
+
+\( S(t + s) = S(t)S(s) \)
+
+This equation allows us to prove that for any rational number \( t \) we have \( S(t) = S(1)^t \).
+
+In the discrete case this reduces to the [[denote:20220210T094412][geometric distribution]] whereas in the continous case, the only continous function satisfying the above equation for all rational \( t \) is the [[denote:20220210T094351][exponential distribution]].
+

@@ -1,7 +1,7 @@
-:ctime:    20220326100849
-:END:
-#+title: Systems should remain functional in intermediate clean-up states
-#+filetags: :stub:
+#+title:      Systems should remain functional in intermediate clean-up states
+#+date:       [2022-03-26 Sat 10:08]
+#+filetags:
+#+identifier: 20220326T100849
 
 - Keeping it functional in intermediate states is important! For example switching database
   backends: Always keep the intermediate version functional and if that is impossible, always keep

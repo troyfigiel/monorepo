@@ -1,0 +1,4 @@
+#+title:      Algebraic definition of the Lie derivative
+#+date:       [2022-12-30 Fri 15:31]
+#+filetags:   :liederivative:
+#+identifier: 20221230T153105

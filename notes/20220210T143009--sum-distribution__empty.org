@@ -1,4 +1,0 @@
-#+title:      Sum distribution
-#+date:       [2022-02-10 Thu 14:30]
-#+filetags:   :empty:
-#+identifier: 20220210T143009

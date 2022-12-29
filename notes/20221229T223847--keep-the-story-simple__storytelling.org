@@ -1,0 +1,8 @@
+#+title:      Keep the story simple
+#+date:       [2022-12-29 Thu 22:38]
+#+filetags:   :storytelling:
+#+identifier: 20221229T223847
+
+When a story is used as a method of communicating advice or an idea, it is important to not lose track of this goal. This means it is sometimes better to skip over details, if you can still keep the story coherent. The more elements a story has, the likelier it becomes your listeners get sidetracked: Leave the details for a later time.
+
+Although this is generally a good route to take, in certain cases a longer and more meandering approach can be better at illuminating the motivation behind an idea [[denote:20221229T225515]].

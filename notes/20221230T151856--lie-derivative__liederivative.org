@@ -1,0 +1,10 @@
+#+title:      Lie derivative
+#+date:       [2022-12-30 Fri 15:18]
+#+filetags:   :liederivative:
+#+identifier: 20221230T151856
+
+The Lie derivative in differential geometry is used to evaluate the change of a tensor field along the flow of a vector field.
+
+It can be defined both algebraically [[denote:20221230T153105]] as well as in terms of flows [[denote:20221230T153146]]. These two
+
+The Lie derivative is closely related to the exterior and interior product through the Cartan magic formula ([[denote:20221230T151206]]).

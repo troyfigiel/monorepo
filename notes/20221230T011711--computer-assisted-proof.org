@@ -1,0 +1,4 @@
+#+title:      Computer-assisted proof
+#+date:       [2022-12-30 Fri 01:17]
+#+filetags:
+#+identifier: 20221230T011711

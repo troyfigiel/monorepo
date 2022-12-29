@@ -23,3 +23,5 @@ notes, writing mathematics and maintaining software]].
 
 # TODO: Somehow mention that it normally takes a while for the notes to become useful. Their
 # usefulness accumulates over time.
+
+- Empty notes with a succint title can clarfiy context [[denote:20220323T180845]].

@@ -1,0 +1,6 @@
+#+title:      Basic block
+#+date:       [2022-12-30 Fri 14:41]
+#+filetags:
+#+identifier: 20221230T144100
+
+A basic block in a program is a code sequence without any branching except at its unique entry and exit points. The basic block contains no jumps, nor is any internal code a target of a jump instruction.

@@ -1,0 +1,10 @@
+#+title:      Software metric
+#+date:       [2022-12-30 Fri 13:06]
+#+filetags:   :softwaremetric:
+#+identifier: 20221230T130649
+
+Broadly speaking, a software metric is used to quantify a (desired) property of a software system. Due to the complexity of software design, it can often be difficult to find a get right set of metrics to optimize software design against.
+
+For a list of common software metrics, see here: [[denote:20221230T142233]].
+
+# TODO: How does this relate to software design patterns [[denote:20220220T095531]]?

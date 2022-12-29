@@ -1,0 +1,10 @@
+#+title:      Laplace-de Rham operator
+#+date:       [2022-12-29 Thu 22:00]
+#+filetags:
+#+identifier: 20221229T220036
+
+The Laplace-de Rham operator is a second-order differential operator which acts on sections of the bundle of differential forms. It is defined in terms of the exterior derivative \( d \) and the codifferential \( \delta \) by
+
+\[ \Delta = d \delta + \delta d = (d + \delta)^2 \]
+
+The second equality follows from the fact that \( d^2 = \delta^2 = 0 \).

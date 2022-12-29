@@ -1,8 +1,6 @@
-:ctime:    20220323180929
-:END:
-#+title: Tags are useful for metadata
-#+filetags: :stub:
+#+title:      Tags are useful for metadata
+#+date:       [2022-03-23 Wed 18:09]
+#+filetags:
+#+identifier: 20220323T180929
 
-Maintaining these notes requires some forms of metadata to keep of track which notes need to be
-cleaned up, which notes need to be fleshed out, etc. as a reminder to my future self of which notes
-are in a stable state and which ones still need work.
+Maintaining notes requires some forms of metadata to keep of track which notes need to be cleaned up, which notes need to be fleshed out, etc. as a reminder to my future self of which notes are in a stable state and which ones still need work.

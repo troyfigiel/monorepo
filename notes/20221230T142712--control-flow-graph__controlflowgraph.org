@@ -1,0 +1,6 @@
+#+title:      Control-flow graph
+#+date:       [2022-12-30 Fri 14:27]
+#+filetags:   :controlflowgraph:
+#+identifier: 20221230T142712
+
+The control-flow graph captures all possible paths through a program. Each basic block ([[denote:20221230T144100]]) represents a node with directed edges corresponding to jumps.

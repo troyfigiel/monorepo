@@ -1,0 +1,10 @@
+#+title:      Cartan magic formula
+#+date:       [2022-12-30 Fri 15:12]
+#+filetags:   :liederivative:
+#+identifier: 20221230T151206
+
+The Cartan magic formula in differential geometry relates the Lie derivative to the exterior and interior derivatives. For a given vector field \( X \), the Cartan magic formula states that
+
+\[ \mathcal{L}_X = d i_X + i_X d \]
+
+The Cartan magic formula can be proved by showing that the anti-commutator of the exterior and interior derivatives satisfy all the axioms of the Lie derivative [[denote:20221230T152740]].

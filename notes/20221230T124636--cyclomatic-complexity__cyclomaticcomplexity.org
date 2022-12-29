@@ -1,0 +1,6 @@
+#+title:      Cyclomatic complexity
+#+date:       [2022-12-30 Fri 12:46]
+#+filetags:   :cyclomaticcomplexity:
+#+identifier: 20221230T124636
+
+Cyclomatic complexity (also known as McCabe's complexity) is a software metric used to quantify the number of paths a program can follow through its source code. The definition and calculation of the cyclomatic complexity can be made precise using algebraic topology [[denote:20221230T130322]].

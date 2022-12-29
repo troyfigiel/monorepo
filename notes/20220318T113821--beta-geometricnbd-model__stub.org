@@ -1,6 +1,0 @@
-:ctime:    20220318113821
-:END:
-#+title: Beta-Geometric/NBD model
-#+filetags: :stub:
-
-

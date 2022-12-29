@@ -1,5 +1,0 @@
-:ctime:    20220218220410
-:END:
-#+title: gambler's fallacy
-#+filetags: :stub:
-

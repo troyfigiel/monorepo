@@ -1,0 +1,6 @@
+#+title:      Lasso regression
+#+date:       [2022-02-15 Tue 22:23]
+#+filetags:
+#+identifier: 20220215T222358
+
+Lasso is an acronym of "Least absolute shrinkage and selection operator".

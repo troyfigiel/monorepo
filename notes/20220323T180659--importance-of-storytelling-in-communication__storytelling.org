@@ -1,0 +1,8 @@
+#+title:      Importance of storytelling in communication
+#+date:       [2022-03-23 Wed 18:06]
+#+filetags:   :storytelling:
+#+identifier: 20220323T180659
+
+For an introductory exposition of a topic, successfully communicating why something is important, is the most valuable factor [[denote:20221229T223517]]. Since humans are natural storytellers [[denote:20221229T222033]], a story can be an effective method of conveying this message. This story should be kept as simple as possible without taking away from the main message [[denote:20221229T223847]].
+
+However, not all topics carry a conceptual golden nugget that makes for a good story. For example, sometimes mathematical proofs are convoluted calculations that do not carry any hidden message [[denote:20221230T010126]].

@@ -1,9 +1,0 @@
-:ctime:    20220324232936
-:END:
-#+title: Different fields of knowledge require different styles of note taking
-#+filetags: :stub:
-
-What works in one field, might not work in another field. For example, sometimes you need to know a
-appendix even though it is not directly relevant to the main ideas and concepts in play.
-
-- [[denote:20220314T215454][Types of notes I distinguish]]

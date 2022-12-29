@@ -1,0 +1,6 @@
+#+title:      Humans are natural storytellers
+#+date:       [2022-12-29 Thu 22:20]
+#+filetags:   :storytelling:
+#+identifier: 20221229T222033
+
+A good story tends to stick much better in memory than a regurgitation of dry facts.

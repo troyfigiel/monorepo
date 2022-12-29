@@ -1,0 +1,4 @@
+#+title:      Geometric distribution
+#+date:       [2022-02-10 Thu 09:44]
+#+filetags:   
+#+identifier: 20220210T094412

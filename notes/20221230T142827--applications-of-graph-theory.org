@@ -1,0 +1,12 @@
+#+title:      Applications of graph theory
+#+date:       [2022-12-30 Fri 14:28]
+#+filetags:
+#+identifier: 20221230T142827
+
+Graphs show up in a variety of fields. Wherever discrete mathematics plays a role, graphs tend to appear in some way or another.
+
+* Probability theory
+- Markov chain [[denote:20220210T195925]]
+
+* Computer science
+- Control-flow graph [[denote:20221230T142712]]

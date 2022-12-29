@@ -1,0 +1,6 @@
+#+title:      Topological definition of the cyclomatic complexity
+#+date:       [2022-12-30 Fri 13:03]
+#+filetags:   :cyclomaticcomplexity:
+#+identifier: 20221230T130322
+
+The cyclomatic complexity is the first Betti number of the control-flow graph ([[denote:20221230T142712]]) of the source code.

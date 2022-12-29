@@ -1,0 +1,6 @@
+#+title:      Geometric mean
+#+date:       [2022-02-10 Thu 13:21]
+#+filetags:   
+#+identifier: 20220210T132154
+
+

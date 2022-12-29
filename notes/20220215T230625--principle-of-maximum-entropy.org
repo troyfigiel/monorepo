@@ -1,0 +1,10 @@
+#+title:      Principle of maximum entropy
+#+date:       [2022-02-15 Tue 23:06]
+#+filetags:
+#+identifier: 20220215T230625
+
+The principle of maximum entropy states that the probability distribution best representing the knowledge of a system, is the one with the largest entropy.
+
+There are two motivations for this:
+   1. Maximizing the entropy minimizes the amount of [[denote:20220215T230943][prior information]] of the distribution.
+   2. Many physical systems tend to move towards maximal entropy configurations over time.

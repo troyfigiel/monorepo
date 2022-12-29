@@ -1,0 +1,6 @@
+#+title:      Harmonic mean
+#+date:       [2022-02-10 Thu 13:22]
+#+filetags:   
+#+identifier: 20220210T132205
+
+

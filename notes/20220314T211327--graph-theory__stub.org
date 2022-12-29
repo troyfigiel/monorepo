@@ -4,3 +4,5 @@
 #+filetags: :stub:
 
 [[denote:20220405T094131][Network theory]]
+
+Applications of graph theory [[denote:20221230T142827]].

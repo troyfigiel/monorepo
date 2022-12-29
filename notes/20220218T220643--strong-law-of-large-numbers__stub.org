@@ -1,5 +1,0 @@
-:ctime:    20220218220643
-:END:
-#+title: Strong law of large numbers
-#+filetags: :stub:
-

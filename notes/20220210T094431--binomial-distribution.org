@@ -1,0 +1,15 @@
+#+title:      Binomial distribution
+#+date:       [2022-02-10 Thu 09:44]
+#+filetags:   
+#+identifier: 20220210T094431
+
+The binomial distribution \( \mathrm{B}(n, p) \) describes the probability distribution for the number of successes for \( n \) independent experiments all having a probability \( p \) of succeeding.
+
+If we let \( n \) grow such that \( n p \) approaches the limit \( \lambda \), the [[denote:20220210T141248][law of rare events]] states we recover the Poisson distribution \( \mathrm{Pois}(\lambda) \).
+
+When \( n \) increases, the [[denote:20220210T205321][normal approximation of the binomial]] states that \( \mathcal{N}(np, np(1-p)) \) becomes a reasonable approximation to \( \mathrm{B}(n, p) \).
+
+Proving that the probability mass function of the binomial distribution sums to one, requires a
+special case of the [[denote:20220223T205208][Binomial formula]].
+
+See: [[denote:20220303T224629][Facts about the binomial distribution]]

@@ -1,8 +1,8 @@
-:ctime:    20220323181020
-:END:
-#+title: Index notes are more flexible than tags
-#+filetags: :stub:
+#+title:      Index notes are more flexible than tags
+#+date:       [2022-03-23 Wed 18:10]
+#+filetags:
+#+identifier: 20220323T181020
 
-Tags are a single word and no other context. In an index note, it is still possible to add
-additional context depending on the subject at hand. This makes index notes in general preferable
-over tags when it comes to classifying notes. Nonetheless, [[denote:20220323T180929][Tags are useful for metadata]].
+Tags are a single word and no other context. In an index note, it is still possible to add additional context depending on the subject at hand. This makes index notes in general preferable over tags when it comes to classifying notes. Nonetheless, tags can be useful for metadata [[denote:20220323T180929]].
+
+# TODO: Tags do have a place I believe, but more as a way of clustering or an entrypoint to seeing other related, but not linked notes.

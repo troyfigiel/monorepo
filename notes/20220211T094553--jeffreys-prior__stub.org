@@ -1,5 +1,0 @@
-:ctime:    20220211094553
-:END:
-#+title: Jeffreys prior
-#+filetags: :stub:
-

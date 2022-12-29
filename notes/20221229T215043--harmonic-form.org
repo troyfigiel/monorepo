@@ -1,0 +1,6 @@
+#+title:      Harmonic form
+#+date:       [2022-12-29 Thu 21:50]
+#+filetags:
+#+identifier: 20221229T215043
+
+A harmonic form is a differential form on a Riemannian manifold which vanishes when we apply the Laplace-Beltrami operator ([[denote:20221229T220036]]) on it.

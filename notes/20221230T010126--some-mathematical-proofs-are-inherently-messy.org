@@ -1,0 +1,10 @@
+#+title:      Some mathematical proofs are inherently messy
+#+date:       [2022-12-30 Fri 01:01]
+#+filetags:
+#+identifier: 20221230T010126
+
+Although mathematical elegance is often the right approach to tackle hard problems, because it has potential to lead to insights along the way, it is definitely not the case that all theorems have mathematically elegant proofs. Some proofs are inherently messy, such as when a multitude of cases needs to be worked out in a proof by exhaustion ([[denote:20221230T010713]]).
+
+# TODO: This is closely related to [[denote:20220323T135449]], but I am not sure yet exactly how to phrase this for theorems.
+A proof should first and foremost show the correctness of a statement or theorem and the theorem itself should be used as the abstraction to hide the complexity of the details.
+

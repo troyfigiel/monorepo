@@ -1,4 +1,0 @@
-#+title:      Bernoulli distribution
-#+date:       [2022-02-10 Thu 09:44]
-#+filetags:   :bernoullidistribution:empty:
-#+identifier: 20220210T094457

@@ -1,4 +1,0 @@
-:ctime:    20220210210906
-:END:
-#+title: Linear approximation of the characteristic function
-#+filetags: :stub:

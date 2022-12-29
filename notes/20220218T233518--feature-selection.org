@@ -1,0 +1,13 @@
+#+title:      Feature selection
+#+date:       [2022-02-18 Fri 23:35]
+#+filetags:
+#+identifier: 20220218T233518
+
+See also [[denote:20220310T130103][Feature importance]].
+
+- [[denote:20220420T214235][Supervised feature selection]]
+- [[denote:20220420T214422][Unsupervised feature selection]]
+
+
+https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/
+http://www.feat.engineering/classes-of-feature-selection-methodologies.html

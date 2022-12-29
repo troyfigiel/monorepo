@@ -1,0 +1,4 @@
+#+title:      Beta-Geometric/NBD model
+#+date:       [2022-03-18 Fri 11:38]
+#+filetags:
+#+identifier: 20220318T113821

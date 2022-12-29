@@ -1,0 +1,6 @@
+#+title:      Differential equation
+#+date:       [2022-02-10 Thu 12:57]
+#+filetags:
+#+identifier: 20220210T125727
+
+A differential equation relates a function to its derivatives.
