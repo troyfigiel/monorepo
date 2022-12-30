@@ -7,14 +7,15 @@ let
       inherit system;
       specialArgs = { inherit inputs self impermanence; };
       pkgs = self.legacyPackages.${system};
-      modules = [ { networking.hostName = host; } ./${host} ]
-        ++ lib.optionals secrets [
-          # TODO: Add secrets to all systems (at least a login password)
-          inputs.sops-nix.nixosModules.sops
-          { sops.defaultSopsFile = ./${host}/secrets.yaml; }
-        ] ++ lib.optional impermanence
-        # TODO: Make all systems impermanent
-        inputs.impermanence.nixosModules.impermanence;
+      modules = [
+        inputs.impermanence.nixosModules.impermanence
+        { networking.hostName = host; }
+        ./${host}
+      ] ++ lib.optionals secrets [
+        # TODO: Add secrets to all systems (at least a login password)
+        inputs.sops-nix.nixosModules.sops
+        { sops.defaultSopsFile = ./${host}/secrets.yaml; }
+      ];
     };
   };
   mkDeploy = { host, ipAddress }:
