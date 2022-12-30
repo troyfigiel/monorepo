@@ -25,6 +25,8 @@
 + betterscreenlock automatically locks after 10 mins, even when a video is playing
 
 ** Emacs
++ How can I schedule a task for the end of the month? This is not builtin functionality for org-agenda?
++ Org should come with support for tikz as well, but for some reason these images do not show for me. How can I make this work? [[https://www.reddit.com/r/emacs/comments/ioqpqs/rendering_tikz_graphs_inline_in_orgmode/]]. Currently, when I try to run the code as indicated, I get an empty character instead of a picture.
 + By using Nix bundle, we can take an application and turn it into a self-contained "bundle". This could be an AppImage for example [[https://github.com/ralismark/nix-appimage]]. I should try this out for my Emacs configuration.
 + Git grep can search through previous commits? How does that work? If so, should I bind it to a key combination or is it easier to use Magit?
 + What is the fastest way to grep through a large file? How can Emacs handle searching through large files?
@@ -37,6 +39,7 @@
 + Narrowing can be very useful in Emacs. What kind of functionality surrounds narrowing? I know about narrowing and widening.
 + Add yasnippet / abbrev mode. Which one would I prefer and why? There is also the notion of skeletons, I can use e.g. company for suggestions, auto-insert and dabbrev mode. What do all of these do?
 + Add LaTeX configuration to Emacs again so I can start adding notes with equations.
++ How does TikZit work for drawing diagrams? Here is a guide: [[https://tikzit.github.io/]]
 + Spelling checkers could be nice to have in Emacs, but currently I am not actively using them. What variables can I set, which commands can I trigger and are there useful third-party packages?
 + The terminal version of Emacs has difficult to read colours for magit. I should fix that.
 + Set up org-babel for Python so I can start moving over my data-science scratch-pad.

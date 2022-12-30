@@ -1,0 +1,6 @@
+* %(org-contacts-template-name)
+:PROPERTIES:
+:EMAIL:    %(org-contacts-template-email)
+:PHONE:    %^{PHONE}
+:BIRTHDAY: %^{BIRTHDAY}t
+:END:

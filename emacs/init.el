@@ -1,3 +1,9 @@
+;; TODO: I am having some difficulties cleanly calling configurations that depend on builtins. I
+;; should move all the builtin packages to the top, because use-package does not completely remove
+;; ordering issues. For example, `org-contacts' needs to be loaded after `org' if I want to set
+;; `org-contacts-file' based on `org-directory'. However, since `org' is builtin, this becomes
+;; impossible with the `:after' keyword. Instead, I still need to be careful about the ordering of
+;; packages in my init file.
 (eval-when-compile
   (require 'use-package)
   (setq use-package-verbose t))
@@ -96,15 +102,15 @@
 	  ("C-M-#" . avy-pop-mark))
   :custom (avy-timeout-seconds 0.25))
 
-(use-package cdlatex
-  :ensure
-  :after tex
-  :custom
-  (cdlatex-command-alist '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil)))
-  (cdlatex-env-alist
-   '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil)))
-  (cdlatex-math-modify-alist '((?a "\\mathbb" nil t nil nil)))
-  (cdlatex-math-modify-prefix ?'))
+;; (use-package cdlatex
+;;   :ensure
+;;   :after (tex org)
+;;   :custom
+;;   (cdlatex-command-alist '(("thr" "Insert theorem env" "" cdlatex-environment ("theorem") t nil)))
+;;   (cdlatex-env-alist
+;;    '(("theorem" "\\begin{theorem}\nAUTOLABEL\n?\n\\end{theorem}\n" nil)))
+;;   (cdlatex-math-modify-alist '((?a "\\mathbb" nil t nil nil)))
+;;   (cdlatex-math-modify-prefix ?'))
 
 (use-package consult
   :ensure
@@ -184,7 +190,6 @@
    ("C-c n i" . denote-link-or-create)
    ("C-c n r" . denote-keywords-remove))
   :custom
-  (denote-prompts '(title subdirectory keywords))
   (denote-known-keywords nil)
   (denote-directory "~/projects/monorepo/notes")
   :config
@@ -389,7 +394,6 @@
 (use-package org
   :after xdg
   :hook (org-mode . visual-line-mode)
-  :bind ("C-c a" . org-agenda)
   :config
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
@@ -405,10 +409,38 @@
      (R . t)
      (sql . t)))
   (push '("conf-unix" . conf-unix) org-src-lang-modes)
+  (plist-put org-format-latex-options :scale 1.5)
   :custom
   (org-descriptive-links nil)
-  (org-directory (file-name-concat (xdg-user-dir "DOCUMENTS") "org"))
-  (org-agenda-files (list (file-name-concat org-directory "agenda.org"))))
+  (org-directory (file-name-concat (xdg-user-dir "DOCUMENTS")))
+  (org-startup-with-latex-preview t)
+  (org-startup-folded 'fold)
+  (org-highlight-latex-and-related '(native)))
+
+(use-package org-contacts
+  :after xdg
+  :ensure
+  :custom
+  (org-contacts-files
+   (list (file-name-concat (xdg-user-dir "DOCUMENTS") "contacts.org")))
+  :config
+  (add-to-list
+   'org-capture-templates
+   `("c"
+     "Contacts"
+     entry
+     (file ,(car org-contacts-files))
+     (file "~/projects/monorepo/emacs/templates/contacts.org"))))
+
+(use-package org-agenda
+  :after xdg
+  :bind ("C-c a" . org-agenda)
+  :custom
+  (org-agenda-files
+   (list (file-name-concat (xdg-user-dir "DOCUMENTS") "agenda.org")))
+  ;; TODO: Maybe fortnight? Not sure what the best span could be.
+  (org-agenda-span 'fortnight)
+  (org-agenda-todo-ignore-schedules 'all))
 
 (use-package org-transclusion :ensure)
 
