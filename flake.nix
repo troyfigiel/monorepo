@@ -60,9 +60,19 @@
           overlays = [
             inputs.deploy-rs.overlay
             inputs.emacs-overlay.overlay
-            (import ./emacs/overlay.nix)
-            (import ./packages/overlay.nix)
-            (import ./website/overlay.nix)
+            (_final: prev: {
+              sddm-sugar-candy = prev.callPackage ./packages/sddm-sugar-candy {
+                inherit (prev.libsForQt5) qtgraphicaleffects;
+                background = ./assets/nixos.jpg;
+              };
+              tdda = prev.callPackage ./packages/tdda {
+                inherit (prev.python3Packages) buildPythonPackage pandas;
+              };
+              tf-emacs = prev.callPackage ./emacs {
+                inherit (prev.python3Packages) jupytext;
+              };
+              website = prev.callPackage ./website { };
+            })
           ];
         };
 
@@ -84,6 +94,18 @@
               '';
             };
           };
+        };
+
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            black
+            nil
+            nixfmt
+            python3
+            python3Packages.flake8
+            python3Packages.python-lsp-server
+            texlive.combined.scheme-full
+          ];
         };
 
         # TODO: I need to run touch $out for the linters, because builds need to have an output.

@@ -46,7 +46,13 @@
   ;; TODO: Would it make sense to use code-cells for every language with a REPL? I quite like the
   ;; working style.
   :ensure
-  :hook (python-mode . code-cells-mode-maybe))
+  :hook (python-mode . code-cells-mode-maybe)
+  :custom
+  (code-cells-convert-ipynb-style
+   '(("@jupytext@/bin/jupytext" "--to" "ipynb")
+     ("@jupytext@/bin/jupytext" "--to" "auto:percent")
+     nil
+     code-cells-convert-ipynb-hook)))
 
 (use-package jupyter
   :ensure
@@ -124,6 +130,16 @@
    ("M-s m" . consult-line-multi))
   :custom
   (consult-async-min-input 2)
+  (consult-ripgrep-args
+   (concat "@ripgrep@/bin/rg"
+	   " --null"
+	   " --line-buffered"
+	   " --color=never"
+	   " --max-columns=1000"
+	   " --path-separator /"
+	   " --smart-case"
+	   " --no-heading"
+	   " --line-number ."))
   (xref-show-xrefs-function #'consult-xref)
   (xref-show-definitions-function #'consult-xref)
   :config (setq completion-in-region-function 'consult-completion-in-region))
@@ -180,7 +196,9 @@
 	 (csv-mode . csv-guess-set-separator)))
 
 (use-package detached
-  :ensure)
+  :ensure
+  :custom
+  (detached-dtach-program "@dtach@/bin/dtach"))
 
 (use-package diff-hl
   :ensure
@@ -209,9 +227,16 @@
   (setq dired-listing-switches
 	"-Ahl --group-directories-first --time-style=long-iso"))
 
+(use-package image-dired
+  :custom
+  (image-dired-cmd-create-thumbnail-program "@imagemagick@/bin/convert")
+  (image-dired-cmd-read-exif-data-program "@exiftool@/bin/exiftool")
+  (image-dired-cmd-write-exif-data-program "@exiftool@/bin/exiftool"))
+
 (use-package dired-rsync
   :ensure
   :after dired
+  :custom (dired-rsync-command "@rsync@/bin/rsync")
   :bind (:map dired-mode-map
 	      ("s" . dired-rsync)))
 
@@ -341,6 +366,7 @@
   :ensure
   :custom
   (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
+  (magit-git-executable "@git@/bin/git")
   (transient-show-popup nil)
   (vc-follow-symlinks t))
 

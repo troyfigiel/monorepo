@@ -1,7 +1,13 @@
-**/result
+# Direnv
+.direnv
 
-**/.terraform
-**/*tfstate*
-**/config.tf.json
+# Latex
+ltximg
 
-**/ltximg/*
+# Nix
+result
+
+# Terraform
+.terraform
+*tfstate*
+config.tf.json
