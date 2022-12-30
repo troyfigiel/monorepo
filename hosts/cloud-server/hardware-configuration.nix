@@ -21,6 +21,8 @@
     extraModulePackages = [ ];
   };
 
+  # TODO: My cloud-server has very little memory, so a root tmpfs could quickly run into problems.
+  # Instead, I should opt to use btrfs and rollback to a clean slate every boot.
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/b435eadb-bfa9-4522-b527-ef4dc815a950";
     fsType = "ext4";
