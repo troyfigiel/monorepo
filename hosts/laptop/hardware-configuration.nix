@@ -20,11 +20,11 @@
       fsType = "ext4";
     };
 
-    "/media/nfs" = {
-      device = "192.168.178.31:/home/pi/mnt/nfs";
-      fsType = "nfs";
-      options = [ "x-systemd.automount" "noauto" ];
-    };
+    # "/media/nfs" = {
+    #   device = "192.168.178.31:/home/pi/mnt/nfs";
+    #   fsType = "nfs";
+    #   options = [ "x-systemd.automount" "noauto" ];
+    # };
   };
 
   swapDevices = [ ];

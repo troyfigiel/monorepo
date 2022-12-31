@@ -1,5 +1,6 @@
 * TODO.org
 ** Code cleaning
++ I have a lot of common functionality that can be refactored in my hosts. Check which modules appear together a lot and see if we can bring them together in a sensible way.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that? Can [[https://github.com/jtojnar/nixpkgs-hammering][nixpkgs-hammering]] do something like this?
 + Modularize my Terraform code.
 + Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
@@ -48,7 +49,6 @@
 
 ** Hardware
 + Sometimes I end up running out of space on my root partition when building a package, since it is a tmpfs and is capped at 4-8G. This can happen when building machine learning libraries which are often quite large. I increased the tmpfs size to 8G which works most of the time, but is there a smarter way to handle this? Can I move the building process to a location not on my tmpfs?
-+ Add my Raspberry Pi to my network.
 + Use Disko instead of scripted partitioning.
 + Start using LUKS Disk Encryption
 + Create my own ISO image. When I run `nix build .#nixosConfigurations.laptop.config.system.build.isoImage`, I run into a `does not provide attribute`-error. Why is that? Shouldn't this work?
@@ -67,3 +67,7 @@
   - Blogs are more opinion-based and "life lessons"
   - Articles contain more clear-cut information and can often span series
 + Would it make sense to have a cache of websites that people can request when needed?
+
+** Raspberry Pi
++ Set up Gitea
++ Set up Samba
