@@ -17,6 +17,8 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    hardware.url = "github:nixos/nixos-hardware";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -81,6 +83,7 @@
             type = "app";
             program = pkgs.writeShellApplication {
               name = "monorepo";
+              runtimeInputs = with pkgs; [ nixos-rebuild deploy-rs ];
               text = ''
                 if [[ "$EUID" != 0 ]]; then
                    echo 'Root privileges are needed to activate the local NixOS configuration.'
@@ -89,8 +92,8 @@
                 nix fmt
                 nix flake check --keep-going || exit 1
                 nix run .#infrastructure
-                nix run .#local
-                nix run .#remote
+                nixos-rebuild switch --flake .
+                deploy . -s
               '';
             };
           };
@@ -99,6 +102,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             black
+            deploy-rs
             nil
             nixfmt
             python3

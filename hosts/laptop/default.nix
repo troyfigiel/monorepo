@@ -57,7 +57,6 @@
     users.root = {
       home = "/root";
       directories = [ ".gnupg" ];
-      files = [ ".ssh/known_hosts" ];
     };
   };
 
@@ -108,7 +107,6 @@
           ".local/share/direnv"
           ".local/share/nix"
         ] ++ [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
-        files = [ ".ssh/known_hosts" ];
         allowOther = true;
       };
 
@@ -146,40 +144,40 @@
     };
   };
 
-  sops.secrets = {
-    ssh-restic = { };
-    rpi-mnt-password = { };
-    rpi-backup-password = { };
-  };
+  # sops.secrets = {
+  #   ssh-restic = { };
+  #   rpi-mnt-password = { };
+  #   rpi-backup-password = { };
+  # };
 
-  services.restic.backups = let
-    backupUser = "pi";
-    backupHost = "rpi";
-  in {
-    rpi-mnt = let backupLocation = "/home/pi/mnt/restic";
-    in {
-      repository = "sftp:${backupUser}@${backupHost}:${backupLocation}";
-      initialize = true;
-      passwordFile = config.sops.secrets.rpi-mnt-password.path;
-      paths = [ "/nix/persist" ];
-      timerConfig = { OnCalendar = "11:00"; };
-      extraOptions = [
-        "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
-      ];
-    };
+  # services.restic.backups = let
+  #   backupUser = "pi";
+  #   backupHost = "rpi";
+  # in {
+  #   rpi-mnt = let backupLocation = "/home/pi/mnt/restic";
+  #   in {
+  #     repository = "sftp:${backupUser}@${backupHost}:${backupLocation}";
+  #     initialize = true;
+  #     passwordFile = config.sops.secrets.rpi-mnt-password.path;
+  #     paths = [ "/nix/persist" ];
+  #     timerConfig = { OnCalendar = "11:00"; };
+  #     extraOptions = [
+  #       "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
+  #     ];
+  #   };
 
-    rpi-backup = let backupLocation = "/home/pi/backup/restic";
-    in {
-      repository = "sftp:${backupUser}@${backupHost}:${backupLocation}";
-      initialize = true;
-      passwordFile = config.sops.secrets.rpi-backup-password.path;
-      paths = [ "/nix/persist" ];
-      timerConfig = { OnCalendar = "11:00"; };
-      extraOptions = [
-        "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
-      ];
-    };
-  };
+  #   rpi-backup = let backupLocation = "/home/pi/backup/restic";
+  #   in {
+  #     repository = "sftp:${backupUser}@${backupHost}:${backupLocation}";
+  #     initialize = true;
+  #     passwordFile = config.sops.secrets.rpi-backup-password.path;
+  #     paths = [ "/nix/persist" ];
+  #     timerConfig = { OnCalendar = "11:00"; };
+  #     extraOptions = [
+  #       "sftp.command='ssh ${backupUser}@${backupHost} -i ${config.sops.secrets.ssh-restic.path} -s sftp'"
+  #     ];
+  #   };
+  # };
 
   # TODO: This works, but need to check how to configure my printers declaratively in NixOS
   services.printing = {
@@ -222,13 +220,7 @@
   # TODO: Do I need this?
   services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
 
-  networking = {
-    extraHosts = ''
-      192.168.178.31 rpi
-      192.168.178.37 nas
-    '';
-    useDHCP = lib.mkDefault true;
-  };
+  networking.useDHCP = lib.mkDefault true;
 
   services.avahi = {
     enable = true;

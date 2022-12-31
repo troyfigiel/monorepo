@@ -18,17 +18,17 @@ let
       ];
     };
   };
-  mkDeploy = { host, ipAddress }:
+  mkDeploy = { host, hostname, remoteBuild }:
     let
       nixosConfig = self.nixosConfigurations.${host};
       inherit (nixosConfig.pkgs) system;
     in {
       name = host;
       value = {
+        inherit hostname remoteBuild;
         sshUser = "root";
         autoRollback = true;
         magicRollback = true;
-        hostname = ipAddress;
         profiles.system.path =
           inputs.deploy-rs.lib.${system}.activate.nixos nixosConfig;
       };
@@ -52,41 +52,33 @@ let
       impermanence = true;
       secrets = false;
     }
+    {
+      host = "raspberry";
+      system = "aarch64-linux";
+      impermanence = false;
+      secrets = false;
+    }
   ];
-  deployAttrs = [{
-    host = "cloud-server";
-    ipAddress = "troyfigiel.com";
-  }];
+  deployAttrs = [
+    {
+      host = "cloud-server";
+      hostname = "troyfigiel.com";
+      remoteBuild = false;
+    }
+    {
+      host = "raspberry";
+      hostname = "192.168.178.31";
+      remoteBuild = true;
+    }
+  ];
 in {
   flake = {
     nixosConfigurations = builtins.listToAttrs (map mkSystem systemAttrs);
     deploy.nodes = builtins.listToAttrs (map mkDeploy deployAttrs);
   };
 
-  perSystem = { pkgs, system, ... }: {
-    apps = {
-      local = {
-        type = "app";
-        program = pkgs.writeShellApplication {
-          name = "monorepo-local";
-          runtimeInputs = [ pkgs.nixos-rebuild ];
-          text = ''
-            (( $# == 0 )) && command="switch" || command="$1"
-            nixos-rebuild "$command" --flake .
-          '';
-        };
-      };
-
-      remote = {
-        type = "app";
-        program = pkgs.writeShellApplication {
-          name = "monorepo-remote";
-          runtimeInputs = [ pkgs.deploy-rs ];
-          text = "deploy . -s";
-        };
-      };
-    };
-
-    checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy;
-  };
+  # TODO: The checks cause problems when the remote system does not have the same architecture as
+  # the localhost, even when I set remoteBuild = true; I have opted to remove the checks for now,
+  # but there should be a better solution. See: https://github.com/serokell/deploy-rs/issues/167.
+  # perSystem = { system, ... }: { checks = inputs.deploy-rs.lib.${system}.deployChecks inputs.self.deploy; };
 }
