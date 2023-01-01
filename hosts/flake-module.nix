@@ -62,7 +62,8 @@ let
   deployAttrs = [
     {
       host = "cloud-server";
-      hostname = "troyfigiel.com";
+      # TODO: Do not hardcode this, but read it from Terraform!
+      hostname = "95.179.241.168";
       remoteBuild = false;
     }
     {
