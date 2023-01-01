@@ -1,0 +1,11 @@
+#+title:      Nix package manager
+#+date:       [2023-01-01 Sun 21:58]
+#+filetags:
+#+identifier: 20230101T215808
+
+The Nix package manager (also simply called Nix) is a package manager that deploys software in a purely functional manner. Build reproducibility is a key feature of the package manager [[denote:20230101T220928]].
+
+# TODO: Move this to [[denote:20230101T220928]]? All of these things exist to ensure the principle of reproducibility.
+Software is installed into the Nix store ([[denote:20230101T220123]]) using content-addressable storage ([[denote:20220218T231036]]) and cryptographic hashes ([[denote:20220218T231301]]).
+
+The Nix package manager is powerful enough that an operating system ([[denote:20220221T224636]]) is built on these principles.

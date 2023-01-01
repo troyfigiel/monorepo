@@ -1,6 +1,0 @@
-:ctime:    20220221224636
-:END:
-#+title: NixOS
-#+filetags: :stub:
-
-

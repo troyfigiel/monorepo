@@ -1,7 +1,7 @@
-:ctime:    20220307144637
-:END:
-#+title: Reproducibility
-#+filetags: :stub:
+#+title:      Reproducibility
+#+date:       [2022-03-07 Mon 14:46]
+#+filetags:
+#+identifier: 20220307T144637
 
 Reproducibility can refer both to experimental reproducibility as well as reproducibility of
 software. The degree of reproducibility can differ here: For an experiment we might be satisfied if
