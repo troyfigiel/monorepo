@@ -1,0 +1,6 @@
+#+title:      Build reproducibility is a key feature of Nix
+#+date:       [2023-01-01 Sun 22:09]
+#+filetags:
+#+identifier: 20230101T220928
+
+Nix was designed with build reproducility ([[denote:20220307T145320]]) in mind. there is no mechanism to deal with wrong versions of dependencies.

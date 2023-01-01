@@ -1,0 +1,16 @@
+#+title:      Reproducible build
+#+date:       [2022-03-07 Mon 14:53]
+#+filetags:
+#+identifier: 20220307T145320
+
+A program can be reproducibly built if it can be compiled to the exact same binary code as long
+as the input to the compiler is the same.
+
+Besides scientific implications, reproducibility is also important from an operational security standpoint.
+
+# TODO: Link to the following topics.
+- Timestamps are meaningless for reproducible builds [[denote:20220303T124900]]
+- A declarative system is bit-for-bit reproducible [[denote:20220223T233802]]
+- Only running a container image can be done reproducibly [[denote:20220301T212917]]
+
+Common phrase: It works on my machine [[denote:20230101T222246]]. Also, dependency hell [[denote:20230101T221135]].

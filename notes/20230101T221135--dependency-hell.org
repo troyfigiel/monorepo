@@ -1,0 +1,9 @@
+#+title:      Dependency hell
+#+date:       [2023-01-01 Sun 22:11]
+#+filetags:
+#+identifier: 20230101T221135
+
+Many things can go wrong:
+- Missing dependencies such as with Python package managers that do not deal with DLLs.
+- Wrong versions of dependencies, because they have not been pinned properly.
+- Conflicting dependencies, because only a single version of the dependency can be installed at the same time.

@@ -1,0 +1,6 @@
+#+title:      NixOS
+#+date:       [2022-02-21 Mon 22:46]
+#+filetags:
+#+identifier: 20220221T224636
+
+NixOS is a Linux distribution with the Nix package manager at its core.

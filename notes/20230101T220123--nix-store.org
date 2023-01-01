@@ -1,0 +1,4 @@
+#+title:      Nix store
+#+date:       [2023-01-01 Sun 22:01]
+#+filetags:
+#+identifier: 20230101T220123
