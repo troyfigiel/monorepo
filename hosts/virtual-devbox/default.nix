@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../../emacs/module.nix
     ../shared/docker.nix
     ../shared/dunst.nix
+    ../shared/emacs.nix
     ../shared/git.nix
     ../shared/home.nix
     ../shared/i3.nix
