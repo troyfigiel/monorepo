@@ -19,7 +19,6 @@
     ../shared/xdg.nix
     ../shared/xorg.nix
     ./hardware-configuration.nix
-    ./home-manager.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
