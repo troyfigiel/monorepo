@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ../shared/root.nix ./hardware-configuration.nix ];
 
   networking.networkmanager.enable = true;
 
@@ -24,9 +24,5 @@
       '';
     };
   };
-
-  users.users.root.openssh.authorizedKeys.keys =
-    [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
-
   system.stateVersion = "23.05";
 }

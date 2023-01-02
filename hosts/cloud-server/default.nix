@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../shared/locale.nix
     ../shared/nix.nix
+    ../shared/root.nix
     ../shared/sops.nix
     inputs.simple-nixos-mailserver.nixosModules.mailserver
   ];
@@ -13,11 +14,6 @@
   system.stateVersion = "22.05";
 
   users.users = {
-    root = {
-      openssh.authorizedKeys.keys =
-        [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
-    };
-
     nixos = {
       isNormalUser = true;
       initialPassword = "nixos";

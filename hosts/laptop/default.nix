@@ -14,6 +14,7 @@
     ../shared/pass.nix
     ../shared/picom.nix
     ../shared/rofi.nix
+    ../shared/root.nix
     ../shared/sops.nix
     ../shared/system.nix
     ../shared/xdg.nix
@@ -41,11 +42,6 @@
       extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
       passwordFile = config.sops.secrets.troy-password.path;
       # This is needed to be able to call deploy using my Nitrokey.
-      openssh.authorizedKeys.keys =
-        [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
-    };
-
-    users.root = {
       openssh.authorizedKeys.keys =
         [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
     };
