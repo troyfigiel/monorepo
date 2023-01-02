@@ -2,23 +2,14 @@
 
 {
   imports = [
-    ../shared/docker.nix
-    ../shared/dunst.nix
-    ../shared/emacs.nix
-    ../shared/git.nix
-    ../shared/home.nix
-    ../shared/i3.nix
-    ../shared/locale.nix
-    ../shared/nix.nix
-    # ../shared/picom.nix
-    ../shared/qemu-guest.nix
-    ../shared/rofi.nix
-    ../shared/system.nix
-    ../shared/xdg.nix
-    ../shared/xorg.nix
+    ../shared/workstation.nix
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
+
+  services.qemuGuest.enable = true;
+  # TODO: For some reason it does not seem to rescale the screen for UTM on MacOS. Why?
+  services.spice-vdagentd.enable = true;
 
   services.xserver = {
     # TODO: Only some applications seem to scale when I set dpi. Should I use a different setting?

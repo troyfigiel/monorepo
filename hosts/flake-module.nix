@@ -11,10 +11,9 @@ let
         inputs.impermanence.nixosModules.impermanence
         { networking.hostName = host; }
         ./${host}
-      ] ++ lib.optionals secrets [
         # TODO: Add secrets to all systems (at least a login password)
         inputs.sops-nix.nixosModules.sops
-        { sops.defaultSopsFile = ./${host}/secrets.yaml; }
+        (lib.mkIf secrets { sops.defaultSopsFile = ./${host}/secrets.yaml; })
       ];
     };
   };

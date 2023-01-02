@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../shared/root.nix ./hardware-configuration.nix ];
+  imports = [ ../shared/server.nix ./hardware-configuration.nix ];
 
   networking.networkmanager.enable = true;
 
@@ -14,7 +14,6 @@
     openssh = {
       enable = true;
       passwordAuthentication = false;
-      permitRootLogin = "yes";
     };
 
     nfs.server = {

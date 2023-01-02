@@ -2,23 +2,7 @@
 
 {
   imports = [
-    ../shared/docker.nix
-    ../shared/dunst.nix
-    ../shared/emacs.nix
-    ../shared/git.nix
-    ../shared/home.nix
-    ../shared/i3.nix
-    ../shared/locale.nix
-    ../shared/messenger.nix
-    ../shared/nix.nix
-    ../shared/pass.nix
-    ../shared/picom.nix
-    ../shared/rofi.nix
-    ../shared/root.nix
-    ../shared/sops.nix
-    ../shared/system.nix
-    ../shared/xdg.nix
-    ../shared/xorg.nix
+    ../shared/personal-computer.nix
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -41,9 +25,6 @@
       description = "Troy Figiel";
       extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
       passwordFile = config.sops.secrets.troy-password.path;
-      # This is needed to be able to call deploy using my Nitrokey.
-      openssh.authorizedKeys.keys =
-        [ (builtins.readFile ../../assets/keys/troy.pub.ssh) ];
     };
   };
 
@@ -51,7 +32,7 @@
     hideMounts = true;
     users.root = {
       home = "/root";
-      directories = [ ".gnupg" ];
+      directories = [ ".gnupg" ".ssh" ];
     };
   };
 
@@ -96,12 +77,8 @@
 
     home.persistence."/nix/persist/${config.home-manager.users.troy.home.homeDirectory}" =
       {
-        directories = [
-          ".config/nix"
-          ".cache/nix-index"
-          ".local/share/direnv"
-          ".local/share/nix"
-        ] ++ [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
+        directories =
+          [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
         allowOther = true;
       };
 
@@ -226,6 +203,4 @@
     enable = true;
     plugins = [ pkgs.networkmanager-openvpn ];
   };
-
-  programs.nm-applet.enable = true;
 }
