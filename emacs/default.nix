@@ -1,12 +1,12 @@
 { dtach, emacsWithPackagesFromUsePackage, emacsGit, exiftool, git, imagemagick
-, jupytext, ripgrep, rsync, substituteAll }:
+, jupytext, notmuch, ripgrep, rsync, substituteAll }:
 
 emacsWithPackagesFromUsePackage {
   config = ./init.el;
   defaultInitFile = substituteAll {
     name = "default.el";
     src = ./init.el;
-    inherit dtach exiftool git imagemagick jupytext ripgrep rsync;
+    inherit dtach exiftool git imagemagick jupytext notmuch ripgrep rsync;
   };
   package = emacsGit;
   alwaysEnsure = false;

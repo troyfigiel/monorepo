@@ -546,3 +546,7 @@
 (use-package which-key
   :ensure
   :config (which-key-mode 1))
+
+(use-package notmuch
+  :ensure
+  :custom (notmuch-command "@notmuch@/bin/notmuch"))
