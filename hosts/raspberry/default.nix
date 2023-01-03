@@ -6,8 +6,13 @@
   networking.networkmanager.enable = true;
 
   # Adding this is necessary to connect to nfs. Otherwise the firewall blocks the request.
-  networking.firewall.allowedTCPPorts = [ 2049 ];
-  networking.firewall.enable = true;
+  networking = {
+    useDHCP = false;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 2049 ];
+    };
+  };
 
   environment.systemPackages = with pkgs; [ vim ];
   services = {
