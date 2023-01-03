@@ -43,12 +43,7 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
 
-      imports = [
-        ./bootstrap/flake-module.nix
-        ./hosts/flake-module.nix
-        ./infrastructure/flake-module.nix
-        ./templates/flake-module.nix
-      ];
+      imports = [ ./machines/flake-module.nix ./templates/flake-module.nix ];
 
       perSystem = { system, pkgs, ... }: {
         legacyPackages = import inputs.nixpkgs {
@@ -65,7 +60,7 @@
             (_final: prev: {
               sddm-sugar-candy = prev.callPackage ./packages/sddm-sugar-candy {
                 inherit (prev.libsForQt5) qtgraphicaleffects;
-                background = ./assets/nixos.jpg;
+                background = ./machines/assets/nixos.jpg;
               };
               tdda = prev.callPackage ./packages/tdda {
                 inherit (prev.python3Packages) buildPythonPackage pandas;

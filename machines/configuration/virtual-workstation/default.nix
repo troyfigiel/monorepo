@@ -1,11 +1,7 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    ../shared/workstation.nix
-    ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.home-manager
-  ];
+  imports = [ ../workstation.nix ];
 
   services.qemuGuest.enable = true;
   # TODO: For some reason it does not seem to rescale the screen for UTM on MacOS. Why?

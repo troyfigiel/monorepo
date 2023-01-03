@@ -1,9 +1,8 @@
 * TODO.org
 ** Code cleaning
-+ I have a lot of common functionality that can be refactored in my hosts. Check which modules appear together a lot and see if we can bring them together in a sensible way.
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that? Can [[https://github.com/jtojnar/nixpkgs-hammering][nixpkgs-hammering]] do something like this?
 + Modularize my Terraform code.
-+ Make the cloud-server storage impermanent using impermanence and remove the impermanence parameter altogether. All machines should run impermanence.
++ I do not need flake-parts anymore. It is a nice library, but it would be better to remove a dependency outside of nixpkgs. This can be done by using the ~supportedSystems~ and ~forAllSystems~ syntax.
 
 ** Development
 + Getting into a development container can be slow, because I have to go to the image, set up the volume, start the container, use TRAMP to connect and run ~/bin/bash~ in a shell. This can easily be automated and it makes me wonder if someone already has. Embark also seems like a good choice here.

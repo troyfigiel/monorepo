@@ -1,10 +1,117 @@
-{ config, inputs, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
-{
-  imports = [
-    ../shared/personal-computer.nix
-    ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.home-manager
+let inherit (config.home-manager.users.troy) home xdg;
+in {
+  imports = [ ../workstation.nix ];
+
+  environment.systemPackages = with pkgs; [ gnupg pinentry ];
+
+  home-manager.users.troy = {
+    home = {
+      packages = with pkgs; [
+        fdupes
+        feh
+        file
+        firefox
+        font-awesome
+        libreoffice
+        lzip
+        mpv
+        nitrokey-app
+        papirus-icon-theme
+        rofi-pass
+        signal-desktop
+        skypeforlinux
+        sops
+        tdesktop
+        unar
+        unzip
+        zip
+      ];
+
+      persistence."/nix/persist${home.homeDirectory}" = {
+        directories = [
+          "${xdg.dataHome}/password-store"
+          # Signal stores its data in the .config directory.
+          # See: https://github.com/signalapp/Signal-Desktop/issues/4975
+          ".config/Signal"
+
+          # Telegram has a single directory in .local/share
+          ".local/share/TelegramDesktop"
+        ];
+        allowOther = true;
+      };
+    };
+
+    programs.password-store.enable = true;
+
+    # TODO: This should be part of my workstation configuration, but on my VM picom does not seem
+    # to work properly.
+    services.picom = {
+      enable = true;
+      vSync = true;
+    };
+
+    # TODO: Maybe betterlockscreen should run upon startup of i3?
+    # TODO: Can betterlockscreen run only when there is no video running?
+    # If so, we can turn inactiveInterval down to 10 again.
+    services.betterlockscreen = {
+      enable = true;
+      inactiveInterval = 60;
+    };
+
+    home.persistence."/nix/persist/${config.home-manager.users.troy.home.homeDirectory}" =
+      {
+        directories =
+          [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
+        allowOther = true;
+      };
+
+    # Is it a problem I have a home service as well as a system service?
+    services.gpg-agent = {
+      enable = true;
+      enableSshSupport = true;
+      # What does the extra socket do?
+      enableExtraSocket = true;
+      sshKeys = [ "8ABF0116DA24246700017F956358D89FE8B148B8" ];
+      pinentryFlavor = "gtk2";
+      verbose = true;
+    };
+
+    programs.gpg = {
+      enable = true;
+      # TODO: This is currently stopping me from completely defining my host name in terms of the directory name.
+      publicKeys = [
+        {
+          source = ../../assets/admin-keys/troy.pub.asc;
+          trust = 5;
+        }
+        {
+          source = ./key.pub.asc;
+          trust = 5;
+        }
+        {
+          source = ../cloud-server/key.pub.asc;
+          trust = 5;
+        }
+      ];
+    };
+  };
+
+  services.blueman.enable = true;
+
+  networking.networkmanager = {
+    enable = true;
+    plugins = [ pkgs.networkmanager-openvpn ];
+  };
+
+  # Trusting a bluetooth device is needed to automatically connect.
+  environment.persistence."/nix/persist".directories = [
+    "/var/lib/bluetooth"
+    {
+      directory = "/etc/NetworkManager";
+      mode = "0755";
+    }
   ];
 
   programs.fuse.userAllowOther = true;
@@ -33,86 +140,6 @@
     users.root = {
       home = "/root";
       directories = [ ".gnupg" ".ssh" ];
-    };
-  };
-
-  home-manager.users.troy = {
-    home.packages = with pkgs; [
-      nmap
-      sops
-      fdupes
-      hugo
-      # TODO: Rofi-pass could be really nice, but needs some set up.
-      # For example, it does not take my German keyboard into account.
-      rofi-pass
-      papirus-icon-theme
-      font-awesome
-      file
-      libreoffice
-      lzip
-      zip
-      unzip
-      unar
-      nitrokey-app
-      # TODO: This should be moved somewhere else. Parquet-tools can very easily read, show and transform parquet files.
-      parquet-tools
-    ];
-
-    programs.feh.enable = true;
-    services.flameshot.enable = true;
-
-    # What does this do exactly?
-    programs.command-not-found.enable = true;
-    programs.mpv.enable = true;
-    programs.less.enable = true;
-    programs.lesspipe.enable = true;
-
-    # TODO: Maybe betterlockscreen should run upon startup of i3?
-    # TODO: Can betterlockscreen run only when there is no video running?
-    # If so, we can turn inactiveInterval down to 10 again.
-    services.betterlockscreen = {
-      enable = true;
-      inactiveInterval = 60;
-    };
-
-    home.persistence."/nix/persist/${config.home-manager.users.troy.home.homeDirectory}" =
-      {
-        directories =
-          [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
-        allowOther = true;
-      };
-
-    programs.firefox.enable = true;
-    home.sessionVariables.BROWSER = "firefox";
-
-    # Is it a problem I have a home service as well as a system service?
-    services.gpg-agent = {
-      enable = true;
-      enableSshSupport = true;
-      # What does the extra socket do?
-      enableExtraSocket = true;
-      sshKeys = [ "8ABF0116DA24246700017F956358D89FE8B148B8" ];
-      pinentryFlavor = "gtk2";
-      verbose = true;
-    };
-
-    programs.gpg = {
-      enable = true;
-      # TODO: This is currently stopping me from completely defining my host name in terms of the directory name.
-      publicKeys = [
-        {
-          source = ../../assets/keys/troy.pub.asc;
-          trust = 5;
-        }
-        {
-          source = ../../hosts/laptop/key.pub.asc;
-          trust = 5;
-        }
-        {
-          source = ../../hosts/cloud-server/key.pub.asc;
-          trust = 5;
-        }
-      ];
     };
   };
 
@@ -157,17 +184,6 @@
     drivers = [ pkgs.epson-escpr2 ];
   };
 
-  services.blueman.enable = true;
-
-  # Trusting a bluetooth device is needed to automatically connect.
-  environment.persistence."/nix/persist".directories = [
-    "/var/lib/bluetooth"
-    {
-      directory = "/etc/NetworkManager";
-      mode = "0755";
-    }
-  ];
-
   # TODO: What does rtkit do?
   security.rtkit.enable = true;
   sound.enable = true;
@@ -178,20 +194,6 @@
     pulse.enable = true;
   };
 
-  # TODO: Either keep or remove this
-  # services.mpd.enable = true;
-
-  environment.systemPackages = with pkgs; [ gnupg pinentry ];
-
-  # TODO: Allows communication with smartcards. Do I need this still?
-  services.pcscd.enable = true;
-
-  # TODO: Can I move this to the home config like I did with the gpg-agent?
-  programs.ssh.startAgent = false;
-
-  # TODO: Do I need this?
-  services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
-
   networking.useDHCP = lib.mkDefault true;
 
   services.avahi = {
@@ -199,8 +201,9 @@
     nssmdns = true;
   };
 
-  networking.networkmanager = {
-    enable = true;
-    plugins = [ pkgs.networkmanager-openvpn ];
-  };
+  # virtualisation.libvirtd.enable = true;
+  # environment = {
+  #   systemPackages = with pkgs; [ qemu virt-manager ];
+  #   persistence."/nix/persist".directories = [ "/var/lib/libvirt" ];
+  # };
 }

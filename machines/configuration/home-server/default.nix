@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../shared/server.nix ./hardware-configuration.nix ];
+  imports = [ ../server.nix ];
 
   networking.networkmanager.enable = true;
 

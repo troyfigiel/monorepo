@@ -2,7 +2,7 @@
 
 let inherit (config.home-manager.users.troy) home;
 in {
-  imports = [ ./shared.nix ];
+  imports = [ ./all.nix inputs.home-manager.nixosModules.home-manager ];
 
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.utf8";
@@ -142,7 +142,7 @@ in {
             kb-row-up = "Ctrl+p";
             kb-row-down = "Ctrl+n";
           };
-          theme = ./rofi-theme.rasi;
+          theme = ../assets/dotfiles/rofi-theme.rasi;
         };
       };
 
@@ -302,14 +302,14 @@ in {
             startup = [
               {
                 command =
-                  "${pkgs.feh}/bin/feh --bg-fill ${../../assets/nixos.jpg}";
+                  "${pkgs.feh}/bin/feh --bg-fill ${../assets/nixos.jpg}";
                 always = true;
                 notification = false;
               }
               {
                 command =
                   "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${
-                    ../../assets/nixos.jpg
+                    ../assets/nixos.jpg
                   }";
                 always = true;
                 notification = false;

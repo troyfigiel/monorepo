@@ -1,11 +1,8 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-    ../shared/server.nix
-    inputs.simple-nixos-mailserver.nixosModules.mailserver
-  ];
+  imports =
+    [ ../server.nix inputs.simple-nixos-mailserver.nixosModules.mailserver ];
 
   environment.systemPackages = with pkgs; [ git vim gnupg ];
   system.stateVersion = "22.05";
