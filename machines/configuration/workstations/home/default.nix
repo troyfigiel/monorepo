@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 let inherit (config.home-manager.users.troy) home;
 in {
@@ -185,8 +185,6 @@ in {
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  networking.useDHCP = lib.mkDefault true;
 
   services.avahi = {
     enable = true;

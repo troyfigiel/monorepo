@@ -71,5 +71,6 @@
     };
   };
 
+  networking.useDHCP = lib.mkDefault true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 }

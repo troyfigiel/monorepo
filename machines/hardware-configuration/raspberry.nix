@@ -20,6 +20,7 @@
 
   swapDevices = [ ];
 
+  networking.useDHCP = false;
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
 }
