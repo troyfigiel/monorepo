@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../workstation.nix ];
+  imports = [ ./.. ];
 
   services.qemuGuest.enable = true;
   # TODO: For some reason it does not seem to rescale the screen for UTM on MacOS. Why?
@@ -25,10 +25,7 @@
     initialPassword = "nixos";
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
-    packages = with pkgs; [ git gnumake vim ];
   };
-
-  programs.fuse.userAllowOther = true;
 
   system.stateVersion = "22.11";
 }

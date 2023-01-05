@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
-let inherit (config.home-manager.users.troy) home xdg;
+let inherit (config.home-manager.users.troy) home;
 in {
-  imports = [ ../workstation.nix ];
+  imports = [ ./.. ];
 
   environment.systemPackages = with pkgs; [ gnupg pinentry ];
 
@@ -31,7 +31,12 @@ in {
 
       persistence."/nix/persist${home.homeDirectory}" = {
         directories = [
-          "${xdg.dataHome}/password-store"
+          ".local/share/password-store"
+
+          ".cache/mozilla"
+          ".mozilla/firefox"
+          ".mozilla/extensions"
+
           # Signal stores its data in the .config directory.
           # See: https://github.com/signalapp/Signal-Desktop/issues/4975
           ".config/Signal"
@@ -60,13 +65,6 @@ in {
       inactiveInterval = 60;
     };
 
-    home.persistence."/nix/persist/${config.home-manager.users.troy.home.homeDirectory}" =
-      {
-        directories =
-          [ ".cache/mozilla" ".mozilla/firefox" ".mozilla/extensions" ];
-        allowOther = true;
-      };
-
     # Is it a problem I have a home service as well as a system service?
     services.gpg-agent = {
       enable = true;
@@ -83,7 +81,7 @@ in {
       # TODO: This is currently stopping me from completely defining my host name in terms of the directory name.
       publicKeys = [
         {
-          source = ../../assets/admin-keys/troy.pub.asc;
+          source = ../../../assets/admin-keys/troy.pub.asc;
           trust = 5;
         }
         {
@@ -91,7 +89,7 @@ in {
           trust = 5;
         }
         {
-          source = ../cloud-server/key.pub.asc;
+          source = ../../servers/cloud/key.pub.asc;
           trust = 5;
         }
       ];
@@ -113,8 +111,6 @@ in {
       mode = "0755";
     }
   ];
-
-  programs.fuse.userAllowOther = true;
 
   system.stateVersion = "22.05";
 

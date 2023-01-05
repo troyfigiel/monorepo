@@ -2,7 +2,9 @@
 
 let inherit (config.home-manager.users.troy) home;
 in {
-  imports = [ ./all.nix inputs.home-manager.nixosModules.home-manager ];
+  imports = [ ./.. inputs.home-manager.nixosModules.home-manager ];
+
+  programs.fuse.userAllowOther = true;
 
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.utf8";
@@ -41,12 +43,10 @@ in {
   environment = {
     systemPackages = with pkgs; [
       brightnessctl
-      git
       inxi
       nix-index
       python3
       sddm-sugar-candy
-      vim
     ];
 
     persistence."/nix/persist" = {
@@ -142,7 +142,7 @@ in {
             kb-row-up = "Ctrl+p";
             kb-row-down = "Ctrl+n";
           };
-          theme = ../assets/dotfiles/rofi-theme.rasi;
+          theme = ../../assets/dotfiles/rofi-theme.rasi;
         };
       };
 
@@ -302,14 +302,14 @@ in {
             startup = [
               {
                 command =
-                  "${pkgs.feh}/bin/feh --bg-fill ${../assets/nixos.jpg}";
+                  "${pkgs.feh}/bin/feh --bg-fill ${../../assets/nixos.jpg}";
                 always = true;
                 notification = false;
               }
               {
                 command =
                   "${pkgs.betterlockscreen}/bin/betterlockscreen --update ${
-                    ../assets/nixos.jpg
+                    ../../assets/nixos.jpg
                   }";
                 always = true;
                 notification = false;

@@ -13,12 +13,6 @@
     fsType = "ext4";
   };
 
-  # Only expose the nfs mount to the client
-  fileSystems."/export/nfs" = {
-    device = "/mnt/export/nfs";
-    options = [ "bind" ];
-  };
-
   fileSystems."/mnt/backup" = {
     device = "/dev/disk/by-uuid/a62b8436-0376-4f24-a45a-1e336b5f0928";
     fsType = "ext4";

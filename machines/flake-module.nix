@@ -41,28 +41,28 @@ in {
       {
         host = "laptop";
         system = "x86_64-linux";
-        configuration = "home-workstation";
+        configuration = "workstations/home";
         impermanence = true;
         secrets = true;
       }
       {
         host = "cloud-server";
         system = "x86_64-linux";
-        configuration = "cloud-server";
+        configuration = "servers/cloud";
         impermanence = false;
         secrets = true;
       }
       {
         host = "virtual-devbox";
         system = "aarch64-linux";
-        configuration = "virtual-workstation";
+        configuration = "workstations/virtual";
         impermanence = true;
         secrets = false;
       }
       {
         host = "raspberry";
         system = "aarch64-linux";
-        configuration = "home-server";
+        configuration = "servers/home";
         impermanence = false;
         secrets = false;
       }

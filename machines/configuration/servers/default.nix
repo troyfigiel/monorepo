@@ -2,7 +2,8 @@
 
 let sshPath = if impermanence then "/nix/persist/etc/ssh" else "/etc/ssh";
 in {
-  imports = [ ./all.nix ];
+  imports = [ ./.. ];
+  networking.firewall.enable = true;
 
   services.openssh = {
     enable = true;
@@ -16,5 +17,5 @@ in {
   };
 
   users.users.root.openssh.authorizedKeys.keys =
-    [ (builtins.readFile ../assets/admin-keys/troy.pub.ssh) ];
+    [ (builtins.readFile ../../assets/admin-keys/troy.pub.ssh) ];
 }

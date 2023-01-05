@@ -7,6 +7,8 @@ in {
     age.sshKeyPaths = [ ];
   };
 
+  environment.systemPackages = with pkgs; [ git vim ];
+
   nix = {
     package = pkgs.nixVersions.stable;
     settings = {

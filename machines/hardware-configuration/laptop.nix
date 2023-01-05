@@ -25,6 +25,12 @@
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
+
+    "/mnt/smb" = {
+      device = "//192.168.178.31/smb";
+      fsType = "cifs";
+      options = [ "x-systemd.automount" "noauto" "uid=1000" "gid=100" ];
+    };
   };
 
   swapDevices = [ ];
