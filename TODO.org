@@ -3,6 +3,7 @@
 + I have a nix flake check now, but it does not check if my packages build successfully. How can I incorporate that? Can [[https://github.com/jtojnar/nixpkgs-hammering][nixpkgs-hammering]] do something like this?
 + Modularize my Terraform code.
 + I do not need flake-parts anymore. It is a nice library, but it would be better to remove a dependency outside of nixpkgs. This can be done by using the ~supportedSystems~ and ~forAllSystems~ syntax.
++ For now, the "inheritance" relations in machines/configuration/ work, but in the future we might need to change this so that a configuration can import a number of modules.
 
 ** Development
 + Getting into a development container can be slow, because I have to go to the image, set up the volume, start the container, use TRAMP to connect and run ~/bin/bash~ in a shell. This can easily be automated and it makes me wonder if someone already has. Embark also seems like a good choice here.

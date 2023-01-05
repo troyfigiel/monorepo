@@ -65,6 +65,13 @@ in {
     };
   };
 
+  users.users.troy = {
+    isNormalUser = true;
+    home = "/home/troy";
+    description = "Troy Figiel";
+    extraGroups = [ "wheel" "docker" ];
+  };
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;

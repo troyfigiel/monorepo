@@ -21,11 +21,7 @@
     videoDrivers = [ "modesetting" "qxl" ];
   };
 
-  users.users.troy = {
-    initialPassword = "nixos";
-    isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
-  };
+  users.users.troy.initialPassword = "nixos";
 
   system.stateVersion = "22.11";
 }

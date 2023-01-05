@@ -121,12 +121,8 @@ in {
   # TODO: Should I set the group to be "troy" as well?
   users = {
     mutableUsers = false;
-
     users.troy = {
-      isNormalUser = true;
-      home = "/home/troy";
-      description = "Troy Figiel";
-      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+      extraGroups = [ "networkmanager" "libvirtd" ];
       passwordFile = config.sops.secrets.troy-password.path;
     };
   };
