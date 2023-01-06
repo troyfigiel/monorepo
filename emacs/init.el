@@ -37,6 +37,7 @@
   (visible-bell t)
   :config
   (column-number-mode 1)
+  (delete-selection-mode 1)
   (display-battery-mode 1)
   (display-time-mode 1)
   (menu-bar-mode -1)
