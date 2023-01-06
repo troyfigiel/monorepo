@@ -69,5 +69,4 @@
 + Would it make sense to have a cache of websites that people can request when needed?
 
 ** Raspberry Pi
-+ Set up Gitea
-+ Set up Samba
++ Set up proper redirection for git.troyfigiel.com. Somehow just adding an A record on Cloudflare pointing to a local IP, does not seem to work. What do I need to do instead?

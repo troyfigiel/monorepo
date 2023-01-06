@@ -1,15 +1,10 @@
-# resource "cloudflare_zone" "troyfigiel" {
-#   zone       = "troyfigiel.com"
-#   account_id = local.cloudflare_account_id
+# resource "cloudflare_record" "mail" {
+#   zone_id  = cloudflare_zone.troyfigiel.id
+#   name     = "troyfigiel.com"
+#   value    = "mail.troyfigiel.com"
+#   type     = "MX"
+#   priority = 10
 # }
-
-resource "cloudflare_record" "mail" {
-  zone_id  = cloudflare_zone.troyfigiel.id
-  name     = "troyfigiel.com"
-  value    = "mail.troyfigiel.com"
-  type     = "MX"
-  priority = 10
-}
 
 resource "cloudflare_record" "spf" {
   zone_id = cloudflare_zone.troyfigiel.id

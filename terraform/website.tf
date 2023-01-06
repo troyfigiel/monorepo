@@ -13,11 +13,3 @@ resource "cloudflare_record" "www" {
   value   = "troyfigiel.com"
   type    = "CNAME"
 }
-
-resource "cloudflare_record" "git" {
-  zone_id = cloudflare_zone.troyfigiel.id
-  ttl     = 3600
-  name    = "git.troyfigiel.com"
-  value   = "192.168.178.31"
-  type    = "A"
-}
