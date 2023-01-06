@@ -89,20 +89,6 @@ in {
         type = "app";
         program = pkgs.callPackage ./bootstrap.nix { };
       };
-
-      infrastructure = {
-        type = "app";
-        program = pkgs.writeShellApplication {
-          name = "monorepo-terraform";
-          runtimeInputs = with pkgs; [ coreutils execline.bin terraform ];
-          text = ''
-            cd machines/terraform || exit 1
-            terraform init
-            terraform apply
-            terraform output -json > outputs.json
-          '';
-        };
-      };
     };
   };
 

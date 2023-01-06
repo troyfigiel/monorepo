@@ -14,11 +14,10 @@ resource "cloudflare_record" "www" {
   type    = "CNAME"
 }
 
-# TODO: Why do I need this again?
-resource "cloudflare_record" "sub" {
+resource "cloudflare_record" "git" {
   zone_id = cloudflare_zone.troyfigiel.id
   ttl     = 3600
-  name    = "*.troyfigiel.com"
-  value   = vultr_instance.cloud-server.main_ip
+  name    = "git.troyfigiel.com"
+  value   = "192.168.178.31"
   type    = "A"
 }

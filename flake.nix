@@ -92,6 +92,20 @@
               '';
             };
           };
+
+          infrastructure = {
+            type = "app";
+            program = pkgs.writeShellApplication {
+              name = "monorepo-terraform";
+              runtimeInputs = with pkgs; [ coreutils execline.bin terraform ];
+              text = ''
+                cd terraform || exit 1
+                terraform init
+                terraform apply
+                terraform output -json > outputs.json
+              '';
+            };
+          };
         };
 
         devShells.default = pkgs.mkShell {
