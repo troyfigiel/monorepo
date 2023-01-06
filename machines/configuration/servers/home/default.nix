@@ -1,5 +1,5 @@
 {
-  imports = [ ./.. ./nfs.nix ./samba.nix ];
+  imports = [ ./.. ./gitea.nix ./nfs.nix ./samba.nix ];
   system.stateVersion = "23.05";
   networking.networkmanager.enable = true;
 }
