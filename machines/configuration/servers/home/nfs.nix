@@ -12,5 +12,11 @@
     '';
   };
 
+  users.users.troy = {
+    isNormalUser = true;
+    createHome = false;
+    uid = 1000;
+  };
+
   networking.firewall.allowedTCPPorts = [ 2049 ];
 }

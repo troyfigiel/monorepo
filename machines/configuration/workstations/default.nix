@@ -70,6 +70,7 @@ in {
     home = "/home/troy";
     description = "Troy Figiel";
     extraGroups = [ "wheel" "docker" ];
+    uid = 1000;
   };
 
   home-manager = {
