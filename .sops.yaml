@@ -1,25 +1,27 @@
-# TODO: This is currently stopping me from completely defining my host name with my directory name.
-# In principle, I could generate this file. For example, the following command extracts the fingerprint from a public key:
-# gpg --show-keys --with-colons key.pub.asc | awk -F: '$1 == "fpr" {print $10;}'
-# Also helpful, is that this file can be in JSON format as well (since JSON is a strict subset of YAML). It still needs to be named .sops.yaml.
 keys:
   - admins:
       - &troy E47C0DCD2768DFA138FCDCD6C67C9181B3893FB0
   - hosts:
-      - &laptop 53BA215C79CFD829A722D5DDB05F6ED222F19591
-      - &cloud-server 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
+      - &workstation-home 53BA215C79CFD829A722D5DDB05F6ED222F19591
+      - &server-cloud 42C8BBCD9A7DE7B57BAD1F094B256820C0436DE2
+      - &server-home 17FAFE530FE224329364AF592CEEC25DA1EED534
 creation_rules:
-  - path_regex: hosts/laptop/secrets.yaml
+  - path_regex: machines/configuration/workstations/home/secrets.yaml
     key_groups:
       - pgp:
           - *troy
-          - *laptop
-  - path_regex: hosts/cloud-server/secrets.yaml
+          - *workstation-home
+  - path_regex: machines/configuration/servers/cloud/secrets.yaml
     key_groups:
       - pgp:
           - *troy
-          - *cloud-server
-  - path_regex: infrastructure/secrets.yaml
+          - *server-cloud
+  - path_regex: machines/configuration/servers/home/secrets.yaml
+    key_groups:
+      - pgp:
+          - *troy
+          - *server-home
+  - path_regex: terraform/secrets.yaml
     key_groups:
       - pgp:
           - *troy

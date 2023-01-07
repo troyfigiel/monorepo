@@ -64,7 +64,7 @@ in {
         system = "aarch64-linux";
         configuration = "servers/home";
         impermanence = false;
-        secrets = false;
+        secrets = true;
       }
     ]);
 
