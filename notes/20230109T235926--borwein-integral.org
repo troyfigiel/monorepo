@@ -1,0 +1,4 @@
+#+title:      Borwein integral
+#+date:       [2023-01-09 Mon 23:59]
+#+filetags:
+#+identifier: 20230109T235926

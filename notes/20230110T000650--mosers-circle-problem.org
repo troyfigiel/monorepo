@@ -1,0 +1,12 @@
+#+title:      Moser's circle problem
+#+date:       [2023-01-10 Tue 00:06]
+#+filetags:
+#+identifier: 20230110T000650
+
+\[
+r_G = \binom{n}{4} + \binom{n}{2} + 1
+\]
+
+This matches the geometric progression \( 2^{n-1} \) up until \( n = 6 \) where it breaks down.
+
+# TODO: State and proof the result.

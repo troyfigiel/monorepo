@@ -1,0 +1,6 @@
+#+title:      Euler's prime generating quadratic polynomial
+#+date:       [2023-01-09 Mon 23:42]
+#+filetags:
+#+identifier: 20230109T234256
+
+Euler first noticed that the polynomial \( P(n) = n^2 + n + 41 \) is prime for \( n < 40 \). However, for \( n = 40 \) the polynomial factorizes as \( P(40) = 41^2 \). In fact, every non-constant polynomial with integer coefficients must evaluate to a composite number for an infinite number of integer inputs [[denote:20230109T234758]] and can therefore never only generate prime numbers.

@@ -1,0 +1,10 @@
+#+title:      Examples of misleading patterns in mathematics
+#+date:       [2023-01-09 Mon 23:34]
+#+filetags:
+#+identifier: 20230109T233415
+
+Examples of misleading mathematical patterns are a good way to explain the necessity of proofs in mathematics.
+
+- Euler's prime generating quadratic polynomial [[denote:20230109T234256]]
+- Borwein integrals [[denote:20230109T235926]]
+- Moser's circle problem [[denote:20230110T000650]]

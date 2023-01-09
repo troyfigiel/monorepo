@@ -1,0 +1,8 @@
+#+title:      Any polynomial with integer coefficients evaluates to a composite number an infinite number of times
+#+date:       [2023-01-09 Mon 23:47]
+#+filetags:
+#+identifier: 20230109T234758
+
+It is known that non-constant polynomials with integer coefficients cannot produce primes for every integer input value. For example, consider a polynomial \( P(n) \). If \( P(1) = p \) for some prime number \( p \), \( P(1 + kp) \) must be divisble by \( p \) for any \( k \in \mathbb{Z} \). This follows from the binomial theorem ([[denote:20220223T205208]]).
+
+# TODO: Finish the proof.

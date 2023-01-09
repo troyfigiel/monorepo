@@ -1,0 +1,6 @@
+#+title:      Proof
+#+date:       [2023-01-09 Mon 23:27]
+#+filetags:
+#+identifier: 20230109T232759
+
+Proofs are a cornerstone of mathematics, because they enable us to state with certainty that a particular phenomenon is true. This is contrast to our pattern recognition, because mathematical pattern can be misleading [[denote:20230109T232947]].

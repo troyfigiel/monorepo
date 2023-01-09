@@ -1,0 +1,8 @@
+#+title:      Mathematical patterns can be misleading
+#+date:       [2023-01-09 Mon 23:29]
+#+filetags:
+#+identifier: 20230109T232947
+
+Although mathematical patterns can guide our intuition, we it should not be our only source of knowledge since it can easily be misled. There are numerous examples of patterns that hold for the first couple of trials, but eventually fail [[denote:20230109T233415]].
+
+Such examples can appear when we assume we have fully understood a pattern when in reality the solution is more complicated. Some mathematical proofs are simply messier to correctly state than they appear on first sight [[denote:20221230T010126]].
