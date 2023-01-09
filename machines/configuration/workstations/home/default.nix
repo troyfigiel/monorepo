@@ -4,7 +4,7 @@ let inherit (config.home-manager.users.troy) home;
 in {
   imports = [ ./.. ];
 
-  environment.systemPackages = with pkgs; [ gnupg pinentry ];
+  environment.systemPackages = [ pkgs.gnupg pkgs.pinentry ];
 
   home-manager.users.troy = {
     home = {

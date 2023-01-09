@@ -85,7 +85,9 @@ in {
         homeDirectory = "/home/troy";
         stateVersion = "22.05";
 
-        packages = with pkgs; [ emacs-all-the-icons-fonts inconsolata ];
+        packages = [ pkgs.emacs-all-the-icons-fonts pkgs.inconsolata ];
+        # TODO: Remove this when I set up better integration between vterm and Emacs
+        sessionVariables.EDITOR = "vim";
 
         persistence."/nix/persist${home.homeDirectory}" = {
           directories = [
